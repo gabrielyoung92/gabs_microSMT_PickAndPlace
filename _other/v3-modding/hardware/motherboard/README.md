@@ -20,8 +20,8 @@ schematic, portable local libraries, a component inventory and source evidence.
 
 ## Source and interpretation
 
-The preserved files are `../../Microsmt-PNPv3/PCB_motherboard/SCH.pdf`
-and the `Gerber_PCB.zip` archive beside it. Source data establishes 187 components and 648
+Sources: [schematic PDF](../../../../Microsmt-PNPv3/PCB_motherboard/SCH.pdf)
+and [Gerber ZIP](../../../../Microsmt-PNPv3/PCB_motherboard/Gerber_PCB.zip). Source data establishes 187 components and 648
 unique numbered component pads. Six unreferenced plated mounting holes are added
 as explicitly inferred MH references. The CAM outline is approximately
 130.000 x 116.858 mm. Actual board thickness, stackup materials and copper weight

@@ -1,8 +1,8 @@
 # V3 feeder controller parts
 
-> **Original source: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** This is Gab's independently reorganised copy, prepared with help from ChatGPT. The original MicroSMT designs remain credited to their authors. [Credits and changes](../../../CREDITS.md).
+> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** Reorganised by Gab with ChatGPT. [Credits](../../../CREDITS.md).
 
-1 parts · [Browse all photos](photos/)
+1 part · [Browse all photos](photos/)
 
 Click any image to open it full size. Expand **Eight isometric views** for four views from above and four from below.
 

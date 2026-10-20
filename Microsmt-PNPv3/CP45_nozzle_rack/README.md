@@ -1,12 +1,12 @@
 # CP45 nozzle rack
 
-> **Original source: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** This is Gab's independently reorganised copy, prepared with help from ChatGPT. The original MicroSMT designs remain credited to their authors. [Credits and changes](../../CREDITS.md).
+> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** Reorganised by Gab with ChatGPT. [Credits](../../CREDITS.md).
 
 3 parts · [Browse all photos](photos/)
 
 Click any image to open it full size. Expand **Eight isometric views** for four views from above and four from below.
 
-## CP45 nozzle  rack  left 20250612
+## CP45 nozzle rack — left (2025-06-12)
 
 [STEP](CP45%20nozzle%20%20rack%20-left-20250612.STEP) · [STL](CP45%20nozzle%20%20rack%20-left-20250612.stl)
 
@@ -32,7 +32,7 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## CP45 nozzle  rack  right 20250612
+## CP45 nozzle rack — right (2025-06-12)
 
 [STEP](CP45%20nozzle%20%20rack%20-right-20250612.STEP) · [STL](CP45%20nozzle%20%20rack%20-right-20250612.stl)
 

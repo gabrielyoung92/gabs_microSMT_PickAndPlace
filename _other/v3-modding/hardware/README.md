@@ -1,7 +1,7 @@
 # Feeder and busbar KiCad projects
 
 For delivered machine identities and live inspection evidence, see the
-[machine hardware inventory](MACHINE_HARDWARE.md), starting with the top down camera.
+[machine hardware inventory](MACHINE_HARDWARE.md), including both cameras.
 
 Editable reference reconstructions from the preserved MicroSMT motherboard PDF,
 Bing-feeder schematic,
@@ -26,7 +26,7 @@ N1–N8 board or a complete connected 24-slot assembly.
 Each project contains a connected `.kicad_sch`, routed `.kicad_pcb`, project
 settings, library tables, a `components.csv` reference BOM, `recovery.json`
 provenance/pad map and `validation.json`.
-Source archives and extracted motherboard Gerbers are in the `../../Bing-feeder/` and `../../Microsmt-PNPv3/` directories.
+Sources: [Bing-feeder](../../../Bing-feeder/) and [Microsmt-PNPv3](../../../Microsmt-PNPv3/).
 
 ## Review the results
 

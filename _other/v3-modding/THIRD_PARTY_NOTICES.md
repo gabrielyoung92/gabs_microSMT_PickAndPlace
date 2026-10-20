@@ -32,9 +32,11 @@ does not change the terms of any upstream material.
 
 ## Recovered hardware and KiCad library symbols
 
-The reference hardware in `hardware/` derives from the preserved Bing-feeder
-CAM and schematic under the MIT license identified above. Recovery scripts,
-newly inferred connector references and technical notes are project additions.
+The feeder and busbar references derive from Bing-feeder CAM and schematics
+under its MIT license. The recovered motherboard derives from Microsmt-PNPv3
+files and shares that collection's unresolved licensing terms; it is not covered
+by Bing-feeder's MIT license. Recovery scripts, inferred connector references
+and technical notes are project additions.
 
 Standard symbol definitions were copied from KiCad libraries 9.0.2, copyright
 2025 KiCad Community: <https://gitlab.com/kicad/libraries/kicad-symbols>. They are

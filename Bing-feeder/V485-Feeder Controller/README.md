@@ -1,6 +1,6 @@
 # V485 feeder controller
 
-> **Original source: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** This is Gab's independently reorganised copy, prepared with help from ChatGPT. The original MicroSMT designs remain credited to their authors. [Credits and changes](../../CREDITS.md).
+> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** Reorganised by Gab with ChatGPT. [Credits](../../CREDITS.md).
 
 ESP32-C3 RS485 controller source and its board/busbar files.
 

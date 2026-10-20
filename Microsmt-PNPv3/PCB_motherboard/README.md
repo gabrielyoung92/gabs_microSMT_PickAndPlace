@@ -1,6 +1,6 @@
 # PNPv3 motherboard PCB
 
-> **Original source: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** This is Gab's independently reorganised copy, prepared with help from ChatGPT. The original MicroSMT designs remain credited to their authors. [Credits and changes](../../CREDITS.md).
+> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** Reorganised by Gab with ChatGPT. [Credits](../../CREDITS.md).
 
 [Back to collection](../README.md)
 

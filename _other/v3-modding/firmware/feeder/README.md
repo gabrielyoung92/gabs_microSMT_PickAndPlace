@@ -6,8 +6,9 @@ requested number of qualified index events. Missing events cause a latched
 timeout fault. Aborting a cycle stops its motor request and records an abort.
 
 The implementation is new project code. The downloaded vendor source stays in
-the `../../Bing-feeder/` and `../../Microsmt-PNPv3/` directories. It informed the requirement to preserve optical completion, but its
-blocking interrupt handlers and board setup have not been copied here.
+[Bing-feeder](../../../../Bing-feeder/) and [Microsmt-PNPv3](../../../../Microsmt-PNPv3/).
+It informed the requirement to preserve optical completion; the blocking
+interrupt handlers and board setup have not been copied here.
 
 ## Integration contract
 

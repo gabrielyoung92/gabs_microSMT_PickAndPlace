@@ -17,4 +17,4 @@ Original firmware: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-fee
 - Corrected two-flash LED sequencing and updated comments to describe configurable settings and protocol limits.
 - Removed the development test folder at the owner's request.
 
-The PlatformIO build and previously run software checks passed. This version has not been flashed or physically validated. The supplied protocol still has bare `OK`/`BUSY` replies without transaction IDs; late replies and physical feed completion cannot be proven from those replies alone.
+Built on 20 October 2026 with Espressif32 7.1.3 and Arduino framework package `4.20017.260907+sha.dcc1105b`; the build and software checks passed. This version has not been flashed or physically validated. The supplied protocol still has bare `OK`/`BUSY` replies without transaction IDs; late replies and physical feed completion cannot be proven from those replies alone.

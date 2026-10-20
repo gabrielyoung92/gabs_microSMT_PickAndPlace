@@ -1,13 +1,13 @@
 # Bing feeders and controllers
 
-> **Original source: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** This is Gab's independently reorganised copy, prepared with help from ChatGPT. The original MicroSMT designs remain credited to their authors. [Credits and changes](../CREDITS.md).
+> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** Reorganised by Gab with ChatGPT. [Credits](../CREDITS.md).
 
 Browse the V3 and V485 collections: 3D parts, PCB previews, Gerber ZIPs, firmware and assembly references.
 
 | Browse | Contents |
 | --- | --- |
 | [V485 feeder](V485-feeder/README.md) | 8 mm mechanics, feeder/display PCBs and STM32 sources |
-| [V485 controller](V485-Feeder%20Controller/README.md) | ESP32-C3 sketch, controller PCB and RS485 busbars |
+| [V485 controller](V485-Feeder%20Controller/README.md) | ESP32-C3 PlatformIO firmware, controller PCB and RS485 busbars |
 | [V3 feeder](V3-feeder/README.md) | 8/12/16/24 mm parts, shared parts, STM32 sources and manuals |
 | [V3 controller](V3-Feeder%20Controller/README.md) | Mega2560 sketch, controller board and feeder busbars |
 | [STM32 build guide](STM32-BUILD.txt) | Combined V485 HAL/PlatformIO project and remaining legacy SPL build notes |

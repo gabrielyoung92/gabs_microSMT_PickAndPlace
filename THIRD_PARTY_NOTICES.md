@@ -12,7 +12,7 @@ The supplied [MIT license](Bing-feeder/LICENSE), copyright (c) 2025 microsmt, is
 
 Original repository: [microsmt/Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).
 
-The supplied README describes the project as open source. No root LICENSE file is present in the local source copy. This repository does not assign a replacement license to that material.
+The supplied README describes the project as open source. No root LICENSE file is present in the local source copy. This repository does not assign a replacement license to that material. The recovered motherboard in `_other/v3-modding/hardware/motherboard/` derives from the same collection. Clarify redistribution permission for both before publishing them.
 
 ## Earlier V3 development and KiCad libraries
 
