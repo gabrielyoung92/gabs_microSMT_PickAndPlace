@@ -30,7 +30,9 @@ Browse **128 3D parts** across 10 galleries, **13 PCB Gerber sets**, vendor firm
 
 ## Guides and development
 
-- [STM32 vendor firmware build guide](Bing-feeder/STM32-BUILD.txt)
+- [ESP32-C3 controller: PlatformIO build guide](Bing-feeder/V485-Feeder%20Controller/CODE_esp32C3/README.md)
+- [V485 feeder variants: PlatformIO / STM32 HAL build guide](Bing-feeder/V485-feeder/CODE_feeder/README.md)
+- [Other STM32 vendor firmware build guide](Bing-feeder/STM32-BUILD.txt)
 - [Custom VS Code / PlatformIO firmware guide](_other/v3-modding/firmware/README.md)
 - [Editable KiCad reference projects](_other/v3-modding/hardware/README.md)
 - [Machine setup status](_other/v3-modding/docs/machine-setup-status.md)

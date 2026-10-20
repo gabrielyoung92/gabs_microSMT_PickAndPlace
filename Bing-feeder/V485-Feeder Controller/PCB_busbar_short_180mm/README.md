@@ -42,8 +42,8 @@ Download the Gerber ZIP or click a preview to open it full size.
 </tr>
 </table>
 
-## Schematics, BOMs and supplied notes
+## Supplied notes
 
-- [read me .txt](read%20me%20.txt)
+MicroSMT supplies 180 mm PCB busbars because the shorter sections are easier to transport. **PCB1, PCB2 and PCB4 each require two pieces.**
 
 The previews show bare-board geometry from the supplied Gerbers and drill files. Colours and the 1.6 mm rendering thickness are illustrative.

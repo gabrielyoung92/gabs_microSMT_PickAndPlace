@@ -3,18 +3,30 @@ BUILDING THE SUPPLIED STM32 FEEDER PROGRAMS
 Checked 20 October 2026.
 
 STATUS
-These are four independent vendor C programs, each with its own main().
-Build one variant at a time. Their source contents have not been modified.
+V485-feeder/CODE_feeder is now a complete plain C PlatformIO project,
+shared by the 8 mm and 12/16/24 mm variants, ported locally from legacy SPL
+to STM32 HAL. Open that folder in VS Code:
+  pio run -e v485_8mm
+  pio run -e v485_12_16_24mm
+Its pinned ST STM32 20.0.0 / STM32CubeF1 1.8.7 / GCC 14.2.1 build has passed.
+Read that folder's README.md and CHANGELOG.md for target assumptions,
+changes, wiring and validation limits. Sources are split into .c/.h modules in src/;
+settings and wiring remain in src/config.h. CubeMX/CubeIDE is not needed. Nothing has been flashed.
+
+THE REMAINING TWO LEGACY VARIANTS
+The rest of this guide applies to the V3 8 mm and V3 12/16/24 mm programs.
+These are two independent vendor programs, each with its own main().
+Their source contents have not been modified. Build one variant at a time.
 Each program's folder contains its source and a README.md with variant details.
 
-The supplied files are NOT complete build projects. No matching project file,
+Those supplied files are NOT complete build projects. No matching project file,
 STM32F10x library, startup code, system clock implementation or linker script
-was found alongside them. No build of these four programs has been verified.
+was found alongside them. No build of those two legacy programs has been verified.
 The separate custom firmware under ../_other/v3-modding/ is a different program;
 building that project does not build these vendor sources.
 
 WHAT THEY USE
-All four use ST's legacy STM32F10x Standard Peripheral Library (SPL), including
+Those two use ST's legacy STM32F10x Standard Peripheral Library (SPL), including
 stm32f10x.h. This is plain C with main(), not an Arduino sketch.
 
 ST's library package is STSW-STM32054:
@@ -48,8 +60,8 @@ HOW TO GET A BUILD WORKING
 5. Include a compiler-compatible startup/vector table and system_stm32f10x.c.
    Set the actual oscillator/PLL clock and memory sizes. Preserve this source's
    interrupt handlers; do not also compile template handlers of the same names.
-   Link only one SystemInit implementation. V485 also provides SysTick_Handler;
-   its millisecond timing depends on SystemCoreClock matching the actual clock.
+   Link only one SystemInit implementation. Any tick/delay configuration must
+   match the actual system clock.
 
 6. Build and link with the selected Arm compiler. Resolve compiler/linker
    errors in the separate working project; record any required source changes.
@@ -57,7 +69,8 @@ HOW TO GET A BUILD WORKING
    Successful compilation does not establish correct behavior on the feeder.
 
 VS CODE / PLATFORMIO
-VS Code can remain the editor. No CubeMX or HAL conversion is required.
+For those two legacy variants, VS Code can remain the editor. No CubeMX
+or HAL conversion is required to reproduce a matching original SPL build.
 For PlatformIO, first obtain or reconstruct a compatible STM32F1 SPL framework
 setup, including its startup and linker configuration. The current official
 bluepill_f103c8 board definition does NOT list SPL among its supported
@@ -67,8 +80,9 @@ Do not mix legacy stm32f10x.h and modern device/framework headers blindly.
 
 Once an actual PlatformIO project has been configured, open its folder in
 VS Code, use Project Tasks > Build, or run pio run in its Core CLI terminal.
-These source-only folders currently have no platformio.ini, so that command
-does not yet work here. The first build may download dependencies.
+The two legacy source-only folders have no platformio.ini, so that command
+does not yet work in them. The combined V485 folder already has one.
+The first build may download dependencies.
 For a supplied vendor GCC Makefile project, run its documented make target
 from VS Code's terminal. A Keil .uvproj/.uvprojx instead needs its matching
 MDK/Arm compiler setup unless the build is deliberately ported.

@@ -1,4 +1,0 @@
-1.   Please purchase an ESP32-C3 Mini module with the same size and pin definition as shown in the photo, to be used as the controller.
-
-2.   You need to power the expansion board first; otherwise, the MAX3485  on the expansion board will pull the level low, causing the ESP32-C3 to fail to start.
-

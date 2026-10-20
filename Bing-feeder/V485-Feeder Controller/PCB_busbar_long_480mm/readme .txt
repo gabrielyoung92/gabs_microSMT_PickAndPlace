@@ -1,1 +1,0 @@
-1.  Each PNP machine needs 2 pieces, one at the front and one at the back.

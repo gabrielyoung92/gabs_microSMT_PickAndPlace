@@ -10,7 +10,7 @@ Browse the V3 and V485 collections: 3D parts, PCB previews, Gerber ZIPs, firmwar
 | [V485 controller](V485-Feeder%20Controller/README.md) | ESP32-C3 sketch, controller PCB and RS485 busbars |
 | [V3 feeder](V3-feeder/README.md) | 8/12/16/24 mm parts, shared parts, STM32 sources and manuals |
 | [V3 controller](V3-Feeder%20Controller/README.md) | Mega2560 sketch, controller board and feeder busbars |
-| [STM32 build guide](STM32-BUILD.txt) | Required SPL library, missing build support and variant notes |
+| [STM32 build guide](STM32-BUILD.txt) | Combined V485 HAL/PlatformIO project and remaining legacy SPL build notes |
 | [License](LICENSE) | Supplied upstream license |
 
 ## Vendor introduction and support

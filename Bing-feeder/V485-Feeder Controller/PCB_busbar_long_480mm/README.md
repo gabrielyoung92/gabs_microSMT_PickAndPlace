@@ -18,8 +18,8 @@ Download the Gerber ZIP or click a preview to open it full size.
 </tr>
 </table>
 
-## Schematics, BOMs and supplied notes
+## Supplied notes
 
-- [readme .txt](readme%20.txt)
+MicroSMT specifies **two 480 mm busbars per PNP machine**: one at the front and one at the back.
 
 The previews show bare-board geometry from the supplied Gerbers and drill files. Colours and the 1.6 mm rendering thickness are illustrative.
