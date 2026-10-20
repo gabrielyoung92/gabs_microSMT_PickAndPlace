@@ -1,0 +1,1391 @@
+{
+  "name": "v485_controller",
+  "source": "Bing-feeder/V485-Feeder Controller/PCB_ControlBoard/Gerber_PCB1_2026-10-09.zip",
+  "components": [
+    {
+      "ref": "C1",
+      "value": "10uF",
+      "footprint": "MicroSMT_v485_controller:SMD_2_7371bf4a95",
+      "uuid": "a98cbb6f-0920-57db-b2c7-d8fb9e2dd246",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            48.85098,
+            40.204
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            50.25102,
+            40.204
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C2",
+      "value": "100nF",
+      "footprint": "MicroSMT_v485_controller:SMD_2_723c4baacf",
+      "uuid": "5b3019fe-acc3-51df-8103-cf1314cc5497",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            47.011,
+            40.90402
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            47.011,
+            39.50398
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C3",
+      "value": "100nF",
+      "footprint": "MicroSMT_v485_controller:SMD_2_7371bf4a95",
+      "uuid": "69a4a46d-93bc-5668-9835-d0bb6f27988d",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            48.85098,
+            41.982
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            50.25102,
+            41.982
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "value": "100nF",
+      "footprint": "MicroSMT_v485_controller:SMD_2_7371bf4a95",
+      "uuid": "e31c12bd-4b8f-50ba-9c2b-f7cec79975aa",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            34.37298,
+            40.458
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            35.77302,
+            40.458
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "value": "100nF",
+      "footprint": "MicroSMT_v485_controller:SMD_2_c1a3413776",
+      "uuid": "5fdc2fe4-5643-5f40-8ee1-3ea0d169c780",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            29.16598,
+            46.427
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            30.56602,
+            46.427
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "value": "100nF",
+      "footprint": "MicroSMT_v485_controller:SMD_2_723c4baacf",
+      "uuid": "c133a6f8-d2c3-52c4-beff-519c77d75829",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            47.646,
+            35.06202
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N61",
+          "net": "$1N61",
+          "position_mm": [
+            47.646,
+            33.66198
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "D1",
+      "value": "1SMA4740A",
+      "footprint": "MicroSMT_v485_controller:SMD_2_1fa9734501",
+      "uuid": "be0e2011-6523-5897-83a1-ccae073fa734",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N61",
+          "net": "$1N61",
+          "position_mm": [
+            40.4164,
+            28.00298
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N58",
+          "net": "$1N58",
+          "position_mm": [
+            40.3976,
+            23.19502
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "D3",
+      "value": "SMF12CA",
+      "footprint": "MicroSMT_v485_controller:SMD_2_55f911f37a",
+      "uuid": "396a0265-f493-56b8-b6a9-4c040162ee59",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            45.106,
+            46.88598
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N38",
+          "net": "$1N38",
+          "position_mm": [
+            45.106,
+            50.28602
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "D4",
+      "value": "SMF12CA",
+      "footprint": "MicroSMT_v485_controller:SMD_2_55f911f37a",
+      "uuid": "0cde9b55-1815-5237-9f42-32a23969be9f",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N45",
+          "net": "$1N45",
+          "position_mm": [
+            45.106,
+            51.96598
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            45.106,
+            55.36602
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "L2",
+      "value": "SMW3225S102HTE",
+      "footprint": "MicroSMT_v485_controller:SMD_4_008e72132e",
+      "uuid": "e24a088e-f7db-5339-be2b-688e43266b6d",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N48",
+          "net": "$1N48",
+          "position_mm": [
+            40.15,
+            50.30096
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N47",
+          "net": "$1N47",
+          "position_mm": [
+            40.15,
+            51.95094
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "$1N45",
+          "net": "$1N45",
+          "position_mm": [
+            42.94984,
+            51.95094
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "$1N38",
+          "net": "$1N38",
+          "position_mm": [
+            42.94984,
+            50.30096
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "LED1",
+      "value": "NCD0603G1",
+      "footprint": "MicroSMT_v485_controller:SMD_2_aee0334fb4",
+      "uuid": "de2bba57-0130-5a3a-976c-fb9c383bac76",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            46.66747,
+            61.02839
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N50",
+          "net": "$1N50",
+          "position_mm": [
+            45.06854,
+            61.03551
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "LED2",
+      "value": "NCD0603G1",
+      "footprint": "MicroSMT_v485_controller:SMD_2_7119c32529",
+      "uuid": "093e4473-6e13-56d5-aebb-9b65fd98f50b",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            35.19639,
+            34.19753
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N35",
+          "net": "$1N35",
+          "position_mm": [
+            35.20351,
+            35.79646
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "P1",
+      "value": "2.54-1*8P\u6bcd\u73af\u4fdd",
+      "footprint": "MicroSMT_v485_controller:PTH_8_ac2e14a8f3",
+      "uuid": "9fea2a77-7182-52c3-a0c9-a3594a0099af",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "NET_1",
+          "net": "NET_1",
+          "position_mm": [
+            23.61003,
+            58.9999
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "NET_2",
+          "net": "NET_2",
+          "position_mm": [
+            26.15003,
+            58.9999
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "GPIO7",
+          "net": "GPIO7",
+          "position_mm": [
+            28.69003,
+            58.9999
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "4",
+          "source_net": "NET_3",
+          "net": "NET_3",
+          "position_mm": [
+            31.23003,
+            58.9999
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "5",
+          "source_net": "GPIO9",
+          "net": "GPIO9",
+          "position_mm": [
+            33.77003,
+            58.9999
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "6",
+          "source_net": "NET_4",
+          "net": "NET_4",
+          "position_mm": [
+            36.31003,
+            58.9999
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "7",
+          "source_net": "RX GPIO20",
+          "net": "RX GPIO20",
+          "position_mm": [
+            38.85003,
+            58.9999
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "8",
+          "source_net": "TX GPIO21",
+          "net": "TX GPIO21",
+          "position_mm": [
+            41.39003,
+            58.9999
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "P2",
+      "value": "2.54-1*8P\u6bcd\u73af\u4fdd",
+      "footprint": "MicroSMT_v485_controller:PTH_8_7aeb1c419b",
+      "uuid": "46b01369-1e63-5040-82a9-636e8088fd2a",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "NET_5",
+          "net": "NET_5",
+          "position_mm": [
+            23.61,
+            43.76
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            26.15,
+            43.76
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "NET_6",
+          "net": "NET_6",
+          "position_mm": [
+            28.69,
+            43.76
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "4",
+          "source_net": "NET_7",
+          "net": "NET_7",
+          "position_mm": [
+            31.23,
+            43.76
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "5",
+          "source_net": "NET_8",
+          "net": "NET_8",
+          "position_mm": [
+            33.77,
+            43.76
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "6",
+          "source_net": "NET_9",
+          "net": "NET_9",
+          "position_mm": [
+            36.31,
+            43.76
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "7",
+          "source_net": "NET_10",
+          "net": "NET_10",
+          "position_mm": [
+            38.85,
+            43.76
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "8",
+          "source_net": "NET_11",
+          "net": "NET_11",
+          "position_mm": [
+            41.39,
+            43.76
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "P3",
+      "value": "WJ500V-5.08-2P",
+      "footprint": "MicroSMT_v485_controller:PTH_2_e96cc44099",
+      "uuid": "577d0188-0af4-5c3e-9bac-b1a6a719ce3a",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            27.834,
+            37.029
+          ],
+          "drill_mm": 1.30002
+        },
+        {
+          "number": "2",
+          "source_net": "$1N56",
+          "net": "$1N56",
+          "position_mm": [
+            27.834,
+            31.949
+          ],
+          "drill_mm": 1.30002
+        }
+      ]
+    },
+    {
+      "ref": "Q1",
+      "value": "AO4407C",
+      "footprint": "MicroSMT_v485_controller:SMD_8_0b8baf6ad0",
+      "uuid": "a890724c-5bab-5c52-8601-5e30e247287c",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N61",
+          "net": "$1N61",
+          "position_mm": [
+            36.10449,
+            26.996
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N61",
+          "net": "$1N61",
+          "position_mm": [
+            36.10449,
+            25.726
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "$1N61",
+          "net": "$1N61",
+          "position_mm": [
+            36.10449,
+            24.456
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "$1N58",
+          "net": "$1N58",
+          "position_mm": [
+            36.10449,
+            23.186
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "5",
+          "source_net": "$1N56",
+          "net": "$1N56",
+          "position_mm": [
+            30.73951,
+            23.186
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "6",
+          "source_net": "$1N56",
+          "net": "$1N56",
+          "position_mm": [
+            30.73951,
+            24.456
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "7",
+          "source_net": "$1N56",
+          "net": "$1N56",
+          "position_mm": [
+            30.73951,
+            25.726
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "8",
+          "source_net": "$1N56",
+          "net": "$1N56",
+          "position_mm": [
+            30.73951,
+            26.996
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R1",
+      "value": "1k\u03a9",
+      "footprint": "MicroSMT_v485_controller:SMD_2_cc916b3528",
+      "uuid": "8764d2bd-6bc7-5620-ad72-a52610e9d863",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            35.95336,
+            37.918
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N35",
+          "net": "$1N35",
+          "position_mm": [
+            34.44664,
+            37.918
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R2",
+      "value": "120\u03a9",
+      "footprint": "MicroSMT_v485_controller:SMD_2_a7994fb989",
+      "uuid": "33493a1a-7b46-52c0-8414-9fb34793d611",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N48",
+          "net": "$1N48",
+          "position_mm": [
+            36.47,
+            50.49964
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N47",
+          "net": "$1N47",
+          "position_mm": [
+            36.47,
+            52.00636
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R3",
+      "value": "4.7k\u03a9",
+      "footprint": "MicroSMT_v485_controller:SMD_2_a7994fb989",
+      "uuid": "627c69da-495e-54af-bcd5-8fa0222af602",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N47",
+          "net": "$1N47",
+          "position_mm": [
+            39.137,
+            54.43664
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            39.137,
+            55.94336
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R4",
+      "value": "4.7k\u03a9",
+      "footprint": "MicroSMT_v485_controller:SMD_2_a7994fb989",
+      "uuid": "1a445a9f-fcad-5d91-91fa-74f98abe0a52",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            38.375,
+            47.70564
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N48",
+          "net": "$1N48",
+          "position_mm": [
+            38.375,
+            49.21236
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R5",
+      "value": "1k\u03a9",
+      "footprint": "MicroSMT_v485_controller:SMD_2_04577a26f8",
+      "uuid": "31b454b4-2556-59fa-bbb4-e00cd59800bf",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GPIO7",
+          "net": "GPIO7",
+          "position_mm": [
+            40.54264,
+            61.413
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N50",
+          "net": "$1N50",
+          "position_mm": [
+            42.04936,
+            61.413
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R6",
+      "value": "100\u03a9",
+      "footprint": "MicroSMT_v485_controller:SMD_2_cc916b3528",
+      "uuid": "2f3ff4d2-3f69-5da5-861c-44ac1d803aa2",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RX GPIO20",
+          "net": "RX GPIO20",
+          "position_mm": [
+            33.15936,
+            56.206
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N12",
+          "net": "$1N12",
+          "position_mm": [
+            31.65264,
+            56.206
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R7",
+      "value": "100\u03a9",
+      "footprint": "MicroSMT_v485_controller:SMD_2_fef7677169",
+      "uuid": "d9b44ea8-4bbf-557f-bbfc-1296d2d181c9",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GPIO9",
+          "net": "GPIO9",
+          "position_mm": [
+            27.707,
+            55.18136
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N11",
+          "net": "$1N11",
+          "position_mm": [
+            27.707,
+            53.67464
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R8",
+      "value": "100\u03a9",
+      "footprint": "MicroSMT_v485_controller:SMD_2_fef7677169",
+      "uuid": "accca71b-8c24-5f91-9054-a6cb44ea0927",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "TX GPIO21",
+          "net": "TX GPIO21",
+          "position_mm": [
+            36.597,
+            55.94336
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N13",
+          "net": "$1N13",
+          "position_mm": [
+            36.597,
+            54.43664
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R9",
+      "value": "100k\u03a9",
+      "footprint": "MicroSMT_v485_controller:SMD_2_cc916b3528",
+      "uuid": "8c12242d-e96b-5f8e-9d15-4aeadacb0f7f",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            45.09736,
+            23.186
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N58",
+          "net": "$1N58",
+          "position_mm": [
+            43.59064,
+            23.186
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "value": "AMS1117-3.3",
+      "footprint": "MicroSMT_v485_controller:SMD_4_f5cc46188f",
+      "uuid": "8cb5e668-a014-54ac-8331-b351aac9b7f4",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            38.45305,
+            34.72903
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            38.45305,
+            37.029
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            38.45305,
+            39.32897
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "NET_12",
+          "net": "NET_12",
+          "position_mm": [
+            44.39297,
+            37.029
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "U2",
+      "value": "VH3.96-4P ZZ",
+      "footprint": "MicroSMT_v485_controller:PTH_4_101e17f868",
+      "uuid": "cf028f0d-2206-568b-958d-2a50725d1d75",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            52.5055,
+            45.18593
+          ],
+          "drill_mm": 1.8
+        },
+        {
+          "number": "2",
+          "source_net": "$1N38",
+          "net": "$1N38",
+          "position_mm": [
+            52.5055,
+            49.1463
+          ],
+          "drill_mm": 1.8
+        },
+        {
+          "number": "3",
+          "source_net": "$1N45",
+          "net": "$1N45",
+          "position_mm": [
+            52.5055,
+            53.10616
+          ],
+          "drill_mm": 1.8
+        },
+        {
+          "number": "4",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            52.5055,
+            57.06602
+          ],
+          "drill_mm": 1.8
+        }
+      ]
+    },
+    {
+      "ref": "U3",
+      "value": "2920L500/30GR",
+      "footprint": "MicroSMT_v485_controller:SMD_2_74179e062f",
+      "uuid": "f70d77f7-ee1b-5bcd-a5b5-7880b4da0261",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            52.218,
+            37.66199
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N61",
+          "net": "$1N61",
+          "position_mm": [
+            52.218,
+            31.06206
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "U7",
+      "value": "MAX3485ESA(UMW)",
+      "footprint": "MicroSMT_v485_controller:SMD_8_f52f094fb5",
+      "uuid": "5d8ed2d5-82ee-52b3-a7fa-471aeed5b840",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N12",
+          "net": "$1N12",
+          "position_mm": [
+            30.882,
+            54.14784
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N11",
+          "net": "$1N11",
+          "position_mm": [
+            32.152,
+            54.14784
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "$1N11",
+          "net": "$1N11",
+          "position_mm": [
+            33.422,
+            54.14784
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "$1N13",
+          "net": "$1N13",
+          "position_mm": [
+            34.692,
+            54.14784
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "5",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            34.692,
+            48.61216
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "6",
+          "source_net": "$1N48",
+          "net": "$1N48",
+          "position_mm": [
+            33.422,
+            48.61216
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "7",
+          "source_net": "$1N47",
+          "net": "$1N47",
+          "position_mm": [
+            32.152,
+            48.61216
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "8",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            30.882,
+            48.61216
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "HREC1",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_controller:PTH_1_ee2b9368a9",
+      "uuid": "4e6223ac-4471-5cf2-b7ff-49132c59188e",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_1",
+          "net": "",
+          "position_mm": [
+            25.0,
+            64.5
+          ],
+          "drill_mm": 3.5
+        }
+      ]
+    },
+    {
+      "ref": "HREC2",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_controller:PTH_1_ee2b9368a9",
+      "uuid": "fb4bb67a-d67d-5143-9986-be80014dc15c",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_9",
+          "net": "",
+          "position_mm": [
+            25.0,
+            25.0
+          ],
+          "drill_mm": 3.5
+        }
+      ]
+    },
+    {
+      "ref": "HREC3",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_controller:PTH_1_ee2b9368a9",
+      "uuid": "0313a5b1-4683-56ec-ae30-7034e9369496",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_34",
+          "net": "",
+          "position_mm": [
+            51.5,
+            64.5
+          ],
+          "drill_mm": 3.5
+        }
+      ]
+    },
+    {
+      "ref": "HREC4",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_controller:PTH_1_ee2b9368a9",
+      "uuid": "10bae320-2c3b-575b-84cb-996e3ce17682",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_35",
+          "net": "",
+          "position_mm": [
+            51.5,
+            25.0
+          ],
+          "drill_mm": 3.5
+        }
+      ]
+    }
+  ],
+  "aliases": {
+    "GND": "GND",
+    "7V": "7V",
+    "VCC_3V3": "VCC_3V3",
+    "$1N61": "$1N61",
+    "$1N58": "$1N58",
+    "$1N38": "$1N38",
+    "$1N45": "$1N45",
+    "$1N48": "$1N48",
+    "$1N47": "$1N47",
+    "$1N50": "$1N50",
+    "$1N35": "$1N35",
+    "NET_1": "NET_1",
+    "NET_2": "NET_2",
+    "GPIO7": "GPIO7",
+    "NET_3": "NET_3",
+    "GPIO9": "GPIO9",
+    "NET_4": "NET_4",
+    "RX GPIO20": "RX GPIO20",
+    "TX GPIO21": "TX GPIO21",
+    "NET_5": "NET_5",
+    "NET_6": "NET_6",
+    "NET_7": "NET_7",
+    "NET_8": "NET_8",
+    "NET_9": "NET_9",
+    "NET_10": "NET_10",
+    "NET_11": "NET_11",
+    "$1N56": "$1N56",
+    "$1N12": "$1N12",
+    "$1N11": "$1N11",
+    "$1N13": "$1N13",
+    "NET_12": "NET_12",
+    "RECOVERED_1": "",
+    "RECOVERED_9": "",
+    "RECOVERED_34": "",
+    "RECOVERED_35": ""
+  },
+  "dimensions_mm": [
+    36.5,
+    49.5
+  ],
+  "coordinate_transform": {
+    "x_offset_mm": 22.5,
+    "y_offset_mm": 59.0,
+    "invert_y": true
+  },
+  "source_summary": {
+    "name": "v485_controller",
+    "source": "Bing-feeder/V485-Feeder Controller/PCB_ControlBoard/Gerber_PCB1_2026-10-09.zip",
+    "dimensions_mm": [
+      36.5,
+      49.5
+    ],
+    "components": 33,
+    "pads": 92,
+    "drills": 86,
+    "probe_snap_max_mm": 6.931089382320954e-06,
+    "nets": [
+      "$1N11",
+      "$1N12",
+      "$1N13",
+      "$1N35",
+      "$1N38",
+      "$1N45",
+      "$1N47",
+      "$1N48",
+      "$1N50",
+      "$1N56",
+      "$1N58",
+      "$1N61",
+      "7V",
+      "GND",
+      "GPIO7",
+      "GPIO9",
+      "NET_1",
+      "NET_10",
+      "NET_11",
+      "NET_12",
+      "NET_2",
+      "NET_3",
+      "NET_4",
+      "NET_5",
+      "NET_6",
+      "NET_7",
+      "NET_8",
+      "NET_9",
+      "RECOVERED_1",
+      "RECOVERED_34",
+      "RECOVERED_35",
+      "RECOVERED_9",
+      "RX GPIO20",
+      "TX GPIO21",
+      "VCC_3V3"
+    ],
+    "conflicts": [],
+    "archive_members_sha256": {
+      "Drill_PTH_Through.DRL": "b12c56c9643970e637fb08ed1b15e9fb1df1a44f037e480f6b9278dd87412765",
+      "Drill_PTH_Through_Via.DRL": "acb049b53d85de7a7f403812d9853f3d66d30f626b982396b10e380294ef7efc",
+      "FlyingProbeTesting.json": "7adca748dbb3b0cae131458ce0fff83cd7641cd7b1472a8ad74c6aeb540ee802",
+      "Gerber_BoardOutlineLayer.GKO": "24a9aad6a5d007b5e60225676f550f56d8000fc9f3ebee8cf10826d1e805ea14",
+      "Gerber_BottomLayer.GBL": "457cd633c23cf3b09cab84ad0a7d84f56cd8cec4d12c4f22e14bd03542acc668",
+      "Gerber_BottomSilkscreenLayer.GBO": "276982af8e9c881ea6cef9b743abf20a024f52e9d557cc5ac146879271287cef",
+      "Gerber_BottomSolderMaskLayer.GBS": "f29d5d3630ef6b854b154506bb26c67ae775fbd28eb0e8b45804d26a5e35bebb",
+      "Gerber_DocumentLayer.GDL": "5d35e5e01987ee6e985d3a81a1ed1de8dfd2f271f3a17ee9d7d87e5a3927c04f",
+      "Gerber_DrillDrawingLayer.GDD": "ffc99cb3be7c2c1f29b725600bafc5bb9008fc983f3681db2146a03c43a3370c",
+      "Gerber_TopLayer.GTL": "9a857f77ecba6acb88be61a16eb445d06ccaf740aefcd307e0bf143a7966a48b",
+      "Gerber_TopPasteMaskLayer.GTP": "bcb1c011b5f260ea303f6689401aae9b1380fb338eea588ff9b25749e2c076f8",
+      "Gerber_TopSilkscreenLayer.GTO": "df2edca5f0038849e938635df5a262f7e682bda2dc7fbe22ad32fdc3199cadca",
+      "Gerber_TopSolderMaskLayer.GTS": "76288325d60a1ae7d8defcc788548e68a3a403df0ee70f8ebeb793cac299147d",
+      "PCB\u4e0b\u5355\u5fc5\u8bfb.txt": "dcb3ee1c645c17a009d70726ad9ab708b68a074556fabcf75a4a059d3b43ec59"
+    }
+  },
+  "inferred_references": [
+    "HREC1",
+    "HREC2",
+    "HREC3",
+    "HREC4"
+  ],
+  "board_counts": {
+    "copper_layers": 2,
+    "footprints": 33,
+    "tracks_and_vias": 742,
+    "zones": 62
+  },
+  "schematic_pages": 3,
+  "nonplated_holes": 0,
+  "probe_normalization": {
+    "source_rows": 110,
+    "unique_source_pads": 88
+  },
+  "interpretation": [
+    "CAM pad numbers and net names preserved; generic passive symbol pins.",
+    "HREC references identify unreferenced source holes; their mechanical purpose is unverified.",
+    "Copper contours preserve final plots, not editable original pour intent."
+  ]
+}

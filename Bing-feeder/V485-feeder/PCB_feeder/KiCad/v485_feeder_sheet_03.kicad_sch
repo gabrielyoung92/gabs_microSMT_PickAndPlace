@@ -1,0 +1,4904 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 76284f5b-45c5-5dbb-9030-0d53164c3309)
+  (paper "A3")
+  (title_block
+    (title "v485_feeder / recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols
+    (symbol "MicroSMT_v485_feeder:v485_feeder_HREC1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "HREC"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_HREC1"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_HREC1_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_HREC1_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_HREC2"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "HREC"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_HREC2"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_HREC2_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_HREC2_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_R17"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_R17"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_R17_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_R17_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_R18"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_R18"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_R18_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_R18_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_R19"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_R19"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_R19_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_R19_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_SW1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "SW"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_SW1"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_SW1_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_SW1_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_SW2"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "SW"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_SW2"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_SW2_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_SW2_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_U1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_U1"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_U1_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_U1_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_U10"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_U10"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_U10_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_U10_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_U2"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 34.29 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_U2"
+        (at 0 31.75 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_U2_0_1"
+        (rectangle
+          (start -15.24 30.48)
+          (end 15.24 -30.48)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_U2_1_1"
+        (pin passive line
+          (at -20.32 29.21 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 26.67 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 24.130000000000003 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 21.59 0)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 19.05 0)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 16.51 0)
+          (length 5.08)
+          (name "PAD 6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 13.97 0)
+          (length 5.08)
+          (name "PAD 7"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 11.43 0)
+          (length 5.08)
+          (name "PAD 8"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 8.89 0)
+          (length 5.08)
+          (name "PAD 9"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "9"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 6.350000000000001 0)
+          (length 5.08)
+          (name "PAD 10"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "10"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 3.8100000000000023 0)
+          (length 5.08)
+          (name "PAD 11"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "11"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 1.2699999999999996 0)
+          (length 5.08)
+          (name "PAD 12"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "12"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.2699999999999996 0)
+          (length 5.08)
+          (name "PAD 13"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "13"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -3.8100000000000023 0)
+          (length 5.08)
+          (name "PAD 14"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "14"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -6.350000000000001 0)
+          (length 5.08)
+          (name "PAD 15"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "15"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -8.89 0)
+          (length 5.08)
+          (name "PAD 16"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "16"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -11.43 0)
+          (length 5.08)
+          (name "PAD 17"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "17"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -13.969999999999999 0)
+          (length 5.08)
+          (name "PAD 18"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "18"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -16.509999999999998 0)
+          (length 5.08)
+          (name "PAD 19"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "19"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -19.049999999999997 0)
+          (length 5.08)
+          (name "PAD 20"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "20"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -21.589999999999996 0)
+          (length 5.08)
+          (name "PAD 21"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "21"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -24.130000000000003 0)
+          (length 5.08)
+          (name "PAD 22"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "22"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -26.67 0)
+          (length 5.08)
+          (name "PAD 23"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "23"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -29.21 0)
+          (length 5.08)
+          (name "PAD 24"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "24"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 29.21 180)
+          (length 5.08)
+          (name "PAD 25"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "25"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 26.67 180)
+          (length 5.08)
+          (name "PAD 26"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "26"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 24.130000000000003 180)
+          (length 5.08)
+          (name "PAD 27"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "27"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 21.59 180)
+          (length 5.08)
+          (name "PAD 28"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "28"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 19.05 180)
+          (length 5.08)
+          (name "PAD 29"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "29"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 16.51 180)
+          (length 5.08)
+          (name "PAD 30"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "30"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 13.97 180)
+          (length 5.08)
+          (name "PAD 31"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "31"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 11.43 180)
+          (length 5.08)
+          (name "PAD 32"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "32"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 8.89 180)
+          (length 5.08)
+          (name "PAD 33"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "33"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 6.350000000000001 180)
+          (length 5.08)
+          (name "PAD 34"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "34"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 3.8100000000000023 180)
+          (length 5.08)
+          (name "PAD 35"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "35"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.2699999999999996 180)
+          (length 5.08)
+          (name "PAD 36"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "36"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.2699999999999996 180)
+          (length 5.08)
+          (name "PAD 37"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "37"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -3.8100000000000023 180)
+          (length 5.08)
+          (name "PAD 38"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "38"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -6.350000000000001 180)
+          (length 5.08)
+          (name "PAD 39"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "39"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -8.89 180)
+          (length 5.08)
+          (name "PAD 40"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "40"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -11.43 180)
+          (length 5.08)
+          (name "PAD 41"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "41"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -13.969999999999999 180)
+          (length 5.08)
+          (name "PAD 42"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "42"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -16.509999999999998 180)
+          (length 5.08)
+          (name "PAD 43"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "43"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -19.049999999999997 180)
+          (length 5.08)
+          (name "PAD 44"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "44"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -21.589999999999996 180)
+          (length 5.08)
+          (name "PAD 45"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "45"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -24.130000000000003 180)
+          (length 5.08)
+          (name "PAD 46"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "46"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -26.67 180)
+          (length 5.08)
+          (name "PAD 47"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "47"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -29.21 180)
+          (length 5.08)
+          (name "PAD 48"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "48"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_U3"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 13.97 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_U3"
+        (at 0 11.43 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_U3_0_1"
+        (rectangle
+          (start -15.24 10.16)
+          (end 15.24 -10.16)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_U3_1_1"
+        (pin passive line
+          (at -20.32 8.89 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 6.3500000000000005 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 3.8100000000000005 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 1.2700000000000005 0)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.2699999999999996 0)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -3.8099999999999987 0)
+          (length 5.08)
+          (name "PAD 6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -6.35 0)
+          (length 5.08)
+          (name "PAD 7"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -8.89 0)
+          (length 5.08)
+          (name "PAD 8"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 8.89 180)
+          (length 5.08)
+          (name "PAD 9"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "9"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 6.3500000000000005 180)
+          (length 5.08)
+          (name "PAD 10"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "10"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 3.8100000000000005 180)
+          (length 5.08)
+          (name "PAD 11"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "11"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.2700000000000005 180)
+          (length 5.08)
+          (name "PAD 12"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "12"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.2699999999999996 180)
+          (length 5.08)
+          (name "PAD 13"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "13"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -3.8099999999999987 180)
+          (length 5.08)
+          (name "PAD 14"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "14"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -6.35 180)
+          (length 5.08)
+          (name "PAD 15"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "15"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -8.89 180)
+          (length 5.08)
+          (name "PAD 16"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "16"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_U4"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_U4"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_U4_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_U4_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_U5"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_U5"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_U5_0_1"
+        (rectangle
+          (start -15.24 3.81)
+          (end 15.24 -3.81)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_U5_1_1"
+        (pin passive line
+          (at -20.32 2.54 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -2.54 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 2.54 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_U6"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_U6"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_U6_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_U6_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_U7"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_U7"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_U7_0_1"
+        (rectangle
+          (start -15.24 5.08)
+          (end 15.24 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_U7_1_1"
+        (pin passive line
+          (at -20.32 3.81 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -3.81 0)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 3.81 180)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 7"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -3.81 180)
+          (length 5.08)
+          (name "PAD 8"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_U8"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_U8"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_U8_0_1"
+        (rectangle
+          (start -15.24 5.08)
+          (end 15.24 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_U8_1_1"
+        (pin passive line
+          (at -20.32 3.81 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -3.81 0)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 3.81 180)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 7"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -3.81 180)
+          (length 5.08)
+          (name "PAD 8"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_U9"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_U9"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_U9_0_1"
+        (rectangle
+          (start -15.24 3.81)
+          (end 15.24 -3.81)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_U9_1_1"
+        (pin passive line
+          (at -20.32 2.54 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -2.54 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 2.54 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -2.54 180)
+          (length 5.08)
+          (name "PAD 6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_X2"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_X2"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_X2_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_X2_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0))))))))
+  (text "v485 feeder / components 3"
+    (at 20.32 17.78 0)
+    (effects
+      (font
+        (size 1.8 1.8))
+      (justify left top))
+    (uuid 4b0b18cb-f894-588c-8f2f-0cea2793bd20))
+  (text "MicroSMT CAM-derived reference. Pad numbers/nets preserved; generic pin electrical types.\nUse the supplied schematic for functional interpretation. Not a fabrication release."
+    (at 20.32 25.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left top))
+    (uuid 6e7ca3fd-cc76-5b25-9acc-b5069cd21983))
+  (wire
+    (pts
+      (xy 33.02 53.34)
+      (xy 27.94 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5e685781-414c-5a89-b107-ce7ebf641c12))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 27.94 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 7a14d9aa-cbc8-535e-8019-fe074a04290f))
+  (wire
+    (pts
+      (xy 73.66 53.34)
+      (xy 78.74 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a62e9207-78a5-5dc6-b50a-56ed75a68375))
+  (global_label "24C02SCL"
+    (shape bidirectional)
+    (at 78.74 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 61f03d08-6ef9-5dfa-8fe8-ecfe9b21a780))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_R17")
+    (at 53.34 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid d937266e-9c4b-5ab7-860f-64f32aaf2ebd)
+    (property "Reference" "R17"
+      (at 53.34 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "4.7kΩ"
+      (at 53.34 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_2_e7bda1677c"
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 26cc92db-d835-5722-bd5d-11dcba7d6170))
+    (pin "2"
+      (uuid bb32bf7e-856e-5a69-95b8-f17f74ca67eb))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "R17")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 152.4 53.34)
+      (xy 147.32 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 964ad078-5a21-5f52-8e64-e3ad787930ee))
+  (global_label "PA2"
+    (shape bidirectional)
+    (at 147.32 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 88894f5e-e0ec-58b7-a6f6-f5ebca6a6504))
+  (wire
+    (pts
+      (xy 193.04 53.34)
+      (xy 198.12 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 947bb320-4e7f-51a6-994b-26c58b292ad5))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 198.12 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 70ef239a-2bad-540e-a56e-efedff4dac17))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_R18")
+    (at 172.72 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 56e6c97d-3b97-5f6c-a4aa-4d0303ae1459)
+    (property "Reference" "R18"
+      (at 172.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10kΩ"
+      (at 172.72 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_2_e7bda1677c"
+      (at 172.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid ff754143-8f37-54e8-8618-78d14ce208a1))
+    (pin "2"
+      (uuid de19f18e-e4d1-5e85-be6b-864f7bc37ad2))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "R18")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 271.78 53.34)
+      (xy 266.7 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3806b1a5-e8f6-5a46-975d-848765830457))
+  (global_label "PA4"
+    (shape bidirectional)
+    (at 266.7 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 262b5c23-b675-56cd-b838-95b96c5589df))
+  (wire
+    (pts
+      (xy 312.42 53.34)
+      (xy 317.5 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid bf6a5292-fe94-5e60-b094-484873d7a1e8))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 317.5 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid fbaa29b2-dcb7-53a5-b4d9-2b193acd01c5))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_R19")
+    (at 292.1 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid edbda146-117a-5ea9-8c60-f746077cb4cd)
+    (property "Reference" "R19"
+      (at 292.1 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10kΩ"
+      (at 292.1 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_2_e7bda1677c"
+      (at 292.1 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid aaf095f1-b730-5d40-a58f-5131e0a4fbc4))
+    (pin "2"
+      (uuid 757cb031-2d46-509e-b3be-35a4c92ba05d))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "R19")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 33.02 77.47)
+      (xy 27.94 77.47))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 745918a2-d42c-5cff-bfc5-4c99f4f518f7))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 77.47 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 634b18f0-c02b-5d02-9042-0670341da484))
+  (wire
+    (pts
+      (xy 33.02 80.01)
+      (xy 27.94 80.01))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5d909df2-961b-52f8-be24-5f81d983e431))
+  (global_label "PA4"
+    (shape bidirectional)
+    (at 27.94 80.01 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid a6dec98a-d4b8-5ed7-a585-390100ed031c))
+  (wire
+    (pts
+      (xy 73.66 77.47)
+      (xy 78.74 77.47))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b5df9194-86ad-5d9e-91ca-8b4735e19bd0))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 78.74 77.47 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid ab4a5fa3-dbf0-5625-8e76-0a5291d70d3d))
+  (wire
+    (pts
+      (xy 73.66 80.01)
+      (xy 78.74 80.01))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a9262dbf-e999-5430-9b0a-5b89e99a5a8d))
+  (global_label "NET_1"
+    (shape bidirectional)
+    (at 78.74 80.01 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 56b7795a-a02f-5411-b992-c84cbb66aeda))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_SW1")
+    (at 53.34 78.74000000000001 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 11360272-1a5c-540e-9ee2-864149f4625d)
+    (property "Reference" "SW1"
+      (at 53.34 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "TS-1093A-A8B3-D2"
+      (at 53.34 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:PTH_4_529d520394"
+      (at 53.34 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid ca126a6a-b46e-536b-8b2c-924a481cd331))
+    (pin "2"
+      (uuid 487c62f2-297d-5b9b-a0e2-5aef78337b12))
+    (pin "3"
+      (uuid e8654a65-4359-53db-baf0-0c0fc4beea54))
+    (pin "4"
+      (uuid 2afeb5cf-df1a-5b75-bb4d-2741f9b3c8f0))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "SW1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 152.4 77.47)
+      (xy 147.32 77.47))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 89efe5e9-ffc2-5e14-a769-1c063ecb930d))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 147.32 77.47 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid b3d01baa-76c8-5c80-b7e7-845b99a1a6ea))
+  (wire
+    (pts
+      (xy 152.4 80.01)
+      (xy 147.32 80.01))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a375ff49-e0c2-5e83-bd6b-7f67f636b747))
+  (global_label "PA2"
+    (shape bidirectional)
+    (at 147.32 80.01 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 50c0f7d4-4cf5-5dce-817a-b710582ab89d))
+  (wire
+    (pts
+      (xy 193.04 77.47)
+      (xy 198.12 77.47))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid c4e6c533-22d5-545d-9275-ddf6d598fbae))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 198.12 77.47 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 798c65e6-62c5-5a42-bc8c-86f1b5946003))
+  (wire
+    (pts
+      (xy 193.04 80.01)
+      (xy 198.12 80.01))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid deaf6b12-3e61-50fe-ac4d-a15bfa38e2be))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 198.12 80.01 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 61f8012d-eeb1-5e92-a756-ea3c15ed957f))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_SW2")
+    (at 172.72 78.74000000000001 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c2b96dfd-6fbf-5f86-8d05-9440a79e261a)
+    (property "Reference" "SW2"
+      (at 172.72 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "TS-1093A-A8B3-D2"
+      (at 172.72 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:PTH_4_0f79a45cd4"
+      (at 172.72 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 87320323-a33a-5904-9fdb-b1186cabdab3))
+    (pin "2"
+      (uuid f7f8d968-7a39-5c0c-af62-59cc4bd78d6c))
+    (pin "3"
+      (uuid d35628f3-95a4-5884-bb36-32294bf176f2))
+    (pin "4"
+      (uuid 07f2a49d-d657-5c64-9c43-05462d4278f0))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "SW2")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 271.78 77.47)
+      (xy 266.7 77.47))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 278ce05c-4f95-5818-bc8f-23a5c5605933))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 266.7 77.47 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 322d0704-4d06-5e52-9c41-02e3ee149680))
+  (wire
+    (pts
+      (xy 271.78 80.01)
+      (xy 266.7 80.01))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d31040ac-b120-550c-ae14-225cd51c7959))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 266.7 80.01 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 5b4d09c1-5288-5a6f-a86b-e916695e7c79))
+  (wire
+    (pts
+      (xy 312.42 77.47)
+      (xy 317.5 77.47))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 93f5bc01-8517-5475-a306-04aa471652bc))
+  (global_label "+5V"
+    (shape bidirectional)
+    (at 317.5 77.47 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid aaab097e-8582-5acf-b79f-de207ee60724))
+  (wire
+    (pts
+      (xy 312.42 80.01)
+      (xy 317.5 80.01))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7c4ab8f2-3874-5b84-bf3a-f4e33d73ce84))
+  (global_label "NET_2"
+    (shape bidirectional)
+    (at 317.5 80.01 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 8ab3ffe1-51bb-5c7c-9a55-b21fd514e057))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_U1")
+    (at 292.1 78.74000000000001 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ee4050a0-65eb-555b-9267-87b5c2f2435f)
+    (property "Reference" "U1"
+      (at 292.1 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "AMS1117-3.3"
+      (at 292.1 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_4_f5cc46188f"
+      (at 292.1 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 4adaa321-4e14-5482-8b61-042bd5b60e6b))
+    (pin "2"
+      (uuid 577e6d2a-ae52-574e-92d9-9c346c507497))
+    (pin "3"
+      (uuid ff9a30cf-5676-56e0-aa95-32a39b6b993a))
+    (pin "4"
+      (uuid 77baa9e6-3418-5517-b094-c11b72f282c7))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "U1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 33.02 101.6)
+      (xy 27.94 101.6))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6d0d55cb-6788-5755-a962-05ba41bf5b84))
+  (global_label "NET_3"
+    (shape bidirectional)
+    (at 27.94 101.6 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid f2ea2459-1049-52fb-a12b-963ca797c725))
+  (wire
+    (pts
+      (xy 33.02 104.14)
+      (xy 27.94 104.14))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 349b5910-c549-567a-acaf-f0965356d013))
+  (global_label "NET_4"
+    (shape bidirectional)
+    (at 27.94 104.14 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid b1fa3db0-9f14-54aa-aaf3-b06e067e653c))
+  (wire
+    (pts
+      (xy 33.02 106.68)
+      (xy 27.94 106.68))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5800794b-a2c3-5991-aaea-f6823df7dca3))
+  (global_label "NET_5"
+    (shape bidirectional)
+    (at 27.94 106.68 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 3b1c70f4-fa2c-5e9c-a52c-1e4a002aba1d))
+  (wire
+    (pts
+      (xy 33.02 109.22)
+      (xy 27.94 109.22))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 54065fa8-5d01-5985-a983-7f05d310acea))
+  (global_label "NET_6"
+    (shape bidirectional)
+    (at 27.94 109.22 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid ce73da8e-7d40-5535-9ebb-279aa2305d70))
+  (wire
+    (pts
+      (xy 33.02 111.76)
+      (xy 27.94 111.76))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f234120a-212a-5f4e-957f-f7bd2dbcca7b))
+  (global_label "$1N2515"
+    (shape bidirectional)
+    (at 27.94 111.76 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid ea51181e-cda1-50a1-968b-925c9a615e11))
+  (wire
+    (pts
+      (xy 33.02 114.3)
+      (xy 27.94 114.3))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 2439cdcb-93ac-54ad-a930-63a7ce6802e0))
+  (global_label "$1N2524"
+    (shape bidirectional)
+    (at 27.94 114.3 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid aaeff853-0378-50aa-958a-5a98c2344a23))
+  (wire
+    (pts
+      (xy 33.02 116.84)
+      (xy 27.94 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8a8ac357-03e3-5f88-aec5-7e4987f3e0c2))
+  (global_label "$1N8413"
+    (shape bidirectional)
+    (at 27.94 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 66233b7f-e642-5e0a-a7da-218986e62ace))
+  (wire
+    (pts
+      (xy 33.02 119.38)
+      (xy 27.94 119.38))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8201fce9-d82e-5117-ac3b-252e3164a5b0))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 119.38 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 3d591ed5-82d4-5c7f-b360-7ebd03850667))
+  (wire
+    (pts
+      (xy 33.02 121.92)
+      (xy 27.94 121.92))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6f3624bd-4cbc-5a11-a208-d1ab1c1be478))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 27.94 121.92 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 2b0ad2f8-4629-5f20-81b9-ee9d8ced1a7c))
+  (wire
+    (pts
+      (xy 33.02 124.46)
+      (xy 27.94 124.46))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 2cbb9501-f916-5e2f-8401-7ae5b62f22e0))
+  (global_label "$1N2137"
+    (shape bidirectional)
+    (at 27.94 124.46 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 58521bc8-5b02-5f5b-ab9b-701fba0872d8))
+  (wire
+    (pts
+      (xy 33.02 127.0)
+      (xy 27.94 127.0))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 052b862a-4147-5f61-910d-8668a0110839))
+  (global_label "PA1"
+    (shape bidirectional)
+    (at 27.94 127.0 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid dcfe89b7-82c1-5b2a-aadc-ac33587c89fe))
+  (wire
+    (pts
+      (xy 33.02 129.54)
+      (xy 27.94 129.54))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b0e99bd8-830a-567c-be64-b4a30a5e9e63))
+  (global_label "PA2"
+    (shape bidirectional)
+    (at 27.94 129.54 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 26027756-f44c-5c77-b8b1-aa7feb32f7a5))
+  (wire
+    (pts
+      (xy 33.02 132.08)
+      (xy 27.94 132.08))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 54304f74-96f0-5ed9-911a-00a231093530))
+  (global_label "PA3"
+    (shape bidirectional)
+    (at 27.94 132.08 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 2a138403-5441-508d-81e7-d677387d0a12))
+  (wire
+    (pts
+      (xy 33.02 134.62)
+      (xy 27.94 134.62))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 582e15dc-0613-52c7-ae8b-56017d94e563))
+  (global_label "PA4"
+    (shape bidirectional)
+    (at 27.94 134.62 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 8ae921d7-d50a-5b13-8b65-1c008deccc30))
+  (wire
+    (pts
+      (xy 33.02 137.16)
+      (xy 27.94 137.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ba62962e-5495-5942-a6ca-6a5ace7dfba6))
+  (global_label "PA5"
+    (shape bidirectional)
+    (at 27.94 137.16 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 8f803b2c-90cb-5f5f-b7f0-b04aad76378d))
+  (wire
+    (pts
+      (xy 33.02 139.7)
+      (xy 27.94 139.7))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f731f0ad-aa93-5a39-a3d5-e92a772de4b6))
+  (global_label "PA6"
+    (shape bidirectional)
+    (at 27.94 139.7 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid e37e487f-f5ea-5269-96ec-0bd12241df9d))
+  (wire
+    (pts
+      (xy 33.02 142.24)
+      (xy 27.94 142.24))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b1b82d81-fdbf-5ed3-9615-c4ea50079ac2))
+  (global_label "PA7"
+    (shape bidirectional)
+    (at 27.94 142.24 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid e2219b28-6407-5fc3-9114-cc7ec307803d))
+  (wire
+    (pts
+      (xy 33.02 144.78)
+      (xy 27.94 144.78))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a04e5ccb-a427-59f8-aa08-3dbf77d3d773))
+  (global_label "NET_7"
+    (shape bidirectional)
+    (at 27.94 144.78 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid dc83943c-5803-564d-8ed8-ab03c069ace6))
+  (wire
+    (pts
+      (xy 33.02 147.32)
+      (xy 27.94 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid cc54f7cb-fb43-562e-8ca3-7ff7ef9b3a56))
+  (global_label "NET_8"
+    (shape bidirectional)
+    (at 27.94 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 10b55508-39f2-541f-b1b9-69dbce38ea38))
+  (wire
+    (pts
+      (xy 33.02 149.86)
+      (xy 27.94 149.86))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid cafb09e7-5a66-5ad8-b5b9-0f427a9c6108))
+  (global_label "$1N28421"
+    (shape bidirectional)
+    (at 27.94 149.86 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid ed8b9c66-e746-557e-a2df-44f3ec41727b))
+  (wire
+    (pts
+      (xy 33.02 152.4)
+      (xy 27.94 152.4))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d04c34fc-0054-5540-99e7-744484e8a5ac))
+  (global_label "NET_9"
+    (shape bidirectional)
+    (at 27.94 152.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 5cb0239c-b7bd-5727-b81b-bd2f852c6c60))
+  (wire
+    (pts
+      (xy 33.02 154.94)
+      (xy 27.94 154.94))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3a094695-d9b6-56c0-9fa3-97f04fc7a6c5))
+  (global_label "NET_10"
+    (shape bidirectional)
+    (at 27.94 154.94 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid f0c49338-2682-5b14-b668-f4c00bc181ef))
+  (wire
+    (pts
+      (xy 33.02 157.48)
+      (xy 27.94 157.48))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 9a7eb8b4-15dc-5d3e-aff6-31836d4ef4e5))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 157.48 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid e2efbfef-c2e8-5d23-ae4b-7c7849be5b22))
+  (wire
+    (pts
+      (xy 33.02 160.02)
+      (xy 27.94 160.02))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0407d59b-1dd8-56a5-8cd4-41919addf464))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 27.94 160.02 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 7ceb9dd8-b9a3-5eeb-9e23-7118bae9064a))
+  (wire
+    (pts
+      (xy 73.66 101.6)
+      (xy 78.74 101.6))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 37fbe6ca-20e9-56c1-a2f8-f7e4e02ea85b))
+  (global_label "SCL"
+    (shape bidirectional)
+    (at 78.74 101.6 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 42de115c-ffa0-5f3c-91d2-c3861432d890))
+  (wire
+    (pts
+      (xy 73.66 104.14)
+      (xy 78.74 104.14))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 845bf5a7-eb71-50d5-9f71-7ae649d58980))
+  (global_label "SDA"
+    (shape bidirectional)
+    (at 78.74 104.14 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid edfc722c-03ce-5474-bb9a-1cf2b75a26aa))
+  (wire
+    (pts
+      (xy 73.66 106.68)
+      (xy 78.74 106.68))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 9d24fd9c-85b0-5f6e-9fe4-739d3d30f794))
+  (global_label "24C02SDA"
+    (shape bidirectional)
+    (at 78.74 106.68 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 1ef3c2dc-552f-5ffb-9802-8a0601998290))
+  (wire
+    (pts
+      (xy 73.66 109.22)
+      (xy 78.74 109.22))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b4e03cca-3732-5957-a6d2-7f8d2401b6c6))
+  (global_label "24C02SCL"
+    (shape bidirectional)
+    (at 78.74 109.22 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 4945c332-2909-539b-a050-91be33150ec8))
+  (wire
+    (pts
+      (xy 73.66 111.76)
+      (xy 78.74 111.76))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f9de0bc4-d9b1-548f-b90a-deb9917cb6a5))
+  (global_label "PA8"
+    (shape bidirectional)
+    (at 78.74 111.76 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 9f618216-5a49-5a3e-8c09-eb0e5ea5d5e6))
+  (wire
+    (pts
+      (xy 73.66 114.3)
+      (xy 78.74 114.3))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e48cdd89-692c-51f7-b886-5d74448f2886))
+  (global_label "USART TX"
+    (shape bidirectional)
+    (at 78.74 114.3 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 1afbb5c4-273a-5bdc-bd3a-109bf63b6001))
+  (wire
+    (pts
+      (xy 73.66 116.84)
+      (xy 78.74 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d7c08f1a-f3f8-577e-8999-015f9b5c487e))
+  (global_label "USART RX"
+    (shape bidirectional)
+    (at 78.74 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 5bba761e-cdef-5bcb-8d1a-eb2631dce50c))
+  (wire
+    (pts
+      (xy 73.66 119.38)
+      (xy 78.74 119.38))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7c1a82db-e6af-5f4a-90cf-40fc40409df0))
+  (global_label "PA11"
+    (shape bidirectional)
+    (at 78.74 119.38 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 700a0d32-49a3-5ecd-83d2-8b5417b945c5))
+  (wire
+    (pts
+      (xy 73.66 121.92)
+      (xy 78.74 121.92))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b60f0368-9f7c-50ce-b276-58c182fbc382))
+  (global_label "PA12"
+    (shape bidirectional)
+    (at 78.74 121.92 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 1be59580-7089-5943-b6fe-e633d1e2f9a3))
+  (wire
+    (pts
+      (xy 73.66 124.46)
+      (xy 78.74 124.46))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 62b2ea23-93dc-5135-a25e-dc97b58fa440))
+  (global_label "SWDIO"
+    (shape bidirectional)
+    (at 78.74 124.46 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 88341771-679a-500a-8c8b-6450321e954b))
+  (wire
+    (pts
+      (xy 73.66 127.0)
+      (xy 78.74 127.0))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 17a3987a-bcbe-5355-8009-b8554c2ddf29))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 78.74 127.0 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 72f00d8b-ddf3-57f9-b659-9889788411fc))
+  (wire
+    (pts
+      (xy 73.66 129.54)
+      (xy 78.74 129.54))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e9e6d671-65aa-5336-9959-54e9483e1a4b))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 78.74 129.54 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid de6f3cf8-ee90-56d0-be1a-dbf5a54d6e3d))
+  (wire
+    (pts
+      (xy 73.66 132.08)
+      (xy 78.74 132.08))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid daf29667-f8b9-5313-91ca-e7613950191e))
+  (global_label "SWCLK"
+    (shape bidirectional)
+    (at 78.74 132.08 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 2d3ea644-adb0-5dae-b7a6-82f52a00077b))
+  (wire
+    (pts
+      (xy 73.66 134.62)
+      (xy 78.74 134.62))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6454c394-9d79-5123-a606-891ea2fb25a1))
+  (global_label "NET_11"
+    (shape bidirectional)
+    (at 78.74 134.62 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 3dfe0ef1-e95a-5d6d-8fc9-9e0cb649059d))
+  (wire
+    (pts
+      (xy 73.66 137.16)
+      (xy 78.74 137.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 451494ae-df4d-5044-89f7-7c7abb881701))
+  (global_label "NET_12"
+    (shape bidirectional)
+    (at 78.74 137.16 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid ee135c02-b3a7-5f83-b92e-eda43644ff02))
+  (wire
+    (pts
+      (xy 73.66 139.7)
+      (xy 78.74 139.7))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f7eef79f-f36a-5c24-b633-639b2c51f778))
+  (global_label "NET_13"
+    (shape bidirectional)
+    (at 78.74 139.7 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid ca8d9238-0abb-5674-99d7-d724b0eb9101))
+  (wire
+    (pts
+      (xy 73.66 142.24)
+      (xy 78.74 142.24))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 13e91f66-ee33-5d1b-a8a6-de1bd7d22159))
+  (global_label "PB5"
+    (shape bidirectional)
+    (at 78.74 142.24 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 3530cfb3-fa87-530f-be17-2fed2d0d6eb4))
+  (wire
+    (pts
+      (xy 73.66 144.78)
+      (xy 78.74 144.78))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5d9663dc-4306-5278-a7fd-b04b98a1a8b2))
+  (global_label "PB6"
+    (shape bidirectional)
+    (at 78.74 144.78 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 969abb57-165d-521b-aa12-4129e45308ab))
+  (wire
+    (pts
+      (xy 73.66 147.32)
+      (xy 78.74 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 60c69d2c-947a-5d2c-990e-e02e7279a699))
+  (global_label "NET_14"
+    (shape bidirectional)
+    (at 78.74 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 05ef44b4-ff7d-5e55-bdf1-cf268985223b))
+  (wire
+    (pts
+      (xy 73.66 149.86)
+      (xy 78.74 149.86))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 402efeba-b815-57f2-a1f6-1c28750da495))
+  (global_label "$1N28419"
+    (shape bidirectional)
+    (at 78.74 149.86 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid c1a1adda-c302-53d8-8e05-cd329a341321))
+  (wire
+    (pts
+      (xy 73.66 152.4)
+      (xy 78.74 152.4))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 355415fd-8630-5234-b50e-e91dbbd369bb))
+  (global_label "NET_15"
+    (shape bidirectional)
+    (at 78.74 152.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid ce5685f7-3398-5f4d-bc94-b3285920066a))
+  (wire
+    (pts
+      (xy 73.66 154.94)
+      (xy 78.74 154.94))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7aa99c1e-7da6-5e45-b50e-cb46ba0fbf95))
+  (global_label "NET_16"
+    (shape bidirectional)
+    (at 78.74 154.94 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 29b05aaf-95fd-543b-b9b3-efba0ecdfffd))
+  (wire
+    (pts
+      (xy 73.66 157.48)
+      (xy 78.74 157.48))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 74ff3d6d-69cb-5beb-9947-4f4ac212b08e))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 78.74 157.48 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 1f8191de-7dd8-55e4-ae01-a80b35e8ff07))
+  (wire
+    (pts
+      (xy 73.66 160.02)
+      (xy 78.74 160.02))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5288e9df-e3f4-5858-abd8-7d3da0fbada3))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 78.74 160.02 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid b8a90175-e379-501b-bd78-a9ddee24310d))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_U2")
+    (at 53.34 130.81000000000003 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 7d843541-d3ea-53aa-8e09-122ab2c6c8b8)
+    (property "Reference" "U2"
+      (at 53.34 96.52 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "STM32C8T6"
+      (at 53.34 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_48_b763d509fc"
+      (at 53.34 130.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 130.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 04f800ac-ffd2-5c5d-8e11-6dce1b12b187))
+    (pin "2"
+      (uuid f614b7cc-0505-5f17-9a7b-b051f30e5f5d))
+    (pin "3"
+      (uuid d0f6594f-b2e0-5f15-a1ff-81071db65f33))
+    (pin "4"
+      (uuid 42b88161-bec1-57e7-8e73-aff64ecba2a5))
+    (pin "5"
+      (uuid 64daf229-46f7-5f09-a779-8fc8a09da7bb))
+    (pin "6"
+      (uuid d6ed50da-3e2c-5b69-bd0b-e7b289c1ab94))
+    (pin "7"
+      (uuid 93913339-6b3c-53ba-8c2a-2737e7e7c9dc))
+    (pin "8"
+      (uuid c566dc1a-d95e-5554-ac99-8d66f2fd43b7))
+    (pin "9"
+      (uuid f82d0064-9719-54fa-846d-12e5193888ce))
+    (pin "10"
+      (uuid fa417a17-2e1c-504a-99b4-0b9c6cbb2d0c))
+    (pin "11"
+      (uuid 9cbdaf7f-13b0-515e-9b79-0622535e875a))
+    (pin "12"
+      (uuid d3ac4c88-bae7-5ad3-ba15-bc704ded41f5))
+    (pin "13"
+      (uuid 6d5ac6a8-9123-58a1-9cf0-c3be4d16efad))
+    (pin "14"
+      (uuid f3277a04-a4f1-58dd-bcb1-cd0208487e3f))
+    (pin "15"
+      (uuid f794a051-ccb1-5f07-8744-a07327953084))
+    (pin "16"
+      (uuid b7e8fa93-d775-5aa2-9425-292c6d4d20ad))
+    (pin "17"
+      (uuid f111b96a-f7db-5bd4-b2bc-cc52133073d9))
+    (pin "18"
+      (uuid 23a54ece-ff84-5aae-a9a0-b087cf23d790))
+    (pin "19"
+      (uuid e7df5b49-3dd1-5a51-a9df-d3eddeb983f6))
+    (pin "20"
+      (uuid 6fe8e91f-5bc6-5c50-a13c-ef63d6aadde9))
+    (pin "21"
+      (uuid bf93c7a2-fe55-5cde-8391-265e1d7c62d8))
+    (pin "22"
+      (uuid 772f4b97-0079-5715-933c-42091b51f3dc))
+    (pin "23"
+      (uuid e691e819-8fc2-5051-a363-fabfae7fb738))
+    (pin "24"
+      (uuid 19f079aa-01c1-5245-97fa-ba30d88c9c9a))
+    (pin "25"
+      (uuid 3814017e-2afe-5125-8712-fd5aa5986101))
+    (pin "26"
+      (uuid cb9f87b6-81bb-53be-9cc3-bc95fe95e9b3))
+    (pin "27"
+      (uuid ea0025a7-ce77-5917-87d2-ad42aaff5061))
+    (pin "28"
+      (uuid b421266a-83de-54ee-9c09-2e8c802ce173))
+    (pin "29"
+      (uuid 19a906a6-dfee-581c-ae22-3e534b96dcdc))
+    (pin "30"
+      (uuid 337187a0-3507-5525-b94a-c30b8deefd3f))
+    (pin "31"
+      (uuid dc759da6-3e2e-5098-88ee-ced6e5120e98))
+    (pin "32"
+      (uuid 2df3e4c1-9ee9-5e4c-80ca-696ec9d80a97))
+    (pin "33"
+      (uuid 786ca66d-911f-5fb0-a4b1-7bc9d9d56818))
+    (pin "34"
+      (uuid 3e5172e0-3eb4-55ff-b9d1-69fa34bd806b))
+    (pin "35"
+      (uuid fb00454e-cab1-59cd-a4ae-eb0d74e11a8b))
+    (pin "36"
+      (uuid e5c70780-b4f1-5774-bc35-78a3d6de6bf4))
+    (pin "37"
+      (uuid fa7c0114-a9af-5428-8438-de9d4e3198ad))
+    (pin "38"
+      (uuid 5feff7c8-a566-5566-a89f-aa63d175769e))
+    (pin "39"
+      (uuid 473b331c-8c62-53cb-a298-f3565e74db3b))
+    (pin "40"
+      (uuid 56b538ff-669e-5759-ae26-b587a778db28))
+    (pin "41"
+      (uuid 2ffaeb59-1e92-5be5-9e52-251c5cc7cd43))
+    (pin "42"
+      (uuid bf5e870a-4127-5cdd-b91d-ad81bb4c5e30))
+    (pin "43"
+      (uuid fddb81aa-6007-52ac-ab7c-164c2f050b62))
+    (pin "44"
+      (uuid 5a29b33b-2787-5e02-b7d1-13f18412aa67))
+    (pin "45"
+      (uuid 30959d84-a9e2-5d6f-9109-38ece25b5a57))
+    (pin "46"
+      (uuid b40ac06d-1eab-590a-9595-fcf852b29ab2))
+    (pin "47"
+      (uuid 00bf35c1-749a-550c-9fbf-a58c5fb069de))
+    (pin "48"
+      (uuid fb974fb3-9a90-5407-b370-a45e963310db))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "U2")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 152.4 101.6)
+      (xy 147.32 101.6))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 68035405-b570-5e64-a76c-dd1e387b1c68))
+  (global_label "NET_17"
+    (shape bidirectional)
+    (at 147.32 101.6 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid d30769b4-df38-58e4-a3e2-f4c85cd57a1d))
+  (wire
+    (pts
+      (xy 152.4 104.14)
+      (xy 147.32 104.14))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid adf89486-79ad-5a47-86dd-2194e3a9d7e1))
+  (global_label "PA8"
+    (shape bidirectional)
+    (at 147.32 104.14 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 13bfcd7c-cfea-5e1f-9ee6-45c901fd3abc))
+  (wire
+    (pts
+      (xy 152.4 106.68)
+      (xy 147.32 106.68))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f0150680-68d2-55ab-a17e-3b506d92c407))
+  (global_label "PA12"
+    (shape bidirectional)
+    (at 147.32 106.68 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 22df766c-033a-550f-9c97-4d3d1be6b5b3))
+  (wire
+    (pts
+      (xy 152.4 109.22)
+      (xy 147.32 109.22))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 01b7c11c-c4fb-5882-8b96-900253763d74))
+  (global_label "+5V"
+    (shape bidirectional)
+    (at 147.32 109.22 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid fd95c6e3-634d-519d-8757-4f94a2525317))
+  (wire
+    (pts
+      (xy 152.4 111.76)
+      (xy 147.32 111.76))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 053086df-1dfc-5028-b4e3-1fc3a6a26702))
+  (global_label "NET_18"
+    (shape bidirectional)
+    (at 147.32 111.76 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 7722a454-1b18-5969-bede-b408d4532f53))
+  (wire
+    (pts
+      (xy 152.4 114.3)
+      (xy 147.32 114.3))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 329673dd-360e-5273-a9da-5509aa949258))
+  (global_label "PA6"
+    (shape bidirectional)
+    (at 147.32 114.3 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 9504fe9e-435a-58b6-bbdf-4be3d00500a9))
+  (wire
+    (pts
+      (xy 152.4 116.84)
+      (xy 147.32 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3015ad5d-fa3b-5c37-8a46-c36f54939652))
+  (global_label "PA7"
+    (shape bidirectional)
+    (at 147.32 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid e12f54fc-1e3f-5d45-a30e-2456825ec54a))
+  (wire
+    (pts
+      (xy 152.4 119.38)
+      (xy 147.32 119.38))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid bb7f35b8-ec83-54ae-b4dc-698b180bb61c))
+  (global_label "+5V"
+    (shape bidirectional)
+    (at 147.32 119.38 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 00500e26-c9b3-554b-b4a7-387e5385f824))
+  (wire
+    (pts
+      (xy 193.04 101.6)
+      (xy 198.12 101.6))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f1e1c6b3-790a-5c3c-b2ac-00d4b7350617))
+  (global_label "$1N28480"
+    (shape bidirectional)
+    (at 198.12 101.6 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 4e98e956-9e20-50bb-9b75-f9bc0666a92a))
+  (wire
+    (pts
+      (xy 193.04 104.14)
+      (xy 198.12 104.14))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5bfc0bbe-6394-58b0-88f9-5cf7d4d7401b))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 198.12 104.14 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid e3e555e9-d709-5775-ab63-120fcdf494e5))
+  (wire
+    (pts
+      (xy 193.04 106.68)
+      (xy 198.12 106.68))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3bf28da2-b1a7-5dc8-91d8-f0db0d8a6954))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 198.12 106.68 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 7e9b6224-b1f0-58d7-8fc0-51b0ab4bce09))
+  (wire
+    (pts
+      (xy 193.04 109.22)
+      (xy 198.12 109.22))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 09fa0c14-5b7c-5249-b329-d0b37d4f5023))
+  (global_label "$1N28478"
+    (shape bidirectional)
+    (at 198.12 109.22 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 934e9253-0b6b-5d90-99fb-818d8e9587f1))
+  (wire
+    (pts
+      (xy 193.04 111.76)
+      (xy 198.12 111.76))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3ff25516-3ec3-5e86-8d47-5908368aa58b))
+  (global_label "$1N28472"
+    (shape bidirectional)
+    (at 198.12 111.76 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid a67d86f8-fce6-5a0f-95bc-944abf1cd5b4))
+  (wire
+    (pts
+      (xy 193.04 114.3)
+      (xy 198.12 114.3))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5cf9a7a1-a4e1-5c18-8f01-87e938233241))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 198.12 114.3 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 4df5ef78-1f3a-5765-b30e-cb3b6be91654))
+  (wire
+    (pts
+      (xy 193.04 116.84)
+      (xy 198.12 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 9d8f2455-a6c4-5dfa-ad1a-c773be209bba))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 198.12 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 6d193bc5-f328-5117-ae49-b3f61a451a28))
+  (wire
+    (pts
+      (xy 193.04 119.38)
+      (xy 198.12 119.38))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 1307a4aa-37f9-5b4c-92ae-415b048a3bfd))
+  (global_label "$1N28473"
+    (shape bidirectional)
+    (at 198.12 119.38 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid d4cac16b-cbdb-5303-979b-a3aa6da8f515))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_U3")
+    (at 172.72 110.49000000000001 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3848472f-98cc-50de-a4c5-9ef8e09c45e7)
+    (property "Reference" "U3"
+      (at 172.72 96.52 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "TC1508A"
+      (at 172.72 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_16_ae7b02a39a"
+      (at 172.72 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 46824b42-0b30-5c6e-9728-99382b5cfdba))
+    (pin "2"
+      (uuid f62fad7d-d548-5b3f-9752-2a0d37de7d3a))
+    (pin "3"
+      (uuid 9af077d1-46ce-583c-b45c-034180b88cd0))
+    (pin "4"
+      (uuid 33af12e7-3062-5e5a-8b4b-30c7e49689f4))
+    (pin "5"
+      (uuid e2af1bd2-dc32-5ca3-bce3-4b13ce68b2ec))
+    (pin "6"
+      (uuid 4ba09227-865c-5de2-a59e-fa85d726a289))
+    (pin "7"
+      (uuid f60be442-e827-5d45-9fcb-177b8d81c926))
+    (pin "8"
+      (uuid 5ec729f0-dfb9-5ffa-852c-fd9826443a74))
+    (pin "9"
+      (uuid 9d796a0c-d720-59ff-a7f6-a8906a2da4c7))
+    (pin "10"
+      (uuid e3f1b18f-6d57-5e71-8352-9973c5052ea8))
+    (pin "11"
+      (uuid e332126c-dcca-5856-9774-2d038fd0bef0))
+    (pin "12"
+      (uuid 43e50625-3379-5e9a-b093-0d209eaed1a3))
+    (pin "13"
+      (uuid 0ccb9a74-45c1-58e9-8651-9c0136fbec40))
+    (pin "14"
+      (uuid 2d5abefa-f34e-515e-9de7-05455e255692))
+    (pin "15"
+      (uuid 2474612c-58de-58f9-b3b0-823e1107a738))
+    (pin "16"
+      (uuid 52c464fc-8c17-50c5-baef-248ca2730815))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "U3")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 271.78 102.87)
+      (xy 266.7 102.87))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid df1bcaa6-288f-5385-837a-21456e0ec474))
+  (global_label "$1N28480"
+    (shape bidirectional)
+    (at 266.7 102.87 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 7383ee0d-b63e-56c1-b301-9acaf9bb9051))
+  (wire
+    (pts
+      (xy 271.78 105.41)
+      (xy 266.7 105.41))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 04c583e4-f78a-5512-943c-486077be1cd5))
+  (global_label "$1N28478"
+    (shape bidirectional)
+    (at 266.7 105.41 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid cc372cb0-d0ce-5f2f-999b-df80d3635518))
+  (wire
+    (pts
+      (xy 312.42 102.87)
+      (xy 317.5 102.87))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b0bc5bcd-464a-5c08-93b7-bbcdb53037ba))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 317.5 102.87 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid ac05ed0d-0d90-5970-b999-68a51e1b8021))
+  (wire
+    (pts
+      (xy 312.42 105.41)
+      (xy 317.5 105.41))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3bf9a1da-bfbc-560d-a426-48d36a00e6b1))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 317.5 105.41 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid fffea0be-e094-5180-a710-c74d74c2ff6f))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_U4")
+    (at 292.1 104.14000000000001 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3a9fa06f-91b2-512a-8a41-326bced00ecc)
+    (property "Reference" "U4"
+      (at 292.1 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "WAFER-SH1.0-2PWB"
+      (at 292.1 100.33 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_4_b0873716d4"
+      (at 292.1 104.14 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 104.14 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 442c0fb7-4590-5dc8-b350-71879bf59fa1))
+    (pin "2"
+      (uuid ad254119-d1e2-5f8b-ac5e-4c11cfe7c8ff))
+    (pin "3"
+      (uuid 85483c7c-083a-572d-b855-e1175e39f018))
+    (pin "4"
+      (uuid a5c7a692-9755-5abb-9a7b-eb5eb3fa05ce))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "U4")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 33.02 180.34)
+      (xy 27.94 180.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 2c82f7ae-16bb-5894-a95d-08ccda174d57))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 180.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 1e0b735d-e090-5092-86ec-92e8874bb5a6))
+  (wire
+    (pts
+      (xy 33.02 182.88)
+      (xy 27.94 182.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 93bc00ad-22c7-5b8b-bc32-1fd2acbe4876))
+  (global_label "PA3"
+    (shape bidirectional)
+    (at 27.94 182.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 2bae4b73-6704-5d8b-bdb3-67c8f7981615))
+  (wire
+    (pts
+      (xy 33.02 185.42)
+      (xy 27.94 185.42))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7bddc568-96d7-558c-9c6e-a1121462e728))
+  (global_label "+5V"
+    (shape bidirectional)
+    (at 27.94 185.42 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid fd813843-80cd-559f-bf9c-0a1a25af8e7e))
+  (wire
+    (pts
+      (xy 73.66 180.34)
+      (xy 78.74 180.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 30fa53ae-1c4b-575d-84ec-642e25ea8b39))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 78.74 180.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 748b854a-0180-555e-b3a5-4233bf9862a5))
+  (wire
+    (pts
+      (xy 73.66 182.88)
+      (xy 78.74 182.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6e1b30b4-8e6d-50ca-9eae-c588ee0bfb38))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 78.74 182.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 6a8547d5-3d37-5c5a-acab-0a16d0020fc9))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_U5")
+    (at 53.34 182.88000000000002 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3253f414-1b2c-54ad-b5e7-ddffd2d183f1)
+    (property "Reference" "U5"
+      (at 53.34 175.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "ZX-SH1.0-3PLT"
+      (at 53.34 177.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_5_2fbf7feada"
+      (at 53.34 182.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 182.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 244473a3-5f3f-5bf5-b014-37b12c205318))
+    (pin "2"
+      (uuid e1e792e4-a146-50b4-8c97-95acba007f71))
+    (pin "3"
+      (uuid d20d9ff8-3b54-56c9-a713-99d6ebac2fb2))
+    (pin "4"
+      (uuid a9151b77-2ee4-57a9-b3f7-98eadbb80998))
+    (pin "5"
+      (uuid 9b4f2616-501a-54d3-bc2f-82f6e5a4be18))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "U5")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 152.4 181.61)
+      (xy 147.32 181.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 54a30fb2-1eeb-5ed9-8724-6e9f1ed988e3))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 147.32 181.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 7605f8ef-02c7-55e4-ad7a-9c8da90aef65))
+  (wire
+    (pts
+      (xy 152.4 184.15)
+      (xy 147.32 184.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e3fab3a3-bd80-54f5-a7db-4bea9292a7f7))
+  (global_label "$1N28503"
+    (shape bidirectional)
+    (at 147.32 184.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid cb13c40e-256c-5ae4-a508-7a90fc5a7782))
+  (wire
+    (pts
+      (xy 193.04 181.61)
+      (xy 198.12 181.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 36c8e2e3-8f03-5613-8802-6bb66186a75e))
+  (global_label "$1N28505"
+    (shape bidirectional)
+    (at 198.12 181.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 689011da-2b78-5e82-b945-c81a2b63c35a))
+  (wire
+    (pts
+      (xy 193.04 184.15)
+      (xy 198.12 184.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b8520c96-68e6-5e4f-9a24-b056802e386d))
+  (global_label "$1N28435"
+    (shape bidirectional)
+    (at 198.12 184.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid b7a96116-b4ae-56e5-b988-e57caebe6cbd))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_U6")
+    (at 172.72 182.88000000000002 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 560e45ac-9ca9-545f-b9ce-15b344412c22)
+    (property "Reference" "U6"
+      (at 172.72 176.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "YZ165615055F-04025-01"
+      (at 172.72 179.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_4_36f36c5f38"
+      (at 172.72 182.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 182.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid de3d2402-c709-5d25-8536-c61a94b33a68))
+    (pin "2"
+      (uuid bc4cf18d-7012-596a-81d7-9960d0871754))
+    (pin "3"
+      (uuid 70ddea42-bb97-5715-b0f6-203e9987fb09))
+    (pin "4"
+      (uuid 82fe4fa7-4ef4-5460-adb1-0b3e6a20f13b))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "U6")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 271.78 180.34)
+      (xy 266.7 180.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 369f6daf-1ac8-5086-bbd2-27533e011fd9))
+  (global_label "$1N28426"
+    (shape bidirectional)
+    (at 266.7 180.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 19809225-a84b-5ce0-bb7b-2c4e79d6b8a2))
+  (wire
+    (pts
+      (xy 271.78 182.88)
+      (xy 266.7 182.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 50c6e5ae-2cf8-52af-9697-8b8b4195336c))
+  (global_label "$1N28429"
+    (shape bidirectional)
+    (at 266.7 182.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid a348265a-d14b-5e6d-8f5c-b69098aa07aa))
+  (wire
+    (pts
+      (xy 271.78 185.42)
+      (xy 266.7 185.42))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4a2e25f6-bc5d-5e78-a628-c67edd1dee84))
+  (global_label "$1N28429"
+    (shape bidirectional)
+    (at 266.7 185.42 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid a84c2374-e6c6-58ea-92e8-3d7c9501ce19))
+  (wire
+    (pts
+      (xy 271.78 187.96)
+      (xy 266.7 187.96))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 11c0cb11-ba77-5708-8967-3a33754998f5))
+  (global_label "$1N28425"
+    (shape bidirectional)
+    (at 266.7 187.96 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 37d0f145-0231-5918-b379-286ac3ce6580))
+  (wire
+    (pts
+      (xy 312.42 180.34)
+      (xy 317.5 180.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid baa7d726-4b36-5077-93e9-eba7ebe4d985))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 317.5 180.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 173320f0-03a5-5249-8d7c-63fa2d21a0a2))
+  (wire
+    (pts
+      (xy 312.42 182.88)
+      (xy 317.5 182.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8daf2c7c-9f39-57c0-a3e1-7b50f265a246))
+  (global_label "$1N28431"
+    (shape bidirectional)
+    (at 317.5 182.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid c635b92c-da6b-546f-bc09-d9c92c6433d9))
+  (wire
+    (pts
+      (xy 312.42 185.42)
+      (xy 317.5 185.42))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4fa42798-5523-5f1c-bea1-07f2d1d869b5))
+  (global_label "$1N28430"
+    (shape bidirectional)
+    (at 317.5 185.42 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 06bc9ba4-b181-5563-84b6-bfd0714f41b7))
+  (wire
+    (pts
+      (xy 312.42 187.96)
+      (xy 317.5 187.96))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b52fcabc-4e04-5711-a264-a7cd25ef89fb))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 317.5 187.96 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 5ae46c7b-c87e-5601-a844-a3b7d3207cac))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_U7")
+    (at 292.1 184.15000000000003 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 73bafb06-fe78-50f9-8bb1-6aa39dcc3599)
+    (property "Reference" "U7"
+      (at 292.1 175.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "MAX3485ESA(UMW)"
+      (at 292.1 177.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_8_e650e10851"
+      (at 292.1 184.15 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 184.15 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid a9572c32-555e-536d-88d4-f7ff3e41757f))
+    (pin "2"
+      (uuid dc68dbee-7dd2-5146-b80a-64f6ab58f4f6))
+    (pin "3"
+      (uuid 6d0c139f-858f-5413-b49c-8fae7ecdc841))
+    (pin "4"
+      (uuid 3976aa87-1aa5-534e-9679-be37a808a7e2))
+    (pin "5"
+      (uuid e0319371-8b78-58f5-a21e-f5115c20cf1b))
+    (pin "6"
+      (uuid 7b3666f4-a7d8-5457-93b6-3d7621a295df))
+    (pin "7"
+      (uuid a2028d10-08dc-5e4e-b87c-ba416f0e2687))
+    (pin "8"
+      (uuid ecf11315-814c-5134-945f-28be722ca5bd))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "U7")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 33.02 208.28)
+      (xy 27.94 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a887b37e-1390-5961-9289-9819fd61e9c6))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 9e20402a-baa0-5efe-9ae8-1ac6f18c6c9e))
+  (wire
+    (pts
+      (xy 33.02 210.82)
+      (xy 27.94 210.82))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8c4c98b5-1fc1-5120-99d0-8b635e0d35c9))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 210.82 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid b91d5a69-d6e5-5785-bd0b-703df2af2296))
+  (wire
+    (pts
+      (xy 33.02 213.36)
+      (xy 27.94 213.36))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0fae34b4-8a69-533d-ac73-d360de44ef4e))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 213.36 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 2eaebef1-5894-58ac-b7ba-93145beeef98))
+  (wire
+    (pts
+      (xy 33.02 215.9)
+      (xy 27.94 215.9))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a2645ab3-da07-5ec6-9866-377fa5552e57))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 215.9 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid a60d1eea-ce62-574a-8185-b6c985f2c4a2))
+  (wire
+    (pts
+      (xy 73.66 208.28)
+      (xy 78.74 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0576a68f-b5e3-501d-83e2-307dbd7e3e92))
+  (global_label "24C02SDA"
+    (shape bidirectional)
+    (at 78.74 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 9171e4d5-1921-5de1-bad6-d44bae58a24b))
+  (wire
+    (pts
+      (xy 73.66 210.82)
+      (xy 78.74 210.82))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid bdd64176-5b09-5075-b1c7-58ebaef0547b))
+  (global_label "24C02SCL"
+    (shape bidirectional)
+    (at 78.74 210.82 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 831c4909-86be-523b-ab4a-773be1346268))
+  (wire
+    (pts
+      (xy 73.66 213.36)
+      (xy 78.74 213.36))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7e2fb881-4462-53f8-8b53-d30fb546257f))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 78.74 213.36 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid ee4e69e1-92dd-5b55-b8ea-23f7455408d2))
+  (wire
+    (pts
+      (xy 73.66 215.9)
+      (xy 78.74 215.9))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a5fe78ff-f4ce-50d1-803f-95dc8c75b3d2))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 78.74 215.9 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 0d85ee23-4c66-59b6-85e1-a51a15f73e3d))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_U8")
+    (at 53.34 212.09000000000003 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8916cf2a-fa0c-5e90-ab5e-bb46b683d0f6)
+    (property "Reference" "U8"
+      (at 53.34 203.2 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "M24C02-WMN6TP"
+      (at 53.34 205.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_8_b02c488225"
+      (at 53.34 212.09 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 212.09 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid eb20a0df-87b2-5d30-94fa-18f0897987a4))
+    (pin "2"
+      (uuid 16998e80-8130-5a30-90a6-3e91d1fece48))
+    (pin "3"
+      (uuid 445ce02b-fa3b-57f7-92ac-b3f4e03ca5a5))
+    (pin "4"
+      (uuid efab6aa7-e133-58fc-9dab-de70e8d13c45))
+    (pin "5"
+      (uuid 7f98647c-1fea-5e2e-91f8-e233f3e5546a))
+    (pin "6"
+      (uuid cb9af1ca-c40f-558d-903e-01d8ce5b3daf))
+    (pin "7"
+      (uuid 1d05e972-512c-57bd-8bc0-f9075ce62894))
+    (pin "8"
+      (uuid 77e73a68-034c-59dd-a704-c77b2be85ac3))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "U8")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 152.4 208.28)
+      (xy 147.32 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8069996a-1747-5498-a458-8548271a20bc))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 147.32 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid ee811210-8eff-5891-b2c7-9c4bd9106eff))
+  (wire
+    (pts
+      (xy 152.4 210.82)
+      (xy 147.32 210.82))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7556ddc0-a9bf-5cb8-9d00-60df3cc76ced))
+  (global_label "SDA"
+    (shape bidirectional)
+    (at 147.32 210.82 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid dfa328f6-f03d-5041-9e87-b67fc51d1430))
+  (wire
+    (pts
+      (xy 152.4 213.36)
+      (xy 147.32 213.36))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a9de403e-8e88-5d2f-b464-b8c79c0a655d))
+  (global_label "SCL"
+    (shape bidirectional)
+    (at 147.32 213.36 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 30303042-01ae-5bb6-b752-c3727d049a8d))
+  (wire
+    (pts
+      (xy 193.04 208.28)
+      (xy 198.12 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 1e5e8103-2faa-5215-82d6-2314a1b70189))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 198.12 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid cb179528-ca23-5e7e-a5b2-e3ab1fc4d638))
+  (wire
+    (pts
+      (xy 193.04 210.82)
+      (xy 198.12 210.82))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 93576128-6876-5431-90ed-e494523d89d0))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 198.12 210.82 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid d7015797-cbca-5f1e-84dc-5d690f389892))
+  (wire
+    (pts
+      (xy 193.04 213.36)
+      (xy 198.12 213.36))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 19ffcbe7-3548-5bd7-8ea4-b6593264ef7c))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 198.12 213.36 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 21974b2f-f443-565d-8582-8c00dab8aa32))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_U9")
+    (at 172.72 210.82000000000002 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3df9b81c-c053-5f9b-ae86-16841b32f015)
+    (property "Reference" "U9"
+      (at 172.72 203.2 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "ZX-SH1.0-4PWT"
+      (at 172.72 205.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_6_3f199f6944"
+      (at 172.72 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 48773e86-43d3-5d53-b03f-e89e006f3476))
+    (pin "2"
+      (uuid 6eeac935-7da7-5cd9-838c-04d29889631f))
+    (pin "3"
+      (uuid 6b6e3995-8068-59de-89ab-713d0efc0543))
+    (pin "4"
+      (uuid b5634960-3784-5ade-9539-e2e5ce684d59))
+    (pin "5"
+      (uuid f2f87ef8-8a25-52e8-8a7f-23d397fb582f))
+    (pin "6"
+      (uuid 585c4d00-ea2a-5e5a-a15c-e5ff497f18db))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "U9")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 271.78 209.55)
+      (xy 266.7 209.55))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 16c71812-3b90-5cab-809a-0dd62a1af14c))
+  (global_label "$1N28472"
+    (shape bidirectional)
+    (at 266.7 209.55 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 7aceb16d-1fbd-52fa-a35f-4df107bacbc9))
+  (wire
+    (pts
+      (xy 271.78 212.09)
+      (xy 266.7 212.09))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e6e1800a-c7f5-52d9-93c7-96350a1478ae))
+  (global_label "$1N28473"
+    (shape bidirectional)
+    (at 266.7 212.09 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 1d5079c8-c5d9-58d3-a3ac-dfcdfbe1382e))
+  (wire
+    (pts
+      (xy 312.42 209.55)
+      (xy 317.5 209.55))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0f374959-73db-531b-8ad7-484bf3384650))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 317.5 209.55 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 02854ac6-a9ca-560f-981e-831c517b2ba7))
+  (wire
+    (pts
+      (xy 312.42 212.09)
+      (xy 317.5 212.09))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid dadea36f-d103-5c13-8dcb-28b35fc05539))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 317.5 212.09 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 15998374-4c67-563d-acee-8abb5cb87c88))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_U10")
+    (at 292.1 210.82000000000002 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5082bc2a-6ee6-51c9-b468-b5b199451777)
+    (property "Reference" "U10"
+      (at 292.1 204.47 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "WAFER-SH1.0-2PWB"
+      (at 292.1 207.01 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_4_b0873716d4"
+      (at 292.1 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 0952af9c-dcc7-54c9-be4a-6b3e7d5ecc1b))
+    (pin "2"
+      (uuid f5d6bf9f-d934-525e-8b86-eb4d04c87c7a))
+    (pin "3"
+      (uuid 178e9e5b-835b-5226-9d27-664e462ce687))
+    (pin "4"
+      (uuid e96f9089-add9-59a0-93f6-475205c52f62))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "U10")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 33.02 237.49)
+      (xy 27.94 237.49))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a7bc7ad6-b6df-52c6-ac3d-b4719cb5f702))
+  (global_label "$1N2524"
+    (shape bidirectional)
+    (at 27.94 237.49 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 7ab88e8f-52dd-521f-b7b6-14aa539ddd74))
+  (wire
+    (pts
+      (xy 33.02 240.03)
+      (xy 27.94 240.03))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 2efa1497-eaa4-5ab7-9ba0-32ea6d08afed))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 240.03 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 744d52f3-f3ec-5781-8e3f-952e39b2d83c))
+  (wire
+    (pts
+      (xy 73.66 237.49)
+      (xy 78.74 237.49))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3f25c411-d311-56d5-8a9f-3492178fde51))
+  (global_label "$1N2515"
+    (shape bidirectional)
+    (at 78.74 237.49 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 0cdf2b78-e5b5-5ada-94f0-c985f670ce43))
+  (wire
+    (pts
+      (xy 73.66 240.03)
+      (xy 78.74 240.03))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 73b4bec0-6a2a-5828-a5a6-4a676869bf94))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 78.74 240.03 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid f61bd3be-ccff-5b4c-93af-58f8511f1fc9))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_X2")
+    (at 53.34 238.76000000000002 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0a5a1ee7-6406-5bea-8563-3b328eec91f5)
+    (property "Reference" "X2"
+      (at 53.34 232.41 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "8MHz"
+      (at 53.34 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:SMD_4_905bc3d9e5"
+      (at 53.34 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid f4158fb6-17f7-5d6e-b376-31604ad792cf))
+    (pin "2"
+      (uuid dce51cca-13c3-5b32-b482-db61163f6335))
+    (pin "3"
+      (uuid a8a42bdb-25a0-513b-b3d9-2975cdc418ea))
+    (pin "4"
+      (uuid e4c46b7b-4ba8-56e6-8df6-ebc30f41c952))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "X2")
+          (unit 1)))))
+  (no_connect
+    (at 152.4 238.76)
+    (uuid f14fa1f9-fe14-584f-8f43-63f967d6454b))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_HREC1")
+    (at 172.72 238.76000000000002 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 7ca15d88-c88a-5864-ae82-d14f4d7b8213)
+    (property "Reference" "HREC1"
+      (at 172.72 233.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unreferenced plated hole"
+      (at 172.72 236.22 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:PTH_1_c2bacda513"
+      (at 172.72 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid a74d9222-eef7-5a74-bac2-51c6c73d905b))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "HREC1")
+          (unit 1)))))
+  (no_connect
+    (at 271.78 238.76)
+    (uuid 4f8df622-d03b-544d-ba0b-e3745964e5c8))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_HREC2")
+    (at 292.1 238.76000000000002 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid e3355011-f5ed-5f1d-9f8e-0802d5181064)
+    (property "Reference" "HREC2"
+      (at 292.1 233.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unreferenced plated hole"
+      (at 292.1 236.22 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:PTH_1_c2bacda513"
+      (at 292.1 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 1d610b95-5731-509b-9e6e-11540b0d6067))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/9c8138b9-9aa8-5448-b3da-758b7c949bcb"
+          (reference "HREC2")
+          (unit 1))))))

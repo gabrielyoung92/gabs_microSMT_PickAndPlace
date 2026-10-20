@@ -1,0 +1,98 @@
+(footprint "SMD_5_2fbf7feada"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "b7ee4f2a-6604-4759-a4f5-f4065e7ddf97")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "ZX-SH1.0-3PLT"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "87488d5e-d1be-455b-8a78-c5cede1ca4a7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ed76c308-f39e-486d-890d-7952c17e4e1d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "314a7080-590a-4a4a-b358-b49b2ddf15dc")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "1" smd rect
+		(at -1 -1.49995 270)
+		(size 1.2 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.050015)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "0a9f6958-b66b-44e1-8433-8697331609d6")
+	)
+	(pad "2" smd rect
+		(at 0 -1.49995 270)
+		(size 1.2 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.050015)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "82f7fba4-2260-4be2-8c21-5c2f17a4e889")
+	)
+	(pad "3" smd rect
+		(at 1 -1.49995 270)
+		(size 1.2 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.050015)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "e6fb7e69-0e07-4b77-b9bc-81a2bff18a13")
+	)
+	(pad "4" smd rect
+		(at 2.19989 1.49995 270)
+		(size 1.5 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.050015)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "b093049f-b0cc-4680-90f6-2201d6f13b5e")
+	)
+	(pad "5" smd rect
+		(at -2.19989 1.49995 270)
+		(size 1.5 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.050015)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "c69b3ff5-b9fc-4986-9513-c8b80d05e63f")
+	)
+	(embedded_fonts no)
+)

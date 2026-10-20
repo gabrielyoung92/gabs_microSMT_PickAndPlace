@@ -1,0 +1,71 @@
+Reference,Value,Recovered footprint,Pad count,Inferred reference
+C1,100nF,MicroSMT_v485_feeder:SMD_2_c1a3413776,2,False
+C2,100nF,MicroSMT_v485_feeder:SMD_2_829407ff48,2,False
+C3,100nF,MicroSMT_v485_feeder:SMD_2_44635c1159,2,False
+C4,100nF,MicroSMT_v485_feeder:SMD_2_cf0339bc75,2,False
+C5,100nF,MicroSMT_v485_feeder:SMD_2_cf0339bc75,2,False
+C6,22pF,MicroSMT_v485_feeder:SMD_2_874df9096d,2,False
+C7,100nF,MicroSMT_v485_feeder:SMD_2_cf0339bc75,2,False
+C8,22pF,MicroSMT_v485_feeder:SMD_2_aac479f3ea,2,False
+C9,100nF,MicroSMT_v485_feeder:SMD_2_c1a3413776,2,False
+C10,100nF,MicroSMT_v485_feeder:SMD_2_c1a3413776,2,False
+C11,100nF,MicroSMT_v485_feeder:SMD_2_44635c1159,2,False
+C12,100nF,MicroSMT_v485_feeder:SMD_2_4db5f12e3d,2,False
+C13,100nF,MicroSMT_v485_feeder:SMD_2_4db5f12e3d,2,False
+C14,100nF,MicroSMT_v485_feeder:SMD_2_3dfdeb042f,2,False
+C15,100nF,MicroSMT_v485_feeder:SMD_2_3dfdeb042f,2,False
+C16,100uF,MicroSMT_v485_feeder:SMD_2_6e07a3e01f,2,False
+C17,100uF,MicroSMT_v485_feeder:SMD_2_6e07a3e01f,2,False
+C18,100nF,MicroSMT_v485_feeder:SMD_2_3dfdeb042f,2,False
+C19,100nF,MicroSMT_v485_feeder:SMD_2_cf0339bc75,2,False
+C20,100nF,MicroSMT_v485_feeder:SMD_2_cf0339bc75,2,False
+C21,100nF,MicroSMT_v485_feeder:SMD_2_874df9096d,2,False
+C22,100nF,MicroSMT_v485_feeder:SMD_2_cf0339bc75,2,False
+C23,100nF,MicroSMT_v485_feeder:SMD_2_aac479f3ea,2,False
+C24,1uF,MicroSMT_v485_feeder:SMD_2_874df9096d,2,False
+D1,SS34-MS,MicroSMT_v485_feeder:SMD_2_2eb83b068d,2,False
+D2,SS34-MS,MicroSMT_v485_feeder:SMD_2_0e04a25b7f,2,False
+D3,SMF12CA,MicroSMT_v485_feeder:SMD_2_8d21fd2c67,2,False
+D4,SMF12CA,MicroSMT_v485_feeder:SMD_2_8d21fd2c67,2,False
+H2,PZ254V-11-04P,MicroSMT_v485_feeder:PTH_4_3fe72de8b5,4,False
+H3,PZ254R-11-03P,MicroSMT_v485_feeder:PTH_3_d1691705db,3,False
+L1,DLW21SN900SQ2L,MicroSMT_v485_feeder:SMD_4_7982c82c77,4,False
+LED1,19-217/BHC-ZL1M2RY/3T,MicroSMT_v485_feeder:SMD_2_651440e7dc,2,False
+LED2,19-217/GHC-YR1S2/3T,MicroSMT_v485_feeder:SMD_2_262bb741d3,2,False
+LED3,19-217/BHC-ZL1M2RY/3T,MicroSMT_v485_feeder:SMD_2_eb93cb215b,2,False
+R1,10kΩ,MicroSMT_v485_feeder:SMD_2_e7bda1677c,2,False
+R2,4.7kΩ,MicroSMT_v485_feeder:SMD_2_e7bda1677c,2,False
+R4,510Ω,MicroSMT_v485_feeder:SMD_2_91fcdf277d,2,False
+R5,510Ω,MicroSMT_v485_feeder:SMD_2_91fcdf277d,2,False
+R6,510Ω,MicroSMT_v485_feeder:SMD_2_e7bda1677c,2,False
+R7,10kΩ,MicroSMT_v485_feeder:SMD_2_91fcdf277d,2,False
+R8,10K,MicroSMT_v485_feeder:SMD_2_04577a26f8,2,False
+R9,10K,MicroSMT_v485_feeder:SMD_2_cc916b3528,2,False
+R10,10kΩ,MicroSMT_v485_feeder:SMD_2_e7bda1677c,2,False
+R12,100Ω,MicroSMT_v485_feeder:SMD_2_e7bda1677c,2,False
+R13,100Ω,MicroSMT_v485_feeder:SMD_2_e7bda1677c,2,False
+R14,100Ω,MicroSMT_v485_feeder:SMD_2_e7bda1677c,2,False
+R15,4.7kΩ,MicroSMT_v485_feeder:SMD_2_bcd5a0224c,2,False
+R16,4.7kΩ,MicroSMT_v485_feeder:SMD_2_bcd5a0224c,2,False
+R17,4.7kΩ,MicroSMT_v485_feeder:SMD_2_e7bda1677c,2,False
+R18,10kΩ,MicroSMT_v485_feeder:SMD_2_e7bda1677c,2,False
+R19,10kΩ,MicroSMT_v485_feeder:SMD_2_e7bda1677c,2,False
+SW1,TS-1093A-A8B3-D2,MicroSMT_v485_feeder:PTH_4_529d520394,4,False
+SW2,TS-1093A-A8B3-D2,MicroSMT_v485_feeder:PTH_4_0f79a45cd4,4,False
+U1,AMS1117-3.3,MicroSMT_v485_feeder:SMD_4_f5cc46188f,4,False
+U2,STM32C8T6,MicroSMT_v485_feeder:SMD_48_b763d509fc,48,False
+U3,TC1508A,MicroSMT_v485_feeder:SMD_16_ae7b02a39a,16,False
+U4,WAFER-SH1.0-2PWB,MicroSMT_v485_feeder:SMD_4_b0873716d4,4,False
+U5,ZX-SH1.0-3PLT,MicroSMT_v485_feeder:SMD_5_2fbf7feada,5,False
+U6,YZ165615055F-04025-01,MicroSMT_v485_feeder:SMD_4_36f36c5f38,4,False
+U7,MAX3485ESA(UMW),MicroSMT_v485_feeder:SMD_8_e650e10851,8,False
+U8,M24C02-WMN6TP,MicroSMT_v485_feeder:SMD_8_b02c488225,8,False
+U9,ZX-SH1.0-4PWT,MicroSMT_v485_feeder:SMD_6_3f199f6944,6,False
+U10,WAFER-SH1.0-2PWB,MicroSMT_v485_feeder:SMD_4_b0873716d4,4,False
+X2,8MHz,MicroSMT_v485_feeder:SMD_4_905bc3d9e5,4,False
+HREC1,Unreferenced plated hole,MicroSMT_v485_feeder:PTH_1_c2bacda513,1,True
+HREC2,Unreferenced plated hole,MicroSMT_v485_feeder:PTH_1_c2bacda513,1,True
+HREC3,Unreferenced plated hole,MicroSMT_v485_feeder:PTH_1_c2bacda513,1,True
+HREC4,Non-plated hole,MicroSMT_v485_feeder:PTH_1_d65fec3626,1,True
+HREC5,Unreferenced plated hole,MicroSMT_v485_feeder:PTH_1_c2bacda513,1,True
+HREC6,Non-plated hole,MicroSMT_v485_feeder:PTH_1_d65fec3626,1,True

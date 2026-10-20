@@ -1,0 +1,3 @@
+(fp_lib_table (version 7)
+ (lib (name "MicroSMT_v3_controller") (type "KiCad") (uri "${KIPRJMOD}/libraries/MicroSMT_v3_controller.pretty") (options "") (descr "MicroSMT CAM-derived reference"))
+)

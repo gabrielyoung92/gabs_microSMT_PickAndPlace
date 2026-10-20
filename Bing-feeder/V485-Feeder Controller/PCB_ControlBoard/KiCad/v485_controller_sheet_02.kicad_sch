@@ -1,0 +1,1279 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 90d43c92-0cef-5acb-af34-105f36c713a5)
+  (paper "A3")
+  (title_block
+    (title "v485_controller / recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols
+    (symbol "MicroSMT_v485_controller:v485_controller_HREC1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "HREC"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_controller_HREC1"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_controller_HREC1_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_controller_HREC1_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_controller:v485_controller_HREC2"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "HREC"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_controller_HREC2"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_controller_HREC2_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_controller_HREC2_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_controller:v485_controller_HREC3"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "HREC"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_controller_HREC3"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_controller_HREC3_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_controller_HREC3_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_controller:v485_controller_HREC4"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "HREC"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_controller_HREC4"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_controller_HREC4_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_controller_HREC4_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_controller:v485_controller_R9"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_controller_R9"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_controller_R9_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_controller_R9_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_controller:v485_controller_U1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_controller_U1"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_controller_U1_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_controller_U1_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_controller:v485_controller_U2"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_controller_U2"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_controller_U2_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_controller_U2_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_controller:v485_controller_U3"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_controller_U3"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_controller_U3_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_controller_U3_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_controller:v485_controller_U7"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_controller_U7"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_controller_U7_0_1"
+        (rectangle
+          (start -15.24 5.08)
+          (end 15.24 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_controller_U7_1_1"
+        (pin passive line
+          (at -20.32 3.81 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -3.81 0)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 3.81 180)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 7"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -3.81 180)
+          (length 5.08)
+          (name "PAD 8"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0))))))))
+  (text "v485 controller / components 2"
+    (at 20.32 17.78 0)
+    (effects
+      (font
+        (size 1.8 1.8))
+      (justify left top))
+    (uuid 24781482-4681-5c98-b24f-7da65289cfc1))
+  (text "MicroSMT CAM-derived reference. Pad numbers/nets preserved; generic pin electrical types.\nUse the supplied schematic for functional interpretation. Not a fabrication release."
+    (at 20.32 25.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left top))
+    (uuid aecb7e53-62d1-5246-96c3-a331f4d380ba))
+  (wire
+    (pts
+      (xy 33.02 53.34)
+      (xy 27.94 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 80656423-d869-594e-abcd-e7b3037bd59b))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid f5d0d080-1c83-5f40-a630-93a79f702b8d))
+  (wire
+    (pts
+      (xy 73.66 53.34)
+      (xy 78.74 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f19d3c90-6dc9-5e34-9934-ef0bdfb36ada))
+  (global_label "$1N58"
+    (shape bidirectional)
+    (at 78.74 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 663b8d9b-0569-5568-a358-19db7bcbd515))
+  (symbol
+    (lib_id "MicroSMT_v485_controller:v485_controller_R9")
+    (at 53.34 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8c12242d-e96b-5f8e-9d15-4aeadacb0f7f)
+    (property "Reference" "R9"
+      (at 53.34 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100kΩ"
+      (at 53.34 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_controller:SMD_2_cc916b3528"
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 0b5c744b-7e54-5e67-ab23-249da512e392))
+    (pin "2"
+      (uuid 44eb0b7e-a0f5-5895-8f0c-881fbfebb22e))
+    (instances
+      (project "v485_controller"
+        (path "/91ebc0a9-0e27-585b-92ba-60a736b8c102/473a7b0f-3b98-52c6-98be-d1583d538d35"
+          (reference "R9")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 152.4 52.07)
+      (xy 147.32 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3e01de35-83f7-579e-9de2-e0643456628a))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 147.32 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 0aef257f-ef8d-54e8-a9e9-0206408d6b53))
+  (wire
+    (pts
+      (xy 152.4 54.61)
+      (xy 147.32 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5c9081e3-9a10-5af2-994e-cedd2ebcd88d))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 147.32 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 903d5071-1334-5448-85c0-f0a0e8277928))
+  (wire
+    (pts
+      (xy 193.04 52.07)
+      (xy 198.12 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7ae9cfde-e5ee-5d34-a235-a15f2c2be499))
+  (global_label "7V"
+    (shape bidirectional)
+    (at 198.12 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid f397c098-1934-55d9-a1f4-280fec305af1))
+  (wire
+    (pts
+      (xy 193.04 54.61)
+      (xy 198.12 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d834bef7-8d0d-534d-9f6f-7e5356c52591))
+  (global_label "NET_12"
+    (shape bidirectional)
+    (at 198.12 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 91f953ef-457b-5cb3-b213-a420a4278df6))
+  (symbol
+    (lib_id "MicroSMT_v485_controller:v485_controller_U1")
+    (at 172.72 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8cb5e668-a014-54ac-8331-b351aac9b7f4)
+    (property "Reference" "U1"
+      (at 172.72 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "AMS1117-3.3"
+      (at 172.72 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_controller:SMD_4_f5cc46188f"
+      (at 172.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 4b977c4a-fea1-5b99-9fc6-404d311951c6))
+    (pin "2"
+      (uuid 8a9488ec-8322-53f4-bfab-de642fef48cd))
+    (pin "3"
+      (uuid 8796147d-c1a7-54ee-863b-a27d06fa3126))
+    (pin "4"
+      (uuid 34503a61-fcd1-55b7-be23-da84406f63f2))
+    (instances
+      (project "v485_controller"
+        (path "/91ebc0a9-0e27-585b-92ba-60a736b8c102/473a7b0f-3b98-52c6-98be-d1583d538d35"
+          (reference "U1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 271.78 52.07)
+      (xy 266.7 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f641e53f-87b2-542c-8f4f-aceb7f07044b))
+  (global_label "7V"
+    (shape bidirectional)
+    (at 266.7 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 97451cd7-a71c-5a76-9c6a-cc6e6ebbc5db))
+  (wire
+    (pts
+      (xy 271.78 54.61)
+      (xy 266.7 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 2f46d514-dadc-5ad1-8075-65aff6979f3b))
+  (global_label "$1N38"
+    (shape bidirectional)
+    (at 266.7 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 9a433e24-8cfe-517a-8715-69b01320efb2))
+  (wire
+    (pts
+      (xy 312.42 52.07)
+      (xy 317.5 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 445a2799-1998-5923-bc8f-0e9f3c6ebdd4))
+  (global_label "$1N45"
+    (shape bidirectional)
+    (at 317.5 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 6aaf6379-e793-51ed-a85f-0a25db6ae92f))
+  (wire
+    (pts
+      (xy 312.42 54.61)
+      (xy 317.5 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid af8004cb-d66e-523a-9dab-78fec56fef88))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 317.5 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid c30cfcd2-2e9f-5782-b058-1bd61ed38c81))
+  (symbol
+    (lib_id "MicroSMT_v485_controller:v485_controller_U2")
+    (at 292.1 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid cf028f0d-2206-568b-958d-2a50725d1d75)
+    (property "Reference" "U2"
+      (at 292.1 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "VH3.96-4P ZZ"
+      (at 292.1 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_controller:PTH_4_101e17f868"
+      (at 292.1 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid edc88398-72d9-5996-a4b3-26250fdc032d))
+    (pin "2"
+      (uuid ecb27542-aa0b-5f65-a78f-50167563c0b3))
+    (pin "3"
+      (uuid acd140c5-993d-593d-a8ec-0e2e6ff93e64))
+    (pin "4"
+      (uuid 4fa6afd8-324b-5760-b653-b91871bfa23a))
+    (instances
+      (project "v485_controller"
+        (path "/91ebc0a9-0e27-585b-92ba-60a736b8c102/473a7b0f-3b98-52c6-98be-d1583d538d35"
+          (reference "U2")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 33.02 78.74)
+      (xy 27.94 78.74))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 1c950d86-7a9d-5cff-8d23-dea90cb5f827))
+  (global_label "7V"
+    (shape bidirectional)
+    (at 27.94 78.74 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 583d94c0-97e1-58f1-a355-d1c61361eff3))
+  (wire
+    (pts
+      (xy 73.66 78.74)
+      (xy 78.74 78.74))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 90966a7b-4c45-5cfe-9ab9-0f7fee01bf19))
+  (global_label "$1N61"
+    (shape bidirectional)
+    (at 78.74 78.74 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid f89127fe-ed99-5b25-af11-f5fb53a5dd67))
+  (symbol
+    (lib_id "MicroSMT_v485_controller:v485_controller_U3")
+    (at 53.34 78.74000000000001 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f70d77f7-ee1b-5bcd-a5b5-7880b4da0261)
+    (property "Reference" "U3"
+      (at 53.34 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "2920L500/30GR"
+      (at 53.34 76.2 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_controller:SMD_2_74179e062f"
+      (at 53.34 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid e2a39762-538a-57a1-aa32-fd025e9b0750))
+    (pin "2"
+      (uuid 146d4660-aa50-5e9c-8b4d-64d6901056be))
+    (instances
+      (project "v485_controller"
+        (path "/91ebc0a9-0e27-585b-92ba-60a736b8c102/473a7b0f-3b98-52c6-98be-d1583d538d35"
+          (reference "U3")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 152.4 76.2)
+      (xy 147.32 76.2))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 595dc5fe-4e3a-524f-bf2d-a843ef2611f0))
+  (global_label "$1N12"
+    (shape bidirectional)
+    (at 147.32 76.2 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 42fe24b0-0d41-5edb-9622-53da5b47706e))
+  (wire
+    (pts
+      (xy 152.4 78.74)
+      (xy 147.32 78.74))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 2222cdfb-f383-57a6-a372-1e611b1a9c56))
+  (global_label "$1N11"
+    (shape bidirectional)
+    (at 147.32 78.74 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid fb06a379-8331-5a6e-812b-b6458696fefd))
+  (wire
+    (pts
+      (xy 152.4 81.28)
+      (xy 147.32 81.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 2ab3690b-4618-5080-aeac-0ac7cc86873f))
+  (global_label "$1N11"
+    (shape bidirectional)
+    (at 147.32 81.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 75783f61-6267-5156-946a-db35ad0ea7fe))
+  (wire
+    (pts
+      (xy 152.4 83.82)
+      (xy 147.32 83.82))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 137fc0d6-17d7-5ce4-a77d-007298463c51))
+  (global_label "$1N13"
+    (shape bidirectional)
+    (at 147.32 83.82 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 07bde600-9987-51a2-a81a-cd7bccfdf1e4))
+  (wire
+    (pts
+      (xy 193.04 76.2)
+      (xy 198.12 76.2))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7e127dee-9ea0-53e0-9cc7-4d2cb304df2b))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 198.12 76.2 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid b09ce3ed-729b-5792-94dd-ca418d9036be))
+  (wire
+    (pts
+      (xy 193.04 78.74)
+      (xy 198.12 78.74))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4a7bf30b-0cfb-5b02-9253-fc4af3861d5c))
+  (global_label "$1N48"
+    (shape bidirectional)
+    (at 198.12 78.74 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 0cb491f6-5187-598c-9e35-f3e6dade3f98))
+  (wire
+    (pts
+      (xy 193.04 81.28)
+      (xy 198.12 81.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 341c5f6a-bfec-5033-a812-ecef57a3dce9))
+  (global_label "$1N47"
+    (shape bidirectional)
+    (at 198.12 81.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 9b451ac2-f803-5c3d-bfeb-bac46831127a))
+  (wire
+    (pts
+      (xy 193.04 83.82)
+      (xy 198.12 83.82))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 451c4698-564d-5984-b19d-51da1e6168f9))
+  (global_label "VCC_3V3"
+    (shape bidirectional)
+    (at 198.12 83.82 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 5c55b096-1d19-5e3d-adb9-7c64dcba3e7f))
+  (symbol
+    (lib_id "MicroSMT_v485_controller:v485_controller_U7")
+    (at 172.72 80.01 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5d8ed2d5-82ee-52b3-a7fa-471aeed5b840)
+    (property "Reference" "U7"
+      (at 172.72 71.12 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "MAX3485ESA(UMW)"
+      (at 172.72 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_controller:SMD_8_f52f094fb5"
+      (at 172.72 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 7d9a5ece-3492-5fea-948f-0b765d07a401))
+    (pin "2"
+      (uuid e58db9ff-f983-53d5-88c1-f7882d5f155e))
+    (pin "3"
+      (uuid 5946bfc4-d5b2-5bfa-9e12-7c554f43d3d2))
+    (pin "4"
+      (uuid c16a246b-9f55-5a42-870c-6973b8469bad))
+    (pin "5"
+      (uuid 3689384f-a675-5870-8cfd-8ed93fb755cd))
+    (pin "6"
+      (uuid 16873640-181d-5bf3-990a-7895c71e7925))
+    (pin "7"
+      (uuid 5c4a009a-8c09-5b41-99a3-4c59cddac89b))
+    (pin "8"
+      (uuid c3191bb0-3b63-551b-99d8-ddae7d505e08))
+    (instances
+      (project "v485_controller"
+        (path "/91ebc0a9-0e27-585b-92ba-60a736b8c102/473a7b0f-3b98-52c6-98be-d1583d538d35"
+          (reference "U7")
+          (unit 1)))))
+  (no_connect
+    (at 271.78 78.74)
+    (uuid 8d199cf8-d174-5980-8eb4-2ebb90c8d23d))
+  (symbol
+    (lib_id "MicroSMT_v485_controller:v485_controller_HREC1")
+    (at 292.1 78.74000000000001 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4e6223ac-4471-5cf2-b7ff-49132c59188e)
+    (property "Reference" "HREC1"
+      (at 292.1 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unreferenced plated hole"
+      (at 292.1 76.2 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_controller:PTH_1_ee2b9368a9"
+      (at 292.1 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 071eb9fb-1342-5117-a105-d278dd6c15e0))
+    (instances
+      (project "v485_controller"
+        (path "/91ebc0a9-0e27-585b-92ba-60a736b8c102/473a7b0f-3b98-52c6-98be-d1583d538d35"
+          (reference "HREC1")
+          (unit 1)))))
+  (no_connect
+    (at 33.02 106.68)
+    (uuid 7dad69a2-de9c-55f0-aa7b-5b7bc006753c))
+  (symbol
+    (lib_id "MicroSMT_v485_controller:v485_controller_HREC2")
+    (at 53.34 106.68 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid fb4bb67a-d67d-5143-9986-be80014dc15c)
+    (property "Reference" "HREC2"
+      (at 53.34 101.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unreferenced plated hole"
+      (at 53.34 104.14 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_controller:PTH_1_ee2b9368a9"
+      (at 53.34 106.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 106.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid f3c1d105-7207-5327-9c34-a8457dddf843))
+    (instances
+      (project "v485_controller"
+        (path "/91ebc0a9-0e27-585b-92ba-60a736b8c102/473a7b0f-3b98-52c6-98be-d1583d538d35"
+          (reference "HREC2")
+          (unit 1)))))
+  (no_connect
+    (at 152.4 106.68)
+    (uuid 4530e267-eefb-5ba9-b848-208ab1540310))
+  (symbol
+    (lib_id "MicroSMT_v485_controller:v485_controller_HREC3")
+    (at 172.72 106.68 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0313a5b1-4683-56ec-ae30-7034e9369496)
+    (property "Reference" "HREC3"
+      (at 172.72 101.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unreferenced plated hole"
+      (at 172.72 104.14 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_controller:PTH_1_ee2b9368a9"
+      (at 172.72 106.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 106.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 60182539-5bc6-5682-9c08-ee84f6dacfaa))
+    (instances
+      (project "v485_controller"
+        (path "/91ebc0a9-0e27-585b-92ba-60a736b8c102/473a7b0f-3b98-52c6-98be-d1583d538d35"
+          (reference "HREC3")
+          (unit 1)))))
+  (no_connect
+    (at 271.78 106.68)
+    (uuid c5580d48-3ba9-507c-9fd3-cf91308bf83b))
+  (symbol
+    (lib_id "MicroSMT_v485_controller:v485_controller_HREC4")
+    (at 292.1 106.68 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 10bae320-2c3b-575b-84cb-996e3ce17682)
+    (property "Reference" "HREC4"
+      (at 292.1 101.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unreferenced plated hole"
+      (at 292.1 104.14 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_controller:PTH_1_ee2b9368a9"
+      (at 292.1 106.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 106.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid ac6f4128-c2e5-56be-9f0f-8f9586a2ca42))
+    (instances
+      (project "v485_controller"
+        (path "/91ebc0a9-0e27-585b-92ba-60a736b8c102/473a7b0f-3b98-52c6-98be-d1583d538d35"
+          (reference "HREC4")
+          (unit 1))))))

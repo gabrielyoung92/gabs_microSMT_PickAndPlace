@@ -1,0 +1,16 @@
+Reference,Value,Recovered footprint,Pad count,Inferred reference
+C1,100nF,MicroSMT_v3_controller:SMD_2_2eba8715d4,2,False
+C2,1uF,MicroSMT_v3_controller:PTH_2_0084cf9b37,2,False
+CN1,B-3002S30P-0110,MicroSMT_v3_controller:PTH_30_69f4ea01b0,30,False
+CN2,B-3002S30P-0110,MicroSMT_v3_controller:PTH_30_220be22eb5,30,False
+H1,A2541HWV-8P,MicroSMT_v3_controller:PTH_8_8a5acb56ab,8,False
+H2,A2541HWV-8P,MicroSMT_v3_controller:PTH_8_c16ea9be99,8,False
+H3,Header-Female-2.54_1x10,MicroSMT_v3_controller:PTH_10_a9e0a1f7f8,10,False
+H4,DS1023-2*18SF11,MicroSMT_v3_controller:PTH_36_71ab29bcf0,36,False
+H5,A2541HWV-8P,MicroSMT_v3_controller:PTH_8_c1fe850d9f,8,False
+H6,A2541HWV-8P,MicroSMT_v3_controller:PTH_8_544e34587f,8,False
+H7,A2541HWV-8P,MicroSMT_v3_controller:PTH_8_c16ea9be99,8,False
+P2,WJ500V-5.08-2P-14-00A,MicroSMT_v3_controller:PTH_2_0a439e785e,2,False
+Q1,VBE1638,MicroSMT_v3_controller:SMD_3_0967ff59a7,3,False
+R1,470,MicroSMT_v3_controller:SMD_2_d2af6b9a79,2,False
+R2,10K,MicroSMT_v3_controller:SMD_2_a94b28ce2e,2,False

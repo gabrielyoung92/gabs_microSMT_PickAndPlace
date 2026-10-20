@@ -1,0 +1,34 @@
+Reference,Value,Recovered footprint,Pad count,Inferred reference
+C1,10uF,MicroSMT_v485_controller:SMD_2_7371bf4a95,2,False
+C2,100nF,MicroSMT_v485_controller:SMD_2_723c4baacf,2,False
+C3,100nF,MicroSMT_v485_controller:SMD_2_7371bf4a95,2,False
+C4,100nF,MicroSMT_v485_controller:SMD_2_7371bf4a95,2,False
+C5,100nF,MicroSMT_v485_controller:SMD_2_c1a3413776,2,False
+C6,100nF,MicroSMT_v485_controller:SMD_2_723c4baacf,2,False
+D1,1SMA4740A,MicroSMT_v485_controller:SMD_2_1fa9734501,2,False
+D3,SMF12CA,MicroSMT_v485_controller:SMD_2_55f911f37a,2,False
+D4,SMF12CA,MicroSMT_v485_controller:SMD_2_55f911f37a,2,False
+L2,SMW3225S102HTE,MicroSMT_v485_controller:SMD_4_008e72132e,4,False
+LED1,NCD0603G1,MicroSMT_v485_controller:SMD_2_aee0334fb4,2,False
+LED2,NCD0603G1,MicroSMT_v485_controller:SMD_2_7119c32529,2,False
+P1,2.54-1*8P母环保,MicroSMT_v485_controller:PTH_8_ac2e14a8f3,8,False
+P2,2.54-1*8P母环保,MicroSMT_v485_controller:PTH_8_7aeb1c419b,8,False
+P3,WJ500V-5.08-2P,MicroSMT_v485_controller:PTH_2_e96cc44099,2,False
+Q1,AO4407C,MicroSMT_v485_controller:SMD_8_0b8baf6ad0,8,False
+R1,1kΩ,MicroSMT_v485_controller:SMD_2_cc916b3528,2,False
+R2,120Ω,MicroSMT_v485_controller:SMD_2_a7994fb989,2,False
+R3,4.7kΩ,MicroSMT_v485_controller:SMD_2_a7994fb989,2,False
+R4,4.7kΩ,MicroSMT_v485_controller:SMD_2_a7994fb989,2,False
+R5,1kΩ,MicroSMT_v485_controller:SMD_2_04577a26f8,2,False
+R6,100Ω,MicroSMT_v485_controller:SMD_2_cc916b3528,2,False
+R7,100Ω,MicroSMT_v485_controller:SMD_2_fef7677169,2,False
+R8,100Ω,MicroSMT_v485_controller:SMD_2_fef7677169,2,False
+R9,100kΩ,MicroSMT_v485_controller:SMD_2_cc916b3528,2,False
+U1,AMS1117-3.3,MicroSMT_v485_controller:SMD_4_f5cc46188f,4,False
+U2,VH3.96-4P ZZ,MicroSMT_v485_controller:PTH_4_101e17f868,4,False
+U3,2920L500/30GR,MicroSMT_v485_controller:SMD_2_74179e062f,2,False
+U7,MAX3485ESA(UMW),MicroSMT_v485_controller:SMD_8_f52f094fb5,8,False
+HREC1,Unreferenced plated hole,MicroSMT_v485_controller:PTH_1_ee2b9368a9,1,True
+HREC2,Unreferenced plated hole,MicroSMT_v485_controller:PTH_1_ee2b9368a9,1,True
+HREC3,Unreferenced plated hole,MicroSMT_v485_controller:PTH_1_ee2b9368a9,1,True
+HREC4,Unreferenced plated hole,MicroSMT_v485_controller:PTH_1_ee2b9368a9,1,True

@@ -1,0 +1,51 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 7d600050-13ef-5a77-a439-4e1248d7e666)
+  (paper "A3")
+  (title_block
+    (title "v485_busbar_480mm / MicroSMT recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols)
+  (text "MicroSMT / v485 busbar 480mm"
+    (at 20.32 20.32 0)
+    (effects
+      (font
+        (size 2.0 2.0))
+      (justify left top))
+    (uuid d96b1359-7f06-5871-98b8-c47507abc6d3))
+  (text "Editable reference reconstructed from original Gerbers, drills and flying-probe nets.\nOpen the sheets below for connected components. Original source files remain in the parent folder.\nValues come from the supplied BOM where available. Generic PAD labels are not device pin-function claims.\nRecovered copper contours preserve plotted geometry, not original pour design intent.\nRead ../README.md and the recovery/validation reports in ../docs/ before edits or fabrication."
+    (at 20.32 33.02 0)
+    (effects
+      (font
+        (size 1.1 1.1))
+      (justify left top))
+    (uuid e24c1ac1-62d4-5b33-a45c-da29175efda2))
+  (sheet
+    (at 20.32 73.66)
+    (size 111.76 22.86)
+    (stroke
+      (width 0)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 50b0e319-1c36-504f-bbfd-5ec105a9d30f)
+    (property "Sheetname" "Components 1"
+      (at 20.32 72.898 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "v485_busbar_480mm_sheet_01.kicad_sch"
+      (at 20.32 97.282 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "v485_busbar_480mm"
+        (path "/7d600050-13ef-5a77-a439-4e1248d7e666"
+          (page "2")))))
+  (sheet_instances
+    (path "/"
+      (page "1"))))

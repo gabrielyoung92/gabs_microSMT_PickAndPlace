@@ -1,0 +1,493 @@
+{
+  "name": "v485_busbar_180mm_pcb2",
+  "source": "Bing-feeder/V485-Feeder Controller/PCB_busbar_short_180mm/Gerber_PCB2_2026-10-09.zip",
+  "components": [
+    {
+      "ref": "H1",
+      "value": "Unspecified in source BOM",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:SMD_8_72fee1c658",
+      "uuid": "971050af-6083-535b-ac07-6e545323d8ad",
+      "inferred": false,
+      "side": "B",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            30.45784,
+            32.573
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            25.79796,
+            32.573
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "A",
+          "net": "A",
+          "position_mm": [
+            30.45784,
+            30.033
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "NET_1",
+          "net": "NET_1",
+          "position_mm": [
+            25.79796,
+            30.033
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "5",
+          "source_net": "B",
+          "net": "B",
+          "position_mm": [
+            30.45784,
+            27.493
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "6",
+          "source_net": "NET_2",
+          "net": "NET_2",
+          "position_mm": [
+            25.79796,
+            27.493
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "7",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            30.45784,
+            24.953
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "8",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            25.79796,
+            24.953
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "H2",
+      "value": "Unspecified in source BOM",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:SMD_8_af5a7f26e5",
+      "uuid": "d24919b3-570d-5383-b4a1-5b0959c8e4bf",
+      "inferred": false,
+      "side": "B",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            170.57816,
+            24.953
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            175.23804,
+            24.953
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "B",
+          "net": "B",
+          "position_mm": [
+            170.57816,
+            27.493
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "NET_3",
+          "net": "NET_3",
+          "position_mm": [
+            175.23804,
+            27.493
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "5",
+          "source_net": "A",
+          "net": "A",
+          "position_mm": [
+            170.57816,
+            30.033
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "6",
+          "source_net": "NET_4",
+          "net": "NET_4",
+          "position_mm": [
+            175.23804,
+            30.033
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "7",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            170.57816,
+            32.573
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "8",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            175.23804,
+            32.573
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R1",
+      "value": "Unspecified in source BOM",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:SMD_2_a7994fb989",
+      "uuid": "c414a010-5162-53f6-9956-9fbd40ae16a9",
+      "inferred": false,
+      "side": "B",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "A",
+          "net": "A",
+          "position_mm": [
+            165.796,
+            29.51636
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "B",
+          "net": "B",
+          "position_mm": [
+            165.796,
+            28.00964
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R2",
+      "value": "Unspecified in source BOM",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:SMD_2_a7994fb989",
+      "uuid": "8802923e-8744-5a01-8e84-51d8eb58ac44",
+      "inferred": false,
+      "side": "B",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "A",
+          "net": "A",
+          "position_mm": [
+            36.002,
+            29.77036
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "B",
+          "net": "B",
+          "position_mm": [
+            36.002,
+            28.26364
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "HREC1",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:PTH_1_d32e30a0ea",
+      "uuid": "ea804ba3-bc35-5e0f-8b79-4fa957c70b8e",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "A",
+          "net": "A",
+          "position_mm": [
+            22.032,
+            30.287
+          ],
+          "drill_mm": 1.0
+        }
+      ]
+    },
+    {
+      "ref": "HREC2",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:PTH_1_d32e30a0ea",
+      "uuid": "5120803b-cb49-5b51-92f8-eb16e8ebc3fd",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "B",
+          "net": "B",
+          "position_mm": [
+            22.032,
+            27.747
+          ],
+          "drill_mm": 1.0
+        }
+      ]
+    },
+    {
+      "ref": "HREC3",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:PTH_1_d32e30a0ea",
+      "uuid": "99c30ef6-a99f-5caf-9070-877c50e5bb66",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            22.0926,
+            32.74986
+          ],
+          "drill_mm": 1.0
+        }
+      ]
+    },
+    {
+      "ref": "HREC4",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:PTH_1_d32e30a0ea",
+      "uuid": "968f5cf9-029c-5497-b3bf-845f2fd39720",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            22.0926,
+            25.25
+          ],
+          "drill_mm": 1.0
+        }
+      ]
+    },
+    {
+      "ref": "HREC5",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:PTH_1_d32e30a0ea",
+      "uuid": "e8b479a5-4dea-50a0-b177-fee69d751de3",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "7V",
+          "net": "7V",
+          "position_mm": [
+            179.28,
+            32.75018
+          ],
+          "drill_mm": 1.0
+        }
+      ]
+    },
+    {
+      "ref": "HREC6",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:PTH_1_d32e30a0ea",
+      "uuid": "7a6a90ce-8e56-5ebf-b021-f63a830d1176",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "A",
+          "net": "A",
+          "position_mm": [
+            179.28,
+            30.25031
+          ],
+          "drill_mm": 1.0
+        }
+      ]
+    },
+    {
+      "ref": "HREC7",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:PTH_1_d32e30a0ea",
+      "uuid": "a7da3064-76df-5200-895f-96d334f1d0e0",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "B",
+          "net": "B",
+          "position_mm": [
+            179.28,
+            27.75019
+          ],
+          "drill_mm": 1.0
+        }
+      ]
+    },
+    {
+      "ref": "HREC8",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_busbar_180mm_pcb2:PTH_1_d32e30a0ea",
+      "uuid": "a4bcde9a-4d4e-51b4-ad71-62501971ad76",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            179.28,
+            25.25
+          ],
+          "drill_mm": 1.0
+        }
+      ]
+    }
+  ],
+  "aliases": {
+    "7V": "7V",
+    "A": "A",
+    "NET_1": "NET_1",
+    "B": "B",
+    "NET_2": "NET_2",
+    "GND": "GND",
+    "NET_3": "NET_3",
+    "NET_4": "NET_4"
+  },
+  "dimensions_mm": [
+    161.002,
+    13.853879999999997
+  ],
+  "coordinate_transform": {
+    "x_offset_mm": 101.28,
+    "y_offset_mm": 63.434,
+    "invert_y": true
+  },
+  "source_summary": {
+    "name": "v485_busbar_180mm_pcb2",
+    "source": "Bing-feeder/V485-Feeder Controller/PCB_busbar_short_180mm/Gerber_PCB2_2026-10-09.zip",
+    "dimensions_mm": [
+      161.002,
+      13.853879999999997
+    ],
+    "components": 12,
+    "pads": 28,
+    "drills": 10,
+    "probe_snap_max_mm": 4.0000000041118255e-06,
+    "nets": [
+      "7V",
+      "A",
+      "B",
+      "GND",
+      "NET_1",
+      "NET_2",
+      "NET_3",
+      "NET_4",
+      "RECOVERED_3",
+      "RECOVERED_4"
+    ],
+    "conflicts": [],
+    "archive_members_sha256": {
+      "Gerber_TopLayer.GTL": "3ccb9eec21fed1c975df06d97606649b2ecd4b522df54fd09b06ddc4489ced56",
+      "Gerber_BottomLayer.GBL": "183dd605b72fc2d6959cdf89df7d8920ae9b3cf1fe55218e6bfb288b60e0f9b9",
+      "Gerber_TopSilkscreenLayer.GTO": "ac74dd406df701cce5aa04b1b7c9c077d45f2a175fc09ebad03ed9f15ed5a614",
+      "Gerber_BottomSilkscreenLayer.GBO": "17f40ecfdbc2c9e97e708b0c089824d63fd67d5ea51bf32600b531d255dfad29",
+      "Gerber_TopSolderMaskLayer.GTS": "83949351673401cecf39a72ff72ee6438e949533b444d822ac42e2cd0f03d8ef",
+      "Gerber_BottomSolderMaskLayer.GBS": "03d5c79918a0b73e29586c47d20e6b7879f21bbc92bab61ffe71c724ad37ea56",
+      "Gerber_BottomPasteMaskLayer.GBP": "939ad00856f7da3aa65bb5506a0dd7b1a86f8933110fcb74e73749963fc04864",
+      "Gerber_BoardOutlineLayer.GKO": "ad90d40d842d63bb0583bdb41585c3feae8e3643a6ccb5019eeda80bac9b70d0",
+      "Gerber_DocumentLayer.GDL": "7c6bebb909102f2f339b73b5fef4b7a9cd5d72e7d28ba2fedf1d1193c389aacf",
+      "Gerber_DrillDrawingLayer.GDD": "491fa56b550144cf26975669aae6d75aabdbc603de611ccba59eb5dcfce4b478",
+      "Drill_PTH_Through.DRL": "5ec4727e54db45f8ab11e14b9e2cdae4db85760be6093b2a13fe9be53de45756",
+      "Drill_PTH_Through_Via.DRL": "e4f57621259370001f6f905f8beca9bd90f12ca47279e3adba5de9bf97dc1c2c",
+      "FlyingProbeTesting.json": "4210529df131a43e0cb0ebab8d95d3c7208c8e0d266d81efcb54a5274433da4e",
+      "PCB\u4e0b\u5355\u5fc5\u8bfb.txt": "dcb3ee1c645c17a009d70726ad9ab708b68a074556fabcf75a4a059d3b43ec59"
+    }
+  },
+  "inferred_references": [
+    "HREC1",
+    "HREC2",
+    "HREC3",
+    "HREC4",
+    "HREC5",
+    "HREC6",
+    "HREC7",
+    "HREC8"
+  ],
+  "board_counts": {
+    "copper_layers": 2,
+    "footprints": 12,
+    "tracks_and_vias": 816,
+    "zones": 18
+  },
+  "schematic_pages": 2,
+  "nonplated_holes": 0,
+  "probe_normalization": {
+    "source_rows": 20,
+    "unique_source_pads": 20
+  },
+  "interpretation": [
+    "CAM pad numbers and net names preserved; generic passive symbol pins.",
+    "HREC references identify unreferenced source holes; their mechanical purpose is unverified.",
+    "Copper contours preserve final plots, not editable original pour intent."
+  ]
+}

@@ -1,0 +1,89 @@
+(footprint "SMD_4_008e72132e"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "0340ddb0-4849-4521-96af-3041afd7e40c")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "SMW3225S102HTE"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cb9c773c-f623-4eae-892e-bd98d144c32e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "59eb0701-8946-48e1-890a-3a01a444cdea")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "60aaf368-5c6a-4244-a34b-867932189538")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "1" smd rect
+		(at -1.4 -0.82504)
+		(size 1.2 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.050799)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "07ea3233-f2cd-4bdd-b934-36f60f482138")
+	)
+	(pad "2" smd rect
+		(at -1.4 0.82494)
+		(size 1.2 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.050799)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "d329eed0-5741-4f3f-a990-857fd6de58c0")
+	)
+	(pad "3" smd rect
+		(at 1.39984 0.82494)
+		(size 1.2 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.050799)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "54c7022c-5dfe-4959-ab99-f73888db5650")
+	)
+	(pad "4" smd rect
+		(at 1.39984 -0.82504)
+		(size 1.2 0.9)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.050799)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "669050c4-1729-460e-9058-65698ea731e7")
+	)
+	(embedded_fonts no)
+)

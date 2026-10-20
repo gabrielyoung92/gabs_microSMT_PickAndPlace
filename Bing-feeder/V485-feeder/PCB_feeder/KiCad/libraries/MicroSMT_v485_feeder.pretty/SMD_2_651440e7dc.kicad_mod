@@ -1,0 +1,71 @@
+(footprint "SMD_2_651440e7dc"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "a6699aae-965e-4b6a-9248-cc6664dfc490")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "19-217/BHC-ZL1M2RY/3T"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "963a4eef-a65b-459e-ac33-0e1114fbdf87")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7d157432-9709-488e-a932-6dc8a69f60b7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "94f79f54-c884-4d54-968c-ea8fa00df218")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "1" smd rect
+		(at -0.71996 0 180)
+		(size 0.8 0.89992)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "681c600c-f71f-402c-a322-a66246b49abb")
+	)
+	(pad "2" smd rect
+		(at 0.71996 0 180)
+		(size 0.8 0.89992)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.0508)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "37a73762-5469-4f5f-b1fa-928215614e2d")
+	)
+	(embedded_fonts no)
+)

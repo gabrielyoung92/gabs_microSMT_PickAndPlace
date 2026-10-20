@@ -1,0 +1,89 @@
+(footprint "SMD_4_7982c82c77"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "40965828-f81d-4e64-a414-bea9b020279a")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "DLW21SN900SQ2L"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "218829c4-8eb3-4725-aca3-a15301f74ed3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "676921e7-e7ef-475e-b9d6-7e8ebee26691")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "db106466-c927-44c8-b65b-1cb9cd838fd3")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "1" smd rect
+		(at -0.3998 0.92494)
+		(size 0.4 0.75001)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.101602)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "5cd23bc7-6ac1-4e02-b638-f95e0fc85020")
+	)
+	(pad "2" smd rect
+		(at -0.3998 -0.92494)
+		(size 0.4 0.75001)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.101602)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "e6f5bbdd-a9d8-46c2-b3a5-91fc005c6f74")
+	)
+	(pad "3" smd rect
+		(at 0.3998 -0.92494)
+		(size 0.4 0.75001)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.101602)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "c5a67698-e6da-471b-8e2b-588fe476f446")
+	)
+	(pad "4" smd rect
+		(at 0.3998 0.92494)
+		(size 0.4 0.75001)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.101602)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "6251fe71-534a-4c83-8fad-0dd409e9a852")
+	)
+	(embedded_fonts no)
+)

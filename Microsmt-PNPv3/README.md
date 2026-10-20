@@ -10,6 +10,7 @@ Machine parts, nozzle racks, strip feeders, motherboard files and assembly manua
 | [CP45 nozzle rack gallery](CP45_nozzle_rack/README.md) | Left/right rack parts and clamps |
 | [Strip feeder gallery](Strip_feeders/README.md) | Tape-width and bit-count variants |
 | [Motherboard](PCB_motherboard/README.md) | Gerber ZIP, schematic and top/bottom/isometric previews |
+| [Machine setup notes](docs/README.md) | OpenPnP commands, controller/camera inspection and vacuum sensors |
 
 ## Manuals
 

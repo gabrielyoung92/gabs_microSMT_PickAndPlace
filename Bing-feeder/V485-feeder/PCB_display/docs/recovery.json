@@ -1,0 +1,505 @@
+{
+  "name": "v485_display",
+  "source": "Bing-feeder/V485-feeder/PCB_display/Gerber_PCB1_2026-10-09.zip",
+  "components": [
+    {
+      "ref": "C1",
+      "value": "100nF",
+      "footprint": "MicroSMT_v485_display:SMD_2_bdaf68bf10",
+      "uuid": "efdee086-59a4-569c-a290-a77eedb1dc64",
+      "inferred": false,
+      "side": "B",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            23.51688,
+            31.58632
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "3.3V",
+          "net": "3.3V",
+          "position_mm": [
+            24.35712,
+            31.58632
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "LED1",
+      "value": "GS2022CB-G",
+      "footprint": "MicroSMT_v485_display:SMD_10_20c6b414ba",
+      "uuid": "4ce5ba1e-c9be-5a8b-b713-3446a8507df1",
+      "inferred": false,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "SEG7",
+          "net": "SEG7",
+          "position_mm": [
+            21.17,
+            37.9393
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "NET_1",
+          "net": "NET_1",
+          "position_mm": [
+            23.71,
+            37.9393
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "SEG1",
+          "net": "SEG1",
+          "position_mm": [
+            26.25,
+            37.9393
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "SEG6",
+          "net": "SEG6",
+          "position_mm": [
+            28.79,
+            37.9393
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "5",
+          "source_net": "DIG3",
+          "net": "DIG3",
+          "position_mm": [
+            31.33,
+            37.9393
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "6",
+          "source_net": "SEG4",
+          "net": "SEG4",
+          "position_mm": [
+            31.33,
+            27.63934
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "7",
+          "source_net": "SEG5",
+          "net": "SEG5",
+          "position_mm": [
+            28.79,
+            27.63934
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "8",
+          "source_net": "SEG3",
+          "net": "SEG3",
+          "position_mm": [
+            26.25,
+            27.63934
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "9",
+          "source_net": "SEG2",
+          "net": "SEG2",
+          "position_mm": [
+            23.71,
+            27.63934
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "10",
+          "source_net": "DIG1",
+          "net": "DIG1",
+          "position_mm": [
+            21.17,
+            27.63934
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "value": "CH455G",
+      "footprint": "MicroSMT_v485_display:SMD_16_61719ae6d4",
+      "uuid": "3f0400a3-add9-511e-97ff-63cf31baf27c",
+      "inferred": false,
+      "side": "B",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "SEG4",
+          "net": "SEG4",
+          "position_mm": [
+            30.695,
+            40.06181
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "SEG5",
+          "net": "SEG5",
+          "position_mm": [
+            29.425,
+            40.06181
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "SEG6",
+          "net": "SEG6",
+          "position_mm": [
+            28.155,
+            40.06181
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "SEG7",
+          "net": "SEG7",
+          "position_mm": [
+            26.885,
+            40.06181
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "5",
+          "source_net": "NET_2",
+          "net": "NET_2",
+          "position_mm": [
+            25.615,
+            40.06181
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "6",
+          "source_net": "SCL",
+          "net": "SCL",
+          "position_mm": [
+            24.345,
+            40.06181
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "7",
+          "source_net": "SDA",
+          "net": "SDA",
+          "position_mm": [
+            23.075,
+            40.06181
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "8",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            21.805,
+            40.06181
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "9",
+          "source_net": "DIG1",
+          "net": "DIG1",
+          "position_mm": [
+            21.805,
+            34.31684
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "10",
+          "source_net": "NET_3",
+          "net": "NET_3",
+          "position_mm": [
+            23.075,
+            34.31684
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "11",
+          "source_net": "DIG3",
+          "net": "DIG3",
+          "position_mm": [
+            24.345,
+            34.31684
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "12",
+          "source_net": "SEG0",
+          "net": "SEG0",
+          "position_mm": [
+            25.615,
+            34.31684
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "13",
+          "source_net": "SEG1",
+          "net": "SEG1",
+          "position_mm": [
+            26.885,
+            34.31684
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "14",
+          "source_net": "3.3V",
+          "net": "3.3V",
+          "position_mm": [
+            28.155,
+            34.31684
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "15",
+          "source_net": "SEG2",
+          "net": "SEG2",
+          "position_mm": [
+            29.425,
+            34.31684
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "16",
+          "source_net": "SEG3",
+          "net": "SEG3",
+          "position_mm": [
+            30.695,
+            34.31684
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "U2",
+      "value": "ZX-SH1.0-4PWT",
+      "footprint": "MicroSMT_v485_display:SMD_6_bf757f6bd6",
+      "uuid": "02637842-2e9d-56ae-bc71-d485fdfb2702",
+      "inferred": false,
+      "side": "B",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "3.3V",
+          "net": "3.3V",
+          "position_mm": [
+            24.75013,
+            30.38934
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "SDA",
+          "net": "SDA",
+          "position_mm": [
+            25.75013,
+            30.38934
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "SCL",
+          "net": "SCL",
+          "position_mm": [
+            26.75013,
+            30.38934
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            27.75012,
+            30.38934
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "5",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            28.84994,
+            26.9893
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "6",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            23.65006,
+            26.9893
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "HREC1",
+      "value": "Unreferenced plated hole",
+      "footprint": "MicroSMT_v485_display:PTH_1_abea3bc72b",
+      "uuid": "bf7aa37f-18be-5aaf-be24-1a1a2825d206",
+      "inferred": true,
+      "side": "T",
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_12",
+          "net": "",
+          "position_mm": [
+            26.1991,
+            22.18944
+          ],
+          "drill_mm": 2.0
+        }
+      ]
+    }
+  ],
+  "aliases": {
+    "GND": "GND",
+    "3.3V": "3.3V",
+    "SEG7": "SEG7",
+    "NET_1": "NET_1",
+    "SEG1": "SEG1",
+    "SEG6": "SEG6",
+    "DIG3": "DIG3",
+    "SEG4": "SEG4",
+    "SEG5": "SEG5",
+    "SEG3": "SEG3",
+    "SEG2": "SEG2",
+    "DIG1": "DIG1",
+    "NET_2": "NET_2",
+    "SCL": "SCL",
+    "SDA": "SDA",
+    "NET_3": "NET_3",
+    "SEG0": "SEG0",
+    "RECOVERED_12": ""
+  },
+  "dimensions_mm": [
+    12.5,
+    23.30132
+  ],
+  "coordinate_transform": {
+    "x_offset_mm": 19.873,
+    "y_offset_mm": 30.189320000000002,
+    "invert_y": true
+  },
+  "source_summary": {
+    "name": "v485_display",
+    "source": "Bing-feeder/V485-feeder/PCB_display/Gerber_PCB1_2026-10-09.zip",
+    "dimensions_mm": [
+      12.5,
+      23.30132
+    ],
+    "components": 5,
+    "pads": 35,
+    "drills": 36,
+    "probe_snap_max_mm": 4.867401770390178e-06,
+    "nets": [
+      "3.3V",
+      "DIG1",
+      "DIG3",
+      "GND",
+      "NET_1",
+      "NET_2",
+      "NET_3",
+      "RECOVERED_12",
+      "SCL",
+      "SDA",
+      "SEG0",
+      "SEG1",
+      "SEG2",
+      "SEG3",
+      "SEG4",
+      "SEG5",
+      "SEG6",
+      "SEG7"
+    ],
+    "conflicts": [],
+    "archive_members_sha256": {
+      "Gerber_TopLayer.GTL": "31d64b66809423c94e8370a45a5c80fd737b169df517552e9490dafd1f5c33b1",
+      "Gerber_BottomLayer.GBL": "d1c3b40a6a2066299e0a1566c52dba05e7dab0cfd32a06667d48e8e8798092b7",
+      "Gerber_TopSilkscreenLayer.GTO": "59a4f836f36a28a6156e5966161ebf0246daa392fd95aca1c8325762e06015c0",
+      "Gerber_BottomSilkscreenLayer.GBO": "2653c5fabb0460565351407ce6e29b6e400066802716fb97d218f6e163324036",
+      "Gerber_TopSolderMaskLayer.GTS": "9aec7bfa98160790d57d9d088c5ec4ec0ae7aef7baa5a16c8f440bcbcbc79543",
+      "Gerber_BottomSolderMaskLayer.GBS": "04d15349cc8da6dbff862d883f4507026620b8060be6e82eae32bcfc56c24754",
+      "Gerber_TopPasteMaskLayer.GTP": "f9d603c3eb30811158a856b3e63ca2a5441345aeaaab31f0d15ba3defad18b68",
+      "Gerber_BottomPasteMaskLayer.GBP": "e9892576c5129b2480a6baeec94cf8897d5078cbc63743522fb6b85643ba6d82",
+      "Gerber_BoardOutlineLayer.GKO": "17191b80d37b4436fdd74f37b08a10f9525435e7efb3e122f8c6bb0b0aafa4ff",
+      "Gerber_DocumentLayer.GDL": "00953e469d981d5f7b3523a44525aa736a65f44aa6d913b8e1a63bc5816c5123",
+      "Gerber_DrillDrawingLayer.GDD": "ba9ce3209109c7ac082184e8b0d813d2a2090e2e7d28ad7d014b47ed3b010554",
+      "Drill_PTH_Through.DRL": "6ba2914a698dc7c87ada6780926a36e9a9cad27febde5dbd0f7da345933a426f",
+      "Drill_PTH_Through_Via.DRL": "9a53adb1245361a570e6732ae45ea499b5b75135f49e0c130fe98d6f6ccc7bae",
+      "FlyingProbeTesting.json": "490abd6111d57b6c6c52852167010fb0282dd73b5471433aa2bc36608698f426",
+      "PCB\u4e0b\u5355\u5fc5\u8bfb.txt": "dcb3ee1c645c17a009d70726ad9ab708b68a074556fabcf75a4a059d3b43ec59"
+    }
+  },
+  "inferred_references": [
+    "HREC1"
+  ],
+  "board_counts": {
+    "copper_layers": 2,
+    "footprints": 5,
+    "tracks_and_vias": 634,
+    "zones": 40
+  },
+  "schematic_pages": 2,
+  "nonplated_holes": 0,
+  "probe_normalization": {
+    "source_rows": 34,
+    "unique_source_pads": 34
+  },
+  "interpretation": [
+    "CAM pad numbers and net names preserved; generic passive symbol pins.",
+    "HREC references identify unreferenced source holes; their mechanical purpose is unverified.",
+    "Copper contours preserve final plots, not editable original pour intent."
+  ]
+}

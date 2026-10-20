@@ -1,0 +1,83 @@
+(footprint "PTH_3_f185d45fd5"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "b647e852-7efb-4145-b756-98810a92f526")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "Feeder slot"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "314f4422-dc57-4976-8dd1-9ead98dd28c9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1860d798-0baf-4941-ab76-93844ea53103")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "31661902-4248-4cb2-a7fa-d3ae91a2fd3e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(pad "1" thru_hole rect
+		(at -2.539944 0.000024 90)
+		(size 1.7 1.7)
+		(drill 1.10002)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.050799)
+		(thermal_bridge_angle 45)
+		(uuid "c02dba43-5385-47fd-a0b3-c5d7a4ec2388")
+	)
+	(pad "2" thru_hole circle
+		(at 0.000056 0.000024 90)
+		(size 1.7 1.7)
+		(drill 1.10002)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.050799)
+		(uuid "68ce905d-ef8b-4583-a358-5665c2ab8db3")
+	)
+	(pad "3" thru_hole circle
+		(at 2.540056 0.000024 90)
+		(size 1.7 1.7)
+		(drill 1.10002)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.050799)
+		(uuid "e91fe09c-6ddf-4176-8e0c-361149f08f6f")
+	)
+	(embedded_fonts no)
+)

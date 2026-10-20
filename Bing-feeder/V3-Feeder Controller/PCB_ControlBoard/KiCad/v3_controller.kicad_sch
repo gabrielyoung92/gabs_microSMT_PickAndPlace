@@ -1,0 +1,76 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 4d05bb36-3f30-5caa-ae41-381c64fb4669)
+  (paper "A3")
+  (title_block
+    (title "v3_controller / MicroSMT recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols)
+  (text "MicroSMT / v3 controller"
+    (at 20.32 20.32 0)
+    (effects
+      (font
+        (size 2.0 2.0))
+      (justify left top))
+    (uuid 80dcd0a4-288d-5114-9ced-165a851c80c7))
+  (text "Editable reference reconstructed from original Gerbers, drills and flying-probe nets.\nOpen the sheets below for connected components. Original source files remain in the parent folder.\nValues come from the supplied BOM where available. Generic PAD labels are not device pin-function claims.\nRecovered copper contours preserve plotted geometry, not original pour design intent.\nRead ../README.md and the recovery/validation reports in ../docs/ before edits or fabrication."
+    (at 20.32 33.02 0)
+    (effects
+      (font
+        (size 1.1 1.1))
+      (justify left top))
+    (uuid 229156d0-313c-5c0d-b6cf-7efa44d1a8da))
+  (sheet
+    (at 20.32 73.66)
+    (size 111.76 22.86)
+    (stroke
+      (width 0)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 0e308a76-bea9-5f79-9757-0ec8b3345208)
+    (property "Sheetname" "Components 1"
+      (at 20.32 72.898 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "v3_controller_sheet_01.kicad_sch"
+      (at 20.32 97.282 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "v3_controller"
+        (path "/4d05bb36-3f30-5caa-ae41-381c64fb4669"
+          (page "2")))))
+  (sheet
+    (at 144.78 73.66)
+    (size 111.76 22.86)
+    (stroke
+      (width 0)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 4f07ba29-2480-542b-af2e-7435f662136c)
+    (property "Sheetname" "Components 2"
+      (at 144.78 72.898 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "v3_controller_sheet_02.kicad_sch"
+      (at 144.78 97.282 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "v3_controller"
+        (path "/4d05bb36-3f30-5caa-ae41-381c64fb4669"
+          (page "3")))))
+  (sheet_instances
+    (path "/"
+      (page "1"))))

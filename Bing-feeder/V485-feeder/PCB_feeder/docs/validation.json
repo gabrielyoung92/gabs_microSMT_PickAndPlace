@@ -1,0 +1,48 @@
+{
+  "name": "v485_feeder",
+  "kicad_version": "10.0.6",
+  "source_archive_sha256": "fbf3728cb20520066378e25c597dc47b02e230b1a474c75c3e09305529df034c",
+  "matched_pads": 232,
+  "schematic_board_model_net_mismatches": [],
+  "maximum_pad_position_error_mm": 0.0,
+  "matched_drills": 232,
+  "nonplated_drills": 2,
+  "maximum_drill_error_mm": 0.0,
+  "copper_comparison": {
+    "F.Cu": {
+      "source_area_mm2": 1303.4635732711622,
+      "exported_area_mm2": 1303.4647212462437,
+      "symmetric_difference_mm2": 0.001164450990418031,
+      "extra_beyond_2um_mm2": 0.0,
+      "missing_beyond_2um_mm2": 0.0,
+      "within_2um_tolerance": true
+    },
+    "B.Cu": {
+      "source_area_mm2": 1485.031559427151,
+      "exported_area_mm2": 1485.0318236284163,
+      "symmetric_difference_mm2": 0.0002694364882182717,
+      "extra_beyond_2um_mm2": 0.0,
+      "missing_beyond_2um_mm2": 0.0,
+      "within_2um_tolerance": true
+    }
+  },
+  "erc_counts": {
+    "isolated_pin_label": 21
+  },
+  "drc_counts": {
+    "clearance": 289,
+    "hole_clearance": 4,
+    "copper_edge_clearance": 69,
+    "invalid_outline": 2,
+    "track_width": 8,
+    "silk_edge_clearance": 15,
+    "silk_over_copper": 20
+  },
+  "unconnected_items": 0,
+  "schematic_parity_counts": {},
+  "notes": [
+    "Original-layout DRC and single-pin-label ERC findings are retained, not excluded.",
+    "Generic passive symbols verify numbered-pad connectivity, not device electrical behavior.",
+    "Copper contours are recovered plot geometry, not original pour design intent."
+  ]
+}

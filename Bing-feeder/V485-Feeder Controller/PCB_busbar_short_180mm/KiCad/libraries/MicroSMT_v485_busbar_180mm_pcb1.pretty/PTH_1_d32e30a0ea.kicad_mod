@@ -1,0 +1,61 @@
+(footprint "PTH_1_d32e30a0ea"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "bb5640cb-51c8-41ac-b5b0-fa1c370bcbe6")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "Unreferenced plated hole"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a81228f2-83b5-4a51-bfb0-d51d86962a8c")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "307960ab-bf92-4255-b9e0-e344144461cc")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "56b65a3e-9ae9-4000-966b-5c6b3abaa4aa")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 1.5 1.5)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9bd84f9b-3f83-43a6-996e-44917b3c8e5e")
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,643 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 79b2df50-3858-59d9-af8c-9efc15f6e755)
+  (paper "A3")
+  (title_block
+    (title "v485_busbar_480mm / recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols
+    (symbol "MicroSMT_v485_busbar_480mm:v485_busbar_480mm_R1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_busbar_480mm_R1"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_busbar_480mm_R1_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_busbar_480mm_R1_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_busbar_480mm:v485_busbar_480mm_R2"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_busbar_480mm_R2"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_busbar_480mm_R2_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_busbar_480mm_R2_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_busbar_480mm:v485_busbar_480mm_U1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_busbar_480mm_U1"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_busbar_480mm_U1_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_busbar_480mm_U1_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_busbar_480mm:v485_busbar_480mm_U2"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_busbar_480mm_U2"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_busbar_480mm_U2_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_busbar_480mm_U2_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0))))))))
+  (text "v485 busbar 480mm / components 1"
+    (at 20.32 17.78 0)
+    (effects
+      (font
+        (size 1.8 1.8))
+      (justify left top))
+    (uuid 9065c037-f697-5720-8a04-4f13303776e1))
+  (text "MicroSMT CAM-derived reference. Pad numbers/nets preserved; generic pin electrical types.\nUse the supplied schematic for functional interpretation. Not a fabrication release."
+    (at 20.32 25.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left top))
+    (uuid 4ac82e38-4f81-5ae9-abe2-5c79a2ba7a09))
+  (wire
+    (pts
+      (xy 33.02 53.34)
+      (xy 27.94 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ffb9378f-d1a1-527d-a38a-9388387e3fc8))
+  (global_label "B"
+    (shape bidirectional)
+    (at 27.94 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid c08655b8-e24f-56b2-ab4c-13857fd10f6c))
+  (wire
+    (pts
+      (xy 73.66 53.34)
+      (xy 78.74 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6e3197f1-378a-5371-9e81-c930f15aa0a9))
+  (global_label "A"
+    (shape bidirectional)
+    (at 78.74 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 988e2ca0-a039-5cfb-910a-bca2999b8715))
+  (symbol
+    (lib_id "MicroSMT_v485_busbar_480mm:v485_busbar_480mm_R1")
+    (at 53.34 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid a2cb42dc-79d4-54e8-abe2-1794817e411a)
+    (property "Reference" "R1"
+      (at 53.34 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unspecified in source BOM"
+      (at 53.34 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_busbar_480mm:SMD_2_fef7677169"
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 3e273281-0d04-57ff-8517-f06e1ef07de8))
+    (pin "2"
+      (uuid d7b4b3d0-2738-5f79-b7af-9ba8ddb5d3b6))
+    (instances
+      (project "v485_busbar_480mm"
+        (path "/7d600050-13ef-5a77-a439-4e1248d7e666/50b0e319-1c36-504f-bbfd-5ec105a9d30f"
+          (reference "R1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 152.4 53.34)
+      (xy 147.32 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4fd479cf-8106-50e6-9eff-2e6120489475))
+  (global_label "B"
+    (shape bidirectional)
+    (at 147.32 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 17146dac-5996-5659-81a3-ba430181ea41))
+  (wire
+    (pts
+      (xy 193.04 53.34)
+      (xy 198.12 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid fd5b1bad-10f3-5d0b-902e-0a7d2333782f))
+  (global_label "A"
+    (shape bidirectional)
+    (at 198.12 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid ea94ed4e-f05c-5749-83bb-cd2593a79bb0))
+  (symbol
+    (lib_id "MicroSMT_v485_busbar_480mm:v485_busbar_480mm_R2")
+    (at 172.72 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 45a3aa77-2604-5758-8ba9-f50d33f4c092)
+    (property "Reference" "R2"
+      (at 172.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unspecified in source BOM"
+      (at 172.72 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_busbar_480mm:SMD_2_fef7677169"
+      (at 172.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid d6ada352-9ef2-5f27-be3a-393a66061eaa))
+    (pin "2"
+      (uuid 75446fc3-fd83-576c-8bb5-1ba3187c64c0))
+    (instances
+      (project "v485_busbar_480mm"
+        (path "/7d600050-13ef-5a77-a439-4e1248d7e666/50b0e319-1c36-504f-bbfd-5ec105a9d30f"
+          (reference "R2")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 271.78 52.07)
+      (xy 266.7 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 79dfeda8-91f2-5b27-b8aa-aa0e0678647b))
+  (global_label "7V"
+    (shape bidirectional)
+    (at 266.7 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid cc89a6f0-0d21-5f13-b58c-4ddc870190a6))
+  (wire
+    (pts
+      (xy 271.78 54.61)
+      (xy 266.7 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 374ddffa-c23c-5798-8068-ef3897476512))
+  (global_label "A"
+    (shape bidirectional)
+    (at 266.7 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 5a7dd978-a718-54c9-afff-eea1c87c6727))
+  (wire
+    (pts
+      (xy 312.42 52.07)
+      (xy 317.5 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4a6eae99-9b5d-573b-991b-e61519674b83))
+  (global_label "B"
+    (shape bidirectional)
+    (at 317.5 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 2fd55ff3-ea9d-5176-9206-56ac591deb27))
+  (wire
+    (pts
+      (xy 312.42 54.61)
+      (xy 317.5 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 55740e0c-c2d4-5a32-992d-32fdae281667))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 317.5 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 3bf39001-dd9d-5b6a-9f5e-e150cbbfd57e))
+  (symbol
+    (lib_id "MicroSMT_v485_busbar_480mm:v485_busbar_480mm_U1")
+    (at 292.1 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 21d5f616-e1dc-5918-a938-a5542d5793e8)
+    (property "Reference" "U1"
+      (at 292.1 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unspecified in source BOM"
+      (at 292.1 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_busbar_480mm:PTH_4_06e8961db4"
+      (at 292.1 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 6da98de3-c6e0-5403-a1f3-7861c7a6d8c4))
+    (pin "2"
+      (uuid 259a151a-409e-5eaa-9885-3408ea229279))
+    (pin "3"
+      (uuid 7cfed010-2a1e-56d5-86e3-80ac9b518eae))
+    (pin "4"
+      (uuid 4210efea-4fb7-5298-a33e-922a74530d53))
+    (instances
+      (project "v485_busbar_480mm"
+        (path "/7d600050-13ef-5a77-a439-4e1248d7e666/50b0e319-1c36-504f-bbfd-5ec105a9d30f"
+          (reference "U1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 33.02 77.47)
+      (xy 27.94 77.47))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 729d6b35-3523-526e-99e7-d35a5b5af04b))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 77.47 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 860dbe7e-b272-5890-a3f9-0ed1299be1fb))
+  (wire
+    (pts
+      (xy 33.02 80.01)
+      (xy 27.94 80.01))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f0359f8d-1f08-5388-a768-917021eb327e))
+  (global_label "B"
+    (shape bidirectional)
+    (at 27.94 80.01 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 8d505938-7115-50cf-bb1b-7e7cbe2b9ff7))
+  (wire
+    (pts
+      (xy 73.66 77.47)
+      (xy 78.74 77.47))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 68aec7f8-b707-5439-847f-532a1702b1e6))
+  (global_label "A"
+    (shape bidirectional)
+    (at 78.74 77.47 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 8beb52e2-ea3c-50cf-9a2b-e30b3838eb65))
+  (wire
+    (pts
+      (xy 73.66 80.01)
+      (xy 78.74 80.01))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid bc664b1b-6818-5019-9292-1504633e22bd))
+  (global_label "7V"
+    (shape bidirectional)
+    (at 78.74 80.01 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid d32923b6-c562-562e-8b71-5413d3c06ea6))
+  (symbol
+    (lib_id "MicroSMT_v485_busbar_480mm:v485_busbar_480mm_U2")
+    (at 53.34 78.74000000000001 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1c9159b0-9bcf-524a-a540-a761bd0d454d)
+    (property "Reference" "U2"
+      (at 53.34 72.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unspecified in source BOM"
+      (at 53.34 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_busbar_480mm:PTH_4_6cc8fbf6c8"
+      (at 53.34 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid a66cda1e-063a-5221-a16e-0d1eb79ded89))
+    (pin "2"
+      (uuid 26a3346f-8bcd-5a9a-aa5d-8141465390e1))
+    (pin "3"
+      (uuid 0dbb18db-15fe-5ff4-a9fc-84b27377b532))
+    (pin "4"
+      (uuid bbad8a24-7f5b-5b94-8e47-0d8eede029a3))
+    (instances
+      (project "v485_busbar_480mm"
+        (path "/7d600050-13ef-5a77-a439-4e1248d7e666/50b0e319-1c36-504f-bbfd-5ec105a9d30f"
+          (reference "U2")
+          (unit 1))))))

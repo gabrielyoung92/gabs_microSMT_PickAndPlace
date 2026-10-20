@@ -22,8 +22,6 @@ Each program's folder contains its source and a README.md with variant details.
 Those supplied files are NOT complete build projects. No matching project file,
 STM32F10x library, startup code, system clock implementation or linker script
 was found alongside them. No build of those two legacy programs has been verified.
-The separate custom firmware under ../_other/v3-modding/ is a different program;
-building that project does not build these vendor sources.
 
 WHAT THEY USE
 Those two use ST's legacy STM32F10x Standard Peripheral Library (SPL), including

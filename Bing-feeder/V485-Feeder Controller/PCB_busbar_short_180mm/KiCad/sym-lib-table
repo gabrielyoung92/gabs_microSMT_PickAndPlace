@@ -1,0 +1,5 @@
+(sym_lib_table (version 7)
+ (lib (name "MicroSMT_v485_busbar_180mm_pcb1") (type "KiCad") (uri "${KIPRJMOD}/libraries/MicroSMT_v485_busbar_180mm_pcb1.kicad_sym") (options "") (descr "MicroSMT CAM-derived reference"))
+ (lib (name "MicroSMT_v485_busbar_180mm_pcb2") (type "KiCad") (uri "${KIPRJMOD}/libraries/MicroSMT_v485_busbar_180mm_pcb2.kicad_sym") (options "") (descr "MicroSMT CAM-derived reference"))
+ (lib (name "MicroSMT_v485_busbar_180mm_pcb4") (type "KiCad") (uri "${KIPRJMOD}/libraries/MicroSMT_v485_busbar_180mm_pcb4.kicad_sym") (options "") (descr "MicroSMT CAM-derived reference"))
+)

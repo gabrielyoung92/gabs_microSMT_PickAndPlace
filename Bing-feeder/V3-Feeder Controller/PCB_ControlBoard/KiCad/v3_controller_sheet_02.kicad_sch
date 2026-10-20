@@ -1,0 +1,430 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 30efe577-4dc7-552f-be93-635285f09046)
+  (paper "A3")
+  (title_block
+    (title "v3_controller / recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols
+    (symbol "MicroSMT_v3_controller:v3_controller_Q1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v3_controller_Q1"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v3_controller_Q1_0_1"
+        (rectangle
+          (start -15.24 2.54)
+          (end 15.24 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v3_controller_Q1_1_1"
+        (pin passive line
+          (at -20.32 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v3_controller:v3_controller_R1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v3_controller_R1"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v3_controller_R1_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v3_controller_R1_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v3_controller:v3_controller_R2"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v3_controller_R2"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v3_controller_R2_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v3_controller_R2_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0))))))))
+  (text "v3 controller / components 2"
+    (at 20.32 17.78 0)
+    (effects
+      (font
+        (size 1.8 1.8))
+      (justify left top))
+    (uuid 4a2661e1-6b42-5177-8335-acf4a0b79664))
+  (text "MicroSMT CAM-derived reference. Pad numbers/nets preserved; generic pin electrical types.\nUse the supplied schematic for functional interpretation. Not a fabrication release."
+    (at 20.32 25.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left top))
+    (uuid fd1744ab-b6af-5f3f-a54d-35015b649fc9))
+  (wire
+    (pts
+      (xy 33.02 52.07)
+      (xy 27.94 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid cdd5965a-8012-5ff1-a3e9-92270309af54))
+  (global_label "$1N4522"
+    (shape bidirectional)
+    (at 27.94 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 0eac6b58-3ce6-5788-8346-6828db05c943))
+  (wire
+    (pts
+      (xy 33.02 54.61)
+      (xy 27.94 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid dfe347c7-8072-58ef-b05f-a8237164064e))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 87f9aa84-ddd7-5d6b-b5a5-85f0314ff1f0))
+  (wire
+    (pts
+      (xy 73.66 52.07)
+      (xy 78.74 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ad2c6424-94f2-5b86-8267-55321aa9df5e))
+  (global_label "GND-1"
+    (shape bidirectional)
+    (at 78.74 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid d7305a3d-be2e-5037-b6f4-02e821d6e2db))
+  (symbol
+    (lib_id "MicroSMT_v3_controller:v3_controller_Q1")
+    (at 53.34 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 605717bd-80a6-583d-91b5-734271378e60)
+    (property "Reference" "Q1"
+      (at 53.34 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "VBE1638"
+      (at 53.34 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v3_controller:SMD_3_0967ff59a7"
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid cadb8514-7fc8-5545-b714-c9edc569d181))
+    (pin "2"
+      (uuid b9d70ff3-d9f6-58de-bcd0-6772144efe52))
+    (pin "3"
+      (uuid ba5098dc-2848-5719-bd87-794541fa684d))
+    (instances
+      (project "v3_controller"
+        (path "/4d05bb36-3f30-5caa-ae41-381c64fb4669/4f07ba29-2480-542b-af2e-7435f662136c"
+          (reference "Q1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 152.4 53.34)
+      (xy 147.32 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d14476a8-588e-5464-a3c9-4c065c15f95a))
+  (global_label "$1N4523"
+    (shape bidirectional)
+    (at 147.32 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 005d3420-e763-589a-9953-bbe7d8b4e3cd))
+  (wire
+    (pts
+      (xy 193.04 53.34)
+      (xy 198.12 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3055bffb-cbd2-5407-9c02-5893f39510a6))
+  (global_label "$1N4522"
+    (shape bidirectional)
+    (at 198.12 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid b2b0193f-d366-5d9f-83b9-90d875ed1fe7))
+  (symbol
+    (lib_id "MicroSMT_v3_controller:v3_controller_R1")
+    (at 172.72 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4b37b748-5e24-50b6-a44f-ea01650f6dff)
+    (property "Reference" "R1"
+      (at 172.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "470"
+      (at 172.72 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v3_controller:SMD_2_d2af6b9a79"
+      (at 172.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid bcd49f5a-eb87-5042-a2fc-475fa66d7575))
+    (pin "2"
+      (uuid a48266f9-ee4a-5375-bb6e-3bc312c94bf8))
+    (instances
+      (project "v3_controller"
+        (path "/4d05bb36-3f30-5caa-ae41-381c64fb4669/4f07ba29-2480-542b-af2e-7435f662136c"
+          (reference "R1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 271.78 53.34)
+      (xy 266.7 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 366562da-f2b1-5ecb-ba23-9ae6bed21bb1))
+  (global_label "GND-1"
+    (shape bidirectional)
+    (at 266.7 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid d5aec69a-b015-5e03-be2a-5877d78ab364))
+  (wire
+    (pts
+      (xy 312.42 53.34)
+      (xy 317.5 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b770c534-073a-5412-adb9-a5d0f7631c11))
+  (global_label "$1N4522"
+    (shape bidirectional)
+    (at 317.5 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 5d8e05b8-2ea8-5169-8836-3fd19c6d7fcc))
+  (symbol
+    (lib_id "MicroSMT_v3_controller:v3_controller_R2")
+    (at 292.1 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4d75c6b6-26e7-5214-a3f2-144c54cf1d65)
+    (property "Reference" "R2"
+      (at 292.1 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10K"
+      (at 292.1 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v3_controller:SMD_2_a94b28ce2e"
+      (at 292.1 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 798a42a3-df02-5804-ade4-37160d611720))
+    (pin "2"
+      (uuid 4b08c780-8f8e-5265-bde8-caa1ad087ddf))
+    (instances
+      (project "v3_controller"
+        (path "/4d05bb36-3f30-5caa-ae41-381c64fb4669/4f07ba29-2480-542b-af2e-7435f662136c"
+          (reference "R2")
+          (unit 1))))))

@@ -1,0 +1,51 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 3d91c3c3-f452-5ac5-9a0c-5f86da82fd4c)
+  (paper "A3")
+  (title_block
+    (title "v485_display / MicroSMT recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols)
+  (text "MicroSMT / v485 display"
+    (at 20.32 20.32 0)
+    (effects
+      (font
+        (size 2.0 2.0))
+      (justify left top))
+    (uuid bfa1ce79-3649-5114-8487-3d05fc250193))
+  (text "Editable reference reconstructed from original Gerbers, drills and flying-probe nets.\nOpen the sheets below for connected components. Original source files remain in the parent folder.\nValues come from the supplied BOM where available. Generic PAD labels are not device pin-function claims.\nRecovered copper contours preserve plotted geometry, not original pour design intent.\nRead ../README.md and the recovery/validation reports in ../docs/ before edits or fabrication."
+    (at 20.32 33.02 0)
+    (effects
+      (font
+        (size 1.1 1.1))
+      (justify left top))
+    (uuid ad5a4c2a-44a2-5d2b-90b4-2741c35da943))
+  (sheet
+    (at 20.32 73.66)
+    (size 111.76 22.86)
+    (stroke
+      (width 0)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid a17c7f6b-cb1c-575d-979b-9cbaa76baedf)
+    (property "Sheetname" "Components 1"
+      (at 20.32 72.898 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "v485_display_sheet_01.kicad_sch"
+      (at 20.32 97.282 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "v485_display"
+        (path "/3d91c3c3-f452-5ac5-9a0c-5f86da82fd4c"
+          (page "2")))))
+  (sheet_instances
+    (path "/"
+      (page "1"))))

@@ -1,0 +1,89 @@
+(footprint "PTH_4_529d520394"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "b0ebf880-0b26-4046-a57a-5b1b8646eaa7")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "TS-1093A-A8B3-D2"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f9ee9f3c-3d0a-4f3a-8b2a-340084618bcb")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b2ad6ded-cc08-4d42-932c-2803f45efff7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d77b6aa5-e839-442b-adf5-3da0a2f60488")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "1" thru_hole circle
+		(at -2.250059 1.24993 90)
+		(size 1.6 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.101599)
+		(uuid "163a259c-7381-4fef-b006-2f9224608907")
+	)
+	(pad "2" thru_hole circle
+		(at 2.249801 1.24993 90)
+		(size 1.6 1.6)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.101599)
+		(uuid "51783dc2-24f3-4436-9181-72f4eb578048")
+	)
+	(pad "3" thru_hole circle
+		(at -3.499989 -1.24993 90)
+		(size 2 2)
+		(drill 1.30002)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.101599)
+		(uuid "10d14c82-62da-4e41-b728-f26f7e8c0417")
+	)
+	(pad "4" thru_hole circle
+		(at 3.499991 -1.24993 90)
+		(size 2 2)
+		(drill 1.30002)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.101599)
+		(uuid "67c75ba8-1e70-4a9b-bedf-0644ade8f253")
+	)
+	(embedded_fonts no)
+)

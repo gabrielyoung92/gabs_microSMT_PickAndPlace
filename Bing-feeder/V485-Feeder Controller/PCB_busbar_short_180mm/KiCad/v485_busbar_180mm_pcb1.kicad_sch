@@ -1,0 +1,51 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 124d48e3-de64-5487-9378-fb02eff6fb0c)
+  (paper "A3")
+  (title_block
+    (title "v485_busbar_180mm_pcb1 / MicroSMT recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols)
+  (text "MicroSMT / v485 busbar 180mm pcb1"
+    (at 20.32 20.32 0)
+    (effects
+      (font
+        (size 2.0 2.0))
+      (justify left top))
+    (uuid 73266e93-c562-5620-ab2a-4c6883a68be8))
+  (text "Editable reference reconstructed from original Gerbers, drills and flying-probe nets.\nOpen the sheets below for connected components. Original source files remain in the parent folder.\nValues come from the supplied BOM where available. Generic PAD labels are not device pin-function claims.\nRecovered copper contours preserve plotted geometry, not original pour design intent.\nRead ../README.md and the recovery/validation reports in ../docs/ before edits or fabrication."
+    (at 20.32 33.02 0)
+    (effects
+      (font
+        (size 1.1 1.1))
+      (justify left top))
+    (uuid b05997d0-cca7-55f4-9472-b040effc7138))
+  (sheet
+    (at 20.32 73.66)
+    (size 111.76 22.86)
+    (stroke
+      (width 0)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid dde84c51-b7f9-57f4-ba2e-4cfd8ad534e0)
+    (property "Sheetname" "Components 1"
+      (at 20.32 72.898 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "v485_busbar_180mm_pcb1_sheet_01.kicad_sch"
+      (at 20.32 97.282 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "v485_busbar_180mm_pcb1"
+        (path "/124d48e3-de64-5487-9378-fb02eff6fb0c"
+          (page "2")))))
+  (sheet_instances
+    (path "/"
+      (page "1"))))

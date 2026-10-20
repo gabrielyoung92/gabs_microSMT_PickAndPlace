@@ -1,0 +1,126 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid cb3bbdda-ca40-542e-82fa-b58e02783b0c)
+  (paper "A3")
+  (title_block
+    (title "v485_feeder / MicroSMT recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols)
+  (text "MicroSMT / v485 feeder"
+    (at 20.32 20.32 0)
+    (effects
+      (font
+        (size 2.0 2.0))
+      (justify left top))
+    (uuid 4c669785-412c-5af2-b81c-a08e2dd2d554))
+  (text "Editable reference reconstructed from original Gerbers, drills and flying-probe nets.\nOpen the sheets below for connected components. Original source files remain in the parent folder.\nValues come from the supplied BOM where available. Generic PAD labels are not device pin-function claims.\nRecovered copper contours preserve plotted geometry, not original pour design intent.\nRead ../README.md and the recovery/validation reports in ../docs/ before edits or fabrication."
+    (at 20.32 33.02 0)
+    (effects
+      (font
+        (size 1.1 1.1))
+      (justify left top))
+    (uuid cc49d52e-213f-5eb6-96c2-cbc4b41abda3))
+  (sheet
+    (at 20.32 73.66)
+    (size 111.76 22.86)
+    (stroke
+      (width 0)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid a144945c-9f52-5505-904e-208507027735)
+    (property "Sheetname" "Components 1"
+      (at 20.32 72.898 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "v485_feeder_sheet_01.kicad_sch"
+      (at 20.32 97.282 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c"
+          (page "2")))))
+  (sheet
+    (at 144.78 73.66)
+    (size 111.76 22.86)
+    (stroke
+      (width 0)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 451af6b8-4be6-5dda-8826-47acf789d8e6)
+    (property "Sheetname" "Components 2"
+      (at 144.78 72.898 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "v485_feeder_sheet_02.kicad_sch"
+      (at 144.78 97.282 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c"
+          (page "3")))))
+  (sheet
+    (at 269.24 73.66)
+    (size 111.76 22.86)
+    (stroke
+      (width 0)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 9c8138b9-9aa8-5448-b3da-758b7c949bcb)
+    (property "Sheetname" "Components 3"
+      (at 269.24 72.898 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "v485_feeder_sheet_03.kicad_sch"
+      (at 269.24 97.282 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c"
+          (page "4")))))
+  (sheet
+    (at 20.32 109.22)
+    (size 111.76 22.86)
+    (stroke
+      (width 0)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 2e585646-99e0-589a-b56f-9b03ed0f88c4)
+    (property "Sheetname" "Components 4"
+      (at 20.32 108.458 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "v485_feeder_sheet_04.kicad_sch"
+      (at 20.32 132.84199999999998 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c"
+          (page "5")))))
+  (sheet_instances
+    (path "/"
+      (page "1"))))

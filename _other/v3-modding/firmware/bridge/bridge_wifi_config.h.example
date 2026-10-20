@@ -1,5 +1,0 @@
-/* Copy to .local/bridge_wifi_config.h, then edit locally. Never commit secrets.
- * WPA2-Personal, 2.4 GHz. Empty credentials leave Wi-Fi disabled.
- * Credentials are embedded in the resulting UF2: do not distribute that image. */
-#define BRIDGE_WIFI_SSID ""
-#define BRIDGE_WIFI_PASSWORD ""

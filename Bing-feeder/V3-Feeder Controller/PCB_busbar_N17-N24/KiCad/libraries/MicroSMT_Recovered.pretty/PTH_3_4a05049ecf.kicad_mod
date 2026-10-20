@@ -1,0 +1,85 @@
+(footprint "PTH_3_4a05049ecf"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "f24859d9-fe0e-46f2-bdcf-0d05e7a6ea72")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "EE-SX672 interface"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "593fc889-dfe2-4be1-be7a-0b3f33954274")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7912ee9b-9439-4566-a400-e733b3e19bb2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "03e1cc40-e5d0-4c1f-8605-73cec07562b7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(pad "1" thru_hole oval
+		(at -1.25006 0 180)
+		(size 0.9 1.5)
+		(drill 0.70002)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.05)
+		(thermal_bridge_angle 45)
+		(uuid "c8b7c2a1-d1ac-47ea-b80b-ad90687d599e")
+	)
+	(pad "2" thru_hole oval
+		(at -0.00013 0 180)
+		(size 0.9 1.5)
+		(drill 0.70002)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.05)
+		(thermal_bridge_angle 45)
+		(uuid "1b9704d0-20a6-4895-8821-e2cbbc7c332e")
+	)
+	(pad "3" thru_hole oval
+		(at 1.25006 0 180)
+		(size 0.9 1.5)
+		(drill 0.70002)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.05)
+		(thermal_bridge_angle 45)
+		(uuid "7a5ca26d-ce4c-4a99-8826-8674fe9e9336")
+	)
+	(embedded_fonts no)
+)

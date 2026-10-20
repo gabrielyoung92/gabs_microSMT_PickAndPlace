@@ -1,0 +1,4767 @@
+(kicad_symbol_lib
+  (version 20241209)
+  (generator "kicad_symbol_editor")
+  (symbol "v485_feeder_C1"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C1"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C1_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C1_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C2"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C2_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C2_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C3"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C3"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C3_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C3_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C4"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C4"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C4_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C4_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C5"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C5"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C5_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C5_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C6"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C6"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C6_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C6_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C7"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C7"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C7_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C7_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C8"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C8"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C8_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C8_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C9"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C9"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C9_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C9_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C10"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C10"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C10_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C10_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C11"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C11"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C11_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C11_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C12"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C12"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C12_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C12_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C13"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C13"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C13_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C13_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C14"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C14"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C14_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C14_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C15"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C15"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C15_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C15_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C16"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C16"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C16_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C16_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C17"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C17"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C17_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C17_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C18"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C18"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C18_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C18_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C19"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C19"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C19_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C19_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C20"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C20"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C20_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C20_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C21"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C21"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C21_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C21_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C22"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C22"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C22_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C22_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C23"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C23"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C23_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C23_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_C24"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "C"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_C24"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_C24_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_C24_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_D1"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "D"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_D1"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_D1_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_D1_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_D2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "D"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_D2"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_D2_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_D2_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_D3"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "D"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_D3"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_D3_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_D3_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_D4"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "D"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_D4"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_D4_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_D4_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_H2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "H"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_H2"
+      (at 0 3.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_H2_0_1"
+      (rectangle
+        (start -15.24 2.54)
+        (end 15.24 -2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_H2_1_1"
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_H3"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "H"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_H3"
+      (at 0 3.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_H3_0_1"
+      (rectangle
+        (start -15.24 2.54)
+        (end 15.24 -2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_H3_1_1"
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_L1"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "L"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_L1"
+      (at 0 3.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_L1_0_1"
+      (rectangle
+        (start -15.24 2.54)
+        (end 15.24 -2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_L1_1_1"
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_LED1"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "LED"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_LED1"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_LED1_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_LED1_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_LED2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "LED"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_LED2"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_LED2_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_LED2_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_LED3"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "LED"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_LED3"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_LED3_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_LED3_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R1"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R1"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R1_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R1_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R2"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R2_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R2_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R4"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R4"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R4_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R4_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R5"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R5"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R5_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R5_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R6"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R6"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R6_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R6_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R7"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R7"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R7_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R7_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R8"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R8"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R8_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R8_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R9"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R9"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R9_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R9_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R10"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R10"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R10_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R10_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R12"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R12"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R12_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R12_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R13"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R13"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R13_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R13_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R14"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R14"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R14_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R14_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R15"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R15"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R15_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R15_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R16"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R16"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R16_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R16_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R17"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R17"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R17_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R17_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R18"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R18"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R18_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R18_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_R19"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_R19"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_R19_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_R19_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_SW1"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "SW"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_SW1"
+      (at 0 3.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_SW1_0_1"
+      (rectangle
+        (start -15.24 2.54)
+        (end 15.24 -2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_SW1_1_1"
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_SW2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "SW"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_SW2"
+      (at 0 3.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_SW2_0_1"
+      (rectangle
+        (start -15.24 2.54)
+        (end 15.24 -2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_SW2_1_1"
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_U1"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_U1"
+      (at 0 3.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_U1_0_1"
+      (rectangle
+        (start -15.24 2.54)
+        (end 15.24 -2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_U1_1_1"
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_U2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at 0 34.29 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_U2"
+      (at 0 31.75 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_U2_0_1"
+      (rectangle
+        (start -15.24 30.48)
+        (end 15.24 -30.48)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_U2_1_1"
+      (pin passive line
+        (at -20.32 29.21 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 26.67 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 24.130000000000003 0)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 21.59 0)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 19.05 0)
+        (length 5.08)
+        (name "PAD 5"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "5"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 16.51 0)
+        (length 5.08)
+        (name "PAD 6"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "6"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 13.97 0)
+        (length 5.08)
+        (name "PAD 7"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "7"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 11.43 0)
+        (length 5.08)
+        (name "PAD 8"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "8"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 8.89 0)
+        (length 5.08)
+        (name "PAD 9"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "9"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 6.350000000000001 0)
+        (length 5.08)
+        (name "PAD 10"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "10"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 3.8100000000000023 0)
+        (length 5.08)
+        (name "PAD 11"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "11"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 1.2699999999999996 0)
+        (length 5.08)
+        (name "PAD 12"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "12"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.2699999999999996 0)
+        (length 5.08)
+        (name "PAD 13"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "13"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -3.8100000000000023 0)
+        (length 5.08)
+        (name "PAD 14"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "14"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -6.350000000000001 0)
+        (length 5.08)
+        (name "PAD 15"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "15"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -8.89 0)
+        (length 5.08)
+        (name "PAD 16"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "16"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -11.43 0)
+        (length 5.08)
+        (name "PAD 17"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "17"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -13.969999999999999 0)
+        (length 5.08)
+        (name "PAD 18"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "18"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -16.509999999999998 0)
+        (length 5.08)
+        (name "PAD 19"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "19"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -19.049999999999997 0)
+        (length 5.08)
+        (name "PAD 20"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "20"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -21.589999999999996 0)
+        (length 5.08)
+        (name "PAD 21"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "21"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -24.130000000000003 0)
+        (length 5.08)
+        (name "PAD 22"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "22"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -26.67 0)
+        (length 5.08)
+        (name "PAD 23"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "23"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -29.21 0)
+        (length 5.08)
+        (name "PAD 24"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "24"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 29.21 180)
+        (length 5.08)
+        (name "PAD 25"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "25"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 26.67 180)
+        (length 5.08)
+        (name "PAD 26"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "26"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 24.130000000000003 180)
+        (length 5.08)
+        (name "PAD 27"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "27"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 21.59 180)
+        (length 5.08)
+        (name "PAD 28"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "28"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 19.05 180)
+        (length 5.08)
+        (name "PAD 29"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "29"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 16.51 180)
+        (length 5.08)
+        (name "PAD 30"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "30"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 13.97 180)
+        (length 5.08)
+        (name "PAD 31"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "31"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 11.43 180)
+        (length 5.08)
+        (name "PAD 32"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "32"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 8.89 180)
+        (length 5.08)
+        (name "PAD 33"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "33"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 6.350000000000001 180)
+        (length 5.08)
+        (name "PAD 34"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "34"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 3.8100000000000023 180)
+        (length 5.08)
+        (name "PAD 35"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "35"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.2699999999999996 180)
+        (length 5.08)
+        (name "PAD 36"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "36"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.2699999999999996 180)
+        (length 5.08)
+        (name "PAD 37"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "37"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -3.8100000000000023 180)
+        (length 5.08)
+        (name "PAD 38"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "38"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -6.350000000000001 180)
+        (length 5.08)
+        (name "PAD 39"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "39"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -8.89 180)
+        (length 5.08)
+        (name "PAD 40"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "40"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -11.43 180)
+        (length 5.08)
+        (name "PAD 41"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "41"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -13.969999999999999 180)
+        (length 5.08)
+        (name "PAD 42"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "42"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -16.509999999999998 180)
+        (length 5.08)
+        (name "PAD 43"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "43"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -19.049999999999997 180)
+        (length 5.08)
+        (name "PAD 44"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "44"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -21.589999999999996 180)
+        (length 5.08)
+        (name "PAD 45"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "45"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -24.130000000000003 180)
+        (length 5.08)
+        (name "PAD 46"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "46"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -26.67 180)
+        (length 5.08)
+        (name "PAD 47"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "47"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -29.21 180)
+        (length 5.08)
+        (name "PAD 48"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "48"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_U3"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at 0 13.97 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_U3"
+      (at 0 11.43 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_U3_0_1"
+      (rectangle
+        (start -15.24 10.16)
+        (end 15.24 -10.16)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_U3_1_1"
+      (pin passive line
+        (at -20.32 8.89 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 6.3500000000000005 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 3.8100000000000005 0)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 1.2700000000000005 0)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.2699999999999996 0)
+        (length 5.08)
+        (name "PAD 5"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "5"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -3.8099999999999987 0)
+        (length 5.08)
+        (name "PAD 6"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "6"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -6.35 0)
+        (length 5.08)
+        (name "PAD 7"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "7"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -8.89 0)
+        (length 5.08)
+        (name "PAD 8"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "8"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 8.89 180)
+        (length 5.08)
+        (name "PAD 9"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "9"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 6.3500000000000005 180)
+        (length 5.08)
+        (name "PAD 10"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "10"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 3.8100000000000005 180)
+        (length 5.08)
+        (name "PAD 11"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "11"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.2700000000000005 180)
+        (length 5.08)
+        (name "PAD 12"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "12"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.2699999999999996 180)
+        (length 5.08)
+        (name "PAD 13"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "13"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -3.8099999999999987 180)
+        (length 5.08)
+        (name "PAD 14"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "14"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -6.35 180)
+        (length 5.08)
+        (name "PAD 15"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "15"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -8.89 180)
+        (length 5.08)
+        (name "PAD 16"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "16"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_U4"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_U4"
+      (at 0 3.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_U4_0_1"
+      (rectangle
+        (start -15.24 2.54)
+        (end 15.24 -2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_U4_1_1"
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_U5"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at 0 7.62 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_U5"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_U5_0_1"
+      (rectangle
+        (start -15.24 3.81)
+        (end 15.24 -3.81)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_U5_1_1"
+      (pin passive line
+        (at -20.32 2.54 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -2.54 0)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 2.54 180)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 5"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "5"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_U6"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_U6"
+      (at 0 3.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_U6_0_1"
+      (rectangle
+        (start -15.24 2.54)
+        (end 15.24 -2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_U6_1_1"
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_U7"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at 0 8.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_U7"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_U7_0_1"
+      (rectangle
+        (start -15.24 5.08)
+        (end 15.24 -5.08)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_U7_1_1"
+      (pin passive line
+        (at -20.32 3.81 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -3.81 0)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 3.81 180)
+        (length 5.08)
+        (name "PAD 5"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "5"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 6"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "6"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 7"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "7"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -3.81 180)
+        (length 5.08)
+        (name "PAD 8"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "8"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_U8"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at 0 8.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_U8"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_U8_0_1"
+      (rectangle
+        (start -15.24 5.08)
+        (end 15.24 -5.08)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_U8_1_1"
+      (pin passive line
+        (at -20.32 3.81 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -3.81 0)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 3.81 180)
+        (length 5.08)
+        (name "PAD 5"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "5"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 6"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "6"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 7"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "7"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -3.81 180)
+        (length 5.08)
+        (name "PAD 8"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "8"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_U9"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at 0 7.62 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_U9"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_U9_0_1"
+      (rectangle
+        (start -15.24 3.81)
+        (end 15.24 -3.81)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_U9_1_1"
+      (pin passive line
+        (at -20.32 2.54 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -2.54 0)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 2.54 180)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 5"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "5"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -2.54 180)
+        (length 5.08)
+        (name "PAD 6"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "6"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_U10"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "U"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_U10"
+      (at 0 3.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_U10_0_1"
+      (rectangle
+        (start -15.24 2.54)
+        (end 15.24 -2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_U10_1_1"
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_X2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "X"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_X2"
+      (at 0 3.81 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_X2_0_1"
+      (rectangle
+        (start -15.24 2.54)
+        (end 15.24 -2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_X2_1_1"
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_HREC1"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_HREC1"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_HREC1_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_HREC1_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_HREC2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_HREC2"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_HREC2_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_HREC2_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_HREC3"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_HREC3"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_HREC3_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_HREC3_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_HREC4"
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Non-plated hole"
+      (at 0 -5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_HREC4_0_1"
+      (circle
+        (center 0 0)
+        (radius 2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type none)))))
+  (symbol "v485_feeder_HREC5"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_feeder_HREC5"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_HREC5_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_feeder_HREC5_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_feeder_HREC6"
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Non-plated hole"
+      (at 0 -5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_feeder_HREC6_0_1"
+      (circle
+        (center 0 0)
+        (radius 2.54)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type none))))))

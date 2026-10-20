@@ -1,0 +1,71 @@
+(footprint "PTH_2_0a439e785e"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "cc81ea01-f035-4456-8376-c32354970296")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "WJ500V-5.08-2P-14-00A"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d41beb7a-1ba9-4b35-86dd-49f541b9a8f4")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ece637fb-8125-4c69-9322-adced6b54139")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "83e3c462-c75b-401e-947b-7f06e1779b2d")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(pad "1" thru_hole circle
+		(at -2.54 0 270)
+		(size 2 2)
+		(drill 1.30002)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(uuid "819b59bc-d0d8-423e-95f2-f298cd14eeff")
+	)
+	(pad "2" thru_hole circle
+		(at 2.54 0 270)
+		(size 2 2)
+		(drill 1.30002)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.0508)
+		(uuid "518be825-6e7c-45bb-883d-80b6e733c210")
+	)
+	(embedded_fonts no)
+)

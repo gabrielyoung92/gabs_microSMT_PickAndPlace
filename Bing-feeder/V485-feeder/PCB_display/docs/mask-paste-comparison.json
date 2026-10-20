@@ -1,0 +1,22 @@
+{
+  "F.Mask": {
+    "source_area_mm2": 63.05946505724848,
+    "exported_area_mm2": 63.05945728004953,
+    "symmetric_difference_mm2": 0.00024142457844250652
+  },
+  "B.Mask": {
+    "source_area_mm2": 29.873248997263335,
+    "exported_area_mm2": 29.873251655310362,
+    "symmetric_difference_mm2": 3.766633627885705e-05
+  },
+  "F.Paste": {
+    "source_area_mm2": 57.99979999999999,
+    "exported_area_mm2": 57.99980000000005,
+    "symmetric_difference_mm2": 1.281194483837567e-13
+  },
+  "B.Paste": {
+    "source_area_mm2": 24.49665631450435,
+    "exported_area_mm2": 24.496656314504282,
+    "symmetric_difference_mm2": 0.0
+  }
+}

@@ -1,0 +1,6 @@
+Reference,Value,Recovered footprint,Pad count,Inferred reference
+C1,100nF,MicroSMT_v485_display:SMD_2_bdaf68bf10,2,False
+LED1,GS2022CB-G,MicroSMT_v485_display:SMD_10_20c6b414ba,10,False
+U1,CH455G,MicroSMT_v485_display:SMD_16_61719ae6d4,16,False
+U2,ZX-SH1.0-4PWT,MicroSMT_v485_display:SMD_6_bf757f6bd6,6,False
+HREC1,Unreferenced plated hole,MicroSMT_v485_display:PTH_1_abea3bc72b,1,True

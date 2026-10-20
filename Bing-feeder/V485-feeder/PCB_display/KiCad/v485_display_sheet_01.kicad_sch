@@ -1,0 +1,1365 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 994ff848-3325-5afd-8cf9-e808825bfd17)
+  (paper "A3")
+  (title_block
+    (title "v485_display / recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols
+    (symbol "MicroSMT_v485_display:v485_display_C1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_display_C1"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_display_C1_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_display_C1_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_display:v485_display_HREC1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "HREC"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_display_HREC1"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_display_HREC1_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_display_HREC1_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_display:v485_display_LED1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "LED"
+        (at 0 10.16 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_display_LED1"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_display_LED1_0_1"
+        (rectangle
+          (start -15.24 6.35)
+          (end 15.24 -6.35)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_display_LED1_1_1"
+        (pin passive line
+          (at -20.32 5.08 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 2.54 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -2.54 0)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -5.08 0)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 5.08 180)
+          (length 5.08)
+          (name "PAD 6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 2.54 180)
+          (length 5.08)
+          (name "PAD 7"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 8"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -2.54 180)
+          (length 5.08)
+          (name "PAD 9"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "9"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -5.08 180)
+          (length 5.08)
+          (name "PAD 10"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "10"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_display:v485_display_U1"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 13.97 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_display_U1"
+        (at 0 11.43 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_display_U1_0_1"
+        (rectangle
+          (start -15.24 10.16)
+          (end 15.24 -10.16)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_display_U1_1_1"
+        (pin passive line
+          (at -20.32 8.89 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 6.3500000000000005 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 3.8100000000000005 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 1.2700000000000005 0)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -1.2699999999999996 0)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -3.8099999999999987 0)
+          (length 5.08)
+          (name "PAD 6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -6.35 0)
+          (length 5.08)
+          (name "PAD 7"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -8.89 0)
+          (length 5.08)
+          (name "PAD 8"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 8.89 180)
+          (length 5.08)
+          (name "PAD 9"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "9"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 6.3500000000000005 180)
+          (length 5.08)
+          (name "PAD 10"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "10"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 3.8100000000000005 180)
+          (length 5.08)
+          (name "PAD 11"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "11"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 1.2700000000000005 180)
+          (length 5.08)
+          (name "PAD 12"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "12"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -1.2699999999999996 180)
+          (length 5.08)
+          (name "PAD 13"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "13"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -3.8099999999999987 180)
+          (length 5.08)
+          (name "PAD 14"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "14"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -6.35 180)
+          (length 5.08)
+          (name "PAD 15"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "15"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -8.89 180)
+          (length 5.08)
+          (name "PAD 16"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "16"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_display:v485_display_U2"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_display_U2"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_display_U2_0_1"
+        (rectangle
+          (start -15.24 3.81)
+          (end 15.24 -3.81)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_display_U2_1_1"
+        (pin passive line
+          (at -20.32 2.54 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -20.32 -2.54 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 2.54 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 0.0 180)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 20.32 -2.54 180)
+          (length 5.08)
+          (name "PAD 6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0))))))))
+  (text "v485 display / components 1"
+    (at 20.32 17.78 0)
+    (effects
+      (font
+        (size 1.8 1.8))
+      (justify left top))
+    (uuid 95c9912e-fb23-5935-8107-40d960e0d7a5))
+  (text "MicroSMT CAM-derived reference. Pad numbers/nets preserved; generic pin electrical types.\nUse the supplied schematic for functional interpretation. Not a fabrication release."
+    (at 20.32 25.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left top))
+    (uuid 889ef945-41e5-5263-8e35-2c59df17c7d5))
+  (wire
+    (pts
+      (xy 33.02 53.34)
+      (xy 27.94 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid aabf7b17-cd8a-518a-b932-c397e771c168))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 27.94 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 208ffd90-65ae-5932-8fee-32c53b2dfad3))
+  (wire
+    (pts
+      (xy 73.66 53.34)
+      (xy 78.74 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f64abff2-8cc8-5da8-a24f-85bacdcd68f0))
+  (global_label "3.3V"
+    (shape bidirectional)
+    (at 78.74 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 5088526f-14e4-5cf6-92d6-47621e9b8f7a))
+  (symbol
+    (lib_id "MicroSMT_v485_display:v485_display_C1")
+    (at 53.34 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid efdee086-59a4-569c-a290-a77eedb1dc64)
+    (property "Reference" "C1"
+      (at 53.34 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF"
+      (at 53.34 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_display:SMD_2_bdaf68bf10"
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid b2f00fcc-7877-5859-9a20-b3d65a24e149))
+    (pin "2"
+      (uuid fc7c052c-0dbd-5188-8ccf-2d0c16d4197b))
+    (instances
+      (project "v485_display"
+        (path "/3d91c3c3-f452-5ac5-9a0c-5f86da82fd4c/a17c7f6b-cb1c-575d-979b-9cbaa76baedf"
+          (reference "C1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 152.4 50.8)
+      (xy 147.32 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7dab8da1-7829-55a1-a338-20fbde8826b4))
+  (global_label "SEG7"
+    (shape bidirectional)
+    (at 147.32 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 643a5ac5-f094-50dd-ace0-96aaba555671))
+  (wire
+    (pts
+      (xy 152.4 53.34)
+      (xy 147.32 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 63d4a750-28fc-52c5-b0c6-9273ce0c5b89))
+  (global_label "NET_1"
+    (shape bidirectional)
+    (at 147.32 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 06ddd18e-b01e-566f-9564-bee006049366))
+  (wire
+    (pts
+      (xy 152.4 55.88)
+      (xy 147.32 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 85dfebeb-6467-547d-93fb-b95f46ac4885))
+  (global_label "SEG1"
+    (shape bidirectional)
+    (at 147.32 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid c6744960-34ae-5194-8c2f-d139d899323f))
+  (wire
+    (pts
+      (xy 152.4 58.42)
+      (xy 147.32 58.42))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a3ca93cd-ac30-50c3-a4be-9ebf6e8c702a))
+  (global_label "SEG6"
+    (shape bidirectional)
+    (at 147.32 58.42 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 8d629d01-ba76-58dd-a60b-646d9e6fc5ed))
+  (wire
+    (pts
+      (xy 152.4 60.96)
+      (xy 147.32 60.96))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid bc23e933-636a-5e77-ba1d-ae8533a97be7))
+  (global_label "DIG3"
+    (shape bidirectional)
+    (at 147.32 60.96 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 28f605c9-9bc4-51b1-9740-a92d61133970))
+  (wire
+    (pts
+      (xy 193.04 50.8)
+      (xy 198.12 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid bc1ed3bd-a3c2-5861-a842-62b93e704f15))
+  (global_label "SEG4"
+    (shape bidirectional)
+    (at 198.12 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 032a0bae-b0a4-5dce-a390-c8c9d0be9b9e))
+  (wire
+    (pts
+      (xy 193.04 53.34)
+      (xy 198.12 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0f58cd37-2222-5492-8743-bcb596d76a04))
+  (global_label "SEG5"
+    (shape bidirectional)
+    (at 198.12 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 5f0784da-942e-520d-83a8-74fb1df168e1))
+  (wire
+    (pts
+      (xy 193.04 55.88)
+      (xy 198.12 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid acc723c8-b43c-5c60-8e2c-8c7eb38f21a4))
+  (global_label "SEG3"
+    (shape bidirectional)
+    (at 198.12 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 09be47ce-14cd-5a53-a25c-1d5d7aec362c))
+  (wire
+    (pts
+      (xy 193.04 58.42)
+      (xy 198.12 58.42))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a7531b7f-d437-52f9-bc60-6e713002e15c))
+  (global_label "SEG2"
+    (shape bidirectional)
+    (at 198.12 58.42 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 77da38e0-16d5-5f97-a9c3-7fcf90e155c5))
+  (wire
+    (pts
+      (xy 193.04 60.96)
+      (xy 198.12 60.96))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 945002e5-e6ba-56c5-83f1-7963a65e578f))
+  (global_label "DIG1"
+    (shape bidirectional)
+    (at 198.12 60.96 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 26978c5b-1964-5499-911f-7cdbb5da57c4))
+  (symbol
+    (lib_id "MicroSMT_v485_display:v485_display_LED1")
+    (at 172.72 55.88 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 4ce5ba1e-c9be-5a8b-b713-3446a8507df1)
+    (property "Reference" "LED1"
+      (at 172.72 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "GS2022CB-G"
+      (at 172.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_display:SMD_10_20c6b414ba"
+      (at 172.72 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 686faf65-7a09-52d6-bc94-44116d451d31))
+    (pin "2"
+      (uuid ed9e09d7-4622-5e37-bede-6fedf9381579))
+    (pin "3"
+      (uuid 6d9fec84-d3b9-5d3b-aa9e-33a5f26c5813))
+    (pin "4"
+      (uuid 15013219-6d74-55eb-a69a-cb6219f1cea5))
+    (pin "5"
+      (uuid 8528cfb7-79e3-5c5d-bc7d-5cedb9d7bc00))
+    (pin "6"
+      (uuid f5144b01-d66a-5257-9c70-990c51bf0ab8))
+    (pin "7"
+      (uuid cc0207f4-c0db-5db3-ae85-6361916703f0))
+    (pin "8"
+      (uuid c642c08a-df85-5a8b-a228-36d0ccad95be))
+    (pin "9"
+      (uuid 3568d89d-eb8f-5045-a286-53b4471a888f))
+    (pin "10"
+      (uuid d7f956dc-cc9e-5b20-b81c-e4eaa50848c6))
+    (instances
+      (project "v485_display"
+        (path "/3d91c3c3-f452-5ac5-9a0c-5f86da82fd4c/a17c7f6b-cb1c-575d-979b-9cbaa76baedf"
+          (reference "LED1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 271.78 50.8)
+      (xy 266.7 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ae4b3869-a4aa-5061-8438-63aa19ae3823))
+  (global_label "SEG4"
+    (shape bidirectional)
+    (at 266.7 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 12098d47-a913-5008-b687-8855e8281047))
+  (wire
+    (pts
+      (xy 271.78 53.34)
+      (xy 266.7 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 39cc3396-aace-586d-b747-875229cc791a))
+  (global_label "SEG5"
+    (shape bidirectional)
+    (at 266.7 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid a05c73bc-a978-5e40-8aec-edac04d1ea1f))
+  (wire
+    (pts
+      (xy 271.78 55.88)
+      (xy 266.7 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0e6f8465-44a6-5775-ab05-5c724d00c90b))
+  (global_label "SEG6"
+    (shape bidirectional)
+    (at 266.7 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid b89c6d59-bc2b-5dce-a0ae-9bc62c994d2e))
+  (wire
+    (pts
+      (xy 271.78 58.42)
+      (xy 266.7 58.42))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5f35de2c-9e94-5b9e-a675-7d522a362939))
+  (global_label "SEG7"
+    (shape bidirectional)
+    (at 266.7 58.42 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 94bbd1eb-df5f-514b-ad59-91828f2217dd))
+  (wire
+    (pts
+      (xy 271.78 60.96)
+      (xy 266.7 60.96))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5167d715-9995-5048-baf9-6c4555e01967))
+  (global_label "NET_2"
+    (shape bidirectional)
+    (at 266.7 60.96 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid da8b5ed7-6bfa-5f60-b488-1dbdab3d63e8))
+  (wire
+    (pts
+      (xy 271.78 63.5)
+      (xy 266.7 63.5))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d1e2cf34-d1b9-5fbf-83ba-4ae7fecd66a3))
+  (global_label "SCL"
+    (shape bidirectional)
+    (at 266.7 63.5 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid b397d631-2443-5c28-ac57-e3df9ce98c54))
+  (wire
+    (pts
+      (xy 271.78 66.04)
+      (xy 266.7 66.04))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid cc9a13e6-8701-57e1-847c-d699feb17e8a))
+  (global_label "SDA"
+    (shape bidirectional)
+    (at 266.7 66.04 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid aababd2f-f3f3-5bfe-88ed-c111b92487fa))
+  (wire
+    (pts
+      (xy 271.78 68.58)
+      (xy 266.7 68.58))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8c346569-d4c9-54a8-9b40-a17b7fdc1305))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 266.7 68.58 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 5117a593-45fc-52a5-928c-ebe68a572627))
+  (wire
+    (pts
+      (xy 312.42 50.8)
+      (xy 317.5 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 065472e4-f921-5a93-9225-efe768e0a81e))
+  (global_label "DIG1"
+    (shape bidirectional)
+    (at 317.5 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 6a752a3e-3ad9-5a63-82a0-b9fd639ea12a))
+  (wire
+    (pts
+      (xy 312.42 53.34)
+      (xy 317.5 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4c961f18-6682-574e-8b1c-808e103c4d4b))
+  (global_label "NET_3"
+    (shape bidirectional)
+    (at 317.5 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid a64abc4f-d3a2-5ae0-9c93-54c53a986d29))
+  (wire
+    (pts
+      (xy 312.42 55.88)
+      (xy 317.5 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e8c59ff2-96cb-54cd-b4f5-dd2d66982465))
+  (global_label "DIG3"
+    (shape bidirectional)
+    (at 317.5 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid deea6c6f-fb76-55ae-ae08-8d4db88973d4))
+  (wire
+    (pts
+      (xy 312.42 58.42)
+      (xy 317.5 58.42))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 13296fa8-8820-557d-921a-dbcfe54de3f8))
+  (global_label "SEG0"
+    (shape bidirectional)
+    (at 317.5 58.42 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 2631e266-5ccc-54e3-8150-bd8679e5a6a8))
+  (wire
+    (pts
+      (xy 312.42 60.96)
+      (xy 317.5 60.96))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 9f88f5e0-d713-5f8a-b4c9-cac288c20498))
+  (global_label "SEG1"
+    (shape bidirectional)
+    (at 317.5 60.96 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid def17c6d-766c-5576-839b-fb0edd54ad1c))
+  (wire
+    (pts
+      (xy 312.42 63.5)
+      (xy 317.5 63.5))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a6ee952f-619f-5ccb-89b8-384f8b7c0f31))
+  (global_label "3.3V"
+    (shape bidirectional)
+    (at 317.5 63.5 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 1dcfa965-50fd-55a7-a246-160549aec78e))
+  (wire
+    (pts
+      (xy 312.42 66.04)
+      (xy 317.5 66.04))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a2b9d0a1-8fdc-5e57-b022-79f2d971668b))
+  (global_label "SEG2"
+    (shape bidirectional)
+    (at 317.5 66.04 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 029a523e-01a3-5b2c-920f-120782e91f5b))
+  (wire
+    (pts
+      (xy 312.42 68.58)
+      (xy 317.5 68.58))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f95bcfba-0728-5687-969a-6d142f1dca20))
+  (global_label "SEG3"
+    (shape bidirectional)
+    (at 317.5 68.58 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 29d3366f-bacc-5bc9-a5be-525735dc5ea4))
+  (symbol
+    (lib_id "MicroSMT_v485_display:v485_display_U1")
+    (at 292.1 59.690000000000005 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3f0400a3-add9-511e-97ff-63cf31baf27c)
+    (property "Reference" "U1"
+      (at 292.1 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "CH455G"
+      (at 292.1 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_display:SMD_16_61719ae6d4"
+      (at 292.1 59.69 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 59.69 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid b58d908f-42bf-574e-9bbb-c7dcc8d79502))
+    (pin "2"
+      (uuid a18a64eb-b3df-51a7-9f0e-1ca09c796eb5))
+    (pin "3"
+      (uuid bda2447a-a50c-5dfa-a992-11d65f775e72))
+    (pin "4"
+      (uuid 240a0548-150c-569a-9a0a-c22403e26bbf))
+    (pin "5"
+      (uuid f6c2408f-4459-5f2f-b8a1-5fa6afe194d4))
+    (pin "6"
+      (uuid d6ba0d70-1100-5cde-9d9b-2b062a015a5d))
+    (pin "7"
+      (uuid 5b415d0c-4bc1-531d-b410-7be8a7ec1e55))
+    (pin "8"
+      (uuid 9c42eeab-7687-5f3f-9924-4e7b118d81ee))
+    (pin "9"
+      (uuid 22254511-8ab2-5207-8f14-4091d3265a0b))
+    (pin "10"
+      (uuid ce3bca4d-4759-520e-98d9-3ab034941b6b))
+    (pin "11"
+      (uuid 710a576d-c8ec-546f-86ce-c1fcc099431f))
+    (pin "12"
+      (uuid 9485d424-6790-5162-8720-3e2e74ded44c))
+    (pin "13"
+      (uuid aef5eed0-7fa4-5776-aade-2d37bfe9a139))
+    (pin "14"
+      (uuid f69c5233-179c-5cdf-a8bb-c059675f7068))
+    (pin "15"
+      (uuid 2d882234-f57b-5e6b-86a5-6108a9b88cde))
+    (pin "16"
+      (uuid bedaac64-fe30-5ec9-a2c1-e2c8456220c5))
+    (instances
+      (project "v485_display"
+        (path "/3d91c3c3-f452-5ac5-9a0c-5f86da82fd4c/a17c7f6b-cb1c-575d-979b-9cbaa76baedf"
+          (reference "U1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 33.02 88.9)
+      (xy 27.94 88.9))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4ba99fff-8c25-5f0b-ab1f-c43474df2c16))
+  (global_label "3.3V"
+    (shape bidirectional)
+    (at 27.94 88.9 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 8a91414a-8d46-5042-979d-58a1f80fd166))
+  (wire
+    (pts
+      (xy 33.02 91.44)
+      (xy 27.94 91.44))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid cc9e1ac5-ea74-5fad-9a76-da3f30618e18))
+  (global_label "SDA"
+    (shape bidirectional)
+    (at 27.94 91.44 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid cb8f7534-d3a2-5df9-b7d2-0efe15c8e308))
+  (wire
+    (pts
+      (xy 33.02 93.98)
+      (xy 27.94 93.98))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ecb956cb-51e9-5a46-acb7-9c1e0bfac70e))
+  (global_label "SCL"
+    (shape bidirectional)
+    (at 27.94 93.98 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 3eca2399-4e44-5e95-9288-bc4e82663536))
+  (wire
+    (pts
+      (xy 73.66 88.9)
+      (xy 78.74 88.9))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 24e79070-a904-5f99-a0c2-d94deee9d802))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 78.74 88.9 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 430ec432-15d0-5a51-a526-6717b69b1150))
+  (wire
+    (pts
+      (xy 73.66 91.44)
+      (xy 78.74 91.44))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid bd153116-5827-548d-ae68-785c4747b85f))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 78.74 91.44 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 59a7db02-c734-57f0-809c-5e2315264bea))
+  (wire
+    (pts
+      (xy 73.66 93.98)
+      (xy 78.74 93.98))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 36caa671-9147-519a-be46-db5168cf7317))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 78.74 93.98 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid a7cfd570-c0e3-5317-bf62-47a22738f8be))
+  (symbol
+    (lib_id "MicroSMT_v485_display:v485_display_U2")
+    (at 53.34 91.44 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 02637842-2e9d-56ae-bc71-d485fdfb2702)
+    (property "Reference" "U2"
+      (at 53.34 83.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "ZX-SH1.0-4PWT"
+      (at 53.34 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_display:SMD_6_bf757f6bd6"
+      (at 53.34 91.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 91.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 4f018617-f3b0-5f96-9b2a-24e5c5855741))
+    (pin "2"
+      (uuid d27f42cc-fdf3-5fdd-9930-aa9e190dd09c))
+    (pin "3"
+      (uuid 820decfd-941f-56b9-929d-daeeac747841))
+    (pin "4"
+      (uuid 53efabdc-483d-5646-ad2d-df3c03a384a8))
+    (pin "5"
+      (uuid dce36c5d-93e8-5114-9627-fa555bbd51b8))
+    (pin "6"
+      (uuid f87ef592-fd4d-54f5-9506-efb03d8ea48d))
+    (instances
+      (project "v485_display"
+        (path "/3d91c3c3-f452-5ac5-9a0c-5f86da82fd4c/a17c7f6b-cb1c-575d-979b-9cbaa76baedf"
+          (reference "U2")
+          (unit 1)))))
+  (no_connect
+    (at 152.4 91.44)
+    (uuid 486a4c1c-59bf-53a1-a00d-4761b8122fbc))
+  (symbol
+    (lib_id "MicroSMT_v485_display:v485_display_HREC1")
+    (at 172.72 91.44 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid bf7aa37f-18be-5aaf-be24-1a1a2825d206)
+    (property "Reference" "HREC1"
+      (at 172.72 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unreferenced plated hole"
+      (at 172.72 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_display:PTH_1_abea3bc72b"
+      (at 172.72 91.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 91.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid e9af9cd4-cdf0-5970-9c51-543dc6f6a1aa))
+    (instances
+      (project "v485_display"
+        (path "/3d91c3c3-f452-5ac5-9a0c-5f86da82fd4c/a17c7f6b-cb1c-575d-979b-9cbaa76baedf"
+          (reference "HREC1")
+          (unit 1))))))

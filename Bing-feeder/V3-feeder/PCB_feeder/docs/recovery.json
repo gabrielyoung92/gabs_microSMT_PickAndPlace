@@ -1,0 +1,2047 @@
+{
+  "name": "feeder_v2",
+  "source": "Bing-feeder/V3-feeder/PCB_feeder/V3_feeder_gerber_2025-02-06.zip",
+  "components": [
+    {
+      "ref": "C1",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_4654a48235",
+      "uuid": "9cd0e288-0b2f-55af-9b34-e4d56460bbef",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            39.75002,
+            21.148
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            38.34998,
+            21.148
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C2",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_6acc588369",
+      "uuid": "aa518dbf-4dbe-55e7-907f-200417f8a2d6",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            36.002,
+            35.43398
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "+5V",
+          "net": "+5V",
+          "position_mm": [
+            36.002,
+            36.83402
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C3",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_2eba8715d4",
+      "uuid": "32332442-5b17-5186-8e49-ca63ebfac4c4",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            54.73298,
+            26.228
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "+5V",
+          "net": "+5V",
+          "position_mm": [
+            56.13302,
+            26.228
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C4",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_4654a48235",
+      "uuid": "522f0dca-caf9-5da9-81f3-9ea92cd171f4",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            53.59302,
+            33.467
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            52.19298,
+            33.467
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C5",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_4654a48235",
+      "uuid": "aa6418b6-c448-505c-a285-b46576c99e6e",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            53.08502,
+            31.562
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            51.68498,
+            31.562
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C6",
+      "value": "22pF",
+      "footprint": "MicroSMT_Recovered:SMD_2_6acc588369",
+      "uuid": "705a47b2-57bb-515f-b44a-f7fd83d7cd8b",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            28.382,
+            23.24198
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N2515",
+          "net": "OSC_IN",
+          "position_mm": [
+            28.382,
+            24.64202
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C7",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_d7f3dab159",
+      "uuid": "f9b9ea20-031c-55e6-b5b4-52c8358e5546",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            46.67,
+            22.73702
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            46.67,
+            21.33698
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C8",
+      "value": "22pF",
+      "footprint": "MicroSMT_Recovered:SMD_2_d7f3dab159",
+      "uuid": "cadc651a-498e-52ca-a08c-d446305c27b7",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            28.509,
+            30.99202
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N2524",
+          "net": "OSC_OUT",
+          "position_mm": [
+            28.509,
+            29.59198
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C9",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_4654a48235",
+      "uuid": "eed24caf-8114-5519-9fe4-6cecad12a7f6",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N8413",
+          "net": "NRST",
+          "position_mm": [
+            32.13002,
+            33.975
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            30.72998,
+            33.975
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C10",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_4654a48235",
+      "uuid": "9ef5bb03-0f3c-5b81-856c-1d89040af080",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            37.46402,
+            31.943
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            36.06398,
+            31.943
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C11",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_6acc588369",
+      "uuid": "45f944aa-bf7f-5ea4-a0e2-f2ba392cf934",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            47.305,
+            31.62398
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            47.305,
+            33.02402
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C12",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_ea9585d00e",
+      "uuid": "69a92f25-4897-5980-8a1a-db82837dffa9",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            57.65398,
+            24.704
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N28406",
+          "net": "MOTOR1_A",
+          "position_mm": [
+            59.05402,
+            24.704
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C13",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_ea9585d00e",
+      "uuid": "5ffd606a-0ff3-50aa-a877-b92aa907f834",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N28296",
+          "net": "MOTOR1_B",
+          "position_mm": [
+            61.71798,
+            24.704
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            63.11802,
+            24.704
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C14",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_73e6f4f0fe",
+      "uuid": "3230aa5e-e5d2-57e2-aeb7-6ef616628e7c",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N28093",
+          "net": "MOTOR2_B",
+          "position_mm": [
+            66.29302,
+            25.72
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            64.89298,
+            25.72
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C15",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_ea9585d00e",
+      "uuid": "20a9adb6-541f-5540-8e80-2147d3753136",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            68.32198,
+            26.355
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N28135",
+          "net": "MOTOR2_A",
+          "position_mm": [
+            69.72202,
+            26.355
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C16",
+      "value": "100uF",
+      "footprint": "MicroSMT_Recovered:SMD_2_ec123379e2",
+      "uuid": "d4ecd94f-82d1-5baf-a01c-3d5e088f0b19",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "+5V",
+          "net": "+5V",
+          "position_mm": [
+            61.27797,
+            38.80087
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            55.93813,
+            38.80087
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C17",
+      "value": "100uF",
+      "footprint": "MicroSMT_Recovered:SMD_2_6e07a3e01f",
+      "uuid": "d5a510d5-1d09-5a82-b149-ac7902d1dcfa",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "+5V",
+          "net": "+5V",
+          "position_mm": [
+            40.70113,
+            41.34397
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            40.70113,
+            36.00413
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "C18",
+      "value": "100nF",
+      "footprint": "MicroSMT_Recovered:SMD_2_9b88676047",
+      "uuid": "4681e7f0-d3a6-52b7-93c8-eb979c07cc42",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            66.482,
+            41.40602
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "+5V",
+          "net": "+5V",
+          "position_mm": [
+            66.482,
+            40.00598
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "CN1",
+      "value": "EE-SX672 interface",
+      "footprint": "MicroSMT_Recovered:PTH_3_4a05049ecf",
+      "uuid": "d279f65c-709b-57d1-a456-6c7a7b1748c0",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "+5V",
+          "net": "+5V",
+          "position_mm": [
+            55.79406,
+            22.037
+          ],
+          "drill_mm": 0.70002
+        },
+        {
+          "number": "2",
+          "source_net": "PA3",
+          "net": "PA3",
+          "position_mm": [
+            54.54413,
+            22.037
+          ],
+          "drill_mm": 0.70002
+        },
+        {
+          "number": "3",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            53.29394,
+            22.037
+          ],
+          "drill_mm": 0.70002
+        }
+      ]
+    },
+    {
+      "ref": "D1",
+      "value": "SS34",
+      "footprint": "MicroSMT_Recovered:SMD_2_2eb83b068d",
+      "uuid": "901c741c-9e6d-5031-9a19-20787cf222b1",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "+5V",
+          "net": "+5V",
+          "position_mm": [
+            34.629,
+            39.055
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N25822",
+          "net": "HOST_VIN",
+          "position_mm": [
+            30.771,
+            39.055
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "H1",
+      "value": "Host interface",
+      "footprint": "MicroSMT_Recovered:PTH_4_349c8e8e96",
+      "uuid": "e62ca030-c7b5-535d-b9b5-e99b5591be24",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            27.112,
+            41.976
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "$1N25822",
+          "net": "HOST_VIN",
+          "position_mm": [
+            29.652,
+            41.976
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "PA5",
+          "net": "PA5",
+          "position_mm": [
+            32.192,
+            41.976
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "4",
+          "source_net": "PA11",
+          "net": "PA11",
+          "position_mm": [
+            34.732,
+            41.976
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "H2",
+      "value": "SWD",
+      "footprint": "MicroSMT_Recovered:PTH_4_b36c63a0fc",
+      "uuid": "83ec2f83-155e-530d-8b0b-25d455624863",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            49.845,
+            21.529
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "SWCLK",
+          "net": "SWCLK",
+          "position_mm": [
+            49.845,
+            24.069
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "SWDIO",
+          "net": "SWDIO",
+          "position_mm": [
+            49.845,
+            26.609
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "4",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            49.845,
+            29.149
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "LED1",
+      "value": "3V3",
+      "footprint": "MicroSMT_Recovered:SMD_2_d3d32b5ec5",
+      "uuid": "f7b1730c-139c-5a3b-831a-65b78998cbca",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            56.23704,
+            31.816
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N4463",
+          "net": "LED_3V3_A",
+          "position_mm": [
+            57.67696,
+            31.816
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "LED2",
+      "value": "Status",
+      "footprint": "MicroSMT_Recovered:SMD_2_90d08f57e1",
+      "uuid": "2ac3748d-ff48-5428-b3af-e0e854c61460",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "PB5",
+          "net": "PB5",
+          "position_mm": [
+            28.29247,
+            21.27157
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N4467",
+          "net": "LED_STATUS_A",
+          "position_mm": [
+            26.69354,
+            21.27843
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "LED3",
+      "value": "5V",
+      "footprint": "MicroSMT_Recovered:SMD_2_4c3ddea3bf",
+      "uuid": "07bd300a-bfe7-59ba-873b-2858cd204dff",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            26.01104,
+            38.547
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N24150",
+          "net": "LED_5V_A",
+          "position_mm": [
+            27.45096,
+            38.547
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R1",
+      "value": "10k",
+      "footprint": "MicroSMT_Recovered:SMD_2_0ab8a8e8a3",
+      "uuid": "e38e1407-44fb-5186-9003-7908a7c24007",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            36.637,
+            21.66464
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N2174",
+          "net": "BOOT0",
+          "position_mm": [
+            36.637,
+            23.17136
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R2",
+      "value": "10k",
+      "footprint": "MicroSMT_Recovered:SMD_2_d2af6b9a79",
+      "uuid": "f38f1648-2f0b-5830-84a2-a2b94a767e5a",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            36.12036,
+            33.721
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N8413",
+          "net": "NRST",
+          "position_mm": [
+            34.61364,
+            33.721
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R3",
+      "value": "10k",
+      "footprint": "MicroSMT_Recovered:SMD_2_d2af6b9a79",
+      "uuid": "b182d695-c017-57e1-91fb-a17ddee5c40f",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            45.13736,
+            33.975
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N1866",
+          "net": "PB2_BOOT1",
+          "position_mm": [
+            43.63064,
+            33.975
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R4",
+      "value": "510",
+      "footprint": "MicroSMT_Recovered:SMD_2_a94b28ce2e",
+      "uuid": "4a7b7d66-1082-591b-9478-a131078d69d0",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            56.20364,
+            33.975
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N4463",
+          "net": "LED_3V3_A",
+          "position_mm": [
+            57.71036,
+            33.975
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R5",
+      "value": "510",
+      "footprint": "MicroSMT_Recovered:SMD_2_b14ba15cf3",
+      "uuid": "7b91d2ef-afd4-5002-a9e4-a4d227765d0d",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            26.096,
+            24.82236
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N4467",
+          "net": "LED_STATUS_A",
+          "position_mm": [
+            26.096,
+            23.31564
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "R6",
+      "value": "510",
+      "footprint": "MicroSMT_Recovered:SMD_2_d2af6b9a79",
+      "uuid": "8b544f73-af56-57e9-942a-c19381e99806",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "+5V",
+          "net": "+5V",
+          "position_mm": [
+            29.89736,
+            36.515
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "$1N24150",
+          "net": "LED_5V_A",
+          "position_mm": [
+            28.39064,
+            36.515
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "SW1",
+      "value": "TS-1093A-A6B2-D2",
+      "footprint": "MicroSMT_Recovered:PTH_4_230f0c19bc",
+      "uuid": "3661d4bb-4180-59b5-a86a-a655e7d34e33",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            21.92507,
+            30.20094
+          ],
+          "drill_mm": 1.0
+        },
+        {
+          "number": "2",
+          "source_net": "PA4",
+          "net": "PA4",
+          "position_mm": [
+            21.92507,
+            34.7008
+          ],
+          "drill_mm": 1.0
+        },
+        {
+          "number": "3",
+          "source_net": "SW1_3",
+          "net": "",
+          "position_mm": [
+            24.42493,
+            28.95101
+          ],
+          "drill_mm": 1.30002
+        },
+        {
+          "number": "4",
+          "source_net": "SW1_4",
+          "net": "",
+          "position_mm": [
+            24.42493,
+            35.95099
+          ],
+          "drill_mm": 1.30002
+        }
+      ]
+    },
+    {
+      "ref": "U1",
+      "value": "AMS1117-3.3",
+      "footprint": "MicroSMT_Recovered:SMD_4_f5cc46188f",
+      "uuid": "5690f149-308b-53d8-82a9-41d5370da933",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            46.62105,
+            35.61203
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            46.62105,
+            37.912
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "+5V",
+          "net": "+5V",
+          "position_mm": [
+            46.62105,
+            40.21197
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "U1_4",
+          "net": "",
+          "position_mm": [
+            52.56097,
+            37.912
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "U2",
+      "value": "STM32C8T6",
+      "footprint": "MicroSMT_Recovered:SMD_48_5916ba93e4",
+      "uuid": "e189cb47-1414-5178-9d55-40db04a9c3ab",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "U2_1",
+          "net": "",
+          "position_mm": [
+            37.2847,
+            24.7548
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "U2_2",
+          "net": "",
+          "position_mm": [
+            37.2847,
+            25.25518
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "U2_3",
+          "net": "",
+          "position_mm": [
+            37.2847,
+            25.75556
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "U2_4",
+          "net": "",
+          "position_mm": [
+            37.2847,
+            26.25594
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "5",
+          "source_net": "$1N2515",
+          "net": "OSC_IN",
+          "position_mm": [
+            37.2847,
+            26.75632
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "6",
+          "source_net": "$1N2524",
+          "net": "OSC_OUT",
+          "position_mm": [
+            37.2847,
+            27.2567
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "7",
+          "source_net": "$1N8413",
+          "net": "NRST",
+          "position_mm": [
+            37.2847,
+            27.75454
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "8",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            37.2847,
+            28.25492
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "9",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            37.2847,
+            28.7553
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "10",
+          "source_net": "$1N2137",
+          "net": "PA0",
+          "position_mm": [
+            37.2847,
+            29.25568
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "11",
+          "source_net": "$1N2133",
+          "net": "PA1",
+          "position_mm": [
+            37.2847,
+            29.75606
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "12",
+          "source_net": "U2_12",
+          "net": "",
+          "position_mm": [
+            37.2847,
+            30.25644
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "13",
+          "source_net": "PA3",
+          "net": "PA3",
+          "position_mm": [
+            38.8341,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "14",
+          "source_net": "PA4",
+          "net": "PA4",
+          "position_mm": [
+            39.33448,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "15",
+          "source_net": "PA5",
+          "net": "PA5",
+          "position_mm": [
+            39.83486,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "16",
+          "source_net": "PA6",
+          "net": "PA6",
+          "position_mm": [
+            40.33524,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "17",
+          "source_net": "PA7",
+          "net": "PA7",
+          "position_mm": [
+            40.83562,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "18",
+          "source_net": "U2_18",
+          "net": "",
+          "position_mm": [
+            41.336,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "19",
+          "source_net": "U2_19",
+          "net": "",
+          "position_mm": [
+            41.83384,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "20",
+          "source_net": "$1N1866",
+          "net": "PB2_BOOT1",
+          "position_mm": [
+            42.33422,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "21",
+          "source_net": "U2_21",
+          "net": "",
+          "position_mm": [
+            42.8346,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "22",
+          "source_net": "U2_22",
+          "net": "",
+          "position_mm": [
+            43.33498,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "23",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            43.83536,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "24",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            44.33574,
+            31.7906
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "25",
+          "source_net": "U2_25",
+          "net": "",
+          "position_mm": [
+            45.8953,
+            30.2412
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "26",
+          "source_net": "U2_26",
+          "net": "",
+          "position_mm": [
+            45.8953,
+            29.74082
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "27",
+          "source_net": "U2_27",
+          "net": "",
+          "position_mm": [
+            45.8953,
+            29.24044
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "28",
+          "source_net": "U2_28",
+          "net": "",
+          "position_mm": [
+            45.8953,
+            28.74006
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "29",
+          "source_net": "PA8",
+          "net": "PA8",
+          "position_mm": [
+            45.8953,
+            28.23968
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "30",
+          "source_net": "U2_30",
+          "net": "",
+          "position_mm": [
+            45.8953,
+            27.7393
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "31",
+          "source_net": "U2_31",
+          "net": "",
+          "position_mm": [
+            45.8953,
+            27.24146
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "32",
+          "source_net": "PA11",
+          "net": "PA11",
+          "position_mm": [
+            45.8953,
+            26.74108
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "33",
+          "source_net": "PA12",
+          "net": "PA12",
+          "position_mm": [
+            45.8953,
+            26.2407
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "34",
+          "source_net": "SWDIO",
+          "net": "SWDIO",
+          "position_mm": [
+            45.8953,
+            25.74032
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "35",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            45.8953,
+            25.23994
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "36",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            45.8953,
+            24.73956
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "37",
+          "source_net": "SWCLK",
+          "net": "SWCLK",
+          "position_mm": [
+            44.3205,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "38",
+          "source_net": "U2_38",
+          "net": "",
+          "position_mm": [
+            43.82012,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "39",
+          "source_net": "U2_39",
+          "net": "",
+          "position_mm": [
+            43.31974,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "40",
+          "source_net": "U2_40",
+          "net": "",
+          "position_mm": [
+            42.81936,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "41",
+          "source_net": "PB5",
+          "net": "PB5",
+          "position_mm": [
+            42.31898,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "42",
+          "source_net": "U2_42",
+          "net": "",
+          "position_mm": [
+            41.8186,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "43",
+          "source_net": "U2_43",
+          "net": "",
+          "position_mm": [
+            41.32076,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "44",
+          "source_net": "$1N2174",
+          "net": "BOOT0",
+          "position_mm": [
+            40.82038,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "45",
+          "source_net": "U2_45",
+          "net": "",
+          "position_mm": [
+            40.32,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "46",
+          "source_net": "U2_46",
+          "net": "",
+          "position_mm": [
+            39.81962,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "47",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            39.31924,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "48",
+          "source_net": "VCC_3V3",
+          "net": "VCC_3V3",
+          "position_mm": [
+            38.81886,
+            23.2054
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "U3",
+      "value": "TC1508A",
+      "footprint": "MicroSMT_Recovered:SMD_16_ae7b02a39a",
+      "uuid": "3b60f218-8d7d-5cd7-bf6a-fd0e5c4513aa",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "U3_1",
+          "net": "",
+          "position_mm": [
+            62.672,
+            35.57749
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "2",
+          "source_net": "PA8",
+          "net": "PA8",
+          "position_mm": [
+            63.942,
+            35.57749
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "3",
+          "source_net": "PA12",
+          "net": "PA12",
+          "position_mm": [
+            65.212,
+            35.57749
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "4",
+          "source_net": "+5V",
+          "net": "+5V",
+          "position_mm": [
+            66.482,
+            35.57749
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "5",
+          "source_net": "U3_5",
+          "net": "",
+          "position_mm": [
+            67.752,
+            35.57749
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "6",
+          "source_net": "PA6",
+          "net": "PA6",
+          "position_mm": [
+            69.022,
+            35.57749
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "7",
+          "source_net": "PA7",
+          "net": "PA7",
+          "position_mm": [
+            70.292,
+            35.57749
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "8",
+          "source_net": "+5V",
+          "net": "+5V",
+          "position_mm": [
+            71.562,
+            35.57749
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "9",
+          "source_net": "$1N28135",
+          "net": "MOTOR2_A",
+          "position_mm": [
+            71.562,
+            29.83251
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "10",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            70.292,
+            29.83251
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "11",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            69.022,
+            29.83251
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "12",
+          "source_net": "$1N28093",
+          "net": "MOTOR2_B",
+          "position_mm": [
+            67.752,
+            29.83251
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "13",
+          "source_net": "$1N28296",
+          "net": "MOTOR1_B",
+          "position_mm": [
+            66.482,
+            29.83251
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "14",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            65.212,
+            29.83251
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "15",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            63.942,
+            29.83251
+          ],
+          "drill_mm": 0.0
+        },
+        {
+          "number": "16",
+          "source_net": "$1N28406",
+          "net": "MOTOR1_A",
+          "position_mm": [
+            62.672,
+            29.83251
+          ],
+          "drill_mm": 0.0
+        }
+      ]
+    },
+    {
+      "ref": "U4",
+      "value": "Motor 1",
+      "footprint": "MicroSMT_Recovered:PTH_2_ae613bcbab",
+      "uuid": "7af6fa9e-b438-5465-b685-7e659498d96f",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N28296",
+          "net": "MOTOR1_B",
+          "position_mm": [
+            61.13804,
+            22.418
+          ],
+          "drill_mm": 0.70002
+        },
+        {
+          "number": "2",
+          "source_net": "$1N28406",
+          "net": "MOTOR1_A",
+          "position_mm": [
+            59.88811,
+            22.418
+          ],
+          "drill_mm": 0.70002
+        }
+      ]
+    },
+    {
+      "ref": "U5",
+      "value": "Motor 2",
+      "footprint": "MicroSMT_Recovered:PTH_2_ae613bcbab",
+      "uuid": "d9007efd-fb3d-5d57-9194-3fe7e77abe46",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N28135",
+          "net": "MOTOR2_A",
+          "position_mm": [
+            66.47204,
+            22.418
+          ],
+          "drill_mm": 0.70002
+        },
+        {
+          "number": "2",
+          "source_net": "$1N28093",
+          "net": "MOTOR2_B",
+          "position_mm": [
+            65.22211,
+            22.418
+          ],
+          "drill_mm": 0.70002
+        }
+      ]
+    },
+    {
+      "ref": "X1",
+      "value": "8MHz",
+      "footprint": "MicroSMT_Recovered:PTH_2_5813266c9b",
+      "uuid": "c8b798a7-0aca-5aaf-91e4-533a4ccea6ec",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "$1N2524",
+          "net": "OSC_OUT",
+          "position_mm": [
+            32.7,
+            29.55692
+          ],
+          "drill_mm": 0.90002
+        },
+        {
+          "number": "2",
+          "source_net": "$1N2515",
+          "net": "OSC_IN",
+          "position_mm": [
+            32.7,
+            24.67708
+          ],
+          "drill_mm": 0.90002
+        }
+      ]
+    },
+    {
+      "ref": "MH1",
+      "value": "Plated mounting hole 2.5mm",
+      "footprint": "MicroSMT_Recovered:PTH_1_75dcf4be66",
+      "uuid": "17064096-b29e-53e3-8e68-6825f4831d0e",
+      "inferred": true,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_9",
+          "net": "",
+          "position_mm": [
+            22.5,
+            22.5
+          ],
+          "drill_mm": 2.5
+        }
+      ]
+    },
+    {
+      "ref": "MH2",
+      "value": "Plated mounting hole 2.5mm",
+      "footprint": "MicroSMT_Recovered:PTH_1_75dcf4be66",
+      "uuid": "28313010-40d9-5e7b-9723-8c581618291f",
+      "inferred": true,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_2",
+          "net": "",
+          "position_mm": [
+            22.54,
+            41.0
+          ],
+          "drill_mm": 2.5
+        }
+      ]
+    },
+    {
+      "ref": "MH3",
+      "value": "Plated mounting hole 2.5mm",
+      "footprint": "MicroSMT_Recovered:PTH_1_75dcf4be66",
+      "uuid": "6ddb0151-31fe-5637-abd7-4241c83defa9",
+      "inferred": true,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_59",
+          "net": "",
+          "position_mm": [
+            70.5,
+            41.0
+          ],
+          "drill_mm": 2.5
+        }
+      ]
+    },
+    {
+      "ref": "MH4",
+      "value": "Plated mounting hole 2.5mm",
+      "footprint": "MicroSMT_Recovered:PTH_1_75dcf4be66",
+      "uuid": "2e40010f-2612-5d26-b222-bb2834686bad",
+      "inferred": true,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_60",
+          "net": "",
+          "position_mm": [
+            70.5,
+            22.5
+          ],
+          "drill_mm": 2.5
+        }
+      ]
+    }
+  ],
+  "aliases": {
+    "VCC_3V3": "VCC_3V3",
+    "GND": "GND",
+    "+5V": "+5V",
+    "$1N2515": "OSC_IN",
+    "$1N2524": "OSC_OUT",
+    "$1N8413": "NRST",
+    "$1N28406": "MOTOR1_A",
+    "$1N28296": "MOTOR1_B",
+    "$1N28093": "MOTOR2_B",
+    "$1N28135": "MOTOR2_A",
+    "PA3": "PA3",
+    "$1N25822": "HOST_VIN",
+    "PA5": "PA5",
+    "PA11": "PA11",
+    "SWCLK": "SWCLK",
+    "SWDIO": "SWDIO",
+    "$1N4463": "LED_3V3_A",
+    "PB5": "PB5",
+    "$1N4467": "LED_STATUS_A",
+    "$1N24150": "LED_5V_A",
+    "$1N2174": "BOOT0",
+    "$1N1866": "PB2_BOOT1",
+    "PA4": "PA4",
+    "SW1_3": "",
+    "SW1_4": "",
+    "U1_4": "",
+    "U2_1": "",
+    "U2_2": "",
+    "U2_3": "",
+    "U2_4": "",
+    "$1N2137": "PA0",
+    "$1N2133": "PA1",
+    "U2_12": "",
+    "PA6": "PA6",
+    "PA7": "PA7",
+    "U2_18": "",
+    "U2_19": "",
+    "U2_21": "",
+    "U2_22": "",
+    "U2_25": "",
+    "U2_26": "",
+    "U2_27": "",
+    "U2_28": "",
+    "PA8": "PA8",
+    "U2_30": "",
+    "U2_31": "",
+    "PA12": "PA12",
+    "U2_38": "",
+    "U2_39": "",
+    "U2_40": "",
+    "U2_42": "",
+    "U2_43": "",
+    "U2_45": "",
+    "U2_46": "",
+    "U3_1": "",
+    "U3_5": "",
+    "RECOVERED_9": "",
+    "RECOVERED_2": "",
+    "RECOVERED_59": "",
+    "RECOVERED_60": ""
+  },
+  "dimensions_mm": [
+    53.0,
+    23.5
+  ],
+  "coordinate_transform": {
+    "x_offset_mm": 10.856,
+    "y_offset_mm": -117.155,
+    "invert_y": true
+  },
+  "source_summary": {
+    "name": "feeder_v2",
+    "source": "Bing-feeder/V3-feeder/PCB_feeder/V3_feeder_gerber_2025-02-06.zip",
+    "dimensions_mm": [
+      53.0,
+      23.5
+    ],
+    "components": 42,
+    "pads": 149,
+    "drills": 194,
+    "probe_snap_max_mm": 0.00018248287592656883,
+    "nets": [
+      "$1N1866",
+      "$1N2133",
+      "$1N2137",
+      "$1N2174",
+      "$1N24150",
+      "$1N2515",
+      "$1N2524",
+      "$1N25822",
+      "$1N28093",
+      "$1N28135",
+      "$1N28296",
+      "$1N28406",
+      "$1N4463",
+      "$1N4467",
+      "$1N8413",
+      "+5V",
+      "GND",
+      "PA11",
+      "PA12",
+      "PA3",
+      "PA4",
+      "PA5",
+      "PA6",
+      "PA7",
+      "PA8",
+      "PB5",
+      "RECOVERED_2",
+      "RECOVERED_59",
+      "RECOVERED_60",
+      "RECOVERED_9",
+      "SW1_3",
+      "SW1_4",
+      "SWCLK",
+      "SWDIO",
+      "U1_4",
+      "U2_1",
+      "U2_12",
+      "U2_18",
+      "U2_19",
+      "U2_2",
+      "U2_21",
+      "U2_22",
+      "U2_25",
+      "U2_26",
+      "U2_27",
+      "U2_28",
+      "U2_3",
+      "U2_30",
+      "U2_31",
+      "U2_38",
+      "U2_39",
+      "U2_4",
+      "U2_40",
+      "U2_42",
+      "U2_43",
+      "U2_45",
+      "U2_46",
+      "U3_1",
+      "U3_5",
+      "VCC_3V3"
+    ],
+    "conflicts": [],
+    "archive_members_sha256": {
+      "Gerber_TopLayer.GTL": "8a19417af80762efe35e4a8ea8408767be735d51fbc14f7b748f4db778678dd5",
+      "Gerber_BottomLayer.GBL": "1461b74e55b121e653ef63ca853548a077f3b01574a2ee0a07910b41d4442b2f",
+      "Gerber_TopSilkscreenLayer.GTO": "ecffedc24c3ebd5a748135c6835b807fcda2d86e82d670ab30dd5153229639e3",
+      "Gerber_BottomSilkscreenLayer.GBO": "30bb667a8a5d79758d70b30f21ff927f330d7dc8d5dad0568b2c8e7b4962cd48",
+      "Gerber_TopSolderMaskLayer.GTS": "a8795f88a370cc1c231da51bdfc694f5527c83ef42c5a843a70bdc906a27cabd",
+      "Gerber_BottomSolderMaskLayer.GBS": "3b1b485379d341b23e4cca86ec4c70b5918b92c6110fbe6965c8d33706c67afb",
+      "Gerber_TopPasteMaskLayer.GTP": "57ad38ae4153d4430bf97dca9f0f468cd892dabdd076f6ac5f2cc8b0feb5fc00",
+      "Gerber_BoardOutlineLayer.GKO": "cc16578f14777e02ae098f5a7d4215a4ca2db7b95413f867234a917088136b83",
+      "Gerber_DocumentLayer.GDL": "0dab2ed3510a8fea9fd9bc27947b9640f0b7414f98e7eba5cb42e365bb886a92",
+      "Gerber_DrillDrawingLayer.GDD": "c8e0aecec4ea869d507c574e65368028973936218864bc6401e8b303da829d3c",
+      "Drill_PTH_Through.DRL": "5381a5f8ed7c7de33a7ebe7697c6742495e921ab6df89341814328193dc2fc0e",
+      "Drill_PTH_Through_Via.DRL": "0f111d1984e44877ea499b5e0e6898318ab2692c55eb7b753683cf6ec1ec298f",
+      "FlyingProbeTesting.json": "920fe83a7432c23c7155bf324bfa2905de5af3229c531680d30ca93ff2efe316",
+      "PCB\u4e0b\u5355\u5fc5\u8bfb.txt": "dcb3ee1c645c17a009d70726ad9ab708b68a074556fabcf75a4a059d3b43ec59"
+    }
+  },
+  "inferred_references": [
+    "MH1",
+    "MH2",
+    "MH3",
+    "MH4"
+  ],
+  "board_counts": {
+    "footprints": 42,
+    "tracks_and_vias": 2108,
+    "zones": 112
+  }
+}

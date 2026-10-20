@@ -1,0 +1,44 @@
+{
+  "name": "v3_controller",
+  "kicad_version": "10.0.6",
+  "source_archive_sha256": "7422bb2a3939aa3230b487e9be17e399ec20c463df0bbe681f76897cf56dd4d2",
+  "matched_pads": 159,
+  "schematic_board_model_net_mismatches": [],
+  "maximum_pad_position_error_mm": 0.0,
+  "matched_drills": 204,
+  "nonplated_drills": 0,
+  "maximum_drill_error_mm": 0.0001769180601350931,
+  "copper_comparison": {
+    "F.Cu": {
+      "source_area_mm2": 4218.861842432631,
+      "exported_area_mm2": 4218.864984761153,
+      "symmetric_difference_mm2": 0.003165180957971107,
+      "extra_beyond_2um_mm2": 0.0,
+      "missing_beyond_2um_mm2": 0.0,
+      "within_2um_tolerance": true
+    },
+    "B.Cu": {
+      "source_area_mm2": 4410.7382657711805,
+      "exported_area_mm2": 4410.742482860786,
+      "symmetric_difference_mm2": 0.0042339674864189806,
+      "extra_beyond_2um_mm2": 0.0,
+      "missing_beyond_2um_mm2": 0.0,
+      "within_2um_tolerance": true
+    }
+  },
+  "erc_counts": {
+    "isolated_pin_label": 33
+  },
+  "drc_counts": {
+    "clearance": 185,
+    "copper_edge_clearance": 30,
+    "invalid_outline": 3
+  },
+  "unconnected_items": 0,
+  "schematic_parity_counts": {},
+  "notes": [
+    "Original-layout DRC and single-pin-label ERC findings are retained, not excluded.",
+    "Generic passive symbols verify numbered-pad connectivity, not device electrical behavior.",
+    "Copper contours are recovered plot geometry, not original pour design intent."
+  ]
+}

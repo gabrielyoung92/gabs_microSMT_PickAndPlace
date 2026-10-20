@@ -1,0 +1,5 @@
+Reference,Value,Recovered footprint,Pad count,Inferred reference
+R1,Unspecified in source BOM,MicroSMT_v485_busbar_480mm:SMD_2_fef7677169,2,False
+R2,Unspecified in source BOM,MicroSMT_v485_busbar_480mm:SMD_2_fef7677169,2,False
+U1,Unspecified in source BOM,MicroSMT_v485_busbar_480mm:PTH_4_06e8961db4,4,False
+U2,Unspecified in source BOM,MicroSMT_v485_busbar_480mm:PTH_4_6cc8fbf6c8,4,False

@@ -1,0 +1,695 @@
+(kicad_symbol_lib
+  (version 20241209)
+  (generator "kicad_symbol_editor")
+  (symbol "v485_busbar_180mm_pcb2_H1"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "H"
+      (at 0 8.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_H1"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_H1_0_1"
+      (rectangle
+        (start -15.24 5.08)
+        (end 15.24 -5.08)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_H1_1_1"
+      (pin passive line
+        (at -20.32 3.81 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -3.81 0)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 3.81 180)
+        (length 5.08)
+        (name "PAD 5"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "5"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 6"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "6"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 7"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "7"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -3.81 180)
+        (length 5.08)
+        (name "PAD 8"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "8"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_busbar_180mm_pcb2_H2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "H"
+      (at 0 8.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_H2"
+      (at 0 6.35 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_H2_0_1"
+      (rectangle
+        (start -15.24 5.08)
+        (end 15.24 -5.08)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_H2_1_1"
+      (pin passive line
+        (at -20.32 3.81 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 1.27 0)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -1.27 0)
+        (length 5.08)
+        (name "PAD 3"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "3"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at -20.32 -3.81 0)
+        (length 5.08)
+        (name "PAD 4"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "4"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 3.81 180)
+        (length 5.08)
+        (name "PAD 5"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "5"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 1.27 180)
+        (length 5.08)
+        (name "PAD 6"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "6"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -1.27 180)
+        (length 5.08)
+        (name "PAD 7"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "7"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 -3.81 180)
+        (length 5.08)
+        (name "PAD 8"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "8"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_busbar_180mm_pcb2_R1"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_R1"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_R1_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_R1_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_busbar_180mm_pcb2_R2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "R"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_R2"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_R2_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_R2_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))
+      (pin passive line
+        (at 20.32 0.0 180)
+        (length 5.08)
+        (name "PAD 2"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "2"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_busbar_180mm_pcb2_HREC1"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_HREC1"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_HREC1_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_HREC1_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_busbar_180mm_pcb2_HREC2"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_HREC2"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_HREC2_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_HREC2_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_busbar_180mm_pcb2_HREC3"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_HREC3"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_HREC3_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_HREC3_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_busbar_180mm_pcb2_HREC4"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_HREC4"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_HREC4_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_HREC4_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_busbar_180mm_pcb2_HREC5"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_HREC5"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_HREC5_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_HREC5_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_busbar_180mm_pcb2_HREC6"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_HREC6"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_HREC6_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_HREC6_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_busbar_180mm_pcb2_HREC7"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_HREC7"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_HREC7_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_HREC7_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0)))))))
+  (symbol "v485_busbar_180mm_pcb2_HREC8"
+    (pin_names
+      (offset 0.635))
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (property "Reference" "HREC"
+      (at 0 5.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "v485_busbar_180mm_pcb2_HREC8"
+      (at 0 2.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (symbol "v485_busbar_180mm_pcb2_HREC8_0_1"
+      (rectangle
+        (start -15.24 1.27)
+        (end 15.24 -1.27)
+        (stroke
+          (width 0.254)
+          (type default))
+        (fill
+          (type background))))
+    (symbol "v485_busbar_180mm_pcb2_HREC8_1_1"
+      (pin passive line
+        (at -20.32 0.0 0)
+        (length 5.08)
+        (name "PAD 1"
+          (effects
+            (font
+              (size 1.0 1.0))))
+        (number "1"
+          (effects
+            (font
+              (size 1.0 1.0))))))))

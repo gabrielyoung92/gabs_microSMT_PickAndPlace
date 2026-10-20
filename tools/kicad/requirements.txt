@@ -1,0 +1,6 @@
+gerbonara==1.5.0; python_version < "3.12"
+gerbonara==1.6.3; python_version >= "3.12"
+shapely==2.1.2
+sexpdata==1.0.2
+CairoSVG==2.9.1
+Pillow==12.3.0

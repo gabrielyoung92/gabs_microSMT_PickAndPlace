@@ -1,0 +1,76 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 91ebc0a9-0e27-585b-92ba-60a736b8c102)
+  (paper "A3")
+  (title_block
+    (title "v485_controller / MicroSMT recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols)
+  (text "MicroSMT / v485 controller"
+    (at 20.32 20.32 0)
+    (effects
+      (font
+        (size 2.0 2.0))
+      (justify left top))
+    (uuid 4515694e-75c1-5316-8fd1-2b6a1edfc787))
+  (text "Editable reference reconstructed from original Gerbers, drills and flying-probe nets.\nOpen the sheets below for connected components. Original source files remain in the parent folder.\nValues come from the supplied BOM where available. Generic PAD labels are not device pin-function claims.\nRecovered copper contours preserve plotted geometry, not original pour design intent.\nRead ../README.md and the recovery/validation reports in ../docs/ before edits or fabrication."
+    (at 20.32 33.02 0)
+    (effects
+      (font
+        (size 1.1 1.1))
+      (justify left top))
+    (uuid 13c2e081-7c9d-55ed-8fbc-1a96fb2ff749))
+  (sheet
+    (at 20.32 73.66)
+    (size 111.76 22.86)
+    (stroke
+      (width 0)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 7db4ffce-ff75-5456-907f-d824c88ea054)
+    (property "Sheetname" "Components 1"
+      (at 20.32 72.898 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "v485_controller_sheet_01.kicad_sch"
+      (at 20.32 97.282 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "v485_controller"
+        (path "/91ebc0a9-0e27-585b-92ba-60a736b8c102"
+          (page "2")))))
+  (sheet
+    (at 144.78 73.66)
+    (size 111.76 22.86)
+    (stroke
+      (width 0)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 473a7b0f-3b98-52c6-98be-d1583d538d35)
+    (property "Sheetname" "Components 2"
+      (at 144.78 72.898 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "v485_controller_sheet_02.kicad_sch"
+      (at 144.78 97.282 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "v485_controller"
+        (path "/91ebc0a9-0e27-585b-92ba-60a736b8c102"
+          (page "3")))))
+  (sheet_instances
+    (path "/"
+      (page "1"))))

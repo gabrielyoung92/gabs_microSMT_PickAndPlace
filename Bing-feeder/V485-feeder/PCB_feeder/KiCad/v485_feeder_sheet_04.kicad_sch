@@ -1,0 +1,321 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 2adbb0b6-8ea8-57da-87a0-7ce411e695b9)
+  (paper "A3")
+  (title_block
+    (title "v485_feeder / recovered reference")
+    (rev "recovery-1"))
+  (lib_symbols
+    (symbol "MicroSMT_v485_feeder:v485_feeder_HREC3"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "HREC"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_HREC3"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_HREC3_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_HREC3_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_HREC4"
+      (exclude_from_sim no)
+      (in_bom no)
+      (on_board yes)
+      (property "Reference" "HREC"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Non-plated hole"
+        (at 0 -5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_HREC4_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_HREC5"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "HREC"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "v485_feeder_HREC5"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_HREC5_0_1"
+        (rectangle
+          (start -15.24 1.27)
+          (end 15.24 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "v485_feeder_HREC5_1_1"
+        (pin passive line
+          (at -20.32 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_v485_feeder:v485_feeder_HREC6"
+      (exclude_from_sim no)
+      (in_bom no)
+      (on_board yes)
+      (property "Reference" "HREC"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Non-plated hole"
+        (at 0 -5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "v485_feeder_HREC6_0_1"
+        (circle
+          (center 0 0)
+          (radius 2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))))
+  (text "v485 feeder / components 4"
+    (at 20.32 17.78 0)
+    (effects
+      (font
+        (size 1.8 1.8))
+      (justify left top))
+    (uuid 23cf090b-976a-5329-a4da-e0eac0138c3f))
+  (text "MicroSMT CAM-derived reference. Pad numbers/nets preserved; generic pin electrical types.\nUse the supplied schematic for functional interpretation. Not a fabrication release."
+    (at 20.32 25.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left top))
+    (uuid bfd16dba-9dfc-50b5-8309-5c5b28928b2f))
+  (no_connect
+    (at 33.02 53.34)
+    (uuid d9908efb-1918-56f3-9445-879c8b9c58cb))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_HREC3")
+    (at 53.34 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 80448cf8-a930-5f73-96e9-23c4d9848411)
+    (property "Reference" "HREC3"
+      (at 53.34 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unreferenced plated hole"
+      (at 53.34 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:PTH_1_c2bacda513"
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 8607265e-46f8-52e9-a325-c7e539c0c900))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/2e585646-99e0-589a-b56f-9b03ed0f88c4"
+          (reference "HREC3")
+          (unit 1)))))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_HREC4")
+    (at 172.72 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid e2bd4ac9-8426-5d24-91d1-835b4114b4c5)
+    (property "Reference" "HREC4"
+      (at 172.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Non-plated hole"
+      (at 172.72 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:PTH_1_d65fec3626"
+      (at 172.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 172.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/2e585646-99e0-589a-b56f-9b03ed0f88c4"
+          (reference "HREC4")
+          (unit 1)))))
+  (no_connect
+    (at 271.78 53.34)
+    (uuid a635698b-3a96-5be6-80e0-47ff72c6ae70))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_HREC5")
+    (at 292.1 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 36e884a4-aa39-5446-8484-9e4873ac3c8d)
+    (property "Reference" "HREC5"
+      (at 292.1 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Unreferenced plated hole"
+      (at 292.1 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:PTH_1_c2bacda513"
+      (at 292.1 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 895314fd-44c3-50b3-a2b2-5d2539b0e9ad))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/2e585646-99e0-589a-b56f-9b03ed0f88c4"
+          (reference "HREC5")
+          (unit 1)))))
+  (symbol
+    (lib_id "MicroSMT_v485_feeder:v485_feeder_HREC6")
+    (at 53.34 78.74000000000001 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid 77db04bb-8d1d-54d0-9f0c-f37569bbf7ff)
+    (property "Reference" "HREC6"
+      (at 53.34 73.66 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Non-plated hole"
+      (at 53.34 83.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_v485_feeder:PTH_1_d65fec3626"
+      (at 53.34 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 53.34 78.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "v485_feeder"
+        (path "/cb3bbdda-ca40-542e-82fa-b58e02783b0c/2e585646-99e0-589a-b56f-9b03ed0f88c4"
+          (reference "HREC6")
+          (unit 1))))))

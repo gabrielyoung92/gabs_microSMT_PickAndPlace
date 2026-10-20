@@ -1,0 +1,8 @@
+Reference,Value,Recovered footprint,Pad count,Inferred reference
+R1,Unspecified in source BOM,MicroSMT_v485_busbar_180mm_pcb1:SMD_2_fef7677169,2,False
+U1,Unspecified in source BOM,MicroSMT_v485_busbar_180mm_pcb1:PTH_4_06e8961db4,4,False
+U2,Unspecified in source BOM,MicroSMT_v485_busbar_180mm_pcb1:SMD_8_a8244cd5c0,8,False
+HREC1,Unreferenced plated hole,MicroSMT_v485_busbar_180mm_pcb1:PTH_1_d32e30a0ea,1,True
+HREC2,Unreferenced plated hole,MicroSMT_v485_busbar_180mm_pcb1:PTH_1_d32e30a0ea,1,True
+HREC3,Unreferenced plated hole,MicroSMT_v485_busbar_180mm_pcb1:PTH_1_d32e30a0ea,1,True
+HREC4,Unreferenced plated hole,MicroSMT_v485_busbar_180mm_pcb1:PTH_1_d32e30a0ea,1,True

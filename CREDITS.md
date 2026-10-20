@@ -27,13 +27,14 @@ Changes made to the local collections include:
 - Porting the ESP32-C3 controller to PlatformIO C++ with `main.cpp` and `config.h`. See its [changelog](Bing-feeder/V485-Feeder%20Controller/CODE_esp32C3/CHANGELOG.md).
 - Combining V485 feeder variants into shared C/H modules, with separate bootloader/application builds and an addressed RS485 updater. See its [changelog](Bing-feeder/V485-feeder/CODE_feeder/CHANGELOG.md) and [update guide](Bing-feeder/V485-feeder/CODE_feeder/BOOTLOADER.md). Physical hardware validation remains outstanding.
 - Packaging loose Gerber sets into ZIP files after checking their contents.
-- Moving the earlier custom V3 development project into [_other/v3-modding/](_other/v3-modding/README.md), and updating its paths to the two collections.
+- Reconstructing editable KiCad references for all 13 Gerber sets, with local libraries, source evidence, native connectivity/CAM checks and linked previews. These are local reconstructions of MicroSMT designs, not supplied original KiCad projects.
+- Grouping shared recovery tools in [tools/kicad/](tools/kicad/README.md) and machine setup records in [Microsmt-PNPv3/docs/](Microsmt-PNPv3/docs/README.md).
 
 Previews, conversions and generated documentation are convenience additions. A render, renamed source file or successful software check does not establish physical compatibility, a complete vendor firmware build or a tested fabrication release.
 
-## Earlier custom development
+## KiCad reconstruction
 
-The V3 modding project contains custom firmware, tools, recovered KiCad references and technical notes. Those project additions are separate from the supplied MicroSMT sources; recovered hardware remains derived from the original source material. Its [existing notices](_other/v3-modding/THIRD_PARTY_NOTICES.md) describe the earlier imports and KiCad library attribution in more detail.
+Recovered KiCad references sit beside the matching PCB Gerbers, with supporting reports in `docs/`. Recovery tools, inferred connector references and technical notes are local additions; the recovered hardware remains derived from MicroSMT’s original material. See [third-party notices](THIRD_PARTY_NOTICES.md) for KiCad library attribution.
 
 ## Licensing
 

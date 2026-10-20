@@ -1,0 +1,42 @@
+{
+  "name": "v485_controller",
+  "kicad_version": "10.0.6",
+  "source_archive_sha256": "29eb48573ac69545759902ee216911251847a08aaf0dcbb4553bb7720f584089",
+  "matched_pads": 92,
+  "schematic_board_model_net_mismatches": [],
+  "maximum_pad_position_error_mm": 0.0,
+  "matched_drills": 86,
+  "nonplated_drills": 0,
+  "maximum_drill_error_mm": 0.0002507987240762856,
+  "copper_comparison": {
+    "F.Cu": {
+      "source_area_mm2": 1577.772312229162,
+      "exported_area_mm2": 1577.7730013983412,
+      "symmetric_difference_mm2": 0.0006955436737230752,
+      "extra_beyond_2um_mm2": 0.0,
+      "missing_beyond_2um_mm2": 0.0,
+      "within_2um_tolerance": true
+    },
+    "B.Cu": {
+      "source_area_mm2": 1710.3453833893052,
+      "exported_area_mm2": 1710.345445847937,
+      "symmetric_difference_mm2": 6.283899312210935e-05,
+      "extra_beyond_2um_mm2": 0.0,
+      "missing_beyond_2um_mm2": 0.0,
+      "within_2um_tolerance": true
+    }
+  },
+  "erc_counts": {
+    "isolated_pin_label": 12
+  },
+  "drc_counts": {
+    "copper_edge_clearance": 10
+  },
+  "unconnected_items": 0,
+  "schematic_parity_counts": {},
+  "notes": [
+    "Original-layout DRC and single-pin-label ERC findings are retained, not excluded.",
+    "Generic passive symbols verify numbered-pad connectivity, not device electrical behavior.",
+    "Copper contours are recovered plot geometry, not original pour design intent."
+  ]
+}

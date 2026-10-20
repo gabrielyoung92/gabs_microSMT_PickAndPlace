@@ -1,0 +1,63 @@
+(footprint "PTH_1_75dcf4be66"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "ab48a83a-c173-49cd-90d5-eae0f3772fd5")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "Plated mounting hole 2.5mm"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "296635a2-c208-4235-b45a-6cb347ab8fd2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e30848b9-5c32-47f7-b4ea-e19e80d245dc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "86ca55db-b934-44f4-b2ab-949834ad324d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 3 3)
+		(drill 2.5)
+		(layers "*.Cu")
+		(remove_unused_layers no)
+		(uuid "046018b9-e67b-447d-b1a4-b9051709f15d")
+	)
+	(embedded_fonts no)
+)
