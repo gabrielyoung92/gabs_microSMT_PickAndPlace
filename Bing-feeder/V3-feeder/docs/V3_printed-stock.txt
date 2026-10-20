@@ -1,0 +1,84 @@
+PRINTED PARTS - OWNER STOCKTAKE, 17 OCTOBER 2026
+
+This is the current owner-reported count. It supersedes older inventory counts
+for these parts. Liquid material is recorded as resin; formulation is unspecified.
+Unlisted parts are not reported here, rather than assumed to have zero stock.
+Original part numbers come from V3_original-numbered-print-list.txt.
+Numbers #45/#56/#69 identify the unnumbered 8/12/16mm bodies in the stocktake.
+
+ ID   Qty  Material      Part
+---  ----  ------------  ----
+  7     4  Grey resin    CP45 nozzle-holder clamps
+ 29    32  Black PETG    13mm reel-support arm
+ 32     3  Black PETG    8mm magnetic feeder slot, 8-position
+ 35     6  Black PETG    8mm feeder holder, 8-position
+ 37    20  Grey resin    8mm 45T gear
+ 38    20  Grey resin    8mm 55T gear
+ 39    20  Grey resin    8mm switch trigger
+ 41    20  Grey resin    8mm spring support / tape slider
+ 41     1  Black PETG    8mm spring support / tape slider
+ 42    20  Black PETG    8mm sprocket cover
+ 43    20  Black PETG    8mm PCB cover
+ 44    20  Grey resin    8mm tape cover
+ 44    20  Clear resin   8mm tape cover - PREFERRED
+ 45     5  Black PETG    8mm V3 main body
+ 45     4  Grey resin    8mm V3 main body
+ 48    33  White resin   Shared worm - includes wider-feeder extras
+ 49    24  White resin   8mm 15T gear
+ 50    23  White resin   8mm 16T gear
+ 51    21  White resin   8mm 16T peel-drive gear bracket
+ 53    12  Black PETG    Busbar PCB support / hook
+ 56     3  Black PETG    12mm main body
+ 59     9  Grey resin    12mm switching trigger / peel lever
+ 60     7  White resin   12mm tape cover
+ 61     7  Grey resin    12mm 45T gear
+ 62     7  Grey resin    12mm 55T gear
+ 64     8  White resin   12mm 16T peel-drive gear bracket
+ 65     8  White resin   12mm 15T gear
+ 66     8  White resin   12mm 16T gear
+ 67     8  White resin   12mm worm-motor support
+ 69     2  Black PETG    16mm main body
+ 71     4  White resin   16mm 15T gear
+ 72     4  White resin   16mm 16T gear
+ 73     4  White resin   16mm 16T peel-drive gear bracket
+ 74     3  White resin   16mm worm-motor support
+ 75     3  Black PETG    16mm PCB cover
+ 76     3  Black PETG    16mm switch cover
+ 77     3  White resin   16mm switch trigger
+ 78     3  White resin   16mm tape cover
+ 79     3  Grey resin    16mm 45T gear
+ 80     3  Grey resin    16mm 55T gear
+ 93     8  Black PETG    12mm magnetic feeder slot, 1-position
+ 94     4  Black PETG    16mm magnetic feeder slot, 1-position
+
+Total listed: 440 physical pieces across 39 part numbers.
+
+CLEAR TAPE COVERS
+- #44: 20 clear resin preferred for use; retain 20 grey resin as existing stock.
+- #60: reprint 7 x 12mm tape covers in clear resin. Existing 7 white remain stock.
+- #78: reprint 3 x 16mm tape covers in clear resin. Existing 3 white remain stock.
+
+8MM V3 -> V485 REUSE (BASED ON CURRENT CAD COMPARISON)
+- Identical: #37 (20), #38 (20), #39 (20), #41 (21), #44 (40),
+  #48 (33 shared across widths), #49 (24), #50 (23).
+- #42 (20 sprocket covers): outer dimensions match. V485 removes a small edge
+  relief, approximately 4.2 x 1 x 1mm; trial the existing cover and trim if needed.
+- Different: #43 PCB cover (20), #45 body (9), #51 peel-drive bracket (21),
+  #35 holder blocks (6), #32 slot blocks (3). Use the corresponding V485 designs.
+  These stock counts are not automatically the quantities of replacements to print.
+- #40 trigger covers and #52 worm-motor supports also differ for V485;
+  neither was listed in this stocktake. Print quantities are not yet specified.
+- #29 reel arms (32) and #53 busbar supports (12): retain for a physical fit check;
+  direct V485 compatibility has not been established.
+
+WIDER FEEDERS
+- Retain the 12mm and 16mm V3 parts. Compatible wider V485 mechanics are not
+  confirmed; do not replace those parts merely because the 8mm V485 body differs.
+- #48 is one shared pool of 33 worms. Do not count additional copies against
+  #63/#70; those numbers refer to the same worm used with wider feeders.
+
+NUMBERING CLARIFICATIONS
+- #41 is the spring-support plate / tape slider.
+- #51/#64/#73 are 16T peel-drive gear brackets, not the tape covers.
+- #44/#60/#78 are the 8/12/16mm tape covers.
+- #59/#77 are switching triggers.

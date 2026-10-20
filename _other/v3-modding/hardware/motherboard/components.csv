@@ -1,0 +1,194 @@
+Reference,Value,Recovered footprint,Pad count,Inferred reference
+C1,100nF,MicroSMT_Motherboard:SMD_2_936a5a271c,2,False
+C2,12pF,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+C3,12pF,MicroSMT_Motherboard:SMD_2_cc916b3528,2,False
+C4,18pF,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+C5,18pF,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+C7,10uF,MicroSMT_Motherboard:SMD_2_069e0cdbe9,2,False
+C8,100nF,MicroSMT_Motherboard:SMD_2_5a106b6f7f,2,False
+C9,100nF,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+C10,100nF,MicroSMT_Motherboard:SMD_2_2133b9fb09,2,False
+C11,100nF,MicroSMT_Motherboard:SMD_2_aa8114b2ea,2,False
+C12,100nF,MicroSMT_Motherboard:SMD_2_51db3c32d5,2,False
+C13,100nF,MicroSMT_Motherboard:SMD_2_a7994fb989,2,False
+C14,100nF,MicroSMT_Motherboard:SMD_2_25f26300f5,2,False
+C31,100nF,MicroSMT_Motherboard:SMD_2_e90d75f309,2,False
+C62,100nF,MicroSMT_Motherboard:SMD_2_fef7677169,2,False
+C63,100uF,MicroSMT_Motherboard:SMD_2_a8112f0ad7,2,False
+C64,10uF,MicroSMT_Motherboard:SMD_2_2ba9ffbb22,2,False
+C65,100nF,MicroSMT_Motherboard:SMD_2_25f26300f5,2,False
+C66,100nF,MicroSMT_Motherboard:SMD_2_e90d75f309,2,False
+C67,1uF,MicroSMT_Motherboard:SMD_2_51db3c32d5,2,False
+C68,100nF,MicroSMT_Motherboard:SMD_2_25f26300f5,2,False
+C75,100nF,MicroSMT_Motherboard:SMD_2_3405cc4fc8,2,False
+C76,100nF,MicroSMT_Motherboard:SMD_2_4cb6a172d1,2,False
+C77,330nF,MicroSMT_Motherboard:SMD_2_a8efb625e2,2,False
+C78,100nF,MicroSMT_Motherboard:SMD_2_44a2b71e99,2,False
+C79,100nF,MicroSMT_Motherboard:SMD_2_e0ae3c06b3,2,False
+C80,100nF,MicroSMT_Motherboard:SMD_2_4ed8605702,2,False
+C81,100nF,MicroSMT_Motherboard:SMD_2_5b6cd16fa1,2,False
+C82,100nF,MicroSMT_Motherboard:SMD_2_7fa7f4a81d,2,False
+C83,100nF,MicroSMT_Motherboard:SMD_2_e6397f617b,2,False
+C84,100uF,MicroSMT_Motherboard:SMD_2_fed58d07d1,2,False
+C85,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_7469f88c6b,2,False
+C86,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_16e3f2cd69,2,False
+C87,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_9e9b85eb98,2,False
+C88,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_c80656128b,2,False
+C89,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_eff17484e9,2,False
+C90,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_f69d9f224e,2,False
+C91,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_7469f88c6b,2,False
+C92,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_16e3f2cd69,2,False
+C93,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_9e9b85eb98,2,False
+C94,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_7469f88c6b,2,False
+C95,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_16e3f2cd69,2,False
+C96,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_9e9b85eb98,2,False
+C97,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_c80656128b,2,False
+C98,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_eff17484e9,2,False
+C99,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_f69d9f224e,2,False
+C101,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_afac0f90ad,2,False
+C102,Unspecified in PDF,MicroSMT_Motherboard:SMD_2_afac0f90ad,2,False
+D1,MBRA210LT3,MicroSMT_Motherboard:SMD_2_6c0a341457,2,False
+D4,B1100-13-F,MicroSMT_Motherboard:SMD_2_1808def240,2,False
+D5,15V zener,MicroSMT_Motherboard:SMD_2_d2ba64d3dd,2,False
+D6,MBRA210LT3,MicroSMT_Motherboard:SMD_2_c7e95cb229,2,False
+D7,MBRA210LT3,MicroSMT_Motherboard:SMD_2_458f4c8a63,2,False
+D9,MBRA210LT3,MicroSMT_Motherboard:SMD_2_458f4c8a63,2,False
+D11,MBRA210LT3,MicroSMT_Motherboard:SMD_2_39ece826e6,2,False
+D12,MBRA210LT3,MicroSMT_Motherboard:SMD_2_39ece826e6,2,False
+D13,MBRA210LT3,MicroSMT_Motherboard:SMD_2_458f4c8a63,2,False
+H1,Driver supply bypass,MicroSMT_Motherboard:PTH_2_ef2693ef4d,2,False
+H2,Driver supply bypass,MicroSMT_Motherboard:PTH_2_1369ef4e0f,2,False
+H3,Driver supply bypass,MicroSMT_Motherboard:PTH_2_95481293ce,2,False
+H4,Driver supply bypass,MicroSMT_Motherboard:PTH_2_d94aa2cb45,2,False
+H5,Driver supply bypass,MicroSMT_Motherboard:PTH_2_2370fcb7c4,2,False
+IC1,LPC1769,MicroSMT_Motherboard:SMD_100_c201d59711,100,False
+IC4,MCP44X1,MicroSMT_Motherboard:SMD_20_9b813b9a69,20,False
+IC9,MCP44X1,MicroSMT_Motherboard:SMD_20_a4bc7b88d1,20,False
+IC10,LM1117-3.3V,MicroSMT_Motherboard:SMD_4_92a45fa69b,4,False
+IC11,78L12F,MicroSMT_Motherboard:SMD_3_3ba99c55b3,3,False
+IC13,R-78E-5.0,MicroSMT_Motherboard:PTH_3_0b3415e685,3,False
+IC14,Gate driver (part unspecified),MicroSMT_Motherboard:SMD_8_bed1b4e22e,8,False
+IC15,Gate driver (part unspecified),MicroSMT_Motherboard:SMD_8_2453bf0c82,8,False
+J1,Supply input,MicroSMT_Motherboard:PTH_2_436e36f059,2,False
+J7,Switched power output,MicroSMT_Motherboard:PTH_2_d51227e40c,2,False
+J8,Switched power output,MicroSMT_Motherboard:PTH_2_d51227e40c,2,False
+J9,Switched power output,MicroSMT_Motherboard:PTH_2_680c4632b1,2,False
+J11,Switched power output,MicroSMT_Motherboard:PTH_2_680c4632b1,2,False
+J13,Switched power output,MicroSMT_Motherboard:PTH_2_7f240c3247,2,False
+JP7,Stepper power / motor,MicroSMT_Motherboard:PTH_8_81f0540c08,8,False
+JP9,Stepper power / motor,MicroSMT_Motherboard:PTH_8_56e8c8324c,8,False
+JP12,Stepper power / motor,MicroSMT_Motherboard:PTH_8_afccf43519,8,False
+JP14,Endstop / 5V,MicroSMT_Motherboard:PTH_3_8ab59c2ae1,3,False
+JP15,Stepper power / motor,MicroSMT_Motherboard:PTH_8_48df93e58f,8,False
+JP16,Endstop / 5V,MicroSMT_Motherboard:PTH_3_0111f8012e,3,False
+JP18,Stepper power / motor,MicroSMT_Motherboard:PTH_8_48df93e58f,8,False
+JP19,Endstop / 5V,MicroSMT_Motherboard:PTH_3_03f3c0fd63,3,False
+JP21,Endstop / 5V,MicroSMT_Motherboard:PTH_3_cf796bc70c,3,False
+JP22,Endstop / 5V,MicroSMT_Motherboard:PTH_3_f1d5bb2799,3,False
+JP23,PLAY input,MicroSMT_Motherboard:PTH_2_7a227a8aa6,2,False
+JP24,PLAY LED,MicroSMT_Motherboard:PTH_2_1f7aecb812,2,False
+JP26,Endstop / 5V,MicroSMT_Motherboard:PTH_3_9eb7cf7f74,3,False
+JP71,Stepper control,MicroSMT_Motherboard:PTH_8_b3c152889c,8,False
+JP72,Microstep select,MicroSMT_Motherboard:PTH_3_7f025675fe,3,False
+JP73,Microstep select,MicroSMT_Motherboard:PTH_3_7f025675fe,3,False
+JP91,Stepper control,MicroSMT_Motherboard:PTH_8_b3c152889c,8,False
+JP92,Microstep select,MicroSMT_Motherboard:PTH_3_5b13b0b944,3,False
+JP93,Microstep select,MicroSMT_Motherboard:PTH_3_5b13b0b944,3,False
+JP121,Stepper control,MicroSMT_Motherboard:PTH_8_d11bb50634,8,False
+JP122,Microstep select,MicroSMT_Motherboard:PTH_3_5b13b0b944,3,False
+JP123,Microstep select,MicroSMT_Motherboard:PTH_3_5b13b0b944,3,False
+JP151,Stepper control,MicroSMT_Motherboard:PTH_8_d4aafe4fbf,8,False
+JP152,Microstep select,MicroSMT_Motherboard:PTH_3_7f025675fe,3,False
+JP153,Microstep select,MicroSMT_Motherboard:PTH_3_7f025675fe,3,False
+JP181,Stepper control,MicroSMT_Motherboard:PTH_8_9dafbd190f,8,False
+JP182,Microstep select,MicroSMT_Motherboard:PTH_3_5b13b0b944,3,False
+JP183,Microstep select,MicroSMT_Motherboard:PTH_3_5b13b0b944,3,False
+LED1,Status LED,MicroSMT_Motherboard:SMD_2_e34ac0b44a,2,False
+LED2,Status LED,MicroSMT_Motherboard:SMD_2_e34ac0b44a,2,False
+LED3,Status LED,MicroSMT_Motherboard:SMD_2_e34ac0b44a,2,False
+LED4,Status LED,MicroSMT_Motherboard:SMD_2_e34ac0b44a,2,False
+LED5,Indicator LED,MicroSMT_Motherboard:SMD_2_e43d4fc42e,2,False
+LED7,Indicator LED,MicroSMT_Motherboard:SMD_2_e34ac0b44a,2,False
+LED8,Indicator LED,MicroSMT_Motherboard:SMD_2_e34ac0b44a,2,False
+LED9,Indicator LED,MicroSMT_Motherboard:SMD_2_e43d4fc42e,2,False
+LED10,Indicator LED,MicroSMT_Motherboard:SMD_2_e34ac0b44a,2,False
+LED11,Indicator LED,MicroSMT_Motherboard:SMD_2_e43d4fc42e,2,False
+LED12,Indicator LED,MicroSMT_Motherboard:SMD_2_e34ac0b44a,2,False
+N1,Motor 4,MicroSMT_Motherboard:PTH_4_c6c20ca0d4,4,False
+N2,Motor 5,MicroSMT_Motherboard:PTH_4_4a9df80c8d,4,False
+Q1,BSL207SP,MicroSMT_Motherboard:SMD_6_1d1a7fac2e,6,False
+Q2,12MHz crystal,MicroSMT_Motherboard:SMD_4_6c42c669fd,4,False
+Q4,ZXMN4A06,MicroSMT_Motherboard:SMD_4_4507bbfa16,4,False
+Q5,AOT240L,MicroSMT_Motherboard:PTH_3_1e44fbcacc,3,False
+Q6,AOT240L,MicroSMT_Motherboard:PTH_3_1e44fbcacc,3,False
+Q7,AOT240L,MicroSMT_Motherboard:PTH_3_1e44fbcacc,3,False
+Q8,ZXMN4A06,MicroSMT_Motherboard:SMD_4_4507bbfa16,4,False
+Q10,SUD50P04-08-GE3,MicroSMT_Motherboard:SMD_3_2c9daddcc9,3,False
+R1,10k,MicroSMT_Motherboard:SMD_2_fa50857840,2,False
+R2,10k,MicroSMT_Motherboard:SMD_2_5a106b6f7f,2,False
+R3,10k,MicroSMT_Motherboard:SMD_2_fa50857840,2,False
+R4,100k,MicroSMT_Motherboard:SMD_2_25f26300f5,2,False
+R7,1.5k,MicroSMT_Motherboard:SMD_2_cc916b3528,2,False
+R8,33R,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+R9,33R,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+R10,1k,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+R11,1k,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+R12,1k,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+R13,1k,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+R14,10k,MicroSMT_Motherboard:SMD_2_51db3c32d5,2,False
+R15,10k,MicroSMT_Motherboard:SMD_2_51db3c32d5,2,False
+R16,10k,MicroSMT_Motherboard:SMD_2_fef7677169,2,False
+R17,330R,MicroSMT_Motherboard:SMD_2_fef7677169,2,False
+R18,33k,MicroSMT_Motherboard:SMD_2_5a106b6f7f,2,False
+R30,33k,MicroSMT_Motherboard:SMD_2_e90d75f309,2,False
+R35,2.2k,MicroSMT_Motherboard:SMD_2_e90d75f309,2,False
+R36,2.2k,MicroSMT_Motherboard:SMD_2_a7994fb989,2,False
+R37,100k,MicroSMT_Motherboard:SMD_2_e90d75f309,2,False
+R65,8.2k,MicroSMT_Motherboard:SMD_2_a7994fb989,2,False
+R67,8.2k,MicroSMT_Motherboard:SMD_2_cc916b3528,2,False
+R68,8.2k,MicroSMT_Motherboard:SMD_2_cc916b3528,2,False
+R69,22R,MicroSMT_Motherboard:SMD_2_aa8114b2ea,2,False
+R70,22R,MicroSMT_Motherboard:SMD_2_25f26300f5,2,False
+R71,10k,MicroSMT_Motherboard:SMD_2_5a106b6f7f,2,False
+R72,10k,MicroSMT_Motherboard:SMD_2_e90d75f309,2,False
+R73,22R,MicroSMT_Motherboard:SMD_2_a7994fb989,2,False
+R74,10k,MicroSMT_Motherboard:SMD_2_25f26300f5,2,False
+R77,1k,MicroSMT_Motherboard:SMD_2_5a106b6f7f,2,False
+R78,8.2k,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+R82,22R,MicroSMT_Motherboard:SMD_2_a7994fb989,2,False
+R83,10k,MicroSMT_Motherboard:SMD_2_a7994fb989,2,False
+R84,8.2k,MicroSMT_Motherboard:SMD_2_a7994fb989,2,False
+R85,8.2k,MicroSMT_Motherboard:SMD_2_cc916b3528,2,False
+R86,10k,MicroSMT_Motherboard:SMD_2_04577a26f8,2,False
+R87,10k,MicroSMT_Motherboard:SMD_2_5a106b6f7f,2,False
+R88,22R,MicroSMT_Motherboard:SMD_2_51db3c32d5,2,False
+R89,10k,MicroSMT_Motherboard:SMD_2_fef7677169,2,False
+R90,10k,MicroSMT_Motherboard:SMD_2_51db3c32d5,2,False
+R91,10k,MicroSMT_Motherboard:SMD_2_f468e3f5b9,2,False
+R92,5.6k,MicroSMT_Motherboard:SMD_2_943d87dc01,2,False
+R93,1k,MicroSMT_Motherboard:SMD_2_cf41762e66,2,False
+R94,1k,MicroSMT_Motherboard:SMD_2_3e634274cc,2,False
+R95,5.6k,MicroSMT_Motherboard:SMD_2_c56ca43ab1,2,False
+R96,1k,MicroSMT_Motherboard:SMD_2_d3ee14533d,2,False
+R97,5.6k,MicroSMT_Motherboard:SMD_2_7e4996062e,2,False
+R98,1k,MicroSMT_Motherboard:SMD_2_cf41762e66,2,False
+R99,5.6k,MicroSMT_Motherboard:SMD_2_b2b26620b3,2,False
+R100,1k,MicroSMT_Motherboard:SMD_2_3e634274cc,2,False
+R101,5.6k,MicroSMT_Motherboard:SMD_2_bbf1ee22fe,2,False
+R102,1k,MicroSMT_Motherboard:SMD_2_facea03552,2,False
+R103,5.6k,MicroSMT_Motherboard:SMD_2_d514cf6eb9,2,False
+S1,RESET,MicroSMT_Motherboard:SMD_4_584bb1d5d3,4,False
+S2,ISPBOOT,MicroSMT_Motherboard:SMD_4_584bb1d5d3,4,False
+S3,PLAY / LED,MicroSMT_Motherboard:PTH_6_b827d3506a,6,False
+S6,UART0 - RESERVED,MicroSMT_Motherboard:PTH_4_586bc47dfa,4,False
+U1,MicroSD,MicroSMT_Motherboard:SMD_12_54abdef9ef,12,False
+X,Motor X,MicroSMT_Motherboard:PTH_4_81bb90c0b0,4,False
+X14,USB,MicroSMT_Motherboard:PTH_6_6494441139,6,False
+Y,Motor Y,MicroSMT_Motherboard:PTH_4_81bb90c0b0,4,False
+Z,Motor Z,MicroSMT_Motherboard:PTH_4_4a9df80c8d,4,False
+MH1,Plated mounting hole 3.5mm,MicroSMT_Motherboard:PTH_1_2ff486eca3,1,True
+MH2,Plated mounting hole 3.5mm,MicroSMT_Motherboard:PTH_1_2ff486eca3,1,True
+MH3,Plated mounting hole 2mm,MicroSMT_Motherboard:PTH_1_f6caed78a7,1,True
+MH4,Plated mounting hole 2mm,MicroSMT_Motherboard:PTH_1_f6caed78a7,1,True
+MH5,Plated mounting hole 3.5mm,MicroSMT_Motherboard:PTH_1_2ff486eca3,1,True
+MH6,Plated mounting hole 3.5mm,MicroSMT_Motherboard:PTH_1_2ff486eca3,1,True

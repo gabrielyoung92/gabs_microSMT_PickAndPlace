@@ -1,0 +1,75 @@
+(footprint "PTH_2_d51227e40c"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "8c1cb8f3-2b8b-4065-933f-88cc2071bc0c")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "Switched power output"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "685b4897-7db6-4c66-b193-1968a6ffa9dc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "df9b507f-9a54-4527-9a90-d25ecbf00e04")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4ce8ccca-ba11-4e2f-b776-86bdab75fd51")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(pad "1" thru_hole oval
+		(at -1.75006 0 90)
+		(size 4.2672 2.1336)
+		(drill oval 1.42748 1.4224)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.050799)
+		(thermal_bridge_angle 45)
+		(uuid "82a81bc4-b466-44fe-8713-e13dd05ffa78")
+	)
+	(pad "2" thru_hole oval
+		(at 1.75006 0 90)
+		(size 4.2672 2.1336)
+		(drill oval 1.42748 1.4224)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.050799)
+		(thermal_bridge_angle 45)
+		(uuid "3315342c-556b-498b-8647-91c495a2a420")
+	)
+	(embedded_fonts no)
+)

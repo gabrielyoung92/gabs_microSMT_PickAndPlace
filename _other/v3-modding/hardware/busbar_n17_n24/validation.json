@@ -1,0 +1,32 @@
+{
+  "name": "busbar_n17_n24",
+  "kicad_version": "9.0.2",
+  "matched_pads": 53,
+  "schematic_board_model_net_mismatches": [],
+  "maximum_pad_position_error_mm": 0.0,
+  "matched_plated_drills": 56,
+  "maximum_drill_error_mm": 0.0,
+  "copper_comparison": {
+    "F.Cu": {
+      "source_area_mm2": 3593.016411686611,
+      "exported_area_mm2": 3593.0172727882314,
+      "symmetric_difference_mm2": 0.0008681484644481371,
+      "extra_beyond_2um_mm2": 0.0,
+      "missing_beyond_2um_mm2": 0.0
+    },
+    "B.Cu": {
+      "source_area_mm2": 3944.789893560469,
+      "exported_area_mm2": 3944.7909672714845,
+      "symmetric_difference_mm2": 0.0010876863831407793,
+      "extra_beyond_2um_mm2": 0.0,
+      "missing_beyond_2um_mm2": 0.0
+    }
+  },
+  "erc_counts": {},
+  "drc_counts": {
+    "clearance": 30,
+    "copper_edge_clearance": 17
+  },
+  "unconnected_items": 0,
+  "schematic_parity_counts": {}
+}

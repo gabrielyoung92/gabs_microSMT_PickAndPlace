@@ -1,0 +1,13 @@
+Owner reports 24 V connected; other connections not reverified.
+TX: get status
+RX:
+Smoothie
+ok
+<Idle|MPos:0.0000,0.0000,0.0000,0.0000,0.0000|WPos:0.0000,0.0000,0.0000|F:5000.0,100.0>
+
+
+TX: M119
+RX:
+X_min:1 Y_min:1 Z_min:1 pins- (X)P1.24:1 (Y)P1.26:1 (Z)P1.28:1 
+ok
+

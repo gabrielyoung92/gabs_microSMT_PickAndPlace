@@ -1,0 +1,23 @@
+TX: G21
+RX: Smoothie
+RX: ok
+TX: G91
+RX: ok
+TX: M204 X20
+RX: ok
+TX: G1 X1 F60
+RX: ok
+TX: M400
+RX: ok
+TX: G1 X-1 F60
+RX: ok
+TX: M400
+RX: ok
+TX: G90
+RX: ok
+TX: M204 X6000
+RX: ok
+TX: M114
+RX: ok
+TX: M119
+RX: ok C: X:0.0000 Y:0.0000 Z:0.0000 A:0.0000 B:0.0000

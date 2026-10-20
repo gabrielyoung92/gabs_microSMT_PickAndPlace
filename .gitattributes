@@ -1,0 +1,18 @@
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+# Retain the imported collections' bytes, including original line endings.
+Bing-feeder/** -text -whitespace linguist-vendored
+Microsmt-PNPv3/** -text -whitespace linguist-vendored
+*.STEP binary
+*.step binary
+*.STP binary
+*.stp binary
+*.STL binary
+*.stl binary
+*.DWG binary
+*.jpg binary
+*.png binary
+*.zip binary

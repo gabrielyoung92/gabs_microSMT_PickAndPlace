@@ -1,0 +1,7 @@
+Owner reports X endstop held.
+TX: M119
+RX:
+Smoothie
+ok
+X_min:1 Y_min:0 Z_min:0 pins- (X)P1.24:1 (Y)P1.26:0 (Z)P1.28:0 
+ok

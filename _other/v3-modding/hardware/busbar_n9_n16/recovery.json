@@ -1,0 +1,1029 @@
+{
+  "name": "busbar_n9_n16",
+  "source": "../../Bing-feeder/V3-Feeder Controller/PCB_busbar_N9-N16/V3_busbar_N9-N16_gerber.zip",
+  "components": [
+    {
+      "ref": "N1",
+      "value": "Feeder slot",
+      "footprint": "MicroSMT_Recovered:PTH_3_73baab2469",
+      "uuid": "800e44e0-3d1c-5325-bab0-509162f47df3",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "N9",
+          "net": "N9",
+          "position_mm": [
+            29.822,
+            35.808
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            29.822,
+            38.348
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            29.822,
+            40.888
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "N2",
+      "value": "Feeder slot",
+      "footprint": "MicroSMT_Recovered:PTH_3_f185d45fd5",
+      "uuid": "b8518a5d-ceaf-51d0-9e7a-d5368da653cf",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "N10",
+          "net": "N10",
+          "position_mm": [
+            49.50995,
+            35.808
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            49.50995,
+            38.348
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            49.50995,
+            40.888
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "N3",
+      "value": "Feeder slot",
+      "footprint": "MicroSMT_Recovered:PTH_3_f0a727b82c",
+      "uuid": "b94dfcec-7ad2-51b5-b278-7a9f3320fcfe",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "N11",
+          "net": "N11",
+          "position_mm": [
+            69.19791,
+            35.808
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            69.19791,
+            38.348
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            69.19791,
+            40.888
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "N4",
+      "value": "Feeder slot",
+      "footprint": "MicroSMT_Recovered:PTH_3_f29aeb013d",
+      "uuid": "9bceb8ef-53f6-5245-b38b-5b7887e8e2d2",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "N12",
+          "net": "N12",
+          "position_mm": [
+            88.88586,
+            35.808
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            88.88586,
+            38.348
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            88.88586,
+            40.888
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "N5",
+      "value": "Feeder slot",
+      "footprint": "MicroSMT_Recovered:PTH_3_40f9a56ae3",
+      "uuid": "8b9111cc-81f9-5f15-a9e2-01c8320f78dc",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "N13",
+          "net": "N13",
+          "position_mm": [
+            108.57381,
+            35.808
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            108.57381,
+            38.348
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            108.57381,
+            40.888
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "N6",
+      "value": "Feeder slot",
+      "footprint": "MicroSMT_Recovered:PTH_3_2e4f513424",
+      "uuid": "044cbda3-89ab-5b41-b2b6-67a3092629aa",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "N14",
+          "net": "N14",
+          "position_mm": [
+            128.26176,
+            35.808
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            128.26176,
+            38.348
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            128.26176,
+            40.888
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "N7",
+      "value": "Feeder slot",
+      "footprint": "MicroSMT_Recovered:PTH_3_8ca71f247a",
+      "uuid": "c434fc9f-39ae-52b4-8348-c776db2f3ef2",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "N15",
+          "net": "N15",
+          "position_mm": [
+            147.94972,
+            35.808
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            147.94972,
+            38.348
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            147.94972,
+            40.888
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "N8",
+      "value": "Feeder slot",
+      "footprint": "MicroSMT_Recovered:PTH_3_1d444e7cb6",
+      "uuid": "1c4b4844-c9a3-59bf-aa98-91c0cb8f3615",
+      "inferred": false,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "N16",
+          "net": "N16",
+          "position_mm": [
+            167.63767,
+            35.808
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "2",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            167.63767,
+            38.348
+          ],
+          "drill_mm": 1.10002
+        },
+        {
+          "number": "3",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            167.63767,
+            40.888
+          ],
+          "drill_mm": 1.10002
+        }
+      ]
+    },
+    {
+      "ref": "JREC1",
+      "value": "Recovered 2x12 / 2mm header",
+      "footprint": "MicroSMT_Recovered:PTH_24_357941b971",
+      "uuid": "3ffcb80f-2a7f-516b-94a8-7f26b0250b3e",
+      "inferred": true,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "N9",
+          "net": "N9",
+          "position_mm": [
+            23.5845,
+            21.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "3",
+          "source_net": "N10",
+          "net": "N10",
+          "position_mm": [
+            23.5845,
+            23.34799
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "5",
+          "source_net": "N11",
+          "net": "N11",
+          "position_mm": [
+            23.5845,
+            25.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "7",
+          "source_net": "N12",
+          "net": "N12",
+          "position_mm": [
+            23.5845,
+            27.34799
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "9",
+          "source_net": "N13",
+          "net": "N13",
+          "position_mm": [
+            23.5845,
+            29.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "11",
+          "source_net": "N14",
+          "net": "N14",
+          "position_mm": [
+            23.5845,
+            31.34799
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "13",
+          "source_net": "N15",
+          "net": "N15",
+          "position_mm": [
+            23.5845,
+            33.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "15",
+          "source_net": "N16",
+          "net": "N16",
+          "position_mm": [
+            23.5845,
+            35.34799
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "17",
+          "source_net": "RECOVERED_5",
+          "net": "RECOVERED_5",
+          "position_mm": [
+            23.5845,
+            37.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "19",
+          "source_net": "RECOVERED_4",
+          "net": "RECOVERED_4",
+          "position_mm": [
+            23.5845,
+            39.34799
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "21",
+          "source_net": "RECOVERED_3",
+          "net": "RECOVERED_3",
+          "position_mm": [
+            23.5845,
+            41.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "23",
+          "source_net": "RECOVERED_2",
+          "net": "RECOVERED_2",
+          "position_mm": [
+            23.5845,
+            43.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "2",
+          "source_net": "RECOVERED_19",
+          "net": "RECOVERED_19",
+          "position_mm": [
+            25.5845,
+            21.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "4",
+          "source_net": "RECOVERED_17",
+          "net": "RECOVERED_17",
+          "position_mm": [
+            25.5845,
+            23.34799
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "6",
+          "source_net": "RECOVERED_15",
+          "net": "RECOVERED_15",
+          "position_mm": [
+            25.5845,
+            25.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "8",
+          "source_net": "RECOVERED_13",
+          "net": "RECOVERED_13",
+          "position_mm": [
+            25.5845,
+            27.34799
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "10",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            25.5845,
+            29.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "12",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            25.5845,
+            31.34799
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "14",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            25.5845,
+            33.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "16",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            25.5845,
+            35.34799
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "18",
+          "source_net": "RECOVERED_6",
+          "net": "",
+          "position_mm": [
+            25.5845,
+            37.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "20",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            25.5845,
+            39.34799
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "22",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            25.5845,
+            41.34798
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "24",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            25.5845,
+            43.34798
+          ],
+          "drill_mm": 0.8
+        }
+      ]
+    },
+    {
+      "ref": "JREC2",
+      "value": "Recovered 2x12 / 2mm header",
+      "footprint": "MicroSMT_Recovered:PTH_24_a566e0777e",
+      "uuid": "3e0912a1-d8b5-5be1-ac36-6bf6cac7609c",
+      "inferred": true,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_19",
+          "net": "RECOVERED_19",
+          "position_mm": [
+            180.822,
+            21.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "3",
+          "source_net": "RECOVERED_17",
+          "net": "RECOVERED_17",
+          "position_mm": [
+            180.822,
+            23.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "5",
+          "source_net": "RECOVERED_15",
+          "net": "RECOVERED_15",
+          "position_mm": [
+            180.822,
+            25.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "7",
+          "source_net": "RECOVERED_13",
+          "net": "RECOVERED_13",
+          "position_mm": [
+            180.822,
+            27.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "9",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            180.822,
+            29.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "11",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            180.822,
+            31.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "13",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            180.822,
+            33.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "15",
+          "source_net": "GND",
+          "net": "GND",
+          "position_mm": [
+            180.822,
+            35.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "17",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            180.822,
+            37.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "19",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            180.822,
+            39.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "21",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            180.822,
+            41.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "23",
+          "source_net": "VCC",
+          "net": "VCC",
+          "position_mm": [
+            180.822,
+            43.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "2",
+          "source_net": "RECOVERED_32",
+          "net": "",
+          "position_mm": [
+            182.822,
+            21.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "4",
+          "source_net": "RECOVERED_31",
+          "net": "",
+          "position_mm": [
+            182.822,
+            23.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "6",
+          "source_net": "RECOVERED_30",
+          "net": "",
+          "position_mm": [
+            182.822,
+            25.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "8",
+          "source_net": "RECOVERED_29",
+          "net": "",
+          "position_mm": [
+            182.822,
+            27.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "10",
+          "source_net": "RECOVERED_28",
+          "net": "",
+          "position_mm": [
+            182.822,
+            29.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "12",
+          "source_net": "RECOVERED_27",
+          "net": "",
+          "position_mm": [
+            182.822,
+            31.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "14",
+          "source_net": "RECOVERED_26",
+          "net": "",
+          "position_mm": [
+            182.822,
+            33.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "16",
+          "source_net": "RECOVERED_25",
+          "net": "",
+          "position_mm": [
+            182.822,
+            35.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "18",
+          "source_net": "RECOVERED_5",
+          "net": "RECOVERED_5",
+          "position_mm": [
+            182.822,
+            37.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "20",
+          "source_net": "RECOVERED_4",
+          "net": "RECOVERED_4",
+          "position_mm": [
+            182.822,
+            39.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "22",
+          "source_net": "RECOVERED_3",
+          "net": "RECOVERED_3",
+          "position_mm": [
+            182.822,
+            41.348
+          ],
+          "drill_mm": 0.8
+        },
+        {
+          "number": "24",
+          "source_net": "RECOVERED_2",
+          "net": "RECOVERED_2",
+          "position_mm": [
+            182.822,
+            43.348
+          ],
+          "drill_mm": 0.8
+        }
+      ]
+    },
+    {
+      "ref": "MH1",
+      "value": "Plated mounting hole 3.3mm",
+      "footprint": "MicroSMT_Recovered:PTH_1_508660c0b4",
+      "uuid": "92e3b93c-b42e-5c06-b798-e3ad253dca53",
+      "inferred": true,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_20",
+          "net": "",
+          "position_mm": [
+            35.0,
+            41.5
+          ],
+          "drill_mm": 3.3
+        }
+      ]
+    },
+    {
+      "ref": "MH2",
+      "value": "Plated mounting hole 3.3mm",
+      "footprint": "MicroSMT_Recovered:PTH_1_508660c0b4",
+      "uuid": "3015497f-00f3-53c8-b64e-4f0aeee68d03",
+      "inferred": true,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_21",
+          "net": "",
+          "position_mm": [
+            35.0,
+            23.5
+          ],
+          "drill_mm": 3.3
+        }
+      ]
+    },
+    {
+      "ref": "MH3",
+      "value": "Plated mounting hole 3.3mm",
+      "footprint": "MicroSMT_Recovered:PTH_1_508660c0b4",
+      "uuid": "700c6f21-43ef-5b0f-9507-a567a7bc213f",
+      "inferred": true,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_22",
+          "net": "",
+          "position_mm": [
+            101.153,
+            41.5
+          ],
+          "drill_mm": 3.3
+        }
+      ]
+    },
+    {
+      "ref": "MH4",
+      "value": "Plated mounting hole 3.3mm",
+      "footprint": "MicroSMT_Recovered:PTH_1_508660c0b4",
+      "uuid": "f221e077-3042-5fd1-ad8a-f9617dc8c0aa",
+      "inferred": true,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_23",
+          "net": "",
+          "position_mm": [
+            174.0,
+            41.5
+          ],
+          "drill_mm": 3.3
+        }
+      ]
+    },
+    {
+      "ref": "MH5",
+      "value": "Plated mounting hole 3.3mm",
+      "footprint": "MicroSMT_Recovered:PTH_1_508660c0b4",
+      "uuid": "0f7927bf-9abc-50b6-96c6-52cc3513ed93",
+      "inferred": true,
+      "pins": [
+        {
+          "number": "1",
+          "source_net": "RECOVERED_24",
+          "net": "",
+          "position_mm": [
+            174.0,
+            23.5
+          ],
+          "drill_mm": 3.3
+        }
+      ]
+    }
+  ],
+  "aliases": {
+    "N9": "N9",
+    "VCC": "VCC",
+    "GND": "GND",
+    "N10": "N10",
+    "N11": "N11",
+    "N12": "N12",
+    "N13": "N13",
+    "N14": "N14",
+    "N15": "N15",
+    "N16": "N16",
+    "RECOVERED_5": "RECOVERED_5",
+    "RECOVERED_4": "RECOVERED_4",
+    "RECOVERED_3": "RECOVERED_3",
+    "RECOVERED_2": "RECOVERED_2",
+    "RECOVERED_19": "RECOVERED_19",
+    "RECOVERED_17": "RECOVERED_17",
+    "RECOVERED_15": "RECOVERED_15",
+    "RECOVERED_13": "RECOVERED_13",
+    "RECOVERED_6": "",
+    "RECOVERED_32": "",
+    "RECOVERED_31": "",
+    "RECOVERED_30": "",
+    "RECOVERED_29": "",
+    "RECOVERED_28": "",
+    "RECOVERED_27": "",
+    "RECOVERED_26": "",
+    "RECOVERED_25": "",
+    "RECOVERED_20": "",
+    "RECOVERED_21": "",
+    "RECOVERED_22": "",
+    "RECOVERED_23": "",
+    "RECOVERED_24": ""
+  },
+  "dimensions_mm": [
+    166.0,
+    25.0
+  ],
+  "coordinate_transform": {
+    "x_offset_mm": 373.822,
+    "y_offset_mm": 137.348,
+    "invert_y": true
+  },
+  "source_summary": {
+    "name": "busbar_n9_n16",
+    "source": "../../Bing-feeder/V3-Feeder Controller/PCB_busbar_N9-N16/V3_busbar_N9-N16_gerber.zip",
+    "dimensions_mm": [
+      166.0,
+      25.0
+    ],
+    "components": 15,
+    "pads": 77,
+    "drills": 204,
+    "probe_snap_max_mm": 0.00012521980679244528,
+    "nets": [
+      "GND",
+      "N10",
+      "N11",
+      "N12",
+      "N13",
+      "N14",
+      "N15",
+      "N16",
+      "N9",
+      "RECOVERED_13",
+      "RECOVERED_15",
+      "RECOVERED_17",
+      "RECOVERED_19",
+      "RECOVERED_2",
+      "RECOVERED_20",
+      "RECOVERED_21",
+      "RECOVERED_22",
+      "RECOVERED_23",
+      "RECOVERED_24",
+      "RECOVERED_25",
+      "RECOVERED_26",
+      "RECOVERED_27",
+      "RECOVERED_28",
+      "RECOVERED_29",
+      "RECOVERED_3",
+      "RECOVERED_30",
+      "RECOVERED_31",
+      "RECOVERED_32",
+      "RECOVERED_4",
+      "RECOVERED_5",
+      "RECOVERED_6",
+      "VCC"
+    ],
+    "conflicts": [],
+    "archive_members_sha256": {
+      "Gerber_TopLayer.GTL": "d9a92208f3f36d3458e28b2b02ab117fb023c06b93d6036bb61d0a3e345a2865",
+      "Gerber_BottomLayer.GBL": "ff912c8985a6f430611c8078194afed8a4a08e50c4426cf4a03f253e055ad9bc",
+      "Gerber_TopSilkscreenLayer.GTO": "befca451709cb07de46f1ede4233d955e61eaa42250e7d068723fdfad83986b2",
+      "Gerber_BottomSilkscreenLayer.GBO": "e5e2a9e212dd51f9ca483fd2877029815db03d4c4bd47a1149477c72e6bcd5ae",
+      "Gerber_TopSolderMaskLayer.GTS": "03c1097780552d76c6b9ece1e21083ce6d3ce08e56d9afdb527d461ed6cff415",
+      "Gerber_BottomSolderMaskLayer.GBS": "08f5f072637967125f37393c29271d0c15aeafe5d8dc80d5b3cac247d0f3b18a",
+      "Gerber_BoardOutlineLayer.GKO": "11877c8f7a0baf6d4be697d707710ae210fa7511defad2fa7e5b84a703222e8a",
+      "Gerber_DrillDrawingLayer.GDD": "ff06707d3c18cad4849061fab6f613087d8275de747fdd2b42928046b8ab2ef3",
+      "Drill_PTH_Through.DRL": "c421ad598cdb636f90d81b7b1aed48a71fd3350521363c92c8efac0cbefffd5a",
+      "Drill_PTH_Through_Via.DRL": "865ca800b1682d3fd7cb57f0e1a7da3f82cd39a3caf770b274c362a64c1fb33e",
+      "FlyingProbeTesting.json": "b9bb2d8961976b475de66e10204b7200a98068456cd9b54e733a2ab109b925c4",
+      "PCB\u4e0b\u5355\u5fc5\u8bfb.txt": "dcb3ee1c645c17a009d70726ad9ab708b68a074556fabcf75a4a059d3b43ec59"
+    }
+  },
+  "inferred_references": [
+    "JREC1",
+    "JREC2",
+    "MH1",
+    "MH2",
+    "MH3",
+    "MH4",
+    "MH5"
+  ],
+  "board_counts": {
+    "footprints": 15,
+    "tracks_and_vias": 1046,
+    "zones": 135
+  }
+}

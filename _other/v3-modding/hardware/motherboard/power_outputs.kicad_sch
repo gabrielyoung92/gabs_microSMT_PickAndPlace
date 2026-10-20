@@ -1,0 +1,4430 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 99e80540-be41-5a27-9e06-dc24bbcd9ad9)
+  (paper "A3")
+  (title_block
+    (title "11 - Switched power outputs / gate drivers")
+    (rev "Reference")
+    (comment 1 "CAM nets preserved; component values from supplied PDF")
+    (comment 2 "Reference reconstruction - not a fabrication release"))
+  (lib_symbols
+    (symbol "MicroSMT_Motherboard:Recovered_C101"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0.254))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Value" "C_Polarized"
+        (at 0.635 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Polarized capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "CP_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_C101_0_1"
+        (rectangle
+          (start -2.286 0.508)
+          (end 2.286 1.016)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.778 2.286)
+            (xy -0.762 2.286))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 2.794)
+            (xy -1.27 1.778))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 2.286 -0.508)
+          (end -2.286 -1.016)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type outline))))
+      (symbol "Recovered_C101_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_C102"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0.254))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Value" "C_Polarized"
+        (at 0.635 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Polarized capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "CP_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_C102_0_1"
+        (rectangle
+          (start -2.286 0.508)
+          (end 2.286 1.016)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.778 2.286)
+            (xy -0.762 2.286))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 2.794)
+            (xy -1.27 1.778))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 2.286 -0.508)
+          (end -2.286 -1.016)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type outline))))
+      (symbol "Recovered_C102_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_C75"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0.254))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_C75_0_1"
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762))
+          (stroke
+            (width 0.508)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762))
+          (stroke
+            (width 0.508)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_C75_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_D11"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "D_Schottky"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Schottky diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "diode Schottky"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_D11_0_1"
+        (polyline
+          (pts
+            (xy -1.905 0.635)
+            (xy -1.905 1.27)
+            (xy -1.27 1.27)
+            (xy -1.27 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 -0.635))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+            (xy -1.27 0)
+            (xy 1.27 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 0)
+            (xy -1.27 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_D11_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "C"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "A"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_D12"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "D_Schottky"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Schottky diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "diode Schottky"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_D12_0_1"
+        (polyline
+          (pts
+            (xy -1.905 0.635)
+            (xy -1.905 1.27)
+            (xy -1.27 1.27)
+            (xy -1.27 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 -0.635))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+            (xy -1.27 0)
+            (xy 1.27 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 0)
+            (xy -1.27 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_D12_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "C"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "A"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_D13"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "D_Schottky"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Schottky diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "diode Schottky"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_D13_0_1"
+        (polyline
+          (pts
+            (xy -1.905 0.635)
+            (xy -1.905 1.27)
+            (xy -1.27 1.27)
+            (xy -1.27 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 -0.635))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+            (xy -1.27 0)
+            (xy 1.27 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 0)
+            (xy -1.27 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_D13_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "C"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "A"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_D7"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "D_Schottky"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Schottky diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "diode Schottky"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_D7_0_1"
+        (polyline
+          (pts
+            (xy -1.905 0.635)
+            (xy -1.905 1.27)
+            (xy -1.27 1.27)
+            (xy -1.27 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 -0.635))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+            (xy -1.27 0)
+            (xy 1.27 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 0)
+            (xy -1.27 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_D7_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "C"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "A"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_D9"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "D_Schottky"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Schottky diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "diode Schottky"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_D9_0_1"
+        (polyline
+          (pts
+            (xy -1.905 0.635)
+            (xy -1.905 1.27)
+            (xy -1.27 1.27)
+            (xy -1.27 -1.27)
+            (xy -0.635 -1.27)
+            (xy -0.635 -0.635))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 1.27)
+            (xy 1.27 -1.27)
+            (xy -1.27 0)
+            (xy 1.27 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 0)
+            (xy -1.27 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_D9_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "C"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "A"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_IC14"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "IC"
+        (at 0 8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_IC14"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_IC14_0_1"
+        (rectangle
+          (start -12.7 5.08)
+          (end 12.7 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_IC14_1_1"
+        (pin passive line
+          (at -17.78 3.81 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -3.81 0)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 3.81 180)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "PAD 6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -1.27 180)
+          (length 5.08)
+          (name "PAD 7"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -3.81 180)
+          (length 5.08)
+          (name "PAD 8"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_IC15"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "IC"
+        (at 0 8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_IC15"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_IC15_0_1"
+        (rectangle
+          (start -12.7 5.08)
+          (end 12.7 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_IC15_1_1"
+        (pin passive line
+          (at -17.78 3.81 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -3.81 0)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 3.81 180)
+          (length 5.08)
+          (name "PAD 5"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "PAD 6"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -1.27 180)
+          (length 5.08)
+          (name "PAD 7"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -3.81 180)
+          (length 5.08)
+          (name "PAD 8"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_J11"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_J11"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_J11_0_1"
+        (rectangle
+          (start -12.7 1.27)
+          (end 12.7 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_J11_1_1"
+        (pin passive line
+          (at -17.78 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_J13"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_J13"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_J13_0_1"
+        (rectangle
+          (start -12.7 1.27)
+          (end 12.7 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_J13_1_1"
+        (pin passive line
+          (at -17.78 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_J7"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_J7"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_J7_0_1"
+        (rectangle
+          (start -12.7 1.27)
+          (end 12.7 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_J7_1_1"
+        (pin passive line
+          (at -17.78 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_J8"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_J8"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_J8_0_1"
+        (rectangle
+          (start -12.7 1.27)
+          (end 12.7 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_J8_1_1"
+        (pin passive line
+          (at -17.78 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_J9"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_J9"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_J9_0_1"
+        (rectangle
+          (start -12.7 1.27)
+          (end 12.7 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_J9_1_1"
+        (pin passive line
+          (at -17.78 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_LED11"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "LED"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Light emitting diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Sim.Pins" "1=K 2=A"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "LED diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_LED11_0_1"
+        (polyline
+          (pts
+            (xy -3.048 -0.762)
+            (xy -4.572 -2.286)
+            (xy -3.81 -2.286)
+            (xy -4.572 -2.286)
+            (xy -4.572 -1.524))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.778 -0.762)
+            (xy -3.302 -2.286)
+            (xy -2.54 -2.286)
+            (xy -3.302 -2.286)
+            (xy -3.302 -1.524))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy 1.27 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_LED11_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_LED12"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "LED"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Light emitting diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Sim.Pins" "1=K 2=A"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "LED diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_LED12_0_1"
+        (polyline
+          (pts
+            (xy -3.048 -0.762)
+            (xy -4.572 -2.286)
+            (xy -3.81 -2.286)
+            (xy -4.572 -2.286)
+            (xy -4.572 -1.524))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.778 -0.762)
+            (xy -3.302 -2.286)
+            (xy -2.54 -2.286)
+            (xy -3.302 -2.286)
+            (xy -3.302 -1.524))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy 1.27 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_LED12_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_LED5"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "LED"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Light emitting diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Sim.Pins" "1=K 2=A"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "LED diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_LED5_0_1"
+        (polyline
+          (pts
+            (xy -3.048 -0.762)
+            (xy -4.572 -2.286)
+            (xy -3.81 -2.286)
+            (xy -4.572 -2.286)
+            (xy -4.572 -1.524))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.778 -0.762)
+            (xy -3.302 -2.286)
+            (xy -2.54 -2.286)
+            (xy -3.302 -2.286)
+            (xy -3.302 -1.524))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy 1.27 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_LED5_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_LED7"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "LED"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Light emitting diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Sim.Pins" "1=K 2=A"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "LED diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_LED7_0_1"
+        (polyline
+          (pts
+            (xy -3.048 -0.762)
+            (xy -4.572 -2.286)
+            (xy -3.81 -2.286)
+            (xy -4.572 -2.286)
+            (xy -4.572 -1.524))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.778 -0.762)
+            (xy -3.302 -2.286)
+            (xy -2.54 -2.286)
+            (xy -3.302 -2.286)
+            (xy -3.302 -1.524))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy 1.27 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_LED7_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_LED8"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "LED"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Light emitting diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Sim.Pins" "1=K 2=A"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "LED diode"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_LED8_0_1"
+        (polyline
+          (pts
+            (xy -3.048 -0.762)
+            (xy -4.572 -2.286)
+            (xy -3.81 -2.286)
+            (xy -4.572 -2.286)
+            (xy -4.572 -1.524))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.778 -0.762)
+            (xy -3.302 -2.286)
+            (xy -2.54 -2.286)
+            (xy -3.302 -2.286)
+            (xy -3.302 -1.524))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy 1.27 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy -1.27 0)
+            (xy 1.27 -1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_LED8_1_1"
+        (pin passive line
+          (at -3.81 0 0)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 0 180)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_Q4"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_Q4"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_Q4_0_1"
+        (rectangle
+          (start -12.7 2.54)
+          (end 12.7 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_Q4_1_1"
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_Q5"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_Q5"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_Q5_0_1"
+        (rectangle
+          (start -12.7 2.54)
+          (end 12.7 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_Q5_1_1"
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "DRAIN"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "D"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "GATE"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "G"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "SOURCE"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "S"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_Q6"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_Q6"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_Q6_0_1"
+        (rectangle
+          (start -12.7 2.54)
+          (end 12.7 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_Q6_1_1"
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "DRAIN"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "D"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "GATE"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "G"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "SOURCE"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "S"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_Q7"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_Q7"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_Q7_0_1"
+        (rectangle
+          (start -12.7 2.54)
+          (end 12.7 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_Q7_1_1"
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "DRAIN"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "D"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "GATE"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "G"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "SOURCE"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "S"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_Q8"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_Q8"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_Q8_0_1"
+        (rectangle
+          (start -12.7 2.54)
+          (end 12.7 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_Q8_1_1"
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0))))))))
+  (text "11 - Switched power outputs / gate drivers"
+    (at 20.32 17.78 0)
+    (effects
+      (font
+        (size 2.0 2.0))
+      (justify left top))
+    (uuid 582320db-b2d3-5490-a3b0-fe427b69ad31))
+  (no_connect
+    (at 30.48 52.07)
+    (uuid fb3d0fdf-1357-5407-9a1a-f91a7d51d477))
+  (wire
+    (pts
+      (xy 30.48 54.61)
+      (xy 25.4 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 830280a1-e174-579c-896a-7869efc17677))
+  (global_label "PWM1"
+    (shape bidirectional)
+    (at 25.4 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 0334cdc9-d214-59bf-a61c-f2d19b041b30))
+  (wire
+    (pts
+      (xy 30.48 57.15)
+      (xy 25.4 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b66af9fe-865d-55df-9285-89ad47a9f07e))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 25.4 57.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 46575c15-1f7c-5dfe-8240-8a01015d7dd9))
+  (wire
+    (pts
+      (xy 30.48 59.69)
+      (xy 25.4 59.69))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7106a167-ec25-5747-aa59-f1395b418031))
+  (global_label "P2.7"
+    (shape bidirectional)
+    (at 25.4 59.69 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 58735324-9772-5b8b-81ca-4852b9c24be4))
+  (wire
+    (pts
+      (xy 66.04 52.07)
+      (xy 71.12 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 11c527fc-b403-5718-8c43-79455ee43870))
+  (global_label "$2N667"
+    (shape bidirectional)
+    (at 71.12 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid ef3af90c-d7f3-5e85-8052-08654cda73f3))
+  (wire
+    (pts
+      (xy 66.04 54.61)
+      (xy 71.12 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 77f907e7-925d-5434-9d6f-2bce07450474))
+  (global_label "12VREG"
+    (shape bidirectional)
+    (at 71.12 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 5415caba-6d29-5fdd-8880-b138880fe4cb))
+  (wire
+    (pts
+      (xy 66.04 57.15)
+      (xy 71.12 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 85887c24-08ba-541d-b1f9-4797e5557e2e))
+  (global_label "$2N586"
+    (shape bidirectional)
+    (at 71.12 57.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid c962c393-1d0b-5bbd-92f8-21264181833f))
+  (no_connect
+    (at 66.04 59.69)
+    (uuid e5e37a08-0e70-52b6-b948-81430b5face2))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_IC14")
+    (at 48.26 55.88 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 364a5424-e3e3-5347-b6c4-8ecc9f04a161)
+    (property "Reference" "IC14"
+      (at 48.26 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Gate driver (part unspecified)"
+      (at 48.26 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_8_bed1b4e22e"
+      (at 48.26 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 48.26 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 396fa7e8-fa88-5432-96f5-8b7c4dbe320c))
+    (pin "2"
+      (uuid b90faf15-b452-5bd0-be4d-135c7490210a))
+    (pin "3"
+      (uuid a3698e64-38aa-50ab-8080-e4e0ed7f7af4))
+    (pin "4"
+      (uuid 4a941615-a54b-5770-b587-a1aa0c6cd358))
+    (pin "5"
+      (uuid 59cfcb01-9e62-5fff-b6f6-9ace0ef7138a))
+    (pin "6"
+      (uuid faa54ea6-48a2-5223-aade-51afbdc10e90))
+    (pin "7"
+      (uuid 93426926-2ea3-5ee8-be64-97b4a5fb60a8))
+    (pin "8"
+      (uuid c16ca52e-e0a0-5988-9788-c598ae698158))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "IC14")
+          (unit 1)))))
+  (no_connect
+    (at 121.92 52.07)
+    (uuid 8f0794d6-b1e7-550b-9819-e2a24325fac8))
+  (wire
+    (pts
+      (xy 121.92 54.61)
+      (xy 116.84 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ce330160-e84e-5cf9-9096-e729ed9b50c5))
+  (global_label "P1_23"
+    (shape bidirectional)
+    (at 116.84 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 18de4076-d987-5871-9a3e-01fc4460cc85))
+  (wire
+    (pts
+      (xy 121.92 57.15)
+      (xy 116.84 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid c19b66cd-6226-5e21-9df6-558374bb6ed2))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 116.84 57.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 99467faa-bd91-56d3-a3cb-c09a02ab1cd5))
+  (no_connect
+    (at 121.92 59.69)
+    (uuid 8b82ecfa-1c7a-5a03-a317-5ce4f6a1a986))
+  (no_connect
+    (at 157.48 52.07)
+    (uuid 49614456-63c4-5d02-b138-4d95a3f4efde))
+  (wire
+    (pts
+      (xy 157.48 54.61)
+      (xy 162.56 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid c1ff6ee6-0322-5f08-92ed-9aa9cf5906e2))
+  (global_label "12VREG"
+    (shape bidirectional)
+    (at 162.56 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 68ab8cc2-4e1a-502a-b36c-d3da035a521e))
+  (wire
+    (pts
+      (xy 157.48 57.15)
+      (xy 162.56 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a253fd9a-f5c2-5165-963f-318681d1428b))
+  (global_label "$2N468"
+    (shape bidirectional)
+    (at 162.56 57.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid a68ec183-e22c-57e1-b58d-18974f12a16a))
+  (no_connect
+    (at 157.48 59.69)
+    (uuid 6e5092e4-eb4c-5e01-b236-8c2cafa86369))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_IC15")
+    (at 139.7 55.88 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 150b20be-7104-5fbf-b466-d3d55e55ce7f)
+    (property "Reference" "IC15"
+      (at 139.7 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Gate driver (part unspecified)"
+      (at 139.7 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_8_2453bf0c82"
+      (at 139.7 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 139.7 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 2d5c91ed-0fd2-5a0e-b13a-6994b7df76c2))
+    (pin "2"
+      (uuid 6adcb8c0-4b2d-5925-85d9-b8252bb61c60))
+    (pin "3"
+      (uuid f867b859-0f26-5e3f-bde0-35d5dba951e1))
+    (pin "4"
+      (uuid ffdbf813-aba5-5ea3-9ea3-c0b830809fed))
+    (pin "5"
+      (uuid 920832a5-d40d-5126-9327-896d85c19e78))
+    (pin "6"
+      (uuid 0981d7e8-a806-58e5-8d6a-3141306cd2ed))
+    (pin "7"
+      (uuid 3f653f95-af27-5ad0-8587-a26f1ddeab33))
+    (pin "8"
+      (uuid 889427aa-7bc3-5030-8182-414c0bcff3dc))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "IC15")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 213.36 54.61)
+      (xy 208.28 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 85534717-bc5c-592f-bcc2-38aeafe3b1d6))
+  (global_label "$2N85"
+    (shape bidirectional)
+    (at 208.28 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid b473a394-9097-5b87-950c-2e3e79e0a02a))
+  (no_connect
+    (at 213.36 57.15)
+    (uuid 2861a452-6b31-55dd-a63a-2d8a65bf37ba))
+  (wire
+    (pts
+      (xy 248.92 54.61)
+      (xy 254.0 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 87eb7c18-4476-5288-bcac-36e7839caec4))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 254.0 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid a45a03d8-b560-551f-84c6-668bf22c4063))
+  (wire
+    (pts
+      (xy 248.92 57.15)
+      (xy 254.0 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 2b6dd14d-78bd-51d8-a13e-6d2bbfcba8cd))
+  (global_label "$2N86"
+    (shape bidirectional)
+    (at 254.0 57.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid d1f18047-15fc-5e78-9300-c2486a1ea21f))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_Q4")
+    (at 231.14 55.88 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8fadb429-0d26-5c01-9cd1-e5afe7ff66bf)
+    (property "Reference" "Q4"
+      (at 231.14 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "ZXMN4A06"
+      (at 231.14 52.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_4_4507bbfa16"
+      (at 231.14 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 231.14 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 4e9c30aa-aa3f-5d71-81d8-095cd920c52b))
+    (pin "2"
+      (uuid 7ca3d213-4d6a-527a-946f-63acbcaf67ab))
+    (pin "3"
+      (uuid 5fbe6bca-2587-5042-be92-872760147f71))
+    (pin "4"
+      (uuid 2597b50d-bfdd-51bd-9f87-42a87ce8c081))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "Q4")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 304.8 54.61)
+      (xy 299.72 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid c265f87d-fae8-5272-b844-c919d999d4de))
+  (global_label "$2N6624"
+    (shape bidirectional)
+    (at 299.72 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 1dcae752-b625-50bd-a06a-888d9c4963dc))
+  (wire
+    (pts
+      (xy 304.8 57.15)
+      (xy 299.72 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e1142ef6-4bdc-5609-ac79-e2721d59ac13))
+  (global_label "$2N469"
+    (shape bidirectional)
+    (at 299.72 57.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 38264718-16e5-5f4a-b42a-b2b2fdf15a45))
+  (wire
+    (pts
+      (xy 340.36 54.61)
+      (xy 345.44 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 217a07ad-8dae-565d-8896-9bdd8cd2558a))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 345.44 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid f47006ac-c5dd-5642-951c-9ed958b1b952))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_Q5")
+    (at 322.58 55.88 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 2f084445-b12a-5736-ad53-52b45671ff09)
+    (property "Reference" "Q5"
+      (at 322.58 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "AOT240L"
+      (at 322.58 52.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_3_1e44fbcacc"
+      (at 322.58 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 322.58 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "D"
+      (uuid 5b6f4811-2d05-5c68-8e6f-a85c26afdf9e))
+    (pin "G"
+      (uuid 7c4c42fe-f2e7-5238-9fbe-4dcf050f6f0a))
+    (pin "S"
+      (uuid c612b476-eed2-544a-aebd-e6235d8ca9d8))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "Q5")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 30.48 85.09)
+      (xy 25.4 85.09))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e5365142-50f3-58c3-9473-f96ff56be05d))
+  (global_label "$2N5943"
+    (shape bidirectional)
+    (at 25.4 85.09 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid ce2a2325-e517-5088-9b86-3021d316a8a6))
+  (wire
+    (pts
+      (xy 30.48 87.63)
+      (xy 25.4 87.63))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 24283456-232b-5759-a336-5a4e98f95643))
+  (global_label "PWM1_FET"
+    (shape bidirectional)
+    (at 25.4 87.63 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 92d8874a-069b-51bf-8f43-015d987ce45a))
+  (wire
+    (pts
+      (xy 66.04 85.09)
+      (xy 71.12 85.09))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid bf6be7a1-1f57-5765-91b8-80801c5f60f2))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 71.12 85.09 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 07cb74ea-434d-5bd8-8b0a-f30838daa25c))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_Q6")
+    (at 48.26 86.36 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 5dc086a0-fabf-53bd-a922-eb5fd2e290f6)
+    (property "Reference" "Q6"
+      (at 48.26 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "AOT240L"
+      (at 48.26 82.55 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_3_1e44fbcacc"
+      (at 48.26 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 48.26 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "D"
+      (uuid 479dd87a-e350-52c0-a65d-85160702c362))
+    (pin "G"
+      (uuid 27d64828-4055-52bd-906e-1037ca5b8d72))
+    (pin "S"
+      (uuid 7eb3044c-24b4-51fa-8c20-46dcab158bbc))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "Q6")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 121.92 85.09)
+      (xy 116.84 85.09))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 543d2086-1a65-5d00-9968-60d86d4e38fc))
+  (global_label "$2N6317"
+    (shape bidirectional)
+    (at 116.84 85.09 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 616a8acf-b2f9-580a-844d-562667171ae5))
+  (wire
+    (pts
+      (xy 121.92 87.63)
+      (xy 116.84 87.63))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 65956fb7-2342-5d83-bdd3-9e95b4c57f99))
+  (global_label "GPIO_FET"
+    (shape bidirectional)
+    (at 116.84 87.63 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 132a54c9-4eba-5601-a113-517a0a3748da))
+  (wire
+    (pts
+      (xy 157.48 85.09)
+      (xy 162.56 85.09))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid fa2d1624-a0a7-5da5-b3ac-64ab78d0c910))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 162.56 85.09 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 28b496e6-52e2-5091-b53f-23d1ba7ec92f))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_Q7")
+    (at 139.7 86.36 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 945e0030-b9ed-53be-9a55-a80748474d18)
+    (property "Reference" "Q7"
+      (at 139.7 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "AOT240L"
+      (at 139.7 82.55 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_3_1e44fbcacc"
+      (at 139.7 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 139.7 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "D"
+      (uuid 2b9816c0-4faa-553d-8aa6-55ef6a9475fb))
+    (pin "G"
+      (uuid 50933fcc-c8c0-5d91-9201-8f06e5a4ce92))
+    (pin "S"
+      (uuid 072bdee9-be3d-5955-ad29-17d38e49eb3f))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "Q7")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 213.36 85.09)
+      (xy 208.28 85.09))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 1f98f5d6-2dfe-55a9-a83e-c9f54e28a59f))
+  (global_label "$2N73"
+    (shape bidirectional)
+    (at 208.28 85.09 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 25e24307-8ba9-5333-8667-63d1ffe14a43))
+  (no_connect
+    (at 213.36 87.63)
+    (uuid 3f9ee427-0a8e-5af8-a287-26161b3235a0))
+  (wire
+    (pts
+      (xy 248.92 85.09)
+      (xy 254.0 85.09))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0856f7a5-d334-52e5-a02d-d30f037f4462))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 254.0 85.09 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 07d2a47d-17d8-5a04-b8d3-bd9a0c0557c9))
+  (wire
+    (pts
+      (xy 248.92 87.63)
+      (xy 254.0 87.63))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ecaade16-0e72-5701-ab45-5944b0c60d1c))
+  (global_label "$2N72"
+    (shape bidirectional)
+    (at 254.0 87.63 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 65bbf9c1-f19c-5c0d-880a-32b59b1bee18))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_Q8")
+    (at 231.14 86.36 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 6f287ced-b45b-5c9d-9a6f-6ac85c681ccd)
+    (property "Reference" "Q8"
+      (at 231.14 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "ZXMN4A06"
+      (at 231.14 82.55 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_4_4507bbfa16"
+      (at 231.14 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 231.14 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 02e56b44-0c2a-5175-a2ce-622cf338d313))
+    (pin "2"
+      (uuid d26805f6-cc40-5b07-8e62-40bdb42730b9))
+    (pin "3"
+      (uuid b0a38bab-bf80-5416-842e-9e2f3d1a6e08))
+    (pin "4"
+      (uuid 30a21dd7-f284-5b41-968b-59c18e4bad9a))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "Q8")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 304.8 86.36)
+      (xy 299.72 86.36))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 04562a0c-744e-514e-82b5-44239414ae50))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 299.72 86.36 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid ece896ff-32e5-5782-83e4-9c6193926370))
+  (wire
+    (pts
+      (xy 340.36 86.36)
+      (xy 345.44 86.36))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 64090916-3c50-5ccd-844e-11058631ded4))
+  (global_label "$2N86"
+    (shape bidirectional)
+    (at 345.44 86.36 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 26fbdc26-e1fd-51e4-8241-cbc668701041))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_J7")
+    (at 322.58 86.36 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 99af6918-5790-5adc-9382-66c43ec12102)
+    (property "Reference" "J7"
+      (at 322.58 81.28 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Switched power output"
+      (at 322.58 83.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_2_d51227e40c"
+      (at 322.58 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 322.58 86.36 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 49514c92-9668-5622-8cac-b266fc033de6))
+    (pin "2"
+      (uuid 57e0a2e7-3399-5c8b-addd-c77caf36881d))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "J7")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 30.48 116.84)
+      (xy 25.4 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid dfb2e8e5-bed2-58bf-b20b-7c5631b90037))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 25.4 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid d8a3085e-cda1-5514-aad4-1393006f5693))
+  (wire
+    (pts
+      (xy 66.04 116.84)
+      (xy 71.12 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e3bc5875-d72e-5db2-b655-9550c579a8c2))
+  (global_label "$2N72"
+    (shape bidirectional)
+    (at 71.12 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 6949d59a-92ca-5e9f-9a27-43d23f3b0590))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_J8")
+    (at 48.26 116.84 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid bb446e2c-e1da-518f-bfb6-04054c374ff1)
+    (property "Reference" "J8"
+      (at 48.26 111.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Switched power output"
+      (at 48.26 114.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_2_d51227e40c"
+      (at 48.26 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 48.26 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 4699578d-2993-5fe2-bb74-ded8a84f1250))
+    (pin "2"
+      (uuid 10a34c0d-23cc-5eef-893a-fdd23674e1e6))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "J8")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 121.92 116.84)
+      (xy 116.84 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 51481381-44e3-5e17-b4d1-14e0d74a5988))
+  (global_label "$2N5943"
+    (shape bidirectional)
+    (at 116.84 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 3005924e-6176-5daa-b0e0-6376d4670240))
+  (wire
+    (pts
+      (xy 157.48 116.84)
+      (xy 162.56 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 280d15d5-f4e7-590a-8e2d-b403b66eb9a0))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 162.56 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid c57144a9-8735-5c64-88fa-ffd8ceedec03))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_J9")
+    (at 139.7 116.84 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1bcc231f-2107-5159-a5d7-06c9b36e55ce)
+    (property "Reference" "J9"
+      (at 139.7 111.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Switched power output"
+      (at 139.7 114.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_2_680c4632b1"
+      (at 139.7 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 139.7 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid a10da23c-9fd7-5e39-8894-c131ada63c01))
+    (pin "2"
+      (uuid 8247a746-6ffd-50fc-915c-61f3d4c4c12a))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "J9")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 213.36 116.84)
+      (xy 208.28 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 73052012-8e18-5d37-ab3a-e5bfb924b803))
+  (global_label "$2N6317"
+    (shape bidirectional)
+    (at 208.28 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 35f5d473-e6a0-550f-b765-96cedbd9b3f2))
+  (wire
+    (pts
+      (xy 248.92 116.84)
+      (xy 254.0 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 315e6ef5-3dc6-5c7a-b218-9977efe92f58))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 254.0 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 053893ad-561e-50a8-ac35-4004026f05a7))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_J11")
+    (at 231.14 116.84 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c74a1da7-7bbf-554a-bb58-febaf27482cc)
+    (property "Reference" "J11"
+      (at 231.14 111.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Switched power output"
+      (at 231.14 114.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_2_680c4632b1"
+      (at 231.14 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 231.14 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 21d56dc5-59be-5b6a-998c-32f8c3d84796))
+    (pin "2"
+      (uuid 93eb2252-a66c-5fea-b74e-a4a1d913cbf5))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "J11")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 304.8 116.84)
+      (xy 299.72 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 838497e9-de78-57fa-bb47-7e4999e43751))
+  (global_label "$2N6624"
+    (shape bidirectional)
+    (at 299.72 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 1f21b3ca-0b42-5283-a678-ca9c017a0879))
+  (wire
+    (pts
+      (xy 340.36 116.84)
+      (xy 345.44 116.84))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6798f883-db7d-5c06-867e-3e91f63694df))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 345.44 116.84 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 7cea8b1c-9e31-5b76-b57b-b467086e3ae4))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_J13")
+    (at 322.58 116.84 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e0f2bcd4-9e9a-576b-81a4-36d58f642a18)
+    (property "Reference" "J13"
+      (at 322.58 111.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Switched power output"
+      (at 322.58 114.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_2_7f240c3247"
+      (at 322.58 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 322.58 116.84 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 6b406f1c-811d-554e-8c12-c074cab5274c))
+    (pin "2"
+      (uuid 16387f9a-5ab4-5100-a558-a20f758ab323))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "J13")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 44.45 147.32)
+      (xy 39.37 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 10c100b0-ad32-50d6-aa59-39a2818991ec))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 39.37 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid e166bad4-0fa2-52b8-b61f-7abbc1f1deee))
+  (wire
+    (pts
+      (xy 52.07 147.32)
+      (xy 57.15 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 58876516-c10b-58b8-90b5-5457b09c2b24))
+  (global_label "$2N72"
+    (shape bidirectional)
+    (at 57.15 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 47a6abfc-4d6f-5b53-88eb-e94e2ded960a))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_D7")
+    (at 48.26 147.32 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1af87422-3191-5fa8-bd93-2b0955a08a19)
+    (property "Reference" "D7"
+      (at 48.26 144.78 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "MBRA210LT3"
+      (at 48.26 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_458f4c8a63"
+      (at 48.26 147.32 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 48.26 147.32 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "C"
+      (uuid 55cccef4-31c5-55f0-9a6e-607575955828))
+    (pin "A"
+      (uuid 1714fdb6-9070-586a-97cd-389be4c5e5cb))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "D7")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 135.89 147.32)
+      (xy 130.81 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid cf7cccf1-cda4-5bcd-bb89-3ce9f4a39708))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 130.81 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 6072b052-82f5-5a4b-938b-12333fcb03a8))
+  (wire
+    (pts
+      (xy 143.51 147.32)
+      (xy 148.59 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4e9f3848-d02d-5dab-b831-90f6f4454427))
+  (global_label "$2N86"
+    (shape bidirectional)
+    (at 148.59 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 4a154ce4-e365-5349-b724-0ca7070f4670))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_D9")
+    (at 139.7 147.32 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 14beb9c5-b466-5c5c-9655-17941ba7e8b6)
+    (property "Reference" "D9"
+      (at 139.7 144.78 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "MBRA210LT3"
+      (at 139.7 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_458f4c8a63"
+      (at 139.7 147.32 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 139.7 147.32 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "C"
+      (uuid ae0806f8-83fb-5d54-86f0-79fd1980bd89))
+    (pin "A"
+      (uuid 43cdb274-55d5-5968-a5f1-df57cc945385))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "D9")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 227.33 147.32)
+      (xy 222.25 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 9d522c70-13a2-56b8-b191-48216c35d8bc))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 222.25 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid a60fdc09-4f9b-536f-b6ea-7a7235e3962a))
+  (wire
+    (pts
+      (xy 234.95 147.32)
+      (xy 240.03 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid cf8a170d-9260-5bcf-94c0-24a4589f62ac))
+  (global_label "$2N5943"
+    (shape bidirectional)
+    (at 240.03 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 03f98f65-c09a-5919-9e01-85244797626f))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_D11")
+    (at 231.14 147.32 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid cff437cb-dcce-5787-9487-1f9d24b75888)
+    (property "Reference" "D11"
+      (at 231.14 144.78 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "MBRA210LT3"
+      (at 231.14 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_39ece826e6"
+      (at 231.14 147.32 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 231.14 147.32 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "C"
+      (uuid 2e7eafef-5b01-5de0-aaaa-9ed6a3d9178a))
+    (pin "A"
+      (uuid d579611e-66fb-5f12-9a06-fc79e6f342d0))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "D11")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 318.77 147.32)
+      (xy 313.69 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 73810ae3-75ad-59d3-b6cb-a89eea5ed68c))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 313.69 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 0667a034-4973-5fd1-acac-fc3c11b85813))
+  (wire
+    (pts
+      (xy 326.39 147.32)
+      (xy 331.47 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0aceef02-8741-5a24-9ea2-f65d5f716b74))
+  (global_label "$2N6317"
+    (shape bidirectional)
+    (at 331.47 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 27dd77e9-8f46-5a21-ba36-41abb65e00ae))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_D12")
+    (at 322.58 147.32 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 054893dd-c72f-512c-980b-e73a04c97dd8)
+    (property "Reference" "D12"
+      (at 322.58 144.78 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "MBRA210LT3"
+      (at 322.58 149.86 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_39ece826e6"
+      (at 322.58 147.32 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 322.58 147.32 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "C"
+      (uuid 70f025ce-0e26-5b01-972e-e6b4b0755406))
+    (pin "A"
+      (uuid f90b9159-a70b-5d64-8916-93ed85627ae5))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "D12")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 44.45 177.8)
+      (xy 39.37 177.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8bb92833-c451-56cf-96c8-95b2bef54718))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 39.37 177.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 350f368b-f005-5e2d-8615-c9932cc60fc6))
+  (wire
+    (pts
+      (xy 52.07 177.8)
+      (xy 57.15 177.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8ad09851-a686-5654-8a51-8f22217958cf))
+  (global_label "$2N6624"
+    (shape bidirectional)
+    (at 57.15 177.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 97cd9951-2816-5a36-892e-aced69065022))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_D13")
+    (at 48.26 177.8 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 17940fcc-374b-522d-9980-767d7643e1ba)
+    (property "Reference" "D13"
+      (at 48.26 175.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "MBRA210LT3"
+      (at 48.26 180.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_458f4c8a63"
+      (at 48.26 177.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 48.26 177.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "C"
+      (uuid ec95b3bd-a718-5415-b77f-4ccf5338256e))
+    (pin "A"
+      (uuid 32a0c5be-d498-52e9-97eb-e2721db9fc5d))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "D13")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 139.7 173.99)
+      (xy 139.7 168.91))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 22ee4503-9bc5-5853-8c3f-d89293605e7d))
+  (global_label "12VREG"
+    (shape bidirectional)
+    (at 139.7 168.91 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid fbf07332-f358-5348-85b6-d7cdefd4e124))
+  (wire
+    (pts
+      (xy 139.7 181.61)
+      (xy 139.7 186.69))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a6fb1aa2-eced-5777-a7a8-0130d68f9dba))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 139.7 186.69 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid fa2abf86-89f2-5696-adaa-eaf7808dcde7))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_C75")
+    (at 139.7 177.8 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e505ae43-c579-5827-bef4-308ee2a0f24c)
+    (property "Reference" "C75"
+      (at 140.335 175.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "100nF"
+      (at 140.335 180.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_3405cc4fc8"
+      (at 140.6652 181.61 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 139.7 177.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid b8a28d07-626f-5424-b84f-8a77bba8d1e7))
+    (pin "2"
+      (uuid f0a5e9a0-6abf-5146-b35f-af6147255a17))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "C75")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 231.14 173.99)
+      (xy 231.14 168.91))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d10f891c-7f90-5bb7-a0bd-29358a48071a))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 231.14 168.91 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 190576a0-5412-5152-8ae9-75d8774806b1))
+  (wire
+    (pts
+      (xy 231.14 181.61)
+      (xy 231.14 186.69))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4410d027-88ca-50d6-8360-d28f46689d0b))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 231.14 186.69 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 9e393067-cd72-5a8d-816e-aaaf99559e5f))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_C101")
+    (at 231.14 177.8 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid efbb76d9-cbf7-55b4-955e-2f55271f0b2c)
+    (property "Reference" "C101"
+      (at 231.775 175.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Unspecified in PDF"
+      (at 231.775 180.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_afac0f90ad"
+      (at 232.1052 181.61 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 231.14 177.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 088dd904-5835-5731-8637-42f3239547b8))
+    (pin "2"
+      (uuid 48c6e5a1-bc24-5006-b08a-47455d8fca39))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "C101")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 322.58 173.99)
+      (xy 322.58 168.91))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4a891220-d1b2-5fbe-b060-27c93f47eabf))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 322.58 168.91 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 483be7e9-b190-5733-bba9-b27c7d74b753))
+  (wire
+    (pts
+      (xy 322.58 181.61)
+      (xy 322.58 186.69))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 1905d887-c95d-5798-a3ed-073eec52991d))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 322.58 186.69 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 62e34876-8e36-5ad2-ba06-20b6c4c19fde))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_C102")
+    (at 322.58 177.8 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid d4619089-fefa-5ecf-b3b0-6cdd37fd2077)
+    (property "Reference" "C102"
+      (at 323.215 175.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Unspecified in PDF"
+      (at 323.215 180.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_afac0f90ad"
+      (at 323.5452 181.61 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 322.58 177.8 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 59571e4f-6b3b-5766-8236-94812893653a))
+    (pin "2"
+      (uuid 1d0b54bb-c1d9-5e6b-84c1-aa7dd3720bcf))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "C102")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 44.45 208.28)
+      (xy 39.37 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 9dfdc083-fa0f-58a6-acea-7f9891cef612))
+  (global_label "$2N72"
+    (shape bidirectional)
+    (at 39.37 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 90412562-0841-5347-be14-1f5fafcc4a63))
+  (wire
+    (pts
+      (xy 52.07 208.28)
+      (xy 57.15 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3eac05a8-cd82-528f-8b21-7e0c05f3adcd))
+  (global_label "$2N797"
+    (shape bidirectional)
+    (at 57.15 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid aa090273-f40f-58f6-accb-95a5e6fedf9e))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_LED5")
+    (at 48.26 208.28 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f8b35e94-2db9-5687-b118-891b9b4e454c)
+    (property "Reference" "LED5"
+      (at 48.26 205.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Indicator LED"
+      (at 48.26 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_e43d4fc42e"
+      (at 48.26 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 48.26 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 415e2511-44f1-549a-8cea-191c92f47a48))
+    (pin "2"
+      (uuid 58c9e635-6ae0-5c16-a9ff-406ae44846b5))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "LED5")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 135.89 208.28)
+      (xy 130.81 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 97105f7c-23a6-5f75-a661-2956ac455524))
+  (global_label "$2N5943"
+    (shape bidirectional)
+    (at 130.81 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid c2db2948-070f-55a4-8515-898b5e4ee7e2))
+  (wire
+    (pts
+      (xy 143.51 208.28)
+      (xy 148.59 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 09402637-0fd4-5317-8280-9db57956c716))
+  (global_label "$2N799"
+    (shape bidirectional)
+    (at 148.59 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid a55d126c-6c81-5941-b615-a7b94da07619))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_LED7")
+    (at 139.7 208.28 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid e0870d8a-7ba6-59ea-85cb-91ea4b6d406a)
+    (property "Reference" "LED7"
+      (at 139.7 205.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Indicator LED"
+      (at 139.7 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_e34ac0b44a"
+      (at 139.7 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 139.7 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid e57024f3-9757-5633-bfb9-5a133a56d2a6))
+    (pin "2"
+      (uuid f1c4fb66-7da2-5804-8c2c-5f718cc3df60))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "LED7")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 227.33 208.28)
+      (xy 222.25 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a01ec105-8612-50d1-9e56-3687a33a42d8))
+  (global_label "$2N6317"
+    (shape bidirectional)
+    (at 222.25 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid ec6d5b7e-12a8-5324-811a-6d371568ed58))
+  (wire
+    (pts
+      (xy 234.95 208.28)
+      (xy 240.03 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 9f5259d5-12f7-5191-8e74-075f3db39fe9))
+  (global_label "$2N800"
+    (shape bidirectional)
+    (at 240.03 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 7781d971-3c01-53fa-b4f1-5db694f6a912))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_LED8")
+    (at 231.14 208.28 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9f0015a5-70e7-50cb-9186-3f9a7da19e10)
+    (property "Reference" "LED8"
+      (at 231.14 205.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Indicator LED"
+      (at 231.14 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_e34ac0b44a"
+      (at 231.14 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 231.14 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 9b598702-007b-54c5-ad25-d4b9620a0038))
+    (pin "2"
+      (uuid 648b1e1f-ef7e-544c-8cc9-7402fb571a63))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "LED8")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 318.77 208.28)
+      (xy 313.69 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 41b89de0-5a25-57c2-8593-556553058cee))
+  (global_label "$2N86"
+    (shape bidirectional)
+    (at 313.69 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid db9d64a6-f786-571a-8506-303f2363ff74))
+  (wire
+    (pts
+      (xy 326.39 208.28)
+      (xy 331.47 208.28))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8249dc8e-003c-5fd2-9490-65207ef876cd))
+  (global_label "$2N798"
+    (shape bidirectional)
+    (at 331.47 208.28 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 032e8184-7aa0-530f-bb86-328b806d1779))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_LED11")
+    (at 322.58 208.28 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0eb05841-585b-51b2-93a5-056cf6dd280c)
+    (property "Reference" "LED11"
+      (at 322.58 205.74 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Indicator LED"
+      (at 322.58 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_e43d4fc42e"
+      (at 322.58 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 322.58 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid a486c715-ccb6-559a-9145-53f8ff88d2e7))
+    (pin "2"
+      (uuid 2cfe51a9-4131-5909-a255-0e46040c0179))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "LED11")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 44.45 238.76)
+      (xy 39.37 238.76))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 41fec65d-0d1e-5066-9057-ca515c8c345a))
+  (global_label "$2N6624"
+    (shape bidirectional)
+    (at 39.37 238.76 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid ff986076-2139-5a13-8f0f-3804683ce8d1))
+  (wire
+    (pts
+      (xy 52.07 238.76)
+      (xy 57.15 238.76))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e121ae92-6251-5f80-921a-245c1bba081b))
+  (global_label "$2N801"
+    (shape bidirectional)
+    (at 57.15 238.76 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid db7094ed-b006-5d89-a2f1-7ccd0a5650d5))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_LED12")
+    (at 48.26 238.76 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0cf250df-48da-57a5-931c-bf004f5c64f0)
+    (property "Reference" "LED12"
+      (at 48.26 236.22 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Indicator LED"
+      (at 48.26 241.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_e34ac0b44a"
+      (at 48.26 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 48.26 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 5c88a4fc-2964-548b-aedc-76e02929ecd6))
+    (pin "2"
+      (uuid 3f5fb932-5639-5cfc-9579-332a6412a8cb))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/ef4b95e0-38e6-5d91-961c-489c9fbddac1"
+          (reference "LED12")
+          (unit 1))))))

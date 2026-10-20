@@ -1,0 +1,30 @@
+TX: get status
+RX:
+Smoothie
+ok
+<Idle|MPos:0.0000,0.0000,0.0000,0.0000,0.0000|WPos:0.0000,0.0000,0.0000|F:60.0,100.0>
+
+
+TX: M119
+RX:
+X_min:0 Y_min:0 Z_min:0 pins- (X)P1.24:0 (Y)P1.26:0 (Z)P1.28:0 
+ok
+
+TX: M503
+RX:
+; No config override
+;Steps per unit:
+M92 X80.00000 Y80.00000 Z168.00000 A17.77770 B17.77770 
+;Acceleration mm/sec^2:
+M204 S10000.00000 X6000.00000 Y3000.00000 Z15000.00000 A10000.00000 B10000.00000 
+;X- Junction Deviation, Z- Z junction deviation, S - Minimum Planner speed mm/sec:
+M205 X0.00500 Z-1.00000 S0.00000
+;Max cartesian feedrates in mm/sec:
+M203 X1000.00000 Y800.00000 Z3333.33325 S-1.00000
+;Max actuator feedrates in mm/sec:
+M203.1 X1000.00000 Y800.00000 Z595.00000 A3333.33325 B3333.33325 
+;Home offset (mm):
+M206 X0.00 Y0.00 Z0.00 
+
+ok
+

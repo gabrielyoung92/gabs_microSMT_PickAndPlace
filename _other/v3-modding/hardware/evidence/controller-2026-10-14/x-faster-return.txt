@@ -1,0 +1,44 @@
+TX: get status
+RX:
+Smoothie
+ok
+<Idle|MPos:10.0000,0.0000,0.0000,0.0000,0.0000|WPos:10.0000,0.0000,0.0000|F:120.0,100.0>
+
+
+TX: G21
+RX:
+ok
+
+TX: G91
+RX:
+ok
+
+TX: M204 X50
+RX:
+ok
+
+TX: G1 X-10 F600
+RX:
+ok
+
+TX: M400
+RX:
+ok
+
+TX: G90
+RX:
+ok
+
+TX: M204 X6000
+RX:
+ok
+
+TX: M114
+RX:
+ok C: X:0.0000 Y:0.0000 Z:0.0000 A:0.0000 B:0.0000
+
+TX: get status
+RX:
+<Idle|MPos:0.0000,0.0000,0.0000,0.0000,0.0000|WPos:0.0000,0.0000,0.0000|F:600.0,100.0>
+
+

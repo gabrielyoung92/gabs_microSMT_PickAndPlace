@@ -1,0 +1,17 @@
+{
+  "archives": [
+    "busbar_n1_n8",
+    "busbar_n9_n16"
+  ],
+  "identical_ordered_geometry_by_layer": {
+    "F.Cu": true,
+    "B.Cu": true,
+    "F.SilkS": true,
+    "B.SilkS": true,
+    "F.Mask": true,
+    "B.Mask": true,
+    "Edge.Cuts": true
+  },
+  "identical_drills": true,
+  "identical_flying_probe_data": true
+}

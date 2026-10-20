@@ -1,0 +1,4 @@
+(fp_lib_table
+ (version 7)
+ (lib (name "MicroSMT_Motherboard")(type "KiCad")(uri "${KIPRJMOD}/../libraries/MicroSMT_Motherboard.pretty")(options "")(descr "Pad geometry recovered from the preserved CAM exports"))
+)

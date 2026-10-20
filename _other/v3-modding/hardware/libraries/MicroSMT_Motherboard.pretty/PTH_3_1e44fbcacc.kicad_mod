@@ -1,0 +1,85 @@
+(footprint "PTH_3_1e44fbcacc"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "3416559c-ce26-4fba-b1fa-a24d610fed88")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "AOT240L"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2cc61b09-f5d0-4555-8921-4255623176eb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4038e6a9-6718-431e-8058-b41570997385")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6153b366-0366-468d-babd-c1b2dc3cd35f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(pad "D" thru_hole oval
+		(at 0 2.54)
+		(size 1.8161 3.63195)
+		(drill oval 1.016 1.02108)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.050799)
+		(thermal_bridge_angle 45)
+		(uuid "43743689-75cd-4e6c-a020-c54d7543e2ac")
+	)
+	(pad "G" thru_hole oval
+		(at -2.54 2.54)
+		(size 1.8161 3.63195)
+		(drill oval 1.016 1.02108)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.050799)
+		(thermal_bridge_angle 45)
+		(uuid "3b4b0e39-07fb-4697-a774-9e9037904dae")
+	)
+	(pad "S" thru_hole oval
+		(at 2.54 2.54)
+		(size 1.8161 3.63195)
+		(drill oval 1.016 1.02108)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(solder_mask_margin 0.050799)
+		(thermal_bridge_angle 45)
+		(uuid "f8233fea-cf19-42b9-9739-c0e7504aa21a")
+	)
+	(embedded_fonts no)
+)

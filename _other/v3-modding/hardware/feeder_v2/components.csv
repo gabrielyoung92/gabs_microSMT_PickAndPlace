@@ -1,0 +1,43 @@
+Reference,Value,Recovered footprint,Pad count,Inferred reference
+C1,100nF,MicroSMT_Recovered:SMD_2_4654a48235,2,False
+C2,100nF,MicroSMT_Recovered:SMD_2_6acc588369,2,False
+C3,100nF,MicroSMT_Recovered:SMD_2_2eba8715d4,2,False
+C4,100nF,MicroSMT_Recovered:SMD_2_4654a48235,2,False
+C5,100nF,MicroSMT_Recovered:SMD_2_4654a48235,2,False
+C6,22pF,MicroSMT_Recovered:SMD_2_6acc588369,2,False
+C7,100nF,MicroSMT_Recovered:SMD_2_d7f3dab159,2,False
+C8,22pF,MicroSMT_Recovered:SMD_2_d7f3dab159,2,False
+C9,100nF,MicroSMT_Recovered:SMD_2_4654a48235,2,False
+C10,100nF,MicroSMT_Recovered:SMD_2_4654a48235,2,False
+C11,100nF,MicroSMT_Recovered:SMD_2_6acc588369,2,False
+C12,100nF,MicroSMT_Recovered:SMD_2_ea9585d00e,2,False
+C13,100nF,MicroSMT_Recovered:SMD_2_ea9585d00e,2,False
+C14,100nF,MicroSMT_Recovered:SMD_2_73e6f4f0fe,2,False
+C15,100nF,MicroSMT_Recovered:SMD_2_ea9585d00e,2,False
+C16,100uF,MicroSMT_Recovered:SMD_2_ec123379e2,2,False
+C17,100uF,MicroSMT_Recovered:SMD_2_6e07a3e01f,2,False
+C18,100nF,MicroSMT_Recovered:SMD_2_9b88676047,2,False
+CN1,EE-SX672 interface,MicroSMT_Recovered:PTH_3_4a05049ecf,3,False
+D1,SS34,MicroSMT_Recovered:SMD_2_2eb83b068d,2,False
+H1,Host interface,MicroSMT_Recovered:PTH_4_349c8e8e96,4,False
+H2,SWD,MicroSMT_Recovered:PTH_4_b36c63a0fc,4,False
+LED1,3V3,MicroSMT_Recovered:SMD_2_d3d32b5ec5,2,False
+LED2,Status,MicroSMT_Recovered:SMD_2_90d08f57e1,2,False
+LED3,5V,MicroSMT_Recovered:SMD_2_4c3ddea3bf,2,False
+R1,10k,MicroSMT_Recovered:SMD_2_0ab8a8e8a3,2,False
+R2,10k,MicroSMT_Recovered:SMD_2_d2af6b9a79,2,False
+R3,10k,MicroSMT_Recovered:SMD_2_d2af6b9a79,2,False
+R4,510,MicroSMT_Recovered:SMD_2_a94b28ce2e,2,False
+R5,510,MicroSMT_Recovered:SMD_2_b14ba15cf3,2,False
+R6,510,MicroSMT_Recovered:SMD_2_d2af6b9a79,2,False
+SW1,TS-1093A-A6B2-D2,MicroSMT_Recovered:PTH_4_230f0c19bc,4,False
+U1,AMS1117-3.3,MicroSMT_Recovered:SMD_4_f5cc46188f,4,False
+U2,STM32C8T6,MicroSMT_Recovered:SMD_48_5916ba93e4,48,False
+U3,TC1508A,MicroSMT_Recovered:SMD_16_ae7b02a39a,16,False
+U4,Motor 1,MicroSMT_Recovered:PTH_2_ae613bcbab,2,False
+U5,Motor 2,MicroSMT_Recovered:PTH_2_ae613bcbab,2,False
+X1,8MHz,MicroSMT_Recovered:PTH_2_5813266c9b,2,False
+MH1,Plated mounting hole 2.5mm,MicroSMT_Recovered:PTH_1_75dcf4be66,1,True
+MH2,Plated mounting hole 2.5mm,MicroSMT_Recovered:PTH_1_75dcf4be66,1,True
+MH3,Plated mounting hole 2.5mm,MicroSMT_Recovered:PTH_1_75dcf4be66,1,True
+MH4,Plated mounting hole 2.5mm,MicroSMT_Recovered:PTH_1_75dcf4be66,1,True

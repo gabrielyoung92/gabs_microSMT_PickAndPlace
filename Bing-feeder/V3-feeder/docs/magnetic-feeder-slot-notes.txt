@@ -1,0 +1,1 @@
+1：You can array 1-bit files according to the number of slots you need.

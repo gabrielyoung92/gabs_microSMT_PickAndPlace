@@ -1,0 +1,219 @@
+ORIGINAL NUMBERED PRINT LIST - MACHINE AND V3 FEEDERS
+
+Recovered from the file inventory taken before the October 17 cleanup.
+Original documents: 3d_print.md and 3d/README.md.
+Numbers, filenames, planned quantities and filename labels are preserved.
+DONE/NONE reflect the old filename labels; quantities are planned quantities,
+not a recovered count of actual printed pieces. The printing diary is not included.
+
+Ranges: 1-28 machine; 29-54 8mm feeders; 55-95 wider feeders; 96-102 strip feeders.
+
+ ID  Planned  Old label  Part
+---  -------  ---------  ----
+  1        1  DONE       motherboard-fixing-plate
+  2        0  NONE       motherboard-hooks-ALTERNATIVE-to-01
+  3        1  DONE       homing-fiducial
+  4        4  DONE       PCB-bracket
+  5        1  DONE       CP45-nozzle-rack-left
+  6        1  DONE       CP45-nozzle-rack-right
+  7        4  DONE       CP45-nozzle-holder-clamps
+  8        2  DONE       power-supply-hook
+  9        0  NONE       top-camera-plate-CHECK-aluminium-upgrade
+ 10        1  DONE       low-noise-pump-retainer
+ 11        1  DONE       low-noise-pump-retainer-L
+ 12        1  DONE       X-axis-anti-collision
+ 13        1  DONE       X-axis-endstop-striker
+ 14        1  DONE       X-axis-endstop-switch-mount
+ 15        2  DONE       Y-axis-drag-chain-hook
+ 16        1  DONE       Y-axis-endstop-striker
+ 17        1  DONE       Y-axis-endstop-switch-mount
+ 18        1  DONE       Z-axis-endstop-striker
+ 19        1  DONE       Z-axis-motor-cover
+ 20        1  DONE       AC-power-socket-mount
+ 21        1  DONE       mounter-cover
+ 22        1  DONE       Mega2560-controller-box
+ 23        6  DONE       synchronous-wheel-limit
+ 24        1  DONE       vertical-detection-board
+ 25        1  DONE       bottom-camera-fixing-plate-V2.1
+ 26        1  DONE       bottom-camera-trim-cover-V2.1
+ 27        1  DONE       bottom-camera-LED-diffuser-V2.1
+ 28        0  NONE       standard-pump-retainer-NOT-low-noise
+ 29       30  DONE       13mm-spool-hook
+ 30        0  NONE       8mm-feeder-slot-Magnetic-1bit
+ 31        0  NONE       8mm-feeder-slot-Magnetic-3bit
+ 32        6  DONE       8mm-feeder-slot-Magnetic-8bit
+ 33        0  NONE       8mm-holder-1bit
+ 34        0  NONE       8mm-holder-3bit
+ 35        6  DONE       8mm-holder-8-bit
+ 36        0  NONE       45T-gear-with-4-9-4-684ZZ-bearing
+ 37       20  DONE       45T-gear
+ 38       20  DONE       55T-gear
+ 39       20  DONE       Switching-trigger
+ 40       20  unmarked   Trigger-cover
+ 41       20  DONE       bing-feeder-8mm-V3-Spring-support-plate
+ 42       20  DONE       bing-feeder-8mm-V3-Sprocket-cover
+ 43       20  DONE       bing-feeder-8mm-V3-pcb-cover
+ 44       20  DONE       bing-feeder-8mm-V3-tape-cover
+ 45       20  unmarked   bing-feeder-8mm-V3-main
+ 46        1  DONE       spool-hook-A-version
+ 47        1  DONE       spool-hook-B-version
+ 48       20  DONE       0.7m-10W-13L-worm
+ 49       20  DONE       0.7m-15T-6mm-gear
+ 50       20  DONE       0.7m-16T-6mm-gear
+ 51       20  DONE       16T-gear-bracket
+ 52       20  unmarked   Worm-motor-support
+ 53       12  DONE       BUSbar-PCB-hook
+ 54        0  NONE       Mega2560-box-DUPLICATE-use-22
+ 55        0  NONE       11.5mm-Tape-bracket
+ 56        7  unmarked   12mm-main-body
+ 57        7  unmarked   12mm-PCB-cover
+ 58        7  unmarked   12mm-Switch-cover
+ 59        7  DONE       12mm-Switching-trigger
+ 60        7  DONE       12mm-tape-cover
+ 61        7  DONE       45T
+ 62        7  DONE       55T
+ 63        7  DONE       0.7m-10W-13L-worm
+ 64        7  DONE       12mm-16T-gear-bracket
+ 65        7  DONE       12mm-0.7m-15T-10mm-gear
+ 66        7  DONE       12mm-0.7m-16T-10mm-gear
+ 67        7  DONE       12mm-Worm-motor-support
+ 68        0  NONE       13mm-Tape-bracket
+ 69        3  DONE       16mm-main-body
+ 70        3  DONE       0.7m-10W-13L-worm
+ 71        3  DONE       0.7m-15T-14mm-gear
+ 72        3  DONE       0.7m-16T-14mm-gear
+ 73        3  DONE       16mm-16T-gear-bracket
+ 74        3  DONE       16mm-Worm-motor-support
+ 75        3  DONE       16mm-PCB-cover
+ 76        3  DONE       16mm-Switch-cover
+ 77        3  DONE       16mm-Switching-trigger
+ 78        3  DONE       16mm-tape-cover
+ 79        3  DONE       45T
+ 80        3  DONE       55T
+ 81        0  NONE       24mm-main-body
+ 82        0  NONE       0.7m-10W-13L-worm
+ 83        0  NONE       24mm-16T-gear-bracket
+ 84        0  NONE       24mm-0.7m-15T-22mm-gear
+ 85        0  NONE       24mm-0.7m-16T-22mm-gear
+ 86        0  NONE       24mm-Worm-motor-support
+ 87        0  NONE       24mm-PCB-cover
+ 88        0  NONE       24mm-Switch-cover
+ 89        0  NONE       24mm-Switching-trigger
+ 90        0  NONE       24mm-tape-cover
+ 91        0  NONE       45T
+ 92        0  NONE       55T
+ 93        7  DONE       V2-12mm-feeder-slot-Magnetic-1bit
+ 94        3  DONE       V2-16mm-feeder-slot-Magnetic-1bit
+ 95        0  NONE       V2-24mm-feeder-slot-Magnetic-1bit
+ 96        1  unmarked   strip-feeder-8mm-1bit
+ 97        1  unmarked   strip-feeder-8mm-2bit
+ 98        1  unmarked   strip-feeder-8mm-3bit
+ 99        1  unmarked   strip-feeder-8mm-4bit
+100        1  unmarked   strip-feeder-12mm-1bit
+101        1  unmarked   strip-feeder-16mm-1bit
+102        1  unmarked   strip-feeder-24mm-1bit
+
+ORIGINAL FILENAMES
+
+DONE_01-1pcs-motherboard-fixing-plate.stl
+NONE_02-0pcs-motherboard-hooks-ALTERNATIVE-to-01.stl
+DONE_03-1pcs-homing-fiducial.stl
+DONE_04-4pcs-PCB-bracket.stl
+DONE_05-1pcs-CP45-nozzle-rack-left.stl
+DONE_06-1pcs-CP45-nozzle-rack-right.stl
+DONE_07-4pcs-CP45-nozzle-holder-clamps.stl
+DONE_08-2pcs-power-supply-hook.stl
+NONE_09-0pcs-top-camera-plate-CHECK-aluminium-upgrade.stl
+DONE_10-1pcs-low-noise-pump-retainer.stl
+DONE_11-1pcs-low-noise-pump-retainer-L.stl
+DONE_12-1pcs-X-axis-anti-collision.stl
+DONE_13-1pcs-X-axis-endstop-striker.stl
+DONE_14-1pcs-X-axis-endstop-switch-mount.stl
+DONE_15-2pcs-Y-axis-drag-chain-hook.stl
+DONE_16-1pcs-Y-axis-endstop-striker.stl
+DONE_17-1pcs-Y-axis-endstop-switch-mount.stl
+DONE_18-1pcs-Z-axis-endstop-striker.stl
+DONE_19-1pcs-Z-axis-motor-cover.stl
+DONE_20-1pcs-AC-power-socket-mount.stl
+DONE_21-1pcs-mounter-cover.stl
+DONE_22-1pcs-Mega2560-controller-box.stl
+DONE_23-6pcs-synchronous-wheel-limit.stl
+DONE_24-1pcs-vertical-detection-board.stl
+DONE_25-1pcs-bottom-camera-fixing-plate-V2.1.stl
+DONE_26-1pcs-bottom-camera-trim-cover-V2.1.stl
+DONE_27-1pcs-bottom-camera-LED-diffuser-V2.1.stl
+NONE_28-0pcs-standard-pump-retainer-NOT-low-noise.stl
+DONE_29-30pcs-13mm-spool-hook.stl
+NONE_30-0pcs-8mm-feeder-slot-Magnetic-1bit.stl
+NONE_31-0pcs-8mm-feeder-slot-Magnetic-3bit.stl
+DONE_32-6pcs-8mm-feeder-slot-Magnetic-8bit.stl
+NONE_33-0pcs-8mm-holder-1bit.stl
+NONE_34-0pcs-8mm-holder-3bit.stl
+DONE_35-6pcs-8mm-holder-8-bit.stl
+NONE_36-0pcs-45T-gear-with-4-9-4-684ZZ-bearing.stl
+DONE_37-20pcs-45T-gear.stl
+DONE_38-20pcs-55T-gear.stl
+DONE_39-20pcs-Switching-trigger.stl
+40-20pcs-Trigger-cover.stl
+DONE_41-20pcs-bing-feeder-8mm-V3-Spring-support-plate.stl
+DONE_42-20pcs-bing-feeder-8mm-V3-Sprocket-cover.stl
+DONE_43-20pcs-bing-feeder-8mm-V3-pcb-cover.stl
+DONE_44-20pcs-bing-feeder-8mm-V3-tape-cover.stl
+45-20pcs-bing-feeder-8mm-V3-main.stl
+DONE_46-1pcs-spool-hook-A-version.stl
+DONE_47-1pcs-spool-hook-B-version.stl
+DONE_48-20pcs-0.7m-10W-13L-worm.stl
+DONE_49-20pcs-0.7m-15T-6mm-gear.stl
+DONE_50-20pcs-0.7m-16T-6mm-gear.stl
+DONE_51-20pcs-16T-gear-bracket.stl
+52-20pcs-Worm-motor-support.stl
+DONE_53-12pcs-BUSbar-PCB-hook.stl
+NONE_54-0pcs-Mega2560-box-DUPLICATE-use-22.stl
+NONE_55-0pcs-11.5mm-Tape-bracket.stl
+56-7pcs-12mm-main-body.stl
+57-7pcs-12mm-PCB-cover.stl
+58-7pcs-12mm-Switch-cover.stl
+DONE_59-7pcs-12mm-Switching-trigger.stl
+DONE_60-7pcs-12mm-tape-cover.stl
+DONE_61-7pcs-45T.stl
+DONE_62-7pcs-55T.stl
+DONE_63-7pcs-0.7m-10W-13L-worm.stl
+DONE_64-7pcs-12mm-16T-gear-bracket.stl
+DONE_65-7pcs-12mm-0.7m-15T-10mm-gear.stl
+DONE_66-7pcs-12mm-0.7m-16T-10mm-gear.stl
+DONE_67-7pcs-12mm-Worm-motor-support.stl
+NONE_68-0pcs-13mm-Tape-bracket.stl
+DONE_69-3pcs-16mm-main-body.stl
+DONE_70-3pcs-0.7m-10W-13L-worm.stl
+DONE_71-3pcs-0.7m-15T-14mm-gear.stl
+DONE_72-3pcs-0.7m-16T-14mm-gear.stl
+DONE_73-3pcs-16mm-16T-gear-bracket.stl
+DONE_74-3pcs-16mm-Worm-motor-support.stl
+DONE_75-3pcs-16mm-PCB-cover.stl
+DONE_76-3pcs-16mm-Switch-cover.stl
+DONE_77-3pcs-16mm-Switching-trigger.stl
+DONE_78-3pcs-16mm-tape-cover.stl
+DONE_79-3pcs-45T.stl
+DONE_80-3pcs-55T.stl
+NONE_81-0pcs-24mm-main-body.stl
+NONE_82-0pcs-0.7m-10W-13L-worm.stl
+NONE_83-0pcs-24mm-16T-gear-bracket.stl
+NONE_84-0pcs-24mm-0.7m-15T-22mm-gear.stl
+NONE_85-0pcs-24mm-0.7m-16T-22mm-gear.stl
+NONE_86-0pcs-24mm-Worm-motor-support.stl
+NONE_87-0pcs-24mm-PCB-cover.stl
+NONE_88-0pcs-24mm-Switch-cover.stl
+NONE_89-0pcs-24mm-Switching-trigger.stl
+NONE_90-0pcs-24mm-tape-cover.stl
+NONE_91-0pcs-45T.stl
+NONE_92-0pcs-55T.stl
+DONE_93-7pcs-V2-12mm-feeder-slot-Magnetic-1bit.stl
+DONE_94-3pcs-V2-16mm-feeder-slot-Magnetic-1bit.stl
+NONE_95-0pcs-V2-24mm-feeder-slot-Magnetic-1bit.stl
+96-1pcs-strip-feeder-8mm-1bit.stl
+97-1pcs-strip-feeder-8mm-2bit.stl
+98-1pcs-strip-feeder-8mm-3bit.stl
+99-1pcs-strip-feeder-8mm-4bit.stl
+100-1pcs-strip-feeder-12mm-1bit.stl
+101-1pcs-strip-feeder-16mm-1bit.stl
+102-1pcs-strip-feeder-24mm-1bit.stl

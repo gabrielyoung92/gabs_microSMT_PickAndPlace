@@ -1,0 +1,118 @@
+TX: get status
+RX:
+Smoothie
+ok
+<Idle|MPos:0.0000,0.0000,0.0000,0.0000,0.0000|WPos:0.0000,0.0000,0.0000|F:600.0,100.0>
+
+
+TX: M119
+RX:
+X_min:0 Y_min:0 Z_min:0 pins- (X)P1.24:0 (Y)P1.26:0 (Z)P1.28:0 
+ok
+
+TX: G21
+RX:
+ok
+
+TX: G90
+RX:
+ok
+
+TX: M203 X10 Y10 Z2
+RX:
+ok
+
+TX: M203.1 X10 Y10 Z2
+RX:
+ok
+
+TX: M204 X20 Y20 Z20
+RX:
+ok
+
+TX: M503
+RX:
+; No config override
+;Steps per unit:
+M92 X80.00000 Y80.00000 Z168.00000 A17.77770 B17.77770 
+;Acceleration mm/sec^2:
+M204 S10000.00000 X20.00000 Y20.00000 Z20.00000 A10000.00000 B10000.00000 
+;X- Junction Deviation, Z- Z junction deviation, S - Minimum Planner speed mm/sec:
+M205 X0.00500 Z-1.00000 S0.00000
+;Max cartesian feedrates in mm/sec:
+M203 X10.00000 Y10.00000 Z2.00000 S-1.00000
+;Max actuator feedrates in mm/sec:
+M203.1 X10.00000 Y10.00000 Z2.00000 A3333.33325 B3333.33325 
+;Home offset (mm):
+M206 X0.00 Y0.00 Z0.00 
+
+ok
+
+TX: G28 Z
+RX: ok
+RX trailing:
+
+TX: get status
+RX:
+<Idle|MPos:0.0000,0.0000,0.0000,0.0000,0.0000|WPos:0.0000,0.0000,0.0000|F:600.0,100.0>
+
+
+TX: M119
+RX:
+X_min:0 Y_min:0 Z_min:1 pins- (X)P1.24:0 (Y)P1.26:0 (Z)P1.28:1 
+ok
+
+TX: G28 X
+RX: ok
+RX trailing:
+
+TX: get status
+RX:
+<Idle|MPos:0.0000,0.0000,0.0000,0.0000,0.0000|WPos:0.0000,0.0000,0.0000|F:600.0,100.0>
+
+
+TX: M119
+RX:
+X_min:1 Y_min:0 Z_min:1 pins- (X)P1.24:1 (Y)P1.26:0 (Z)P1.28:1 
+ok
+
+TX: G28 Y
+RX: ok
+RX trailing:
+
+TX: get status
+RX:
+<Idle|MPos:0.0000,0.0000,0.0000,0.0000,0.0000|WPos:0.0000,0.0000,0.0000|F:600.0,100.0>
+
+
+TX: M119
+RX:
+X_min:1 Y_min:1 Z_min:1 pins- (X)P1.24:1 (Y)P1.26:1 (Z)P1.28:1 
+ok
+
+TX: M203 X1000 Y800 Z3333.33325
+RX:
+ok
+
+TX: M203.1 X1000 Y800 Z595
+RX:
+ok
+
+TX: M204 X6000 Y3000 Z15000
+RX:
+ok
+
+TX: M114
+RX:
+ok C: X:0.0000 Y:0.0000 Z:0.0000 A:0.0000 B:0.0000
+
+TX: M119
+RX:
+X_min:1 Y_min:1 Z_min:1 pins- (X)P1.24:1 (Y)P1.26:1 (Z)P1.28:1 
+ok
+
+TX: get status
+RX:
+<Idle|MPos:0.0000,0.0000,0.0000,0.0000,0.0000|WPos:0.0000,0.0000,0.0000|F:600.0,100.0>
+
+

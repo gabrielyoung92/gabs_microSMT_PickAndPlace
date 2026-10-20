@@ -1,0 +1,348 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid d1067084-0be0-5fb8-98aa-888090bcf7a2)
+  (paper "A3")
+  (title_block
+    (title "MicroSMT LPC1769 motherboard - recovered reference")
+    (rev "Reference"))
+  (lib_symbols)
+  (text "MicroSMT motherboard / editable reference reconstruction"
+    (at 20.32 20.32 0)
+    (effects
+      (font
+        (size 2.2 2.2))
+      (justify left top))
+    (uuid 7ca19895-7d31-5f42-9818-993c1ae81a1d))
+  (text "Four-layer copper, component pads and net identities follow the preserved CAM export.\nSheet symbols open the functional reference pages. Global labels connect pages.\nDedicated UART0 RX/TX remain reserved. Feeder GPIO and vacuum ADC choices are provisional.\nRead README.md, recovery.json, validation.json and PIN_AUDIT.md before modifications."
+    (at 20.32 33.02 0)
+    (effects
+      (font
+        (size 1.35 1.35))
+      (justify left top))
+    (uuid ac9613a8-a16b-5735-bee5-46483f27541b))
+  (sheet
+    (at 20.32 73.66)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 163c8ac4-370c-5ffa-b32e-05af48dcab6b)
+    (property "Sheetname" "01 - LPC1769 pin map / reserved UART / expansion"
+      (at 20.32 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "mcu.kicad_sch"
+      (at 20.32 97.78999999999999 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "2")))))
+  (sheet
+    (at 149.85999999999999 73.66)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid a6cb99ee-6702-52f7-9d24-0ee348211b3d)
+    (property "Sheetname" "02 - Stepper channel 1 / source module contacts"
+      (at 149.85999999999999 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "stepper_1.kicad_sch"
+      (at 149.85999999999999 97.78999999999999 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "3")))))
+  (sheet
+    (at 279.4 73.66)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 67ff9065-1b2b-5457-b928-7a552018f88d)
+    (property "Sheetname" "03 - Stepper channel 2 / source module contacts"
+      (at 279.4 72.39 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "stepper_2.kicad_sch"
+      (at 279.4 97.78999999999999 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "4")))))
+  (sheet
+    (at 20.32 109.22)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 84621ec8-bc43-5575-8506-c676b433602b)
+    (property "Sheetname" "04 - Stepper channel 3 / source module contacts"
+      (at 20.32 107.95 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "stepper_3.kicad_sch"
+      (at 20.32 133.35 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "5")))))
+  (sheet
+    (at 149.85999999999999 109.22)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 59a3fd25-da7b-5a22-825c-aa3c0a71a74b)
+    (property "Sheetname" "05 - Stepper channel 4 / source module contacts"
+      (at 149.85999999999999 107.95 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "stepper_4.kicad_sch"
+      (at 149.85999999999999 133.35 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "6")))))
+  (sheet
+    (at 279.4 109.22)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid d9af2443-fb3c-5e80-af03-10f61013be12)
+    (property "Sheetname" "06 - Stepper channel 5 / source module contacts"
+      (at 279.4 107.95 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "stepper_5.kicad_sch"
+      (at 279.4 133.35 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "7")))))
+  (sheet
+    (at 20.32 144.78)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid a9b33b6c-3c40-5058-b651-6125d433bfa7)
+    (property "Sheetname" "07 - Digital current references"
+      (at 20.32 143.51 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "digipots.kicad_sch"
+      (at 20.32 168.91 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "8")))))
+  (sheet
+    (at 149.85999999999999 144.78)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid e7296070-4283-50bb-a4a0-d4e14c9b0c45)
+    (property "Sheetname" "08 - Endstop input conditioning"
+      (at 149.85999999999999 143.51 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "endstops.kicad_sch"
+      (at 149.85999999999999 168.91 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "9")))))
+  (sheet
+    (at 279.4 144.78)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid c3ce9c04-1279-5931-bd5d-3d5f7154ec99)
+    (property "Sheetname" "09 - USB / SD / UART / buttons / status"
+      (at 279.4 143.51 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "interfaces.kicad_sch"
+      (at 279.4 168.91 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "10")))))
+  (sheet
+    (at 20.32 180.34)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 9d7512c3-3aad-5b36-8eb1-ab432f608c30)
+    (property "Sheetname" "10 - Supply input / regulators / protection"
+      (at 20.32 179.07 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "power_input.kicad_sch"
+      (at 20.32 204.47 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "11")))))
+  (sheet
+    (at 149.85999999999999 180.34)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid ef4b95e0-38e6-5d91-961c-489c9fbddac1)
+    (property "Sheetname" "11 - Switched power outputs / gate drivers"
+      (at 149.85999999999999 179.07 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "power_outputs.kicad_sch"
+      (at 149.85999999999999 204.47 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "12")))))
+  (sheet
+    (at 279.4 180.34)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid ad91f05b-d59a-5107-8ce3-8922814f5b65)
+    (property "Sheetname" "12 - Output gate / indicator resistors"
+      (at 279.4 179.07 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "output_resistors.kicad_sch"
+      (at 279.4 204.47 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "13")))))
+  (sheet
+    (at 20.32 215.9)
+    (size 116.84 22.86)
+    (stroke
+      (width 0.254)
+      (type default))
+    (fill
+      (color 0 0 0 0))
+    (uuid 66638094-b0c7-51c4-934b-781f5d4fc87f)
+    (property "Sheetname" "13 - MCU decoupling / clock / status passives"
+      (at 20.32 214.63 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left bottom)))
+    (property "Sheetfile" "mcu_support.kicad_sch"
+      (at 20.32 240.03 0)
+      (effects
+        (font
+          (size 1.0 1.0))
+        (justify left top)))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2"
+          (page "14"))))))

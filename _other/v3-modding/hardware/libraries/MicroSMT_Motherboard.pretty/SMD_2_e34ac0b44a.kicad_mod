@@ -1,0 +1,73 @@
+(footprint "SMD_2_e34ac0b44a"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -2 0)
+		(layer "F.Fab")
+		(uuid "a1d62534-0bf0-48c4-9150-84c37dced3cf")
+		(effects
+			(font
+				(size 0.7 0.7)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Value" "Indicator LED"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "84a0991e-4366-4d55-a8d8-ebc2251b3db2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "409615b6-9711-436b-95cd-1807a6c374df")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8b8e20ce-3585-4f94-beab-fa7ec90058fb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(pad "1" smd rect
+		(at -1.10007 0)
+		(size 1 1.25001)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.050802)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "134a5650-6b79-425a-a1e5-7d70f232bd32")
+	)
+	(pad "2" smd rect
+		(at 1.10007 0)
+		(size 1 1.25001)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.050802)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 45)
+		(uuid "45c21a5e-169c-488a-aca3-10e60bc579f4")
+	)
+	(embedded_fonts no)
+)

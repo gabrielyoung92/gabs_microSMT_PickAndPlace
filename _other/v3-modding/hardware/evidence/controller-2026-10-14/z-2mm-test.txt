@@ -1,0 +1,62 @@
+TX: get status
+RX:
+Smoothie
+ok
+<Idle|MPos:0.0000,0.0000,0.0000,0.0000,0.0000|WPos:0.0000,0.0000,0.0000|F:600.0,100.0>
+
+
+TX: M119
+RX:
+X_min:0 Y_min:0 Z_min:0 pins- (X)P1.24:0 (Y)P1.26:0 (Z)P1.28:0 
+ok
+
+TX: G21
+RX:
+ok
+
+TX: G91
+RX:
+ok
+
+TX: M204 Z20
+RX:
+ok
+
+TX: G1 Z2 F120
+RX:
+ok
+
+TX: M400
+RX:
+ok
+
+TX: G1 Z-2 F120
+RX:
+ok
+
+TX: M400
+RX:
+ok
+
+TX: G90
+RX:
+ok
+
+TX: M204 Z15000
+RX:
+ok
+
+TX: M114
+RX:
+ok C: X:0.0000 Y:0.0000 Z:0.0000 A:0.0000 B:0.0000
+
+TX: M119
+RX:
+X_min:0 Y_min:0 Z_min:0 pins- (X)P1.24:0 (Y)P1.26:0 (Z)P1.28:0 
+ok
+
+TX: get status
+RX:
+<Idle|MPos:0.0000,0.0000,0.0000,0.0000,0.0000|WPos:0.0000,0.0000,0.0000|F:120.0,100.0>
+
+

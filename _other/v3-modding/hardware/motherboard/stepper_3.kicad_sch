@@ -1,0 +1,1694 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid 2f9072ad-1ce5-581e-bbcd-124f2a18d684)
+  (paper "A3")
+  (title_block
+    (title "04 - Stepper channel 3 / source module contacts")
+    (rev "Reference")
+    (comment 1 "CAM nets preserved; component values from supplied PDF")
+    (comment 2 "Reference reconstruction - not a fabrication release"))
+  (lib_symbols
+    (symbol "MicroSMT_Motherboard:Recovered_C91"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0.254))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_C91_0_1"
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762))
+          (stroke
+            (width 0.508)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762))
+          (stroke
+            (width 0.508)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_C91_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_C92"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0.254))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_C92_0_1"
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762))
+          (stroke
+            (width 0.508)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762))
+          (stroke
+            (width 0.508)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_C92_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_C93"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0.254))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (justify left)))
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_C93_0_1"
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762))
+          (stroke
+            (width 0.508)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762))
+          (stroke
+            (width 0.508)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Recovered_C93_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Motherboard:Recovered_H3"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "H"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_H3"
+        (at 0 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_H3_0_1"
+        (rectangle
+          (start -12.7 1.27)
+          (end 12.7 -1.27)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_H3_1_1"
+        (pin passive line
+          (at -17.78 0.0 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 0.0 180)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_JP12"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "JP"
+        (at 0 8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_JP12"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_JP12_0_1"
+        (rectangle
+          (start -12.7 5.08)
+          (end 12.7 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_JP12_1_1"
+        (pin passive line
+          (at -17.78 3.81 0)
+          (length 5.08)
+          (name "GND"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "3V3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "1B"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -3.81 0)
+          (length 5.08)
+          (name "1A"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 3.81 180)
+          (length 5.08)
+          (name "2A"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "2B"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -1.27 180)
+          (length 5.08)
+          (name "GND"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -3.81 180)
+          (length 5.08)
+          (name "VBB"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_JP121"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "JP"
+        (at 0 8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_JP121"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_JP121_0_1"
+        (rectangle
+          (start -12.7 5.08)
+          (end 12.7 -5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_JP121_1_1"
+        (pin passive line
+          (at -17.78 3.81 0)
+          (length 5.08)
+          (name "DIR"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "STEP"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "CURRENT REF"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -3.81 0)
+          (length 5.08)
+          (name "NC"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 3.81 180)
+          (length 5.08)
+          (name "NC"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "5"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "MS2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "6"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -1.27 180)
+          (length 5.08)
+          (name "MS1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "7"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -3.81 180)
+          (length 5.08)
+          (name "EN"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "8"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_JP122"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "JP"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_JP122"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_JP122_0_1"
+        (rectangle
+          (start -12.7 2.54)
+          (end 12.7 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_JP122_1_1"
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_JP123"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "JP"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_JP123"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_JP123_0_1"
+        (rectangle
+          (start -12.7 2.54)
+          (end 12.7 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_JP123_1_1"
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))))
+    (symbol "MicroSMT_Motherboard:Recovered_Z"
+      (pin_names
+        (offset 0.635))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Z"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Recovered_Z"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Recovered_Z_0_1"
+        (rectangle
+          (start -12.7 2.54)
+          (end 12.7 -2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background))))
+      (symbol "Recovered_Z_1_1"
+        (pin passive line
+          (at -17.78 1.27 0)
+          (length 5.08)
+          (name "PAD 1"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "1"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at -17.78 -1.27 0)
+          (length 5.08)
+          (name "PAD 2"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "2"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 1.27 180)
+          (length 5.08)
+          (name "PAD 3"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "3"
+            (effects
+              (font
+                (size 1.0 1.0)))))
+        (pin passive line
+          (at 17.78 -1.27 180)
+          (length 5.08)
+          (name "PAD 4"
+            (effects
+              (font
+                (size 1.0 1.0))))
+          (number "4"
+            (effects
+              (font
+                (size 1.0 1.0))))))))
+  (text "04 - Stepper channel 3 / source module contacts"
+    (at 20.32 17.78 0)
+    (effects
+      (font
+        (size 2.0 2.0))
+      (justify left top))
+    (uuid 0cde38ea-b488-5035-abfd-33ab1d9cab8b))
+  (wire
+    (pts
+      (xy 30.48 52.07)
+      (xy 25.4 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3ee02bd7-48a8-5cd1-8947-c811436dbd4d))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 25.4 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid e66f20a9-6cd3-5f28-835f-a8628842bdbe))
+  (wire
+    (pts
+      (xy 30.48 54.61)
+      (xy 25.4 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a26ee0ee-c64c-59b7-a90c-e8459e79f29f))
+  (global_label "3.3V"
+    (shape bidirectional)
+    (at 25.4 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid ca452e7b-9735-5b26-9a84-09479e4d6415))
+  (wire
+    (pts
+      (xy 30.48 57.15)
+      (xy 25.4 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid c63ab4c7-ec23-5abb-b7d5-55f4adda396e))
+  (global_label "$1N1621"
+    (shape bidirectional)
+    (at 25.4 57.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 1c80b0fe-34f1-57a6-815f-dec87f85232e))
+  (wire
+    (pts
+      (xy 30.48 59.69)
+      (xy 25.4 59.69))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid eadc62a8-ef63-5c65-9bfe-ecb57bdac683))
+  (global_label "$1N1620"
+    (shape bidirectional)
+    (at 25.4 59.69 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 5382463e-e074-5d83-aac1-b13f066e4a7e))
+  (wire
+    (pts
+      (xy 66.04 52.07)
+      (xy 71.12 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a7340629-737d-5e0f-8fea-84569e1b3a59))
+  (global_label "$1N1619"
+    (shape bidirectional)
+    (at 71.12 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 0babf074-63f9-56cc-870f-d590058d3153))
+  (wire
+    (pts
+      (xy 66.04 54.61)
+      (xy 71.12 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e9284e64-5cf0-5b49-bae3-31b66fd3cdca))
+  (global_label "$1N1618"
+    (shape bidirectional)
+    (at 71.12 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 4f6a547e-002c-5fe4-ad91-7ee381a4bd4a))
+  (wire
+    (pts
+      (xy 66.04 57.15)
+      (xy 71.12 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a264dab8-0e4f-5222-8290-7a8e694c4ac9))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 71.12 57.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 994badb4-3950-585e-a917-647fd03cfd7a))
+  (wire
+    (pts
+      (xy 66.04 59.69)
+      (xy 71.12 59.69))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 67b25a49-70de-5d17-a37c-2c26d80a4220))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 71.12 59.69 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid c398a743-47ea-5f20-9739-1beba9f72db0))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_JP12")
+    (at 48.26 55.88 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 43f73cfb-ffb2-597a-abfb-22ccfe83196f)
+    (property "Reference" "JP12"
+      (at 48.26 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Stepper power / motor"
+      (at 48.26 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_8_afccf43519"
+      (at 48.26 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 48.26 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid aa346988-43e6-5773-bacd-0c6e81f77d19))
+    (pin "2"
+      (uuid 918e7abe-f893-5215-8442-9ded332f4176))
+    (pin "3"
+      (uuid cd1596cc-cd84-5c13-a5e7-d84ce1b088c5))
+    (pin "4"
+      (uuid 5aab3740-14ae-5a13-9b1d-e91a86489a79))
+    (pin "5"
+      (uuid c0369051-f323-54d2-938d-f95c0e2b687e))
+    (pin "6"
+      (uuid e708cd3a-8feb-50da-b5d1-0c59035902b9))
+    (pin "7"
+      (uuid 36eea50a-8b91-568f-98f3-4b949d38bbb0))
+    (pin "8"
+      (uuid 85738c92-f6b8-51cb-8dbb-916bc5d72879))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/84621ec8-bc43-5575-8506-c676b433602b"
+          (reference "JP12")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 152.4 52.07)
+      (xy 147.32 52.07))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d0c81a37-88e2-54a5-a213-8c787c078fd6))
+  (global_label "DIR3"
+    (shape bidirectional)
+    (at 147.32 52.07 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 5ba13096-2e38-5f9d-ad6e-5d97f7d1a2ee))
+  (wire
+    (pts
+      (xy 152.4 54.61)
+      (xy 147.32 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ce4fd2c4-9b4e-534b-a7ab-92aa1ea48a6b))
+  (global_label "STP3"
+    (shape bidirectional)
+    (at 147.32 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid f32aab2d-1b8b-5b1d-8ad4-7df2402d52b1))
+  (wire
+    (pts
+      (xy 152.4 57.15)
+      (xy 147.32 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6f51cfc7-1a4c-53c4-8a7a-3f817914e614))
+  (global_label "P2W"
+    (shape bidirectional)
+    (at 147.32 57.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 3c75557f-b38d-5263-8f9a-49afbdd9e88a))
+  (no_connect
+    (at 152.4 59.69)
+    (uuid 9e0f7639-d861-56aa-8862-a2860fa99bb1))
+  (no_connect
+    (at 187.96 52.07)
+    (uuid 60c5e392-fc7e-5e0b-8942-be5030b65333))
+  (wire
+    (pts
+      (xy 187.96 54.61)
+      (xy 193.04 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4c85d32c-96a0-5b33-941b-70e04ec3b4ba))
+  (global_label "MS6"
+    (shape bidirectional)
+    (at 193.04 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 38c6b0ad-5393-5fd9-87e0-f0eaf96c33c0))
+  (wire
+    (pts
+      (xy 187.96 57.15)
+      (xy 193.04 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 590a52e1-48c2-5692-980a-f38f07e4bd8e))
+  (global_label "MS5"
+    (shape bidirectional)
+    (at 193.04 57.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 643e83e1-6fd7-5d3a-a432-fd45f10402ee))
+  (wire
+    (pts
+      (xy 187.96 59.69)
+      (xy 193.04 59.69))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 39ffcece-a10c-519b-965c-b32125e99e34))
+  (global_label "EN3"
+    (shape bidirectional)
+    (at 193.04 59.69 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 46acfa97-4f31-50e6-aee5-f5c17ace9509))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_JP121")
+    (at 170.18 55.88 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 01b352a3-9e15-5607-aaf1-97cfb0e2c672)
+    (property "Reference" "JP121"
+      (at 170.18 46.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Stepper control"
+      (at 170.18 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_8_d11bb50634"
+      (at 170.18 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 170.18 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid b036bebd-47f5-5517-9715-8dda16670ccb))
+    (pin "2"
+      (uuid 28d050f7-6f2c-52f5-a7be-683eefeaf100))
+    (pin "3"
+      (uuid dc706b33-eb51-5da4-b1bc-1dfc74634743))
+    (pin "4"
+      (uuid 031202be-04ab-5f34-be0f-3d8744e46590))
+    (pin "5"
+      (uuid 96a9c6ed-ed0e-5dfe-aade-3ed42b8d9599))
+    (pin "6"
+      (uuid 0eff1fdc-b6b4-5281-bde1-f2b7c02a9768))
+    (pin "7"
+      (uuid f79a03e4-a5c7-5a13-bc1e-eb8cfc88b4e4))
+    (pin "8"
+      (uuid eb440e07-a200-584b-b499-932325103919))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/84621ec8-bc43-5575-8506-c676b433602b"
+          (reference "JP121")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 274.32 54.61)
+      (xy 269.24 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ca00cca6-f524-5cc8-bd50-9d1c3aa94fe0))
+  (global_label "3.3V"
+    (shape bidirectional)
+    (at 269.24 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 4007e4dd-38c3-5393-94fc-0dd53cb646d6))
+  (wire
+    (pts
+      (xy 274.32 57.15)
+      (xy 269.24 57.15))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 50ffae3d-46e7-503c-950c-fa81b13fe8b2))
+  (global_label "MS5"
+    (shape bidirectional)
+    (at 269.24 57.15 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 25608148-e922-5f18-815a-72bedc798705))
+  (wire
+    (pts
+      (xy 309.88 54.61)
+      (xy 314.96 54.61))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid c568cba4-4918-516f-b772-d70f9aec72f3))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 314.96 54.61 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 171159cd-0298-51ad-a1af-f29475ff44f3))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_JP122")
+    (at 292.1 55.88 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3ac7676c-cd69-5824-b009-115432725342)
+    (property "Reference" "JP122"
+      (at 292.1 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Microstep select"
+      (at 292.1 52.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_3_5b13b0b944"
+      (at 292.1 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 55.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid dce9b932-118c-5c84-bee2-ce6ec59a224a))
+    (pin "2"
+      (uuid a2fa1733-4d95-5eaa-ad12-bf3e76a127c9))
+    (pin "3"
+      (uuid 7834ca6d-88ec-5ab7-acde-992bcdf1d3b2))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/84621ec8-bc43-5575-8506-c676b433602b"
+          (reference "JP122")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 30.48 92.71)
+      (xy 25.4 92.71))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid dd309a90-65ed-5401-8fde-5ab315b53599))
+  (global_label "3.3V"
+    (shape bidirectional)
+    (at 25.4 92.71 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid c16b83d4-9d58-55a2-9269-6ffc8184898c))
+  (wire
+    (pts
+      (xy 30.48 95.25)
+      (xy 25.4 95.25))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 06fbfc44-0673-5ca6-92cd-19eccd0a9618))
+  (global_label "MS6"
+    (shape bidirectional)
+    (at 25.4 95.25 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid a25a31e9-c8f2-562a-b090-8b93ef51680b))
+  (wire
+    (pts
+      (xy 66.04 92.71)
+      (xy 71.12 92.71))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 19dda6ec-b8b5-50a8-9d09-488cc2c36e5b))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 71.12 92.71 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid e878862a-f001-5903-b7e7-1771e27aea3f))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_JP123")
+    (at 48.26 93.98 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 45cac881-02c7-569e-ab8a-78b5db76b051)
+    (property "Reference" "JP123"
+      (at 48.26 87.63 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Microstep select"
+      (at 48.26 90.17 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_3_5b13b0b944"
+      (at 48.26 93.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 48.26 93.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid ea7a65f7-e4b0-5c55-ade1-6a1ad8b1d010))
+    (pin "2"
+      (uuid b19065dc-2433-5f84-b1a2-ef046443b94e))
+    (pin "3"
+      (uuid 6be426ec-e283-52da-8f60-a5b551b57f8f))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/84621ec8-bc43-5575-8506-c676b433602b"
+          (reference "JP123")
+          (unit 1)))))
+  (no_connect
+    (at 152.4 93.98)
+    (uuid 7642bfc5-8cdb-5500-ac05-dcaedd9c9f02))
+  (no_connect
+    (at 187.96 93.98)
+    (uuid b034907a-ae22-576b-b78e-da3e52149bb5))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_H3")
+    (at 170.18 93.98 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 77a56e5c-03ac-5bce-ac4d-613f26fb1f65)
+    (property "Reference" "H3"
+      (at 170.18 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Driver supply bypass"
+      (at 170.18 91.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_2_95481293ce"
+      (at 170.18 93.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 170.18 93.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 5a337c72-ca67-50f1-95c3-b0235e3ec23a))
+    (pin "2"
+      (uuid b4736e22-a3e3-5357-8d4e-2b9cddd78985))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/84621ec8-bc43-5575-8506-c676b433602b"
+          (reference "H3")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 274.32 92.71)
+      (xy 269.24 92.71))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 696ae553-1eba-5d19-907b-2e009235c0c9))
+  (global_label "$1N1621"
+    (shape bidirectional)
+    (at 269.24 92.71 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 7c65439a-31dd-512b-bfdd-6f6e99dca92c))
+  (wire
+    (pts
+      (xy 274.32 95.25)
+      (xy 269.24 95.25))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 00aa90bf-0fc9-58e3-9ec5-2356a48cc13e))
+  (global_label "$1N1620"
+    (shape bidirectional)
+    (at 269.24 95.25 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 39a9e711-31fc-5647-bed1-ccfa04caefc6))
+  (wire
+    (pts
+      (xy 309.88 92.71)
+      (xy 314.96 92.71))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid cb8b6965-f20e-5bb5-ae2e-52192bf2f636))
+  (global_label "$1N1619"
+    (shape bidirectional)
+    (at 314.96 92.71 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid a5ac36b3-3080-5db1-b218-b20df4dda0bc))
+  (wire
+    (pts
+      (xy 309.88 95.25)
+      (xy 314.96 95.25))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f11f9e6e-348f-5cca-b27e-78fcee569697))
+  (global_label "$1N1618"
+    (shape bidirectional)
+    (at 314.96 95.25 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 983646c9-6fea-5a8d-bb33-0f27ba700785))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_Z")
+    (at 292.1 93.98 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c2ece000-6e19-5e2f-a8c7-718c17ca6489)
+    (property "Reference" "Z"
+      (at 292.1 87.63 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Motor Z"
+      (at 292.1 90.17 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Motherboard:PTH_4_4a9df80c8d"
+      (at 292.1 93.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 93.98 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 503f3d97-d6cc-5143-96d9-2a8916136ea4))
+    (pin "2"
+      (uuid e1af4ce6-516b-523d-b695-b018effa2942))
+    (pin "3"
+      (uuid a76ddfe3-80bb-53ad-ade5-7a3e9e0b6200))
+    (pin "4"
+      (uuid 3ca09710-78ef-5fc4-92b2-4fc8cd50330d))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/84621ec8-bc43-5575-8506-c676b433602b"
+          (reference "Z")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 48.26 128.27)
+      (xy 48.26 123.19))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5f1bbeaf-eb8d-5c29-8a7e-28235504669b))
+  (global_label "3.3V"
+    (shape bidirectional)
+    (at 48.26 123.19 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 9e66aa79-eab7-576c-8c69-cbc6d3ea42f2))
+  (wire
+    (pts
+      (xy 48.26 135.89)
+      (xy 48.26 140.97))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a928b5a5-f24d-5fe9-a929-c6911d982ee0))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 48.26 140.97 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 3b8bb263-0f30-55d4-a039-8ec89c26c60d))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_C91")
+    (at 48.26 132.08 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid ac0b73c6-d62c-55c4-8352-41b9f507bc28)
+    (property "Reference" "C91"
+      (at 48.895 129.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Unspecified in PDF"
+      (at 48.895 134.62 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_7469f88c6b"
+      (at 49.2252 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 48.26 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid f93cbd60-191c-58cb-abd7-89d9bf8ceb03))
+    (pin "2"
+      (uuid 65adf16b-45d6-5d46-831f-c04d6724e16c))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/84621ec8-bc43-5575-8506-c676b433602b"
+          (reference "C91")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 170.18 128.27)
+      (xy 170.18 123.19))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 09ca28fd-61bf-5199-8217-29f2dfcca5de))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 170.18 123.19 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid cf0f910d-7152-513e-98b9-4ca2dad24fe9))
+  (wire
+    (pts
+      (xy 170.18 135.89)
+      (xy 170.18 140.97))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 52dfeda1-9f93-5cfb-b37e-0939ae51fc38))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 170.18 140.97 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 9bce865d-3fc4-5633-a34f-6c42207c357a))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_C92")
+    (at 170.18 132.08 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f142d6bd-e946-524b-814d-7298c96ee3b5)
+    (property "Reference" "C92"
+      (at 170.815 129.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Unspecified in PDF"
+      (at 170.815 134.62 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_16e3f2cd69"
+      (at 171.1452 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 170.18 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid d3538596-4cef-5b07-9734-80be0bdc399a))
+    (pin "2"
+      (uuid c5869683-4663-5c93-a802-e1d22a89bbf0))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/84621ec8-bc43-5575-8506-c676b433602b"
+          (reference "C92")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 292.1 128.27)
+      (xy 292.1 123.19))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3a6b4f97-c5c2-5e86-8a62-25e1a10b5975))
+  (global_label "VBB"
+    (shape bidirectional)
+    (at 292.1 123.19 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 5cc46794-34ce-57d7-b926-e06cff9d6360))
+  (wire
+    (pts
+      (xy 292.1 135.89)
+      (xy 292.1 140.97))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid cbef1d01-6cf6-56ca-8e3a-37af41eecf9d))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 292.1 140.97 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid cf3463bd-afa4-5500-8bdb-4dcc046e3670))
+  (symbol
+    (lib_id "MicroSMT_Motherboard:Recovered_C93")
+    (at 292.1 132.08 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f9b529c4-b0d0-5b09-985f-9a01b675a74d)
+    (property "Reference" "C93"
+      (at 292.735 129.54 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Value" "Unspecified in PDF"
+      (at 292.735 134.62 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left)))
+    (property "Footprint" "MicroSMT_Motherboard:SMD_2_9e9b85eb98"
+      (at 293.0652 135.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 292.1 132.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid ccbe2516-bdac-5eeb-8c35-68b310b27268))
+    (pin "2"
+      (uuid 2531c855-1af9-5cb7-bf19-8c32987c7f56))
+    (instances
+      (project "motherboard"
+        (path "/d1067084-0be0-5fb8-98aa-888090bcf7a2/84621ec8-bc43-5575-8506-c676b433602b"
+          (reference "C93")
+          (unit 1)))))
+  (text "Module socket pins and source contact numbering are preserved.\nCurrent-reference nets come from the digital potentiometer sheet.\nBypass H connector functions and fitted modules require physical confirmation.\nCapacitors without PDF values are explicitly marked unspecified."
+    (at 20.32 223.52 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid 879f162a-770e-5a3e-b827-62be9472ead4)))

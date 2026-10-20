@@ -1,0 +1,16 @@
+Reference,Value,Recovered footprint,Pad count,Inferred reference
+N1,Feeder slot,MicroSMT_Recovered:PTH_3_73baab2469,3,False
+N2,Feeder slot,MicroSMT_Recovered:PTH_3_f185d45fd5,3,False
+N3,Feeder slot,MicroSMT_Recovered:PTH_3_f0a727b82c,3,False
+N4,Feeder slot,MicroSMT_Recovered:PTH_3_f29aeb013d,3,False
+N5,Feeder slot,MicroSMT_Recovered:PTH_3_40f9a56ae3,3,False
+N6,Feeder slot,MicroSMT_Recovered:PTH_3_2e4f513424,3,False
+N7,Feeder slot,MicroSMT_Recovered:PTH_3_8ca71f247a,3,False
+N8,Feeder slot,MicroSMT_Recovered:PTH_3_1d444e7cb6,3,False
+JREC1,Recovered 2x12 / 2mm header,MicroSMT_Recovered:PTH_24_357941b971,24,True
+JREC2,Recovered 2x12 / 2mm header,MicroSMT_Recovered:PTH_24_a566e0777e,24,True
+MH1,Plated mounting hole 3.3mm,MicroSMT_Recovered:PTH_1_508660c0b4,1,True
+MH2,Plated mounting hole 3.3mm,MicroSMT_Recovered:PTH_1_508660c0b4,1,True
+MH3,Plated mounting hole 3.3mm,MicroSMT_Recovered:PTH_1_508660c0b4,1,True
+MH4,Plated mounting hole 3.3mm,MicroSMT_Recovered:PTH_1_508660c0b4,1,True
+MH5,Plated mounting hole 3.3mm,MicroSMT_Recovered:PTH_1_508660c0b4,1,True

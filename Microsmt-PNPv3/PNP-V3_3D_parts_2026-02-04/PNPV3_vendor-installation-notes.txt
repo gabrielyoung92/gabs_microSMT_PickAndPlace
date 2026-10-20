@@ -1,0 +1,10 @@
+
+1:   https://youtu.be/H-nkwTwpxRA            For easier understanding, Please follow this video for hardware installation and software debug.  We no longer provide paper installation guides.   
+       
+2： microsmt_pnpboard_v1.7_manual-1214.pdf         You  need to read this document in order to correctly connect the cables.
+
+3： Please refer to image 4020-400mm Aluminum profiles.jpg， To determine the direction of this aluminum profile.
+
+4:  Stripe Feeder's  STL file, please download from   https://docs.mgrl.de/maschine:pickandplace:feeder:manualfeeders
+
+5:  For the bottom camera, please use the file: "Bottom camera 3D file-20250822". 

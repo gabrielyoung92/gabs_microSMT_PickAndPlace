@@ -1,0 +1,2441 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (uuid e04634b0-053d-51bf-b50f-f5b883084443)
+  (paper "A3")
+  (title_block
+    (title "BUSBAR N9 N16 - recovered reference")
+    (date "2026-09-21")
+    (rev "recovery-1")
+    (comment 1 "CAM-derived reference; review source discrepancies before redesign or fabrication."))
+  (lib_symbols
+    (symbol "MicroSMT_Recovered:Conn_01x03"
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Conn_01x03"
+        (at 0 -5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "connector"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "Connector*:*_1x??_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Conn_01x03_1_1"
+        (rectangle
+          (start -1.27 3.81)
+          (end 1.27 -3.81)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background)))
+        (rectangle
+          (start -1.27 2.667)
+          (end 0 2.413)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 0.127)
+          (end 0 -0.127)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 -2.413)
+          (end 0 -2.667)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (pin passive line
+          (at -5.08 2.54 0)
+          (length 3.81)
+          (name "Pin_1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "Pin_2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -2.54 0)
+          (length 3.81)
+          (name "Pin_3"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Recovered:Conn_02x12_Odd_Even"
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 1.27 15.24 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Conn_02x12_Odd_Even"
+        (at 1.27 -17.78 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Generic connector, double row, 02x12, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "connector"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "Connector*:*_2x??_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Conn_02x12_Odd_Even_1_1"
+        (rectangle
+          (start -1.27 13.97)
+          (end 3.81 -16.51)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background)))
+        (rectangle
+          (start -1.27 12.827)
+          (end 0 12.573)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 10.287)
+          (end 0 10.033)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 7.747)
+          (end 0 7.493)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 5.207)
+          (end 0 4.953)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 2.667)
+          (end 0 2.413)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 0.127)
+          (end 0 -0.127)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 -2.413)
+          (end 0 -2.667)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 -4.953)
+          (end 0 -5.207)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 -7.493)
+          (end 0 -7.747)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 -10.033)
+          (end 0 -10.287)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 -12.573)
+          (end 0 -12.827)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 -15.113)
+          (end 0 -15.367)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 12.827)
+          (end 2.54 12.573)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 10.287)
+          (end 2.54 10.033)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 7.747)
+          (end 2.54 7.493)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 5.207)
+          (end 2.54 4.953)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 2.667)
+          (end 2.54 2.413)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 0.127)
+          (end 2.54 -0.127)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 -2.413)
+          (end 2.54 -2.667)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 -4.953)
+          (end 2.54 -5.207)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 -7.493)
+          (end 2.54 -7.747)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 -10.033)
+          (end 2.54 -10.287)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 -12.573)
+          (end 2.54 -12.827)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start 3.81 -15.113)
+          (end 2.54 -15.367)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (pin passive line
+          (at -5.08 12.7 0)
+          (length 3.81)
+          (name "Pin_1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 10.16 0)
+          (length 3.81)
+          (name "Pin_3"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 7.62 0)
+          (length 3.81)
+          (name "Pin_5"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 5.08 0)
+          (length 3.81)
+          (name "Pin_7"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "7"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 2.54 0)
+          (length 3.81)
+          (name "Pin_9"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "9"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "Pin_11"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "11"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -2.54 0)
+          (length 3.81)
+          (name "Pin_13"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "13"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -5.08 0)
+          (length 3.81)
+          (name "Pin_15"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "15"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -7.62 0)
+          (length 3.81)
+          (name "Pin_17"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "17"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -10.16 0)
+          (length 3.81)
+          (name "Pin_19"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "19"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -12.7 0)
+          (length 3.81)
+          (name "Pin_21"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "21"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -15.24 0)
+          (length 3.81)
+          (name "Pin_23"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "23"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 12.7 180)
+          (length 3.81)
+          (name "Pin_2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 10.16 180)
+          (length 3.81)
+          (name "Pin_4"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 7.62 180)
+          (length 3.81)
+          (name "Pin_6"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "6"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 5.08 180)
+          (length 3.81)
+          (name "Pin_8"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "8"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 2.54 180)
+          (length 3.81)
+          (name "Pin_10"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "10"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 0 180)
+          (length 3.81)
+          (name "Pin_12"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "12"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 -2.54 180)
+          (length 3.81)
+          (name "Pin_14"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "14"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 -5.08 180)
+          (length 3.81)
+          (name "Pin_16"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "16"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 -7.62 180)
+          (length 3.81)
+          (name "Pin_18"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "18"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 -10.16 180)
+          (length 3.81)
+          (name "Pin_20"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "20"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 -12.7 180)
+          (length 3.81)
+          (name "Pin_22"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "22"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 7.62 -15.24 180)
+          (length 3.81)
+          (name "Pin_24"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "24"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "MicroSMT_Recovered:MountingHole_Pad"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom no)
+      (on_board yes)
+      (property "Reference" "H"
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "MountingHole_Pad"
+        (at 0 4.445 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Mounting Hole with connection"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_keywords" "mounting hole"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "ki_fp_filters" "MountingHole*Pad*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "MountingHole_Pad_0_1"
+        (circle
+          (center 0 1.27)
+          (radius 1.27)
+          (stroke
+            (width 1.27)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "MountingHole_Pad_1_1"
+        (pin input line
+          (at 0 -2.54 90)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no)))
+  (text "FEEDER SLOTS / SOURCE CONNECTOR REFERENCES"
+    (at 22.86 22.86 0)
+    (effects
+      (font
+        (size 1.8 1.8))
+      (justify left top))
+    (uuid b5257e27-769e-5b28-a880-08f5251af26c))
+  (wire
+    (pts
+      (xy 40.64 50.8)
+      (xy 35.56 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 978726b6-6590-54a6-a209-6c2f7c7a0e15))
+  (label "N9"
+    (at 35.56 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 6518a285-d38f-51af-b456-90da2331fc68))
+  (wire
+    (pts
+      (xy 40.64 53.34)
+      (xy 35.56 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 98c4c505-666e-515f-8dfe-4205ac96acfd))
+  (label "VCC"
+    (at 35.56 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid fb56a5e3-2bf3-538b-a290-d113c3a6a2b8))
+  (wire
+    (pts
+      (xy 40.64 55.88)
+      (xy 35.56 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 35a581de-c662-5796-891b-5b401a547398))
+  (label "GND"
+    (at 35.56 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 27cab57a-3ee8-51f5-9579-e1a6ecc89ef0))
+  (symbol
+    (lib_id "MicroSMT_Recovered:Conn_01x03")
+    (at 45.72 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 800e44e0-3d1c-5325-bab0-509162f47df3)
+    (property "Reference" "N1"
+      (at 45.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Feeder slot"
+      (at 45.72 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Recovered:PTH_3_73baab2469"
+      (at 45.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 45.72 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid a4cab92e-8078-5eea-91fd-9969d4154db1))
+    (pin "2"
+      (uuid 86343dcb-cebc-52b1-a94a-b29ef28904a4))
+    (pin "3"
+      (uuid c1261e6d-a556-5b0c-9bc7-1a673597325d))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "N1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 86.36 50.8)
+      (xy 81.28 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8a07bebd-9e86-576e-8b3d-560c7b3cce58))
+  (label "N10"
+    (at 81.28 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 19003e38-2f3b-5e6b-be9f-e361d0291dc3))
+  (wire
+    (pts
+      (xy 86.36 53.34)
+      (xy 81.28 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7d855799-1e79-53fe-bb9f-89eb7126e602))
+  (label "VCC"
+    (at 81.28 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 0e52f7ed-f115-594d-a527-9fb934be1b83))
+  (wire
+    (pts
+      (xy 86.36 55.88)
+      (xy 81.28 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d66ed351-d150-50aa-b23b-1e5e0482a364))
+  (label "GND"
+    (at 81.28 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 6854aa9b-e1c0-52e3-98d2-df3047e1b28c))
+  (symbol
+    (lib_id "MicroSMT_Recovered:Conn_01x03")
+    (at 91.44 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b8518a5d-ceaf-51d0-9e7a-d5368da653cf)
+    (property "Reference" "N2"
+      (at 91.44 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Feeder slot"
+      (at 91.44 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Recovered:PTH_3_f185d45fd5"
+      (at 91.44 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 91.44 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid b4043127-e067-56df-8b7c-4914f26e2d2f))
+    (pin "2"
+      (uuid d4dd3841-5c53-51e9-ae8f-75fa9b994a5f))
+    (pin "3"
+      (uuid eb4cd860-a39a-544f-a4cf-b55084d25446))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "N2")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 132.08 50.8)
+      (xy 127.0 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 069ab0fa-3608-5ad6-882c-6cce1c516f5a))
+  (label "N11"
+    (at 127.0 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid c9eaee36-f8b5-56b7-90d3-770a3ad49ba5))
+  (wire
+    (pts
+      (xy 132.08 53.34)
+      (xy 127.0 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 641e18f2-8fea-558c-801a-d811cba729c5))
+  (label "VCC"
+    (at 127.0 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 26b50f65-f3f4-51e5-8595-fd4e2fd954cd))
+  (wire
+    (pts
+      (xy 132.08 55.88)
+      (xy 127.0 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 19cfd405-2863-5401-9a22-a3ab31385e89))
+  (label "GND"
+    (at 127.0 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 22912c19-0f91-57a5-908f-fa5707c387ba))
+  (symbol
+    (lib_id "MicroSMT_Recovered:Conn_01x03")
+    (at 137.16 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid b94dfcec-7ad2-51b5-b278-7a9f3320fcfe)
+    (property "Reference" "N3"
+      (at 137.16 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Feeder slot"
+      (at 137.16 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Recovered:PTH_3_f0a727b82c"
+      (at 137.16 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 137.16 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 7ed6e4c8-dd7a-5177-8ccb-e5f058550416))
+    (pin "2"
+      (uuid 7296ba3a-924b-5bb7-b8dc-2db70d971b36))
+    (pin "3"
+      (uuid bae48a62-61e1-5aa0-8cd4-372522939fb1))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "N3")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 177.8 50.8)
+      (xy 172.72 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 14ed2f96-e557-50d6-b923-0a90db02dabd))
+  (label "N12"
+    (at 172.72 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 916c4641-331e-5a14-ab3b-99909963b342))
+  (wire
+    (pts
+      (xy 177.8 53.34)
+      (xy 172.72 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0a62d9c6-0084-5cc1-9c3c-afbce2a9dea0))
+  (label "VCC"
+    (at 172.72 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid f6dfef78-8d67-54b5-884d-24dfa9d38d30))
+  (wire
+    (pts
+      (xy 177.8 55.88)
+      (xy 172.72 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3ce5b7c2-f623-52e5-855d-b8672af51069))
+  (label "GND"
+    (at 172.72 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 6a4d4f82-4245-5a66-847c-39e69348a4ff))
+  (symbol
+    (lib_id "MicroSMT_Recovered:Conn_01x03")
+    (at 182.88 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 9bceb8ef-53f6-5245-b38b-5b7887e8e2d2)
+    (property "Reference" "N4"
+      (at 182.88 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Feeder slot"
+      (at 182.88 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Recovered:PTH_3_f29aeb013d"
+      (at 182.88 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 182.88 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 44091aa4-92ec-5e62-a7c9-bd8bc4b9f2cc))
+    (pin "2"
+      (uuid 36cab00a-d4b2-5971-b9ba-56d3746bb75b))
+    (pin "3"
+      (uuid 098e5e51-cfe5-5883-a1a8-6163ff398358))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "N4")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 223.52 50.8)
+      (xy 218.44 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a6b118f2-f581-54e3-a177-4f582ddad213))
+  (label "N13"
+    (at 218.44 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 027870d0-e25f-565e-aaa9-eff0695f30e8))
+  (wire
+    (pts
+      (xy 223.52 53.34)
+      (xy 218.44 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid bcbfe0c0-b555-5367-b899-d5b727431aab))
+  (label "VCC"
+    (at 218.44 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid cec01711-3a36-5798-9779-bdfe99bc1c6c))
+  (wire
+    (pts
+      (xy 223.52 55.88)
+      (xy 218.44 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 9e2ebcd1-ae2d-518e-9416-9c3d7f4723d9))
+  (label "GND"
+    (at 218.44 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 46b39228-c876-521d-a9ac-93e6905b6574))
+  (symbol
+    (lib_id "MicroSMT_Recovered:Conn_01x03")
+    (at 228.6 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 8b9111cc-81f9-5f15-a9e2-01c8320f78dc)
+    (property "Reference" "N5"
+      (at 228.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Feeder slot"
+      (at 228.6 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Recovered:PTH_3_40f9a56ae3"
+      (at 228.6 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 228.6 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid f2b45de5-ff73-58a0-9748-be870f64536e))
+    (pin "2"
+      (uuid 8ff11ad1-8c3e-564d-8c74-fbb2fe8e913c))
+    (pin "3"
+      (uuid bb055668-2dda-51f3-8a65-9c4913e1ff37))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "N5")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 269.24 50.8)
+      (xy 264.16 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 1be02284-31b5-5ece-82da-dc1b096f94b5))
+  (label "N14"
+    (at 264.16 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid e514c305-5cf8-5fd1-8838-7d73165a4cda))
+  (wire
+    (pts
+      (xy 269.24 53.34)
+      (xy 264.16 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 2cb286cb-5803-5534-8f83-4dc490bf9684))
+  (label "VCC"
+    (at 264.16 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 311576f7-32c9-5dc3-9cec-7ed197422d0c))
+  (wire
+    (pts
+      (xy 269.24 55.88)
+      (xy 264.16 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e26be850-eb84-5e6b-96a1-eac49ecabbdc))
+  (label "GND"
+    (at 264.16 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid c1f687a6-fb7b-5332-82a5-118c6481100d))
+  (symbol
+    (lib_id "MicroSMT_Recovered:Conn_01x03")
+    (at 274.32 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 044cbda3-89ab-5b41-b2b6-67a3092629aa)
+    (property "Reference" "N6"
+      (at 274.32 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Feeder slot"
+      (at 274.32 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Recovered:PTH_3_2e4f513424"
+      (at 274.32 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 274.32 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 7c6f42a2-31e4-52e5-8a5d-717505a295aa))
+    (pin "2"
+      (uuid d3c33913-c8cf-550a-8845-4142700e6a45))
+    (pin "3"
+      (uuid e4a3066e-918e-5d72-8e45-8db3c2a5aab0))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "N6")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 314.96 50.8)
+      (xy 309.88 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a117f487-4abf-52ac-89ff-a1836d088fd0))
+  (label "N15"
+    (at 309.88 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid f3f6d26a-02b3-5afd-ba9f-fe838ddc3875))
+  (wire
+    (pts
+      (xy 314.96 53.34)
+      (xy 309.88 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ce087fc5-5d21-56ea-8085-e8e020dbb07f))
+  (label "VCC"
+    (at 309.88 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 5fb238fc-60f0-5faa-9e8d-bd1c4147d870))
+  (wire
+    (pts
+      (xy 314.96 55.88)
+      (xy 309.88 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 04308615-0eee-507f-afab-877d275c74ef))
+  (label "GND"
+    (at 309.88 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 71d0bcb3-2ff8-531d-b1c0-4e613767f090))
+  (symbol
+    (lib_id "MicroSMT_Recovered:Conn_01x03")
+    (at 320.03999999999996 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid c434fc9f-39ae-52b4-8348-c776db2f3ef2)
+    (property "Reference" "N7"
+      (at 320.04 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Feeder slot"
+      (at 320.04 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Recovered:PTH_3_8ca71f247a"
+      (at 320.04 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 320.04 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid d2b89b5b-cbe9-53a9-8985-bf374a5e017a))
+    (pin "2"
+      (uuid de47c2d6-39b3-507d-9c14-a8b403a3da48))
+    (pin "3"
+      (uuid fdf43482-c98e-55f4-90e2-eaf67576f0ef))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "N7")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 360.68 50.8)
+      (xy 355.6 50.8))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid a62b69f7-c732-5195-9c8f-7d7142b6b5c8))
+  (label "N16"
+    (at 355.6 50.8 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 807d6e99-66ca-5343-afc0-69465b0837da))
+  (wire
+    (pts
+      (xy 360.68 53.34)
+      (xy 355.6 53.34))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid cac64797-b426-57bb-aee8-7035b15b96dd))
+  (label "VCC"
+    (at 355.6 53.34 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 873410fc-145c-56c9-8f98-c6e845b031e0))
+  (wire
+    (pts
+      (xy 360.68 55.88)
+      (xy 355.6 55.88))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid e626bfe4-582b-5084-b653-386cc74e92df))
+  (label "GND"
+    (at 355.6 55.88 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 45ed7905-e474-5af8-8b54-c295b78e9cb0))
+  (symbol
+    (lib_id "MicroSMT_Recovered:Conn_01x03")
+    (at 365.76 53.34 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 1c4b4844-c9a3-59bf-aa98-91c0cb8f3615)
+    (property "Reference" "N8"
+      (at 365.76 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Feeder slot"
+      (at 365.76 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Recovered:PTH_3_1d444e7cb6"
+      (at 365.76 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 365.76 53.34 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 41dce81e-3537-501d-800a-69f12a799121))
+    (pin "2"
+      (uuid 2e318344-0fd0-5d9b-82ff-3c2f67d4297d))
+    (pin "3"
+      (uuid e78b8581-9b90-5454-8b56-6369af15b9e2))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "N8")
+          (unit 1)))))
+  (text "Slot pins: 1 = signal, 2 = VCC, 3 = GND. Supply voltage is not established by the busbar CAM."
+    (at 22.86 73.66 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid c26349bf-6bab-5907-b936-d5dcb69f639d))
+  (text "RECOVERED INTERCONNECT HEADERS"
+    (at 22.86 93.98 0)
+    (effects
+      (font
+        (size 1.8 1.8))
+      (justify left top))
+    (uuid 920beb6e-dc3b-5f93-a2d9-1d68af4ec953))
+  (wire
+    (pts
+      (xy 86.36 124.46)
+      (xy 81.28 124.46))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 41bfd99a-a5fe-505a-99a2-eccb448baab2))
+  (label "N9"
+    (at 81.28 124.46 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 5b2d9e2b-3d76-53c4-b4a4-6874e5a3ef77))
+  (wire
+    (pts
+      (xy 86.36 127.0)
+      (xy 81.28 127.0))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 026927a6-eb4d-5a0f-89e8-4591967e3688))
+  (label "N10"
+    (at 81.28 127.0 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid f9ffb6f8-34ea-5aab-81da-112dc6221f39))
+  (wire
+    (pts
+      (xy 86.36 129.54)
+      (xy 81.28 129.54))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ab3a7df2-cb49-5d22-9205-665b0effeb12))
+  (label "N11"
+    (at 81.28 129.54 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 0cbbb598-e2b0-5dd8-a050-e4c9b8f54a6d))
+  (wire
+    (pts
+      (xy 86.36 132.08)
+      (xy 81.28 132.08))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 84cc84d0-6cab-5b26-b6b1-3cdf5b07f156))
+  (label "N12"
+    (at 81.28 132.08 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 16c19e99-079a-5745-82da-24df3ae34bf9))
+  (wire
+    (pts
+      (xy 86.36 134.62)
+      (xy 81.28 134.62))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid d5d8e749-1b98-59ac-9871-beba15e66915))
+  (label "N13"
+    (at 81.28 134.62 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 439e65ac-e4d8-5a32-86ba-36db20c768e6))
+  (wire
+    (pts
+      (xy 86.36 137.16)
+      (xy 81.28 137.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ca464f87-138c-550d-bd33-22081ead9178))
+  (label "N14"
+    (at 81.28 137.16 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid fee8c2b8-feed-56af-8752-547335ed7dbc))
+  (wire
+    (pts
+      (xy 86.36 139.7)
+      (xy 81.28 139.7))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8e1d4f17-48e9-5304-99b0-897797902b41))
+  (label "N15"
+    (at 81.28 139.7 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid a5301785-740a-5630-bdd4-4239a0e17931))
+  (wire
+    (pts
+      (xy 86.36 142.24)
+      (xy 81.28 142.24))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f6a918d4-b6b5-5e4d-842c-5bb5c6778d16))
+  (label "N16"
+    (at 81.28 142.24 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 283e04e0-e802-5a5d-be9e-10ca2b3a5064))
+  (wire
+    (pts
+      (xy 86.36 144.78)
+      (xy 81.28 144.78))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 26fc6826-60f0-5be4-a05f-338a359ce196))
+  (label "RECOVERED_5"
+    (at 81.28 144.78 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid a010c37a-97d4-5371-be43-2dced20c8b45))
+  (wire
+    (pts
+      (xy 86.36 147.32)
+      (xy 81.28 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 78b0b859-c87a-5250-b9fb-628f9ff84251))
+  (label "RECOVERED_4"
+    (at 81.28 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid be051d3c-39c8-5e22-a31e-696a2f24aa70))
+  (wire
+    (pts
+      (xy 86.36 149.86)
+      (xy 81.28 149.86))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 0fabef72-a261-5689-9feb-d75b310126c0))
+  (label "RECOVERED_3"
+    (at 81.28 149.86 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid ee293857-ae33-5acb-9535-2d37505cfac2))
+  (wire
+    (pts
+      (xy 86.36 152.4)
+      (xy 81.28 152.4))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 76bda816-887a-55c4-a124-3735934a3f44))
+  (label "RECOVERED_2"
+    (at 81.28 152.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 72f2b6f0-6d72-528c-97db-7dbf5e50a083))
+  (wire
+    (pts
+      (xy 99.06 124.46)
+      (xy 104.14 124.46))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8e0eb288-99a8-5d29-b736-66ace82e6090))
+  (label "RECOVERED_19"
+    (at 104.14 124.46 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 66eb5786-36ad-5530-b135-2c9add6b9c04))
+  (wire
+    (pts
+      (xy 99.06 127.0)
+      (xy 104.14 127.0))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6b28ae23-e893-5f72-a970-72523237421a))
+  (label "RECOVERED_17"
+    (at 104.14 127.0 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 241d167a-a984-5d93-98f8-bfb1f7222865))
+  (wire
+    (pts
+      (xy 99.06 129.54)
+      (xy 104.14 129.54))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7fc73f3f-3225-5b11-bf3b-cf9668e56001))
+  (label "RECOVERED_15"
+    (at 104.14 129.54 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 418e1ebe-3ee1-5530-b1df-628f705f1af4))
+  (wire
+    (pts
+      (xy 99.06 132.08)
+      (xy 104.14 132.08))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 415c434d-eac0-5a3f-b6ea-b13b4ab4889f))
+  (label "RECOVERED_13"
+    (at 104.14 132.08 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid be4a9997-602e-56d3-afc9-bbc2ecb4a216))
+  (wire
+    (pts
+      (xy 99.06 134.62)
+      (xy 104.14 134.62))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 14242442-3237-5b8f-beb2-81f7f8be4a18))
+  (label "GND"
+    (at 104.14 134.62 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid d221969b-13db-5786-9a1d-d1c0d863046f))
+  (wire
+    (pts
+      (xy 99.06 137.16)
+      (xy 104.14 137.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid ab2b9b28-dc37-5ee5-8b16-f44414ef78b9))
+  (label "GND"
+    (at 104.14 137.16 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 71bd3e3f-768f-5f47-9e61-ea7edef4c111))
+  (wire
+    (pts
+      (xy 99.06 139.7)
+      (xy 104.14 139.7))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 53fbb4bc-9fe9-596f-8311-b59bb12cd31a))
+  (label "GND"
+    (at 104.14 139.7 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 39aa38d1-b43d-5980-a26c-ebe3d2a3a5a0))
+  (wire
+    (pts
+      (xy 99.06 142.24)
+      (xy 104.14 142.24))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid f3fd5b7c-cdcd-5c29-8020-f68968bbd0d2))
+  (label "GND"
+    (at 104.14 142.24 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 2adad732-8fd9-581d-b7bc-a358b8721814))
+  (no_connect
+    (at 99.06 144.78)
+    (uuid e64d65c1-b62a-5c93-a23a-905f28a0ff97))
+  (wire
+    (pts
+      (xy 99.06 147.32)
+      (xy 104.14 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 88976159-1dfb-5fa5-a57d-d0b19632fda5))
+  (label "VCC"
+    (at 104.14 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid c74039d9-601a-5c07-a7ee-2e8ea75d5486))
+  (wire
+    (pts
+      (xy 99.06 149.86)
+      (xy 104.14 149.86))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 17ece3e1-98ab-5d4d-8ac2-87772a878c20))
+  (label "VCC"
+    (at 104.14 149.86 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 2dff13c3-e2e7-5f8d-910a-0fa38c6a9f06))
+  (wire
+    (pts
+      (xy 99.06 152.4)
+      (xy 104.14 152.4))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid c16ed326-df75-5cfc-886c-45bbe6f50bac))
+  (label "VCC"
+    (at 104.14 152.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid d7e60140-83c9-5891-af9d-c12508f67176))
+  (symbol
+    (lib_id "MicroSMT_Recovered:Conn_02x12_Odd_Even")
+    (at 91.44 137.16 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3ffcb80f-2a7f-516b-94a8-7f26b0250b3e)
+    (property "Reference" "JREC1"
+      (at 92.71 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Recovered 2x12 / 2mm header"
+      (at 92.71 154.94 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Recovered:PTH_24_357941b971"
+      (at 91.44 137.16 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 91.44 137.16 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 873d4867-7990-5bac-8cb1-11e4d51dd0e3))
+    (pin "3"
+      (uuid bc1c07c1-2d07-570c-be43-8ca286b513b0))
+    (pin "5"
+      (uuid d4082636-3018-5c1a-9c5a-80b23f724ceb))
+    (pin "7"
+      (uuid 044b0162-83bb-5fa6-8b2f-a9a92f37a312))
+    (pin "9"
+      (uuid c9a8e0cb-8db3-5a3f-bb2a-a71bcf399628))
+    (pin "11"
+      (uuid c56979be-6a14-5239-a475-6197a7fe2acc))
+    (pin "13"
+      (uuid f3c05595-4067-5579-8f50-4d9cbe6202cd))
+    (pin "15"
+      (uuid fdb3a841-61a5-5170-bd1c-b6e64780a479))
+    (pin "17"
+      (uuid 6bbeae3e-5aab-56c2-a228-6b23c3f028af))
+    (pin "19"
+      (uuid c251065f-23d8-5b57-a154-6e0bf2cb2e57))
+    (pin "21"
+      (uuid e82e6b32-7342-56e5-86ee-75718b34ce28))
+    (pin "23"
+      (uuid 2829f705-9539-5706-81c4-e48d088b0431))
+    (pin "2"
+      (uuid 67d110a9-429c-561d-8e86-400ab2fea9b8))
+    (pin "4"
+      (uuid 8870a3b7-fe24-521d-8c53-05e29cf086b9))
+    (pin "6"
+      (uuid 538b68e0-aba7-55fc-8319-3347cd204f4d))
+    (pin "8"
+      (uuid 2259dfe7-6e8f-53fd-9ffa-42d3f4f4c565))
+    (pin "10"
+      (uuid a4ab2ac3-7035-591c-ba48-64f239308872))
+    (pin "12"
+      (uuid 0079ab91-02a5-5ae5-98ed-117c6422da8c))
+    (pin "14"
+      (uuid c627d081-f26c-5079-88bb-31cc1e4604b1))
+    (pin "16"
+      (uuid 0b70eab2-04ac-5875-a56d-d0b9ce097349))
+    (pin "18"
+      (uuid 24557a56-5f9a-5e5b-a1ff-e1d84c5096d6))
+    (pin "20"
+      (uuid 09fbe44f-34cd-51fa-922a-25c48c3d16cd))
+    (pin "22"
+      (uuid d6d36e24-3f9d-575d-a875-29eda7792f2b))
+    (pin "24"
+      (uuid 6f140e86-30e3-59bc-9307-80a8f46dc991))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "JREC1")
+          (unit 1)))))
+  (wire
+    (pts
+      (xy 218.44 124.46)
+      (xy 213.36 124.46))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 4f845d52-dd44-5b96-bdbf-9570b6fe3af1))
+  (label "RECOVERED_19"
+    (at 213.36 124.46 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 0d52affb-58e7-50c7-a5ee-e4fa470af5eb))
+  (wire
+    (pts
+      (xy 218.44 127.0)
+      (xy 213.36 127.0))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 58d31930-d4ed-5946-9578-9e48b5d3cd91))
+  (label "RECOVERED_17"
+    (at 213.36 127.0 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 12b3fecb-615c-5ca5-aa98-12f91f3b47cb))
+  (wire
+    (pts
+      (xy 218.44 129.54)
+      (xy 213.36 129.54))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6b28f7cb-d526-540f-8047-f950be2c09ac))
+  (label "RECOVERED_15"
+    (at 213.36 129.54 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid e7c4fe57-3f98-52c5-86c0-66604f6ccd01))
+  (wire
+    (pts
+      (xy 218.44 132.08)
+      (xy 213.36 132.08))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 915fff2d-c4d1-5681-adb4-9ae785ccf056))
+  (label "RECOVERED_13"
+    (at 213.36 132.08 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 93457acf-ea4b-55f3-a768-6ba5badad22e))
+  (wire
+    (pts
+      (xy 218.44 134.62)
+      (xy 213.36 134.62))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 83d3c7b7-1e75-5c6e-b88f-24c06ece1c7f))
+  (label "GND"
+    (at 213.36 134.62 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 3acf30cf-5deb-5e58-9af1-419a341eead9))
+  (wire
+    (pts
+      (xy 218.44 137.16)
+      (xy 213.36 137.16))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 7e73d41f-0bd1-5d4e-ab0e-d8995e63e1d7))
+  (label "GND"
+    (at 213.36 137.16 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid d856bd61-c9fd-5bfe-a9f6-5e8c5dceca78))
+  (wire
+    (pts
+      (xy 218.44 139.7)
+      (xy 213.36 139.7))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 9aef11d7-0617-502b-a976-4faf54902832))
+  (label "GND"
+    (at 213.36 139.7 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 7ca01b1f-ea15-565c-86cf-b7b874f2fe13))
+  (wire
+    (pts
+      (xy 218.44 142.24)
+      (xy 213.36 142.24))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5bd779cf-bbac-5f2d-842f-e087d4e761b6))
+  (label "GND"
+    (at 213.36 142.24 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 0454eacf-82a4-57cb-8d5b-fe87043ddb73))
+  (wire
+    (pts
+      (xy 218.44 144.78)
+      (xy 213.36 144.78))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 8c0adfc1-ddbe-57b4-ad4c-5c90db93b20f))
+  (label "VCC"
+    (at 213.36 144.78 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid edbd564e-7ebe-55e4-a173-5df81e3d296d))
+  (wire
+    (pts
+      (xy 218.44 147.32)
+      (xy 213.36 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 5adf722d-a161-54cb-b357-aafb2037f03c))
+  (label "VCC"
+    (at 213.36 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 7f86fb52-a8d8-5b64-acd9-0f144773435a))
+  (wire
+    (pts
+      (xy 218.44 149.86)
+      (xy 213.36 149.86))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 1b1649d8-4fef-5854-accf-a619c7341b8f))
+  (label "VCC"
+    (at 213.36 149.86 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 80b45137-70eb-5282-8a74-5391ac38ab00))
+  (wire
+    (pts
+      (xy 218.44 152.4)
+      (xy 213.36 152.4))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 3b350116-2497-5fcc-902f-c713bfbb5b6e))
+  (label "VCC"
+    (at 213.36 152.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify right bottom))
+    (uuid 0da7fb05-b133-500d-b94c-23877b3ed01d))
+  (no_connect
+    (at 231.14 124.46)
+    (uuid 2f696f2c-cbea-57c4-893b-f03476ad8b51))
+  (no_connect
+    (at 231.14 127.0)
+    (uuid 4d3f4380-8ab9-59e1-929f-042543edeb7d))
+  (no_connect
+    (at 231.14 129.54)
+    (uuid 2eb5fe02-b6cb-54a6-a6af-9fe4c819599c))
+  (no_connect
+    (at 231.14 132.08)
+    (uuid 8ab8fb9f-442d-56ff-ade7-519e6da4b13e))
+  (no_connect
+    (at 231.14 134.62)
+    (uuid 2417dd64-057b-53db-aa84-047befa295fd))
+  (no_connect
+    (at 231.14 137.16)
+    (uuid ee3d2f1c-dbe8-5f95-b818-05d295aac40a))
+  (no_connect
+    (at 231.14 139.7)
+    (uuid 6e74c99b-d1a0-50d0-9bf0-ce408c62678a))
+  (no_connect
+    (at 231.14 142.24)
+    (uuid 16b03d0b-64c2-5471-a3b1-ec8bf02d9ea2))
+  (wire
+    (pts
+      (xy 231.14 144.78)
+      (xy 236.22 144.78))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid aaa84e56-2fa5-58f6-bd77-8453e7df7677))
+  (label "RECOVERED_5"
+    (at 236.22 144.78 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid a43b83d8-f692-5813-ac4c-8f60fb2f4fc4))
+  (wire
+    (pts
+      (xy 231.14 147.32)
+      (xy 236.22 147.32))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid b4cedd2a-143f-5bec-8659-8b480f4dfaa2))
+  (label "RECOVERED_4"
+    (at 236.22 147.32 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid cd6a241f-09b8-55bb-b366-7f8f8a22ec0c))
+  (wire
+    (pts
+      (xy 231.14 149.86)
+      (xy 236.22 149.86))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 1574b5f5-8259-5ea9-bb5d-6561c66fe557))
+  (label "RECOVERED_3"
+    (at 236.22 149.86 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid fbda04e1-5074-5652-aa97-e50e41bfe62c))
+  (wire
+    (pts
+      (xy 231.14 152.4)
+      (xy 236.22 152.4))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid 6dc52acf-3a70-50dc-82e9-5e6f12c48c93))
+  (label "RECOVERED_2"
+    (at 236.22 152.4 0)
+    (effects
+      (font
+        (size 1.0 1.0))
+      (justify left bottom))
+    (uuid 95c25df2-d29a-52a6-925c-adc52aa0f542))
+  (symbol
+    (lib_id "MicroSMT_Recovered:Conn_02x12_Odd_Even")
+    (at 223.52 137.16 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3e0912a1-d8b5-5be1-ac36-6bf6cac7609c)
+    (property "Reference" "JREC2"
+      (at 224.79 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Recovered 2x12 / 2mm header"
+      (at 224.79 154.94 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MicroSMT_Recovered:PTH_24_a566e0777e"
+      (at 223.52 137.16 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 223.52 137.16 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid c2fbbf48-a4c2-5efe-bbfb-a62c62d91f5a))
+    (pin "3"
+      (uuid e55451ce-4244-5395-aaa0-d1b140ebfcdb))
+    (pin "5"
+      (uuid 4df6da13-edff-569d-8f31-21bf7fa8a101))
+    (pin "7"
+      (uuid fa34abf4-8d24-5ad6-a6fb-04c7bbce148e))
+    (pin "9"
+      (uuid c7c83f07-fc81-5442-9a74-bc1af6af2a96))
+    (pin "11"
+      (uuid 0bafc9b9-4ed4-5916-b602-ac74a4d98d55))
+    (pin "13"
+      (uuid b1bf50bb-50d0-5bb1-834c-76aba5ed8b1d))
+    (pin "15"
+      (uuid ff957e53-4eda-5bc7-b22d-ce4668a6d9d7))
+    (pin "17"
+      (uuid d779f6c7-3707-5473-b3ac-66eaa57c09fa))
+    (pin "19"
+      (uuid 39942260-aa7c-5b0c-a5e3-41086b6a7eb8))
+    (pin "21"
+      (uuid a24e527b-cb06-597f-8c30-b243c8270084))
+    (pin "23"
+      (uuid 8c8f34da-d72f-58b6-9760-6c90bbedab36))
+    (pin "2"
+      (uuid cbe1637d-92e5-5fa1-a1b2-e8553eb51d6a))
+    (pin "4"
+      (uuid 332e9c40-b864-5ce7-b25c-1a662eff55a1))
+    (pin "6"
+      (uuid 723555f0-5881-5ea5-8e34-aada06773c6c))
+    (pin "8"
+      (uuid 97e6bbb2-186a-50d2-aa7d-66b2903cc58c))
+    (pin "10"
+      (uuid 44f0674f-8fda-5c40-acad-de040839b964))
+    (pin "12"
+      (uuid 1aede47c-8ae0-523a-88b2-0f3d8a1c3a4b))
+    (pin "14"
+      (uuid e01a4b24-4eda-5c6e-85f0-1ab6b4f53362))
+    (pin "16"
+      (uuid 72a3a6e4-7806-50d4-bd17-f1b065408ead))
+    (pin "18"
+      (uuid 6276d8b6-5c74-5cf4-a0f1-cfd796e27156))
+    (pin "20"
+      (uuid 585dd18f-6875-5fc6-bcfb-369d1cf25e07))
+    (pin "22"
+      (uuid 507647a4-7aa8-5bed-a2af-e2bd8947f81e))
+    (pin "24"
+      (uuid 0ab4e3c8-010f-5f22-88ed-ad49fa3eff44))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "JREC2")
+          (unit 1)))))
+  (text "JREC references and pad numbering were added during reconstruction.\nTop view: rows from top to bottom; odd numbers left, even numbers right.\nThese are 2 mm pitch headers. Confirm mating cable numbering physically.\nRECOVERED_* nets are copper-traced pass-through nets with no source name."
+    (at 22.86 170.18 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left top))
+    (uuid daa47e96-6ef0-5ff2-b464-aac435a9f088))
+  (text "SOURCE DISCREPANCY: both N1-N8 and N9-N16 archives label their slot nets N9...N16.\nThe schematic preserves those exported names. Do not assume an N1...N8 mapping."
+    (at 22.86 203.2 0)
+    (effects
+      (font
+        (size 1.5 1.5))
+      (justify left top))
+    (uuid 45337db7-6c97-55f9-967f-464e8c8c7bec))
+  (text "PLATED MOUNTING HOLES / ISOLATED COPPER"
+    (at 22.86 226.06 0)
+    (effects
+      (font
+        (size 1.8 1.8))
+      (justify left top))
+    (uuid 301dc905-63be-58fe-aa9e-2ddf89dc422d))
+  (no_connect
+    (at 35.56 248.92)
+    (uuid 6c063c4b-c751-5e83-9313-94db22fffd75))
+  (symbol
+    (lib_id "MicroSMT_Recovered:MountingHole_Pad")
+    (at 35.56 246.38 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 92e3b93c-b42e-5c06-b798-e3ad253dca53)
+    (property "Reference" "MH1"
+      (at 35.56 240.03 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Plated mounting hole 3.3mm"
+      (at 35.56 241.935 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Footprint" "MicroSMT_Recovered:PTH_1_508660c0b4"
+      (at 35.56 246.38 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 35.56 246.38 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid f0e9a193-9fa8-53f9-b938-022ea30940b7))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "MH1")
+          (unit 1)))))
+  (no_connect
+    (at 76.2 248.92)
+    (uuid b7028ce8-6414-54a6-a58d-f6e5796a8fd7))
+  (symbol
+    (lib_id "MicroSMT_Recovered:MountingHole_Pad")
+    (at 76.2 246.38 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 3015497f-00f3-53c8-b64e-4f0aeee68d03)
+    (property "Reference" "MH2"
+      (at 76.2 240.03 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Plated mounting hole 3.3mm"
+      (at 76.2 241.935 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Footprint" "MicroSMT_Recovered:PTH_1_508660c0b4"
+      (at 76.2 246.38 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 76.2 246.38 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 06de00e5-3d31-5ce8-96b2-5c1d7a28dea0))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "MH2")
+          (unit 1)))))
+  (no_connect
+    (at 116.84 248.92)
+    (uuid e12d56a4-36f9-5dc4-9602-a22a121a4946))
+  (symbol
+    (lib_id "MicroSMT_Recovered:MountingHole_Pad")
+    (at 116.84 246.38 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 700c6f21-43ef-5b0f-9507-a567a7bc213f)
+    (property "Reference" "MH3"
+      (at 116.84 240.03 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Plated mounting hole 3.3mm"
+      (at 116.84 241.935 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Footprint" "MicroSMT_Recovered:PTH_1_508660c0b4"
+      (at 116.84 246.38 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 116.84 246.38 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid dff44c6d-9337-5bfa-8b19-09e3f9cb2f78))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "MH3")
+          (unit 1)))))
+  (no_connect
+    (at 157.48 248.92)
+    (uuid c7b5d8a2-255d-5dbb-90a6-b6adc9c0f99d))
+  (symbol
+    (lib_id "MicroSMT_Recovered:MountingHole_Pad")
+    (at 157.48000000000002 246.38 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid f221e077-3042-5fd1-ad8a-f9617dc8c0aa)
+    (property "Reference" "MH4"
+      (at 157.48 240.03 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Plated mounting hole 3.3mm"
+      (at 157.48 241.935 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Footprint" "MicroSMT_Recovered:PTH_1_508660c0b4"
+      (at 157.48 246.38 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 157.48 246.38 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 3b3b6f9e-aad4-52c4-b56b-1ba21aa70ff5))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "MH4")
+          (unit 1)))))
+  (no_connect
+    (at 198.12 248.92)
+    (uuid 8b55d95b-8b19-5cb1-93c7-0af7c47a7a53))
+  (symbol
+    (lib_id "MicroSMT_Recovered:MountingHole_Pad")
+    (at 198.12 246.38 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid 0f7927bf-9abc-50b6-96c6-52cc3513ed93)
+    (property "Reference" "MH5"
+      (at 198.12 240.03 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "Plated mounting hole 3.3mm"
+      (at 198.12 241.935 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Footprint" "MicroSMT_Recovered:PTH_1_508660c0b4"
+      (at 198.12 246.38 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 198.12 246.38 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (pin "1"
+      (uuid 2d6439cf-f9e6-59d0-99f6-e6176257e84e))
+    (instances
+      (project "busbar_n9_n16"
+        (path "/e04634b0-053d-51bf-b50f-f5b883084443"
+          (reference "MH5")
+          (unit 1)))))
+  (sheet_instances
+    (path "/"
+      (page "1")))
+  (embedded_fonts no))

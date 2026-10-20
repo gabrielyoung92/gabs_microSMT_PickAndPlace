@@ -1,0 +1,17 @@
+{
+  "F.Mask": {
+    "source_area_mm2": 199.51867931226585,
+    "exported_area_mm2": 199.45331596445024,
+    "symmetric_difference_mm2": 0.06574490162419806
+  },
+  "B.Mask": {
+    "source_area_mm2": 53.91672531473294,
+    "exported_area_mm2": 53.90838141736494,
+    "symmetric_difference_mm2": 0.008343897368094112
+  },
+  "F.Paste": {
+    "source_area_mm2": 111.20643290597347,
+    "exported_area_mm2": 111.20643290597289,
+    "symmetric_difference_mm2": 2.504281444198917e-12
+  }
+}

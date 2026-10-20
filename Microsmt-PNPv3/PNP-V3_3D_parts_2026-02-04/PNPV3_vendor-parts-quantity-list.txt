@@ -1,0 +1,28 @@
+2.1-moutherboard fixing plate          1PCS                           //  2.1 and 2.2 only require one type
+2.2-moutherboard  hook                    4PCS
+
+3- Homing  fiducial                              1PCS                        
+
+4-PCB bracket                                    4PCS
+
+5.1-CP45 nozzle  rack   left            1PCS
+5.2-CP45 nozzle  rack   right                 1PCS
+
+6-Switch power hook                       2PCS
+7-Top camera fixing plate               1PCS
+8-Vacuum pump retainer plate        2PCS
+9-X-axis anti-collision                    1PCS
+10-X-axis endstop  striker              1PCS
+11-X-axis endstop switch  Fixing plate         1PCS
+12-Y-axis drag chain hook                 2PCS
+13-Y-axis endstop  striker                   1PCS
+14-Y-axis endstop switch  Fixing plate       1PCS
+15-Z-axis endstop  striker                         1PCS
+16-Z-axis motor cover plate                    1PCS
+17-AC power socket board                       1PCS
+19-mounter cover  1PCS
+20-MEGA2560 BOX   1PCS
+21-Synchronous wheel limit    6PCS
+22-Vertical detection board   1PCS
+
+
