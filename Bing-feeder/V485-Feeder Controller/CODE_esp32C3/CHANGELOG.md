@@ -1,6 +1,6 @@
 # ESP32-C3 controller changelog
 
-Original firmware: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder), ESP32-C3 RS485 master V25. Changes here are Gab's independent adaptation, made with ChatGPT assistance. The versions below identify this local firmware, not an official MicroSMT release.
+Original firmware: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder), ESP32-C3 RS485 master V25. Changes here are local adaptations made with ChatGPT assistance. The versions below identify this local firmware, not an official MicroSMT release.
 
 ## 0.1.0 — 2026-10-20
 

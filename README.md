@@ -1,10 +1,8 @@
-# Gab's MicroSMT Pick and Place
+# MicroSMT Pick and Place — Reorganised Files
 
-**Original designs and supplied files: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder) and [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).**
+This repository is a reorganised copy of **MicroSMT's [Bing-feeder](https://github.com/microsmt/Bing-feeder) and [Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3) projects**. The original designs, parts, PCB files, manuals and vendor firmware come from MicroSMT. Files have been moved into clearer folders, with linked previews and documentation added to make them easier to find and use. **Credit for the original work belongs to MicroSMT and its contributors.**
 
-This is Gab's independent collection of those projects, reorganised with help from **ChatGPT** to make their parts, firmware and PCB files easier to browse. MicroSMT's original designs remain credited to their authors. This is an unofficial reorganisation, with locally generated previews, STEP-to-STL conversions and documentation; it is not an official MicroSMT release.
-
-Read [credits and changes](CREDITS.md) and [third-party notices](THIRD_PARTY_NOTICES.md) for source revisions, licensing information and the distinction between supplied files and local additions.
+This is an unofficial collection. Local additions, including extra STL exports and firmware changes, were prepared with ChatGPT assistance and are described in [credits and changes](CREDITS.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
 
 Browse **128 3D parts** across 10 galleries, **13 PCB Gerber sets**, vendor firmware, assembly manuals and the custom engineering project.
 
@@ -44,7 +42,7 @@ V485 mechanics here are 8 mm; wider firmware alone does not confirm wider mechan
 ```text
 Bing-feeder/             Reorganised MicroSMT feeder/controller files
 Microsmt-PNPv3/          Reorganised MicroSMT machine files and manuals
-_other/v3-modding/       Gab's earlier V3 development project
+_other/v3-modding/       Earlier V3 development project
 CREDITS.md              Original sources and changes made here
 THIRD_PARTY_NOTICES.md   Upstream license and attribution notes
 ```

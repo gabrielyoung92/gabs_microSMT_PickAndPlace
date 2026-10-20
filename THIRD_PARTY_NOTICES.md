@@ -1,6 +1,6 @@
 # Third-party notices
 
-This repository is an independent reorganisation by Gab, assisted by ChatGPT. The original MicroSMT designs and supplied files remain credited to their authors. See [CREDITS.md](CREDITS.md) for sources, local base revisions and changes.
+This repository is an independent reorganisation prepared with ChatGPT assistance. The original MicroSMT designs and supplied files remain credited to their authors. See [CREDITS.md](CREDITS.md) for sources, local base revisions and changes.
 
 ## MicroSMT Bing-feeder
 
@@ -26,4 +26,4 @@ The project also retains a modified [STM32F103C8 linker script](Bing-feeder/V485
 
 ## Local additions
 
-The file organisation, generated previews, additional STL exports, README galleries and build notes are local additions prepared with ChatGPT assistance at Gab's direction. No new repository-wide license has been selected. These notes do not change any upstream copyright or license.
+The file organisation, generated previews, additional STL exports, README galleries and build notes are local additions prepared with ChatGPT assistance. No new repository-wide license has been selected. These notes do not change any upstream copyright or license.

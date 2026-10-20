@@ -1,6 +1,6 @@
 # CP45 nozzle rack
 
-> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** Reorganised by Gab with ChatGPT. [Credits](../../CREDITS.md).
+> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** [Credits and local changes](../../CREDITS.md).
 
 3 parts · [Browse all photos](photos/)
 

@@ -13,9 +13,9 @@ These commit IDs identify the local repositories' checked-out base revisions. Th
 
 The original repository links are the place to check for current official files, support and updates. Existing vendor introductions and support links remain in each collection's README. This collection is independent and does not imply MicroSMT endorsement.
 
-## Reorganisation by Gab, with ChatGPT assistance
+## Local changes with ChatGPT assistance
 
-Gab directed the organisation of this library, with **ChatGPT assisting with file organisation, conversions, previews, documentation and verification**. Those additions do not make the original MicroSMT designs Gab's or ChatGPT's work.
+File organisation, conversions, previews, documentation and local firmware changes were prepared with **ChatGPT assistance**. The original MicroSMT work remains credited above.
 
 Changes made to the local collections include:
 
@@ -33,7 +33,7 @@ Previews, conversions and generated documentation are convenience additions. A r
 
 ## Earlier custom development
 
-The V3 modding project contains Gab-directed custom firmware, tools, recovered KiCad references and technical notes. Those project additions are separate from the supplied MicroSMT sources; recovered hardware remains derived from the original source material. Its [existing notices](_other/v3-modding/THIRD_PARTY_NOTICES.md) describe the earlier imports and KiCad library attribution in more detail.
+The V3 modding project contains custom firmware, tools, recovered KiCad references and technical notes. Those project additions are separate from the supplied MicroSMT sources; recovered hardware remains derived from the original source material. Its [existing notices](_other/v3-modding/THIRD_PARTY_NOTICES.md) describe the earlier imports and KiCad library attribution in more detail.
 
 ## Licensing
 

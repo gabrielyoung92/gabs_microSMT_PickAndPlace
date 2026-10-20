@@ -1,6 +1,6 @@
 # V485 feeder
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** Reorganised by Gab with ChatGPT. [Credits](../../CREDITS.md).
+> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../CREDITS.md).
 
 Browse the supplied V485 mechanics, electronics and firmware variants.
 

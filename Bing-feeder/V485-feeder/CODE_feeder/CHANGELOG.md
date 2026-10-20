@@ -1,6 +1,6 @@
 # Changelog
 
-Changes here are Gab's independent adaptations, prepared with ChatGPT assistance, of the [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder) firmware.
+Changes here are local adaptations, prepared with ChatGPT assistance, of the [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder) firmware.
 
 ## 0.3.0 — 2026-10-20
 

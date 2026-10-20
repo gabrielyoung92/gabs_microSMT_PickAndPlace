@@ -1,6 +1,6 @@
 # V485 feeder firmware — 8 mm and 12/16/24 mm
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** Reorganised by Gab with ChatGPT. [Credits](../../../CREDITS.md).
+> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../../CREDITS.md).
 
 Plain C PlatformIO firmware, version **0.3.0**, adapted from MicroSMT's V485 sources using STM32 HAL. Both feeder variants share one project. **Builds and simulated checks pass; physical hardware is untested.** See the [changelog](CHANGELOG.md) for validation details.
 

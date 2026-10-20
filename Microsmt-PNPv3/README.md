@@ -1,6 +1,6 @@
 # MicroSMT PNPv3 machine
 
-> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** Reorganised by Gab with ChatGPT. [Credits](../CREDITS.md).
+> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** [Credits and local changes](../CREDITS.md).
 
 Machine parts, nozzle racks, strip feeders, motherboard files and assembly manuals.
 

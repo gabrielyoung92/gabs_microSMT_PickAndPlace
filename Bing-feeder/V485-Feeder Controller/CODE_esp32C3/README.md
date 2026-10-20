@@ -1,6 +1,6 @@
 # ESP32-C3 controller firmware
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** Reorganised by Gab with ChatGPT. [Credits](../../../CREDITS.md).
+> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../../CREDITS.md).
 
 PlatformIO C++ adaptation of MicroSMT's V25 RS485 controller, version **0.1.0**, using the Arduino framework. The [changelog](CHANGELOG.md) records changes and build verification. **Hardware operation is untested.**
 

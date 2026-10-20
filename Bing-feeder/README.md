@@ -1,6 +1,6 @@
 # Bing feeders and controllers
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** Reorganised by Gab with ChatGPT. [Credits](../CREDITS.md).
+> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../CREDITS.md).
 
 Browse the V3 and V485 collections: 3D parts, PCB previews, Gerber ZIPs, firmware and assembly references.
 

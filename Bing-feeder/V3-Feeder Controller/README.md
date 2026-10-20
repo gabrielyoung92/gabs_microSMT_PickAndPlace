@@ -1,6 +1,6 @@
 # V3 feeder controller
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** Reorganised by Gab with ChatGPT. [Credits](../../CREDITS.md).
+> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../CREDITS.md).
 
 Mega2560 controller sources, board files and busbar references.
 

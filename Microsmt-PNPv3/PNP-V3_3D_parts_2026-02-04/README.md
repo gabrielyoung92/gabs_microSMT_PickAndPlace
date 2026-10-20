@@ -1,6 +1,6 @@
 # PNPv3 machine parts — 2026-02-04
 
-> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** Reorganised by Gab with ChatGPT. [Credits](../../CREDITS.md).
+> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** [Credits and local changes](../../CREDITS.md).
 
 25 parts · [Browse all photos](photos/)
 

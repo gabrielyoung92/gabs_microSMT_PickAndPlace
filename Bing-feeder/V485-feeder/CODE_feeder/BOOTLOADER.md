@@ -1,6 +1,6 @@
 # V485 RS485 firmware updates
 
-Gab's bootloader extension to the [MicroSMT-derived feeder firmware](README.md). **Software checks pass; physical installation and operation remain untested.** [Validation results](CHANGELOG.md#030--2026-10-20).
+Local bootloader extension to the [MicroSMT-derived feeder firmware](README.md). **Software checks pass; physical installation and operation remain untested.** [Validation results](CHANGELOG.md#030--2026-10-20).
 
 ## Destination IDs
 
