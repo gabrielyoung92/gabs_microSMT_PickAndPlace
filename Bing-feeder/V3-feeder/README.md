@@ -2,7 +2,7 @@
 
 > **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../CREDITS.md).
 
-Select a tape width to browse models, or open the electronics and firmware references.
+Select a tape width to browse models, or open the electronics and firmware references. Models are updated from the 21 October 2026 release; see the [update notes](../UPSTREAM-2026-10-21.md).
 
 | Browse | Contents |
 | --- | --- |

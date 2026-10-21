@@ -1,0 +1,1963 @@
+{
+  "date": "2026-10-21",
+  "sources": {
+    "microsmt/Bing-feeder": "056f6109d805260af609c1af03ae064e5c2fcba4",
+    "microsmt/Microsmt-PNPv3": "c8b939c44d9ad02c62b70e846f31879f0561a1f8"
+  },
+  "archives": [
+    {
+      "file": "Bing feeder- V3  2026-1021.zip",
+      "sha256": "b55f705557ee95e919aa26b983cf3263e80351981a0e55493c07d60ba2686470",
+      "git_blob_sha1": "fa7beddcc6bda7a5c3e4fee2a5b11003b24a8707",
+      "bytes": 13172031,
+      "id": "v3"
+    },
+    {
+      "file": "Bing  feeder V485 20261021.zip",
+      "sha256": "d2300d579be629194503411e6dd43d14233adefd8328c364855b604b856df025",
+      "git_blob_sha1": "8336eabe237ad29acc2d85f78dddb412112912a9",
+      "bytes": 5233450,
+      "id": "v485"
+    }
+  ],
+  "notes": [
+    "Both repositories contain byte-identical copies of the two new ZIPs.",
+    "Existing local STL exports are retained unless their STEP changed; original upstream STL bytes remain in the source archives.",
+    "Firmware, electronics, local changes and older omitted models are preserved."
+  ],
+  "members": [
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/45T  gear- with  494 bearing  version/45T  gear- with  4-9-4\uff08684ZZ)  bearing.STEP",
+      "source_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-45t-684zz-bearing-variant.step",
+      "action": "unchanged",
+      "destination_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/45T  gear- with  494 bearing  version/45T  gear- with  4-9-4\uff08684ZZ)  bearing.STL",
+      "source_sha256": "8a0c4f28bc2743337d7a0632cc2ccb15a5969e49fcb187152cc9298d74d7aa5d",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-45t-684zz-bearing-variant.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "027b35318332284e9217446c7a78be0ed797af268cdfe084bf6a8b0d8951a6ec"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8-2mm-4mm- V3(Magnetic)  Assembly Manual 0914.pdf",
+      "source_sha256": "63f5008f2074acf41a37e23b67c9aff9b4d11857efc7438cc9285c8d81905dc7",
+      "destination": "Bing-feeder/V3-feeder/docs/V3_8mm_assembly_manual_0914.pdf",
+      "action": "unchanged",
+      "destination_sha256": "63f5008f2074acf41a37e23b67c9aff9b4d11857efc7438cc9285c8d81905dc7"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm feeder  V3 slot(Magnetic)/8mm  feeder holder installation .png",
+      "source_sha256": "ef57af3c2e2a215dd8169d8d0006d58b441ea9e4b5bac6510c1e80fa206a94fd",
+      "destination": "Bing-feeder/V3-feeder/docs/V3_8mm_feeder-holder-installation.png",
+      "action": "unchanged",
+      "destination_sha256": "ef57af3c2e2a215dd8169d8d0006d58b441ea9e4b5bac6510c1e80fa206a94fd"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm feeder  V3 slot(Magnetic)/8mm feeder slot(Magnetic)-1bit.STEP",
+      "source_sha256": "1b5e7b7bddc978e03bab39f1ca386d8ebd4f429d09c33d32cc1251f88662186d",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-slot-1-position-2026-10-03.step",
+      "action": "unchanged",
+      "destination_sha256": "1b5e7b7bddc978e03bab39f1ca386d8ebd4f429d09c33d32cc1251f88662186d"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm feeder  V3 slot(Magnetic)/8mm feeder slot(Magnetic)-3bit.STEP",
+      "source_sha256": "8e272b43df4bf9a9f30e6f28030f16928a6ddd03323b9f932c14618a87aa56ba",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-slot-3-position.step",
+      "action": "unchanged",
+      "destination_sha256": "8e272b43df4bf9a9f30e6f28030f16928a6ddd03323b9f932c14618a87aa56ba"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm feeder  V3 slot(Magnetic)/8mm feeder slot(Magnetic)-8bit.STEP",
+      "source_sha256": "ef63d4110c483198dfd27977e0aa97640d68bb219b0df48ce8a2c4e796f99049",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-slot-8-position-2026-10-03.step",
+      "action": "unchanged",
+      "destination_sha256": "ef63d4110c483198dfd27977e0aa97640d68bb219b0df48ce8a2c4e796f99049"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm feeder  V3 slot(Magnetic)/8mm Holder-1bit.STEP",
+      "source_sha256": "12e8cfdd196ce47e7bd3e16d3f36531aa26d33ee6f63a0df26c7a418ec877fd0",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-holder-1-position.step",
+      "action": "updated",
+      "destination_sha256": "12e8cfdd196ce47e7bd3e16d3f36531aa26d33ee6f63a0df26c7a418ec877fd0"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm feeder  V3 slot(Magnetic)/8mm Holder-3bit.STEP",
+      "source_sha256": "928a9a5195e2c0192c13f892e944c5c76edd586dd4397dc02eca495d20be0fbd",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-holder-3-position.step",
+      "action": "updated",
+      "destination_sha256": "928a9a5195e2c0192c13f892e944c5c76edd586dd4397dc02eca495d20be0fbd"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm feeder  V3 slot(Magnetic)/8mm Holder-8bit.STEP",
+      "source_sha256": "9676e4d2f50b8e2a6f32b6c1866ad8b6ffba4085075fbf4f3f1dd94cead40158",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-holder-8-position.step",
+      "action": "updated",
+      "destination_sha256": "9676e4d2f50b8e2a6f32b6c1866ad8b6ffba4085075fbf4f3f1dd94cead40158"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm feeder  V3 slot(Magnetic)/read me.txt",
+      "source_sha256": "c58ed6690d08d41962ca6cd1f3ed7e1262425377d6eca69f11db7df52c867114",
+      "destination": "Bing-feeder/V3-feeder/docs/magnetic-feeder-slot-notes.txt",
+      "action": "unchanged",
+      "destination_sha256": "c58ed6690d08d41962ca6cd1f3ed7e1262425377d6eca69f11db7df52c867114"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/45T  gear.STEP",
+      "source_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-45t.step",
+      "action": "unchanged",
+      "destination_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/bing  feeder  8mm-V3-pcb-cover.STEP",
+      "source_sha256": "2e127a2a767302da94ce370a93b9cd2b04adf4efb5b0812d26bfb3b27c8095a4",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_pcb-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "2e127a2a767302da94ce370a93b9cd2b04adf4efb5b0812d26bfb3b27c8095a4"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/bing  feeder  8mm-V3-pcb-cover.STL",
+      "source_sha256": "c48e20cf5e5f1703d532cb4ad187c48ac78266f78f7de861e265206551a4b08d",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_pcb-cover.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "e42b4fb02c6bb8b938e6251ae11a8cde732c1c0cdafac41f1738e1e294985e4f"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/bing  feeder  8mm-V3-Spring-support-plate.STEP",
+      "source_sha256": "acde4890ff52c6da55c79ec9ceae7f8d8d1e3fb3e236fd22c6f863fe8efe9d3d",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_spring-support-plate.step",
+      "action": "unchanged",
+      "destination_sha256": "acde4890ff52c6da55c79ec9ceae7f8d8d1e3fb3e236fd22c6f863fe8efe9d3d"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/bing  feeder  8mm-V3-Spring-support-plate.STL",
+      "source_sha256": "44bc81151b39d7f611ef92c4d811d973a35853107cb73774476d000a1f4a73fa",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_spring-support-plate.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "8a3d8742cdeb6b162ccc77763ac95dbcb6032736c3a2f7858efccab761be1259"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/bing  feeder  8mm-V3-Sprocket-cover.STEP",
+      "source_sha256": "6cdfbe95ff6ae216ff33edeed09041427971383eca3804602e2742c7d993d3d2",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_sprocket-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "6cdfbe95ff6ae216ff33edeed09041427971383eca3804602e2742c7d993d3d2"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/bing  feeder  8mm-V3-Sprocket-cover.STL",
+      "source_sha256": "e690e75666a95e054bd08bb8fd1dad918f11a4ed50ef20da6b4acd335368e486",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_sprocket-cover.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "fba7ce4a054101d1925349986ef60948b4724aa106e9d40816c525bc7d6287b8"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/bing  feeder  8mm-V3-tape-cover.STEP",
+      "source_sha256": "da05d6a86eff65bc0c60b016c2f6491bf2d957335eae9a16466eeaa88e6658d9",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_tape-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "da05d6a86eff65bc0c60b016c2f6491bf2d957335eae9a16466eeaa88e6658d9"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/bing  feeder  8mm-V3-tape-cover.STL",
+      "source_sha256": "87162af87c98f57e1f1caa52ce5987f08f3fc886c9eb4e8f66be50925d802380",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_tape-cover.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "56d87731d3e319d62c1de91a3d5b09bfd0365f8b0a29a87ef0106448ecbba751"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/bing  feeder 8mm-V3-main.STEP",
+      "source_sha256": "3338d3e378c4371e0db21b70c70e7a1d0b946fead2bc6cc0e7966cda097938d3",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_main-body.step",
+      "action": "unchanged",
+      "destination_sha256": "3338d3e378c4371e0db21b70c70e7a1d0b946fead2bc6cc0e7966cda097938d3"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/bing  feeder 8mm-V3-main.STL",
+      "source_sha256": "236a18e79aed7d268379d5d2ab9ec70879a284373d6c8aa2ff7ebe7d62635fdd",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_main-body.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "55afda82fed794e22e6871bc95e3083f8f165a1fa68f3ae63caeb9d7e32ed74d"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/firmware/bingfeeder-V3.1-8mm.hex",
+      "source_sha256": "9733f2ed5200b172e8a6fc575af54408fb4d1fb23809575d2a0c5a6784244b5d",
+      "destination": "Bing-feeder/V3-feeder/CODE_feeder_8mm/bingfeeder-V3.1-8mm.hex",
+      "action": "unchanged",
+      "destination_sha256": "9733f2ed5200b172e8a6fc575af54408fb4d1fb23809575d2a0c5a6784244b5d"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/spool-hook-A  version.STEP",
+      "source_sha256": "d3d07ffdd48c46faa11864f9301240ed6310d5085ec08febc9a30c30fdcb9f78",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_spool-hook-a.step",
+      "action": "unchanged",
+      "destination_sha256": "d3d07ffdd48c46faa11864f9301240ed6310d5085ec08febc9a30c30fdcb9f78"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/spool-hook-A  version.STL",
+      "source_sha256": "10b25e558d918b92ff3670143207e572566bff0fc72f9affd8ae8ea0888435f5",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_spool-hook-a.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "544f2d5f398f49928326c84ac4df6f9db53d38c71f38d84cea318eba9ad3c3ad"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/spool-hook-A.jpg",
+      "source_sha256": "7aa1993c4a2b331ab75ccd83f8512a55449289f744f02ff4ab06427c3d9e55aa",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/photos/V3_3D_spool-hook-a-reference.jpg",
+      "action": "unchanged",
+      "destination_sha256": "7aa1993c4a2b331ab75ccd83f8512a55449289f744f02ff4ab06427c3d9e55aa"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/Switching trigger.STEP",
+      "source_sha256": "4c00f95ee20662bbe114f58d82ec883c70a8ccdad4b8d96d8ad71ae259e792c0",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_switch-trigger.step",
+      "action": "unchanged",
+      "destination_sha256": "4c00f95ee20662bbe114f58d82ec883c70a8ccdad4b8d96d8ad71ae259e792c0"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/Switching trigger.STL",
+      "source_sha256": "c6f13f7eb28676cc7496fdbeaace06e3f68207da05ef4f633c4609afa2e32e6d",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_switch-trigger.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "a87d40c7267e52456f80d7eb282506f0c337f8aef844ccc4be1b6be3958e0d21"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/Trigger cover.STEP",
+      "source_sha256": "cd720952d264642bc9d6f486058901b1eb4c1fcd46821202d3f57f39f95c4e6b",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_switch-trigger-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "cd720952d264642bc9d6f486058901b1eb4c1fcd46821202d3f57f39f95c4e6b"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/Trigger cover.STL",
+      "source_sha256": "399da35b8f7d959a3e3dcbdf5443c66cd475035661b2cf1ce331cc5bf807936a",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_switch-trigger-cover.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "2e3a6e6cdf6e148edb7fb95d2d80f1a8c5d29db6ea4259f59897b0d71f0e9fd3"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/worm parts/0.7m-10W-13L-worm.STEP",
+      "source_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_worm-module-0.7-10w-13l.step",
+      "action": "unchanged",
+      "destination_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/worm parts/0.7m-10W-13L-worm.STL",
+      "source_sha256": "1d4371e4af1752557ff16a3715ed6f585caf462f5cb209e3ea026390de0aae8c",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_worm-module-0.7-10w-13l.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "39ed02356b7ec0f76763f97d0ecea6b43b8c9f65748f117f912b17f5e5a0d9c7"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/worm parts/0.7m-15T-6mm-gear.STEP",
+      "source_sha256": "6ca46b84755e9b5116042484105a6ee0d4baf8e4b32c130a64e0f8d6d02789bd",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-15t-module-0.7-6mm.step",
+      "action": "unchanged",
+      "destination_sha256": "6ca46b84755e9b5116042484105a6ee0d4baf8e4b32c130a64e0f8d6d02789bd"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/worm parts/0.7m-15T-6mm-gear.STL",
+      "source_sha256": "e581f7c130593b9ac193066652696ddb034bd6fc4340766e396fe01ecb7c158e",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-15t-module-0.7-6mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "5a34b2f8af755e3ecc4d1d3ba0d2e6530988fb7e3f4010dbe7d368b5832f4875"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/worm parts/0.7m-16T-6mm-gear.STEP",
+      "source_sha256": "3e30854d0b2004a8373b0f04a4c6c9f30fa9402304b1a8aaf07d1d27a1305695",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-16t-module-0.7-6mm.step",
+      "action": "unchanged",
+      "destination_sha256": "3e30854d0b2004a8373b0f04a4c6c9f30fa9402304b1a8aaf07d1d27a1305695"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/worm parts/0.7m-16T-6mm-gear.STL",
+      "source_sha256": "8db17e02840a1a957978e391a254b86129a69f1d8758b54c0d654fc814ee8250",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-16t-module-0.7-6mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "a4208535ae50262de50057a71f44338d8a7a9261e7ed0d475781830f0dad4e95"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/worm parts/16T gear bracket.3mf",
+      "source_sha256": "ff047e6339efbe927631f7de8975b7a9d30cb9ec2f10af9e314e5f9b5fbed32b",
+      "destination": "Bing-feeder/V3-feeder/PRINT_projects/V3_gear-16t-bracket.3mf",
+      "action": "unchanged",
+      "destination_sha256": "ff047e6339efbe927631f7de8975b7a9d30cb9ec2f10af9e314e5f9b5fbed32b"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/worm parts/16T gear bracket.STEP",
+      "source_sha256": "255c91d3f9550ff7a3641baaa60f3ba16ff2bbe02904dc873dbf7308abb050a1",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-16t-bracket.step",
+      "action": "updated",
+      "destination_sha256": "255c91d3f9550ff7a3641baaa60f3ba16ff2bbe02904dc873dbf7308abb050a1"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/worm parts/Worm motor support.STEP",
+      "source_sha256": "79061323f76fa13449a4ffbf8bc19d77fba7ba21b62085f15fdd95ff0552b078",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_worm-motor-support.step",
+      "action": "unchanged",
+      "destination_sha256": "79061323f76fa13449a4ffbf8bc19d77fba7ba21b62085f15fdd95ff0552b078"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/8mm-feeder- V3/worm parts/Worm motor support.STL",
+      "source_sha256": "11b64d77245c253a55b8cdc9d0ce8711bbb53c22b4560aa5ea0069d784dbd9a6",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_worm-motor-support.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "e5d2250c8807f50ed8ba4c41e6efad7e4832547b102c855446722ecf20704eaa"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/BUSbar  PCB  hook.STEP",
+      "source_sha256": "404b618e4e73599d8fb743fad45d6ee225ff2fc4dea0faf70a0b597a5f7392fe",
+      "destination": "Bing-feeder/V3-Feeder Controller/3D_parts/V3_3D_busbar-pcb-hook.step",
+      "action": "unchanged",
+      "destination_sha256": "404b618e4e73599d8fb743fad45d6ee225ff2fc4dea0faf70a0b597a5f7392fe"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/BUSbar  PCB  hook.STL",
+      "source_sha256": "70a47694b58728fc52e7881bc0d63a5533bd9d6a82dd73d4f93a1aff4b94ec72",
+      "destination": "Bing-feeder/V3-Feeder Controller/3D_parts/V3_3D_busbar-pcb-hook.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "6e2fd911a35eda9fd56533df34b0bbeeace9a9125983d23998f2871e212e0043"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/firmware/bingfeeder-V3.1-8mm.hex",
+      "source_sha256": "9733f2ed5200b172e8a6fc575af54408fb4d1fb23809575d2a0c5a6784244b5d",
+      "destination": "Bing-feeder/V3-feeder/CODE_feeder_8mm/bingfeeder-V3.1-8mm.hex",
+      "action": "unchanged",
+      "destination_sha256": "9733f2ed5200b172e8a6fc575af54408fb4d1fb23809575d2a0c5a6784244b5d"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/firmware/mega2560_bingfeeder-48PIN/mega2560_bingfeeder-48PIN.ino",
+      "source_sha256": "4a84356913114278af73b4ff44fd5e3a9c576216845c41ec73c73f36f4fc01d9",
+      "destination": "Bing-feeder/V3-Feeder Controller/CODE_MEGA2560/mega2560_bingfeeder_48pin/mega2560_bingfeeder_48pin.ino",
+      "action": "unchanged",
+      "destination_sha256": "4a84356913114278af73b4ff44fd5e3a9c576216845c41ec73c73f36f4fc01d9"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing  feeder-8mm-V3/MEGA2560 BOX.STL",
+      "source_sha256": "8cfd287bd8bdd41b7c6de3635a5c1d24ce1755071322d1983fae76eeec9c4471",
+      "destination": "Microsmt-PNPv3/PNP-V3_3D_parts_2026-02-04/PNPV3_3D_mega2560-controller-box.stl",
+      "action": "unchanged",
+      "destination_sha256": "8cfd287bd8bdd41b7c6de3635a5c1d24ce1755071322d1983fae76eeec9c4471"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/11.5mm  Tape bracket.STEP",
+      "source_sha256": "c5b5fa90234d70fdd13e0af54329a326185ff64709238ee39ebea54918b9bfe7",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_spool-hook-b-11.5mm.step",
+      "action": "unchanged",
+      "destination_sha256": "c5b5fa90234d70fdd13e0af54329a326185ff64709238ee39ebea54918b9bfe7"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/11.5mm  Tape bracket.STL",
+      "source_sha256": "68afbca1e63b13cbf887d12a2f00544fa5ee5cc2903c4b064e1a8f17823bdb69",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_spool-hook-b-11.5mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "c3c1ae2989e3570b12262179cbaa9bc08555645c46eabf0796fe3416eea5a156"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/12mm  main body.STEP",
+      "source_sha256": "880684cd7bf3256b7ae06c4308df780123f5719c99c5a49a6da854544c5ac6f7",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_main-body.step",
+      "action": "unchanged",
+      "destination_sha256": "880684cd7bf3256b7ae06c4308df780123f5719c99c5a49a6da854544c5ac6f7"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/12mm  main body.STL",
+      "source_sha256": "23aab9038a3ad138d35ad2ab2e5a6c44d5d431e7788bf6427a26163f921a89ab",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_main-body.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "036c831f4e97358112b53b05ddf14dc855610462b244cc5fbc81c6644834e914"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/12mm- PCB cover.STEP",
+      "source_sha256": "9bb4280148c8e625128061df51a389e0a7a8d5347bede2f4ba7d9ae6b3d46ff2",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_pcb-cover-12-16mm.step",
+      "action": "unchanged",
+      "destination_sha256": "9bb4280148c8e625128061df51a389e0a7a8d5347bede2f4ba7d9ae6b3d46ff2"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/12mm- PCB cover.STL",
+      "source_sha256": "37dce9eb4a383c70d17b69c07cd89b687592f3ff47cf65ee91deadeae1a26050",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_pcb-cover-12-16mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "a4edfecf9f5809b62fb07d155a9e041389859ff8112fac442e962091b438b480"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/12mm-Switch  cover.3mf",
+      "source_sha256": "942daff40f141b200ea4e961d897655e9850854f2f3f204c6285becb0f8528e9",
+      "destination": "Bing-feeder/V3-feeder/PRINT_projects/V3_12mm_switch-trigger-cover.3mf",
+      "action": "added",
+      "destination_sha256": "942daff40f141b200ea4e961d897655e9850854f2f3f204c6285becb0f8528e9"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/12mm-Switch  cover.STEP",
+      "source_sha256": "5f23f3e16f943c1d095197c9b808b60ec490b9508f9b199521b57b46178b7281",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_switch-trigger-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "5f23f3e16f943c1d095197c9b808b60ec490b9508f9b199521b57b46178b7281"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/12mm-Switch  cover.STL",
+      "source_sha256": "45b199fba1d5b21811c82c52ffae1f52ee9277f36bc51cc023d53b160c28f6ca",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_switch-trigger-cover.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "1d12a603128a193ef1a44bddd36ea74975b677c889a5d7f4c02f96122a56529b"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/12mm-Switching trigger.STEP",
+      "source_sha256": "e4a7cc4c8fd1f2651cb6f15e482569392d36df93fabdbcc82ea246d2b324c2c5",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_switch-trigger.step",
+      "action": "unchanged",
+      "destination_sha256": "e4a7cc4c8fd1f2651cb6f15e482569392d36df93fabdbcc82ea246d2b324c2c5"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/12mm-Switching trigger.STL",
+      "source_sha256": "a5e4f0408096582a17671aad519d442753573ad2d69bc3d8fb3ccb66d9367708",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_switch-trigger.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "0323b8b82a60882386d5f66930cd55b2ed599a47f6b00542eb4335913ac8a759"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/12mm-tape  cover.STEP",
+      "source_sha256": "567da56a35289041c83319426008bc0eeff71a5546636a7d1c773c41ccfd0bc3",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_tape-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "567da56a35289041c83319426008bc0eeff71a5546636a7d1c773c41ccfd0bc3"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/12mm-tape  cover.STL",
+      "source_sha256": "4222810886e8494ed6d5e76921932addffa835e5449e60e4bc4ae20876472443",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_tape-cover.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "fe39a50512e5f1827fed1131c7c9103576df65093d24b15fecdb6aaf96f421b1"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/45T  gear- with  4-9-4\uff08684ZZ)  bearing.STEP",
+      "source_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-45t-684zz-bearing-variant.step",
+      "action": "unchanged",
+      "destination_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/45T  gear- with  4-9-4\uff08684ZZ)  bearing.STL",
+      "source_sha256": "8a0c4f28bc2743337d7a0632cc2ccb15a5969e49fcb187152cc9298d74d7aa5d",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-45t-684zz-bearing-variant.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "027b35318332284e9217446c7a78be0ed797af268cdfe084bf6a8b0d8951a6ec"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/45T.STEP",
+      "source_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-45t.step",
+      "action": "unchanged",
+      "destination_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/45T.STL",
+      "source_sha256": "4acb25866fd91db4ec5b96f62fda7dedd59b320398304b3063fe01cd1ce6a0d4",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-45t.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "ae0d6e5db0f20f60e99bd2422dae8863788fd89f5aee4445230022dc51787714"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/55T.STEP",
+      "source_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-55t-12-16-24mm.step",
+      "action": "unchanged",
+      "destination_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/55T.STL",
+      "source_sha256": "1dc1ce261b93650fe0446030dd54ddf62522652fce923e3c4d0b86e43a067b36",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-55t-12-16-24mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "d9c9868dd2f894874ec947a288801a36cd652c916745b99bfb77d706768af530"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/worm  parts/0.7m-10W-13L-worm.STEP",
+      "source_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_worm-module-0.7-10w-13l.step",
+      "action": "unchanged",
+      "destination_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/worm  parts/0.7m-10W-13L-worm.STL",
+      "source_sha256": "1d4371e4af1752557ff16a3715ed6f585caf462f5cb209e3ea026390de0aae8c",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_worm-module-0.7-10w-13l.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "39ed02356b7ec0f76763f97d0ecea6b43b8c9f65748f117f912b17f5e5a0d9c7"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/worm  parts/12mm  16T gear bracket.STEP",
+      "source_sha256": "ab8104ac3a5c0a4c688d720efa65edefe7bd9b1f9ba42dccf340ee32fc4e92b8",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_gear-16t-bracket.step",
+      "action": "updated",
+      "destination_sha256": "ab8104ac3a5c0a4c688d720efa65edefe7bd9b1f9ba42dccf340ee32fc4e92b8"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/worm  parts/12mm-0.7m-15T-10mm-gear.STEP",
+      "source_sha256": "25ba47edfa1586c1aee3be9e551042c04a8f0c124d6e559a2a7c40383dd0e15a",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_gear-15t-module-0.7-10mm.step",
+      "action": "unchanged",
+      "destination_sha256": "25ba47edfa1586c1aee3be9e551042c04a8f0c124d6e559a2a7c40383dd0e15a"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/worm  parts/12mm-0.7m-15T-10mm-gear.STL",
+      "source_sha256": "75304f03332ef4674d193d1f2124e40f1cfe955a1b330a95bb3fcad7e4d70793",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_gear-15t-module-0.7-10mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "5adc4acb816d92c85c980e29d399b714f73df64e8ce5eee57adce98bbe1d7ebf"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/worm  parts/12mm-0.7m-16T-10mm-gear.STEP",
+      "source_sha256": "83ac85fd7de4a7abb599d0efc78dcfbbd271069352e704cf0a08142df38a64a4",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_gear-16t-module-0.7-10mm.step",
+      "action": "unchanged",
+      "destination_sha256": "83ac85fd7de4a7abb599d0efc78dcfbbd271069352e704cf0a08142df38a64a4"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/worm  parts/12mm-0.7m-16T-10mm-gear.STL",
+      "source_sha256": "409f76d3db4383d74816806b59af5b568629fc249a8fd1af4138e9414c3a3955",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_gear-16t-module-0.7-10mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "9e3f7b5c1e6e0a31f27b17c4f43dbe89eb1e94605b0b87e83a35870c0160ddec"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/worm  parts/12mm-Worm motor support.STEP",
+      "source_sha256": "2398f06b1a48edc1236e1e18fa2e53141e394030e2c44868ede8bdfd42cf3a23",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_worm-motor-support.step",
+      "action": "unchanged",
+      "destination_sha256": "2398f06b1a48edc1236e1e18fa2e53141e394030e2c44868ede8bdfd42cf3a23"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/12mm/worm  parts/12mm-Worm motor support.STL",
+      "source_sha256": "fe7f5a9847b392c5b541dd885e768129f71a6051905a3be46f3962ec86d9f587",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_worm-motor-support.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "31e36d2a450cc98ed2dc0398c05cb634606d362684f52866ce92f84d2ce42652"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/13mm  Tape bracket.STEP",
+      "source_sha256": "5f31427cf7be56f101e49aeadb7d4db89b5e3cdc89f27efee4d6ed0394e667a5",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_spool-hook-13mm.step",
+      "action": "unchanged",
+      "destination_sha256": "5f31427cf7be56f101e49aeadb7d4db89b5e3cdc89f27efee4d6ed0394e667a5"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/13mm  Tape bracket.STL",
+      "source_sha256": "6cb26153937cbf6cc70888ff73617deb11f3d58dde9bd1b11a96277070053377",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_spool-hook-13mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "8880e3e77bc667d6dd0535ec26cdd7349b43c4a36173764e17da30fadd97f648"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm  main body.STEP",
+      "source_sha256": "f9086d6638d07a0769d246ec00ebde5a6bb800dcc247bc867ef2988687692e1f",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_main-body.step",
+      "action": "unchanged",
+      "destination_sha256": "f9086d6638d07a0769d246ec00ebde5a6bb800dcc247bc867ef2988687692e1f"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm  main body.STL",
+      "source_sha256": "3309e6e0bba9065837f334db6b9e362dde9bd5cfc875a280ed3dc587884e39fa",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_main-body.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "862342bc39094a20eb7640f6ce061d958190a291943b6470961f5656d835c6c7"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm worm/0.7m-10W-13L-worm.STEP",
+      "source_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_worm-module-0.7-10w-13l.step",
+      "action": "unchanged",
+      "destination_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm worm/0.7m-10W-13L-worm.STL",
+      "source_sha256": "1d4371e4af1752557ff16a3715ed6f585caf462f5cb209e3ea026390de0aae8c",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_worm-module-0.7-10w-13l.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "39ed02356b7ec0f76763f97d0ecea6b43b8c9f65748f117f912b17f5e5a0d9c7"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm worm/0.7m-15T-14mm  gear.STEP",
+      "source_sha256": "8a004853ec6a3b1d099dcf782e368eadd0c4093db41b64af37d8ecf9f6ba30da",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_gear-15t-module-0.7-14mm.step",
+      "action": "unchanged",
+      "destination_sha256": "8a004853ec6a3b1d099dcf782e368eadd0c4093db41b64af37d8ecf9f6ba30da"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm worm/0.7m-15T-14mm  gear.STL",
+      "source_sha256": "1cfbe838a89277b8720d1945c233fc89c1fd3a14e0248a05cbc78f2d16bcaf8a",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_gear-15t-module-0.7-14mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "88a6f84c9a15dbbf50b7ba87bb5698559ccf7fdbd321a47bceb2e3140064da87"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm worm/0.7m-16T-14mm  gear.STEP",
+      "source_sha256": "0fbfc3d85be224d68f83e04a4f1d9d438288a04a14884c86bfeeb837a2fe1f0a",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_gear-16t-module-0.7-14mm.step",
+      "action": "unchanged",
+      "destination_sha256": "0fbfc3d85be224d68f83e04a4f1d9d438288a04a14884c86bfeeb837a2fe1f0a"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm worm/0.7m-16T-14mm  gear.STL",
+      "source_sha256": "99bde12efd30da85a0c47de5b282b5896c8e55efd97729211b8f163ade9b3a4a",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_gear-16t-module-0.7-14mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "ea03e1b867462a7d910dad8e5d622ed4a1755d2d4323e74df1135a2b0f9c8312"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm worm/16mm   16T gear bracket.STEP",
+      "source_sha256": "8381fa318721cff30e83377511058665cbfb6ce2cf3d14c61d537af9338e6fe1",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_gear-16t-bracket.step",
+      "action": "updated",
+      "destination_sha256": "8381fa318721cff30e83377511058665cbfb6ce2cf3d14c61d537af9338e6fe1"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm worm/16mm-Worm motor support.STEP",
+      "source_sha256": "d48add8d90d3bd1008c5b90edbfca4dc5dc872d5a8bbc81486e80966f44cab5f",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_worm-motor-support.step",
+      "action": "unchanged",
+      "destination_sha256": "d48add8d90d3bd1008c5b90edbfca4dc5dc872d5a8bbc81486e80966f44cab5f"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm worm/16mm-Worm motor support.STL",
+      "source_sha256": "f821116b4c6cd5a6551d47f77ade150c22c1ed8c5b26773a230a62449394391b",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_worm-motor-support.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "f20ea6d38abd87b9c6085a41e11e01de7f20801ba345f9850bb36e340395752a"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm- PCB cover.STEP",
+      "source_sha256": "9bb4280148c8e625128061df51a389e0a7a8d5347bede2f4ba7d9ae6b3d46ff2",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_pcb-cover-12-16mm.step",
+      "action": "unchanged",
+      "destination_sha256": "9bb4280148c8e625128061df51a389e0a7a8d5347bede2f4ba7d9ae6b3d46ff2"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm- PCB cover.STL",
+      "source_sha256": "4b98415a811e6adc06e01aa526c4edd0fb378f8ed44e77ce105ce008eb56d557",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_pcb-cover-12-16mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "a4edfecf9f5809b62fb07d155a9e041389859ff8112fac442e962091b438b480"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm-Switch   cover.STEP",
+      "source_sha256": "56cb87ffca2336f78fd543d74a5512c0f9a4fba5f992948301c1e91fce8cdea7",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_switch-trigger-cover-16-24mm.step",
+      "action": "unchanged",
+      "destination_sha256": "56cb87ffca2336f78fd543d74a5512c0f9a4fba5f992948301c1e91fce8cdea7"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm-Switch   cover.STL",
+      "source_sha256": "98070241f5c3d52a82ac9eae9d9919f3c8fb4387403c7ce055df652919010496",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_switch-trigger-cover-16-24mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "1d12a603128a193ef1a44bddd36ea74975b677c889a5d7f4c02f96122a56529b"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm-Switching trigger.STEP",
+      "source_sha256": "4501082538ec87aec7e719f0003884de6f3105e5a0df16bc383ad5f487d0c396",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_switch-trigger.step",
+      "action": "unchanged",
+      "destination_sha256": "4501082538ec87aec7e719f0003884de6f3105e5a0df16bc383ad5f487d0c396"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm-Switching trigger.STL",
+      "source_sha256": "ac8ecad8d955a34e8ec9a95999626621622f01ed733afac5c8afd89fb7d77bbe",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_switch-trigger.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "d895297ceb777923477b118ddc8a3e6a88d8da595f573207e3c61fa85dd3b3e7"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm-tape  cover.STEP",
+      "source_sha256": "eb8ed47db34ac2dd1b8c8d66b6abb0e8f6267b64cdeade5040bfd10566a75ef4",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_tape-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "eb8ed47db34ac2dd1b8c8d66b6abb0e8f6267b64cdeade5040bfd10566a75ef4"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/16mm-tape  cover.STL",
+      "source_sha256": "8fcdd58908215f162d749d32cb21b3bd67a02d317e9f5a4eb5cf735fd9b3bb92",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_tape-cover.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "b44f334451f430a2b4589b9e63c20ec05ff567e522370f3f3ce10325b0ddb785"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/45T  gear- with  4-9-4\uff08684ZZ)  bearing.STEP",
+      "source_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-45t-684zz-bearing-variant.step",
+      "action": "unchanged",
+      "destination_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/45T  gear- with  4-9-4\uff08684ZZ)  bearing.STL",
+      "source_sha256": "8a0c4f28bc2743337d7a0632cc2ccb15a5969e49fcb187152cc9298d74d7aa5d",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-45t-684zz-bearing-variant.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "027b35318332284e9217446c7a78be0ed797af268cdfe084bf6a8b0d8951a6ec"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/45T.STEP",
+      "source_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-45t.step",
+      "action": "unchanged",
+      "destination_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/45T.STL",
+      "source_sha256": "4acb25866fd91db4ec5b96f62fda7dedd59b320398304b3063fe01cd1ce6a0d4",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-45t.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "ae0d6e5db0f20f60e99bd2422dae8863788fd89f5aee4445230022dc51787714"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/55T.STEP",
+      "source_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-55t-12-16-24mm.step",
+      "action": "unchanged",
+      "destination_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/16mm/55T.STL",
+      "source_sha256": "1dc1ce261b93650fe0446030dd54ddf62522652fce923e3c4d0b86e43a067b36",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-55t-12-16-24mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "d9c9868dd2f894874ec947a288801a36cd652c916745b99bfb77d706768af530"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm  main body.STEP",
+      "source_sha256": "8d1098aca6ddec45780661999ab093c8a0fe3a8107f679931e031bf9a152d076",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_main-body.step",
+      "action": "unchanged",
+      "destination_sha256": "8d1098aca6ddec45780661999ab093c8a0fe3a8107f679931e031bf9a152d076"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm  main body.STL",
+      "source_sha256": "7cc29546c459d381f2fd6b5b5863c69e9c6b21c43944867570de84ca70f42271",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_main-body.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "a38788c90192c4c45690fca80fb327a5c6a81c5ddf1a713c4fcf5e9cb50ff6a2"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm worm/0.7m-10W-13L-worm.STEP",
+      "source_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_worm-module-0.7-10w-13l.step",
+      "action": "unchanged",
+      "destination_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm worm/0.7m-10W-13L-worm.STL",
+      "source_sha256": "1d4371e4af1752557ff16a3715ed6f585caf462f5cb209e3ea026390de0aae8c",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_worm-module-0.7-10w-13l.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "39ed02356b7ec0f76763f97d0ecea6b43b8c9f65748f117f912b17f5e5a0d9c7"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm worm/24mm   16T gear bracket.STEP",
+      "source_sha256": "9373ed9bff9063fdace7aff1ad5fc73154512e309eea2bc24fb29575a4071c13",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_gear-16t-bracket.step",
+      "action": "updated",
+      "destination_sha256": "9373ed9bff9063fdace7aff1ad5fc73154512e309eea2bc24fb29575a4071c13"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm worm/24mm-0.7m-15T-22mm-gear.STEP",
+      "source_sha256": "04b335d8ee18a6c5ebf7a87bfdf89092707ac2ce3fb3943496292009aad88d42",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_gear-15t-module-0.7-22mm.step",
+      "action": "unchanged",
+      "destination_sha256": "04b335d8ee18a6c5ebf7a87bfdf89092707ac2ce3fb3943496292009aad88d42"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm worm/24mm-0.7m-15T-22mm-gear.STL",
+      "source_sha256": "181488e5b883f26a5a5df8045a7803295ef6bb0b10bfad6041466d2d4f51d135",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_gear-15t-module-0.7-22mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "054080f7f2972ae7151f97c2edbd51f12102b3b20092ccc9a382cf3cb7fdfdea"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm worm/24mm-0.7m-16T-22mm-gear.STEP",
+      "source_sha256": "a352dc6fe1c40f75bdb7d761cb92f177ebf98225d56c45d1476d1ffd14ef7a47",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_gear-16t-module-0.7-22mm.step",
+      "action": "unchanged",
+      "destination_sha256": "a352dc6fe1c40f75bdb7d761cb92f177ebf98225d56c45d1476d1ffd14ef7a47"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm worm/24mm-0.7m-16T-22mm-gear.STL",
+      "source_sha256": "46d7e7862ca6e526bc20f7a37a1911c06e90b63f556bf423ab1ecd64c1deb99b",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_gear-16t-module-0.7-22mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "c54a1bf0c4df8dde6bb2c9a4ed7a39b59a738fedca0ab6b292f21de946cf8082"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm worm/24mm-Worm motor support.STEP",
+      "source_sha256": "271f7adb8d125c465a450be1f55196f395738d5a1d287fc9a3ba15c388cf462a",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_worm-motor-support.step",
+      "action": "unchanged",
+      "destination_sha256": "271f7adb8d125c465a450be1f55196f395738d5a1d287fc9a3ba15c388cf462a"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm worm/24mm-Worm motor support.STL",
+      "source_sha256": "b0426c2ccab000a06940252a7528f729df247464a0fdd662653f08a3a1287fb4",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_worm-motor-support.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "28d051c9514e228d729c86a6cc98a8e488c7dd15e73c0de073e11a52d6582fa8"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm- PCB cover.STEP",
+      "source_sha256": "3ab75e89116c3babe50487248e39ebc4478478bfefec83f9d41e538c46cc9e9a",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_pcb-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "3ab75e89116c3babe50487248e39ebc4478478bfefec83f9d41e538c46cc9e9a"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm- PCB cover.STL",
+      "source_sha256": "8b8c10eb99fa0e41b5d41854ad9419604cc3b60d4e4cff796a639d89a16349ad",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_pcb-cover.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "f4f3f1b118d80536b8fd23b9a09fddff4f1fff4c66c63f3c65f318976b6d3eb3"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm-Switch cover.STEP",
+      "source_sha256": "56cb87ffca2336f78fd543d74a5512c0f9a4fba5f992948301c1e91fce8cdea7",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_switch-trigger-cover-16-24mm.step",
+      "action": "unchanged",
+      "destination_sha256": "56cb87ffca2336f78fd543d74a5512c0f9a4fba5f992948301c1e91fce8cdea7"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm-Switch cover.STL",
+      "source_sha256": "8a272622ea040d9c0a151d3789ed8c257506d3e73814ce70ed7e855a9183ba96",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_switch-trigger-cover-16-24mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "1d12a603128a193ef1a44bddd36ea74975b677c889a5d7f4c02f96122a56529b"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm-Switching trigger.STEP",
+      "source_sha256": "5e6447176ca7ce3f8592af8cf207c499992d0a6618f1daf0b17bb0bd01ddb856",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_switch-trigger.step",
+      "action": "updated",
+      "destination_sha256": "5e6447176ca7ce3f8592af8cf207c499992d0a6618f1daf0b17bb0bd01ddb856"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm-Switching trigger.STL",
+      "source_sha256": "6a565b4ec7f89b808f99a6cf5d4caf9922543f4518a9b98a36f819bed32b8d4a",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_switch-trigger.stl",
+      "action": "regenerated_stl_from_step",
+      "destination_sha256": "2fdfd6fb8779e36cdaebe05e5274d5cee8b6d758c98e5a99465e7044839eda6a",
+      "step": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_switch-trigger.step"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm-tape  cover.STEP",
+      "source_sha256": "4eee834a17944782b46b5fe545c7e46de5b8f3c8925da7dbd764027252a1ce18",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_tape-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "4eee834a17944782b46b5fe545c7e46de5b8f3c8925da7dbd764027252a1ce18"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/24mm-tape  cover.STL",
+      "source_sha256": "1f4ac24637f50180650fb83dd1d4556ec7e4479aca9bced52ddf62b7663a2bcc",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_tape-cover.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "3744740e610a5d87257d031548fbecb3ada0efdf193d31c15f23fef24315b044"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/45T  gear- with  4-9-4\uff08684ZZ)  bearing.STEP",
+      "source_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-45t-684zz-bearing-variant.step",
+      "action": "unchanged",
+      "destination_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/45T  gear- with  4-9-4\uff08684ZZ)  bearing.STL",
+      "source_sha256": "8a0c4f28bc2743337d7a0632cc2ccb15a5969e49fcb187152cc9298d74d7aa5d",
+      "destination": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-45t-684zz-bearing-variant.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "027b35318332284e9217446c7a78be0ed797af268cdfe084bf6a8b0d8951a6ec"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/45T.STEP",
+      "source_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-45t.step",
+      "action": "unchanged",
+      "destination_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/45T.STL",
+      "source_sha256": "4acb25866fd91db4ec5b96f62fda7dedd59b320398304b3063fe01cd1ce6a0d4",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-45t.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "ae0d6e5db0f20f60e99bd2422dae8863788fd89f5aee4445230022dc51787714"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/55T.STEP",
+      "source_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-55t-12-16-24mm.step",
+      "action": "unchanged",
+      "destination_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/24mm/55T.STL",
+      "source_sha256": "1dc1ce261b93650fe0446030dd54ddf62522652fce923e3c4d0b86e43a067b36",
+      "destination": "Bing-feeder/V3-feeder/shared_3D_parts/V3_3D_gear-55t-12-16-24mm.stl",
+      "action": "retained_local_stl",
+      "destination_sha256": "d9c9868dd2f894874ec947a288801a36cd652c916745b99bfb77d706768af530"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/feeder  PCBA   diagrammatic.jpg",
+      "source_sha256": "e10e10e73537fb071852aa15cd7521cf6836bb5f290810613f158adde1d8a928",
+      "destination": "Bing-feeder/V3-feeder/docs/V2_12-16-24mm_feeder-pcba-diagram.jpg",
+      "action": "unchanged",
+      "destination_sha256": "e10e10e73537fb071852aa15cd7521cf6836bb5f290810613f158adde1d8a928"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/Installation of sprocket for 12-16-24 feeder.jpg",
+      "source_sha256": "03ccf4ea01dc831ca9e224ad3224c0c8653abe183c79f5f8a8e48d28b7f1e13b",
+      "destination": "Bing-feeder/V3-feeder/docs/V2_12-16-24mm_sprocket-installation.jpg",
+      "action": "unchanged",
+      "destination_sha256": "03ccf4ea01dc831ca9e224ad3224c0c8653abe183c79f5f8a8e48d28b7f1e13b"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/Screw position  of  12-16-24mm feeder -1.jpg",
+      "source_sha256": "cdcc9471f1cc3ccd3c6a536a8c7879700770f6f52895fed7119aebf27c34431f",
+      "destination": "Bing-feeder/V3-feeder/docs/V2_12-16-24mm_screw-positions-1.jpg",
+      "action": "unchanged",
+      "destination_sha256": "cdcc9471f1cc3ccd3c6a536a8c7879700770f6f52895fed7119aebf27c34431f"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/Screw position  of  12-16-24mm feeder -2.jpg",
+      "source_sha256": "b69764effeffef27bae3001cb4ea0503e873f470f5c34927fbc18d0b2414b3e9",
+      "destination": "Bing-feeder/V3-feeder/docs/V2_12-16-24mm_screw-positions-2.jpg",
+      "action": "unchanged",
+      "destination_sha256": "b69764effeffef27bae3001cb4ea0503e873f470f5c34927fbc18d0b2414b3e9"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/12mm feeder slot(Magnetic)-1bit.STEP",
+      "source_sha256": "1b69646384a471e4dc6dbebed6dd6b5510d2765d2a352c7b8aaf266ddced73fe",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_feeder-slot-1-position.step",
+      "action": "unchanged",
+      "destination_sha256": "1b69646384a471e4dc6dbebed6dd6b5510d2765d2a352c7b8aaf266ddced73fe"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/12mm feeder slot(Magnetic)-2bit.STEP",
+      "source_sha256": "f6314876586d179b951f0c4dda74acdf01925283ef5ad3ec1ce259673e32ff83",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_feeder-slot-2-position.step",
+      "action": "unchanged",
+      "destination_sha256": "f6314876586d179b951f0c4dda74acdf01925283ef5ad3ec1ce259673e32ff83"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/12mm feeder slot(Magnetic)-4bit.STEP",
+      "source_sha256": "1836c86f52c5699b3b179c5527bfc5a3fb91917bb82da727c4699d321e6d51af",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_feeder-slot-4-position.step",
+      "action": "unchanged",
+      "destination_sha256": "1836c86f52c5699b3b179c5527bfc5a3fb91917bb82da727c4699d321e6d51af"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/12mm Holder-1bit.STEP",
+      "source_sha256": "6c46f74c58f44d592e108e6db36766b8975fb651b0b8949f312a5d9a9424ff5f",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_feeder-holder-1-position.step",
+      "action": "unchanged",
+      "destination_sha256": "6c46f74c58f44d592e108e6db36766b8975fb651b0b8949f312a5d9a9424ff5f"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/12mm Holder-2bit.STEP",
+      "source_sha256": "b2dea5abd91c4ecdc85681ac111ad376b5a8a19207a3c8c656badb70b9b88e65",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_feeder-holder-2-position.step",
+      "action": "unchanged",
+      "destination_sha256": "b2dea5abd91c4ecdc85681ac111ad376b5a8a19207a3c8c656badb70b9b88e65"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/12mm Holder-4bit.STEP",
+      "source_sha256": "83d489ae7cbd91af191287bb52da8ea978db0a3c3641e55e3c43e63058f62ce5",
+      "destination": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_feeder-holder-4-position.step",
+      "action": "unchanged",
+      "destination_sha256": "83d489ae7cbd91af191287bb52da8ea978db0a3c3641e55e3c43e63058f62ce5"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/16mm feeder slot(Magnetic)-1bit.STEP",
+      "source_sha256": "a934752392783017d40f8edf599f395e1f4b29f8547f656d7f251a0da1d6c466",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_feeder-slot-1-position.step",
+      "action": "unchanged",
+      "destination_sha256": "a934752392783017d40f8edf599f395e1f4b29f8547f656d7f251a0da1d6c466"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/16mm feeder slot(Magnetic)-2bit.STEP",
+      "source_sha256": "66b51bab26e3edbd94b142f01cf06a51fbcdf3836ac5b141432504161be540ad",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_feeder-slot-2-position.step",
+      "action": "unchanged",
+      "destination_sha256": "66b51bab26e3edbd94b142f01cf06a51fbcdf3836ac5b141432504161be540ad"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/16mm feeder slot(Magnetic)-3bit.STEP",
+      "source_sha256": "263bf95d57d8551d0c9a7dfb084f2e9aa1ca0582bd80162d4b61724da2c88397",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_feeder-slot-3-position.step",
+      "action": "unchanged",
+      "destination_sha256": "263bf95d57d8551d0c9a7dfb084f2e9aa1ca0582bd80162d4b61724da2c88397"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/16mm Holder-1bit.STEP",
+      "source_sha256": "1976c79dc1c5c6023c20e8ba44baf4a3ef879f268c3ed6d1d1bc67316b0824a5",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_feeder-holder-1-position.step",
+      "action": "unchanged",
+      "destination_sha256": "1976c79dc1c5c6023c20e8ba44baf4a3ef879f268c3ed6d1d1bc67316b0824a5"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/16mm Holder-2bit.STEP",
+      "source_sha256": "da3b68d9821bfcd474666c59e63f33f5577dd2a28e304e1c74a9b3bbbd032a3b",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_feeder-holder-2-position.step",
+      "action": "unchanged",
+      "destination_sha256": "da3b68d9821bfcd474666c59e63f33f5577dd2a28e304e1c74a9b3bbbd032a3b"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/16mm Holder-3bit.STEP",
+      "source_sha256": "d4b535ddab0cb82c01edb5f3257b103c2f8c28cdb31ec04b903248960269c138",
+      "destination": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_feeder-holder-3-position.step",
+      "action": "unchanged",
+      "destination_sha256": "d4b535ddab0cb82c01edb5f3257b103c2f8c28cdb31ec04b903248960269c138"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/24mm feeder slot(Magnetic)-1bit.STEP",
+      "source_sha256": "c110d724cdc4292773926308dcc0711363f3fc3bbf6badd421df9bec10529b4b",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_feeder-slot-1-position.step",
+      "action": "unchanged",
+      "destination_sha256": "c110d724cdc4292773926308dcc0711363f3fc3bbf6badd421df9bec10529b4b"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/24mm feeder slot(Magnetic)-2bit.STEP",
+      "source_sha256": "9219198e0238c81bfbad1ef5288baaf0150f5912877691ce4ad3d876c0315090",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_feeder-slot-2-position.step",
+      "action": "unchanged",
+      "destination_sha256": "9219198e0238c81bfbad1ef5288baaf0150f5912877691ce4ad3d876c0315090"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/24mm feeder slot(Magnetic)-3bit.STEP",
+      "source_sha256": "761577b4201192541b3ecadc8b65e6843cb580f25c1d53ced7d00f0ca1383551",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_feeder-slot-3-position.step",
+      "action": "unchanged",
+      "destination_sha256": "761577b4201192541b3ecadc8b65e6843cb580f25c1d53ced7d00f0ca1383551"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/24mm Holder-1bit.STEP",
+      "source_sha256": "462e9d60609b1293d8121161d8a6f8e3ed54c46a48ba92495d6d5a9685af2cec",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_feeder-holder-1-position.step",
+      "action": "unchanged",
+      "destination_sha256": "462e9d60609b1293d8121161d8a6f8e3ed54c46a48ba92495d6d5a9685af2cec"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/24mm Holder-2bit.STEP",
+      "source_sha256": "7497e992814096d34209dc267eb9c74bdf1b0d50a8b23da10bb632152ad8924e",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_feeder-holder-2-position.step",
+      "action": "unchanged",
+      "destination_sha256": "7497e992814096d34209dc267eb9c74bdf1b0d50a8b23da10bb632152ad8924e"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/24mm Holder-3bit.STEP",
+      "source_sha256": "52b32a55705b02331d34b56b4ca2eab085e9840612bfc5bf564f31daf63055a6",
+      "destination": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_feeder-holder-3-position.step",
+      "action": "unchanged",
+      "destination_sha256": "52b32a55705b02331d34b56b4ca2eab085e9840612bfc5bf564f31daf63055a6"
+    },
+    {
+      "archive": "v3",
+      "member": "Bing feeder 12-16-24mm - V2/V2-12-16-24mm  feederslot(Magnetic)/read me.txt",
+      "source_sha256": "c58ed6690d08d41962ca6cd1f3ed7e1262425377d6eca69f11db7df52c867114",
+      "destination": "Bing-feeder/V3-feeder/docs/magnetic-feeder-slot-notes.txt",
+      "action": "unchanged",
+      "destination_sha256": "c58ed6690d08d41962ca6cd1f3ed7e1262425377d6eca69f11db7df52c867114"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/45T  gear- with  4-9-4\uff08684ZZ)  bearing.STEP",
+      "source_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_gear-45t-684zz-bearing-variant.step",
+      "action": "unchanged",
+      "destination_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/45T.STEP",
+      "source_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_gear-45t.step",
+      "action": "unchanged",
+      "destination_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/55T.STEP",
+      "source_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_gear-55t.step",
+      "action": "updated",
+      "destination_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/8mm Holder and  slot/8mm Holder-1bit.STEP",
+      "source_sha256": "12e8cfdd196ce47e7bd3e16d3f36531aa26d33ee6f63a0df26c7a418ec877fd0",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_feeder-holder-1-position.step",
+      "action": "unchanged",
+      "destination_sha256": "12e8cfdd196ce47e7bd3e16d3f36531aa26d33ee6f63a0df26c7a418ec877fd0"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/8mm Holder and  slot/8mm Holder-3bit.STEP",
+      "source_sha256": "928a9a5195e2c0192c13f892e944c5c76edd586dd4397dc02eca495d20be0fbd",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_feeder-holder-3-position.step",
+      "action": "unchanged",
+      "destination_sha256": "928a9a5195e2c0192c13f892e944c5c76edd586dd4397dc02eca495d20be0fbd"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/8mm Holder and  slot/8mm Holder-8bit.STEP",
+      "source_sha256": "9676e4d2f50b8e2a6f32b6c1866ad8b6ffba4085075fbf4f3f1dd94cead40158",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_feeder-holder-8-position.step",
+      "action": "unchanged",
+      "destination_sha256": "9676e4d2f50b8e2a6f32b6c1866ad8b6ffba4085075fbf4f3f1dd94cead40158"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/8mm Holder and  slot/V485-8mm feeder slot  -1bit-Space .STEP",
+      "source_sha256": "359db7dec3d498f2dd7a5e40383e6e2ba3b3512e929fbd978592f0cc5799d01e",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_feeder-slot-1-position-space-variant.step",
+      "action": "unchanged",
+      "destination_sha256": "359db7dec3d498f2dd7a5e40383e6e2ba3b3512e929fbd978592f0cc5799d01e"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/8mm Holder and  slot/V485-8mm feeder slot  -1bit.STEP",
+      "source_sha256": "65308b8e71f65b06a242df6562290077d7daead462b1c9c65a710f1c4fc4f474",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_feeder-slot-1-position.step",
+      "action": "unchanged",
+      "destination_sha256": "65308b8e71f65b06a242df6562290077d7daead462b1c9c65a710f1c4fc4f474"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/8mm Holder and  slot/V485-8mm feeder slot-8bit.STL",
+      "source_sha256": "b05bb7c5a675988d453f35c6219e9e101fe265f4408072dcf0f977e75700fa6e",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_feeder-slot-8-position.stl",
+      "action": "unchanged",
+      "destination_sha256": "b05bb7c5a675988d453f35c6219e9e101fe265f4408072dcf0f977e75700fa6e"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/8mm worm parts/0.7m-10W-13L-worm.STEP",
+      "source_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_worm-module-0.7-10w-13l.step",
+      "action": "unchanged",
+      "destination_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/8mm worm parts/0.7m-15T-6mm-gear.STEP",
+      "source_sha256": "6ca46b84755e9b5116042484105a6ee0d4baf8e4b32c130a64e0f8d6d02789bd",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_gear-15t-module-0.7-6mm.step",
+      "action": "unchanged",
+      "destination_sha256": "6ca46b84755e9b5116042484105a6ee0d4baf8e4b32c130a64e0f8d6d02789bd"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/8mm worm parts/0.7m-16T-6mm-gear.STEP",
+      "source_sha256": "3e30854d0b2004a8373b0f04a4c6c9f30fa9402304b1a8aaf07d1d27a1305695",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_gear-16t-module-0.7-6mm.step",
+      "action": "unchanged",
+      "destination_sha256": "3e30854d0b2004a8373b0f04a4c6c9f30fa9402304b1a8aaf07d1d27a1305695"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/8mm worm parts/8mm-16T gear bracket.STEP",
+      "source_sha256": "255c91d3f9550ff7a3641baaa60f3ba16ff2bbe02904dc873dbf7308abb050a1",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_gear-16t-bracket.step",
+      "action": "unchanged",
+      "destination_sha256": "255c91d3f9550ff7a3641baaa60f3ba16ff2bbe02904dc873dbf7308abb050a1"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/8mm worm parts/V485-8mm-Worm motor support.STEP",
+      "source_sha256": "431b01c0410995420b7b540fa309ddc7da91a76a337653c83dd358fc4277ee7d",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_worm-motor-support.step",
+      "action": "updated",
+      "destination_sha256": "431b01c0410995420b7b540fa309ddc7da91a76a337653c83dd358fc4277ee7d"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/bing  feeder  8mm-V485-Spring-support-plate.STEP",
+      "source_sha256": "acde4890ff52c6da55c79ec9ceae7f8d8d1e3fb3e236fd22c6f863fe8efe9d3d",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_spring-support-plate.step",
+      "action": "unchanged",
+      "destination_sha256": "acde4890ff52c6da55c79ec9ceae7f8d8d1e3fb3e236fd22c6f863fe8efe9d3d"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/bing  feeder  8mm-V485-tape-cover.STEP",
+      "source_sha256": "da05d6a86eff65bc0c60b016c2f6491bf2d957335eae9a16466eeaa88e6658d9",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_tape-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "da05d6a86eff65bc0c60b016c2f6491bf2d957335eae9a16466eeaa88e6658d9"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/bing  feeder 8mm-V485-main.STEP",
+      "source_sha256": "d20a6993b2957c46b4879621f31f3f94b7098e4d4f66948508b57fdbcc8b713d",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_main-body.step",
+      "action": "unchanged",
+      "destination_sha256": "d20a6993b2957c46b4879621f31f3f94b7098e4d4f66948508b57fdbcc8b713d"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/bing  feeder 8mm-V485-PCB cover.STEP",
+      "source_sha256": "8959822e2dded23cfc67b935352efa19bdbdb9acfbc276d7a0043bbd6d8e0d4b",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_pcb-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "8959822e2dded23cfc67b935352efa19bdbdb9acfbc276d7a0043bbd6d8e0d4b"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/bing  feeder 8mm-V485-Sprocket-cover.STEP",
+      "source_sha256": "dfae671c7f5cafd2ece8bad4873f6d6ac4e88b13ef7765744bad0d298836c6c7",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_sprocket-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "dfae671c7f5cafd2ece8bad4873f6d6ac4e88b13ef7765744bad0d298836c6c7"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/bing  feeder 8mm-V485-triger cover.STEP",
+      "source_sha256": "6162f7f3e80a662efb3ab0f066a792412ea8eee188a7dd8af6f490e0dd1132c8",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_switch-trigger-cover.step",
+      "action": "unchanged",
+      "destination_sha256": "6162f7f3e80a662efb3ab0f066a792412ea8eee188a7dd8af6f490e0dd1132c8"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/spool-hook-A  version.STEP",
+      "source_sha256": "d3d07ffdd48c46faa11864f9301240ed6310d5085ec08febc9a30c30fdcb9f78",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_spool-hook-a.step",
+      "action": "unchanged",
+      "destination_sha256": "d3d07ffdd48c46faa11864f9301240ed6310d5085ec08febc9a30c30fdcb9f78"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/spool-hook-A.jpg",
+      "source_sha256": "7aa1993c4a2b331ab75ccd83f8512a55449289f744f02ff4ab06427c3d9e55aa",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/photos/V485_3D_spool-hook-a-reference.jpg",
+      "action": "added",
+      "destination_sha256": "7aa1993c4a2b331ab75ccd83f8512a55449289f744f02ff4ab06427c3d9e55aa"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485   8mm/Switching trigger.STEP",
+      "source_sha256": "4c00f95ee20662bbe114f58d82ec883c70a8ccdad4b8d96d8ad71ae259e792c0",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_switch-trigger.step",
+      "action": "unchanged",
+      "destination_sha256": "4c00f95ee20662bbe114f58d82ec883c70a8ccdad4b8d96d8ad71ae259e792c0"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12-16-24mm Holder and  slot/12mm Holder-1bit.STEP",
+      "source_sha256": "6c46f74c58f44d592e108e6db36766b8975fb651b0b8949f312a5d9a9424ff5f",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_feeder-holder-1-position.step",
+      "action": "added",
+      "destination_sha256": "6c46f74c58f44d592e108e6db36766b8975fb651b0b8949f312a5d9a9424ff5f"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12-16-24mm Holder and  slot/16mm Holder-1bit.STEP",
+      "source_sha256": "1976c79dc1c5c6023c20e8ba44baf4a3ef879f268c3ed6d1d1bc67316b0824a5",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_feeder-holder-1-position.step",
+      "action": "added",
+      "destination_sha256": "1976c79dc1c5c6023c20e8ba44baf4a3ef879f268c3ed6d1d1bc67316b0824a5"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12-16-24mm Holder and  slot/24mm feeder slot(Magnetic)-1bit.STEP",
+      "source_sha256": "66cf8564800416701823c2da6089ceb21d7d631611980d1780322b2fc92e3496",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_feeder-slot-1-position.step",
+      "action": "added",
+      "destination_sha256": "66cf8564800416701823c2da6089ceb21d7d631611980d1780322b2fc92e3496"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12-16-24mm Holder and  slot/24mm Holder-1bit.STEP",
+      "source_sha256": "462e9d60609b1293d8121161d8a6f8e3ed54c46a48ba92495d6d5a9685af2cec",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_feeder-holder-1-position.step",
+      "action": "added",
+      "destination_sha256": "462e9d60609b1293d8121161d8a6f8e3ed54c46a48ba92495d6d5a9685af2cec"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12-16-24mm Holder and  slot/V485-12mm feeder slot(Magnetic)-1bit.STEP",
+      "source_sha256": "9d5300ccc8aa7a37d4573ddfc6a3340ae1b31f783c2cd454d64ebf2e7bc51042",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_feeder-slot-1-position.step",
+      "action": "added",
+      "destination_sha256": "9d5300ccc8aa7a37d4573ddfc6a3340ae1b31f783c2cd454d64ebf2e7bc51042"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/12mm worm parts/0.7m-10W-13L-worm.STEP",
+      "source_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_worm-module-0.7-10w-13l.step",
+      "action": "added",
+      "destination_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/12mm worm parts/12mm  16T gear bracket.STEP",
+      "source_sha256": "ab8104ac3a5c0a4c688d720efa65edefe7bd9b1f9ba42dccf340ee32fc4e92b8",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_gear-16t-bracket.step",
+      "action": "added",
+      "destination_sha256": "ab8104ac3a5c0a4c688d720efa65edefe7bd9b1f9ba42dccf340ee32fc4e92b8"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/12mm worm parts/12mm-0.7m-15T-10mm-gear.STEP",
+      "source_sha256": "25ba47edfa1586c1aee3be9e551042c04a8f0c124d6e559a2a7c40383dd0e15a",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_gear-15t-module-0.7-10mm.step",
+      "action": "added",
+      "destination_sha256": "25ba47edfa1586c1aee3be9e551042c04a8f0c124d6e559a2a7c40383dd0e15a"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/12mm worm parts/12mm-0.7m-16T-10mm-gear.STEP",
+      "source_sha256": "83ac85fd7de4a7abb599d0efc78dcfbbd271069352e704cf0a08142df38a64a4",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_gear-16t-module-0.7-10mm.step",
+      "action": "added",
+      "destination_sha256": "83ac85fd7de4a7abb599d0efc78dcfbbd271069352e704cf0a08142df38a64a4"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/12mm worm parts/V485-12mm-Worm motor support.STEP",
+      "source_sha256": "78621e30f3847e5b08003e2d6795bbf2bcbb883bc44f96f3ef8a726b48b44553",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_worm-motor-support.step",
+      "action": "added",
+      "destination_sha256": "78621e30f3847e5b08003e2d6795bbf2bcbb883bc44f96f3ef8a726b48b44553"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/12mm-Switch  cover.STEP",
+      "source_sha256": "5f23f3e16f943c1d095197c9b808b60ec490b9508f9b199521b57b46178b7281",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_switch-trigger-cover.step",
+      "action": "added",
+      "destination_sha256": "5f23f3e16f943c1d095197c9b808b60ec490b9508f9b199521b57b46178b7281"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/12mm-Switching trigger.STEP",
+      "source_sha256": "e4a7cc4c8fd1f2651cb6f15e482569392d36df93fabdbcc82ea246d2b324c2c5",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_switch-trigger.step",
+      "action": "added",
+      "destination_sha256": "e4a7cc4c8fd1f2651cb6f15e482569392d36df93fabdbcc82ea246d2b324c2c5"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/12mm-tape  cover.STEP",
+      "source_sha256": "567da56a35289041c83319426008bc0eeff71a5546636a7d1c773c41ccfd0bc3",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_tape-cover.step",
+      "action": "added",
+      "destination_sha256": "567da56a35289041c83319426008bc0eeff71a5546636a7d1c773c41ccfd0bc3"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/45T.STEP",
+      "source_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-45t.step",
+      "action": "added",
+      "destination_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/55T.STEP",
+      "source_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-55t.step",
+      "action": "added",
+      "destination_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/V485- 12mm -main body.STEP",
+      "source_sha256": "db09235771fca90e0c07ecb63f48cc1e5659965fe2be5a93e40672485caa8448",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_main-body.step",
+      "action": "added",
+      "destination_sha256": "db09235771fca90e0c07ecb63f48cc1e5659965fe2be5a93e40672485caa8448"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/12mm/V485- 12mm-PCB cover.STEP",
+      "source_sha256": "f6807ebaa58a4042962ad38493e40a5a429767d26c3ceb4ccd4223b6aee68ef3",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_pcb-cover.step",
+      "action": "added",
+      "destination_sha256": "f6807ebaa58a4042962ad38493e40a5a429767d26c3ceb4ccd4223b6aee68ef3"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/16mm worm parts/0.7m-10W-13L-worm.STEP",
+      "source_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_worm-module-0.7-10w-13l.step",
+      "action": "added",
+      "destination_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/16mm worm parts/0.7m-15T-14mm  gear.STEP",
+      "source_sha256": "8a004853ec6a3b1d099dcf782e368eadd0c4093db41b64af37d8ecf9f6ba30da",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_gear-15t-module-0.7-14mm.step",
+      "action": "added",
+      "destination_sha256": "8a004853ec6a3b1d099dcf782e368eadd0c4093db41b64af37d8ecf9f6ba30da"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/16mm worm parts/0.7m-16T-14mm  gear.STEP",
+      "source_sha256": "0fbfc3d85be224d68f83e04a4f1d9d438288a04a14884c86bfeeb837a2fe1f0a",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_gear-16t-module-0.7-14mm.step",
+      "action": "added",
+      "destination_sha256": "0fbfc3d85be224d68f83e04a4f1d9d438288a04a14884c86bfeeb837a2fe1f0a"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/16mm worm parts/16mm   16T gear bracket.STEP",
+      "source_sha256": "8381fa318721cff30e83377511058665cbfb6ce2cf3d14c61d537af9338e6fe1",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_gear-16t-bracket.step",
+      "action": "added",
+      "destination_sha256": "8381fa318721cff30e83377511058665cbfb6ce2cf3d14c61d537af9338e6fe1"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/16mm worm parts/V485-16mm Worm motor support.STEP",
+      "source_sha256": "384196e1503e618eb30ac46bd3019a6b85483075edaaf9ea4b0f7435ad426aef",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_worm-motor-support.step",
+      "action": "added",
+      "destination_sha256": "384196e1503e618eb30ac46bd3019a6b85483075edaaf9ea4b0f7435ad426aef"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/16mm-Switch   cover.STEP",
+      "source_sha256": "56cb87ffca2336f78fd543d74a5512c0f9a4fba5f992948301c1e91fce8cdea7",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_switch-trigger-cover-16-24mm.step",
+      "action": "added",
+      "destination_sha256": "56cb87ffca2336f78fd543d74a5512c0f9a4fba5f992948301c1e91fce8cdea7"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/16mm-Switching trigger.STEP",
+      "source_sha256": "4501082538ec87aec7e719f0003884de6f3105e5a0df16bc383ad5f487d0c396",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_switch-trigger.step",
+      "action": "added",
+      "destination_sha256": "4501082538ec87aec7e719f0003884de6f3105e5a0df16bc383ad5f487d0c396"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/16mm-tape  cover.STEP",
+      "source_sha256": "eb8ed47db34ac2dd1b8c8d66b6abb0e8f6267b64cdeade5040bfd10566a75ef4",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_tape-cover.step",
+      "action": "added",
+      "destination_sha256": "eb8ed47db34ac2dd1b8c8d66b6abb0e8f6267b64cdeade5040bfd10566a75ef4"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/45T.STEP",
+      "source_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-45t.step",
+      "action": "added",
+      "destination_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/55T.STEP",
+      "source_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-55t.step",
+      "action": "added",
+      "destination_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/V485-16mm-main body .STEP",
+      "source_sha256": "bf990e9da77c2df022dc46aedd6112ef96101e2006617bfae6690fb578c67ce5",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_main-body.step",
+      "action": "added",
+      "destination_sha256": "bf990e9da77c2df022dc46aedd6112ef96101e2006617bfae6690fb578c67ce5"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/16mm/V485-16mm-PCB cover .STEP",
+      "source_sha256": "27ac35fe7992d20b41cef7e576d64e6c7517b3c564ece56c00d88ba04a58f994",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_pcb-cover.step",
+      "action": "added",
+      "destination_sha256": "27ac35fe7992d20b41cef7e576d64e6c7517b3c564ece56c00d88ba04a58f994"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/24mm worm parts/0.7m-10W-13L-worm.STEP",
+      "source_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_worm-module-0.7-10w-13l.step",
+      "action": "added",
+      "destination_sha256": "bbead3a1ae5bfe6f0ece0c7ddf3564fd12ee91e5a242f1f6a0d9160f7ae18cf2"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/24mm worm parts/24mm   16T gear bracket.STEP",
+      "source_sha256": "9373ed9bff9063fdace7aff1ad5fc73154512e309eea2bc24fb29575a4071c13",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_gear-16t-bracket.step",
+      "action": "added",
+      "destination_sha256": "9373ed9bff9063fdace7aff1ad5fc73154512e309eea2bc24fb29575a4071c13"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/24mm worm parts/24mm-0.7m-15T-22mm-gear.STEP",
+      "source_sha256": "04b335d8ee18a6c5ebf7a87bfdf89092707ac2ce3fb3943496292009aad88d42",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_gear-15t-module-0.7-22mm.step",
+      "action": "added",
+      "destination_sha256": "04b335d8ee18a6c5ebf7a87bfdf89092707ac2ce3fb3943496292009aad88d42"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/24mm worm parts/24mm-0.7m-16T-22mm-gear.STEP",
+      "source_sha256": "a352dc6fe1c40f75bdb7d761cb92f177ebf98225d56c45d1476d1ffd14ef7a47",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_gear-16t-module-0.7-22mm.step",
+      "action": "added",
+      "destination_sha256": "a352dc6fe1c40f75bdb7d761cb92f177ebf98225d56c45d1476d1ffd14ef7a47"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/24mm worm parts/V485-24mm-Worm motor support.STEP",
+      "source_sha256": "3d6f7ebe56804de3c9e5c648f36fb3a3ae7b8c1ebab7bc7ff83c2be84efa254b",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_worm-motor-support.step",
+      "action": "added",
+      "destination_sha256": "3d6f7ebe56804de3c9e5c648f36fb3a3ae7b8c1ebab7bc7ff83c2be84efa254b"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/24mm-Switch cover.STEP",
+      "source_sha256": "56cb87ffca2336f78fd543d74a5512c0f9a4fba5f992948301c1e91fce8cdea7",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_switch-trigger-cover-16-24mm.step",
+      "action": "added",
+      "destination_sha256": "56cb87ffca2336f78fd543d74a5512c0f9a4fba5f992948301c1e91fce8cdea7"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/24mm-Switching trigger.STEP",
+      "source_sha256": "5e6447176ca7ce3f8592af8cf207c499992d0a6618f1daf0b17bb0bd01ddb856",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_switch-trigger.step",
+      "action": "added",
+      "destination_sha256": "5e6447176ca7ce3f8592af8cf207c499992d0a6618f1daf0b17bb0bd01ddb856"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/24mm-tape  cover.STEP",
+      "source_sha256": "4eee834a17944782b46b5fe545c7e46de5b8f3c8925da7dbd764027252a1ce18",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_tape-cover.step",
+      "action": "added",
+      "destination_sha256": "4eee834a17944782b46b5fe545c7e46de5b8f3c8925da7dbd764027252a1ce18"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/45T.STEP",
+      "source_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-45t.step",
+      "action": "added",
+      "destination_sha256": "49c5c92faeae1189e59bf9ffeca0a38f69a96bf5dc7a4b77794fef231c1e0d29"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/55T.STEP",
+      "source_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-55t.step",
+      "action": "added",
+      "destination_sha256": "df52243b8f91323cf5b7637d75b1f578498a20fbb514c5769995fa8e23e94615"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/V485-24mm-main body.STEP",
+      "source_sha256": "e761f6afabe1fcac4afa9e32791b276b2440b5d87c3b1a0eea0078bd1b81e55f",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_main-body.step",
+      "action": "added",
+      "destination_sha256": "e761f6afabe1fcac4afa9e32791b276b2440b5d87c3b1a0eea0078bd1b81e55f"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/24mm/V485-24mm-PCB cover.STEP",
+      "source_sha256": "141b175d7647f0179ec21d1e9fa1b5e463cd7cf4a9075a14ebf7961212492a47",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_pcb-cover.step",
+      "action": "added",
+      "destination_sha256": "141b175d7647f0179ec21d1e9fa1b5e463cd7cf4a9075a14ebf7961212492a47"
+    },
+    {
+      "archive": "v485",
+      "member": "Bing feeder V485  12-16-24mm/45T  gear- with  4-9-4\uff08684ZZ)  bearing.STEP",
+      "source_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4",
+      "destination": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-45t-684zz-bearing-variant.step",
+      "action": "added",
+      "destination_sha256": "072a4837cdc7fbafbdc92050c27bb6d400949d5ee1bb7a9403f3fd1bf677aed4"
+    }
+  ],
+  "generated_stls": [
+    {
+      "step": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_gear-16t-bracket.step",
+      "stl": "Bing-feeder/V3-feeder/12mm_3D_parts/V3_3D_gear-16t-bracket.stl",
+      "stl_sha256": "79f6a431a50e239d5b3d7484a408320a6350087fd119b8adf084b60829c79b64"
+    },
+    {
+      "step": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_gear-16t-bracket.step",
+      "stl": "Bing-feeder/V3-feeder/16mm_3D_parts/V3_3D_gear-16t-bracket.stl",
+      "stl_sha256": "88084e9faf82a4cd6c30083e7025362861a5f21fdf17cfaf740007eccb4c1278"
+    },
+    {
+      "step": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_gear-16t-bracket.step",
+      "stl": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_gear-16t-bracket.stl",
+      "stl_sha256": "88a9bd16b93d965be1abdb070c66ef78b79070a0c654d31467bf3f476004ae42"
+    },
+    {
+      "step": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_switch-trigger.step",
+      "stl": "Bing-feeder/V3-feeder/24mm_3D_parts/V3_3D_switch-trigger.stl",
+      "stl_sha256": "2fdfd6fb8779e36cdaebe05e5274d5cee8b6d758c98e5a99465e7044839eda6a"
+    },
+    {
+      "step": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-holder-1-position.step",
+      "stl": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-holder-1-position.stl",
+      "stl_sha256": "141e4aff33325e7fbd04ae7bfd3b8409b260abb36ba2a1ac07002f7646e54690"
+    },
+    {
+      "step": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-holder-3-position.step",
+      "stl": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-holder-3-position.stl",
+      "stl_sha256": "d40ba8d156fdb3cb6a3983fe92b027763c2456e19b46f11d6dd55ccc8444ecee"
+    },
+    {
+      "step": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-holder-8-position.step",
+      "stl": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_feeder-holder-8-position.stl",
+      "stl_sha256": "162c8cd48fdd7741caa6a80844a46e9d83fec2bd800a06d1056e93217610bba8"
+    },
+    {
+      "step": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-16t-bracket.step",
+      "stl": "Bing-feeder/V3-feeder/8mm_3D_parts/V3_3D_gear-16t-bracket.stl",
+      "stl_sha256": "8a8277b65aafa5f9aeb14f7b966aefd779928347dd7a261455a43184ae7e60eb"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_feeder-holder-1-position.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_feeder-holder-1-position.stl",
+      "stl_sha256": "4733b4a23d0f4a6c368d75bd1977d453f2f5b4f26af86e4b40222489172cdb69"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_feeder-slot-1-position.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_feeder-slot-1-position.stl",
+      "stl_sha256": "19b753edae4a16f57a5de86c087144726385681f058d3addae11f1fb49738cdc"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_gear-15t-module-0.7-10mm.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_gear-15t-module-0.7-10mm.stl",
+      "stl_sha256": "5adc4acb816d92c85c980e29d399b714f73df64e8ce5eee57adce98bbe1d7ebf"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_gear-16t-bracket.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_gear-16t-bracket.stl",
+      "stl_sha256": "79f6a431a50e239d5b3d7484a408320a6350087fd119b8adf084b60829c79b64"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_gear-16t-module-0.7-10mm.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_gear-16t-module-0.7-10mm.stl",
+      "stl_sha256": "9e3f7b5c1e6e0a31f27b17c4f43dbe89eb1e94605b0b87e83a35870c0160ddec"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_main-body.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_main-body.stl",
+      "stl_sha256": "85a9ff4c5caa55c48780d066309784af63a49cf0c55e59e06a2d12abbed962e2"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_pcb-cover.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_pcb-cover.stl",
+      "stl_sha256": "83bb4b46709a73da83969dd6cdc2c8910a1baf8fe6ad37cf80fd910c77c928a1"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_switch-trigger-cover.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_switch-trigger-cover.stl",
+      "stl_sha256": "1d12a603128a193ef1a44bddd36ea74975b677c889a5d7f4c02f96122a56529b"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_switch-trigger.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_switch-trigger.stl",
+      "stl_sha256": "0323b8b82a60882386d5f66930cd55b2ed599a47f6b00542eb4335913ac8a759"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_tape-cover.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_tape-cover.stl",
+      "stl_sha256": "fe39a50512e5f1827fed1131c7c9103576df65093d24b15fecdb6aaf96f421b1"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_worm-motor-support.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_12mm/V485_3D_worm-motor-support.stl",
+      "stl_sha256": "50c6f08d09303b4030814c2cffe8260a384bbe8fdc58b2d464bcce333fc59169"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_feeder-holder-1-position.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_feeder-holder-1-position.stl",
+      "stl_sha256": "936f95bd1a9de3447e31dce97125d3586424ed114549e32e349b2190a8f781b3"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_gear-15t-module-0.7-14mm.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_gear-15t-module-0.7-14mm.stl",
+      "stl_sha256": "88a6f84c9a15dbbf50b7ba87bb5698559ccf7fdbd321a47bceb2e3140064da87"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_gear-16t-bracket.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_gear-16t-bracket.stl",
+      "stl_sha256": "88084e9faf82a4cd6c30083e7025362861a5f21fdf17cfaf740007eccb4c1278"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_gear-16t-module-0.7-14mm.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_gear-16t-module-0.7-14mm.stl",
+      "stl_sha256": "ea03e1b867462a7d910dad8e5d622ed4a1755d2d4323e74df1135a2b0f9c8312"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_main-body.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_main-body.stl",
+      "stl_sha256": "7e8987c5114204df832bb38509b4a06eca9c4e3e78639fd079ced2b0e807a579"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_pcb-cover.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_pcb-cover.stl",
+      "stl_sha256": "83bb4b46709a73da83969dd6cdc2c8910a1baf8fe6ad37cf80fd910c77c928a1"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_switch-trigger.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_switch-trigger.stl",
+      "stl_sha256": "d895297ceb777923477b118ddc8a3e6a88d8da595f573207e3c61fa85dd3b3e7"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_tape-cover.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_tape-cover.stl",
+      "stl_sha256": "b44f334451f430a2b4589b9e63c20ec05ff567e522370f3f3ce10325b0ddb785"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_worm-motor-support.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_16mm/V485_3D_worm-motor-support.stl",
+      "stl_sha256": "693f40a17d5cff4fb67d4590e71fd23479220654379569ef0da905ed08a4bf7a"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_feeder-holder-1-position.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_feeder-holder-1-position.stl",
+      "stl_sha256": "aa47683b4328c8aef6107f30ede5a18facd4d9cb14bbc14aad0a408db0f80299"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_feeder-slot-1-position.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_feeder-slot-1-position.stl",
+      "stl_sha256": "006cc0e016d4abe971eb0a1a9ed6fb8ecf742b4ffd327fe0684f9e11c2fc94fa"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_gear-15t-module-0.7-22mm.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_gear-15t-module-0.7-22mm.stl",
+      "stl_sha256": "054080f7f2972ae7151f97c2edbd51f12102b3b20092ccc9a382cf3cb7fdfdea"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_gear-16t-bracket.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_gear-16t-bracket.stl",
+      "stl_sha256": "88a9bd16b93d965be1abdb070c66ef78b79070a0c654d31467bf3f476004ae42"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_gear-16t-module-0.7-22mm.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_gear-16t-module-0.7-22mm.stl",
+      "stl_sha256": "c54a1bf0c4df8dde6bb2c9a4ed7a39b59a738fedca0ab6b292f21de946cf8082"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_main-body.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_main-body.stl",
+      "stl_sha256": "df0851cbf0753efc628e5be415960b76d14ad0f7044d978845351841ce65b4b6"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_pcb-cover.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_pcb-cover.stl",
+      "stl_sha256": "894b29826bc786855e3a30c1f5bb5f5e51ff41f2928e6c0fd56038039dfd22d6"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_switch-trigger.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_switch-trigger.stl",
+      "stl_sha256": "2fdfd6fb8779e36cdaebe05e5274d5cee8b6d758c98e5a99465e7044839eda6a"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_tape-cover.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_tape-cover.stl",
+      "stl_sha256": "3744740e610a5d87257d031548fbecb3ada0efdf193d31c15f23fef24315b044"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_worm-motor-support.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_24mm/V485_3D_worm-motor-support.stl",
+      "stl_sha256": "5822746b33c3b07f2fc65649148d83fc1b0cdaee7d5a3345db943cb840d084a4"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_gear-55t.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_gear-55t.stl",
+      "stl_sha256": "d9c9868dd2f894874ec947a288801a36cd652c916745b99bfb77d706768af530"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_worm-motor-support.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_worm-motor-support.stl",
+      "stl_sha256": "3b5b719d242720c71d98f00ad8f320e0fedb9822cc0befbbde986fd375696495"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-45t-684zz-bearing-variant.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-45t-684zz-bearing-variant.stl",
+      "stl_sha256": "027b35318332284e9217446c7a78be0ed797af268cdfe084bf6a8b0d8951a6ec"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-45t.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-45t.stl",
+      "stl_sha256": "ae0d6e5db0f20f60e99bd2422dae8863788fd89f5aee4445230022dc51787714"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-55t.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_gear-55t.stl",
+      "stl_sha256": "d9c9868dd2f894874ec947a288801a36cd652c916745b99bfb77d706768af530"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_switch-trigger-cover-16-24mm.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_switch-trigger-cover-16-24mm.stl",
+      "stl_sha256": "1d12a603128a193ef1a44bddd36ea74975b677c889a5d7f4c02f96122a56529b"
+    },
+    {
+      "step": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_worm-module-0.7-10w-13l.step",
+      "stl": "Bing-feeder/V485-feeder/3D_parts_shared/V485_3D_worm-module-0.7-10w-13l.stl",
+      "stl_sha256": "39ed02356b7ec0f76763f97d0ecea6b43b8c9f65748f117f912b17f5e5a0d9c7"
+    }
+  ],
+  "generated_jpgs": 405
+}

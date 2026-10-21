@@ -4,6 +4,8 @@
 
 22 parts · [Browse all photos](photos/)
 
+The older 8 mm 55T gear is retained even though it is omitted from the 21 October 2026 archive.
+
 Click any image to open it full size. Expand **Eight isometric views** for four views from above and four from below.
 
 ## Feeder holder 1 position

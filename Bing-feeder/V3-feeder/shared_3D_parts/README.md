@@ -4,6 +4,8 @@
 
 7 parts · [Browse all photos](photos/)
 
+The wider-feeder release also includes the [45T gear with a 684ZZ bearing](../8mm_3D_parts/README.md#gear-45t-684zz-bearing-variant), kept in the existing 8 mm gallery.
+
 Click any image to open it full size. Expand **Eight isometric views** for four views from above and four from below.
 
 ## Gear 45t

@@ -294,7 +294,7 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 ## Switch trigger cover
 
-[STEP](V3_3D_switch-trigger-cover.step) · [STL](V3_3D_switch-trigger-cover.stl)
+[STEP](V3_3D_switch-trigger-cover.step) · [STL](V3_3D_switch-trigger-cover.stl) · [Supplied 3MF](../PRINT_projects/V3_12mm_switch-trigger-cover.3mf)
 
 <a href="photos/V3_3D_switch-trigger-cover.jpg"><img src="photos/V3_3D_switch-trigger-cover.jpg" alt="Switch trigger cover — original preview" width="480"></a>
 

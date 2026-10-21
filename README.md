@@ -4,11 +4,11 @@ This repository is a reorganised copy of **MicroSMT's [Bing-feeder](https://gith
 
 This is an unofficial collection. Local additions, including extra STL exports and firmware changes, were prepared with ChatGPT assistance and are described in [credits and changes](CREDITS.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
 
-Browse **128 3D parts** across 10 galleries, **13 PCB Gerber sets with editable KiCad references**, vendor firmware, assembly manuals and machine setup notes.
+Browse **164 3D parts** across 14 galleries, **13 PCB Gerber sets with editable KiCad references**, vendor firmware, assembly manuals and machine setup notes.
 
 | Browse | Contents |
 | --- | --- |
-| [V485 feeder](Bing-feeder/V485-feeder/README.md) | 8 mm mechanics, feeder/display PCBs and STM32 firmware |
+| [V485 feeder](Bing-feeder/V485-feeder/README.md) | 8/12/16/24 mm mechanics, shared parts, feeder/display PCBs and STM32 firmware |
 | [V485 controller](Bing-feeder/V485-Feeder%20Controller/README.md) | ESP32-C3 controller and 180/480 mm busbars |
 | [V3 feeder](Bing-feeder/V3-feeder/README.md) | 8/12/16/24 mm models, shared parts and assembly references |
 | [V3 controller](Bing-feeder/V3-Feeder%20Controller/README.md) | Mega2560 sketch, controller PCB and busbars |
@@ -35,7 +35,7 @@ Browse **128 3D parts** across 10 galleries, **13 PCB Gerber sets with editable 
 - [Editable KiCad reference projects](tools/kicad/README.md)
 - [Machine setup status](Microsmt-PNPv3/docs/machine-setup-status.md)
 
-V485 mechanics here are 8 mm; wider firmware alone does not confirm wider mechanical fit.
+V485 CAD now includes 8/12/16/24 mm parts from the 21 October 2026 release. [Update notes](Bing-feeder/UPSTREAM-2026-10-21.md).
 
 ## Folder layout
 

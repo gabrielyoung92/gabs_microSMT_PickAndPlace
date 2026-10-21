@@ -6,7 +6,7 @@ Browse the V3 and V485 collections: 3D parts, PCB previews, Gerber ZIPs, firmwar
 
 | Browse | Contents |
 | --- | --- |
-| [V485 feeder](V485-feeder/README.md) | 8 mm mechanics, feeder/display PCBs and STM32 sources |
+| [V485 feeder](V485-feeder/README.md) | 8/12/16/24 mm mechanics, shared parts, feeder/display PCBs and STM32 sources |
 | [V485 controller](V485-Feeder%20Controller/README.md) | ESP32-C3 PlatformIO firmware, controller PCB and RS485 busbars |
 | [V3 feeder](V3-feeder/README.md) | 8/12/16/24 mm parts, shared parts, STM32 sources and manuals |
 | [V3 controller](V3-Feeder%20Controller/README.md) | Mega2560 sketch, controller board and feeder busbars |

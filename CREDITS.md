@@ -13,6 +13,18 @@ These commit IDs identify the local repositories' checked-out base revisions. Th
 
 The original repository links are the place to check for current official files, support and updates. Existing vendor introductions and support links remain in each collection's README. This collection is independent and does not imply MicroSMT endorsement.
 
+## 21 October 2026 feeder update
+
+The V3 and V485 feeder archives were imported on 22 October 2026 from
+[`microsmt/Bing-feeder` at `056f6109`](https://github.com/microsmt/Bing-feeder/commit/056f6109d805260af609c1af03ae064e5c2fcba4).
+Identical archives are also published in
+[`microsmt/Microsmt-PNPv3` at `c8b939c4`](https://github.com/microsmt/Microsmt-PNPv3/commit/c8b939c44d9ad02c62b70e846f31879f0561a1f8).
+The original consolidation base revisions above remain recorded; this is a selective feeder update.
+Existing electronics, firmware, local improvements and omitted older models are retained.
+New and changed models have matching STL exports and previews in the existing naming style.
+See the [update notes](Bing-feeder/UPSTREAM-2026-10-21.md) and
+[source manifest](Bing-feeder/upstream-2026-10-21.json).
+
 ## Local changes with ChatGPT assistance
 
 File organisation, conversions, previews, documentation and local firmware changes were prepared with **ChatGPT assistance**. The original MicroSMT work remains credited above.
