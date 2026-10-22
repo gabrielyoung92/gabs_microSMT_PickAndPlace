@@ -30,7 +30,8 @@ uint8_t Boot_ImageValid(const BootRecord* record);
 // ID is read separately from metadata. Blank EEPROM means commissioning ID 0;
 // failed I2C is never treated as a usable destination.
 uint8_t Boot_ReadId(uint8_t* id);
-// Every update request/reply is Bdd <body> <CRC32> LF. CRC covers ASCII prefix
+// Updates and correlated FEED/STATUS/results use Bdd <body> <CRC32> LF.
+// CRC covers ASCII prefix
 // AND destination, excluding the space before the final eight hex digits.
 // Wrong destination, malformed input or CRC error: ignore, never reply or write.
 char* Boot_DecodePacket(char* line, uint8_t id);

@@ -13,7 +13,7 @@ import zlib
 
 # Upload sequence: validate file -> find this ID -> enter loader -> BEGIN ->
 # DATA chunks -> END verification. Batch mode finishes one ID before the next.
-# The adapter handles RS485 direction; this script never broadcasts or changes
+# The ESP32-C3 bridge or adapter handles RS485 direction; this script never broadcasts or changes
 # the feeder's EEPROM ID. The loader itself is installed separately over SWD.
 
 # Keep these values in step with src/boot.h and the application linker script.
@@ -170,7 +170,7 @@ def enter_loader(link, variant):
     """
     try:
         # A previous upload/reset may already have left this ID in recovery.
-        ready = link.request("HELLO", {"READY"}, attempts=1)
+        ready = link.request("HELLO", {"READY"}, attempts=3)
     except TimeoutError:
         # Check width BEFORE requesting a running application to stop/reset.
         app = fields(link.request("INFO", {"APP"}, timeout=3, attempts=2), "APP", 3)
@@ -213,12 +213,8 @@ def upload(link, data):
         end = min(offset + CHUNK, size)
         # Offset is relative to APP_START, never an arbitrary flash address.
         # The receiver handles halfword padding for a final odd-sized payload.
-        response = link.request(f"DATA {offset:08X} {data[offset:end].hex().upper()}", {"OK"},
-                                expected=f"OK {end:08X}")
-        confirmed, = fields(response, "OK", 1)
-        # A stale/delayed OK must never silently skip data or claim progress.
-        if confirmed != end:
-            raise UpdateError(f"ID {link.address}: expected offset {end}, got {confirmed}; rerun upload")
+        link.request(f"DATA {offset:08X} {data[offset:end].hex().upper()}", {"OK"},
+                     expected=f"OK {end:08X}")
         offset = end
         percent = offset * 100 // size
         # Print approximately every ten percent, not one line per 32-byte chunk.
@@ -281,6 +277,32 @@ def self_check():
             pass
         else:
             raise AssertionError(f"Accepted damaged image at {offset}")
+    # One lost READY must retry HELLO, not send application-only INFO to a loader.
+    class LostHelloPort:
+        def __init__(self):
+            self.requests, self.reply = [], b""
+
+        def write(self, data):
+            self.requests.append(decode_packet(data, 7))
+            assert self.requests[-1] == "HELLO"
+            if len(self.requests) > 1:
+                self.reply = packet(7, f"READY 00000001 {APP_START:08X} {APP_MAX:08X}")
+
+        def flush(self):
+            pass
+
+        def read_until(self, *args):
+            reply, self.reply = self.reply, b""
+            return reply
+
+    class FastLink(Link):
+        def request(self, body, accepted, **kwargs):
+            kwargs['timeout'] = 0.03
+            return super().request(body, accepted, **kwargs)
+
+    port = LostHelloPort()
+    enter_loader(FastLink(port, 7), 1)
+    assert port.requests == ['HELLO', 'HELLO']
     print("Offline destination/CRC/image checks passed")
 
 
@@ -292,7 +314,7 @@ def main():
     """
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--firmware", type=Path, help="Application firmware.bin, not the bootloader")
-    parser.add_argument("--port", help="Auto-direction USB-RS485 port, e.g. COM5 or /dev/ttyUSB0")
+    parser.add_argument("--port", help="ESP32-C3 controller or auto-direction USB-RS485 port, e.g. COM5")
     destinations = parser.add_mutually_exclusive_group()
     destinations.add_argument("--address", type=address_value, help="Destination EEPROM ID, 0..99")
     destinations.add_argument("--addresses", help="Comma-separated unique IDs, updated sequentially")

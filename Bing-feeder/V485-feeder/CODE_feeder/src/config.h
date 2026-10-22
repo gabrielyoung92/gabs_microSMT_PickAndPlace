@@ -9,8 +9,9 @@
 
 #include "stm32f1xx_hal.h"
 
-// Local HAL port version, independent of upstream V26/V25. See CHANGELOG.md.
-#define FIRMWARE_VERSION "0.3.0"
+// Unreleased development firmware; no physical unit programmed or tested yet.
+// Independent of upstream V26/V25. See CHANGELOG.md.
+#define FIRMWARE_VERSION "0.1.0"
 
 // Only the dedicated bootloader environments define this as 1.
 #ifndef FEEDER_BOOTLOADER
@@ -30,8 +31,8 @@
 #error "FEEDER_WIDE must be 0 (8 mm) or 1 (12/16/24 mm)"
 #endif
 
-// FEEDER_WIDE=1 preserves the wider source's continuously running peel motor.
-// It runs from startup and during normal idle; a timeout fault stops both motors.
+// Wider feeders may peel during normal idle; PA2 tension feedback gates it.
+// Both variants remain stopped during startup, settings, updates and faults.
 
 // Source wiring, using STM32 GPIO names. GPIO A/B clocks are enabled in board.c.
 // LED sinks current: writing LOW lights it, HIGH turns it off.
@@ -41,7 +42,7 @@
 #define LED_OFF() HAL_GPIO_WritePin(LED_PORT, LED_PIN, GPIO_PIN_SET)
 
 // Two motor channels: A=HIGH/B=LOW runs the indexed motor; both HIGH stops.
-// Peel uses PA12=HIGH/PA8=LOW to run; FEEDER_WIDE selects its idle behaviour.
+// Peel uses PA12=HIGH/PA8=LOW to run, gated by PA2 in the application tick.
 #define MOTOR_PORT GPIOA
 #define MOTOR_INDEX_A_PIN GPIO_PIN_6
 #define MOTOR_INDEX_B_PIN GPIO_PIN_7
@@ -49,10 +50,18 @@
 #define MOTOR_PEEL_B_PIN GPIO_PIN_12
 #define MOTOR_ALL_PINS (MOTOR_INDEX_A_PIN | MOTOR_INDEX_B_PIN | MOTOR_PEEL_A_PIN | MOTOR_PEEL_B_PIN)
 
-// Buttons are active low; a long PA4/PA2 press selects address/count mode.
+// PA4 is the sole active-low button. PA2 now reads an isolated dry contact.
+// COM -> GND, NC -> PA2: closed/slack permits peel; open/tension stops it.
+// Remove or leave the old PA2 button unused. No motor voltage on this input.
 #define BUTTON_PORT GPIOA
-#define BUTTON_INC_PIN GPIO_PIN_2
-#define BUTTON_DEC_PIN GPIO_PIN_4
+#define BUTTON_PIN GPIO_PIN_4
+#define PEEL_SWITCH_PORT GPIOA
+#define PEEL_SWITCH_PIN GPIO_PIN_2
+#define PEEL_RUN_LEVEL GPIO_PIN_RESET
+// Opening stops immediately; require a stable closed contact before restarting.
+#define PEEL_DEBOUNCE_MS 20U
+#define PEEL_RESTART_MS 100U
+#define PEEL_TIMEOUT_MS 10000U
 
 // Interrupt handlers are EXTI3 and EXTI9_5. Moving these pins also requires
 // updating routing in board.c and handlers in feeder.c; don't change only the pin.
@@ -106,11 +115,13 @@
 #define FEED_TIMEOUT_MS 10000U
 // CH455 segment mask for E: the main loop shows EE on a latched timeout fault.
 #define DISPLAY_ERROR_SEGMENTS 0xF2U
-// Release before SHORT is a short event; hold to LONG for mode selection.
-// A release between these two thresholds does not create a short event.
-#define SHORT_PRESS_TIME 1000U
-#define LONG_PRESS_TIME 3000U
-// Additional PA2 manual-feed inhibition, counted down by SysTick.
+// Debounced PA4: tap advances; hold cycles menu 01..04; release selects.
+// In an editor, hold then release to save. Inactivity discards unsaved edits.
+#define BUTTON_DEBOUNCE_MS 25U
+#define BUTTON_HOLD_MS 2000U
+#define UI_TIMEOUT_MS 20000U
+#define UI_BLINK_MS 400U
+// Additional PA4 manual-feed inhibition, counted down by SysTick.
 #define MANUAL_TRIGGER_MUTE_MS 300U
 // Address/command F range is 0..99; F0 selects the stored positive count.
 // Default-count adjustment and EEPROM loading require COUNT_MIN..VALUE_MAX.
@@ -126,3 +137,7 @@ _Static_assert(COUNT_MIN >= 1U && DEFAULT_COUNT >= COUNT_MIN && DEFAULT_COUNT <=
                "Default feed count must be positive and fit the two-digit display");
 _Static_assert(FEED_TIMEOUT_MS > 0U && FEED_TIMEOUT_MS < 0x80000000U,
                "Feed timeout must be a positive interval below half the tick range");
+
+_Static_assert(PEEL_TIMEOUT_MS > 0U && PEEL_TIMEOUT_MS < 0x80000000U &&
+               PEEL_DEBOUNCE_MS > 0U && PEEL_RESTART_MS >= PEEL_DEBOUNCE_MS,
+               "Peel debounce/restart/deadline configuration is invalid");

@@ -112,11 +112,11 @@ char* Boot_DecodePacket(char* line, uint8_t id) {
     return line + 4;
 }
 
-// At most three 32-bit values. Avoid printf in the small bootloader image.
+// Up to five identity fields. Avoid printf in the small bootloader image.
 void Boot_Reply(uint8_t id, const char* status, const uint32_t* values, uint8_t count) {
-    char line[80];
+    char line[96];
     size_t size = strlen(status);
-    if (id > VALUE_MAX || size > 30 || count > 3) return;
+    if (id > VALUE_MAX || size > 30 || count > 5) return;
     line[0] = 'B'; line[1] = '0' + id / 10; line[2] = '0' + id % 10; line[3] = ' ';
     memcpy(line + 4, status, size);
     size += 4;

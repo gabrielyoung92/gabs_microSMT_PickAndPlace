@@ -1,21 +1,21 @@
 # V3 feeder parts — shared
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../../../CREDITS.md).
 
-7 parts · [Browse all photos](photos/)
+7 parts · [All photos](photos/)
 
-The wider-feeder release also includes the [45T gear with a 684ZZ bearing](../8mm_3D_parts/README.md#gear-45t-684zz-bearing-variant), kept in the existing 8 mm gallery.
+The wider-feeder download also includes the [45T gear for a 684ZZ bearing](../8mm_3D_parts/README.md#45t-gear-for-a-684zz-bearing), which is listed in the 8 mm folder.
 
-Click any image to open it full size. Expand **Eight isometric views** for four views from above and four from below.
+Click a picture to see it full size. **More views** shows the part from above and below.
 
-## Gear 45t
+## 45T gear
 
 [STEP](V3_3D_gear-45t.step) · [STL](V3_3D_gear-45t.stl)
 
 <a href="photos/V3_3D_gear-45t.jpg"><img src="photos/V3_3D_gear-45t.jpg" alt="Gear 45t — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -34,14 +34,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Gear 55t 12 16 24mm
+## 55T gear for 12/16/24 mm
 
 [STEP](V3_3D_gear-55t-12-16-24mm.step) · [STL](V3_3D_gear-55t-12-16-24mm.stl)
 
 <a href="photos/V3_3D_gear-55t-12-16-24mm.jpg"><img src="photos/V3_3D_gear-55t-12-16-24mm.jpg" alt="Gear 55t 12 16 24mm — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -60,14 +60,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Pcb cover 12 16mm
+## PCB cover for 12/16 mm
 
 [STEP](V3_3D_pcb-cover-12-16mm.step) · [STL](V3_3D_pcb-cover-12-16mm.stl)
 
 <a href="photos/V3_3D_pcb-cover-12-16mm.jpg"><img src="photos/V3_3D_pcb-cover-12-16mm.jpg" alt="Pcb cover 12 16mm — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -86,14 +86,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Spool hook 13mm
+## Spool hook, 13 mm
 
 [STEP](V3_3D_spool-hook-13mm.step) · [STL](V3_3D_spool-hook-13mm.stl)
 
 <a href="photos/V3_3D_spool-hook-13mm.jpg"><img src="photos/V3_3D_spool-hook-13mm.jpg" alt="Spool hook 13mm — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -112,14 +112,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Spool hook b 11.5mm
+## Spool hook B, 11.5 mm
 
 [STEP](V3_3D_spool-hook-b-11.5mm.step) · [STL](V3_3D_spool-hook-b-11.5mm.stl)
 
 <a href="photos/V3_3D_spool-hook-b-11.5mm.jpg"><img src="photos/V3_3D_spool-hook-b-11.5mm.jpg" alt="Spool hook b 11.5mm — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -138,14 +138,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Switch trigger cover 16 24mm
+## Trigger cover for 16/24 mm
 
 [STEP](V3_3D_switch-trigger-cover-16-24mm.step) · [STL](V3_3D_switch-trigger-cover-16-24mm.stl)
 
 <a href="photos/V3_3D_switch-trigger-cover-16-24mm.jpg"><img src="photos/V3_3D_switch-trigger-cover-16-24mm.jpg" alt="Switch trigger cover 16 24mm — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -164,14 +164,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Worm module 0.7 10w 13l
+## Worm — module 0.7, 10W × 13L
 
 [STEP](V3_3D_worm-module-0.7-10w-13l.step) · [STL](V3_3D_worm-module-0.7-10w-13l.stl)
 
 <a href="photos/V3_3D_worm-module-0.7-10w-13l.jpg"><img src="photos/V3_3D_worm-module-0.7-10w-13l.jpg" alt="Worm module 0.7 10w 13l — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>

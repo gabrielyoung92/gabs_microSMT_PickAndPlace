@@ -1,19 +1,19 @@
 # Strip feeders
 
-> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** [Credits and local changes](../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Microsmt-PNPv3). [Credits and local changes](../../CREDITS.md).
 
-7 parts · [Browse all photos](photos/)
+7 parts · [All photos](photos/)
 
-Click any image to open it full size. Expand **Eight isometric views** for four views from above and four from below.
+Click a picture to see it full size. **More views** shows the part from above and below.
 
-## 8mm 1bit
+## 8 mm — 1 bit
 
 [STEP](8mm-1bit.STEP) · [STL](8mm-1bit.stl)
 
 <a href="photos/8mm-1bit.jpg"><img src="photos/8mm-1bit.jpg" alt="8mm 1bit — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -32,14 +32,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## 8mm 2bit
+## 8 mm — 2 bit
 
 [STEP](8mm-2bit.STEP) · [STL](8mm-2bit.stl)
 
 <a href="photos/8mm-2bit.jpg"><img src="photos/8mm-2bit.jpg" alt="8mm 2bit — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -58,14 +58,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## 8mm 3bit
+## 8 mm — 3 bit
 
 [STEP](8mm-3bit.STEP) · [STL](8mm-3bit.stl)
 
 <a href="photos/8mm-3bit.jpg"><img src="photos/8mm-3bit.jpg" alt="8mm 3bit — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -84,14 +84,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## 8mm 4bit
+## 8 mm — 4 bit
 
 [STEP](8mm-4bit.STEP) · [STL](8mm-4bit.stl)
 
 <a href="photos/8mm-4bit.jpg"><img src="photos/8mm-4bit.jpg" alt="8mm 4bit — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -110,14 +110,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## 12mm 1bit
+## 12 mm — 1 bit
 
 [STEP](12mm-1bit.STEP) · [STL](12mm-1bit.stl)
 
 <a href="photos/12mm-1bit.jpg"><img src="photos/12mm-1bit.jpg" alt="12mm 1bit — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -136,14 +136,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## 16mm 1bit
+## 16 mm — 1 bit
 
 [STEP](16mm-1bit.STEP) · [STL](16mm-1bit.stl)
 
 <a href="photos/16mm-1bit.jpg"><img src="photos/16mm-1bit.jpg" alt="16mm 1bit — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -162,14 +162,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## 24mm 1bit
+## 24 mm — 1 bit
 
 [STEP](24mm-1bit.STEP) · [STL](24mm-1bit.stl)
 
 <a href="photos/24mm-1bit.jpg"><img src="photos/24mm-1bit.jpg" alt="24mm 1bit — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>

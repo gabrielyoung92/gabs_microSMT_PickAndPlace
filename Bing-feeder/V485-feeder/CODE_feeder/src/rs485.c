@@ -178,14 +178,6 @@ uint8_t RS485_ParseFeedCommand(const char* line, int* addr, int* cnt) {
     return 1;
 }
 
-// Return one validated command. Bad/no lines leave outputs unchanged; the next
-// queued line is considered on the next call, without flushing other feeders.
-uint8_t RS485_ReadCommand(int* address, int* count) {
-    char line[RX_BUFFER_SIZE];
-    if (!RS485_ReadLine(line, sizeof(line))) return 0;
-    return RS485_ParseFeedCommand(line, address, count);
-}
-
 // May also run on the normal boot path before the UART was initialised.
 void RS485_DeInit(void) {
     HAL_NVIC_DisableIRQ(USART1_IRQn);

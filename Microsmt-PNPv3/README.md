@@ -1,14 +1,14 @@
 # MicroSMT PNPv3 machine
 
-> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** [Credits and local changes](../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Microsmt-PNPv3). [Credits and local changes](../CREDITS.md).
 
-Machine parts, nozzle racks, strip feeders, motherboard files and assembly manuals.
+Start here for the PNPv3 machine parts, nozzle racks, strip feeders and motherboard. The assembly manuals are below.
 
 | Browse | Contents |
 | --- | --- |
 | [Machine parts gallery](PNP-V3_3D_parts_2026-02-04/README.md) | 25 parts with STEP/STL links and nine previews per part |
 | [CP45 nozzle rack gallery](CP45_nozzle_rack/README.md) | Left/right rack parts and clamps |
-| [Strip feeder gallery](Strip_feeders/README.md) | Tape-width and bit-count variants |
+| [Strip feeder gallery](Strip_feeders/README.md) | Different tape widths and sizes |
 | [Motherboard](PCB_motherboard/README.md) | Gerber ZIP, schematic and top/bottom/isometric previews |
 | [Machine setup notes](docs/README.md) | OpenPnP commands, controller/camera inspection and vacuum sensors |
 
@@ -21,28 +21,24 @@ Machine parts, nozzle racks, strip feeders, motherboard files and assembly manua
 
 [Calibration card](Calibration%20card.png)
 
-## Vendor introduction and support
+## About the PNPv3
 
-### Get the kits  www.microsmt.com.cn
-### Technical support  
-https://discord.gg/qT7ZAAgspy \
-https://groups.google.com/g/pnpv3-bing-feeder   
+MicroSMT describes the PNPv3 as an open-source pick-and-place kit for OpenPnP. Development started in 2021.
 
-### What is MicroSMT PNPv3?
-MicroSMT PNPv3 is an open-source pick-and-place machine kit designed specifically for compatibility with OpenPnP software. All the work started in 2021 and has been continuously iterated and improved ever since.
+Kits: [microsmt.com.cn](https://www.microsmt.com.cn) · Support: [Discord](https://discord.gg/qT7ZAAgspy) · [Google group](https://groups.google.com/g/pnpv3-bing-feeder)
 
 
-Like many classic DIY kits for OpenPnP, we continue to use a Cartesian XY design. 
+The machine uses a Cartesian XY layout.
 ![image](picture1.jpg)
 
 ![image](piciture5.jpg)
 
 
 
- Its main  components must be CNC-machined from aluminum alloy,Relying on robust aluminum alloy components, it achieves high-speed, high-precision operation.
+The main structural parts are CNC-machined aluminium alloy.
 ![image](picture3.jpg)
 
 
-### Innovative tensioner
-We simply added a toothless idler to the classic kit, making belt tensioning effortless. This design offers a significant cost advantage.
+### Belt tensioner
+A toothless idler provides the belt-tension adjustment.
 ![image](picture4.jpg)

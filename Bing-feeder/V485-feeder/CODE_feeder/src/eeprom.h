@@ -9,9 +9,6 @@
 
 // Release the open-drain bus; requires Board_Init and external pull-ups.
 void EEPROM_Init(void);
-// Read one offset; 0xFF also represents an address/select ACK failure.
-// Callers cannot distinguish that failure from an actual stored 0xFF.
-uint8_t EEPROM_ReadByte(uint8_t address);
 // Checked read distinguishes bus failure from a stored 0xFF.
 uint8_t EEPROM_ReadChecked(uint8_t address, uint8_t* value);
 // Check every ACK, wait 5 ms, then verify by readback. Return 1 on success.

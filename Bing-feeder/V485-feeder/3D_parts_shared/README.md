@@ -1,21 +1,21 @@
 # V485 feeder parts — Shared parts for 12/16/24 mm
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../../../CREDITS.md).
 
-5 parts · [Browse all photos](photos/) · [V485 collection](../README.md)
+5 parts · [All photos](photos/) · [V485 collection](../README.md)
 
-Common gears, worm and switch-trigger cover supplied with the wider V485 feeders. Choose the matching tape-width gallery for bodies, covers and motor supports.
+These parts are shared by the 12, 16 and 24 mm V485 feeders. Bodies, tape covers and motor supports are in each width's folder. The trigger cover here is for 16/24 mm.
 
-Click any image to open it full size. Expand **Eight isometric views** for four views from above and four from below.
+Click a picture to see it full size. **More views** shows the part from above and below.
 
-## Gear 45t
+## 45T gear
 
 [STEP](V485_3D_gear-45t.step) · [STL](V485_3D_gear-45t.stl)
 
 <a href="photos/V485_3D_gear-45t.jpg"><img src="photos/V485_3D_gear-45t.jpg" alt="Gear 45t — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -34,14 +34,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Gear 45t 684zz bearing variant
+## 45T gear for a 684ZZ bearing
 
 [STEP](V485_3D_gear-45t-684zz-bearing-variant.step) · [STL](V485_3D_gear-45t-684zz-bearing-variant.stl)
 
 <a href="photos/V485_3D_gear-45t-684zz-bearing-variant.jpg"><img src="photos/V485_3D_gear-45t-684zz-bearing-variant.jpg" alt="Gear 45t 684zz bearing variant — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -60,14 +60,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Gear 55t
+## 55T gear
 
 [STEP](V485_3D_gear-55t.step) · [STL](V485_3D_gear-55t.stl)
 
 <a href="photos/V485_3D_gear-55t.jpg"><img src="photos/V485_3D_gear-55t.jpg" alt="Gear 55t — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -86,14 +86,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Switch trigger cover 16 24mm
+## Trigger cover for 16/24 mm
 
 [STEP](V485_3D_switch-trigger-cover-16-24mm.step) · [STL](V485_3D_switch-trigger-cover-16-24mm.stl)
 
 <a href="photos/V485_3D_switch-trigger-cover-16-24mm.jpg"><img src="photos/V485_3D_switch-trigger-cover-16-24mm.jpg" alt="Switch trigger cover 16 24mm — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -112,14 +112,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Worm module 0.7 10w 13l
+## Worm — module 0.7, 10W × 13L
 
 [STEP](V485_3D_worm-module-0.7-10w-13l.step) · [STL](V485_3D_worm-module-0.7-10w-13l.stl)
 
 <a href="photos/V485_3D_worm-module-0.7-10w-13l.jpg"><img src="photos/V485_3D_worm-module-0.7-10w-13l.jpg" alt="Worm module 0.7 10w 13l — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>

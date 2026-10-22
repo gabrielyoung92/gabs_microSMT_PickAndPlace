@@ -1,8 +1,8 @@
 # Bing feeders and controllers
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../CREDITS.md).
 
-Browse the V3 and V485 collections: 3D parts, PCB previews, Gerber ZIPs, firmware and assembly references.
+Choose V3 or V485 below. Each has its own models, board files, firmware and assembly notes.
 
 | Browse | Contents |
 | --- | --- |
@@ -13,28 +13,25 @@ Browse the V3 and V485 collections: 3D parts, PCB previews, Gerber ZIPs, firmwar
 | [STM32 build guide](STM32-BUILD.txt) | Combined V485 HAL/PlatformIO project and remaining legacy SPL build notes |
 | [License](LICENSE) | Supplied upstream license |
 
-## Vendor introduction and support
+## About Bing feeders
 
-### Get the kits www.microsmt.com.cn
-### Technical support  
-https://discord.gg/qT7ZAAgspy \
-https://groups.google.com/g/pnpv3-bing-feeder  
-### What is Bing feeder?
-The Bing feeder is a sprocket-driven feeder with closed-loop control. It was designed for the MicroSMT PNPv3,  it uses a simple high-level pulse trigger, so it can be directly controlled via OpenPnP’s ReferenceAutoFeeder. Therefore, it is suitable for all types of PNP machines.
+MicroSMT’s Bing feeder uses a sprocket and position sensor to advance component tape. It was designed for the PNPv3 and can be triggered by a high-level pulse through OpenPnP’s ReferenceAutoFeeder. Using it on another machine still needs the right wiring and control setup.
+
+Kits: [microsmt.com.cn](https://www.microsmt.com.cn) · Support: [Discord](https://discord.gg/qT7ZAAgspy) · [Google group](https://groups.google.com/g/pnpv3-bing-feeder)
 
 
 ![image](picture30.jpg)
 
 
-### Feature 1
-Uses a photoelectric sensor to detect the sprocket position, achieving closed-loop control. The repeat position will never change.
+### Position sensing
+An optical sensor tracks the sprocket position so the feeder can control how far the tape advances.
 ![image](picture32.jpg)
 
 
-### Feature 2
-Through the elastic pad at the bottom, it can automatically adapt to tapes of different thicknesses and suppress tape vibration, preventing components from jumping out.
+### Tape support
+The elastic pad underneath accommodates different tape thicknesses and helps reduce vibration and parts bouncing out.
 ![image](picture33.jpg)
 
-### Feature 3
-A magnetic feeder mounting system makes feeder replacement quick and easy.
+### Magnetic mounting
+The magnetic mount lets you remove and swap feeders quickly.
 ![image](picture34.jpg)

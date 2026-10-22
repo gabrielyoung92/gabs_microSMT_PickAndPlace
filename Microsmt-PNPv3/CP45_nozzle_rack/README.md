@@ -1,10 +1,10 @@
 # CP45 nozzle rack
 
-> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** [Credits and local changes](../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Microsmt-PNPv3). [Credits and local changes](../../CREDITS.md).
 
-3 parts · [Browse all photos](photos/)
+3 parts · [All photos](photos/)
 
-Click any image to open it full size. Expand **Eight isometric views** for four views from above and four from below.
+Click a picture to see it full size. **More views** shows the part from above and below.
 
 ## CP45 nozzle rack — left (2025-06-12)
 
@@ -13,7 +13,7 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 <a href="photos/CP45%20nozzle%20%20rack%20-left-20250612.jpg"><img src="photos/CP45%20nozzle%20%20rack%20-left-20250612.jpg" alt="CP45 nozzle  rack  left 20250612 — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -39,7 +39,7 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 <a href="photos/CP45%20nozzle%20%20rack%20-right-20250612.jpg"><img src="photos/CP45%20nozzle%20%20rack%20-right-20250612.jpg" alt="CP45 nozzle  rack  right 20250612 — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -65,7 +65,7 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 <a href="photos/CP45%20nozzle%20holder%20clamps.jpg"><img src="photos/CP45%20nozzle%20holder%20clamps.jpg" alt="CP45 nozzle holder clamps — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>

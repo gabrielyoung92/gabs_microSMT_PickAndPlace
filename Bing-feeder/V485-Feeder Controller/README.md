@@ -1,8 +1,8 @@
 # V485 feeder controller
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../../CREDITS.md).
 
-ESP32-C3 RS485 controller source and its board/busbar files.
+This is the ESP32-C3 controller for the V485 feeder bus. The local firmware waits for an advance to finish before acknowledging M600, and also passes firmware updates from USB to the feeders over RS485. It is still **0.1.0 development firmware**, with no hardware testing yet.
 
 | Browse | Contents |
 | --- | --- |

@@ -2,7 +2,8 @@
 
 #include <stdint.h>
 
-// Gab's controller version; see CHANGELOG.md. Based on MicroSMT V25.
+// Unreleased development firmware; no physical unit programmed or tested yet.
+// Based on MicroSMT V25. See CHANGELOG.md.
 constexpr char FIRMWARE_VERSION[] = "0.1.0";
 
 // MicroSMT's original wiring. Numbers are GPIOs, not header positions.
@@ -24,6 +25,9 @@ constexpr uint32_t FLASH_INTERVAL = 100;
 // Time allowed for a complete ACK after releasing the RS485 transmitter.
 // Motion commands are sent ONCE: a missing ACK does not prove a failed feed.
 constexpr uint32_t ACK_TIMEOUT_MS = 300;
+// Feeder's default motor deadline is 10 s. Leave time for final STATUS replies.
+constexpr uint32_t FEED_COMPLETION_TIMEOUT_MS = 12000;
+constexpr uint32_t FEED_STATUS_INTERVAL_MS = 100;
 constexpr uint32_t RS485_DIRECTION_SETTLE_US = 50;
 
 // Reject incomplete USB input after this inter-byte gap; require a fresh line.
@@ -31,4 +35,9 @@ constexpr uint32_t USB_COMMAND_TIMEOUT_MS = 1000;
 
 // Maximum bytes before LF, excluding the terminating NUL in our buffers.
 constexpr uint8_t USB_COMMAND_MAX_LENGTH = 32;
-constexpr uint8_t ACK_MAX_LENGTH = 16;
+constexpr uint8_t ACK_MAX_LENGTH = 79;
+
+// USB bridge capacity. Current feeder DATA requests use 91 bytes before LF.
+constexpr uint8_t UPDATE_PACKET_MAX_LENGTH = 127;
+// Block feeds until update traffic has been idle this long. No motion retries.
+constexpr uint32_t UPDATE_IDLE_TIMEOUT_MS = 10000;

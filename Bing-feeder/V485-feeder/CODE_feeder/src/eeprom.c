@@ -106,10 +106,3 @@ uint8_t EEPROM_ReadChecked(uint8_t address, uint8_t* value) {
     I2C_Stop();
     return 1;
 }
-
-// Compatibility wrapper for the application's existing settings loader.
-uint8_t EEPROM_ReadByte(uint8_t address) {
-    uint8_t value = 0xFF;
-    EEPROM_ReadChecked(address, &value);
-    return value;
-}

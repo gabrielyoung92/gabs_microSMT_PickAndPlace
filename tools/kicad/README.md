@@ -1,17 +1,10 @@
 # KiCad projects and recovery notes
 
-The editable projects and their previews now live beside their source Gerbers in
-the matching PCB folders. This folder holds the shared recovery tools and method;
-source paths and commands are relative to the repository root.
+These tools were used to rebuild editable KiCad projects from MicroSMT’s schematics, Gerbers, drill files and flying-probe data. The projects and pictures are in their matching PCB folders; this folder holds the tools and [recovery notes](RECOVERY_NOTES.md).
 
-For delivered machine identities and live inspection evidence, see the
-[machine hardware inventory](../../Microsmt-PNPv3/docs/MACHINE_HARDWARE.md), including both cameras.
+Open the projects in **KiCad 10**. Keep each `KiCad/` folder together: the symbol and footprint libraries are in `KiCad/libraries/` and use relative paths, so they don’t need your personal KiCad libraries. Earlier checks used the KiCad versions recorded in their reports.
 
-Editable reference reconstructions from the preserved MicroSMT motherboard PDF,
-Bing-feeder schematic,
-Gerbers, drill files and flying-probe net data. Use KiCad 10 to open all projects.
-Earlier reference files remain compatible with their recorded KiCad versions. Each project keeps its symbol and footprint libraries in `KiCad/libraries/`. All libraries resolve through relative
-paths; no personal library configuration is needed.
+Run the tools from the repository root. They can overwrite generated boards and reports, so use a disposable checkout after making manual edits. The [hardware inventory](../../Microsmt-PNPv3/docs/MACHINE_HARDWARE.md) covers the actual machine and both cameras.
 
 | Project | Board size | Included objects | Open |
 | --- | --- | --- | --- |
@@ -21,22 +14,14 @@ paths; no personal library configuration is needed.
 | Archive labelled N9–N16 | 166 × 25 mm | 8 slots, 2 interconnect headers, 5 mounting holes | [busbar_n9_n16.kicad_pro](../../Bing-feeder/V3-Feeder%20Controller/PCB_busbar_N9-N16/KiCad/busbar_n9_n16.kicad_pro) |
 | Archive labelled N17–N24 | 166 × 25 mm | 8 slots, 1 interconnect header, 5 mounting holes | [busbar_n17_n24.kicad_pro](../../Bing-feeder/V3-Feeder%20Controller/PCB_busbar_N17-N24/KiCad/busbar_n17_n24.kicad_pro) |
 
-**The N1–N8 archive exports N9–N16 slot nets.** The two first archives contain
-identical plotted geometry, drills and probe data despite differing export
-metadata/aperture declarations. Their archive-labelled projects are retained
-separately to make the source problem visible. They do not establish a valid
-N1–N8 board or a complete connected 24-slot assembly.
+**The ZIP labelled N1–N8 contains N9–N16 slot signals.** Its board geometry, drills and probe data match the N9–N16 ZIP; only export metadata and aperture declarations differ. Both projects are kept under their original labels so the mix-up is visible. These files don’t provide a confirmed N1–N8 board or a complete connected 24-slot assembly.
 
-Each board keeps its connected schematic, routed PCB, project settings and local
-libraries in `KiCad/`; reference BOMs, recovery data and validation reports are in
-`docs/`. All preview images are in `photos/`. The board README links them together.
+Each board folder has its schematic, routed PCB, project settings and libraries in `KiCad/`. Parts lists and check reports are in `docs/`, and pictures are in `photos/`. The board’s README links to them.
 Sources: [Bing-feeder](../../Bing-feeder/) and [Microsmt-PNPv3](../../Microsmt-PNPv3/).
 
 ## Additional V3 and V485 projects
 
-All remaining Gerber sets now have connected KiCad reference projects. These use
-generic passive-pad symbols and retain the supplied manufacturing geometry.
-Read each board’s recovery details and validation report before editing.
+These boards also have rebuilt KiCad projects. Their generic pin symbols show the pad connections, and their layouts follow the supplied board geometry. Read each board’s recovery notes and check report before editing.
 
 | Project | Open | Board guide |
 | --- | --- | --- |
@@ -49,7 +34,7 @@ Read each board’s recovery details and validation report before editing.
 | V485 display | [v485_display.kicad_pro](../../Bing-feeder/V485-feeder/PCB_display/KiCad/v485_display.kicad_pro) | [Guide and reports](../../Bing-feeder/V485-feeder/PCB_display/README.md) |
 | V485 feeder | [v485_feeder.kicad_pro](../../Bing-feeder/V485-feeder/PCB_feeder/KiCad/v485_feeder.kicad_pro) | [Guide and reports](../../Bing-feeder/V485-feeder/PCB_feeder/README.md) |
 
-## Earlier feeder/busbar validation
+## Earlier feeder and busbar checks
 
 | Reference | Schematic | Top copper and original silk | Bottom copper and original silk |
 | --- | --- | --- | --- |
@@ -58,31 +43,14 @@ Read each board’s recovery details and validation report before editing.
 | N9–N16 archive | [Schematic](../../Bing-feeder/V3-Feeder%20Controller/PCB_busbar_N9-N16/photos/kicad-busbar_n9_n16-schematic.png) | [Top](../../Bing-feeder/V3-Feeder%20Controller/PCB_busbar_N9-N16/photos/kicad-busbar_n9_n16-top.png) | [Bottom](../../Bing-feeder/V3-Feeder%20Controller/PCB_busbar_N9-N16/photos/kicad-busbar_n9_n16-bottom.png) |
 | N17–N24 archive | [Schematic](../../Bing-feeder/V3-Feeder%20Controller/PCB_busbar_N17-N24/photos/kicad-busbar_n17_n24-schematic.png) | [Top](../../Bing-feeder/V3-Feeder%20Controller/PCB_busbar_N17-N24/photos/kicad-busbar_n17_n24-top.png) | [Bottom](../../Bing-feeder/V3-Feeder%20Controller/PCB_busbar_N17-N24/photos/kicad-busbar_n17_n24-bottom.png) |
 
-The five earlier projects were loaded and exported with KiCad 9.0.2. Schematic/PCB parity and unrouted
-connection checks are clear. Every recovered pad net and drill was compared
-with the source; the exported front/back copper agrees within the 0.002 mm
-comparison tolerance. This is a geometric comparison of parsed CAM, not an
-assertion of bit-identical Gerbers or physical measurements.
+The five earlier projects were opened and exported with KiCad 9.0.2. The schematic/PCB consistency checks passed, with no unrouted connections. Every pad connection and drill was compared with the source, and exported front/back copper matched within the 0.002 mm comparison tolerance. That checks the file geometry; it doesn’t mean the Gerbers are byte-for-byte copies or that a physical board has been measured.
 
-The busbar schematics have no ERC findings. The feeder has two `label_dangling`
-ERC findings for source single-pin PA0 and PA1 nets. The original board layouts
-still produce DRC clearance/edge/silkscreen findings under the declared KiCad
-rules. Counts and comparison measurements are preserved per project; no findings
-are hidden or excluded to obtain a clean report.
+The busbar schematics pass ERC. The feeder still has two `label_dangling` ERC findings for the original single-pin PA0 and PA1 nets. DRC also reports clearance, board-edge and silkscreen issues in the original layouts. Each project’s reports keep the counts and measurements; nothing was hidden or excluded to make a check pass.
 
-Read [RECOVERY_NOTES.md](RECOVERY_NOTES.md) before modifying routing or ordering
-boards. These are recovered references, not a fabrication release. No board
-firmware, flashing or hardware validation was performed during this reconstruction.
+Read [RECOVERY_NOTES.md](RECOVERY_NOTES.md) before changing tracks or ordering boards. These are rebuilt reference projects, not files cleared for manufacture. The recovery work didn’t flash firmware or test hardware.
 
 ## Motherboard expansion reference
 
-The new [motherboard project](../../Microsmt-PNPv3/PCB_motherboard/docs/KICAD_RECOVERY.md) has its own library and
-[pin audit](../../Microsmt-PNPv3/PCB_motherboard/docs/PIN_AUDIT.md). It reserves three analog vacuum channels for
-CFSensor XGZP6847A100KPGN33 sensors (two heads and pump/common manifold) and
-the UART RX/TX connection, and identifies unused GPIO candidates for a feeder
-module. Its separate [validation](../../Microsmt-PNPv3/PCB_motherboard/docs/validation.json) covers all four
-copper layers. The historical results above describe the feeder/busbar projects.
+The [motherboard project](../../Microsmt-PNPv3/PCB_motherboard/docs/KICAD_RECOVERY.md) has its own library, [pin audit](../../Microsmt-PNPv3/PCB_motherboard/docs/PIN_AUDIT.md) and [four-layer check report](../../Microsmt-PNPv3/PCB_motherboard/docs/validation.json). The expansion reference reserves three analogue channels for XGZP6847A100KPGN33 sensors—two heads and a pump/common manifold—plus UART RX/TX. It also lists possible unused GPIOs for a feeder module. The earlier check results above apply to the feeder and busbars.
 
-Current sensor implementation uses two nozzle sensors on a separate ESP32-C3
-USB board; motherboard ADC reservations remain historical expansion candidates.
-See the [sensor plan](../../Microsmt-PNPv3/docs/vacuum-sensors.md).
+The current [sensor plan](../../Microsmt-PNPv3/docs/vacuum-sensors.md) uses two nozzle sensors on a separate ESP32-C3 USB board. The motherboard ADC channels remain an earlier expansion option.

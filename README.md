@@ -1,10 +1,8 @@
-# MicroSMT Pick and Place — Reorganised Files
+# MicroSMT pick and place files
 
-This repository is a reorganised copy of **MicroSMT's [Bing-feeder](https://github.com/microsmt/Bing-feeder) and [Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3) projects**. The original designs, parts, PCB files, manuals and vendor firmware come from MicroSMT. Files have been moved into clearer folders, with linked previews and documentation added to make them easier to find and use. **Credit for the original work belongs to MicroSMT and its contributors.**
+This is a working collection of [MicroSMT’s Bing feeders](https://github.com/microsmt/Bing-feeder) and [PNPv3 machine files](https://github.com/microsmt/Microsmt-PNPv3). It brings the models, board files, firmware and manuals together, with previews to help find the right part.
 
-This is an unofficial collection. Local additions, including extra STL exports and firmware changes, were prepared with ChatGPT assistance and are described in [credits and changes](CREDITS.md) and [third-party notices](THIRD_PARTY_NOTICES.md).
-
-Browse **164 3D parts** across 14 galleries, **13 PCB Gerber sets with editable KiCad references**, vendor firmware, assembly manuals and machine setup notes.
+The original designs belong to MicroSMT and its contributors. This is an unofficial copy, with local changes made with ChatGPT assistance. See [credits](CREDITS.md) and [third-party notices](THIRD_PARTY_NOTICES.md) for the sources and what changed.
 
 | Browse | Contents |
 | --- | --- |
@@ -16,7 +14,7 @@ Browse **164 3D parts** across 14 galleries, **13 PCB Gerber sets with editable 
 | [KiCad recovery tools](tools/kicad/README.md) | Project index, reconstruction tools and editing limits |
 | [Machine setup notes](Microsmt-PNPv3/docs/README.md) | OpenPnP setup, controller inspection and sensor plan |
 
-## Visual previews
+## Have a look
 
 <p>
 <a href="Bing-feeder/V485-feeder/3D_parts_8mm/README.md"><img src="Bing-feeder/V485-feeder/3D_parts_8mm/photos/V485_3D_main-body.jpg" alt="V485 parts gallery" width="360"></a>
@@ -25,17 +23,18 @@ Browse **164 3D parts** across 14 galleries, **13 PCB Gerber sets with editable 
 
 [V485 parts gallery](Bing-feeder/V485-feeder/3D_parts_8mm/README.md) · [Motherboard PCB gallery](Microsmt-PNPv3/PCB_motherboard/README.md)
 
-3D galleries include STEP/STL links, the original preview and eight isometric views per part. PCB galleries include the Gerber ZIP and top, bottom and top-side isometric views. PCB folders keep the original Gerber ZIP filenames, all images in `photos/`, supporting documents in `docs/`, and editable projects with local libraries in `KiCad/` where available.
+Each part has a picture, download links and extra views. STL files are for printing; STEP files are available for most parts if you need to edit them. Board folders have Gerber ZIPs, previews and rebuilt KiCad projects. Photos are in `photos/`, and schematics, parts lists and notes are in `docs/`.
 
-## Guides and development
+## Guides and work in progress
 
+- [V485 missing parts and questions for Bing](V485-MISSING-PARTS.md)
 - [ESP32-C3 controller: PlatformIO build guide](Bing-feeder/V485-Feeder%20Controller/CODE_esp32C3/README.md)
 - [V485 feeder variants: PlatformIO / STM32 HAL build guide](Bing-feeder/V485-feeder/CODE_feeder/README.md)
 - [Other STM32 vendor firmware build guide](Bing-feeder/STM32-BUILD.txt)
 - [Editable KiCad reference projects](tools/kicad/README.md)
 - [Machine setup status](Microsmt-PNPv3/docs/machine-setup-status.md)
 
-V485 CAD now includes 8/12/16/24 mm parts from the 21 October 2026 release. [Update notes](Bing-feeder/UPSTREAM-2026-10-21.md).
+The V485 models include the 8/12/16/24 mm files from the 21 October 2026 download. The [update notes](Bing-feeder/UPSTREAM-2026-10-21.md) explain what was added. The local feeder and controller firmware is still **0.1.0, unreleased and untested on hardware**.
 
 ## Folder layout
 
@@ -47,9 +46,9 @@ CREDITS.md               Original sources and changes made here
 THIRD_PARTY_NOTICES.md   Upstream license and attribution notes
 ```
 
-Editable KiCad references sit beside the matching PCB Gerbers in the two collections above. Run KiCad recovery commands from the repository root; see [the recovery guide](tools/kicad/RECOVERY_NOTES.md).
+The KiCad projects sit beside their matching Gerbers. They were rebuilt from MicroSMT’s files, so read [the recovery guide](tools/kicad/RECOVERY_NOTES.md) before changing a layout or ordering boards. Run the recovery tools from this repository’s root folder.
 
 ## Preview on Windows
 
-Open a folder in VS Code, open its `README.md`, and press **Ctrl + Shift + V**. Keep the `photos/` folders with their READMEs so the local images load. On GitHub, open a collection folder to view its gallery.
+In VS Code, open a `README.md` and press **Ctrl + Shift + V** to see the pictures. Keep the `photos/` folders beside the READMEs. On GitHub, just open a folder and scroll down to its gallery.
 

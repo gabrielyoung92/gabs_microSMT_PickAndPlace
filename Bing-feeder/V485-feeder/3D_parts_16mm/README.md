@@ -1,23 +1,23 @@
 # V485 feeder parts — 16 mm
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../../../CREDITS.md).
 
-9 parts · [Browse all photos](photos/) · [V485 collection](../README.md)
+10 parts · [All photos](photos/) · [V485 collection](../README.md)
 
-Supplied in the 21 October 2026 V485 release. See the [shared parts gallery](../3D_parts_shared/README.md) for common gears, worm and the 16/24 mm switch-trigger cover.
+Parts from the 21 October 2026 V485 download. The gears, worm and 16/24 mm trigger cover shared by the wider feeders are in the [shared folder](../3D_parts_shared/README.md).
 
-The upstream archive includes a 16 mm holder, but no dedicated 16 mm feeder-slot model.
+The one-position magnetic slot was added separately on 22 October 2026 from `V485-16mm feeder slot(Magnetic)-1bit.STEP`. The STEP contents are unchanged; its STL and previews were generated locally. See the [remaining missing parts](../../../V485-MISSING-PARTS.md).
 
-Click any image to open it full size. Expand **Eight isometric views** for four views from above and four from below.
+Click a picture to see it full size. **More views** shows the part from above and below.
 
-## Feeder holder 1 position
+## 1-position feeder holder
 
 [STEP](V485_3D_feeder-holder-1-position.step) · [STL](V485_3D_feeder-holder-1-position.stl)
 
 <a href="photos/V485_3D_feeder-holder-1-position.jpg"><img src="photos/V485_3D_feeder-holder-1-position.jpg" alt="Feeder holder 1 position — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -36,14 +36,40 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Gear 15t module 0.7 14mm
+## 1-position magnetic feeder slot
+
+[STEP](V485_3D_feeder-slot-1-position.step) · [STL](V485_3D_feeder-slot-1-position.stl)
+
+<a href="photos/V485_3D_feeder-slot-1-position.jpg"><img src="photos/V485_3D_feeder-slot-1-position.jpg" alt="Magnetic feeder slot 1 position — preview" width="480"></a>
+
+<details>
+<summary>More views</summary>
+
+<table>
+<tr>
+<td align="center"><a href="photos/V485_3D_feeder-slot-1-position-iso-top-1.jpg"><img src="photos/V485_3D_feeder-slot-1-position-iso-top-1.jpg" alt="Magnetic feeder slot 1 position — top view 1" width="160"></a><br><sub>Top 1</sub></td>
+<td align="center"><a href="photos/V485_3D_feeder-slot-1-position-iso-top-2.jpg"><img src="photos/V485_3D_feeder-slot-1-position-iso-top-2.jpg" alt="Magnetic feeder slot 1 position — top view 2" width="160"></a><br><sub>Top 2</sub></td>
+<td align="center"><a href="photos/V485_3D_feeder-slot-1-position-iso-top-3.jpg"><img src="photos/V485_3D_feeder-slot-1-position-iso-top-3.jpg" alt="Magnetic feeder slot 1 position — top view 3" width="160"></a><br><sub>Top 3</sub></td>
+<td align="center"><a href="photos/V485_3D_feeder-slot-1-position-iso-top-4.jpg"><img src="photos/V485_3D_feeder-slot-1-position-iso-top-4.jpg" alt="Magnetic feeder slot 1 position — top view 4" width="160"></a><br><sub>Top 4</sub></td>
+</tr>
+<tr>
+<td align="center"><a href="photos/V485_3D_feeder-slot-1-position-iso-bottom-1.jpg"><img src="photos/V485_3D_feeder-slot-1-position-iso-bottom-1.jpg" alt="Magnetic feeder slot 1 position — bottom view 1" width="160"></a><br><sub>Bottom 1</sub></td>
+<td align="center"><a href="photos/V485_3D_feeder-slot-1-position-iso-bottom-2.jpg"><img src="photos/V485_3D_feeder-slot-1-position-iso-bottom-2.jpg" alt="Magnetic feeder slot 1 position — bottom view 2" width="160"></a><br><sub>Bottom 2</sub></td>
+<td align="center"><a href="photos/V485_3D_feeder-slot-1-position-iso-bottom-3.jpg"><img src="photos/V485_3D_feeder-slot-1-position-iso-bottom-3.jpg" alt="Magnetic feeder slot 1 position — bottom view 3" width="160"></a><br><sub>Bottom 3</sub></td>
+<td align="center"><a href="photos/V485_3D_feeder-slot-1-position-iso-bottom-4.jpg"><img src="photos/V485_3D_feeder-slot-1-position-iso-bottom-4.jpg" alt="Magnetic feeder slot 1 position — bottom view 4" width="160"></a><br><sub>Bottom 4</sub></td>
+</tr>
+</table>
+
+</details>
+
+## 15T gear — module 0.7, 14 mm
 
 [STEP](V485_3D_gear-15t-module-0.7-14mm.step) · [STL](V485_3D_gear-15t-module-0.7-14mm.stl)
 
 <a href="photos/V485_3D_gear-15t-module-0.7-14mm.jpg"><img src="photos/V485_3D_gear-15t-module-0.7-14mm.jpg" alt="Gear 15t module 0.7 14mm — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -62,14 +88,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Gear 16t bracket
+## 16T gear bracket
 
 [STEP](V485_3D_gear-16t-bracket.step) · [STL](V485_3D_gear-16t-bracket.stl)
 
 <a href="photos/V485_3D_gear-16t-bracket.jpg"><img src="photos/V485_3D_gear-16t-bracket.jpg" alt="Gear 16t bracket — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -88,14 +114,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Gear 16t module 0.7 14mm
+## 16T gear — module 0.7, 14 mm
 
 [STEP](V485_3D_gear-16t-module-0.7-14mm.step) · [STL](V485_3D_gear-16t-module-0.7-14mm.stl)
 
 <a href="photos/V485_3D_gear-16t-module-0.7-14mm.jpg"><img src="photos/V485_3D_gear-16t-module-0.7-14mm.jpg" alt="Gear 16t module 0.7 14mm — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -121,7 +147,7 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 <a href="photos/V485_3D_main-body.jpg"><img src="photos/V485_3D_main-body.jpg" alt="Main body — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -140,14 +166,14 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 
 </details>
 
-## Pcb cover
+## PCB cover
 
 [STEP](V485_3D_pcb-cover.step) · [STL](V485_3D_pcb-cover.stl)
 
 <a href="photos/V485_3D_pcb-cover.jpg"><img src="photos/V485_3D_pcb-cover.jpg" alt="Pcb cover — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -173,7 +199,7 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 <a href="photos/V485_3D_switch-trigger.jpg"><img src="photos/V485_3D_switch-trigger.jpg" alt="Switch trigger — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -199,7 +225,7 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 <a href="photos/V485_3D_tape-cover.jpg"><img src="photos/V485_3D_tape-cover.jpg" alt="Tape cover — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>
@@ -225,7 +251,7 @@ Click any image to open it full size. Expand **Eight isometric views** for four 
 <a href="photos/V485_3D_worm-motor-support.jpg"><img src="photos/V485_3D_worm-motor-support.jpg" alt="Worm motor support — preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>

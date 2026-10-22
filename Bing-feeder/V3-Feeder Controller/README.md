@@ -1,8 +1,8 @@
 # V3 feeder controller
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../../CREDITS.md).
 
-Mega2560 controller sources, board files and busbar references.
+The V3 controller uses a Mega2560. Its Arduino sketch, controller board, mounting hook and busbars are below.
 
 | Browse | Contents |
 | --- | --- |

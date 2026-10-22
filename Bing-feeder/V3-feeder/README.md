@@ -1,8 +1,8 @@
 # V3 feeder
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../../CREDITS.md).
 
-Select a tape width to browse models, or open the electronics and firmware references. Models are updated from the 21 October 2026 release; see the [update notes](../UPSTREAM-2026-10-21.md).
+Pick your tape width below for the models, or go straight to the board files, firmware or assembly notes. The models include the 21 October 2026 updates; see [what changed](../UPSTREAM-2026-10-21.md).
 
 | Browse | Contents |
 | --- | --- |
@@ -15,5 +15,5 @@ Select a tape width to browse models, or open the electronics and firmware refer
 | [8 mm firmware](CODE_feeder_8mm/README.md) | STM32 C source, supplied HEX and build notes |
 | [12/16/24 mm firmware](CODE_feeder_12-16-24mm/README.md) | STM32 C source and build notes |
 | [Assembly and print references](docs/README.md) | Manuals, diagrams, holder installation and recorded stock |
-| [Print project](PRINT_projects/README.md) | Supplied 3MF project |
+| [Print project](PRINT_projects/README.md) | Original 3MF projects |
 | [Sprocket CAD](sprocket_CAD/README.md) | 2 mm and 4 mm pitch DWG drawings |

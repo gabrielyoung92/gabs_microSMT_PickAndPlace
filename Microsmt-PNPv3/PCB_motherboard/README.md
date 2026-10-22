@@ -1,24 +1,24 @@
 # PNPv3 motherboard PCB
 
-> **Original: [MicroSMT / Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3).** [Credits and local changes](../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Microsmt-PNPv3). [Credits and local changes](../../CREDITS.md).
 
 [Back to collection](../README.md)
 
-Download the Gerber ZIP or click a preview to open it full size.
+The Gerber ZIP, board previews and editable KiCad files are below. Click a picture for the full-size view.
 
-## Editable KiCad reference
+## KiCad files
 
 [Open project](KiCad/motherboard.kicad_pro) · [Schematic](KiCad/motherboard.kicad_sch) · [PCB](KiCad/motherboard.kicad_pcb)
 
-This is a local reconstruction from MicroSMT source files, with existing DRC findings. Keep the complete `KiCad/` folder together; its libraries are included in `KiCad/libraries/`.
+These KiCad files were rebuilt from MicroSMT’s originals. DRC still reports layout issues. Keep the whole `KiCad/` folder together; it includes the libraries in `KiCad/libraries/`.
 
 [Components](docs/components.csv) · [Recovery data](docs/recovery.json) · [Validation](docs/validation.json) · [Mask/paste comparison](docs/mask-paste-comparison.json)
 
-Read the [recovery notes](../../tools/kicad/RECOVERY_NOTES.md) before layout changes or ordering boards. Paths recorded in the recovery JSON are relative to the repository root.
+Read the [recovery notes](../../tools/kicad/RECOVERY_NOTES.md) before layout changes or ordering boards. Paths in the recovery JSON start at the repository root.
 
 [Motherboard recovery details](docs/KICAD_RECOVERY.md) · [Pin audit](docs/PIN_AUDIT.md) · [MCU pin inventory](docs/mcu-pins.csv)
 
-## Gerber previews — Gerber_PCB
+## Original board views
 
 [Download Gerber ZIP](Gerber_PCB.zip)
 
@@ -30,15 +30,15 @@ Read the [recovery notes](../../tools/kicad/RECOVERY_NOTES.md) before layout cha
 </tr>
 </table>
 
-## Schematics, BOMs and supplied notes
+## Schematics, parts lists and notes
 
 - [SCH.pdf](docs/SCH.pdf)
 
-The previews show bare-board geometry from the supplied Gerbers and drill files. Colours and the 1.6 mm rendering thickness are illustrative.
+These pictures were drawn from the Gerbers and drill files. The colours and 1.6 mm board thickness are just display settings, not confirmed manufacturing specifications.
 
 ## KiCad previews
 
-These show the recovered editable project; the Gerber previews above show the supplied manufacturing files.
+These views show the rebuilt KiCad project. The Gerber views above come from MicroSMT’s original files.
 
 <table>
 <tr>

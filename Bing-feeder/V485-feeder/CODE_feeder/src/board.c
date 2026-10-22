@@ -19,7 +19,7 @@ void Board_ConfigurePin(GPIO_TypeDef* port, uint16_t pins, uint32_t mode) {
 }
 
 // Unrecoverable setup failure: stop both motor channels, light the LED and halt.
-// This also stops the normally continuous peel motor on the wider variant.
+// This also stops idle peel take-up on the wider variant.
 void Board_ErrorHandler(void) {
     // GPIO_Config() runs before clock/UART setup, so motor outputs are driven.
     __disable_irq();
@@ -75,20 +75,13 @@ void delay_us(uint32_t us) {
     while ((uint32_t)(DWT->CYCCNT - startedAt) < cycles) __NOP();
 }
 
-// Both motors stop on 8 mm. The wider vendor variant keeps the peel motor
-// running from startup, including while the indexed motor is idle.
+// Safe idle for startup/loader. Only Feeder_Tick may start the peel motor.
 void Board_MotorIdle(void) {
-    HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_INDEX_A_PIN | MOTOR_INDEX_B_PIN, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_PEEL_B_PIN, GPIO_PIN_SET);
-#if FEEDER_WIDE && !FEEDER_BOOTLOADER
-    HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_PEEL_A_PIN, GPIO_PIN_RESET);
-#else
-    HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_PEEL_A_PIN, GPIO_PIN_SET);
-#endif
+    HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_ALL_PINS, GPIO_PIN_SET);
 }
 
-// Establish output levels before setting the clock/UART. Inputs retain the
-// vendor's floating mode and therefore need appropriate bias on the PCB.
+// Establish output levels before setting the clock/UART. Existing inputs retain
+// their board bias; the added PA2 tension input explicitly uses an internal pull-up.
 static void GPIO_Config(void) {
     __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -107,7 +100,12 @@ static void GPIO_Config(void) {
     Board_ConfigurePin(LED_PORT, LED_PIN, GPIO_MODE_OUTPUT_PP);
     Board_ConfigurePin(COUNT_PORT, COUNT_PIN, GPIO_MODE_INPUT);
     Board_ConfigurePin(TRIGGER_PORT, TRIGGER_PIN, GPIO_MODE_INPUT);
-    Board_ConfigurePin(BUTTON_PORT, BUTTON_INC_PIN | BUTTON_DEC_PIN, GPIO_MODE_INPUT);
+    Board_ConfigurePin(BUTTON_PORT, BUTTON_PIN, GPIO_MODE_INPUT);
+    GPIO_InitTypeDef tension = {0};
+    tension.Pin = PEEL_SWITCH_PIN;
+    tension.Mode = GPIO_MODE_INPUT;
+    tension.Pull = GPIO_PULLUP;
+    HAL_GPIO_Init(PEEL_SWITCH_PORT, &tension);
 }
 
 // Clear stale edges before enabling the two EXTI vectors. UART/SysTick have

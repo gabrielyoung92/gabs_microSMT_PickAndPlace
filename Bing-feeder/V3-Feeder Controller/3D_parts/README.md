@@ -1,19 +1,19 @@
 # V3 feeder controller parts
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../../../CREDITS.md).
 
-1 part · [Browse all photos](photos/)
+1 part · [All photos](photos/)
 
-Click any image to open it full size. Expand **Eight isometric views** for four views from above and four from below.
+Click a picture to see it full size. **More views** shows the part from above and below.
 
-## Busbar pcb hook
+## Busbar PCB hook
 
 [STEP](V3_3D_busbar-pcb-hook.step) · [STL](V3_3D_busbar-pcb-hook.stl)
 
 <a href="photos/V3_3D_busbar-pcb-hook.jpg"><img src="photos/V3_3D_busbar-pcb-hook.jpg" alt="Busbar pcb hook — original preview" width="480"></a>
 
 <details>
-<summary>Eight isometric views</summary>
+<summary>More views</summary>
 
 <table>
 <tr>

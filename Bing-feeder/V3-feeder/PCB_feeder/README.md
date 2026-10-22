@@ -1,22 +1,22 @@
 # V3 feeder PCB
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../../../CREDITS.md).
 
 [Back to collection](../README.md)
 
-Download the Gerber ZIP or click a preview to open it full size.
+The Gerber ZIP, board previews and editable KiCad files are below. Click a picture for the full-size view.
 
-## Editable KiCad reference
+## KiCad files
 
 [Open project](KiCad/feeder_v2.kicad_pro) · [Schematic](KiCad/feeder_v2.kicad_sch) · [PCB](KiCad/feeder_v2.kicad_pcb)
 
-The supplied schematic is labelled V2, although it is packaged in the V3 collection. This is a local reconstruction from MicroSMT source files, with existing DRC findings. Keep the complete `KiCad/` folder together; its libraries are included in `KiCad/libraries/`.
+The supplied schematic says V2, even though MicroSMT included it with the V3 files. These KiCad files were rebuilt from MicroSMT’s originals. DRC still reports layout issues. Keep the whole `KiCad/` folder together; it includes the libraries in `KiCad/libraries/`.
 
 [Components](docs/components.csv) · [Recovery data](docs/recovery.json) · [Validation](docs/validation.json) · [Mask/paste comparison](docs/mask-paste-comparison.json)
 
-Read the [recovery notes](../../../tools/kicad/RECOVERY_NOTES.md) before layout changes or ordering boards. Paths recorded in the recovery JSON are relative to the repository root.
+Read the [recovery notes](../../../tools/kicad/RECOVERY_NOTES.md) before layout changes or ordering boards. Paths in the recovery JSON start at the repository root.
 
-## Gerber previews — V3_feeder_gerber_2025-02-06
+## Original board views
 
 [Download Gerber ZIP](V3_feeder_gerber_2025-02-06.zip)
 
@@ -28,15 +28,15 @@ Read the [recovery notes](../../../tools/kicad/RECOVERY_NOTES.md) before layout 
 </tr>
 </table>
 
-## Schematics, BOMs and supplied notes
+## Schematics, parts lists and notes
 
 - [V3_feeder_schematic.png](photos/V3_feeder_schematic.png)
 
-The previews show bare-board geometry from the supplied Gerbers and drill files. Colours and the 1.6 mm rendering thickness are illustrative.
+These pictures were drawn from the Gerbers and drill files. The colours and 1.6 mm board thickness are just display settings, not confirmed manufacturing specifications.
 
 ## KiCad previews
 
-These show the recovered editable project; the Gerber previews above show the supplied manufacturing files.
+These views show the rebuilt KiCad project. The Gerber views above come from MicroSMT’s original files.
 
 <table>
 <tr>

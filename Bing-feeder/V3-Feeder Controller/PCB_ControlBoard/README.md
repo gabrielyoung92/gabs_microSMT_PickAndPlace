@@ -1,16 +1,16 @@
 # V3 controller PCB
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../../../CREDITS.md).
 
 [Back to collection](../README.md)
 
-Download the Gerber ZIP or click a preview to open it full size.
+The Gerber ZIP, board previews and editable KiCad files are below. Click a picture for the full-size view.
 
-## Editable KiCad reference
+## KiCad files
 
-Open these projects in **KiCad 10**. They are local reconstructions of MicroSMT’s manufacturing files, with connected schematics, native PCB objects and local libraries. Keep the whole `KiCad/` folder together.
+Open the `.kicad_pro` file in **KiCad 10**. These projects were rebuilt from MicroSMT’s board files. Keep the whole `KiCad/` folder together so the included symbol and footprint libraries load.
 
-The schematics preserve source pad numbers and nets using generic passive pin symbols. They establish connectivity; use the supplied schematic for device pin functions and electrical interpretation. Existing layout-rule findings remain visible.
+The rebuilt schematics use generic pin symbols to show the original pad numbers and connections. Use MicroSMT’s supplied schematic for the actual pin functions. The KiCad rule checks still report issues; read the recovery notes before editing or ordering boards.
 
 | Project | Open in KiCad | Supporting reports |
 | --- | --- | --- |
@@ -18,7 +18,7 @@ The schematics preserve source pad numbers and nets using generic passive pin sy
 
 [Recovery details](docs/KICAD_RECOVERY.md) · [Method and editing limits](../../../tools/kicad/RECOVERY_NOTES.md)
 
-## Gerber previews — V3_controller_48_feeders_gerber
+## Original board views
 
 [Download Gerber ZIP](V3_controller_48_feeders_gerber.zip)
 
@@ -30,16 +30,16 @@ The schematics preserve source pad numbers and nets using generic passive pin sy
 </tr>
 </table>
 
-## Schematics, BOMs and supplied notes
+## Schematics, parts lists and notes
 
 - [V3_controller_48_feeders_schematic.png](photos/V3_controller_48_feeders_schematic.png)
 - [V3_controller_BOM.xlsx](docs/V3_controller_BOM.xlsx)
 
-The previews show bare-board geometry from the supplied Gerbers and drill files. Colours and the 1.6 mm rendering thickness are illustrative.
+These pictures were drawn from the Gerbers and drill files. The colours and 1.6 mm board thickness are just display settings, not confirmed manufacturing specifications.
 
 ## KiCad previews
 
-These JPGs show the recovered editable projects. The Gerber previews above show the original manufacturing files. Click an image for full size.
+These views show the rebuilt KiCad projects. The Gerber views above come from MicroSMT’s original files.
 
 ### V3 controller
 

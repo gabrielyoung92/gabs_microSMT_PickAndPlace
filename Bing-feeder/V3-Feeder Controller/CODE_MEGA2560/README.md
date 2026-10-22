@@ -1,8 +1,8 @@
 # Mega2560 controller firmware
 
-> **Original: [MicroSMT / Bing-feeder](https://github.com/microsmt/Bing-feeder).** [Credits and local changes](../../../CREDITS.md).
+> Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../../../CREDITS.md).
 
-Supplied Arduino source for the V3 feeder controller.
+This is MicroSMT’s original Arduino sketch for the V3 Mega2560 feeder controller. Open the `.ino` from its matching folder so the Arduino IDE loads it correctly.
 
 | Browse | Contents |
 | --- | --- |
