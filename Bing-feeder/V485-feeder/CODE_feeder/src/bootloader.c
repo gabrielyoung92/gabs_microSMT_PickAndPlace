@@ -187,9 +187,20 @@ int main(void) {
         delay_ms(100); // Failed access must never manufacture a destination ID.
     }
     CH455_RefreshNum(id);
+    uint32_t blinkAt = HAL_GetTick();
+    uint8_t blank = 0;
     while (1) {
         char line[RX_BUFFER_SIZE];
         if (RS485_ReadLine(line, sizeof(line)) && ProcessPacket(id, line))
             JumpToApplication();
+        // An unassigned board flashes 00 while waiting. Upload progress takes
+        // over the display once a transfer starts; motors always remain stopped.
+        if (id < ADDRESS_MIN && !sessionActive &&
+            (uint32_t)(HAL_GetTick() - blinkAt) >= UI_BLINK_MS) {
+            blinkAt = HAL_GetTick();
+            blank = !blank;
+            if (blank) { CH455_SetDisplay(1, 0); CH455_SetDisplay(3, 0); }
+            else CH455_RefreshNum(0);
+        }
     }
 }

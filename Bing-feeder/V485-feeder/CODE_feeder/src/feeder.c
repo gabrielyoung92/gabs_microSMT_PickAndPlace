@@ -65,7 +65,8 @@ static void RefreshDisplay(void) {
     uint8_t value = (state == FEED_RESERVED || state == FEED_RUNNING)
                     ? motorCount : mode == MODE_MENU ? menuItem : mode == MODE_ASSIGN ? 1U :
                       (mode == MODE_ADDR || mode == MODE_COUNT) ? editValue : currentAddr;
-    uint8_t blank = (mode == MODE_ASSIGN || mode == MODE_ADDR || mode == MODE_COUNT) && uiBlink;
+    uint8_t blank = (mode == MODE_ASSIGN || mode == MODE_ADDR || mode == MODE_COUNT ||
+                     (mode == MODE_NORMAL && currentAddr < ADDRESS_MIN)) && uiBlink;
     displayDirty = 0;
     __set_PRIMASK(irqMask);
 
@@ -185,7 +186,8 @@ static void KeyScan(void) {
                             if (RequestBoot() == 1) NVIC_SystemReset();
                         } else if (feedState == FEED_IDLE) {
                             mode = menuItem == 1U ? MODE_ASSIGN : menuItem == 3U ? MODE_ADDR : MODE_COUNT;
-                            editValue = mode == MODE_COUNT ? currentCount : currentAddr;
+                            editValue = mode == MODE_COUNT ? currentCount :
+                                        currentAddr < ADDRESS_MIN ? ADDRESS_MIN : currentAddr;
                         } else LeaveMenu(); // A motor fault only permits menu 02.
                     } else if (mode == MODE_ADDR || mode == MODE_COUNT) {
                         if (held >= BUTTON_HOLD_MS) {
@@ -197,7 +199,7 @@ static void KeyScan(void) {
                                 StartFeedback(1);
                             }
                         } else {
-                            editValue = editValue >= VALUE_MAX ? (mode == MODE_COUNT ? COUNT_MIN : VALUE_MIN) : editValue + 1U;
+                            editValue = editValue >= VALUE_MAX ? (mode == MODE_COUNT ? COUNT_MIN : ADDRESS_MIN) : editValue + 1U;
                         }
                     } else if (mode == MODE_NORMAL && held < BUTTON_HOLD_MS && !manualTriggerMute) {
                         if (Motor_Reserve(0)) { Motor_Start(); manualTriggerMute = MANUAL_TRIGGER_MUTE_MS; }
@@ -219,7 +221,10 @@ static void KeyScan(void) {
     if (mode != MODE_NORMAL && mode != MODE_MENU && !buttonDown &&
         (uint32_t)(now - uiLastAction) >= UI_TIMEOUT_MS) LeaveMenu();
     uint8_t blink = ((uint32_t)(now - uiLastAction) / UI_BLINK_MS) & 1U;
-    if (blink != uiBlink) { uiBlink = blink; if (mode != MODE_NORMAL) displayDirty = 1; }
+    if (blink != uiBlink) {
+        uiBlink = blink;
+        if (mode != MODE_NORMAL || currentAddr < ADDRESS_MIN) displayDirty = 1;
+    }
 }
 
 // Claim a feed and its resolved count before any ACK delay or motor output.
@@ -229,7 +234,8 @@ static uint8_t Motor_Reserve(uint8_t requestedCount) {
     uint32_t irqMask = __get_PRIMASK();
     __disable_irq();
     uint8_t count = requestedCount ? requestedCount : currentCount;
-    uint8_t accepted = feedReady && mode == MODE_NORMAL && feedState == FEED_IDLE &&
+    uint8_t accepted = feedReady && currentAddr >= ADDRESS_MIN && currentAddr <= VALUE_MAX &&
+                       mode == MODE_NORMAL && feedState == FEED_IDLE &&
                        count >= COUNT_MIN && count <= VALUE_MAX;
     if (accepted) {
         motorCount = count;
@@ -319,7 +325,9 @@ static void ProcessRS485(void) {
                 if (!Boot_ParseHex(&text, &values[i]) || (i < 4 ? *text++ != ' ' : *text != 0)) return;
             }
             if (values[1] != HAL_GetUIDw0() || values[2] != HAL_GetUIDw1() || values[3] != HAL_GetUIDw2()) return;
-            if (mode != MODE_ASSIGN || values[4] > VALUE_MAX || feedState != FEED_IDLE) {
+            if (values[4] < ADDRESS_MIN || values[4] > VALUE_MAX) {
+                Boot_Reply(currentAddr, "ERROR ID", NULL, 0);
+            } else if (mode != MODE_ASSIGN || feedState != FEED_IDLE) {
                 Boot_Reply(currentAddr, "ERROR NOTARMED", NULL, 0);
             } else if (!SaveSetting(EEPROM_DATA_ADDR, (uint8_t)values[4])) {
                 Boot_Reply(currentAddr, "ERROR EEPROM", NULL, 0);
@@ -343,7 +351,8 @@ static void ProcessRS485(void) {
                 requestTokens[1] = values[1];
                 requestResult = REQUEST_RUNNING;
             }
-            Boot_Reply(currentAddr, accepted ? "ACCEPT" : (feedState == FEED_FAULT ? "FAULT" : "BUSY"), values, 2);
+            Boot_Reply(currentAddr, accepted ? "ACCEPT" :
+                       (feedState == FEED_FAULT || currentAddr < ADDRESS_MIN ? "FAULT" : "BUSY"), values, 2);
             if (accepted) Motor_Start();
         } else if (!strcmp(command, "INFO")) {
             BootRecord record;
@@ -498,7 +507,8 @@ void Feeder_Tick(void) {
     uint8_t closed = HAL_GPIO_ReadPin(PEEL_SWITCH_PORT, PEEL_SWITCH_PIN) == PEEL_RUN_LEVEL;
     if (!closed) peelClosed = 0;
     else if (!peelClosed) { peelClosed = 1; peelClosedAt = now; }
-    uint8_t permitted = feedReady && mode == MODE_NORMAL && feedState != FEED_FAULT &&
+    uint8_t permitted = feedReady && currentAddr >= ADDRESS_MIN && currentAddr <= VALUE_MAX &&
+                        mode == MODE_NORMAL && feedState != FEED_FAULT &&
                         (FEEDER_WIDE || feedState == FEED_RUNNING);
     if (!permitted || !closed) {
         if (peelRunning) {

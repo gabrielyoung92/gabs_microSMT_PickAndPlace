@@ -27,7 +27,7 @@ uint8_t Boot_ReadRecord(BootRecord* record, uint8_t* state);
 uint8_t Boot_WriteState(uint8_t state);
 uint8_t Boot_SaveRecord(const BootRecord* record);
 uint8_t Boot_ImageValid(const BootRecord* record);
-// ID is read separately from metadata. Blank EEPROM means commissioning ID 0;
+// ID is read separately from metadata. Blank EEPROM is saved as unassigned 0;
 // failed I2C is never treated as a usable destination.
 uint8_t Boot_ReadId(uint8_t* id);
 // Updates and correlated FEED/STATUS/results use Bdd <body> <CRC32> LF.

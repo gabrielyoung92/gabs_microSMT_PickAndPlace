@@ -44,7 +44,7 @@ Use your controller’s port instead of COM7. If it won’t enter download mode,
 
 ## Advance a feeder
 
-Send `M600 N12 F4` or `N12 F4`, followed by a newline. `N` is the feeder’s saved ID. `F` is the number of index-sensor events to count, **not millimetres**. `F0` uses that feeder’s saved default. IDs and counts are 0–99; use the advance count that matches your feeder and tape pitch.
+Send `M600 N12 F4` or `N12 F4`, followed by a newline. `N` is the feeder’s saved ID. `F` is the number of index-sensor events to count, **not millimetres**. `F0` uses that feeder’s saved default. Operating IDs are **1–99**; counts are 0–99. `N0` is rejected before transmitting; use the advance count that matches your feeder and tape pitch.
 
 The command accepts upper/lower case, spaces or tabs, and LF or CRLF endings. Extra fields and malformed values are rejected.
 
@@ -101,7 +101,7 @@ The controller also forwards locally armed ID assignments. Select PA4 menu `01` 
 python tools/assign_id.py --port COM7 --address 7 --new-id 12
 ```
 
-The PC tool checks responding destination IDs, targets the selected feeder's hardware UID, saves once and verifies at the new ID. See the [feeder button/wiring guide](../../V485-feeder/CODE_feeder/README.md#pa4-button-and-saved-settings). Manual PA4 menu `03` also changes an ID. Controller feeds remain blocked until assignment/update traffic has been idle for 10 seconds.
+Address 0 is reserved for programming an unassigned feeder and is never a valid new ID. The PC tool checks responding destination IDs, targets the selected feeder's hardware UID, saves once and verifies at the new ID. See the [feeder button/wiring guide](../../V485-feeder/CODE_feeder/README.md#pa4-button-and-saved-settings). Manual PA4 menu `03` also changes an ID. Controller feeds remain blocked until assignment/update traffic has been idle for 10 seconds.
 
 ## Check without hardware
 

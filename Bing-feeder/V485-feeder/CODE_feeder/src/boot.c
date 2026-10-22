@@ -21,7 +21,7 @@ uint32_t Boot_Crc32(const void* data, size_t size) {
     return ~crc;
 }
 
-// These are the only EEPROM offsets modified by the updater; ID/count survive.
+// Update state writes preserve the existing ID/count; blank ID normalisation is below.
 uint8_t Boot_WriteState(uint8_t state) {
     return EEPROM_WriteByte(BOOT_STATE_ADDR, state);
 }
@@ -29,7 +29,10 @@ uint8_t Boot_WriteState(uint8_t state) {
 uint8_t Boot_ReadId(uint8_t* id) {
     uint8_t saved;
     if (!EEPROM_ReadChecked(EEPROM_DATA_ADDR, &saved)) return 0;
-    if (saved == 0xFFU) saved = DEFAULT_ADDRESS;
+    if (saved == 0xFFU) {
+        saved = DEFAULT_ADDRESS;
+        if (!EEPROM_WriteByte(EEPROM_DATA_ADDR, saved)) return 0;
+    }
     if (saved > VALUE_MAX) return 0;
     *id = saved;
     return 1;

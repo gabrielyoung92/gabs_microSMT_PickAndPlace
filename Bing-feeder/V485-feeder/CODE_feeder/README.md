@@ -50,7 +50,7 @@ Driving both control pins of a motor high stops it. PA2 uses the MCU’s interna
 
 With the matching [ESP32-C3 controller 0.1.0 development build](../../V485-Feeder%20Controller/CODE_esp32C3/README.md), send `M600 N7 F4` over USB. The controller waits for completion before returning `ok`. **F counts index-sensor events, not millimetres.** `F0` uses the saved default count of 1–99.
 
-A direct RS485 adapter can still send the legacy `N7 F4` command followed by LF. IDs/counts are 0–99. Spaces or tabs and CRLF are accepted; signs and extra fields are rejected. Its replies mean:
+A direct RS485 adapter can still send the legacy `N7 F4` command followed by LF. Operating IDs are 1–99; counts are 0–99. Spaces or tabs and CRLF are accepted; signs and extra fields are rejected. Its replies mean:
 
 - `OK`: accepted, **not finished**.
 - `Busy`: already reserved/running, or faulted.
@@ -70,7 +70,7 @@ The ESP32 uses addressed, CRC-protected packets rather than the legacy replies:
 | Same status poll | `FAULT <session> <sequence>` | Matching feed stopped on a motor/settings fault |
 | Same status poll | `UNKNOWN <session> <sequence>` | No matching saved request result |
 
-Numeric fields use exactly eight hexadecimal digits. Count is 0–99, with 0 selecting the saved default. Session and sequence tie replies to their request, so an old ACK cannot confirm a new advance. The CRC and packet format match the [update protocol](BOOTLOADER.md).
+Numeric fields use exactly eight hexadecimal digits. Count is 0–99, with 0 selecting the saved default. A framed FEED addressed to an unassigned feeder at 0 reports FAULT and cannot start a motor. Session and sequence tie replies to their request, so an old ACK cannot confirm a new advance. The CRC and packet format match the [update protocol](BOOTLOADER.md).
 
 The feeder records DONE after the final count and index-motor idle outputs. A motor timeout records FAULT instead. Interrupt handlers never send replies; the main loop answers STATUS polls, so completion packets don’t appear unexpectedly on the shared bus.
 
@@ -99,7 +99,7 @@ Tap PA4 to advance using the saved default count. Hold it to choose a function:
 | 6–8 seconds | `03` | Edit the feeder ID locally |
 | 8–10 seconds | `04` | Edit the default feed count |
 
-Keep holding to cycle back through the menu. A hold release never advances the tape. The display shows the function number while selecting; once in `03`/`04`, it flashes the value being edited. Tap to increment, wrapping IDs through 0–99 and counts through 1–99. **Hold for two seconds, then release to save and exit.** Values stay temporary until saved. Twenty seconds without a press cancels an edit without writing EEPROM.
+Keep holding to cycle back through the menu. A hold release never advances the tape. The display shows the function number while selecting; once in `03`/`04`, it flashes the value being edited. Tap to increment, wrapping IDs and counts through 1–99. An unassigned feeder starts the ID editor at `01`. **Hold for two seconds, then release to save and exit.** Values stay temporary until saved. Twenty seconds without a press cancels an edit without writing EEPROM.
 
 `01` flashes until an ID is assigned, a two-second hold is released to cancel, or its 20-second window expires. `02` records an update request and resets into the loader; it does not erase flash. A motor fault still permits menu `02`, but cannot be cleared by editing settings. An EEPROM fault requires reset/inspection.
 
@@ -116,11 +116,11 @@ python tools/assign_id.py --port COM5 --address 7 --new-id 12
 
 Use the matching controller build: it forwards the new `IDENT`/`SETID` packets. The tool checks local arming, probes the proposed ID for a responding application or bootloader, targets the selected MCU's hardware UID, and confirms that same UID at the new ID after saving. A lost save acknowledgement triggers verification, never an automatic second SETID. After closing the tool, wait 10 seconds for the controller's update/settings interlock before feeding.
 
-Only one commissioning feeder at ID 0 may be connected. Keep all bus IDs unique. The probe can detect responding devices running this local firmware; it cannot reserve an ID belonging to an unplugged, unpowered, faulty or stock-firmware feeder. Local menu `03` does not check for duplicates on the bus.
+Only one unassigned feeder at address 0 may be connected for programming. Remote assignment rejects a new ID of 0 before sending anything. Keep all bus IDs unique. The probe can detect responding devices running this local firmware; it cannot reserve an ID belonging to an unplugged, unpowered, faulty or stock-firmware feeder. Local menu `03` does not check for duplicates on the bus.
 
 New settings take effect only after an EEPROM write passes readback. If it fails, both motors stop, the display shows **EE**, and feed/update commands stay disabled until reset; read-only STATUS and IDENT still work. This avoids running with an uncertain saved ID.
 
-At startup, failed reads are retried with both motors stopped and EE displayed. They never become ID 0 or overwrite settings. Only a successfully read blank ID uses commissioning ID 0. An invalid saved ID also blocks operation until corrected. An invalid default count becomes the positive default after a checked read and verified write.
+At startup, failed reads are retried with both motors stopped and EE displayed. They never become ID 0 or overwrite settings. Only a successfully read blank ID (`FF`) is written back as `0`. Both `0` and that normalised blank state flash **00** continuously in normal operation. Neither motor can run, and manual, external and serial advances are rejected until a valid ID **1–99** has been saved. The same unassigned indication flashes while waiting in the bootloader; upload progress takes over during a transfer. Menu `03` or locally armed menu `01` can program an ID, and updates can use reserved transport address `0`; it is never an operating feeder ID. An invalid saved ID also blocks operation until corrected. An invalid default count becomes the positive default after a checked read and verified write.
 
 Serial monitoring needs an RS485 adapter at 9600 baud with LF endings. ST-Link alone does not provide a serial console.
 

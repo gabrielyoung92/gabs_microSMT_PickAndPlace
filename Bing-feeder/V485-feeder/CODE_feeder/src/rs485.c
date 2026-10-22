@@ -172,7 +172,7 @@ uint8_t RS485_ParseFeedCommand(const char* line, int* addr, int* cnt) {
     if (*line++ != 'F' || !ParseValue(&line, &count)) return 0;
     while (*line == ' ' || *line == '\t') line++;
     if (*line == '\r') line++;
-    if (*line != '\0') return 0;
+    if (*line != '\0' || address < ADDRESS_MIN) return 0;
     *addr = address;
     *cnt = count;
     return 1;

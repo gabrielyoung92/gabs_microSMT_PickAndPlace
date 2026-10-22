@@ -4,9 +4,9 @@ Local bootloader extension to the [MicroSMT-derived feeder firmware](README.md).
 
 ## Destination IDs
 
-Every update request/reply includes a **destination feeder ID, 0–99**, protected by CRC32 along with the payload. Other IDs ignore the packet. One firmware file serves every feeder of the matching width; the feeder's saved ID/count survive updates.
+Every update request/reply includes a **transport destination, 0–99**, protected by CRC32 along with the payload. Other IDs ignore the packet. One firmware file serves every feeder of the matching width; the feeder's saved ID/count survive updates.
 
-IDs must be **unique on the connected bus**. Blank EEPROM uses ID 0: commission those feeders one at a time, then set individual IDs with PA4 menu `03` or the [locally armed ID assignment tool](README.md#set-an-id-from-the-pc). Unreadable/invalid EEPROM IDs leave the loader waiting.
+IDs must be **unique on the connected bus**. Operating IDs are **1–99**. Blank ID byte `FF` is saved as `0`: this is unassigned, flashes **00**, and blocks both motors and all advances. Address 0 is reserved for programming/recovery only. Commission unassigned feeders one at a time, then set individual IDs with PA4 menu `03` or the [locally armed ID assignment tool](README.md#set-an-id-from-the-pc). Unreadable/invalid EEPROM IDs leave the loader waiting.
 
 Batch uploads update and verify one ID at a time, stopping on the first failure. Use a separate batch for each width. There is no broadcast update command.
 
@@ -86,7 +86,7 @@ All packets use `B07 <body> <CRC32>` followed by LF. The ID is exactly two decim
 | `INFO` | `APP <variant> <size> <imageCRC>` | Running application's committed metadata |
 | `BOOT` | `RESET` | Record update request and reset; reject busy/write failure |
 | `IDENT <nonce>` | `IDENT <nonce> <uid0> <uid1> <uid2> <armed>` | Application hardware identity and menu 01 selection; read-only, including during a settings fault |
-| `SETID <nonce> <uid0> <uid1> <uid2> <newID>` | `ID <nonce> <newID>` at the old ID | Application only: require menu 01, matching hardware UID and ID 0–99; save/read back before changing ID |
+| `SETID <nonce> <uid0> <uid1> <uid2> <newID>` | `ID <nonce> <newID>` at the old ID | Application only: require menu 01, matching hardware UID and new ID 1–99; save/read back before changing ID |
 | `HELLO` | `READY <variant> <appBase> <maxSize>` | Loader identity/layout |
 | `BEGIN <variant> <size> <imageCRC>` | `OK <nextOffset>` | Invalidate metadata and erase; identical live-session retry keeps progress |
 | `DATA <offset> <hexBytes>` | `OK <nextOffset>` | Write/read back up to 32 bytes; acknowledge matching duplicates without rewriting |

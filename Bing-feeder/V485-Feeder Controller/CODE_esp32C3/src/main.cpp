@@ -98,7 +98,7 @@ bool parseField(const char*& cursor, char field, uint8_t& result) {
   return true;
 }
 
-// Exact grammar: [M600 ]N<0..99> F<0..99>, case-insensitive, with whitespace.
+// Exact grammar: [M600 ]N<1..99> F<0..99>, case-insensitive, with whitespace.
 // Reject unknown commands, duplicate fields, negative values and trailing tokens.
 bool parseCommand(const char* input, uint8_t& address, uint8_t& count) {
   const char* cursor = input;
@@ -115,7 +115,7 @@ bool parseCommand(const char* input, uint8_t& address, uint8_t& count) {
   skipCommandSpace(cursor);
   if (!parseField(cursor, 'F', parsedCount)) return false;
   skipCommandSpace(cursor);
-  if (*cursor != '\0') return false;
+  if (*cursor != '\0' || parsedAddress == 0) return false;
   address = parsedAddress;
   count = parsedCount;
   return true;
@@ -314,7 +314,7 @@ void executeCommand(const char* line) {
   }
   uint8_t address = 0, count = 0;
   if (!parseCommand(line, address, count)) {
-    Serial.println("error: expected N0..99 F0..99, optionally prefixed with M600.");
+    Serial.println("error: expected N1..99 F0..99, optionally prefixed with M600.");
     return;
   }
   if (updateActive()) {

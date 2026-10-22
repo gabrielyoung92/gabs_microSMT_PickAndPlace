@@ -73,7 +73,7 @@ GPIO_TypeDef testA,testB;
 USART_TypeDef testUart;
 uint16_t pending;
 static uint32_t now,mask;
-static int context,starts,displayCalls,renderDepth;
+static int context,starts,displayCalls,renderDepth,lastNumber;
 static int queued,address,count,injectAck,injectStartup,injectPulse,injectRender;
 static uint8_t memory[256]={7,3};
 static int resetCalls,failEEPROM;
@@ -114,7 +114,7 @@ void delay_ms(uint32_t ms){
 }
 void delay_us(uint32_t us){(void)us;}
 void CH455_RefreshNum(uint16_t value){
- assert(context==0&&!renderDepth&&value<=99);renderDepth++;displayCalls++;
+ assert(context==0&&!renderDepth&&value<=99);renderDepth++;displayCalls++;lastNumber=value;
  if(injectRender){injectRender=0;pulse();}
  renderDepth--;
 }
@@ -155,14 +155,53 @@ int main(int argc,char** argv){
  if(!strcmp(argv[1],"readfail"))failReadOffset=0;
  if(!strcmp(argv[1],"countreadfail"))failReadOffset=1;
  if(!strcmp(argv[1],"blank")){memory[0]=memory[1]=0xff;}
+ if(!strncmp(argv[1],"unassigned",10))memory[0]=0;
+ if(!strcmp(argv[1],"bootblank")||!strcmp(argv[1],"bootblankfail")){
+  uint8_t id=99;memory[0]=0xff;
+  if(!strcmp(argv[1],"bootblankfail")){
+   failReadback=1;assert(!Boot_ReadId(&id)&&id==99&&memory[0]==0);failReadback=0;
+  }
+  assert(Boot_ReadId(&id)&&id==0&&memory[0]==0);return 0;
+ }
  if(!strcmp(argv[1],"invalidid")){memory[0]=100;assert(!LoadSettings()&&memory[0]==100&&!settingWrites);return 0;}
  Feeder_Init();assert(feedReady&&feedState==FEED_IDLE&&!starts);idle();
  assert(strstr(response,"v" FIRMWARE_VERSION " " FEEDER_VARIANT));injectStartup=0;
  
 if(!strcmp(argv[1],"readfail")||!strcmp(argv[1],"countreadfail")){
  assert(currentAddr==7&&memory[0]==7&&currentCount==3&&!settingWrites);
-}else if(!strcmp(argv[1],"blank")){
- assert(currentAddr==0&&currentCount==1&&memory[0]==0&&memory[1]==1);
+}else if(!strcmp(argv[1],"blank")||!strncmp(argv[1],"unassigned",10)){
+ assert(currentAddr==0&&memory[0]==0);
+ if(!strcmp(argv[1],"blank"))assert(currentCount==1&&memory[1]==1);
+ int writes=settingWrites;
+ // Even with a closed tension switch, neither variant may run either motor.
+ testA.levels&=~PEEL_SWITCH_PIN;
+ delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(!peelRunning&&!Motor_Reserve(1));idle();
+ trigger();press(BUTTON_PIN,10);command(0,1);assert(!starts);idle();
+ framedAt(0,"FEED 12345678 00000001 00000001");assert(strstr(response,"B00 FAULT")&&!starts);
+ uiLastAction=now;uiBlink=0;RefreshDisplay();assert(lastNumber==0);
+ delay_ms(UI_BLINK_MS);KeyScan();assert(uiBlink&&displayDirty);
+ int before=displayCalls;RefreshDisplay();assert(displayCalls==before+2);
+ delay_ms(UI_BLINK_MS);KeyScan();assert(!uiBlink&&displayDirty);
+ before=displayCalls;RefreshDisplay();assert(displayCalls==before+1&&lastNumber==0);
+ assert(settingWrites==writes&&!peelRunning&&!starts);idle();
+ if(!strcmp(argv[1],"unassignedboot")){
+  press(BUTTON_PIN,2*BUTTON_HOLD_MS+50);assert(resetCalls==1&&memory[0]==0);
+ }else if(!strcmp(argv[1],"unassignedremote")){
+  press(BUTTON_PIN,BUTTON_HOLD_MS+50);assert(mode==MODE_ASSIGN);
+  framedAt(0,"SETID 12345678 11111111 22222222 33333333 00000000");
+  assert(strstr(response,"ERROR ID")&&currentAddr==0&&mode==MODE_ASSIGN);
+  framedAt(0,"SETID 12345678 11111111 22222222 33333333 00000063");
+  assert(strstr(response,"B00 ID 12345678 00000063")&&currentAddr==99&&memory[0]==99);
+ }else{
+  press(BUTTON_PIN,3*BUTTON_HOLD_MS+50);assert(mode==MODE_ADDR&&editValue==1);
+  delay_ms(UI_TIMEOUT_MS);KeyScan();assert(currentAddr==0&&mode==MODE_NORMAL&&!starts);
+  press(BUTTON_PIN,3*BUTTON_HOLD_MS+50);press(BUTTON_PIN,BUTTON_HOLD_MS+50);
+  assert(currentAddr==1&&memory[0]==1&&mode==MODE_NORMAL);
+ }
+ if(currentAddr){
+  uiBlink=1;int before=displayCalls;RefreshDisplay();assert(displayCalls==before+1&&lastNumber==currentAddr);
+  assert(Motor_Reserve(1));Motor_Start();assert(starts==1);pulse();assert(feedState==FEED_IDLE);
+ }
 }else if(!strcmp(argv[1],"savefail")||!strcmp(argv[1],"readbackfail")){
  mode=MODE_ADDR;editValue=8;buttonReady=1;
  if(!strcmp(argv[1],"readbackfail"))failReadback=1;else failEEPROM=1;
@@ -199,7 +238,7 @@ if(!strcmp(argv[1],"readfail")||!strcmp(argv[1],"countreadfail")){
  press(BUTTON_PIN,BUTTON_HOLD_MS+50);assert(mode==MODE_NORMAL&&currentCount==COUNT_MIN&&memory[1]==COUNT_MIN);
  // Menu selections wrap; editing expires without any EEPROM write.
  press(BUTTON_PIN,7*BUTTON_HOLD_MS+50);assert(mode==MODE_ADDR);
- writes=settingWrites;editValue=99;press(BUTTON_PIN,10);assert(editValue==0);
+ writes=settingWrites;editValue=99;press(BUTTON_PIN,10);assert(editValue==1);
  delay_ms(UI_TIMEOUT_MS);KeyScan();assert(mode==MODE_NORMAL&&currentAddr==8&&settingWrites==writes);
  // While held in an editor, timeout cannot return to normal and feed on release.
  press(BUTTON_PIN,3*BUTTON_HOLD_MS+50);assert(mode==MODE_ADDR);
@@ -245,7 +284,7 @@ if(!strcmp(argv[1],"readfail")||!strcmp(argv[1],"countreadfail")){
  framed("SETID 12345678 11111112 22222222 33333333 00000008");assert(!response[0]&&currentAddr==7);
  const char* bad[]={"SETID 12345678 11111111 22222222 33333333", "SETID 12345678 11111111 22222222 33333333 00000008x", "SETID 1234 11111111 22222222 33333333 00000008"};
  for(unsigned i=0;i<sizeof(bad)/sizeof(*bad);i++){framed(bad[i]);assert(!response[0]&&currentAddr==7);}
- framed("SETID 12345678 11111111 22222222 33333333 00000064");assert(strstr(response,"ERROR NOTARMED")&&currentAddr==7);
+ framed("SETID 12345678 11111111 22222222 33333333 00000064");assert(strstr(response,"ERROR ID")&&currentAddr==7);
  framed("SETID 12345678 11111111 22222222 33333333 00000008");
  assert(strstr(response,"B07 ID 12345678 00000008")&&currentAddr==8&&memory[0]==8&&mode==MODE_NORMAL);
  framed("SETID 12345678 11111111 22222222 33333333 00000009");assert(!response[0]&&currentAddr==8);
@@ -430,7 +469,7 @@ int main(void){
  input("N7 F2");byte(0,0);input("garbage\\n");empty();input("N7 F4\\n");expect(7,4);
  input("N7 F1");byte('9',USART_SR_FE);input("\\n");empty();input("N7 F5\\n");expect(7,5);
  input("N7 F1");testUart.SR=USART_SR_ORE;testUart.DR=0;USART1_IRQHandler();input("\\n");empty();
- const char* bad[]={"N7F2\\n","N+7 F2\\n","N7 F-1\\n","N100 F2\\n","N7 F100\\n","N7 F2x\\n","N7 F1\\r9\\n","N F2\\n","N7 F\\n","\\n","N7 F99999999999999999999999\\n"};
+ const char* bad[]={"N0 F1\\n","N00 F0\\n","N7F2\\n","N+7 F2\\n","N7 F-1\\n","N100 F2\\n","N7 F100\\n","N7 F2x\\n","N7 F1\\r9\\n","N F2\\n","N7 F\\n","\\n","N7 F99999999999999999999999\\n"};
  for(unsigned i=0;i<sizeof(bad)/sizeof(*bad);i++){input(bad[i]);empty();}
  input(" \\tN07 \\tF02 \\t\\r\\n");expect(7,2);
  // Full ring preserves its ten committed six-byte commands, dropping only
@@ -441,8 +480,8 @@ int main(void){
  input("N7 F2\\nN8 F3\\n");char tiny[3];assert(!RS485_ReadLine(tiny,sizeof(tiny)));expect(8,3);
  // Thousands of wraps with interleaved partial delivery; no premature parse.
  for(int i=0;i<10000;i++){
-  char line[24];int n=snprintf(line,sizeof(line),"N%d F%d\\n",i%100,(i*7)%100);
-  for(int j=0;j<n-1;j++)byte((uint8_t)line[j],0);empty();byte('\\n',0);expect(i%100,(i*7)%100);
+  char line[24];int n=snprintf(line,sizeof(line),"N%d F%d\\n",1+i%99,(i*7)%100);
+  for(int j=0;j<n-1;j++)byte((uint8_t)line[j],0);empty();byte('\\n',0);expect(1+i%99,(i*7)%100);
  }
  empty();puts("Actual UART ISR/parser: queue order, framing, overflow, UART errors, bounds and ring wraps passed");
 }
@@ -453,6 +492,6 @@ with tempfile.TemporaryDirectory(prefix='v485-fix-check-') as d:
   for module in ['app','rx']:
    exe=q/(module+str(wide));subprocess.run(['gcc','-std=c11','-Wall','-Wextra','-Wno-misleading-indentation','-Werror','-fsanitize=undefined,address','-g','-I',d,'-I',str(p/'src'),'-DFEEDER_WIDE='+str(wide),str(q/(module+'.c')),'-o',str(exe)],check=True)
    if module=='app':
-    for case in ['race','startup','zero','early','display','timeout','wrap','feedback','readfail','countreadfail','blank','invalidid','savefail','readbackfail','buttons','heldstartup','menuboot','menutiming','menubootfail','menufault','assignheld','menubusy','assign','assignexpired','assignfail','peel','peelwrap','peeltimeout','savesuccess','slowack','framed','badframed','completion','completionearly','completionfault','completioneeprom','bootidle','bootbusy','bootreserved','bootwrong','bootcrc','bootfault','booteeprom']:subprocess.run([str(exe),case],check=True)
+    for case in ['race','startup','zero','early','display','timeout','wrap','feedback','readfail','countreadfail','blank','unassigned','unassignedremote','unassignedboot','bootblank','bootblankfail','invalidid','savefail','readbackfail','buttons','heldstartup','menuboot','menutiming','menubootfail','menufault','assignheld','menubusy','assign','assignexpired','assignfail','peel','peelwrap','peeltimeout','savesuccess','slowack','framed','badframed','completion','completionearly','completionfault','completioneeprom','bootidle','bootbusy','bootreserved','bootwrong','bootcrc','bootfault','booteeprom']:subprocess.run([str(exe),case],check=True)
    else:subprocess.run([str(exe)],check=True)
 print('All actual-source checks passed. Temporary files only; no project tests folder created.')

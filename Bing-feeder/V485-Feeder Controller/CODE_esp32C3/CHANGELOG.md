@@ -9,7 +9,7 @@ All work so far belongs to the initial development version. No physical controll
 ### Current implementation
 
 - PlatformIO C++ project using Arduino, pinned ESP32 packages, native USB console and the vendor RS485 wiring. Settings/version live in config.h; firmware logic lives in main.cpp.
-- Bounded USB parsing accepts M600 N<id> F<count> or N<id> F<count>. Reject malformed, incomplete and overlong input. LED feedback and UART response waits remain bounded; transmitter direction is released after the final stop bit.
+- Bounded USB parsing accepts M600 N<id> F<count> or N<id> F<count>. Operating IDs must be 1–99; reject N0 without bus traffic, preserving F0 as the saved-count selector. Reject malformed, incomplete and overlong input. LED feedback and UART response waits remain bounded; transmitter direction is released after the final stop bit.
 - Send each addressed, CRC-protected FEED once with a startup session and request sequence, then use read-only STATUS polls to obtain its retained result. Wrong feeder/session/sequence, damaged frames and bare legacy ACKs cannot confirm the command.
 - Return USB ok N<id> F<count> only after matching DONE confirms the requested index count and index-motor idle output. Acceptance/running replies never produce success. Busy, fault, unknown outcome and completion timeout return error: without ok. Never automatically resend movement.
 - Use the matching local 0.1.0 feeder development build implementing FEED/STATUS. F counts sensor events; F0 selects the feeder's saved default. The default total completion deadline is 12 seconds around the feeder's 10-second motor guard.

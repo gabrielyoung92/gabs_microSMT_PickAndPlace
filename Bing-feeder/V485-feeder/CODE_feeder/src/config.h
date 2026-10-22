@@ -123,9 +123,10 @@
 #define UI_BLINK_MS 400U
 // Additional PA4 manual-feed inhibition, counted down by SysTick.
 #define MANUAL_TRIGGER_MUTE_MS 300U
-// Address/command F range is 0..99; F0 selects the stored positive count.
+// Operating IDs are 1..99. ID 0 means unassigned and cannot drive either motor.
+// The commissioning/update transport may still address 0. F0 uses saved count.
 // Default-count adjustment and EEPROM loading require COUNT_MIN..VALUE_MAX.
-#define VALUE_MIN 0
+#define ADDRESS_MIN 1
 #define VALUE_MAX 99
 #define COUNT_MIN 1U
 // Used only if the EEPROM byte is missing/invalid; valid saved values win.

@@ -41,9 +41,16 @@ def check_unused(port, address, nonce, timeout):
             raise UpdateError(f"ID {address} replied, or bus noise was received; choose another ID/check the bus")
 
 
+def new_id_value(value):
+    result = address_value(value)
+    if result == 0:
+        raise argparse.ArgumentTypeError("New feeder ID must be 1..99; 0 is unassigned")
+    return result
+
+
 def assign(port, address, new_id, timeout=1.0):
-    if not 0 <= address <= 99 or not 0 <= new_id <= 99:
-        raise ValueError("IDs must be 0..99")
+    if not 0 <= address <= 99 or not 1 <= new_id <= 99:
+        raise ValueError("Current address must be 0..99; new feeder ID must be 1..99")
     port.reset_input_buffer()
     nonce = secrets.randbits(32)
     link = Link(port, address)
@@ -115,11 +122,21 @@ def self_check():
                 if not self.lost:
                     self.rx.append(packet(address, f"ID {values[0]:08X} {self.address:08X}"))
 
-    for new_id in (0, 7, 99):
+    for new_id in (1, 7, 99):
         for lost in (False, True):
             port = Port(lost=lost)
             assert assign(port, 7, new_id, timeout=0.001) == port.uid
             assert port.address == new_id and port.saves == 1
+    port = Port()
+    try:
+        assign(port, 7, 0)
+    except ValueError:
+        assert not port.writes and not port.saves
+    else:
+        raise AssertionError("ID 0 accepted")
+    port = Port()
+    port.address = 0
+    assert assign(port, 0, 1, timeout=0.001) == port.uid and port.address == 1
     for options in ({"occupied": "app"}, {"occupied": "loader"}, {"noise": True}, {"armed": 0}, {"fail": True}):
         port = Port(**options)
         try:
@@ -135,7 +152,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", help="Controller/adapter serial port, e.g. COM5")
     parser.add_argument("--address", type=address_value, help="Current feeder ID")
-    parser.add_argument("--new-id", type=address_value, help="Requested ID, 0..99")
+    parser.add_argument("--new-id", type=new_id_value, help="Requested operating ID, 1..99")
     parser.add_argument("--self-check", action="store_true", help="Check offline; no serial port opened")
     args = parser.parse_args()
     if args.self_check:

@@ -150,6 +150,9 @@ int main(){
         assert(feedFrames()==1 && transmissions[1]==frame("B07 FEED 00000001 00000001 00000004"));
         assert(statusRequests>1 && clockMs-feedStarted>=completionDelay && Serial.tx.find("ok N7 F4\n")!=std::string::npos);
     }
+    for(const char* zero:{"N0 F1\n","N00 F0\n","M600 N0 F4\n"}){
+        reset();usb(zero);assert(transmissions.empty() && Serial.tx.find("error:")!=std::string::npos);
+    }
     const std::string good=packets[0].first;
     // CRLF survives the bridge; CRC is still computed without CR/LF.
     reset(); std::string crlf=good.substr(0,good.size()-1)+"\r\n";
