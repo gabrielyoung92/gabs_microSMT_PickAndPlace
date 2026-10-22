@@ -346,7 +346,7 @@ def main():
         # PlatformIO's Python already has pyserial. Plain Python: pip install pyserial.
         import serial
         completed = []
-        with serial.Serial(args.port, 9600, timeout=0.15, write_timeout=2) as port:
+        with serial.Serial(args.port, 115200, timeout=0.15, write_timeout=2) as port:
             # Discard old adapter/startup bytes once, before starting. Do not
             # flush receive data between chunks: a valid ACK may already be queued.
             port.reset_input_buffer()

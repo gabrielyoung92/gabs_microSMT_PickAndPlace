@@ -49,7 +49,7 @@ void RS485_SendString(const char* str) {
     RS485_SetTransmit(0);
 }
 
-// Configure 9600/default 8N1 with RXNE interrupts; reception bypasses HAL
+// Configure 115200/default 8N1 with RXNE interrupts; reception bypasses HAL
 // callbacks because this module owns the byte ring and USART1 IRQ directly.
 void RS485_Init(void) {
     __HAL_RCC_USART1_CLK_ENABLE();

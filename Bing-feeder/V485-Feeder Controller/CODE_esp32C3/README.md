@@ -23,7 +23,7 @@ The [supplied photo](esp32c3%20%20mini.bmp) shows an ESP32-C3 Super Mini. The bu
 | Connection | Setting |
 | --- | --- |
 | USB console | Native USB CDC, 115200 baud, LF |
-| RS485 UART0 RX / TX | GPIO20 / GPIO21, 9600 baud, 8N1 |
+| RS485 UART0 RX / TX | GPIO20 / GPIO21, 115200 baud, 8N1 |
 | RS485 direction | GPIO9, also BOOT |
 | ACK / run indicators | GPIO7 / GPIO8 |
 
@@ -91,7 +91,7 @@ Update packets can use 127 bytes before the newline. Invalid packets are dropped
 
 After an update, close the uploader and wait **10 seconds** before sending feed commands. `UPDATE_IDLE_TIMEOUT_MS` sets this gap. This blocks commands from the controller, not manual or external triggers on other feeders.
 
-The uploader opens its port at 9600 baud. That host setting does not change the native USB transport or the feeder UART, which stays at `RS485_BAUD` (9600). You can also use a direct auto-direction USB-RS485 adapter.
+The uploader opens its port at 115200 baud. That host setting does not change the native USB transport or the feeder UART, which stays at `RS485_BAUD` (115200). You can also use a direct auto-direction USB-RS485 adapter.
 
 ## Change a feeder ID
 

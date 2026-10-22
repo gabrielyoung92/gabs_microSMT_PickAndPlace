@@ -76,7 +76,7 @@
 #define RS485_RX_PIN GPIO_PIN_10
 #define RS485_DIR_PORT GPIOA
 #define RS485_DIR_PIN GPIO_PIN_1
-#define RS485_BAUD 9600U
+#define RS485_BAUD 115200U
 // Bus-driver enable/disable margins are microseconds, unlike the ms settings.
 #define RS485_DIRECTION_SETTLE_US 50U
 // Let the host release TX direction before sending Busy/OK back to it.

@@ -162,7 +162,7 @@ def main():
         parser.error("--port, --address and --new-id are required")
     try:
         import serial
-        with serial.Serial(args.port, 9600, timeout=0.1, write_timeout=2) as port:
+        with serial.Serial(args.port, 115200, timeout=0.1, write_timeout=2) as port:
             time.sleep(2)  # Allow the USB controller to restart after opening.
             uid = assign(port, args.address, args.new_id)
         print(f"Saved ID {args.new_id:02d}; hardware UID {''.join(f'{n:08X}' for n in uid)} verified")

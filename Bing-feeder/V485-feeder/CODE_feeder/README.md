@@ -40,7 +40,7 @@ Install the **8 KB bootloader over ST-Link first**, then upload the application 
 | Peel tension switch | PA2, internal pull-up; isolated NC contact to GND |
 | Index counter | PA3, rising edge |
 | External feed trigger | PB6, rising edge |
-| RS485 | PA9 TX, PA10 RX, PA1 direction; 9600 baud, 8N1 |
+| RS485 | PA9 TX, PA10 RX, PA1 direction; 115200 baud, 8N1 |
 | 24C02 EEPROM | PB15 SCL, PB14 SDA; ID at byte 0, count at byte 1 |
 | CH455 display | PB12 clock, PB13 data |
 
@@ -122,7 +122,7 @@ New settings take effect only after an EEPROM write passes readback. If it fails
 
 At startup, failed reads are retried with both motors stopped and EE displayed. They never become ID 0 or overwrite settings. Only a successfully read blank ID (`FF`) is written back as `0`. Both `0` and that normalised blank state flash **00** continuously in normal operation. Neither motor can run, and manual, external and serial advances are rejected until a valid ID **1–99** has been saved. The same unassigned indication flashes while waiting in the bootloader; upload progress takes over during a transfer. Menu `03` or locally armed menu `01` can program an ID, and updates can use reserved transport address `0`; it is never an operating feeder ID. An invalid saved ID also blocks operation until corrected. An invalid default count becomes the positive default after a checked read and verified write.
 
-Serial monitoring needs an RS485 adapter at 9600 baud with LF endings. ST-Link alone does not provide a serial console.
+Serial monitoring needs an RS485 adapter at 115200 baud with LF endings. ST-Link alone does not provide a serial console.
 
 ## Motor timeout and updates
 

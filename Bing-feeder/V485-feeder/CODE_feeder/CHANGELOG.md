@@ -8,6 +8,8 @@ All work so far belongs to the initial development version. No physical feeder o
 
 ### Current implementation
 
+- Use 115200 baud for the RS485 bus, including both feeder applications, bootloaders, controller UART, uploader and ID-assignment tool. Keep reply delays, polling intervals and deadlines unchanged.
+
 - Operating IDs are 1–99. EEPROM ID FF is saved as unassigned 0, which flashes 00 and blocks both motors and manual/external/serial feeds. Local/remote assignment cannot save 0; reserved transport address 0 remains available for programming and update recovery. The controller rejects N0, while F0 still selects the saved feed count.
 
 - PA2 is now a pull-up input for an isolated NC peel-tension switch. PA4 is the only control button: tap advances; hold/release selects remote ID, update, local ID or default-count editing. Edits save only on a two-second hold/release, or cancel after 20 seconds. Menus stop both motors and reject feeds.

@@ -44,7 +44,7 @@ python tools/rs485_upload.py --port COM5 --address 7 --firmware .pio/build/v485_
 python tools/rs485_upload.py --port COM5 --addresses 7,8,9 --firmware .pio/build/v485_8mm/firmware.bin
 ```
 
-The RS485 link is **9600 baud, 8N1, LF**. The uploader works unchanged through the ESP32-C3 controller or a direct adapter. Native controller USB is independent of the uploader's 9600-baud host setting. The uploader retries initial HELLO discovery before checking for a running application, checks the image's width and memory layout, requests download mode and verifies the upload. An active feed rejects the request. Wrong-width images are rejected before erasure.
+The RS485 link is **115200 baud, 8N1, LF** for both application and bootloader. Use matching 115200 builds on every connected node; an older 9600-baud loader needs replacement over SWD before it can use these tools. The uploader works unchanged through the ESP32-C3 controller or a direct adapter. Native controller USB is independent of the uploader's 115200-baud host setting. The uploader retries initial HELLO discovery before checking for a running application, checks the image's width and memory layout, requests download mode and verifies the upload. An active feed rejects the request. Wrong-width images are rejected before erasure.
 
 With the ESP32-C3 controller, feed commands remain blocked until update traffic has been idle for 10 seconds. Close the uploader and wait for that interval before reconnecting OpenPnP. The controller handles packet forwarding and bus direction only; the uploader retains update retries and verification.
 

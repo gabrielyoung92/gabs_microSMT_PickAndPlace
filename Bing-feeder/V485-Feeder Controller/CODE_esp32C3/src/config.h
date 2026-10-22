@@ -15,7 +15,7 @@ constexpr uint8_t RS485_TX_PIN = 21;
 
 // UART0 carries RS485; the command console uses native USB via platformio.ini.
 constexpr uint8_t RS485_UART = 0;
-constexpr uint32_t RS485_BAUD = 9600;
+constexpr uint32_t RS485_BAUD = 115200;
 constexpr uint32_t USB_BAUD = 115200;  // Match monitor_speed in platformio.ini.
 
 // LED intervals in milliseconds per toggle/phase.
