@@ -13,6 +13,14 @@ Choose V3 or V485 below. Each has its own models, board files, firmware and asse
 | [STM32 build guide](STM32-BUILD.txt) | Combined V485 HAL/PlatformIO project and remaining legacy SPL build notes |
 | [License](LICENSE) | Supplied upstream license |
 
+Latest [upstream comparison and photo check](UPSTREAM-2026-10-25.md): 25 October 2026.
+
+## Vendor reference photo
+
+![MicroSMT assembled Bing feeders](photos/Bing_feeders_reference.jpg)
+
+Original MicroSMT photo from `Doc/微信图片_20250123114300.jpg`.
+
 ## About Bing feeders
 
 MicroSMT’s Bing feeder uses a sprocket and position sensor to advance component tape. It was designed for the PNPv3 and can be triggered by a high-level pulse through OpenPnP’s ReferenceAutoFeeder. Using it on another machine still needs the right wiring and control setup.

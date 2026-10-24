@@ -6,7 +6,7 @@
 
 Parts from the 21 October 2026 V485 download. The gears, worm and 16/24 mm trigger cover shared by the wider feeders are in the [shared folder](../3D_parts_shared/README.md).
 
-The one-position magnetic slot was added separately on 22 October 2026 from `V485-16mm feeder slot(Magnetic)-1bit.STEP`. The STEP contents are unchanged; its STL and previews were generated locally. See the [remaining missing parts](../../../V485-MISSING-PARTS.md).
+The one-position magnetic slot was added separately on 22 October 2026 from `V485-16mm feeder slot(Magnetic)-1bit.STEP`. The latest vendor ZIP now includes the same STEP bytes, verified on 25 October 2026; its STL and previews were generated locally. See the [upstream comparison](../../UPSTREAM-2026-10-25.md). See the [remaining missing parts](../../../V485-MISSING-PARTS.md).
 
 Click a picture to see it full size. **More views** shows the part from above and below.
 
