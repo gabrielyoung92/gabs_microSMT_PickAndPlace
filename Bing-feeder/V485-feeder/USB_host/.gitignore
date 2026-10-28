@@ -1,0 +1,4 @@
+# Operator inventory and local runtime logs are private working data.
+*.sqlite3
+*.sqlite3-*
+*.log

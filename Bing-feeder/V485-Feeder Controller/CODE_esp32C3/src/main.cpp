@@ -211,7 +211,7 @@ bool validUpdatePacket(const char* line, bool request) {
   }
   if (packetCrc32(line, length - 9) != expected) return false;
   if (!request) return true;  // Uploader checks reply ID, label and DATA offset.
-  const char* commands[] = {"INFO", "BOOT", "HELLO", "BEGIN", "DATA", "END", "IDENT", "SETID"};
+  const char* commands[] = {"INFO", "BOOT", "HELLO", "BEGIN", "DATA", "END", "IDENT", "SETID", "TYPE", "SETTYPE", "LOCATE", "CONFIG", "SETCONFIG", "SETCOUNT", "STOP"};
   size_t bodyLength = length - 13;
   for (const char* command : commands) {
     size_t size = strlen(command);

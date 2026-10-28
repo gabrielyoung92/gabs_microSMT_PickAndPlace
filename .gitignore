@@ -17,3 +17,14 @@ fp-info-cache
 
 # Visual Studio workspace caches and local editor state.
 .vs/
+
+# Local service configuration and inventory databases are never publishable.
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*

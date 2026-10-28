@@ -87,7 +87,7 @@ def inspect_image(data):
     magic, variant, base = struct.unpack_from("<8sII", data, TAG_OFFSET)
     # Variant 1 = 8 mm; 2 = shared 12/16/24 mm firmware. The fixed base rejects
     # unrelocated images even if their file size would otherwise fit.
-    if magic != b"V485APP\0" or variant not in (1, 2) or base != APP_START:
+    if magic != b"V485APP\0" or variant != 3 or base != APP_START:
         raise ValueError("Not a V485 bootloader-compatible application (tag/variant/base)")
     # F103C8 has 20 KB RAM. The stack may start at its upper boundary because
     # it grows down; require the normal eight-byte stack alignment.
@@ -133,7 +133,9 @@ class Link:
                 # Read one byte beyond our 128-byte reply limit so an oversized
                 # line is rejected. Ignore invalid/partial packets until timeout.
                 response = decode_packet(self.port.read_until(b"\n", 129), self.address)
-                if response is None:
+                # IDENT uses the same request/reply label; exclude exact local
+                # adapter echoes before testing labels or parsing reply fields.
+                if response is None or response == body:
                     continue
                 if response.startswith("ERROR "):
                     raise UpdateError(f"ID {self.address}: {response}")
@@ -188,7 +190,7 @@ def enter_loader(link, variant):
         raise UpdateError(f"ID {link.address}: loader/image variant or memory layout mismatch")
 
 
-def upload(link, data):
+def upload(link, data, progress=None):
     """Upload one application to link's ID and confirm its final image CRC.
 
     BEGIN/DATA use stop-and-wait retries. The loader validates the full image
@@ -196,7 +198,12 @@ def upload(link, data):
     """
     # Check here too so callers outside main() cannot bypass image validation.
     variant, size, checksum = inspect_image(data)
+    def report(stage, sent=0):
+        if progress is not None:
+            progress(stage, sent, size)
+    report("connecting")
     enter_loader(link, variant)
+    report("erasing")
     manifest = f"BEGIN {variant:08X} {size:08X} {checksum:08X}"
     # BEGIN is the destructive step: the loader marks the app invalid before
     # erasing its pages. Allow extra time for EEPROM writes and flash erasure.
@@ -208,6 +215,7 @@ def upload(link, data):
     # image whose final chunk may be short/odd-sized.
     if offset > size or (offset != size and offset % CHUNK):
         raise UpdateError(f"ID {link.address}: invalid resume offset {offset}")
+    report("transferring", offset)
     shown = -1
     while offset < size:
         end = min(offset + CHUNK, size)
@@ -216,11 +224,13 @@ def upload(link, data):
         link.request(f"DATA {offset:08X} {data[offset:end].hex().upper()}", {"OK"},
                      expected=f"OK {end:08X}")
         offset = end
+        report("transferring", offset)
         percent = offset * 100 // size
         # Print approximately every ten percent, not one line per 32-byte chunk.
         if percent // 10 != shown:
             shown = percent // 10
             print(f"ID {link.address}: {percent}%", flush=True)
+    report("verifying", size)
     try:
         # END is sent once. After commit the target jumps into its application;
         # retries go to INFO instead of blindly assuming the ACK was received.
@@ -234,6 +244,7 @@ def upload(link, data):
         if app != (variant, size, checksum):
             raise UpdateError(f"ID {link.address}: upload completion could not be confirmed")
     print(f"ID {link.address}: verified {size} bytes, CRC32 {checksum:08X}", flush=True)
+    report("complete", size)
 
 
 def address_value(value):
@@ -263,12 +274,12 @@ def self_check():
     # Synthetic header only: enough to exercise validation, not runnable code.
     image = bytearray(b"\xFF" * 1024)
     struct.pack_into("<II", image, 0, 0x20005000, APP_START + 0x211)
-    struct.pack_into("<8sII", image, TAG_OFFSET, b"V485APP\0", 1, APP_START)
-    assert inspect_image(image) == (1, 1024, crc32(image))
+    struct.pack_into("<8sII", image, TAG_OFFSET, b"V485APP\0", 3, APP_START)
+    assert inspect_image(image) == (3, 1024, crc32(image))
     # Mutate stack range, reset range/Thumb bit, variant and linked base in turn.
     # Each must fail even though the remaining header still looks valid.
     for offset, value in ((0, 0x20005008), (4, APP_START - 1), (4, APP_START + 0x210),
-                          (TAG_OFFSET + 8, 3), (TAG_OFFSET + 12, 0x08000000)):
+                          (TAG_OFFSET + 8, 1), (TAG_OFFSET + 12, 0x08000000)):
         bad = bytearray(image)
         struct.pack_into("<I", bad, offset, value)
         try:
@@ -286,7 +297,7 @@ def self_check():
             self.requests.append(decode_packet(data, 7))
             assert self.requests[-1] == "HELLO"
             if len(self.requests) > 1:
-                self.reply = packet(7, f"READY 00000001 {APP_START:08X} {APP_MAX:08X}")
+                self.reply = packet(7, f"READY 00000003 {APP_START:08X} {APP_MAX:08X}")
 
         def flush(self):
             pass
@@ -301,7 +312,7 @@ def self_check():
             return super().request(body, accepted, **kwargs)
 
     port = LostHelloPort()
-    enter_loader(FastLink(port, 7), 1)
+    enter_loader(FastLink(port, 7), 3)
     assert port.requests == ['HELLO', 'HELLO']
     print("Offline destination/CRC/image checks passed")
 
@@ -330,7 +341,7 @@ def main():
     try:
         data = args.firmware.read_bytes()
         variant, size, checksum = inspect_image(data)
-        print(f"Image: {'8mm' if variant == 1 else '12/16/24mm'}, {size} bytes, CRC32 {checksum:08X}")
+        print(f"Image: {'universal'}, {size} bytes, CRC32 {checksum:08X}")
         if args.inspect:
             return 0
         # Preserve the requested batch order. Validate the entire list before

@@ -16,19 +16,25 @@ uploader = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(uploader)
 
 # Packets come from the actual uploader, not a second copy of its wire format.
-bodies = ['HELLO', 'INFO', 'BOOT', 'BEGIN 00000001 00000400 12345678',
+bodies = ['HELLO', 'INFO', 'BOOT', 'BEGIN 00000003 00000400 12345678',
           'DATA 00000000 ' + bytes(range(uploader.CHUNK)).hex().upper(), 'END 12345678',
-          'IDENT 12345678', 'SETID 12345678 11111111 22222222 33333333 00000008']
-replies = ['READY 00000001 08002000 0000E000', 'APP 00000001 00000400 12345678',
+          'IDENT 12345678', 'SETID 12345678 11111111 22222222 33333333 00000008',
+          'TYPE 12345678', 'SETTYPE 12345678 11111111 22222222 33333333 00000008', 'LOCATE 12345678', 'CONFIG 12345678', 'SETCOUNT 12345678 11111111 22222222 33333333 00000002',
+          'SETCONFIG 12345678 11111111 22222222 33333333 00000001 00000000 00000000', 'STOP 12345678']
+replies = ['READY 00000003 08002000 0000E000', 'APP 00000003 00000400 12345678',
            'RESET', 'OK 00000000', 'OK 00000020', 'DONE 12345678',
-           'IDENT 12345678 11111111 22222222 33333333 00000001', 'ID 12345678 00000008']
+           'IDENT 12345678 11111111 22222222 33333333 00000001', 'ID 12345678 00000008', 'TYPE 12345678 00000008 00000001 000007D0',
+           'TYPESET 12345678 00000008', 'LOCATING 12345678',
+           'CONFIG 12345678 00000001 00000000 00000000', 'COUNTSET 12345678 00000002',
+           'CONFIGSET 12345678 00000001 00000000 00000000', 'STOPPED 12345678']
+assert len(bodies) == len(replies)
 packets = [(uploader.packet(address, body).decode(), uploader.packet(address, reply).decode())
            for address in (0, 7, 99) for body, reply in zip(bodies, replies)]
 vectors = ',\n'.join('{' + json.dumps(req) + ', ' + json.dumps(reply) + '}' for req, reply in packets)
 invalid_requests = ',\n'.join(json.dumps(uploader.packet(7, body).decode())
                               for body in ('N7 F4', 'HELLOX', 'APP 00000001', 'HELLO\rN7 F4',
                                            'FEED 00000001 00000001 00000004',
-                                           'STATUS 00000001 00000001'))
+                                           'STATUSX 00000001 00000001', 'JOGX 00000001 00000001 00000000 00000001'))
 
 arduino = r'''
 #pragma once

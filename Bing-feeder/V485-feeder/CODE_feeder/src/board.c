@@ -81,7 +81,7 @@ void Board_MotorIdle(void) {
 }
 
 // Establish output levels before setting the clock/UART. Existing inputs retain
-// their board bias; the added PA2 tension input explicitly uses an internal pull-up.
+// their board bias; the PB6 tension input also uses an internal pull-up.
 static void GPIO_Config(void) {
     __HAL_RCC_GPIOA_CLK_ENABLE();
     __HAL_RCC_GPIOB_CLK_ENABLE();
@@ -99,8 +99,8 @@ static void GPIO_Config(void) {
     LED_OFF();
     Board_ConfigurePin(LED_PORT, LED_PIN, GPIO_MODE_OUTPUT_PP);
     Board_ConfigurePin(COUNT_PORT, COUNT_PIN, GPIO_MODE_INPUT);
-    Board_ConfigurePin(TRIGGER_PORT, TRIGGER_PIN, GPIO_MODE_INPUT);
     Board_ConfigurePin(BUTTON_PORT, BUTTON_PIN, GPIO_MODE_INPUT);
+    Board_ConfigurePin(MENU_BUTTON_PORT, MENU_BUTTON_PIN, GPIO_MODE_INPUT);
     GPIO_InitTypeDef tension = {0};
     tension.Pin = PEEL_SWITCH_PIN;
     tension.Mode = GPIO_MODE_INPUT;
@@ -108,15 +108,8 @@ static void GPIO_Config(void) {
     HAL_GPIO_Init(PEEL_SWITCH_PORT, &tension);
 }
 
-// Clear stale edges before enabling the two EXTI vectors. UART/SysTick have
-// higher priority than these feed/count handlers.
+// Clear stale count edges before enabling EXTI3. UART/SysTick have higher priority.
 void Board_EnableFeedInterrupts(void) {
-    // HAL configures AFIO port routing and rising-edge EXTI selection together.
-    Board_ConfigurePin(TRIGGER_PORT, TRIGGER_PIN, GPIO_MODE_IT_RISING);
-    __HAL_GPIO_EXTI_CLEAR_IT(TRIGGER_PIN);
-    HAL_NVIC_SetPriority(EXTI9_5_IRQn, 1, 1);
-    HAL_NVIC_EnableIRQ(EXTI9_5_IRQn);
-
     Board_ConfigurePin(COUNT_PORT, COUNT_PIN, GPIO_MODE_IT_RISING);
     __HAL_GPIO_EXTI_CLEAR_IT(COUNT_PIN);
     HAL_NVIC_SetPriority(EXTI3_IRQn, 1, 1);

@@ -37,6 +37,7 @@ Changes made to the local collections include:
 - Grouping images in `photos/` directories and adding linked README galleries and navigation.
 - Renaming Arduino text sources to `.ino`, grouping sketches correctly, and placing STM32 C variants in separate source folders with build notes. Renaming did not change the firmware source contents.
 - Porting the ESP32-C3 controller to PlatformIO C++ with `main.cpp` and `config.h`, including sensor-completion M600 acknowledgements and USB-to-RS485 forwarding for the local addressed feeder updater. See its [changelog](Bing-feeder/V485-Feeder%20Controller/CODE_esp32C3/CHANGELOG.md).
+- Adding a direct USB–RS485 PC host with local OpenPnP TCP commands, informational stock estimates, diagnostics and maintenance using the maintained feeder protocol, plus an optional Smoothieware USB/TCP relay and web manual motion/output controls. Hardware validation remains outstanding.
 - Combining V485 feeder variants into shared C/H modules, with separate bootloader/application builds and an addressed RS485 updater. See its [changelog](Bing-feeder/V485-feeder/CODE_feeder/CHANGELOG.md) and [update guide](Bing-feeder/V485-feeder/CODE_feeder/BOOTLOADER.md). Physical hardware validation remains outstanding.
 - Packaging loose Gerber sets into ZIP files after checking their contents.
 - Reconstructing editable KiCad references for all 13 Gerber sets, with local libraries, source evidence, native connectivity/CAM checks and linked previews. These are local reconstructions of MicroSMT designs, not supplied original KiCad projects.

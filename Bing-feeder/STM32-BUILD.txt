@@ -6,8 +6,8 @@ STATUS
 V485-feeder/CODE_feeder is now a complete plain C PlatformIO project,
 shared by the 8 mm and 12/16/24 mm variants, ported locally from legacy SPL
 to STM32 HAL. Open that folder in VS Code:
-  pio run -e v485_8mm
-  pio run -e v485_12_16_24mm
+  pio run -e v485
+  pio run -e bootloader
 Its pinned ST STM32 20.0.0 / STM32CubeF1 1.8.7 / GCC 14.2.1 build has passed.
 Read that folder's README.md and CHANGELOG.md for target assumptions,
 changes, wiring and validation limits. Sources are split into .c/.h modules in src/;

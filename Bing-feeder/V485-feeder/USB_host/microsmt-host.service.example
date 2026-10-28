@@ -1,0 +1,18 @@
+[Unit]
+Description=MicroSMT machine and feeder web/TCP host
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_LOGIN
+SupplementaryGroups=dialout
+WorkingDirectory=/opt/microsmt/V485-feeder/USB_host
+ExecStart=/usr/bin/python3 /opt/microsmt/V485-feeder/USB_host/host_service.py --serial /dev/serial/by-id/YOUR_RS485_ADAPTER --motion-serial /dev/serial/by-id/YOUR_SMOOTHIE_CONTROLLER --ids 1-30 --database /var/lib/microsmt/stock.sqlite3
+StateDirectory=microsmt
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+# Recovery after a disconnect or ambiguous motion requires operator inspection.
+Restart=no
+
+[Install]
+WantedBy=multi-user.target

@@ -29,12 +29,13 @@ Each part has a picture, download links and extra views. STL files are for print
 
 - [V485 missing parts and questions for Bing](V485-MISSING-PARTS.md)
 - [ESP32-C3 controller: PlatformIO build guide](Bing-feeder/V485-Feeder%20Controller/CODE_esp32C3/README.md)
+- [MicroSMT web console: manual machine control, feeder diagnostics and OpenPnP TCP](Bing-feeder/V485-feeder/USB_host/README.md)
 - [V485 feeder variants: PlatformIO / STM32 HAL build guide](Bing-feeder/V485-feeder/CODE_feeder/README.md)
 - [Other STM32 vendor firmware build guide](Bing-feeder/STM32-BUILD.txt)
 - [Editable KiCad reference projects](tools/kicad/README.md)
 - [Machine setup status](Microsmt-PNPv3/docs/machine-setup-status.md)
 
-The V485 models include the 8/12/16/24 mm files from the 21 October 2026 download. The [update notes](Bing-feeder/UPSTREAM-2026-10-21.md) explain what was added. The local feeder and controller firmware is still **0.1.0, unreleased and untested on hardware**.
+The V485 models include the 8/12/16/24 mm files from the 21 October 2026 download. The [update notes](Bing-feeder/UPSTREAM-2026-10-21.md) explain what was added. The local feeder and controller firmware is still **0.1.0 and unreleased**. One 8 mm feeder has passed initial startup/display, RS485 identity and RS485 application-update checks; physical motor/switch operation and controller hardware validation remain outstanding.
 
 ## Folder layout
 

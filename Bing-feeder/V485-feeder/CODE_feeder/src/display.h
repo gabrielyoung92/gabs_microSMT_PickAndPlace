@@ -12,6 +12,8 @@ void Display_Init(void);
 // Write tens/units to display positions 1/3. Caller must restrict number to 0..99.
 // There is no bounds check on the segment lookup table.
 void CH455_RefreshNum(uint16_t number);
+// Show E1..E3; an unknown code falls back to EE.
+void CH455_RefreshFault(uint8_t code);
 // Write a raw segment mask to digit 0..3; ignore other digit indices.
 // Writes are synchronous and do not report a display ACK/error.
 void CH455_SetDisplay(uint8_t digit, uint8_t segments);

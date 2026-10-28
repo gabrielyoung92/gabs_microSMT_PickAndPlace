@@ -37,6 +37,10 @@ The [combined V485 PlatformIO project](Bing-feeder/V485-feeder/CODE_feeder/READM
 
 The project also retains a modified [STM32F103C8 linker script](Bing-feeder/V485-feeder/CODE_feeder/stm32f103c8.ld), based on `tool-ldscripts-ststm32` 0.3.0's `stm32f1/STM32F103C8TX_FLASH.ld`. Both application and bootloader linker layouts derive from that script. Its source notice identifies STMicroelectronics copyright (c) 2021 and BSD-3-Clause licensing; the notice and full license terms are retained in that file. Local changes mark flash startup pointer tables read-only and split flash into separate loader/application regions, with a fixed application identity section. Both scripts retain the full source notice/license.
 
+## USB host dependencies
+
+The [V485 USB host](Bing-feeder/V485-feeder/USB_host/README.md) uses the Python standard library and the external pyserial package. pyserial is installed through pip and retains its own BSD license; it is not copied into this repository. The host reuses the local feeder packet/update tools and retains MicroSMT attribution.
+
 ## Local additions
 
 The file organisation, generated previews, additional STL exports, README galleries and build notes are local additions prepared with ChatGPT assistance. No new repository-wide license has been selected. These notes do not change any upstream copyright or license.

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MicroSMT · Machine console</title>
+<style>
+:root{font:15px system-ui,sans-serif;color:#19302f;background:#edf2f1;accent-color:#087c65}*{box-sizing:border-box}body{max-width:1400px;margin:auto;padding:28px}h1{font-size:28px;margin:0}h2{font-size:18px;margin:0 0 15px}p{line-height:1.6}small,.muted{color:#5d706e}header,.bar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}header{margin-bottom:22px}.eyebrow{font-size:12px;letter-spacing:2px;font-weight:700;color:#087c65;margin-bottom:7px}.bar,section,.metric{background:#fff;border:1px solid #d5e0dd;border-radius:12px;padding:20px}.bar{background:#193f3b;color:white}.bar small{color:#ccded9}button,input{font:inherit;border:1px solid #bbcfca;border-radius:6px;padding:9px 12px}button{background:#087c65;color:white;cursor:pointer}button.secondary{background:#f1f6f4;color:#193f3b}button:disabled{opacity:.45;cursor:not-allowed}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #57bca7;outline-offset:3px}input{max-width:100%;background:white;color:#19302f}input[type=number]{width:100px}input[type=file]{width:100%}label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#405d57}form{display:flex;gap:14px;align-items:end;flex-wrap:wrap}details{border-top:1px solid #dce5e1;padding:18px 0}summary{cursor:pointer;font-weight:650}details p{font-size:14px;color:#5d706e}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}.metric strong{display:block;font-size:27px;margin-top:8px}.layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(300px,1fr);gap:18px}section{min-width:0;margin-bottom:18px}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;border-bottom:1px solid #e3eae7;padding:13px 8px;white-space:nowrap}th{font-size:12px;color:#5d706e;font-weight:600}tr.selected{background:#ecf7f2}.select{background:#edf4f1;color:#176451;padding:5px 10px;font-weight:650}.badge{display:inline-block;border-radius:20px;padding:4px 9px;font-size:12px;background:#e4f3ec;color:#12674e}.bad{color:#a52f3c}.badge.bad{background:#fce9ea}.warning{color:#95620b}.badge.warning{background:#fff1d7}#message{min-height:30px;margin:14px 0;white-space:pre-wrap}#errors{font-size:13px;white-space:pre-wrap}dl{display:grid;grid-template-columns:1fr 1.3fr;gap:12px;font-size:14px}dt{color:#5d706e}dd{margin:0;overflow-wrap:anywhere}code{font-size:13px}progress{width:100%;height:15px}#upload-result{white-space:pre-wrap;font-size:14px;line-height:1.6}footer{font-size:12px;color:#5d706e;margin:20px 0}#image-info{overflow-wrap:anywhere;font-size:13px}#update{display:grid;grid-template-columns:100px 1fr}#update button,#update label:last-of-type{grid-column:1/-1}#search{width:200px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}#connection{font-size:13px}.error{background:#fce9ea;border-radius:6px;padding:10px}@media(max-width:900px){.layout{grid-template-columns:1fr}body{padding:16px}.metrics{grid-template-columns:repeat(2,1fr)}}
+
+h3{font-size:15px;margin:18px 0 12px}.manual-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.motion-actions{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin:12px 0}.positions{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.position{background:#edf4f1;border-radius:8px;padding:14px}.position strong{display:block;font-size:24px;font-variant-numeric:tabular-nums}.position small{font-size:11px}.halt{background:#a52f3c;margin-left:auto}.check-label{display:flex;flex-direction:row;align-items:center;line-height:1.5}.check-label input{width:22px;height:22px;flex-shrink:0}.jog-pad{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;max-width:390px;margin:18px 0}.jog-pad button:first-child{grid-column:2}.jog-pad button:nth-child(2){grid-row:2;grid-column:1}.jog-pad span{grid-row:2;grid-column:2;text-align:center;align-self:center;color:#5d706e}.jog-pad button:nth-child(4){grid-row:2;grid-column:3}.jog-pad button:last-child{grid-row:3;grid-column:2}select{font:inherit;border:1px solid #bbcfca;border-radius:6px;padding:9px 12px;background:white}.output-row{display:flex;gap:10px;align-items:center;justify-content:space-between;border-bottom:1px solid #e3eae7;padding:10px 0}.output-row span{flex:1}#motion-log{max-height:240px;overflow:auto;white-space:pre-wrap;font-size:12px}#motion-state{white-space:pre-wrap}@media(max-width:900px){.manual-grid{grid-template-columns:1fr}.positions{grid-template-columns:repeat(3,1fr)}.halt{margin-left:0}}
+</style>
+<header><div><div class="eyebrow">MICROSMT / OPENPNP</div><h1>Machine console <small id="version"></small></h1></div><span id="connection" role="status">Connecting to host…</span></header>
+<div class="bar"><div><strong id="mode">Waiting for service</strong><br><small id="poll-status">115200 baud · 8N1</small></div><div><small>OpenPnP feeder TCP</small><br><code id="endpoint">127.0.0.1:5001</code></div><button id="maintenance" class="secondary" disabled>Enable maintenance</button></div>
+<div id="message" role="status" aria-live="polite"></div>
+<section id="machine"><div class="section-title"><div><h2>Machine control</h2><small id="motion-endpoint">Motion controller not configured</small></div><strong id="motion-owner">Unavailable</strong></div>
+<p id="motion-state" role="status">Waiting for controller status…</p>
+<div class="motion-actions"><button data-motion="claim" disabled>Take manual control</button><button data-motion="release" class="secondary" disabled>Return to OpenPnP</button><button data-motion="halt" class="halt" disabled>Software halt</button></div>
+<label class="check-label"><input id="connected-jog-ready" type="checkbox">OpenPnP is enabled, homed and idle; no job is running. Allow connected web jogs.</label>
+<div class="motion-actions"><button data-motion="report_connected" class="secondary" disabled>Send position to OpenPnP</button></div><p id="published-position" class="muted">No unsolicited position report sent this service session.</p>
+<p class="muted">For the connected jog test, keep OpenPnP connected and confirm the idle condition above. Each jog sends a work-position report after completion. Disconnect OpenPnP for standalone manual control. Software halt uses the controller's real-time halt; use the physical emergency stop for an emergency.</p>
+<div class="positions" id="positions"></div><p id="position-age" class="muted"></p>
+<div class="manual-grid"><div><h3>Head movement</h3><div class="motion-actions"><label>XYZ step (mm)<select id="jog-step"><option>0.1</option><option selected>1</option><option>5</option><option>10</option></select></label><label>Speed (mm/s)<input id="jog-speed" type="number" min="0.1" max="100" value="10" step="0.1"></label></div>
+<div class="jog-pad"><button data-axis="Y" data-sign="1" disabled>Y+ · back</button><button data-axis="X" data-sign="-1" disabled>X− · left</button><span>XY head</span><button data-axis="X" data-sign="1" disabled>X+ · right</button><button data-axis="Y" data-sign="-1" disabled>Y− · front</button></div>
+<div class="motion-actions"><button data-axis="Z" data-sign="1" disabled>Z+ · N1 up / N2 down</button><button data-axis="Z" data-sign="-1" disabled>Z− · N1 down / N2 up</button></div><small>Z moves both heads together. Check clearance; Z speed is limited to 10 mm/s.</small>
+<h3>Nozzle rotation</h3><label>Rotation step (degrees)<select id="rotation-step"><option>1</option><option selected>5</option><option>15</option><option>45</option></select></label><div class="motion-actions"><button data-axis="A" data-sign="-1" disabled>N1 A−</button><button data-axis="A" data-sign="1" disabled>N1 A+</button><button data-axis="B" data-sign="-1" disabled>N2 B−</button><button data-axis="B" data-sign="1" disabled>N2 B+</button></div>
+</div><div><h3>Homing and motors</h3><small id="motor-state">Motor command state unknown</small><label class="check-label"><input id="heads-ready" type="checkbox">Heads are level or N2 is below N1 for the central Z homing gate.</label><div class="motion-actions"><button data-motion="home" disabled>Home XYZ</button><button data-motion="enable" class="secondary" disabled>Enable motors</button><button data-motion="disable" class="secondary" disabled>Outputs off / disable motors</button><button data-motion="read" class="secondary" disabled>Read position / endstops</button></div><p><small>Standalone manual mode requires web homing; the connected test uses OpenPnP homing. Homing sets A/B work zero without rotating. Travel: X 0–385, Y 0–470, Z −30–+30 mm.</small></p>
+<h3>Pump, valves and lights</h3><div id="output-controls"></div><div class="motion-actions"><button data-motion="all_off" class="secondary" disabled>All outputs off</button></div><small>Output indicators show accepted commands; they do not measure pressure or confirm physical output state.</small></div></div>
+<details><summary>Controller diagnostics</summary><p id="endstops">No endstop report yet.</p><pre id="motion-log"></pre></details></section>
+
+<div class="metrics"><div class="metric">Discovered<strong id="total">—</strong></div><div class="metric">Ready<strong id="ready">—</strong></div><div class="metric">Faults / read errors<strong id="faults">—</strong></div><div class="metric">Low stock estimates<strong id="low">—</strong></div></div>
+<div class="layout"><div><section><div class="section-title"><h2>Feeders</h2><label>Filter <input id="search" type="search" placeholder="ID, width, reel or UID"></label></div><div class="scroll"><table><thead><tr><th>ID / width</th><th>Reel / part</th><th>Status</th><th>Remaining</th><th>Last seen</th></tr></thead><tbody id="rows"><tr><td colspan="5">Waiting for telemetry…</td></tr></tbody></table></div><p id="errors" class="warning"></p><small>Stock is an estimate. Low, zero or uncertain stock never prevents feeding.</small></section>
+<section><h2>Reels and bus setup</h2>
+<details open><summary>Load a reel / correct stock</summary><p>Enter the quantity remaining now. Pulses per part counts index-sensor events per component pocket. Saving resets the stock estimate at the current sensor total.</p>
+<form id="stock"><label>ID<input name="address" type="number" min="0" max="99" required></label><label>Reel / part<input name="label" maxlength="128"></label><label>Quantity<input name="quantity" type="number" min="0" max="1000000000" required></label><label>Pulses / part<input name="pulses_per_part" type="number" min="1" max="99" value="1" required></label><label>Warn below<input name="low" type="number" min="0" max="1000000000" value="50" required></label><button disabled>Save stock</button></form></details>
+<details><summary>Polling and diagnostics</summary><p>Read now also checks the installed application size and CRC. It never advances tape. Only connect one unassigned module at address 0.</p><form id="polling"><label>Polling IDs<input name="ids" value="1-24" required></label><button disabled>Set polling IDs</button></form><br><form id="refresh"><label>ID<input name="address" type="number" min="0" max="99" required></label><button disabled>Read now</button></form></details>
+<details><summary>Assign a feeder ID</summary><p>Enable maintenance and select menu <strong>01</strong> on the feeder. The service checks the destination and verifies the same MCU at the new ID. An unplugged duplicate ID cannot be detected.</p><form id="assign"><label>Current ID<input name="address" type="number" min="0" max="99" required></label><label>New ID<input name="new_id" type="number" min="1" max="99" required></label><button disabled>Assign ID</button></form></details>
+</section></div><aside><section><h2 id="detail-title">Feeder details</h2><p id="selection-hint" class="muted">Select a feeder ID to inspect its hardware and prepare the controls below.</p><dl id="details"></dl></section>
+<section><h2>Firmware update</h2><p class="muted">Stop the OpenPnP job, then enable maintenance. Choose the universal V485 application <code>firmware.bin</code>. The RS485 bootloader must already be installed over SWD.</p>
+<form id="update"><label>Target ID<input name="address" type="number" min="0" max="99" required></label><label>Application file<input name="image" type="file" accept=".bin" required></label><label><span id="image-info">Choose a file to validate it before uploading.</span></label><button disabled>Upload and verify</button></form><p><small>Application updates preserve the feeder ID/type. Bootloader replacement requires SWD. Keep maintenance enabled after a failure until recovery.</small></p><label for="progress">Upload progress</label><progress id="progress" max="100" value="0"></progress><div id="upload-result" role="status" aria-live="polite">No upload this service session.</div></section></aside></div>
+<footer>MicroSMT original designs and firmware. Local host software by Gab with ChatGPT assistance. Development software; physical machine operation needs separate validation.</footer>
+<script>
+let state=null,busy=false,connected=false,pollingSet=false,selected=null,image=null,imageGeneration=0,motionOwner=null;
+const $=id=>document.getElementById(id),message=$('message');
+const names={idle:'Idle',reserved:'Starting',running:'Advancing',fault:'Fault',assign_id:'Awaiting ID',edit_id:'Editing ID',edit_count:'Editing feed count',edit_type:'Editing width',menu:'Button menu',index_timeout:'Index timeout',peel_timeout:'Peel timeout',settings_error:'Settings error'};
+function quantity(n){return n===null?'Not set':Number(n).toLocaleString(undefined,{maximumFractionDigits:2})}
+function controls(){
+ document.querySelectorAll('form button').forEach(b=>b.disabled=!connected||busy||state?.updating);
+ $('maintenance').disabled=!connected||busy||state?.updating;
+ $('assign').querySelector('button').disabled||= !state?.maintenance;
+ $('update').querySelector('button').disabled||= !state?.maintenance||!image||state?.demo;
+ motionControls();
+}
+function selectFeeder(f){
+ selected=f.uid;
+ for(const id of ['stock','refresh','assign','update'])$(id).elements.address.value=f.address??'';
+ const form=$('stock');form.elements.label.value=f.label;form.elements.quantity.value=f.remaining===null?'':Math.floor(f.remaining);form.elements.pulses_per_part.value=f.pitch;form.elements.low.value=f.low;
+ render();
+}
+function detail(label,value){const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;$('details').append(dt,dd)}
+function render(){
+ if(!state)return;
+ const stale=f=>f.age_seconds>state.stale_after_seconds;
+ $('version').textContent=state.version;
+ $('endpoint').textContent='127.0.0.1:'+state.tcp_port;
+ $('mode').textContent=(state.demo?'DEMO · ':'')+(state.updating?'Firmware update in progress':state.maintenance?'Maintenance · PC advances blocked':'Accepting OpenPnP commands');
+ $('maintenance').textContent=state.maintenance?'Leave maintenance':'Enable maintenance';
+ $('poll-status').textContent='115200 baud · 8N1 · '+(state.maintenance?'Background polling paused':state.polling_ids.length+' addresses polled');
+ $('total').textContent=state.feeders.length;
+ $('ready').textContent=state.maintenance?'—':state.feeders.filter(f=>f.ready&&f.assigned&&f.configured&&f.mode==='normal'&&!f.fault_code&&!f.error&&!stale(f)).length;
+ $('faults').textContent=state.feeders.filter(f=>f.fault_code||f.error).length;
+ $('low').textContent=state.feeders.filter(f=>f.low_stock).length;
+ const rows=$('rows');rows.replaceChildren();const query=$('search').value.toLowerCase();
+ for(const f of state.feeders){
+  if(![f.address,f.variant,f.label,f.uid].join(' ').toLowerCase().includes(query))continue;
+  const tr=document.createElement('tr');tr.className=f.uid===selected?'selected':'';
+  const td=document.createElement('td'),button=document.createElement('button');button.className='select';button.textContent=(f.address===null?'Unmapped':f.address)+' / '+f.variant;button.setAttribute('aria-label','Inspect feeder '+(f.address??f.uid));button.onclick=()=>selectFeeder(f);td.append(button);tr.append(td);
+  function cell(text,cls=''){const td=document.createElement('td');td.textContent=text;td.className=cls;tr.append(td);return td}
+  cell(f.label||'—');
+  const label=f.error?'Offline / read error':!f.assigned?'Unassigned':f.fault_code?'E'+f.fault_code+' · '+(names[f.fault]||f.fault):state.maintenance?'Cached · polling paused':stale(f)?'Stale telemetry':!state.polling_ids.includes(f.address)?'Not polled':f.mode!=='normal'?(names[f.mode]||f.mode):!f.ready?'Not ready':names[f.state]||f.state;
+  const badge=document.createElement('span');badge.className='badge '+(f.error||f.fault_code?'bad':stale(f)||!f.assigned||state.maintenance?'warning':'');badge.textContent=label;cell('').append(badge);
+  cell(quantity(f.remaining)+(f.uncertain&&f.loaded!==null?' · uncertain':''),f.low_stock||f.uncertain?'warning':'');cell(Math.floor(f.age_seconds)+'s ago');rows.append(tr);
+ }
+ if(!rows.children.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=5;td.textContent=state.feeders.length?'No matching feeders.':'No feeders discovered yet. Check polling IDs, adapter and feeder power.';tr.append(td);rows.append(tr)}
+ const pending=state.polling_ids.filter(id=>!state.feeders.some(f=>f.address===id)&&!state.errors[id]);
+ $('errors').textContent=[state.inventory_error?'Inventory unavailable: '+state.inventory_error:'',!state.inventory_persistent?'Inventory is temporary and will be lost on restart.':'',pending.length?'Awaiting first response: '+pending.join(', '):'',...Object.entries(state.errors).map(([id,e])=>'ID '+id+': '+e)].filter(Boolean).join('\n');
+ $('details').replaceChildren();const f=state.feeders.find(f=>f.uid===selected);
+ $('selection-hint').hidden=!!f;$('detail-title').textContent=f?'Feeder '+(f.address??'unmapped')+' · '+f.variant:'Feeder details';
+ if(f){detail('MCU UID',f.uid);detail('Sensor total',quantity(f.counter));detail('Default feed count',f.default_count);detail('Index switch',f.switch_closed?'Closed':'Open');detail('Peel motor',f.peel_running?'Running':'Stopped');detail('Local mode',names[f.mode]||f.mode);detail('Estimated used',quantity(f.used));const info=state.firmware[f.uid];detail('Application',info?(info.error||info.size+' bytes · CRC32 '+info.crc32):'Use Read now to inspect');if(info?.read_at)detail('Firmware read',new Date(info.read_at*1000).toLocaleTimeString())}
+ const u=state.update;
+ if(u){$('progress').value=u.sent/u.size*100;$('upload-result').className=u.stage==='failed'?'bad':'';$('upload-result').textContent='ID '+u.address+' · '+u.stage+'\n'+u.sent.toLocaleString()+' / '+u.size.toLocaleString()+' bytes · CRC32 '+u.crc32+(u.error?'\n'+u.error:'')+(u.stage==='complete'?'\nApplication image verified. Maintenance remains enabled.':'')}
+ renderMotion();controls();
+}
+async function refresh(){
+ try{const response=await fetch('/api/status',{signal:AbortSignal.timeout(5000)});if(!response.ok)throw Error('Cannot read service status');state=await response.json();connected=true;$('connection').textContent=(state.demo?'Simulated bus':'Host connected')+' · '+new Date().toLocaleTimeString();$('connection').className='';if(!pollingSet){$('polling').elements.ids.value=state.polling_ids.join(',');pollingSet=true}render()}
+ catch(error){connected=false;$('connection').textContent='Host unavailable · displayed values are cached';$('connection').className='bad';$('mode').textContent='Service unavailable';controls()}
+
+}
+async function send(path,body,binary=false){
+ if(busy||!connected)return;busy=true;controls();message.className='';message.textContent=binary?'Uploading; wait for verification…':'Working…';
+ try{const response=await fetch(path,{method:'POST',headers:{'Content-Type':binary?'application/octet-stream':'application/json'},body:binary?body:JSON.stringify(body)});const result=await response.json();if(!response.ok)throw Error(result.error||'Request failed');message.textContent=binary?'Firmware verified. Maintenance remains enabled.':'Saved / completed.'}
+ catch(error){message.className='error bad';message.textContent=error.message+(binary?' Keep maintenance enabled and inspect the upload result before recovery.':'')}
+ finally{await refresh();busy=false;controls()}
+}
+const outputNames={pump:'Vacuum pump',n1_valve:'N1 valve',n2_valve:'N2 valve',top_light:'Top camera light',bottom_light:'Bottom camera light'};
+for(const axis of 'XYZAB'){
+ const box=document.createElement('div');box.className='position';const label=document.createElement('small'),value=document.createElement('strong');label.textContent=axis+('AB'.includes(axis)?' · degrees':' · mm');value.id='position-'+axis;value.textContent='—';box.append(label,value);$('positions').append(box);
+}
+for(const [name,label] of Object.entries(outputNames)){
+ const row=document.createElement('div');row.className='output-row';const text=document.createElement('span');text.id='output-'+name;text.textContent=label+' · unknown';row.append(text);
+ for(const enabled of [true,false]){const button=document.createElement('button');button.className=enabled?'':'secondary';button.textContent=enabled?'On':'Off';button.setAttribute('aria-label',label+(enabled?' on':' off'));button.dataset.output=name;button.disabled=true;button.onclick=()=>send('/api/motion',{action:'output',name,enabled});row.append(button)}
+ $('output-controls').append(row);
+}
+function motionControls(){
+ const m=state?.motion,available=connected&&m?.configured&&!m.fault,manual=available&&m.owner==='manual'&&!m.busy&&!busy,connectedJog=available&&m.owner==='openpnp'&&!m.busy&&!busy&&$('connected-jog-ready').checked;
+ document.querySelectorAll('[data-motion]').forEach(button=>{
+  const action=button.dataset.motion;
+  button.disabled=action==='halt'?!(connected&&m?.configured&&!m.fault):action==='claim'?!(available&&m.owner==='available'&&!m.busy&&!busy):!manual;
+  if(action==='report_connected')button.disabled=!connectedJog;
+  if(action==='home')button.disabled||=!$('heads-ready').checked;
+ });
+ document.querySelectorAll('[data-axis]').forEach(button=>button.disabled=!(manual&&m.web_homed||connectedJog));
+ document.querySelectorAll('[data-output]').forEach(button=>button.disabled=!manual);
+}
+function renderMotion(){
+ const m=state.motion;
+ if(!m.openpnp_connected)$('connected-jog-ready').checked=false;
+ const p=m.position_report;$('published-position').textContent=p?'Sent to OpenPnP ('+m.position_reports_sent+' reports): '+p.text+' · '+new Date(p.sent_at*1000).toLocaleTimeString()+' · acceptance not confirmed':'No unsolicited position report sent this service session.';
+ if(m.owner!==motionOwner){$('heads-ready').checked=false;motionOwner=m.owner}
+ $('motion-endpoint').textContent=m.configured?'OpenPnP motion TCP · 127.0.0.1:'+m.tcp_port:'Motion controller not configured';
+ $('motion-owner').textContent=!m.configured?'Unavailable':m.fault?'Controller needs attention':m.owner==='connected_manual'?'Connected web jog':m.owner==='openpnp'?'OpenPnP control':m.owner==='manual'?'Web manual control':'Ready for connection';
+ $('motion-state').textContent=!m.configured?'Connect the motion controller when installing on the machine computer.':m.fault?m.fault:m.busy?'Manual operation in progress…':m.owner==='manual'?(m.web_homed?'Homed in this manual session.':'Home XYZ before jogging in this manual session.'):m.owner==='openpnp'?'OpenPnP stays connected. Confirm it is enabled, homed and idle to test web jogging and unsolicited position reports.':'Take manual control, or connect the OpenPnP motion driver.';
+ $('motion-state').className=m.fault?'bad':'';
+ $('motor-state').textContent=m.motors===true?'Motors last commanded enabled':m.motors===false?'Motors last commanded disabled':'Motor command state unknown';
+ for(const axis of 'XYZAB')$('position-'+axis).textContent=typeof m.position?.[axis]==='number'?m.position[axis].toFixed(3):'—';
+ $('position-age').textContent=m.position_at?m.position_kind+' coordinates · '+Math.floor(Date.now()/1000-m.position_at)+'s since controller report':'No position report yet.';
+ for(const [name,label] of Object.entries(outputNames))$('output-'+name).textContent=label+' · '+(m.outputs?.[name]===true?'commanded on':m.outputs?.[name]===false?'commanded off':'unknown');
+ $('endstops').textContent=m.endstops||'No endstop report yet.';
+ $('motion-log').textContent=(m.recent||[]).slice(-16).map(r=>new Date(r.time*1000).toLocaleTimeString()+' '+r.direction.toUpperCase()+' '+r.text).join('\n');
+}
+$('heads-ready').onchange=motionControls;
+$('connected-jog-ready').onchange=motionControls;
+document.querySelectorAll('[data-axis]').forEach(button=>button.onclick=()=>{
+ const axis=button.dataset.axis,rotating='AB'.includes(axis),distance=Number($(rotating?'rotation-step':'jog-step').value)*Number(button.dataset.sign),speed=Number($('jog-speed').value);
+ if(!Number.isFinite(speed)||speed<0.1||speed>100){message.textContent='Choose a jog speed from 0.1 to 100 mm/s.';return}
+ const linked=state?.motion?.owner==='openpnp',confirmed=$('connected-jog-ready').checked;
+ send('/api/motion',{action:linked?'jog_connected':'jog',axis,distance,speed:Math.min(speed,rotating?60:axis==='Z'?10:100),idle_confirmed:confirmed,homed_confirmed:confirmed});
+});
+document.querySelectorAll('[data-motion]').forEach(button=>button.onclick=async()=>{
+ const action=button.dataset.motion;
+ if(action!=='halt'){const heads_ready=$('heads-ready').checked;if(action==='home')$('heads-ready').checked=false;const confirmed=$('connected-jog-ready').checked;await send('/api/motion',{action,heads_ready,idle_confirmed:confirmed,homed_confirmed:confirmed});return}
+ try{const response=await fetch('/api/motion',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'halt'})});const result=await response.json();if(!response.ok)throw Error(result.error);message.textContent='Software halt requested. Inspect the machine before recovery.'}catch(error){message.textContent='Halt request failed: '+error.message}finally{await refresh()}
+});
+$('search').oninput=render;
+$('maintenance').onclick=()=>send('/api/maintenance',{enabled:!state.maintenance});
+for(const name of ['stock','polling','refresh','assign'])$(name).onsubmit=event=>{event.preventDefault();const args={};for(const [key,value] of new FormData(event.target))args[key]=['address','quantity','pulses_per_part','low','new_id'].includes(key)?Number(value):value;send('/api/'+name,args)};
+$('update').elements.image.onchange=async event=>{
+ const generation=++imageGeneration,file=event.target.files[0];image=null;controls();if(!file)return;
+ $('image-info').textContent='Checking application…';
+ try{if(file.size>57344)throw Error('Application exceeds 56 KiB');const bytes=await file.arrayBuffer();const response=await fetch('/api/image',{method:'POST',headers:{'Content-Type':'application/octet-stream'},body:bytes});const info=await response.json();if(!response.ok)throw Error(info.error);if(generation!==imageGeneration)return;image=bytes;$('image-info').textContent=file.name+' · Universal V485 · '+info.size+' bytes · CRC32 '+info.crc32}
+ catch(error){if(generation===imageGeneration)$('image-info').textContent=error.message}
+ finally{controls()}
+};
+$('update').onsubmit=event=>{event.preventDefault();if(image&&state?.maintenance&&!state?.demo)send('/api/update?address='+encodeURIComponent(event.target.elements.address.value),image,true)};
+async function pollStatus(){await refresh();setTimeout(pollStatus,1000)}
+pollStatus();
+</script>
+</html>
