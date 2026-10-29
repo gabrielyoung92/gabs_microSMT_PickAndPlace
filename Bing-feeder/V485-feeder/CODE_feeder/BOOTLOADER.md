@@ -1,14 +1,18 @@
 # V485 RS485 firmware updates
 
-Local bootloader extension to the [MicroSMT-derived feeder firmware](README.md). **Software checks pass; physical installation and operation remain untested.** [Validation results](CHANGELOG.md#software-checks).
+The installed bootloader updates the [current universal feeder application](README.md)
+over addressed RS485. Normal updates use the dashboard and leave the loader alone.
+Application transfers and CRC verification have been checked on bench units.
 
 ## Destination IDs
 
-Every update request/reply includes a **transport destination, 0–99**, protected by CRC32 along with the payload. Other IDs ignore the packet. One firmware file serves every feeder of the matching width; the feeder's saved ID/count survive updates.
+Every update request/reply includes a **transport destination, 0–99**, protected by CRC32 along with the payload. Other IDs ignore the packet. One universal firmware file serves all four feeder widths; the feeder's saved ID/count survive updates.
 
-IDs must be **unique on the connected bus**. Operating IDs are **1–99**. Blank ID byte `FF` is saved as `0`: this is unassigned, flashes **00**, and blocks both motors and all advances. Address 0 is reserved for programming/recovery only. Commission unassigned feeders one at a time, then set individual IDs with PA2 menu `03` or the [locally armed ID assignment tool](README.md#set-an-id-from-the-pc). Unreadable/invalid EEPROM IDs leave the loader waiting.
+IDs must be **unique on the connected bus**. Operating IDs are **1–99**. Blank ID byte `FF` is saved as `0`: this is unassigned, flashes **00**, and blocks both motors and all advances. Address 0 is reserved for programming/recovery only. Commission unassigned feeders one at a time, then set individual IDs with PA2 menu `03` or the [locally armed ID assignment tool](README.md#direct-serial-tools). Unreadable/invalid EEPROM IDs leave the loader waiting.
 
-Batch uploads update and verify one ID at a time, stopping on the first failure. Use a separate batch for each width. There is no broadcast update command.
+Updates target and verify one ID at a time; there is no broadcast erase/write.
+The dashboard queue continues with other units after a failure and supports an
+explicit retry. The standalone uploader batch stops on its first failure.
 
 ## First installation
 
@@ -25,8 +29,9 @@ pio run -e v485 -e bootloader
 
 After confirming the chip, crystal and wiring, stop the machine and:
 
-1. Install the matching loader over ST-Link/SWD, for example `pio run -e bootloader -t upload`. This replaces the old firmware at flash base. Missing/invalid EEPROM metadata leaves it in recovery mode.
-2. Connect the [ESP32-C3 controller running the local 0.1.0 development firmware with the update bridge](../../V485-Feeder%20Controller/CODE_esp32C3/README.md) to the feeder bus and PC USB. An auto-direction USB-RS485 adapter connected directly to the bus is also supported. Close OpenPnP/serial monitors and stop other bus masters; use only one RS485 master.
+1. Install the matching loader over ST-Link/SWD, for example `pio run -e bootloader -t upload`. This programs the loader at flash base. Missing/invalid EEPROM metadata leaves it in recovery mode.
+2. Connect the direct auto-direction USB–RS485 adapter to the feeder bus and PC.
+   The optional [ESP32 controller bridge](../../V485-Feeder%20Controller/CODE_esp32C3/README.md) also supports the uploader. Close OpenPnP/serial monitors and stop other bus masters; use only one RS485 master.
 3. Upload the matching application to its existing ID using the command below. The first upload creates the boot record and starts the application. For blank EEPROM, connect only that commissioning feeder and select ID 0.
 
 The common application is `.pio/build/v485/firmware.bin`; the common loader is `.pio/build/bootloader/firmware.bin`. Width is an EEPROM setting. Installing an application with ST-Link alone does not create its EEPROM boot record. Loader replacement remains an SWD operation.
@@ -46,7 +51,7 @@ python tools/rs485_upload.py --port COM5 --address 7 --firmware .pio/build/v485/
 python tools/rs485_upload.py --port COM5 --addresses 7,8,9 --firmware .pio/build/v485/firmware.bin
 ```
 
-The RS485 link is **115200 baud, 8N1, LF** for both application and bootloader. Use matching 115200 builds on every connected node; an older 9600-baud loader needs replacement over SWD before it can use these tools. The uploader works unchanged through the ESP32-C3 controller or a direct adapter. Native controller USB is independent of the uploader's 115200-baud host setting. The uploader retries initial HELLO discovery before checking for a running application, checks the universal image format and memory layout, requests download mode and verifies the upload. An active feed rejects the request. Old width-specific or foreign images are rejected before erasure.
+The RS485 link is **115200 baud, 8N1, LF** for both application and bootloader. The uploader works unchanged through the ESP32-C3 controller or a direct adapter. Native controller USB is independent of the uploader's 115200-baud host setting. The uploader retries initial HELLO discovery before checking for a running application, checks the universal image format and memory layout, requests download mode and verifies the upload. An active feed rejects the request. Images with an incompatible format/layout are rejected before erasure.
 
 With the ESP32-C3 controller, feed commands remain blocked until update traffic has been idle for 10 seconds. Close the uploader and wait for that interval before reconnecting OpenPnP. The controller handles packet forwarding and bus direction only; the uploader retains update retries and verification.
 
@@ -95,7 +100,7 @@ All packets use `B07 <body> <CRC32>` followed by LF. The ID is exactly two decim
 | `IDENT <nonce>` | `IDENT <nonce> <uid0> <uid1> <uid2> <armed>` | Application hardware identity and menu 01 selection; read-only, including during a settings fault |
 | `TYPE <nonce>` | `TYPE <nonce> <width> <count> <stepUm>` | Read saved width/default count and nominal micrometres per optical event |
 | `SETTYPE <nonce> <uid0> <uid1> <uid2> <width>` | `TYPESET <nonce> <width>` | Matching UID and idle feed required; direct bus setting, no menu; checked EEPROM save |
-| `CONFIG <nonce>` | `CONFIG <nonce> <feedReverse> <peelReverse> <switchNO>` | 0.1.1 read-only settings; booleans 0/1 |
+| `CONFIG <nonce>` | `CONFIG <nonce> <feedReverse> <peelReverse> <switchNO>` | Read-only settings; booleans 0/1 |
 | `SETCONFIG <nonce> <uid0> <uid1> <uid2> <feedReverse> <peelReverse> <switchNO>` | `CONFIGSET <nonce> <feedReverse> <peelReverse> <switchNO>` | Matching UID; no menu; rejects active feeds, stops idle peeling; booleans 0/1, verified EEPROM write |
 | `SETCOUNT <nonce> <uid0> <uid1> <uid2> <count>` | `COUNTSET <nonce> <count>` | Direct saved default count 1–99; matching UID, no menu; rejects active feeds |
 | `JOG <token0> <token1> <retract> <items>` | `ACCEPT/BUSY/FAULT <token0> <token1>` | Retract 0/1, positive items; items × saved default events ≤10000; 32-bit progress, 3 s stall guard and scaled total deadline; peel inhibited until next regular feed/reset; STATUS reports completion |
@@ -109,14 +114,34 @@ All packets use `B07 <body> <CRC32>` followed by LF. The ID is exactly two decim
 
 Application diagnostic fields use the same eight-digit hexadecimal encoding. Movement total increments on every serviced PA3 rising edge, modulo 2^32. The host first reads DIAG, then claims a zero token with a random nonzero pair. The token and total survive PC restarts while the MCU stays powered; both clear on MCU reset. No EEPROM is written for telemetry. A monitor token is correlation data, not authentication or a motion permission.
 
-Diagnostic flags: bits 0–7 saved default count; 8–15 fault (0 none, 1 index deadline, 2 peel deadline, 3 settings failure); 16–19 feed state (0 idle, 1 reserved, 2 running, 3 fault); 20–23 UI mode (0 normal, 1 menu, 2 remote ID, 3 local ID, 4 count, 5 type); bit 24 raw switch contact permits peel; bit 25 peel output commanded running; bit 26 application ready; bit 27 assigned ID; bit 28 wider configured type; bit 29 valid configured type; bits 30–31 type index (0=8, 1=12, 2=16, 3=24; meaningful only if bit 29 is set). The shutdown used for a requested update can have feed state fault with fault code 0; it is not a recorded motor fault.
+Diagnostic flags: bits 0–7 saved default count; 8–15 fault (0 none, 1 index deadline, 2 peel deadline, 3 settings failure, 4 explicit STOP); 16–19 feed state (0 idle, 1 reserved, 2 running, 3 fault); 20–23 UI mode (0 normal, 1 menu, 2 remote ID, 3 local ID, 4 count, 5 type, 6 input test); bit 24 interpreted peel request; bit 25 peel output commanded running; bit 26 application ready; bit 27 assigned ID; bit 28 wider configured type; bit 29 valid configured type; bits 30–31 type index (0=8, 1=12, 2=16, 3=24; meaningful only if bit 29 is set). The shutdown used for a requested update can have feed state fault with fault code 0; it is not a recorded motor fault.
 
 The assignment tool probes for an occupied destination before SETID, then verifies the hardware UID at the new ID. SETID does not perform its own bus probe. Assignment consumes the local selection; it cannot be retried after success without selecting menu 01 again. ID and nonce fields use the same eight-digit hexadecimal encoding as other numeric fields.
 
-Image format 3 is universal; old format 1/2 images are rejected. Physical width is stored separately in EEPROM byte 2, with its complement at byte 3; configuration invalidates byte 2 before writing and commits the width last. At application offset 0x200, the image tag contains `V485APP\0`, then little-endian variant and base-address words. The EEPROM record contains five little-endian words: magic 0x31423556, variant, size, image CRC and CRC of the first 16 bytes.
+Image format 3 is universal. Physical width is stored separately in EEPROM byte 2, with its complement at byte 3; configuration invalidates byte 2 before writing and commits the width last. At application offset 0x200, the image tag contains `V485APP\0`, then little-endian variant and base-address words. The EEPROM record contains five little-endian words: magic 0x31423556, variant, size, image CRC and CRC of the first 16 bytes.
 
-The uploader confirms a lost DONE through the running application's INFO. Update retries do not apply to legacy feed commands. Shared driver and metadata code is in [src/](src/).
+The uploader confirms a lost DONE through the running application's INFO. Update retries never authorize a repeated feeder advance. Shared driver and metadata code is in [src/](src/).
 
 </details>
 
-Run the small offline check with `python tools/rs485_upload.py --self-check`. See the [changelog](CHANGELOG.md#software-checks) for build sizes and detailed checks.
+Run the small offline check with `python tools/rs485_upload.py --self-check`. See the [firmware notes](CHANGELOG.md#verification) for verification status.
+
+### Application 0.1.2 input test (no loader update needed)
+
+`TESTREAD nonce` replies `TEST nonce flags switchChanges uptimeMs movementTotal`
+(five 32-bit hexadecimal fields, standard addressed CRC packet). Flags: bit0
+motor-off test active, bit1 PB6 contact closed/LOW, bit2 interpreted peel request
+(NC/NO applied), bit3 peel motor running, bit4 index motor running, bit5 PA4 feed
+button pressed, bit6 PA2 menu button pressed, bit7 PA3 optical input HIGH.
+`switchChanges` counts transitions stable for at least 20 ms during the test;
+`uptimeMs` wraps as a 32-bit millisecond counter. `movementTotal` retains normal
+stock-counter semantics, including hand movement; it is not reset by testing.
+
+`TEST nonce uid0 uid1 uid2 enabled` sets test mode (`enabled` 00000001) or exits
+(00000000). Rejects wrong UID/invalid boolean without action; active movement or
+menus reply `BUSY nonce`. Accepted commands reply with the same `TEST` snapshot.
+Repeated Start preserves counters. No EEPROM writes, unsolicited events, feed
+requests, fault clear or automatic timeout/resumption. Exit re-enables normal
+operation only when fault-free; wider feeders may then take up tape. Reset exits
+RAM-only test mode through the usual startup. The host reads TESTREAD before
+attempting Start.

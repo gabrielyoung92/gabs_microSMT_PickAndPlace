@@ -110,7 +110,7 @@ def network_checks(service):
             return response.status, response.read()
 
         status, page = request("/")
-        assert status == 200 and b"Stock is an estimate" in page
+        assert status == 200 and b'Powered feeders' in page and b'camera-top' not in page and b'data-motion' not in page
         status, data = request("/api/status")
         assert status == 200 and json.loads(data)["demo"] and json.loads(data)["tcp_port"] == tcp.server_address[1]
         assert request("/api/maintenance", {"enabled": True}, origin="http://unrelated.example")[0] == 403
@@ -129,7 +129,7 @@ def network_checks(service):
         assert request("/api/polling", {"ids": [1, 2]})[0] == 400
         assert request("/api/stock", {"address": 1, "label": "10k", "quantity": 0, "pulses_per_part": 4})[0] == 200
         assert request("/api/refresh", {"address": 1})[0] == 200
-        info = service.snapshot()["firmware"][newest(service.stock)["uid"]]
+        info = next(r["firmware_info"] for r in service.stock.rows() if r["uid"]==newest(service.stock)["uid"])
         assert info["size"] == 1024 and info["crc32"] == "12345678"
         before = len(service.port.frames)
         status, data = request("/api/image", sample_image(), content_type="application/octet-stream")
@@ -155,15 +155,15 @@ def startup_checks(directory):
         with socket.socket() as listener:
             listener.bind(("127.0.0.1", 0))
             return listener.getsockname()[1]
-    tcp, web, motion = free_port(), free_port(), free_port()
-    while len({tcp, web, motion}) != 3:
-        tcp, web, motion = free_port(), free_port(), free_port()
+    tcp, web = free_port(), free_port()
+    while len({tcp, web}) != 2:
+        tcp, web = free_port(), free_port()
     blocked = directory / "not-a-directory"
     blocked.write_text("Temporary test file")
     process = subprocess.Popen([host.sys.executable, str(Path(host.__file__)), "--demo", "--ids", "1",
                                 "--database", str(blocked / "stock.sqlite3"),
                                 "--web-host", "127.0.0.1",
-                                "--tcp-port", str(tcp), "--web-port", str(web), "--motion-port", str(motion)],
+                                "--tcp-port", str(tcp), "--web-port", str(web)],
                                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     try:
         deadline = time.monotonic() + 5

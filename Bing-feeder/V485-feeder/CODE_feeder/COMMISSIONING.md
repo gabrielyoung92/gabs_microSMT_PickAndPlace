@@ -1,6 +1,6 @@
 # V485 universal commissioning
 
-The example 30-board commissioning profile is: **IDs 1–20 = 8 mm; 21–27 = 12 mm;
+The machine's 30-board commissioning profile is: **IDs 1–20 = 8 mm; 21–27 = 12 mm;
 28–30 = 16 mm.** Only verified boards are added to the local `units.json` ledger.
 
 ## ST-Link only: initial batch programming
@@ -21,9 +21,8 @@ python tools/flash_swd.py --stlink STLINK_SERIAL --new-id 2
 ```
 
 The width comes from the batch plan above. `--width 24` can override it for
-another feeder. `--count` selects the saved default optical-event count; it is
-1 unless specified. That means a nominal 2 mm manual feed on an 8 mm feeder,
-or 4 mm on a wider feeder. Adjust per reel/job later.
+another feeder. `--count` selects the saved default optical-event count: 2 for 8 mm units and
+1 for wider units, giving 4 mm advance in either case. Adjust per reel/job later.
 
 The tool reads the physical MCU UID and backs up its original 64 KB flash,
 checks the local ledger for reused IDs/boards, installs and readback-verifies
@@ -62,7 +61,7 @@ PA4 short tap feeds the saved default event count. PA2 holds select: 01 remote
 commissioning, 02 update, 03 ID, 04 default count, 05 width. Menu 05 cycles
 08/12/16/24. Hold PA2 for two seconds and release to save an edited value.
 
-The original vendor firmware counted PA3 rising edges with no mm conversion.
+PA3 counts optical sensor edges.
 The supported wheel profile has 30 teeth at 4 mm pitch: 60 optical holes on 8 mm
 feeders give nominal 2 mm/event; 30 holes on wider feeders give 4 mm/event.
 Thus a 4 mm component pitch needs F2 on an 8 mm feeder or F1 on a wider feeder.

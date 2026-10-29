@@ -6,11 +6,12 @@ Choose V3 or V485 below. Each has its own models, board files, firmware and asse
 
 | Browse | Contents |
 | --- | --- |
+| [Powered-feeder dashboard](V485-feeder/USB_host/README.md) | PC host, firmware updates, configuration, stock and OpenPnP integration |
 | [V485 feeder](V485-feeder/README.md) | 8/12/16/24 mm mechanics, shared parts, feeder/display PCBs and STM32 sources |
 | [V485 controller](V485-Feeder%20Controller/README.md) | ESP32-C3 PlatformIO firmware, controller PCB and RS485 busbars |
 | [V3 feeder](V3-feeder/README.md) | 8/12/16/24 mm parts, shared parts, STM32 sources and manuals |
 | [V3 controller](V3-Feeder%20Controller/README.md) | Mega2560 sketch, controller board and feeder busbars |
-| [STM32 build guide](STM32-BUILD.txt) | Combined V485 HAL/PlatformIO project and remaining legacy SPL build notes |
+| [STM32 build guide](STM32-BUILD.txt) | Universal V485 PlatformIO build and V3 source requirements |
 | [License](LICENSE) | Supplied upstream license |
 
 Latest [upstream comparison and photo check](UPSTREAM-2026-10-25.md): 25 October 2026.

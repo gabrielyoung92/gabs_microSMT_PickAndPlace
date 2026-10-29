@@ -1,108 +1,29 @@
-BUILDING THE SUPPLIED STM32 FEEDER PROGRAMS
-=========================================
-Checked 20 October 2026.
+STM32 FEEDER BUILDS
+==================
 
-STATUS
-V485-feeder/CODE_feeder is now a complete plain C PlatformIO project,
-shared by the 8 mm and 12/16/24 mm variants, ported locally from legacy SPL
-to STM32 HAL. Open that folder in VS Code:
+V485: CURRENT MACHINE FIRMWARE 0.1.2
+Open V485-feeder/CODE_feeder in PlatformIO or run from that folder:
   pio run -e v485
+
+This builds the universal 8/12/16/24 mm application and automatically writes
+V485-feeder/USB_host/firmware.json for the dashboard. Copy that bundle to the
+machine host, then select Update or Update all outdated. Normal application
+updates use the installed bootloader and preserve per-unit settings.
+
+Source: V485-feeder/CODE_feeder/src/
+Build configuration: V485-feeder/CODE_feeder/platformio.ini
+Operating/build guide: V485-feeder/CODE_feeder/README.md
+Initial ST-Link programming: V485-feeder/CODE_feeder/COMMISSIONING.md
+Update protocol/tools: V485-feeder/CODE_feeder/BOOTLOADER.md
+PC host/dashboard: V485-feeder/USB_host/README.md
+
+The separate loader build is:
   pio run -e bootloader
-Its pinned ST STM32 20.0.0 / STM32CubeF1 1.8.7 / GCC 14.2.1 build has passed.
-Read that folder's README.md and CHANGELOG.md for target assumptions,
-changes, wiring and validation limits. Sources are split into .c/.h modules in src/;
-settings and wiring remain in src/config.h. CubeMX/CubeIDE is not needed. Nothing has been flashed.
+It is for initial SWD programming; a normal application update leaves it alone.
+Build does not upload. CubeMX/CubeIDE is not required.
 
-THE REMAINING TWO LEGACY VARIANTS
-The rest of this guide applies to the V3 8 mm and V3 12/16/24 mm programs.
-These are two independent vendor programs, each with its own main().
-Their source contents have not been modified. Build one variant at a time.
-Each program's folder contains its source and a README.md with variant details.
-
-Those supplied files are NOT complete build projects. No matching project file,
-STM32F10x library, startup code, system clock implementation or linker script
-was found alongside them. No build of those two legacy programs has been verified.
-
-WHAT THEY USE
-Those two use ST's legacy STM32F10x Standard Peripheral Library (SPL), including
-stm32f10x.h. This is plain C with main(), not an Arduino sketch.
-
-ST's library package is STSW-STM32054:
-https://www.st.com/en/embedded-software/stsw-stm32054.html
-
-HOW TO GET A BUILD WORKING
-1. Identify the actual feeder MCU, flash/RAM capacity and crystal frequency.
-   STM32F103C8 is a candidate from the existing source/schematic audit, not a
-   verified target for every board. A chip with a different marking needs its
-   own confirmed memory layout and compatible library/startup files.
-
-2. Prefer the vendor's original complete project for this exact firmware
-   variant. Obtain its compiler/version, STM32F10x SPL dependency, startup
-   file, system_stm32f10x.c, stm32f10x_conf.h, linker/scatter file, clock settings
-   and any bootloader/application offset. This is the most direct route to
-   reproducing the vendor build. A supplied .hex does not supply these files.
-
-3. If reconstructing a project, start from a matching STM32F10x SPL template
-   with the correct compiler and MCU. Keep a working copy separate from these
-   preserved vendor sources. Add ONLY the selected feeder .c as the application
-   main source and remove the template main(). Do not combine feeder variants.
-
-4. Add the required SPL driver .c files listed in the variant's readme, plus
-   misc.c for NVIC support. Configure include paths for the SPL driver headers,
-   matching legacy CMSIS core/device headers and the project configuration.
-   Supply stm32f10x_conf.h with the required peripheral headers enabled.
-   Define USE_STDPERIPH_DRIVER. For a confirmed medium-density STM32F103x8/xB,
-   the SPL device-class define is STM32F10X_MD; other parts need their own class.
-   Keep device headers, startup and library versions compatible.
-
-5. Include a compiler-compatible startup/vector table and system_stm32f10x.c.
-   Set the actual oscillator/PLL clock and memory sizes. Preserve this source's
-   interrupt handlers; do not also compile template handlers of the same names.
-   Link only one SystemInit implementation. Any tick/delay configuration must
-   match the actual system clock.
-
-6. Build and link with the selected Arm compiler. Resolve compiler/linker
-   errors in the separate working project; record any required source changes.
-   Check the map file, vector table and flash/RAM usage before using the image.
-   Successful compilation does not establish correct behavior on the feeder.
-
-VS CODE / PLATFORMIO
-For those two legacy variants, VS Code can remain the editor. No CubeMX
-or HAL conversion is required to reproduce a matching original SPL build.
-For PlatformIO, first obtain or reconstruct a compatible STM32F1 SPL framework
-setup, including its startup and linker configuration. The current official
-bluepill_f103c8 board definition does NOT list SPL among its supported
-frameworks. Merely setting framework = spl is not a complete build solution.
-PlatformIO's general SPL support for other STM32 targets does not change that.
-Do not mix legacy stm32f10x.h and modern device/framework headers blindly.
-
-Once an actual PlatformIO project has been configured, open its folder in
-VS Code, use Project Tasks > Build, or run pio run in its Core CLI terminal.
-The two legacy source-only folders have no platformio.ini, so that command
-does not yet work in them. The combined V485 folder already has one.
-The first build may download dependencies.
-For a supplied vendor GCC Makefile project, run its documented make target
-from VS Code's terminal. A Keil .uvproj/.uvprojx instead needs its matching
-MDK/Arm compiler setup unless the build is deliberately ported.
-
-With a successfully linked GNU Arm ELF, optional output conversions are:
-  arm-none-eabi-objcopy -O ihex firmware.elf firmware.hex
-  arm-none-eabi-objcopy -O binary firmware.elf firmware.bin
-These convert an existing ELF; they do not compile the C source.
-
-KNOWN VARIANT-SPECIFIC ISSUE
-V3_feeder_12-16-24mm.c defines FLASH_ADDR as 0x08010100. That address is outside
-the documented 64 KB flash range of an STM32F103C8 (0x08000000..0x0800FFFF).
-Confirm the actual MCU and reserve the correct erase page in the memory layout
-before using this persistence code. Do not silently assume 128 KB, change the
-board identity, or relocate storage without checking the real device.
-
-REFERENCES
-ST STM32F103x8/xB datasheet:
-https://www.st.com/resource/en/datasheet/stm32f103c8.pdf
-PlatformIO SPL framework:
-https://docs.platformio.org/en/latest/frameworks/spl.html
-PlatformIO BluePill F103C8 supported frameworks:
-https://docs.platformio.org/en/latest/boards/ststm32/bluepill_f103c8.html
-PlatformIO official board definition:
-https://github.com/platformio/platform-ststm32/blob/master/boards/bluepill_f103c8.json
+V3 SOURCES
+The V3 8 mm and V3 12/16/24 mm folders contain independent vendor SPL C programs,
+not the universal V485 application. Each needs a matching STM32F1 SPL project,
+startup code and linker configuration before it can build. See those folders'
+README files. The V485 PlatformIO command does not build V3 sources.

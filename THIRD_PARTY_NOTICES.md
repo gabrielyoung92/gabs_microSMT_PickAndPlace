@@ -40,6 +40,8 @@ The project also retains a modified [STM32F103C8 linker script](Bing-feeder/V485
 ## USB host dependencies
 
 The [V485 USB host](Bing-feeder/V485-feeder/USB_host/README.md) uses the Python standard library and the external pyserial package. pyserial is installed through pip and retains its own BSD license; it is not copied into this repository. The host reuses the local feeder packet/update tools and retains MicroSMT attribution.
+The optional OpenPnP companion runs against OpenPnP's installed Java/Jython
+libraries; these dependencies are not copied into this repository.
 
 ## Local additions
 

@@ -1,6 +1,6 @@
 # Delivered controller inspection
 
-Current continuation: [Pi/OpenPnP setup status](machine-setup-status.md)
+Current continuation: [Machine/OpenPnP setup](machine-setup-status.md)
 records later homing, camera/output tests and the revised operating profile.
 The dated sections below preserve the earlier measurement chronology.
 
@@ -275,14 +275,13 @@ during homing. Return the heads to level or the positive side before stock Z
 homing. Automatic recovery from either side needs further investigation of
 gate behavior, position sensing or a different homing reference.
 
-## Raspberry Pi / OpenPnP continuation
+## OpenPnP machine setup
 
-OpenPnP now runs on the Pi with both cameras, automatic home on enable, coupled
+OpenPnP runs on the Debian 13 Dell OptiPlex with both cameras, automatic home on enable, coupled
 Z mapping and reviewed output commands. Owner reports successful operation and
 acceptable homing, with revised motion speed working well so far.
 See [current setup status](machine-setup-status.md) and
 [commented G-code](openpnp-gcode.md) for the current profile.
-The earlier motor-disabled state is historical, not the current machine state.
-SD limit values were queried after a power cycle; runtime enforcement remains
-unverified. No additional controller SD writes or firmware flashing occurred
-during Pi setup.
+Verify travel-limit enforcement and clearances on the assembled machine.
+The [feeder host](../../Bing-feeder/V485-feeder/USB_host/README.md) uses the
+separate RS485 adapter; it does not relay Smoothieboard commands.

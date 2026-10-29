@@ -13,9 +13,18 @@ Choose your feeder width below. These folders include the wider V485 parts added
 | [Shared wider-feeder parts](3D_parts_shared/README.md) | 5 parts with STEP/STL links and nine previews per part |
 | [Feeder PCB](PCB_feeder/README.md) | Gerber ZIP, schematic, BOM and three board views |
 | [Display PCB](PCB_display/README.md) | Gerber ZIP, schematic, BOM and three board views |
-| [USB host service](USB_host/README.md) | Direct USB–RS485, local OpenPnP TCP connection, diagnostics, stock and maintenance |
-| [Feeder firmware](CODE_feeder/README.md) | Shared C/H PlatformIO / STM32 HAL project; one universal image with saved width selection |
+| [USB host service](USB_host/README.md) | Port 80 dashboard, direct USB–RS485, feeder TCP, stock/configuration and firmware queue |
+| [Feeder firmware](CODE_feeder/README.md) | Version 0.1.2: universal application, switch-controlled peel completion and motor-off input tests |
 
 The 21 October ZIP only contained models, so the existing board files and firmware are still here. The **16 mm one-position magnetic slot** arrived separately on 22 October and is now in the [16 mm gallery](3D_parts_16mm/README.md). The [missing-parts list](../../V485-MISSING-PARTS.md) tracks the remaining gaps and questions.
 
 See the [21 October update notes](../UPSTREAM-2026-10-21.md). The pictures help identify parts; fit still needs checking on the real feeder.
+
+## Software on this machine
+
+The [PC host](USB_host/README.md) manages the powered feeders. OpenPnP owns the
+Smoothieboard serial connection, cameras, pickup locations, physical nozzle setup
+and jobs. The host exposes feeder TCP on `127.0.0.1:5001` and a compact web page
+on port 80. Normal firmware updates use the installed bootloader; one universal
+application covers 8/12/16/24 mm units.
+

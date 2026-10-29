@@ -23,7 +23,7 @@ static volatile uint8_t currentType = 0;  // 0 means unconfigured; motors inhibi
 static volatile uint8_t  currentCount = 0;     // Current default count
 
 // PA2 hold menu: 01 remote ID, 02 update, 03 local ID, 04 default count, 05 physical width.
-enum { MODE_NORMAL, MODE_MENU, MODE_ASSIGN, MODE_ADDR, MODE_COUNT, MODE_TYPE };
+enum { MODE_NORMAL, MODE_MENU, MODE_ASSIGN, MODE_ADDR, MODE_COUNT, MODE_TYPE, MODE_TEST };
 static volatile uint8_t mode = MODE_NORMAL;
 static uint8_t menuItem = 1, editValue, uiBlink;
 static uint32_t uiLastAction;
@@ -33,7 +33,11 @@ static uint8_t feedButtonRaw = 1, feedButtonStable = 1, feedButtonReady;
 static uint8_t feedButtonDown, feedButtonEligible;
 static uint32_t feedButtonChangedAt, feedButtonPressedAt;
 // Peel state is owned by SysTick; main only clears it with interrupts masked.
-static volatile uint8_t peelRunning;
+static volatile uint8_t peelRunning, peelCycle;
+// Test mode latches until an explicit exit/reset; browser loss must not resume motors.
+static volatile uint32_t testSwitchChanges;
+static uint8_t testSwitchRaw, testSwitchStable;
+static uint32_t testSwitchChangedAt;
 static volatile uint32_t peelStartedAt, peelOffAt;
 static uint8_t peelClosed;
 static uint32_t peelClosedAt;
@@ -150,7 +154,7 @@ static void Motor_Fault(uint8_t reason) {
     feedReady = 0;
     feedState = FEED_FAULT;
     faultReason = reason;
-    peelRunning = 0;
+    peelRunning = peelCycle = 0;
     HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_ALL_PINS, GPIO_PIN_SET);
     if (requestResult == REQUEST_RUNNING) requestResult = REQUEST_FAULT;
     displayDirty = 1;
@@ -216,12 +220,12 @@ static uint8_t SaveOptions(uint8_t value) {
 static uint8_t BeginRemoteSettings(uint8_t recoverOptions) {
     uint32_t mask = __get_PRIMASK();
     __disable_irq();
-    uint8_t allowed = !settingsFault && (feedState == FEED_IDLE ||
+    uint8_t allowed = mode != MODE_TEST && !settingsFault && (feedState == FEED_IDLE ||
                       (recoverOptions && optionsFault && feedState == FEED_FAULT));
     if (allowed) {
         feedReady = 0;
         Board_MotorIdle();
-        peelRunning = peelClosed = 0;
+        peelRunning = peelClosed = peelCycle = 0;
         peelOffAt = HAL_GetTick();
     }
     __set_PRIMASK(mask);
@@ -260,7 +264,7 @@ static uint8_t EnterMenu(void) {
                        ((feedReady && feedState == FEED_IDLE) || feedState == FEED_FAULT);
     if (accepted) {
         mode = MODE_MENU;
-        peelRunning = 0;
+        peelRunning = peelCycle = 0;
         peelOffAt = HAL_GetTick();
         Board_MotorIdle();
         displayDirty = 1;
@@ -338,7 +342,7 @@ static void MenuKeyScan(void) {
         }
     }
     // Never time out a hold and reinterpret its release as a normal feed.
-    if (mode != MODE_NORMAL && mode != MODE_MENU && !buttonDown &&
+    if (mode != MODE_NORMAL && mode != MODE_MENU && mode != MODE_TEST && !buttonDown &&
         (uint32_t)(now - uiLastAction) >= UI_TIMEOUT_MS) LeaveMenu();
     uint8_t blink = ((uint32_t)(now - uiLastAction) / UI_BLINK_MS) & 1U;
     if (blink != uiBlink) {
@@ -394,6 +398,7 @@ static uint8_t Motor_ReserveMove(uint32_t requestedCount, uint8_t jog, uint8_t r
         moveDeadlineMs = jog ? JOG_STARTUP_BUDGET_MS + count * JOG_EVENT_BUDGET_MS : FEED_TIMEOUT_MS;
         retractMove = retract;
         if (jog) {
+            peelCycle = 0;
             HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_PEEL_A_PIN | MOTOR_PEEL_B_PIN, GPIO_PIN_SET);
             peelRunning = 0;
             peelOffAt = HAL_GetTick();
@@ -417,6 +422,7 @@ static void Motor_Start(void) {
         pa3TriggerCount = 0;
         feedStartedAt = lastProgressAt = HAL_GetTick();
         feedState = FEED_RUNNING;
+        if (!jogPeelHold) peelCycle = 1;
         HAL_GPIO_WritePin(MOTOR_PORT, ((!!(motorOptions & OPTION_FEED_REVERSE)) ^ retractMove) ? MOTOR_INDEX_B_PIN : MOTOR_INDEX_A_PIN, GPIO_PIN_SET);
         HAL_GPIO_WritePin(MOTOR_PORT, ((!!(motorOptions & OPTION_FEED_REVERSE)) ^ retractMove) ? MOTOR_INDEX_A_PIN : MOTOR_INDEX_B_PIN, GPIO_PIN_RESET);
         LED_ON();
@@ -432,11 +438,7 @@ static void Motor_Stop(void) {
     __disable_irq();
     if (feedState == FEED_RUNNING) {
         HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_INDEX_A_PIN | MOTOR_INDEX_B_PIN, GPIO_PIN_SET);
-        if (currentType == 8U) {
-            HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_PEEL_A_PIN | MOTOR_PEEL_B_PIN, GPIO_PIN_SET);
-            peelRunning = 0;
-            peelOffAt = HAL_GetTick();
-        }
+        if (!PeelRequested()) peelCycle = 0;
         if (requestResult == REQUEST_RUNNING) requestResult = REQUEST_DONE;
         LED_OFF();
         pa3TriggerCount = 0;
@@ -464,6 +466,23 @@ static void ReportDiagnostics(uint32_t nonce) {
     Boot_Reply(currentAddr, "DIAG", values, 5);
 }
 
+// Test replies fit the existing five-word packet. Raw contact and interpreted
+// request are separate; debounced transition counts retain short switch presses.
+static void ReportTest(uint32_t nonce) {
+    uint32_t mask = __get_PRIMASK();
+    __disable_irq();
+    uint32_t flags = (mode == MODE_TEST) |
+        ((uint32_t)(HAL_GPIO_ReadPin(PEEL_SWITCH_PORT, PEEL_SWITCH_PIN) == GPIO_PIN_RESET) << 1) |
+        ((uint32_t)PeelRequested() << 2) | ((uint32_t)peelRunning << 3) |
+        ((uint32_t)(feedState == FEED_RUNNING) << 4) |
+        ((uint32_t)(HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN) == GPIO_PIN_RESET) << 5) |
+        ((uint32_t)(HAL_GPIO_ReadPin(MENU_BUTTON_PORT, MENU_BUTTON_PIN) == GPIO_PIN_RESET) << 6) |
+        ((uint32_t)(HAL_GPIO_ReadPin(COUNT_PORT, COUNT_PIN) == GPIO_PIN_SET) << 7);
+    uint32_t values[] = {nonce, flags, testSwitchChanges, HAL_GetTick(), movementTotal};
+    __set_PRIMASK(mask);
+    Boot_Reply(currentAddr, "TEST", values, 5);
+}
+
 static void ProcessRS485(void) {
     char line[RX_BUFFER_SIZE];
     if (!RS485_ReadLine(line, sizeof(line))) return;
@@ -472,6 +491,44 @@ static void ProcessRS485(void) {
     if (line[0] == 'B') {
         char* command = Boot_DecodePacket(line, currentAddr);
         if (command == NULL) return;
+        if (!strncmp(command, "TESTREAD ", 9)) {
+            const char* text = command + 9;
+            uint32_t nonce;
+            if (!Boot_ParseHex(&text, &nonce) || *text) return;
+            ReportTest(nonce);
+            return;
+        }
+        if (!strncmp(command, "TEST ", 5)) {
+            const char* text = command + 5;
+            uint32_t values[5];
+            for (uint8_t i = 0; i < 5; i++) {
+                if (!Boot_ParseHex(&text, &values[i]) || (i < 4 ? *text++ != ' ' : *text != 0)) return;
+            }
+            if (values[1] != HAL_GetUIDw0() || values[2] != HAL_GetUIDw1() || values[3] != HAL_GetUIDw2() || values[4] > 1U) return;
+            uint32_t mask = __get_PRIMASK();
+            __disable_irq();
+            uint8_t allowed = (mode == MODE_NORMAL || mode == MODE_TEST) &&
+                              (feedState == FEED_IDLE || feedState == FEED_FAULT);
+            if (allowed) {
+                Board_MotorIdle();
+                peelRunning = peelClosed = peelCycle = 0;
+                peelOffAt = HAL_GetTick();
+                if (values[4] && mode != MODE_TEST) {
+                    testSwitchRaw = testSwitchStable = HAL_GPIO_ReadPin(PEEL_SWITCH_PORT, PEEL_SWITCH_PIN) == GPIO_PIN_RESET;
+                    testSwitchChanges = 0;
+                    testSwitchChangedAt = HAL_GetTick();
+                }
+                mode = values[4] ? MODE_TEST : MODE_NORMAL;
+                feedReady = !values[4] && !settingsFault && !optionsFault && feedState == FEED_IDLE;
+                feedButtonEligible = buttonEligible = 0;
+                locateToggles = 0;
+                displayDirty = 1;
+            }
+            __set_PRIMASK(mask);
+            if (allowed) ReportTest(values[0]);
+            else Boot_Reply(currentAddr, "BUSY", values, 1);
+            return;
+        }
         if (!strncmp(command, "STOP ", 5)) {
             const char* text = command + 5;
             uint32_t nonce;
@@ -837,12 +894,21 @@ void Feeder_Tick(void) {
         Motor_Fault(FAULT_INDEX);
         LED_ON();
     }
+    if (mode == MODE_TEST) {
+        uint8_t raw = HAL_GPIO_ReadPin(PEEL_SWITCH_PORT, PEEL_SWITCH_PIN) == GPIO_PIN_RESET;
+        if (raw != testSwitchRaw) { testSwitchRaw = raw; testSwitchChangedAt = now; }
+        if (raw != testSwitchStable && (uint32_t)(now - testSwitchChangedAt) >= PEEL_DEBOUNCE_MS) {
+            testSwitchStable = raw;
+            testSwitchChanges++;
+        }
+    }
     uint8_t closed = PeelRequested();
+    if (!closed && feedState != FEED_RUNNING) peelCycle = 0;
     if (!closed) peelClosed = 0;
     else if (!peelClosed) { peelClosed = 1; peelClosedAt = now; }
     uint8_t permitted = feedReady && !jogPeelHold && Feeder_TypeValid(currentType) && !locateToggles && currentAddr >= ADDRESS_MIN && currentAddr <= VALUE_MAX &&
                         mode == MODE_NORMAL && feedState != FEED_FAULT &&
-                        (currentType > 8U || feedState == FEED_RUNNING);
+                        (currentType > 8U || feedState == FEED_RUNNING || peelCycle);
     if (!permitted || !closed) {
         if (peelRunning) {
             HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_PEEL_A_PIN | MOTOR_PEEL_B_PIN, GPIO_PIN_SET);

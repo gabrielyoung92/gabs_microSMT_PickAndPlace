@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read/set 0.1.1 motor/switch options. Never feeds or uploads firmware."""
+"""Read/set feeder motor/switch options. Never feeds or uploads firmware."""
 import argparse
 import secrets
 
@@ -14,29 +14,25 @@ def read_options(link, nonce):
     return result[1:]
 
 
+def save_options(link, uid, options, nonce):
+    if len(options) != 3 or any(value not in (0, 1) for value in options):
+        raise ValueError("Three boolean configuration values required")
+    body = "SETCONFIG " + " ".join(f"{v:08X}" for v in (nonce, *uid, *options))
+    try:
+        link.request(body, {"CONFIGSET"}, attempts=1,
+                     expected="CONFIGSET " + " ".join(f"{v:08X}" for v in (nonce, *options)))
+    except TimeoutError:
+        pass  # Read back an uncertain save; never repeat it automatically.
+    actual = read_options(link, nonce)
+    if actual != tuple(options):raise UpdateError("Configuration did not verify")
+    return actual
+
+
 def configure(port, address, options=None):
     nonce = secrets.randbits(32)
     link = Link(port, address)
     uid, _ = identify(link, nonce, 1)
-    before = read_options(link, nonce)
-    if options is None:
-        return uid, before
-    if len(options) != 3 or any(value not in (0, 1) for value in options):
-        raise ValueError("Three boolean configuration values required")
-    checked_uid, _ = identify(link, nonce, 1)
-    if checked_uid != uid:
-        raise UpdateError("Feeder identity changed")
-    body = "SETCONFIG " + " ".join(f"{v:08X}" for v in (nonce, *uid, *options))
-    expected = "CONFIGSET " + " ".join(f"{v:08X}" for v in (nonce, *options))
-    try:
-        link.request(body, {"CONFIGSET"}, attempts=1, expected=expected)
-    except TimeoutError:
-        pass  # Verify an uncertain save; never automatically repeat the write.
-    actual_uid, _ = identify(link, nonce, 1)
-    actual = read_options(link, nonce)
-    if actual_uid != uid or actual != tuple(options):
-        raise UpdateError("Configuration did not verify on the selected board")
-    return uid, actual
+    return uid, read_options(link, nonce) if options is None else save_options(link,uid,options,nonce)
 
 
 def events_for_pitch(pitch_mm, step_um):
@@ -53,21 +49,20 @@ def events_for_pitch(pitch_mm, step_um):
         raise ValueError("Invalid item pitch") from error
 
 
-def set_count(port, address, count):
+def set_count(port, address, count, uid=None):
     if not 1 <= count <= 99:
         raise ValueError("Default count must be 1..99")
     link = Link(port, address)
     nonce = secrets.randbits(32)
-    uid, _ = identify(link, nonce, 1)
+    if uid is None:uid, _ = identify(link, nonce, 1)
     body = "SETCOUNT " + " ".join(f"{v:08X}" for v in (nonce, *uid, count))
     try:
         link.request(body, {"COUNTSET"}, attempts=1,
                      expected=f"COUNTSET {nonce:08X} {count:08X}")
     except TimeoutError:
         pass
-    actual_uid, _ = identify(link, nonce, 1)
     result = fields(link.request(f"TYPE {nonce:08X}", {"TYPE"}), "TYPE", 4)
-    if actual_uid != uid or result[0] != nonce or result[2] != count:
+    if result[0] != nonce or result[2] != count:
         raise UpdateError("Default count did not verify on the selected board")
     return result[1:]
 

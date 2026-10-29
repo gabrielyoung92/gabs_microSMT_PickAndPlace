@@ -2,7 +2,7 @@
 
 > Designs and original files by [MicroSMT](https://github.com/microsmt/Bing-feeder). [Credits and local changes](../../CREDITS.md).
 
-This is the ESP32-C3 controller for the V485 feeder bus. The local firmware waits for an advance to finish before acknowledging M600, and also passes firmware updates from USB to the feeders over RS485. It is still **0.1.0 development firmware**, with no hardware testing yet.
+This is the ESP32-C3 controller for the V485 feeder bus. The local firmware waits for an advance to finish before acknowledging M600, and also passes firmware updates from USB to the feeders over RS485. This machine uses the [direct USB–RS485 PC host](../V485-feeder/USB_host/README.md); the ESP32 controller is an alternative bus bridge.
 
 | Browse | Contents |
 | --- | --- |

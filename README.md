@@ -6,7 +6,8 @@ The original designs belong to MicroSMT and its contributors. This is an unoffic
 
 | Browse | Contents |
 | --- | --- |
-| [V485 feeder](Bing-feeder/V485-feeder/README.md) | 8/12/16/24 mm mechanics, shared parts, feeder/display PCBs and STM32 firmware |
+| [Feeder dashboard and PC host](Bing-feeder/V485-feeder/USB_host/README.md) | Port 80 web interface, direct USB–RS485, feeder TCP, parts/packages and job stock |
+| [V485 feeder](Bing-feeder/V485-feeder/README.md) | 8/12/16/24 mm mechanics, PCBs and universal STM32 firmware 0.1.2 |
 | [V485 controller](Bing-feeder/V485-Feeder%20Controller/README.md) | ESP32-C3 controller and 180/480 mm busbars |
 | [V3 feeder](Bing-feeder/V3-feeder/README.md) | 8/12/16/24 mm models, shared parts and assembly references |
 | [V3 controller](Bing-feeder/V3-Feeder%20Controller/README.md) | Mega2560 sketch, controller PCB and busbars |
@@ -29,13 +30,38 @@ Each part has a picture, download links and extra views. STL files are for print
 
 - [V485 missing parts and questions for Bing](V485-MISSING-PARTS.md)
 - [ESP32-C3 controller: PlatformIO build guide](Bing-feeder/V485-Feeder%20Controller/CODE_esp32C3/README.md)
-- [MicroSMT web console: manual machine control, feeder diagnostics and OpenPnP TCP](Bing-feeder/V485-feeder/USB_host/README.md)
+- [Powered-feeder dashboard: setup, firmware updates and OpenPnP connection](Bing-feeder/V485-feeder/USB_host/README.md)
 - [V485 feeder variants: PlatformIO / STM32 HAL build guide](Bing-feeder/V485-feeder/CODE_feeder/README.md)
 - [Other STM32 vendor firmware build guide](Bing-feeder/STM32-BUILD.txt)
 - [Editable KiCad reference projects](tools/kicad/README.md)
 - [Machine setup status](Microsmt-PNPv3/docs/machine-setup-status.md)
 
-The V485 models include the 8/12/16/24 mm files from the 21 October 2026 download. The [update notes](Bing-feeder/UPSTREAM-2026-10-21.md) explain what was added. The local feeder and controller firmware is still **0.1.0 and unreleased**. One 8 mm feeder has passed initial startup/display, RS485 identity and RS485 application-update checks; physical motor/switch operation and controller hardware validation remain outstanding.
+## This machine's software
+
+The machine computer is a Dell OptiPlex running Debian 13 and OpenPnP.
+OpenPnP connects directly to the Smoothieboard and cameras, and handles pickup
+teaching, nozzle management and jobs. The feeder host owns the USB–RS485 adapter
+and exposes one local TCP port, `127.0.0.1:5001`, for feeder advances. The web
+interface is at `http://machine-hostname/`, without authentication or TLS.
+
+The dashboard provides feeder state/errors, stock, motor/switch configuration,
+input tests and individual/bulk firmware updates. It also offers compact native
+OpenPnP part/package editing and a remaining-job stock check. Tip compatibility
+is selected through packages; physical nozzle setup stays in OpenPnP.
+
+Current feeder firmware is **0.1.2**, one application for all four tape widths.
+The installed bootloader handles updates. Building creates the web firmware
+bundle automatically; connected outdated units can then be queued from the page.
+
+| Source | Location |
+| --- | --- |
+| Computer service, dashboard and OpenPnP script | [`Bing-feeder/V485-feeder/USB_host/`](Bing-feeder/V485-feeder/USB_host/README.md) |
+| Feeder application, loader and serial tools | [`Bing-feeder/V485-feeder/CODE_feeder/`](Bing-feeder/V485-feeder/CODE_feeder/README.md) |
+| Remaining bench work | [TODO.md](TODO.md) |
+
+Use the [host guide](Bing-feeder/V485-feeder/USB_host/README.md) for installation
+and the [firmware guide](Bing-feeder/V485-feeder/CODE_feeder/README.md) for builds.
+Private machine data, SSH keys and generated firmware bundles stay outside Git.
 
 ## Folder layout
 

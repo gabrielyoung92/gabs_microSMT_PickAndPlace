@@ -4,7 +4,9 @@
 
 This is the local PlatformIO version of MicroSMT’s V25 RS485 controller. It sends advance commands to the feeders and passes firmware updates from USB to the RS485 bus.
 
-**Version 0.1.0 is still in development. No real controller or feeder has been programmed or tested with this firmware.** The [changelog](CHANGELOG.md) lists the work and software checks so far.
+This machine uses the [direct USB–RS485 host](../../V485-feeder/USB_host/README.md).
+This separate ESP32-C3 bridge source is available for a controller-board setup;
+its hardware operation has not been validated. See its [changelog](CHANGELOG.md).
 
 ## Build
 
@@ -52,7 +54,7 @@ The controller sends the advance **once**, then checks its result with read-only
 
 Busy, faults, a lost request record after reset, or a completion timeout return `error: ...` without `ok`. **Don’t blindly resend an advance after a missing reply:** the tape may already have moved. Status requests can be repeated safely; advances cannot. Repeated advance requests are not deduplicated.
 
-Use matching **0.1.0 development builds** of the feeder and controller with the FEED/STATUS protocol. An acceptance-only draft cannot report completion. Each reply must match the feeder ID, controller startup session and request sequence, with a valid CRC. Bare `OK` and old or wrong-feeder replies are ignored. Reaching the sensor count still needs checking against real tape movement and part presentation.
+Use the addressed FEED/STATUS protocol implemented by this controller and the current universal feeder application. An acceptance-only draft cannot report completion. Each reply must match the feeder ID, controller startup session and request sequence, with a valid CRC. Bare `OK` and old or wrong-feeder replies are ignored. Reaching the sensor count still needs checking against real tape movement and part presentation.
 
 ### Timeouts
 
@@ -101,7 +103,7 @@ The controller also forwards locally armed ID assignments. Select PA4 menu `01` 
 python tools/assign_id.py --port COM7 --address 7 --new-id 12
 ```
 
-Address 0 is reserved for programming an unassigned feeder and is never a valid new ID. The PC tool checks responding destination IDs, targets the selected feeder's hardware UID, saves once and verifies at the new ID. See the [feeder button/wiring guide](../../V485-feeder/CODE_feeder/README.md#pa4-button-and-saved-settings). Manual PA4 menu `03` also changes an ID. Controller feeds remain blocked until assignment/update traffic has been idle for 10 seconds.
+Address 0 is reserved for programming an unassigned feeder and is never a valid new ID. The PC tool checks responding destination IDs, targets the selected feeder's hardware UID, saves once and verifies at the new ID. See the [feeder button/wiring guide](../../V485-feeder/CODE_feeder/README.md#local-buttons). PA2 menu `03` also changes an ID. Controller feeds remain blocked until assignment/update traffic has been idle for 10 seconds.
 
 ## Check without hardware
 

@@ -1,58 +1,164 @@
 <!doctype html>
-<html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MicroSMT · Machine console</title>
-<style>
-:root{font:15px system-ui,sans-serif;color:#19302f;background:#edf2f1;accent-color:#087c65}*{box-sizing:border-box}body{max-width:1400px;margin:auto;padding:28px}h1{font-size:28px;margin:0}h2{font-size:18px;margin:0 0 15px}p{line-height:1.6}small,.muted{color:#5d706e}header,.bar{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}header{margin-bottom:22px}.eyebrow{font-size:12px;letter-spacing:2px;font-weight:700;color:#087c65;margin-bottom:7px}.bar,section,.metric{background:#fff;border:1px solid #d5e0dd;border-radius:12px;padding:20px}.bar{background:#193f3b;color:white}.bar small{color:#ccded9}button,input{font:inherit;border:1px solid #bbcfca;border-radius:6px;padding:9px 12px}button{background:#087c65;color:white;cursor:pointer}button.secondary{background:#f1f6f4;color:#193f3b}button:disabled{opacity:.45;cursor:not-allowed}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #57bca7;outline-offset:3px}input{max-width:100%;background:white;color:#19302f}input[type=number]{width:100px}input[type=file]{width:100%}label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#405d57}form{display:flex;gap:14px;align-items:end;flex-wrap:wrap}details{border-top:1px solid #dce5e1;padding:18px 0}summary{cursor:pointer;font-weight:650}details p{font-size:14px;color:#5d706e}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}.metric strong{display:block;font-size:27px;margin-top:8px}.layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(300px,1fr);gap:18px}section{min-width:0;margin-bottom:18px}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;border-bottom:1px solid #e3eae7;padding:13px 8px;white-space:nowrap}th{font-size:12px;color:#5d706e;font-weight:600}tr.selected{background:#ecf7f2}.select{background:#edf4f1;color:#176451;padding:5px 10px;font-weight:650}.badge{display:inline-block;border-radius:20px;padding:4px 9px;font-size:12px;background:#e4f3ec;color:#12674e}.bad{color:#a52f3c}.badge.bad{background:#fce9ea}.warning{color:#95620b}.badge.warning{background:#fff1d7}#message{min-height:30px;margin:14px 0;white-space:pre-wrap}#errors{font-size:13px;white-space:pre-wrap}dl{display:grid;grid-template-columns:1fr 1.3fr;gap:12px;font-size:14px}dt{color:#5d706e}dd{margin:0;overflow-wrap:anywhere}code{font-size:13px}progress{width:100%;height:15px}#upload-result{white-space:pre-wrap;font-size:14px;line-height:1.6}footer{font-size:12px;color:#5d706e;margin:20px 0}#image-info{overflow-wrap:anywhere;font-size:13px}#update{display:grid;grid-template-columns:100px 1fr}#update button,#update label:last-of-type{grid-column:1/-1}#search{width:200px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}#connection{font-size:13px}.error{background:#fce9ea;border-radius:6px;padding:10px}@media(max-width:900px){.layout{grid-template-columns:1fr}body{padding:16px}.metrics{grid-template-columns:repeat(2,1fr)}}
+<!-- Original MicroSMT designs retain credit. Local feeder dashboard by Gab. -->
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MicroSMT · Powered feeders</title><style>
+#stock-tooling{white-space:pre-line;font-size:12px;line-height:1.6;margin-top:10px;min-height:40px}
+:root{font:13px system-ui,sans-serif;color:#19302f;background:#edf2f1;accent-color:#087c65}*{box-sizing:border-box}[hidden]{display:none!important}html{scrollbar-gutter:stable}body{max-width:1500px;margin:auto;padding:14px 20px}header,.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:26px}header{margin-bottom:8px}h1{font-size:21px;margin:0}h2{font-size:15px;margin:0 0 8px}h3{font-size:13px;margin:0 0 8px}p{line-height:1.5;margin:6px 0}small,.muted,#connection,.status{display:flex;justify-content:space-between;height:24px;color:#5d706e;font-size:12px}section,.metric{background:white;border:1px solid #d5e0dd;border-radius:8px;padding:12px;margin-bottom:12px}button,input,select{font:inherit;border:1px solid #bbcfca;border-radius:5px;padding:6px 9px}button{background:#087c65;color:white;cursor:pointer;white-space:nowrap}button.secondary{background:#f1f6f4;color:#193f3b}button:disabled{opacity:.6;cursor:not-allowed}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #57bca7;outline-offset:2px}input,select{max-width:100%;background:white;color:#19302f}input[type=number]{width:100px}input[type=file]{width:100%}label{display:flex;flex-direction:column;gap:5px;font-size:12px;color:#405d57}form{display:flex;gap:8px;align-items:end;flex-wrap:wrap}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.metric strong{margin-left:12px;font-size:18px}.layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(330px,1fr);gap:12px}section{min-width:0}.scroll{overflow:auto}table{border-collapse:collapse;width:100%}th,td{text-align:left;border-bottom:1px solid #e3eae7;padding:8px;white-space:nowrap}th{font-size:12px;color:#5d706e}tr.selected{background:#ecf7f2}.select{background:#edf4f1;color:#176451;font-weight:650;padding:5px 10px}.badge{display:inline-block;border-radius:20px;padding:4px 9px;font-size:12px;background:#e4f3ec;color:#12674e}.bad{color:#a52f3c}.badge.bad,.error{background:#fce9ea}.warning{color:#95620b}.badge.warning{background:#fff1d7}#message{display:block;height:32px;margin:0 0 8px;padding:7px 10px;line-height:18px;white-space:nowrap;overflow:auto;border-radius:5px}#errors{font-size:12px;white-space:pre-wrap;margin:0;max-height:80px;overflow:auto}dl{display:grid;grid-template-columns:1fr 1.3fr;gap:8px;font-size:12px;margin:8px 0}dt{color:#5d706e}dd{margin:0;overflow-wrap:anywhere}progress{width:100%;height:15px}#upload-result,#image-info{white-space:pre-wrap;font-size:12px;overflow-wrap:anywhere}#update{display:grid;grid-template-columns:100px 1fr}#update button,#update label:last-of-type{grid-column:1/-1}#search{width:190px}.section-title{margin-bottom:6px}.control-group{padding:10px 0;border-top:1px solid #e3eae7}.control-group:first-of-type{border-top:0;padding-top:0}.control-group p{font-size:12px;color:#5d706e;margin:4px 0 8px}@media(max-width:800px){.layout{grid-template-columns:1fr}body{padding:10px}.metrics{grid-template-columns:repeat(2,1fr)}}
 
-h3{font-size:15px;margin:18px 0 12px}.manual-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.motion-actions{display:flex;align-items:end;gap:10px;flex-wrap:wrap;margin:12px 0}.positions{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.position{background:#edf4f1;border-radius:8px;padding:14px}.position strong{display:block;font-size:24px;font-variant-numeric:tabular-nums}.position small{font-size:11px}.halt{background:#a52f3c;margin-left:auto}.check-label{display:flex;flex-direction:row;align-items:center;line-height:1.5}.check-label input{width:22px;height:22px;flex-shrink:0}.jog-pad{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;max-width:390px;margin:18px 0}.jog-pad button:first-child{grid-column:2}.jog-pad button:nth-child(2){grid-row:2;grid-column:1}.jog-pad span{grid-row:2;grid-column:2;text-align:center;align-self:center;color:#5d706e}.jog-pad button:nth-child(4){grid-row:2;grid-column:3}.jog-pad button:last-child{grid-row:3;grid-column:2}select{font:inherit;border:1px solid #bbcfca;border-radius:6px;padding:9px 12px;background:white}.output-row{display:flex;gap:10px;align-items:center;justify-content:space-between;border-bottom:1px solid #e3eae7;padding:10px 0}.output-row span{flex:1}#motion-log{max-height:240px;overflow:auto;white-space:pre-wrap;font-size:12px}#motion-state{white-space:pre-wrap}@media(max-width:900px){.manual-grid{grid-template-columns:1fr}.positions{grid-template-columns:repeat(3,1fr)}.halt{margin-left:0}}
+.toolbar{display:flex;align-items:center;gap:20px;height:38px;margin-bottom:6px}nav{display:flex;gap:4px}nav button{background:transparent;color:#405d57;border-color:transparent;padding:7px 18px}nav button[aria-selected=true]{background:#087c65;color:white}#mode{font-size:12px;color:#5d706e}.metrics{display:flex;gap:22px;height:28px;align-items:center;margin-bottom:10px}.metric{background:none;border:0;border-radius:0;padding:0;margin:0;color:#5d706e;font-size:12px}.metric strong{font-size:13px;color:#19302f;margin-left:6px}#panel-feeders>section:first-of-type{margin-bottom:12px}.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:1100px}.narrow{max-width:700px}#update{margin:12px 0}#refresh{margin-top:10px}#firmware-info{height:34px;overflow:auto}#stock-hint{height:20px;margin:0 0 8px}#stock{min-height:56px}#errors{margin-top:12px;max-height:150px}.settings-grid #details{min-height:200px}@media(max-width:800px){.settings-grid{grid-template-columns:1fr}.metrics{gap:12px;flex-wrap:wrap;height:auto;min-height:28px}.toolbar{gap:10px}nav button{padding:7px 13px}}
+.list-tools{display:flex;gap:16px;align-items:end}.list-tools [role=group]{display:flex;gap:3px;padding-bottom:1px}.list-tools button{padding:6px 12px}.feeder-work{display:grid;grid-template-columns:1fr 1fr;gap:12px}#rows td{vertical-align:middle}#rows td small{display:block;font-size:11px}#rows .row-error{max-width:240px;min-width:130px;white-space:normal;font-size:12px}#config-status{min-height:36px;height:36px;overflow:auto}#hardware{min-height:84px}#hardware-card h2{margin:0}#hardware-card .section-title{height:30px}.cached{color:#95620b}#hardware input[name=address]{width:70px}#hardware select{max-width:125px}@media(max-width:1000px){.feeder-work{grid-template-columns:1fr}.list-tools{gap:8px;flex-wrap:wrap}}
+table{table-layout:fixed;min-width:1380px}#rows td{overflow-wrap:anywhere}#rows td:nth-child(8){white-space:normal}dialog{padding:0;border:1px solid #b9cbc5;border-radius:9px;width:min(720px,calc(100vw - 32px));max-height:85vh;overflow:auto;box-shadow:0 15px 70px #102e3533}dialog::backdrop{background:#102e3544}dialog section{border:0;margin:0;padding:18px}dialog .section-title{margin-bottom:10px}dialog .dialog-actions{display:flex;gap:8px}dialog [data-dialog-message]{height:40px;overflow:auto;font-size:12px;line-height:16px;margin:10px 0 0;padding:4px}dialog #stock{gap:10px}dialog #hardware{gap:10px}#rows td:last-child{white-space:nowrap}#rows td:last-child button{padding:5px 8px;margin-right:5px}#rows .operating-state{font-size:12px}tr.advancing{background:#d5f4ea!important}tr.recent-movement{background:#edf8f3!important}.operating-state[data-active=true]::before{content:'';display:inline-block;width:7px;height:7px;background:#078466;border-radius:50%;margin-right:5px;animation:feedpulse .6s ease-in-out infinite alternate}@keyframes feedpulse{to{opacity:.25}}@media(prefers-reduced-motion:reduce){.operating-state[data-active=true]::before{animation:none}}
+.firmware-cell{display:flex;align-items:center;justify-content:space-between;gap:6px}.firmware-cell button{padding:4px 7px;font-size:12px}
+#hardware{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start}.bus-label{grid-column:1/-1;font-size:12px;color:#405d57}.bus-label strong{margin-left:8px;color:#19302f}.button-options{margin:0;padding:0;border:0;min-width:0}.button-options legend{font-size:12px;color:#405d57;margin-bottom:6px}.choice{display:inline-flex;position:relative;margin-right:3px;cursor:pointer}.choice input{position:absolute;opacity:0;width:1px;height:1px}.choice span{display:block;border:1px solid #bbcfca;border-radius:5px;padding:6px 10px;background:#f1f6f4;color:#193f3b;white-space:nowrap}.choice input:checked+span{background:#087c65;color:white;border-color:#087c65}.choice input:focus-visible+span{outline:3px solid #57bca7;outline-offset:2px}.choice input:disabled+span{opacity:.45;cursor:not-allowed}.hardware-actions{grid-column:1/-1;display:flex;gap:8px}#custom-pitch{min-height:56px}#hardware-card .section-title{height:auto;min-height:30px}@media(max-width:500px){#hardware{grid-template-columns:1fr}.choice span{padding:6px 8px}}
+[data-update-all]{min-width:200px}.list-tools{flex-wrap:wrap}
+.update-queue{min-width:0;table-layout:fixed}.update-queue th:first-child{width:12%}.update-queue th:nth-child(2){width:53%}.update-queue td{height:48px;white-space:normal;overflow-wrap:anywhere}
+dialog #stock{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.stock-part{grid-column:span 2}#stock select{width:100%}#stock>button{justify-self:start}.part-sync{display:flex;align-items:center;gap:10px;min-height:44px;font-size:12px}@media(max-width:550px){dialog #stock{grid-template-columns:1fr 1fr}}
+.parts-table{min-width:700px;table-layout:auto}.parts-table td{white-space:normal;overflow-wrap:anywhere}.parts-table td:last-child{width:70px}#part-search{width:240px}#part-edit{display:grid;grid-template-columns:1fr 1fr;gap:12px}#part-edit label:first-child{grid-column:1/-1}#part-edit select{max-width:100%}#part-edit button{justify-self:start;align-self:end}
+.catalogue-actions{display:flex;gap:8px;margin-left:auto}#part-edit .part-name-field,#new-part-id{grid-column:1/-1}.package-choice{display:flex;align-items:end;gap:8px}.package-choice label{min-width:0;flex:1}.package-choice button{font-size:12px}#package-create{display:grid;grid-template-columns:1fr;gap:12px}#package-create button{justify-self:start}#package-search{width:230px}
+#tip-inventory-fields{display:grid;gap:12px;grid-template-columns:1fr 1fr}#tip-inventory-fields fieldset{grid-column:1/-1}
+#panel-packages td:last-child{width:155px}.footprint{display:block;width:64px;height:44px;background:#f4f8f7;border:1px solid #d6e2df;border-radius:4px}.footprint-large{width:100%;height:190px}.preview-button{padding:0;border:0;background:none;cursor:pointer}.field-button{color:inherit;text-align:left;background:none;border:0;padding:4px;min-height:28px;max-width:300px;white-space:normal}.field-button:hover,.field-button:focus-visible{background:#e3eeeb;outline:1px solid #8bb6ac}.package-edit-layout{display:grid;grid-template-columns:230px minmax(200px,1fr);gap:16px}#package-edit{display:grid;gap:12px}#package-edit button{justify-self:start}#package-nozzles{display:flex;flex-wrap:wrap;gap:6px;max-height:180px;overflow:auto}#package-nozzles .choice span{padding:5px 8px}.package-editor-preview p{font-size:12px;margin:6px 0}.row-actions{display:flex;gap:5px}#part-preview{grid-column:1/-1;display:flex;align-items:center;gap:12px}#part-preview .footprint{width:120px;height:80px}#part-preview span{font-size:12px;color:#405d57}@media(max-width:550px){.package-edit-layout{grid-template-columns:1fr}.footprint-large{height:150px}}
+
+nav a{display:inline-block;text-decoration:none;border-radius:5px;padding:7px 12px;font-weight:600;color:#405d57}nav a[aria-selected="true"]{background:#087c65;color:white}nav a:focus-visible{outline:3px solid #57bca7}#job-summary{min-height:24px}#panel-job td:nth-child(2),#panel-job td:nth-child(3){width:90px}#panel-job td:last-child{width:260px}nav{overflow-x:auto;white-space:nowrap}@media(max-width:600px){.toolbar{overflow-x:auto}#mode{white-space:nowrap}}
 </style>
-<header><div><div class="eyebrow">MICROSMT / OPENPNP</div><h1>Machine console <small id="version"></small></h1></div><span id="connection" role="status">Connecting to host…</span></header>
-<div class="bar"><div><strong id="mode">Waiting for service</strong><br><small id="poll-status">115200 baud · 8N1</small></div><div><small>OpenPnP feeder TCP</small><br><code id="endpoint">127.0.0.1:5001</code></div><button id="maintenance" class="secondary" disabled>Enable maintenance</button></div>
+<header><h1>MicroSMT · Powered feeders <span id="version" hidden></span></h1><span id="connection" role="status">Connecting…</span></header>
+<div class="toolbar"><nav role="tablist" aria-label="Feeder dashboard">
+<a href="/" id="tab-feeders" role="tab" aria-selected="true" aria-controls="panel-feeders">Feeders</a><a href="/parts" id="tab-parts" role="tab" aria-selected="false" aria-controls="panel-parts" tabindex="-1">Parts</a><a href="/packages" id="tab-packages" role="tab" aria-selected="false" aria-controls="panel-packages" tabindex="-1">Packages</a><a href="/job" id="tab-job" role="tab" aria-selected="false" aria-controls="panel-job" tabindex="-1">Job stock</a><a href="/firmware" id="tab-firmware" role="tab" aria-selected="false" aria-controls="panel-firmware" tabindex="-1">Firmware</a><a href="/settings" id="tab-settings" role="tab" aria-selected="false" aria-controls="panel-settings" tabindex="-1">Settings</a>
+</nav><span id="mode">Connecting…</span></div>
 <div id="message" role="status" aria-live="polite"></div>
-<section id="machine"><div class="section-title"><div><h2>Machine control</h2><small id="motion-endpoint">Motion controller not configured</small></div><strong id="motion-owner">Unavailable</strong></div>
-<p id="motion-state" role="status">Waiting for controller status…</p>
-<div class="motion-actions"><button data-motion="claim" disabled>Take manual control</button><button data-motion="release" class="secondary" disabled>Return to OpenPnP</button><button data-motion="halt" class="halt" disabled>Software halt</button></div>
-<label class="check-label"><input id="connected-jog-ready" type="checkbox">OpenPnP is enabled, homed and idle; no job is running. Allow connected web jogs.</label>
-<div class="motion-actions"><button data-motion="report_connected" class="secondary" disabled>Send position to OpenPnP</button></div><p id="published-position" class="muted">No unsolicited position report sent this service session.</p>
-<p class="muted">For the connected jog test, keep OpenPnP connected and confirm the idle condition above. Each jog sends a work-position report after completion. Disconnect OpenPnP for standalone manual control. Software halt uses the controller's real-time halt; use the physical emergency stop for an emergency.</p>
-<div class="positions" id="positions"></div><p id="position-age" class="muted"></p>
-<div class="manual-grid"><div><h3>Head movement</h3><div class="motion-actions"><label>XYZ step (mm)<select id="jog-step"><option>0.1</option><option selected>1</option><option>5</option><option>10</option></select></label><label>Speed (mm/s)<input id="jog-speed" type="number" min="0.1" max="100" value="10" step="0.1"></label></div>
-<div class="jog-pad"><button data-axis="Y" data-sign="1" disabled>Y+ · back</button><button data-axis="X" data-sign="-1" disabled>X− · left</button><span>XY head</span><button data-axis="X" data-sign="1" disabled>X+ · right</button><button data-axis="Y" data-sign="-1" disabled>Y− · front</button></div>
-<div class="motion-actions"><button data-axis="Z" data-sign="1" disabled>Z+ · N1 up / N2 down</button><button data-axis="Z" data-sign="-1" disabled>Z− · N1 down / N2 up</button></div><small>Z moves both heads together. Check clearance; Z speed is limited to 10 mm/s.</small>
-<h3>Nozzle rotation</h3><label>Rotation step (degrees)<select id="rotation-step"><option>1</option><option selected>5</option><option>15</option><option>45</option></select></label><div class="motion-actions"><button data-axis="A" data-sign="-1" disabled>N1 A−</button><button data-axis="A" data-sign="1" disabled>N1 A+</button><button data-axis="B" data-sign="-1" disabled>N2 B−</button><button data-axis="B" data-sign="1" disabled>N2 B+</button></div>
-</div><div><h3>Homing and motors</h3><small id="motor-state">Motor command state unknown</small><label class="check-label"><input id="heads-ready" type="checkbox">Heads are level or N2 is below N1 for the central Z homing gate.</label><div class="motion-actions"><button data-motion="home" disabled>Home XYZ</button><button data-motion="enable" class="secondary" disabled>Enable motors</button><button data-motion="disable" class="secondary" disabled>Outputs off / disable motors</button><button data-motion="read" class="secondary" disabled>Read position / endstops</button></div><p><small>Standalone manual mode requires web homing; the connected test uses OpenPnP homing. Homing sets A/B work zero without rotating. Travel: X 0–385, Y 0–470, Z −30–+30 mm.</small></p>
-<h3>Pump, valves and lights</h3><div id="output-controls"></div><div class="motion-actions"><button data-motion="all_off" class="secondary" disabled>All outputs off</button></div><small>Output indicators show accepted commands; they do not measure pressure or confirm physical output state.</small></div></div>
-<details><summary>Controller diagnostics</summary><p id="endstops">No endstop report yet.</p><pre id="motion-log"></pre></details></section>
+<div id="panel-feeders" role="tabpanel" aria-labelledby="tab-feeders">
+<div class="metrics"><div class="metric">Known<strong id="total">—</strong></div><div class="metric">Online<strong id="ready">—</strong></div><div class="metric">Faults<strong id="faults">—</strong></div><div class="metric">Low stock estimates<strong id="low">—</strong></div></div>
+<section><div class="section-title"><h2>Feeders</h2><div class="list-tools"><button type="button" data-update-all disabled>Update all outdated</button><div role="group" aria-label="Connection filter"><button type="button" data-connection="all" class="secondary">All</button><button type="button" data-connection="online">Online</button><button type="button" data-connection="offline" class="secondary">Offline</button></div><label>Filter <input id="search" type="search" placeholder="ID, width, reel or UID"></label></div></div><div class="scroll"><table><colgroup><col style="width:4%"><col style="width:5%"><col style="width:6%"><col style="width:8%"><col style="width:13%"><col style="width:11%"><col style="width:11%"><col style="width:9%"><col style="width:8%"><col style="width:8%"><col style="width:17%"></colgroup><thead><tr><th>ID</th><th>Width</th><th>Advance</th><th>Connection</th><th>Firmware</th><th>State</th><th>Errors</th><th>Reel / part</th><th>Remaining</th><th>Last seen</th><th></th></tr></thead><tbody id="rows"><tr><td colspan="11">Waiting for telemetry…</td></tr></tbody></table></div></section></div>
+<dialog id="test-dialog" aria-labelledby="test-title"><section><div class="section-title"><h2 id="test-title">Input test</h2><button type="button" data-close="test-dialog" class="secondary">Close</button></div><p id="test-state" role="status" style="height:64px;overflow:auto">Reading feeder…</p><dl id="test-inputs" style="min-height:180px"></dl><div class="catalogue-actions"><button type="button" id="test-start">Pause &amp; start input test</button><button type="button" id="test-read" class="secondary">Read inputs</button><button type="button" id="test-end" class="secondary" disabled>End test · normal operation</button></div><p class="muted">Firmware 0.1.2 required. Both motors stay off during the test, including when feeder buttons are pressed. Closing this popup leaves the test active. End explicitly or power-cycle; wider feeders may resume peeling when the test ends.</p><p data-dialog-message role="status" aria-live="polite"></p></section></dialog>
+<dialog id="stock-dialog" aria-labelledby="stock-title"><section><div class="section-title"><h2 id="stock-title">Reel / stock</h2><button type="button" data-close="stock-dialog" class="secondary" aria-label="Close reel and stock">Close</button></div><p id="stock-hint" class="muted">Select a feeder above to load or correct its stock.</p><form id="stock"><label>ID<input name="address" type="number" min="0" max="99" required readonly></label><label class="stock-part">Part<select id="stock-part" name="part_id"><option value="">No part</option></select></label><label>Reel label<input name="label" maxlength="128"></label><label>Quantity<input name="quantity" type="number" min="0" max="1000000000" required></label><label>Part spacing (mm)<input name="part_spacing_mm" type="number" min="2" max="198" step="2" value="2" required></label><label>Warn below<input name="low" type="number" min="0" max="1000000000" value="50" required></label><button disabled>Save stock</button></form><div id="stock-tooling" class="muted" aria-live="polite"></div><div class="part-sync"><span id="part-sync-status" role="status" aria-live="polite"></span><button type="button" id="retry-part-sync" class="secondary" hidden>Retry sync</button></div><p data-dialog-message role="status" aria-live="polite"></p></section></dialog>
+<dialog id="config-dialog" aria-labelledby="hardware-title"><section id="hardware-card"><div class="section-title"><h2 id="hardware-title">Feeder configuration</h2><div class="dialog-actions"><button class="secondary" data-maintenance disabled>Pause feeders</button><button type="button" data-close="config-dialog" class="secondary" aria-label="Close feeder configuration">Close</button></div></div>
+<p id="config-status" class="muted">Select Configure on a feeder to read its settings.</p>
+<form id="hardware"><div class="bus-label">Bus ID <strong id="config-bus-id">—</strong></div><fieldset class="button-options"><legend>Feed motor</legend><label class="choice"><input type="radio" name="feed_reverse" value="false"><span>Normal</span></label><label class="choice"><input type="radio" name="feed_reverse" value="true"><span>Reversed</span></label></fieldset><fieldset class="button-options"><legend>Peel motor</legend><label class="choice"><input type="radio" name="peel_reverse" value="false"><span>Normal</span></label><label class="choice"><input type="radio" name="peel_reverse" value="true"><span>Reversed</span></label></fieldset><fieldset class="button-options"><legend>Peel switch</legend><label class="choice"><input type="radio" name="switch_no" value="false"><span>NC</span></label><label class="choice"><input type="radio" name="switch_no" value="true"><span>NO</span></label></fieldset><fieldset class="button-options"><legend>Feed pitch</legend><label class="choice"><input type="radio" name="pitch_choice" value="2"><span>2 mm</span></label><label class="choice"><input type="radio" name="pitch_choice" value="4"><span>4 mm</span></label><label class="choice"><input type="radio" name="pitch_choice" value="8"><span>8 mm</span></label><label class="choice"><input type="radio" name="pitch_choice" value="custom"><span>Custom</span></label></fieldset><label id="custom-pitch">Custom pitch (mm)<input name="pitch_mm" type="number" min="2" step="2" required></label><div class="hardware-actions"><button type="submit" disabled>Save hardware settings</button><button type="button" id="config-read" class="secondary" disabled>Read settings</button></div></form>
+<p data-dialog-message role="status" aria-live="polite"></p></section></dialog>
 
-<div class="metrics"><div class="metric">Discovered<strong id="total">—</strong></div><div class="metric">Ready<strong id="ready">—</strong></div><div class="metric">Faults / read errors<strong id="faults">—</strong></div><div class="metric">Low stock estimates<strong id="low">—</strong></div></div>
-<div class="layout"><div><section><div class="section-title"><h2>Feeders</h2><label>Filter <input id="search" type="search" placeholder="ID, width, reel or UID"></label></div><div class="scroll"><table><thead><tr><th>ID / width</th><th>Reel / part</th><th>Status</th><th>Remaining</th><th>Last seen</th></tr></thead><tbody id="rows"><tr><td colspan="5">Waiting for telemetry…</td></tr></tbody></table></div><p id="errors" class="warning"></p><small>Stock is an estimate. Low, zero or uncertain stock never prevents feeding.</small></section>
-<section><h2>Reels and bus setup</h2>
-<details open><summary>Load a reel / correct stock</summary><p>Enter the quantity remaining now. Pulses per part counts index-sensor events per component pocket. Saving resets the stock estimate at the current sensor total.</p>
-<form id="stock"><label>ID<input name="address" type="number" min="0" max="99" required></label><label>Reel / part<input name="label" maxlength="128"></label><label>Quantity<input name="quantity" type="number" min="0" max="1000000000" required></label><label>Pulses / part<input name="pulses_per_part" type="number" min="1" max="99" value="1" required></label><label>Warn below<input name="low" type="number" min="0" max="1000000000" value="50" required></label><button disabled>Save stock</button></form></details>
-<details><summary>Polling and diagnostics</summary><p>Read now also checks the installed application size and CRC. It never advances tape. Only connect one unassigned module at address 0.</p><form id="polling"><label>Polling IDs<input name="ids" value="1-24" required></label><button disabled>Set polling IDs</button></form><br><form id="refresh"><label>ID<input name="address" type="number" min="0" max="99" required></label><button disabled>Read now</button></form></details>
-<details><summary>Assign a feeder ID</summary><p>Enable maintenance and select menu <strong>01</strong> on the feeder. The service checks the destination and verifies the same MCU at the new ID. An unplugged duplicate ID cannot be detected.</p><form id="assign"><label>Current ID<input name="address" type="number" min="0" max="99" required></label><label>New ID<input name="new_id" type="number" min="1" max="99" required></label><button disabled>Assign ID</button></form></details>
-</section></div><aside><section><h2 id="detail-title">Feeder details</h2><p id="selection-hint" class="muted">Select a feeder ID to inspect its hardware and prepare the controls below.</p><dl id="details"></dl></section>
-<section><h2>Firmware update</h2><p class="muted">Stop the OpenPnP job, then enable maintenance. Choose the universal V485 application <code>firmware.bin</code>. The RS485 bootloader must already be installed over SWD.</p>
-<form id="update"><label>Target ID<input name="address" type="number" min="0" max="99" required></label><label>Application file<input name="image" type="file" accept=".bin" required></label><label><span id="image-info">Choose a file to validate it before uploading.</span></label><button disabled>Upload and verify</button></form><p><small>Application updates preserve the feeder ID/type. Bootloader replacement requires SWD. Keep maintenance enabled after a failure until recovery.</small></p><label for="progress">Upload progress</label><progress id="progress" max="100" value="0"></progress><div id="upload-result" role="status" aria-live="polite">No upload this service session.</div></section></aside></div>
-<footer>MicroSMT original designs and firmware. Local host software by Gab with ChatGPT assistance. Development software; physical machine operation needs separate validation.</footer>
+<dialog id="updates-dialog" aria-labelledby="updates-title"><section><div class="section-title"><h2 id="updates-title">Firmware update queue</h2><button type="button" data-close="updates-dialog" class="secondary" aria-label="Close firmware update queue">Close</button></div><p id="queue-summary" role="status" aria-live="polite"></p><table class="update-queue"><thead><tr><th>ID</th><th>Status</th><th>Progress</th></tr></thead><tbody id="queue-rows"></tbody></table><p data-dialog-message role="status" aria-live="polite"></p></section></dialog>
+<div id="panel-parts" role="tabpanel" aria-labelledby="tab-parts" hidden><section><div class="section-title"><h2>OpenPnP parts</h2><div class="catalogue-actions"><button type="button" data-new-part>New part</button><button type="button" data-new-package class="secondary">New package</button></div><label>Search parts<input type="search" id="part-search" placeholder="ID, name or package"></label></div><p id="parts-status" class="muted"></p><div class="scroll"><table class="parts-table"><thead><tr><th>Preview</th><th>ID</th><th>Name</th><th>Package</th><th>Height</th><th></th></tr></thead><tbody id="part-rows"></tbody></table></div></section></div>
+<dialog id="part-dialog" aria-labelledby="part-title"><section><div class="section-title"><h2 id="part-title">Edit OpenPnP part</h2><button type="button" data-close="part-dialog" class="secondary" aria-label="Close part editor">Close</button></div><p id="part-identity">Part ID <strong id="part-id"></strong></p><p class="muted" id="part-hint">Changes apply to every feeder using this part.</p><form id="part-edit"><label id="new-part-id" hidden>Part ID<input name="part_id" maxlength="128" required disabled></label><label class="part-name-field">Name<input name="name" maxlength="256"></label><div class="package-choice"><label>Package<select name="package_id"></select></label><button type="button" class="secondary" data-new-package>New package</button></div><label>Height (mm)<input name="height_mm" type="number" step="any" min="0" max="1000" required></label><div id="part-preview"></div><button type="submit">Save part</button></form><p data-dialog-message role="status" aria-live="polite"></p></section></dialog>
+<div id="panel-packages" role="tabpanel" aria-labelledby="tab-packages" hidden><section><div class="section-title"><h2>OpenPnP packages</h2><button type="button" data-new-package>New package</button><label>Search packages<input id="package-search" type="search" placeholder="ID or description"></label></div><p id="packages-status" class="muted"></p><div class="scroll"><table class="parts-table"><thead><tr><th>Preview</th><th>ID</th><th>Description</th><th>Footprint</th><th>Nozzles</th><th>Linked parts</th><th></th></tr></thead><tbody id="package-rows"></tbody></table></div></section></div>
+<dialog id="package-dialog" aria-labelledby="package-title"><section><div class="section-title"><h2 id="package-title">New OpenPnP package</h2><button type="button" data-close="package-dialog" class="secondary" aria-label="Close package creator">Close</button></div><form id="package-create"><label>Package ID<input name="package_id" maxlength="128" required></label><label>Description<input name="description" maxlength="1024"></label><label>Copy from<select name="copy_from"></select></label><p class="muted">Copy a matching package to reuse its footprint and settings. Blank packages have no footprint geometry.</p><button type="submit">Create package</button></form><p data-dialog-message role="status" aria-live="polite"></p></section></dialog>
+<dialog id="package-edit-dialog" aria-labelledby="package-edit-title"><section><div class="section-title"><h2 id="package-edit-title">Edit package</h2><button type="button" data-close="package-edit-dialog" class="secondary">Close</button></div><div class="package-edit-layout"><div class="package-editor-preview"><div id="package-preview"></div><p id="package-geometry"></p><p class="muted">OpenPnP footprint · edit geometry in OpenPnP.</p></div><form id="package-edit"><label>Description<input name="description" maxlength="1024"></label><fieldset class="button-options"><legend>Compatible nozzle tips</legend><div id="package-nozzles"></div></fieldset><p id="package-linked" class="muted"></p><button type="submit">Save package</button></form></div><p data-dialog-message role="status" aria-live="polite"></p></section></dialog>
+<div id="panel-job" role="tabpanel" aria-labelledby="tab-job" hidden><section><div class="section-title"><h2>Job stock</h2><button type="button" id="job-check">Refresh</button></div><p id="job-summary" role="status" class="muted"></p><div class="scroll"><table class="parts-table"><thead><tr><th>Part</th><th>Need</th><th>Stock</th><th>Result</th></tr></thead><tbody id="job-rows"></tbody></table></div></section></div>
+<div id="panel-firmware" role="tabpanel" aria-labelledby="tab-firmware" hidden>
+<section class="narrow"><div class="section-title"><h2>Firmware</h2><button type="button" id="view-update-queue" class="secondary" hidden>Update status</button><button type="button" data-update-all disabled>Update all outdated</button><button class="secondary" data-maintenance disabled>Pause feeders</button></div>
+<p class="muted">Choose the target ID and update. Feeder commands pause automatically.</p>
+<form id="update"><label>Target ID<input name="address" type="number" min="0" max="99" required></label><label><span id="image-info">Checking available firmware…</span></label><button disabled>Update firmware</button></form><label for="progress">Upload progress</label><progress id="progress" max="100" value="0"></progress><div id="upload-result" role="status" aria-live="polite">No upload this service session.</div><div class="control-group"><h3>Installed firmware</h3><form id="refresh"><label>ID<input name="address" type="number" min="0" max="99" required></label><button disabled>Read now</button></form><p id="firmware-info" class="muted">Select a feeder and read its installed firmware.</p></div></section></div>
+<div id="panel-settings" role="tabpanel" aria-labelledby="tab-settings" hidden>
+<div class="settings-grid"><div><section><div class="section-title"><h2>Feeder bus</h2><button id="maintenance" class="secondary" data-maintenance disabled>Pause feeders</button></div><p id="endpoint" class="muted"></p>
+<form id="polling"><label>Polling IDs<input name="ids" value="1-24" required></label><button disabled>Set polling IDs</button></form><p id="errors" class="warning"></p></section>
+<section><h2>Assign ID</h2><p class="muted">Pause feeders and select menu 01 on the feeder. Use ID 0 only with one unassigned feeder connected.</p><form id="assign"><label>Current ID<input name="address" type="number" min="0" max="99" required></label><label>New ID<input name="new_id" type="number" min="1" max="99" required></label><button disabled>Assign ID</button></form></section></div><div><section><h2 id="detail-title">Feeder details</h2><p id="selection-hint" class="muted">Select a feeder.</p><dl id="details"></dl></section></div></div></div>
 <script>
-let state=null,busy=false,connected=false,pollingSet=false,selected=null,image=null,imageGeneration=0,motionOwner=null;
+let catalogue=null,catalogueRequest=null,featurePage=null;
+let state=null,busy=false,connected=false,pollingSet=false,selected=null,configLoadedFor=null,connectionFilter=sessionStorage.getItem('feeder-connection-filter')||'online';
 const $=id=>document.getElementById(id),message=$('message');
-const names={idle:'Idle',reserved:'Starting',running:'Advancing',fault:'Fault',assign_id:'Awaiting ID',edit_id:'Editing ID',edit_count:'Editing feed count',edit_type:'Editing width',menu:'Button menu',index_timeout:'Index timeout',peel_timeout:'Peel timeout',settings_error:'Settings error'};
+let jobError='',jobResult=null,jobBusy=false,jobAttempted=false;
+const views=['feeders','parts','packages','job','firmware','settings'];
+function showTab(name,focus=false,push=true){
+ const path=name==='feeders'?'/':'/'+name;if(push&&location.pathname!==path)history.pushState(null,'',path);
+ for(const view of views){const active=view===name,tab=$('tab-'+view);tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;$('panel-'+view).hidden=!active}
+ if(focus)$('tab-'+name).focus();
+ featurePage=null;queueMicrotask(()=>loadFeaturePage(name));
+}
+for(const name of views){
+ const tab=$('tab-'+name);tab.onclick=event=>{if(event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;event.preventDefault();showTab(name)};
+ tab.onkeydown=event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();const i=views.indexOf(name);showTab(event.key==='Home'?views[0]:event.key==='End'?views[views.length-1]:views[(i+(event.key==='ArrowRight'?1:views.length-1))%views.length],true)};
+}
+function showLocation(){const name=location.pathname.slice(1)||'feeders';showTab(views.includes(name)?name:'feeders',false,false)}
+window.addEventListener('popstate',showLocation);showLocation();
+function feederKey(f){return f.uid||'address:'+f.address}
+function currentFeeder(){return state?.feeders.find(f=>feederKey(f)===selected)}
+function firmwareInfo(f){return f.firmware_info}
+function firmwareLabel(f){
+ const info=firmwareInfo(f),available=state?.available_firmware;
+ if(!info?.crc32||info.error)return 'Unknown';
+ const version=info.version||(available?.crc32===info.crc32&&available.bytes===info.size?available.version:null);
+ const status=!available?.available?'Unknown':needsFirmware(f)?'Update available':'Current';
+ return (version?'v'+version+' · ':'')+status;
+}
+function updateActive(){return !!(state?.updating||state?.batch_update?.active)}
+function needsFirmware(f){const available=state?.available_firmware,info=firmwareInfo(f);return !!(available?.available&&f.known&&(!info||info.error||info.crc32!==available.crc32||info.size!==available.bytes))}
+function loadHardware(f){
+ const form=$('hardware'),config=f?.configuration;
+ $('config-bus-id').textContent=f?.address??'—';
+ if(!f?.known||!config||config.error){configLoadedFor=null;form.reset();form.querySelectorAll('input[type=radio]').forEach(e=>e.checked=false);form.elements.pitch_mm.value='';syncPitchChoice();return}
+ for(const key of ['feed_reverse','peel_reverse','switch_no'])form.elements[key].value=String(config[key]);
+ form.elements.pitch_mm.value=f.default_count*f.nominal_step_um/1000;
+ form.elements.pitch_mm.min=form.elements.pitch_mm.step=f.nominal_step_um/1000;form.elements.pitch_mm.max=99*f.nominal_step_um/1000;
+ syncPitchChoice();configLoadedFor=f.uid;
+}
+function syncPitchChoice(){
+ const form=$('hardware'),value=form.elements.pitch_mm.value;
+ form.elements.pitch_choice.value=['2','4','8'].includes(value)?value:'custom';
+ $('custom-pitch').style.visibility=form.elements.pitch_choice.value==='custom'?'visible':'hidden';
+}
+for(const radio of $('hardware').querySelectorAll('[name=pitch_choice]'))radio.onchange=()=>{
+ const form=$('hardware');
+ if(radio.value!=='custom')form.elements.pitch_mm.value=radio.value;
+ $('custom-pitch').style.visibility=radio.value==='custom'?'visible':'hidden';
+ if(radio.value==='custom')form.elements.pitch_mm.focus();
+};
+$('hardware').elements.pitch_mm.oninput=()=>{$('hardware').elements.pitch_choice.value='custom'};
+for(const button of document.querySelectorAll('[data-connection]'))button.onclick=()=>{connectionFilter=button.dataset.connection;sessionStorage.setItem('feeder-connection-filter',connectionFilter);render()};
+function openFeeder(f,kind){
+ selectFeeder(f);if(kind==='stock')loadCatalogue();const dialog=$(kind==='stock'?'stock-dialog':'config-dialog');
+ dialog.querySelector('[data-dialog-message]').textContent='';dialog.showModal();
+}
+for(const button of document.querySelectorAll('[data-close]'))button.onclick=()=>$(button.dataset.close).close();
+for(const dialog of document.querySelectorAll('dialog'))dialog.onclick=event=>{if(event.target!==dialog)return;const b=dialog.getBoundingClientRect();if(event.clientX<b.left||event.clientX>b.right||event.clientY<b.top||event.clientY>b.bottom)dialog.close()};
+new MutationObserver(()=>{for(const dialog of document.querySelectorAll('dialog[open]')){const target=dialog.querySelector('[data-dialog-message]');target.textContent=message.textContent;target.className=message.className}}).observe(message,{childList:true,subtree:true,attributes:true});
+let batchNoticeStarted=0;
+const liveActivity=new Map();
+function receiveActivity(payload){
+ for(const activity of payload.activities||[]){const old=liveActivity.get(activity.address);if(old?.id>=activity.id)continue;liveActivity.set(activity.address,{...activity,until:performance.now()+Math.max(0,activity.expires-payload.server_time)*1000})}
+ renderActivity();
+}
+function renderActivity(){
+ for(const row of $('rows').children){const cell=row.querySelector('.operating-state');if(!cell)continue;
+  const activity=liveActivity.get(Number(row.dataset.address)),fresh=activity&&performance.now()<activity.until;
+  const fault=row.dataset.fault==='true'||row.dataset.updating==='true';
+  row.classList.toggle('advancing',!!fresh&&!fault&&activity.stage==='advancing');row.classList.toggle('recent-movement',!!fresh&&!fault&&['completed','observed'].includes(activity.stage));
+  cell.dataset.active=String(!!fresh&&!fault&&activity.stage==='advancing');cell.textContent=fresh&&!fault?activity.label:cell.dataset.baseState;
+  const errorCell=row.querySelector('.row-error');if(errorCell)errorCell.textContent=fresh&&activity.error?activity.error:errorCell.dataset.baseError;
+ }
+}
+const activityStream=new EventSource('/api/events');
+activityStream.onopen=()=>{liveActivity.clear();renderActivity()};
+activityStream.addEventListener('activity',event=>receiveActivity(JSON.parse(event.data)));
+window.addEventListener('pagehide',()=>activityStream.close());
+setInterval(renderActivity,250);
+const names={test:'Input test · motors off',idle:'Idle',reserved:'Starting',running:'Advancing',fault:'Fault',assign_id:'Awaiting ID',edit_id:'Editing ID',edit_count:'Editing feed count',edit_type:'Editing width',menu:'Button menu',index_timeout:'Index timeout',peel_timeout:'Peel timeout',settings_error:'Settings error'};
 function quantity(n){return n===null?'Not set':Number(n).toLocaleString(undefined,{maximumFractionDigits:2})}
 function controls(){
- document.querySelectorAll('form button').forEach(b=>b.disabled=!connected||busy||state?.updating);
- $('maintenance').disabled=!connected||busy||state?.updating;
+ document.querySelectorAll('form button').forEach(b=>b.disabled=!connected||updateActive());
+ document.querySelectorAll('[data-maintenance]').forEach(b=>b.disabled=!connected||updateActive());
+ document.querySelectorAll('[data-firmware-update]').forEach(b=>b.disabled||=!connected||busy||updateActive());
  $('assign').querySelector('button').disabled||= !state?.maintenance;
- $('update').querySelector('button').disabled||= !state?.maintenance||!image||state?.demo;
- motionControls();
+ $('update').querySelector('button').disabled||= !state?.available_firmware?.available||state?.demo;
+ const f=currentFeeder(),config=f?.configuration;
+ $('hardware').querySelectorAll('input,select').forEach(e=>e.disabled=!f?.online||!config||!!config.error);
+ $('stock').querySelector('button').disabled||=!f?.online||!f?.known;
+ $('hardware').querySelector('[type=submit]').disabled||=!state?.maintenance||!f?.online||!config||!!config.error||configLoadedFor!==f?.uid||f?.fault_code||f?.state!=='idle';
+ for(const input of $('hardware').querySelectorAll('input'))input.disabled||=!connected||updateActive();
+ for(const input of $('hardware').querySelectorAll('[name=pitch_choice]'))if(input.value!=='custom')input.disabled||=Number(input.value)%(f?.nominal_step_um/1000)!==0;
+ $('config-read').disabled=!connected||updateActive()||!f?.online;
+ $('part-edit').querySelector('[type=submit]').disabled||=!state?.openpnp?.online||!Array.isArray(state?.openpnp?.packages);
+ $('stock-part').disabled=!connected||updateActive()||!state?.openpnp?.online||!f?.known;
+ $('retry-part-sync').disabled=!connected||busy||updateActive()||!state?.openpnp?.online||!f?.online;
+ for(const button of document.querySelectorAll('[data-new-part],[data-new-package]'))button.disabled=!connected||updateActive()||!state?.openpnp?.online;
+ $('package-create').querySelector('[type=submit]').disabled||=!state?.openpnp?.online;
+ $('package-edit').querySelector('[type=submit]').disabled||=!state?.openpnp?.online;
+ $('job-check').disabled=!connected||jobBusy||!state?.openpnp?.online;
+ const outdated=state?.feeders.filter(f=>f.online&&f.address>0&&needsFirmware(f)).length||0;
+ for(const button of document.querySelectorAll('[data-update-all]')){button.disabled=!connected||busy||updateActive()||state?.demo||!outdated;button.textContent='Update all outdated'+(outdated?' ('+outdated+')':'')}
 }
 function selectFeeder(f){
- selected=f.uid;
+ selected=feederKey(f);loadHardware(f);
  for(const id of ['stock','refresh','assign','update'])$(id).elements.address.value=f.address??'';
- const form=$('stock');form.elements.label.value=f.label;form.elements.quantity.value=f.remaining===null?'':Math.floor(f.remaining);form.elements.pulses_per_part.value=f.pitch;form.elements.low.value=f.low;
+ delete $('stock-part').dataset.uid;
+ const form=$('stock');form.elements.label.value=f.label;form.elements.quantity.value=f.remaining==null?'':Math.floor(f.remaining);const spacing=form.elements.part_spacing_mm,step=f.nominal_step_um/1000;spacing.min=spacing.step=step;spacing.max=99*step;spacing.value=step?(f.pitch||1)*step:'';form.elements.low.value=f.low??50;
  render();
 }
 function detail(label,value){const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;$('details').append(dt,dd)}
@@ -60,107 +166,323 @@ function render(){
  if(!state)return;
  const stale=f=>f.age_seconds>state.stale_after_seconds;
  $('version').textContent=state.version;
- $('endpoint').textContent='127.0.0.1:'+state.tcp_port;
- $('mode').textContent=(state.demo?'DEMO · ':'')+(state.updating?'Firmware update in progress':state.maintenance?'Maintenance · PC advances blocked':'Accepting OpenPnP commands');
- $('maintenance').textContent=state.maintenance?'Leave maintenance':'Enable maintenance';
- $('poll-status').textContent='115200 baud · 8N1 · '+(state.maintenance?'Background polling paused':state.polling_ids.length+' addresses polled');
- $('total').textContent=state.feeders.length;
- $('ready').textContent=state.maintenance?'—':state.feeders.filter(f=>f.ready&&f.assigned&&f.configured&&f.mode==='normal'&&!f.fault_code&&!f.error&&!stale(f)).length;
- $('faults').textContent=state.feeders.filter(f=>f.fault_code||f.error).length;
+ $('endpoint').textContent='OpenPnP TCP · 127.0.0.1:'+state.tcp_port;
+ $('mode').textContent=(state.demo?'DEMO · ':'')+(state.batch_update?.active?'Bulk firmware update in progress':state.updating?'Firmware update in progress':state.maintenance?'Feeder commands paused':'Ready');
+ document.querySelectorAll('[data-maintenance]').forEach(b=>b.textContent=state.maintenance?'Resume feeders':'Pause feeders');
+
+ $('total').textContent=state.feeders.filter(f=>f.known).length;
+ $('ready').textContent=state.feeders.filter(f=>f.online).length;
+ $('faults').textContent=state.feeders.filter(f=>f.known&&f.fault_code).length;
  $('low').textContent=state.feeders.filter(f=>f.low_stock).length;
+ for(const button of document.querySelectorAll('[data-connection]')){const filter=button.dataset.connection,n=state.feeders.filter(f=>filter==='all'||(filter==='online'?f.online:!f.online)).length;button.textContent=filter[0].toUpperCase()+filter.slice(1)+' ('+n+')';button.className=filter===connectionFilter?'':'secondary';button.setAttribute('aria-pressed',String(filter===connectionFilter))}
  const rows=$('rows');rows.replaceChildren();const query=$('search').value.toLowerCase();
  for(const f of state.feeders){
+  if(connectionFilter==='online'&&!f.online||connectionFilter==='offline'&&f.online)continue;
   if(![f.address,f.variant,f.label,f.uid].join(' ').toLowerCase().includes(query))continue;
-  const tr=document.createElement('tr');tr.className=f.uid===selected?'selected':'';
-  const td=document.createElement('td'),button=document.createElement('button');button.className='select';button.textContent=(f.address===null?'Unmapped':f.address)+' / '+f.variant;button.setAttribute('aria-label','Inspect feeder '+(f.address??f.uid));button.onclick=()=>selectFeeder(f);td.append(button);tr.append(td);
+  const tr=document.createElement('tr');tr.className=feederKey(f)===selected?'selected':'';
+  const td=document.createElement('td'),button=document.createElement('button');button.className='select';button.textContent=f.address===null?'—':f.address;button.setAttribute('aria-label','Inspect feeder '+(f.address??f.uid));button.onclick=()=>openFeeder(f,'config');td.append(button);tr.append(td);tr.dataset.address=f.address??'';tr.dataset.fault=String(!!f.fault_code);
   function cell(text,cls=''){const td=document.createElement('td');td.textContent=text;td.className=cls;tr.append(td);return td}
-  cell(f.label||'—');
-  const label=f.error?'Offline / read error':!f.assigned?'Unassigned':f.fault_code?'E'+f.fault_code+' · '+(names[f.fault]||f.fault):state.maintenance?'Cached · polling paused':stale(f)?'Stale telemetry':!state.polling_ids.includes(f.address)?'Not polled':f.mode!=='normal'?(names[f.mode]||f.mode):!f.ready?'Not ready':names[f.state]||f.state;
-  const badge=document.createElement('span');badge.className='badge '+(f.error||f.fault_code?'bad':stale(f)||!f.assigned||state.maintenance?'warning':'');badge.textContent=label;cell('').append(badge);
-  cell(quantity(f.remaining)+(f.uncertain&&f.loaded!==null?' · uncertain':''),f.low_stock||f.uncertain?'warning':'');cell(Math.floor(f.age_seconds)+'s ago');rows.append(tr);
+  cell(f.variant==='—'?'—':f.variant);
+  cell(f.default_count&&f.nominal_step_um?quantity(f.default_count*f.nominal_step_um/1000)+' mm':'—');
+  const connection=!f.known?'Not seen':!state.polling_ids.includes(f.address)?'Not polled':f.online?'Online':'Offline';
+  const badge=document.createElement('span');badge.className='badge '+(f.online?'':f.known?'bad':'warning');badge.textContent=connection;cell('').append(badge);
+  const info=firmwareInfo(f),fw=cell(''),firmwareBox=document.createElement('div'),firmwareText=document.createElement('span');firmwareBox.className='firmware-cell';firmwareText.textContent=firmwareLabel(f);firmwareBox.append(firmwareText);fw.append(firmwareBox);if(info?.crc32){const small=document.createElement('small');small.textContent=info.crc32+(f.online&&!info.error?'':' · cached');firmwareText.append(small)}
+  const available=state.available_firmware,needsUpdate=needsFirmware(f);
+  const update=state.update,updating=(state.updating&&update?.address===f.address);const batchItem=state.batch_update?.items.find(item=>item.address===f.address),batchStage=state.batch_update?.active?batchItem?.stage:null;tr.dataset.updating=String(updating||!!batchStage);
+  if(needsUpdate){const updateButton=document.createElement('button');updateButton.textContent='Update';updateButton.title='Update to v'+available.version+'; pauses feeder commands';updateButton.setAttribute('aria-label','Update feeder '+f.address+' to v'+available.version);updateButton.dataset.firmwareUpdate='';updateButton.className='secondary';updateButton.disabled=!connected||busy||updateActive()||state.demo||!f.online||f.state!=='idle';updateButton.onclick=()=>quickUpdate(f);firmwareBox.append(updateButton)}
+  const operating=!f.known?'Never seen':f.mode!=='normal'?(names[f.mode]||f.mode):f.fault_code?'Fault':!f.ready?'Not ready':names[f.state]||f.state;
+  const operatingLabel=updating?'Updating firmware'+(state.updating&&update?.size?' · '+Math.floor(update.sent/update.size*100)+'%':''):batchStage==='queued'?'Queued for update':batchStage==='checking'?'Checking firmware':batchStage==='complete'?'Firmware updated':batchItem?.stage==='failed'&&needsUpdate?'Update failed':update?.address===f.address&&update.stage==='failed'?'Update failed':f.online?operating+(needsUpdate?' · update available':''):f.known?'Last: '+operating:operating;
+  const operatingCell=cell(operatingLabel,'operating-state '+(f.fault_code?'bad':''));operatingCell.dataset.baseState=operatingCell.textContent;
+  const errors=[batchItem?.stage==='failed'&&needsUpdate?batchItem.error:'',update?.address===f.address&&update.stage==='failed'?update.error:'',f.fault_code?'E'+f.fault_code+' · '+(names[f.fault]||f.fault):'',f.error,info?.error,f.configuration?.error?'Settings: '+f.configuration.error:''].filter(Boolean);
+  const errorCell=cell(errors.join(' · ')||'—',errors.length?'row-error bad':'row-error');errorCell.dataset.baseError=errorCell.textContent;
+  const partLabel=f.part_assignment?(f.part_assignment.part_id||'No part'):state.openpnp?.feeders?.find(native=>Number(native.bus_id)===f.address)?.part_id||f.label||'—',reelCell=cell(partLabel);if(f.label&&f.label!==partLabel){const label=document.createElement('small');label.textContent=f.label;reelCell.append(label)};cell(quantity(f.remaining)+(f.uncertain&&f.loaded!==null?' · uncertain':''),f.low_stock||f.uncertain?'warning':'');
+  cell(f.age_seconds===null?'Never':Math.floor(f.age_seconds)+'s ago');
+  const configure=document.createElement('button');configure.textContent='Configure';configure.className='secondary';configure.onclick=()=>openFeeder(f,'config');const stockButton=document.createElement('button');stockButton.textContent='Reel / stock';stockButton.className='secondary';stockButton.onclick=()=>openFeeder(f,'stock');const test=document.createElement('button');test.textContent='Test';test.className='secondary';test.disabled=!f.known||!f.online||updateActive();test.onclick=()=>openInputTest(f);cell('').append(stockButton,configure,test);rows.append(tr);
  }
- if(!rows.children.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=5;td.textContent=state.feeders.length?'No matching feeders.':'No feeders discovered yet. Check polling IDs, adapter and feeder power.';tr.append(td);rows.append(tr)}
+ if(!rows.children.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=11;td.textContent=state.feeders.length?'No matching feeders.':'No feeders discovered yet. Check polling IDs, adapter and feeder power.';tr.append(td);rows.append(tr)}
+ const missing=Object.entries(state.errors).filter(([id,e])=>e.includes('no valid reply to IDENT')).map(([id])=>id);
  const pending=state.polling_ids.filter(id=>!state.feeders.some(f=>f.address===id)&&!state.errors[id]);
- $('errors').textContent=[state.inventory_error?'Inventory unavailable: '+state.inventory_error:'',!state.inventory_persistent?'Inventory is temporary and will be lost on restart.':'',pending.length?'Awaiting first response: '+pending.join(', '):'',...Object.entries(state.errors).map(([id,e])=>'ID '+id+': '+e)].filter(Boolean).join('\n');
- $('details').replaceChildren();const f=state.feeders.find(f=>f.uid===selected);
+ $('errors').textContent=[state.inventory_error?'Inventory unavailable: '+state.inventory_error:'',!state.inventory_persistent?'Inventory is temporary and will be lost on restart.':'',pending.length?'Awaiting first response: '+pending.join(', '):'',missing.length?'No reply from IDs: '+missing.join(', '):'',...Object.entries(state.errors).filter(([id,e])=>!e.includes('no valid reply to IDENT')).map(([id,e])=>'ID '+id+': '+e)].filter(Boolean).join('\n');
+ $('details').replaceChildren();const f=currentFeeder();
  $('selection-hint').hidden=!!f;$('detail-title').textContent=f?'Feeder '+(f.address??'unmapped')+' · '+f.variant:'Feeder details';
- if(f){detail('MCU UID',f.uid);detail('Sensor total',quantity(f.counter));detail('Default feed count',f.default_count);detail('Index switch',f.switch_closed?'Closed':'Open');detail('Peel motor',f.peel_running?'Running':'Stopped');detail('Local mode',names[f.mode]||f.mode);detail('Estimated used',quantity(f.used));const info=state.firmware[f.uid];detail('Application',info?(info.error||info.size+' bytes · CRC32 '+info.crc32):'Use Read now to inspect');if(info?.read_at)detail('Firmware read',new Date(info.read_at*1000).toLocaleTimeString())}
+ $('stock-title').textContent=f?'Feeder '+f.address+' · Reel / stock':'Reel / stock';
+ $('stock-hint').textContent=f?'Feeder '+f.address+' · '+f.variant:'Select a feeder above to load or correct its stock.';
+ const info=f&&firmwareInfo(f);$('firmware-info').textContent=info?(info.error||'Feeder '+f.address+' · '+info.size+' bytes · CRC32 '+info.crc32):'Select a feeder and read its installed firmware.';
+ if(f?.known){detail('MCU UID',f.uid);detail('Sensor total',quantity(f.counter));detail('Default feed count',f.default_count);detail('Peel request',f.peel_requested?'Take up':'Stop');detail('Peel motor',f.peel_running?'Running':'Stopped');detail('Local mode',names[f.mode]||f.mode);detail('Estimated used',quantity(f.used));const info=firmwareInfo(f);detail('Application',info?(info.error||info.size+' bytes · CRC32 '+info.crc32):'Use Read now to inspect');if(info?.read_at)detail('Firmware read',new Date(info.read_at*1000).toLocaleTimeString())}
+ if(f?.known&&f.configuration&&!f.configuration.error&&configLoadedFor!==f.uid)loadHardware(f);
+ $('hardware-title').textContent=f?'Feeder '+(f.address??'unmapped')+' configuration':'Feeder configuration';
+ $('config-status').textContent=!f?'Select Configure on a feeder to read its settings.':!f.known?'This ID has never replied. Hardware settings are unavailable.':!f.online?'Offline: last known values shown. Saving is unavailable.':f.configuration?.error?'Settings could not be read: '+f.configuration.error:!f.configuration?'Reading hardware settings…':(state.maintenance?'Ready to save.':'Pause feeders before saving hardware settings.')+' Width '+f.variant+' · '+f.default_count+' events per feed · '+f.nominal_step_um/1000+' mm per event';
+ const available=state.available_firmware;
+ $('image-info').textContent=available?.available?'V485 '+available.version+' · '+available.bytes.toLocaleString()+' bytes · CRC32 '+available.crc32:available?.error||'No built firmware available';
+ const batch=state.batch_update;
+ if(batch&&!busy&&(batch.active||batch.started+':'+batch.active!==batchNoticeStarted)){batchNoticeStarted=batch.started+':'+batch.active;const done=batch.items.filter(item=>item.stage==='complete'||item.stage==='current').length;message.className=batch.error?'error bad':'';message.textContent=batch.active?'Updating feeders · '+done+' / '+batch.items.length:batch.error?'Update queue finished with failures: '+batch.error+' · Feeders remain paused.':'Firmware verified on '+done+' feeders. Feeders remain paused.'}
  const u=state.update;
  if(u){$('progress').value=u.sent/u.size*100;$('upload-result').className=u.stage==='failed'?'bad':'';$('upload-result').textContent='ID '+u.address+' · '+u.stage+'\n'+u.sent.toLocaleString()+' / '+u.size.toLocaleString()+' bytes · CRC32 '+u.crc32+(u.error?'\n'+u.error:'')+(u.stage==='complete'?'\nApplication image verified. Maintenance remains enabled.':'')}
- renderMotion();controls();
+ if($('stock-dialog').open)renderStockPart();renderUpdateQueue();renderActivity();controls();
 }
 async function refresh(){
- try{const response=await fetch('/api/status',{signal:AbortSignal.timeout(5000)});if(!response.ok)throw Error('Cannot read service status');state=await response.json();connected=true;$('connection').textContent=(state.demo?'Simulated bus':'Host connected')+' · '+new Date().toLocaleTimeString();$('connection').className='';if(!pollingSet){$('polling').elements.ids.value=state.polling_ids.join(',');pollingSet=true}render()}
+ try{const response=await fetch('/api/status',{signal:AbortSignal.timeout(5000)});if(!response.ok)throw Error('Cannot read service status');const first=!state;state={...await response.json(),openpnp:catalogue};if(state.activity)receiveActivity(state.activity);connected=true;if(first)queueMicrotask(()=>loadFeaturePage(location.pathname.slice(1)||'feeders'));$('connection').textContent=state.demo?'Demo':'Connected';$('connection').className='';if(!pollingSet){$('polling').elements.ids.value=state.polling_ids.join(',');pollingSet=true}render()}
  catch(error){connected=false;$('connection').textContent='Host unavailable · displayed values are cached';$('connection').className='bad';$('mode').textContent='Service unavailable';controls()}
 
 }
 async function send(path,body,binary=false){
- if(busy||!connected)return;busy=true;controls();message.className='';message.textContent=binary?'Uploading; wait for verification…':'Working…';
- try{const response=await fetch(path,{method:'POST',headers:{'Content-Type':binary?'application/octet-stream':'application/json'},body:binary?body:JSON.stringify(body)});const result=await response.json();if(!response.ok)throw Error(result.error||'Request failed');message.textContent=binary?'Firmware verified. Maintenance remains enabled.':'Saved / completed.'}
- catch(error){message.className='error bad';message.textContent=error.message+(binary?' Keep maintenance enabled and inspect the upload result before recovery.':'')}
- finally{await refresh();busy=false;controls()}
+ if(!connected)return;if(busy){message.textContent='Command still running…';return}busy=true;controls();message.className='';message.textContent=binary?'Uploading…':'';
+ try{const response=await fetch(path,{method:'POST',headers:{'Content-Type':binary?'application/octet-stream':'application/json'},body:binary?body:JSON.stringify(body)});const result=await response.json();if(!response.ok)throw Error(result.error||'Request failed');message.textContent=result.part_assignment?(result.part_assignment.status==='synced'?'Saved and synced to OpenPnP.':(path==='/api/stock'?'Stock saved · ':'')+'Part sync pending: '+result.part_assignment.error):path.startsWith('/api/update')?'Update queue started.':binary?'Firmware verified.':'Saved.';return result}
+ catch(error){message.className='error bad';message.textContent=error.message+(binary||path.startsWith('/api/update-')?' Keep feeders paused and inspect the update result.':'')}
+ finally{await refresh();if(['/api/openpnp','/api/stock','/api/part-sync'].includes(path))await loadCatalogue();busy=false;render()}
 }
-const outputNames={pump:'Vacuum pump',n1_valve:'N1 valve',n2_valve:'N2 valve',top_light:'Top camera light',bottom_light:'Bottom camera light'};
-for(const axis of 'XYZAB'){
- const box=document.createElement('div');box.className='position';const label=document.createElement('small'),value=document.createElement('strong');label.textContent=axis+('AB'.includes(axis)?' · degrees':' · mm');value.id='position-'+axis;value.textContent='—';box.append(label,value);$('positions').append(box);
+async function quickUpdate(f){
+ const available=state?.available_firmware;
+ if(busy||updateActive()||state?.demo||!f.online||f.state!=='idle'||!available?.available)return;
+ renderUpdateQueue();$('updates-dialog').querySelector('[data-dialog-message]').textContent='';$('updates-dialog').showModal();
+ await send('/api/update-bundled',{address:f.address,sha256:available.sha256});renderUpdateQueue();
 }
-for(const [name,label] of Object.entries(outputNames)){
- const row=document.createElement('div');row.className='output-row';const text=document.createElement('span');text.id='output-'+name;text.textContent=label+' · unknown';row.append(text);
- for(const enabled of [true,false]){const button=document.createElement('button');button.className=enabled?'':'secondary';button.textContent=enabled?'On':'Off';button.setAttribute('aria-label',label+(enabled?' on':' off'));button.dataset.output=name;button.disabled=true;button.onclick=()=>send('/api/motion',{action:'output',name,enabled});row.append(button)}
- $('output-controls').append(row);
+let editingPart=null,creatingPart=false;
+function partText(part){return part.name&&part.name!==part.id?part.id+' · '+part.name:part.id}
+function renderParts(){
+ const op=state?.openpnp,query=$('part-search').value.toLowerCase();
+ $('parts-status').textContent=!op?.online?'OpenPnP is offline.':'Create and edit parts linked to OpenPnP packages.';
+ $('part-rows').replaceChildren();
+ for(const part of [...(op?.parts||[])].sort((a,b)=>a.id.localeCompare(b.id))){
+  if(![part.id,part.name,part.package_id].join(' ').toLowerCase().includes(query))continue;
+  const row=document.createElement('tr'),previewCell=document.createElement('td');previewCell.append(previewButton((op.packages||[]).find(p=>p.id===part.package_id),()=>openPart(part),'Preview '+part.id));row.append(previewCell);
+  for(const [index,value] of [part.id,part.name||'Add name…',part.package_id||'—',part.height_mm==null?'—':quantity(part.height_mm)+' mm'].entries()){const cell=document.createElement('td');if(index<2){cell.append(editField(value,()=>{openPart(part);if(index===1)$('part-edit').elements.name.focus()},'Edit part '+part.id+' '+(index?'name':'ID'),!op?.online||updateActive()||!Array.isArray(op?.packages)))}else cell.textContent=value;row.append(cell)}
+  const cell=document.createElement('td'),button=document.createElement('button');button.className='secondary';button.textContent='Edit';button.setAttribute('aria-label','Edit part '+part.id);button.disabled=!op?.online||updateActive()||!Array.isArray(op?.packages);button.onclick=()=>openPart(part);cell.append(button);row.append(cell);$('part-rows').append(row);
+ }
 }
-function motionControls(){
- const m=state?.motion,available=connected&&m?.configured&&!m.fault,manual=available&&m.owner==='manual'&&!m.busy&&!busy,connectedJog=available&&m.owner==='openpnp'&&!m.busy&&!busy&&$('connected-jog-ready').checked;
- document.querySelectorAll('[data-motion]').forEach(button=>{
-  const action=button.dataset.motion;
-  button.disabled=action==='halt'?!(connected&&m?.configured&&!m.fault):action==='claim'?!(available&&m.owner==='available'&&!m.busy&&!busy):!manual;
-  if(action==='report_connected')button.disabled=!connectedJog;
-  if(action==='home')button.disabled||=!$('heads-ready').checked;
- });
- document.querySelectorAll('[data-axis]').forEach(button=>button.disabled=!(manual&&m.web_homed||connectedJog));
- document.querySelectorAll('[data-output]').forEach(button=>button.disabled=!manual);
+function openPart(part){
+ creatingPart=false;editingPart={...part};$('part-id').textContent=part.id;$('part-title').textContent='Edit OpenPnP part';$('part-identity').hidden=false;$('new-part-id').hidden=true;$('part-edit').elements.part_id.disabled=true;$('part-hint').textContent='Changes apply to every feeder using this part.';
+ const form=$('part-edit');form.elements.name.value=part.name||'';form.elements.height_mm.value=part.height_mm??0;
+ const select=form.elements.package_id;select.replaceChildren(new Option('No package',''));
+ for(const pkg of state.openpnp?.packages||[])select.append(new Option(pkg.id,pkg.id));
+ if(part.package_id&&!(state.openpnp?.packages||[]).some(pkg=>pkg.id===part.package_id))select.append(new Option(part.package_id,part.package_id));
+ select.required=false;select.value=part.package_id||'';$('part-dialog').querySelector('[data-dialog-message]').textContent='';renderPartPreview();$('part-dialog').showModal();
 }
-function renderMotion(){
- const m=state.motion;
- if(!m.openpnp_connected)$('connected-jog-ready').checked=false;
- const p=m.position_report;$('published-position').textContent=p?'Sent to OpenPnP ('+m.position_reports_sent+' reports): '+p.text+' · '+new Date(p.sent_at*1000).toLocaleTimeString()+' · acceptance not confirmed':'No unsolicited position report sent this service session.';
- if(m.owner!==motionOwner){$('heads-ready').checked=false;motionOwner=m.owner}
- $('motion-endpoint').textContent=m.configured?'OpenPnP motion TCP · 127.0.0.1:'+m.tcp_port:'Motion controller not configured';
- $('motion-owner').textContent=!m.configured?'Unavailable':m.fault?'Controller needs attention':m.owner==='connected_manual'?'Connected web jog':m.owner==='openpnp'?'OpenPnP control':m.owner==='manual'?'Web manual control':'Ready for connection';
- $('motion-state').textContent=!m.configured?'Connect the motion controller when installing on the machine computer.':m.fault?m.fault:m.busy?'Manual operation in progress…':m.owner==='manual'?(m.web_homed?'Homed in this manual session.':'Home XYZ before jogging in this manual session.'):m.owner==='openpnp'?'OpenPnP stays connected. Confirm it is enabled, homed and idle to test web jogging and unsolicited position reports.':'Take manual control, or connect the OpenPnP motion driver.';
- $('motion-state').className=m.fault?'bad':'';
- $('motor-state').textContent=m.motors===true?'Motors last commanded enabled':m.motors===false?'Motors last commanded disabled':'Motor command state unknown';
- for(const axis of 'XYZAB')$('position-'+axis).textContent=typeof m.position?.[axis]==='number'?m.position[axis].toFixed(3):'—';
- $('position-age').textContent=m.position_at?m.position_kind+' coordinates · '+Math.floor(Date.now()/1000-m.position_at)+'s since controller report':'No position report yet.';
- for(const [name,label] of Object.entries(outputNames))$('output-'+name).textContent=label+' · '+(m.outputs?.[name]===true?'commanded on':m.outputs?.[name]===false?'commanded off':'unknown');
- $('endstops').textContent=m.endstops||'No endstop report yet.';
- $('motion-log').textContent=(m.recent||[]).slice(-16).map(r=>new Date(r.time*1000).toLocaleTimeString()+' '+r.direction.toUpperCase()+' '+r.text).join('\n');
+$('part-search').oninput=renderParts;
+function newPart(packageId=''){
+ creatingPart=true;editingPart=null;
+ const form=$('part-edit');form.reset();form.elements.part_id.disabled=false;
+ $('part-title').textContent='New OpenPnP part';$('part-identity').hidden=true;$('new-part-id').hidden=false;$('part-hint').textContent='Choose a package, or create one here. This part will appear in Reel / stock.';
+ const select=form.elements.package_id;select.replaceChildren(new Option('Select a package',''));
+ for(const pkg of state.openpnp?.packages||[])select.append(new Option(pkg.id,pkg.id));
+ select.required=true;select.value=packageId;form.elements.height_mm.value=0;
+ $('part-dialog').querySelector('[data-dialog-message]').textContent='';renderPartPreview();$('part-dialog').showModal();
 }
-$('heads-ready').onchange=motionControls;
-$('connected-jog-ready').onchange=motionControls;
-document.querySelectorAll('[data-axis]').forEach(button=>button.onclick=()=>{
- const axis=button.dataset.axis,rotating='AB'.includes(axis),distance=Number($(rotating?'rotation-step':'jog-step').value)*Number(button.dataset.sign),speed=Number($('jog-speed').value);
- if(!Number.isFinite(speed)||speed<0.1||speed>100){message.textContent='Choose a jog speed from 0.1 to 100 mm/s.';return}
- const linked=state?.motion?.owner==='openpnp',confirmed=$('connected-jog-ready').checked;
- send('/api/motion',{action:linked?'jog_connected':'jog',axis,distance,speed:Math.min(speed,rotating?60:axis==='Z'?10:100),idle_confirmed:confirmed,homed_confirmed:confirmed});
-});
-document.querySelectorAll('[data-motion]').forEach(button=>button.onclick=async()=>{
- const action=button.dataset.motion;
- if(action!=='halt'){const heads_ready=$('heads-ready').checked;if(action==='home')$('heads-ready').checked=false;const confirmed=$('connected-jog-ready').checked;await send('/api/motion',{action,heads_ready,idle_confirmed:confirmed,homed_confirmed:confirmed});return}
- try{const response=await fetch('/api/motion',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'halt'})});const result=await response.json();if(!response.ok)throw Error(result.error);message.textContent='Software halt requested. Inspect the machine before recovery.'}catch(error){message.textContent='Halt request failed: '+error.message}finally{await refresh()}
-});
-$('search').oninput=render;
-$('maintenance').onclick=()=>send('/api/maintenance',{enabled:!state.maintenance});
-for(const name of ['stock','polling','refresh','assign'])$(name).onsubmit=event=>{event.preventDefault();const args={};for(const [key,value] of new FormData(event.target))args[key]=['address','quantity','pulses_per_part','low','new_id'].includes(key)?Number(value):value;send('/api/'+name,args)};
-$('update').elements.image.onchange=async event=>{
- const generation=++imageGeneration,file=event.target.files[0];image=null;controls();if(!file)return;
- $('image-info').textContent='Checking application…';
- try{if(file.size>57344)throw Error('Application exceeds 56 KiB');const bytes=await file.arrayBuffer();const response=await fetch('/api/image',{method:'POST',headers:{'Content-Type':'application/octet-stream'},body:bytes});const info=await response.json();if(!response.ok)throw Error(info.error);if(generation!==imageGeneration)return;image=bytes;$('image-info').textContent=file.name+' · Universal V485 · '+info.size+' bytes · CRC32 '+info.crc32}
- catch(error){if(generation===imageGeneration)$('image-info').textContent=error.message}
- finally{controls()}
+for(const button of document.querySelectorAll('[data-new-part]'))button.onclick=()=>newPart();
+$('part-edit').onsubmit=async event=>{
+ event.preventDefault();if(!creatingPart&&!editingPart)return;
+ const args=Object.fromEntries(new FormData(event.target));args.action=creatingPart?'create_part':'edit_part';args.height_mm=Number(args.height_mm);
+ if(!creatingPart){args.part_id=editingPart.id;args.expected=editingPart}
+ const result=await send('/api/openpnp',args);
+ if(result?.part){if(creatingPart){creatingPart=false;$('part-dialog').close();showTab('parts');$('part-search').value=result.part.id;renderParts()}else editingPart={...result.part}}
 };
-$('update').onsubmit=event=>{event.preventDefault();if(image&&state?.maintenance&&!state?.demo)send('/api/update?address='+encodeURIComponent(event.target.elements.address.value),image,true)};
+function openPackage(){
+ const form=$('package-create');form.reset();const select=form.elements.copy_from;select.replaceChildren(new Option('Blank package (no footprint)',''));
+ for(const pkg of state.openpnp?.packages||[])select.append(new Option(pkg.id,pkg.id));
+ $('package-dialog').querySelector('[data-dialog-message]').textContent='';$('package-dialog').showModal();
+}
+for(const button of document.querySelectorAll('[data-new-package]'))button.onclick=openPackage;
+$('package-create').onsubmit=async event=>{
+ event.preventDefault();const args=Object.fromEntries(new FormData(event.target));args.action='create_package';
+ const result=await send('/api/openpnp',args);
+ if(result?.package){
+  $('package-dialog').close();
+  if($('part-dialog').open){const select=$('part-edit').elements.package_id;select.append(new Option(result.package.id,result.package.id));select.value=result.package.id;renderPartPreview()}
+  else{showTab('packages');$('package-search').value=result.package.id;renderPackages()}
+ }
+};
+function footprintPreview(pkg,large=false){
+ const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.classList.add('footprint');if(large)svg.classList.add('footprint-large');svg.setAttribute('role','img');svg.setAttribute('aria-label',pkg?'Footprint '+pkg.id:'No package selected');
+ const node=(tag,attributes)=>{const e=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attributes))e.setAttribute(k,v);return e};
+ const pads=(pkg?.pads||[]).filter(p=>[p.x,p.y,p.width,p.height,p.rotation].every(Number.isFinite)&&p.width>0&&p.height>0),w=Number(pkg?.body_width_mm)||0,h=Number(pkg?.body_length_mm)||0;
+ if(!pads.length&&!w&&!h){svg.setAttribute('viewBox','0 0 100 60');const text=node('text',{x:50,y:32,'text-anchor':'middle',fill:'#627a74','font-size':10});text.textContent=pkg?.pads?'No geometry':'No preview';svg.append(text);return svg}
+ let minX=-w/2,maxX=w/2,minY=-h/2,maxY=h/2;
+ for(const p of pads){const a=p.rotation*Math.PI/180,c=Math.cos(a),s=Math.sin(a);for(const x of [-p.width/2,p.width/2])for(const y of [-p.height/2,p.height/2]){const px=p.x+x*c-y*s,py=p.y+x*s+y*c;minX=Math.min(minX,px);maxX=Math.max(maxX,px);minY=Math.min(minY,py);maxY=Math.max(maxY,py)}}
+ const margin=Math.max(maxX-minX,maxY-minY,.1)*.13;svg.setAttribute('viewBox',[minX-margin,-maxY-margin,maxX-minX+2*margin,maxY-minY+2*margin].join(' '));
+ const group=node('g',{transform:'scale(1,-1)'});svg.append(group);
+ if(w>0&&h>0)group.append(node('rect',{x:-w/2,y:-h/2,width:w,height:h,fill:'#dceae6',stroke:'#587c72','stroke-width':1,'vector-effect':'non-scaling-stroke'}));
+ for(const p of pads){const rect=node('rect',{x:-p.width/2,y:-p.height/2,width:p.width,height:p.height,rx:Math.min(p.width,p.height)*Math.max(0,Math.min(100,p.roundness||0))/200,transform:'translate('+p.x+' '+p.y+') rotate('+p.rotation+')',fill:p.mark?'#c24f26':'#c49b44',stroke:'#80652a','stroke-width':.6,'vector-effect':'non-scaling-stroke'});const title=node('title',{});title.textContent='Pad '+p.name;rect.append(title);group.append(rect)}
+ return svg;
+}
+function previewButton(pkg,action,label){const button=document.createElement('button');button.className='preview-button';button.setAttribute('aria-label',label);button.append(footprintPreview(pkg));button.onclick=action;return button}
+function renderPartPreview(){const pkg=(state?.openpnp?.packages||[]).find(p=>p.id===$('part-edit').elements.package_id.value),target=$('part-preview');target.replaceChildren(footprintPreview(pkg));const caption=document.createElement('span');caption.textContent=pkg?pkg.id+' · OpenPnP footprint':'Select a package for its preview';target.append(caption);if(pkg){const button=document.createElement('button');button.type='button';button.className='secondary';button.textContent='Compatible tips';button.onclick=()=>editPackage(state.openpnp.packages.find(p=>p.id===pkg.id));target.append(button)}}
+$('part-edit').elements.package_id.onchange=renderPartPreview;
+let editingPackage=null;
+function editPackage(pkg,focusDescription=false){
+ if(!state?.openpnp?.online)return;
+ editingPackage=structuredClone(pkg);$('package-edit-title').textContent=pkg.id;$('package-edit').elements.description.value=pkg.description||'';
+ $('package-preview').replaceChildren(footprintPreview(pkg,true));$('package-geometry').textContent=quantity(pkg.body_width_mm)+' × '+quantity(pkg.body_length_mm)+' mm · '+pkg.pad_count+' pads';
+ const choices=$('package-nozzles');choices.replaceChildren();
+ for(const tip of state.openpnp.nozzle_tips||[]){const label=document.createElement('label');label.className='choice';const input=document.createElement('input');input.type='checkbox';input.name='nozzle_tip_ids';input.value=tip.id;input.checked=(pkg.nozzle_tip_ids||[]).includes(tip.id);const text=document.createElement('span');text.textContent=tip.name;label.append(input,text);choices.append(label)}
+ if(!choices.childNodes.length)choices.textContent='No nozzle tips configured in OpenPnP.';
+ $('package-linked').textContent=(state.openpnp.parts||[]).filter(p=>p.package_id===pkg.id).length+' linked parts · Save applies to all of them.';
+ $('package-edit-dialog').querySelector('[data-dialog-message]').textContent='';$('package-edit-dialog').showModal();if(focusDescription)$('package-edit').elements.description.focus();
+}
+$('package-edit').onsubmit=async event=>{
+ event.preventDefault();if(!editingPackage)return;
+ const form=event.target,result=await send('/api/openpnp',{action:'edit_package',package_id:editingPackage.id,expected:editingPackage,description:form.elements.description.value,nozzle_tip_ids:[...form.querySelectorAll('input[name=nozzle_tip_ids]:checked')].map(input=>input.value)});
+ if(result?.package){editingPackage=null;$('package-edit-dialog').close()}
+};
+function renderPackages(){
+ const op=state?.openpnp,query=$('package-search').value.toLowerCase();
+ $('packages-status').textContent=!op?.online?'OpenPnP is offline.':'Click a preview or description to edit. Changes require Save.';
+ $('package-rows').replaceChildren();
+ for(const pkg of [...(op?.packages||[])].sort((a,b)=>a.id.localeCompare(b.id))){
+  if(![pkg.id,pkg.description].join(' ').toLowerCase().includes(query))continue;
+  const row=document.createElement('tr'),linked=(op?.parts||[]).filter(part=>part.package_id===pkg.id),preview=document.createElement('td');preview.append(previewButton(pkg,()=>editPackage(pkg),'Preview '+pkg.id));row.append(preview);
+  const id=document.createElement('td');id.append(editField(pkg.id,()=>editPackage(pkg),'Edit package '+pkg.id,!op.online||updateActive()));row.append(id);
+  const description=document.createElement('td'),field=document.createElement('button');field.className='field-button';field.textContent=pkg.description||'Add description…';field.setAttribute('aria-label','Edit description for '+pkg.id);field.disabled=!op.online||updateActive();field.onclick=()=>editPackage(pkg,true);description.append(field);row.append(description);
+  const footprint=pkg.pad_count==null?'—':pkg.pad_count||pkg.body_width_mm||pkg.body_length_mm?quantity(pkg.body_width_mm)+' × '+quantity(pkg.body_length_mm)+' mm · '+pkg.pad_count+' pads':'Blank';
+  const tips=(pkg.nozzle_tip_ids||[]).map(id=>(op.nozzle_tips||[]).find(t=>t.id===id)?.name||id);
+  for(const value of [footprint,tips.join(', ')||'None selected']){const cell=document.createElement('td');cell.textContent=value;row.append(cell)}
+  const linkedCell=document.createElement('td'),link=document.createElement('button');link.className='secondary';link.textContent=linked.length+' parts';link.onclick=()=>{showTab('parts');$('part-search').value=pkg.id;renderParts()};linkedCell.append(link);row.append(linkedCell);
+  const cell=document.createElement('td'),actions=document.createElement('div');actions.className='row-actions';
+  for(const [text,enabled,action] of [['Edit',op.online,()=>editPackage(pkg)],['New part',op.online,()=>newPart(pkg.id)]]){const button=document.createElement('button');button.className='secondary';button.textContent=text;button.setAttribute('aria-label',text+' '+pkg.id);button.disabled=!enabled||updateActive();button.onclick=action;actions.append(button)}
+  cell.append(actions);row.append(cell);$('package-rows').append(row);
+ }
+}
+$('package-search').oninput=renderPackages;
+async function featureJson(path,options){const response=await fetch(path,options),result=await response.json();if(!response.ok)throw Error(result.error||'Request failed');return result}
+async function loadCatalogue(){
+ if(catalogueRequest)return catalogueRequest;
+ catalogueRequest=(async()=>{
+  try{catalogue=await featureJson('/api/catalogue');if(catalogue.api_version!==1)throw Error('Reload OpenPnP-Web.py to match this dashboard')}
+  catch(error){catalogue={...catalogue,online:false,error:error.message};message.textContent=error.message}
+  finally{if(state)state.openpnp=catalogue;renderParts();renderPackages();renderStockPart();if($('part-dialog').open)renderPartPreview();controls()}
+ })();
+ try{await catalogueRequest}finally{catalogueRequest=null}
+}
+async function loadFeaturePage(name){
+ if(!connected||featurePage===name)return;featurePage=name;
+ if(['parts','packages','job'].includes(name))await loadCatalogue();
+ if(name==='job'){renderJobCheck();if(!jobAttempted&&catalogue?.online)checkJob()}
+}
+function renderJobCheck(){
+ if(jobBusy)return;
+ if(!jobResult){$('job-summary').textContent=jobError||(!state?.openpnp?.online?'OpenPnP is offline.':'Load a job in OpenPnP to check remaining stock.');return}
+ const result=jobResult,attention=result.rows.filter(r=>r.status!=='Stock sufficient').length;
+ $('job-summary').textContent=(result.name||'No loaded job')+' · '+(result.rows.length?attention?attention+' parts need attention':'Stock sufficient for remaining placements':'No remaining placements')+' · '+new Date(result.checked_at*1000).toLocaleTimeString();
+ $('job-rows').replaceChildren();
+ for(const row of result.rows){
+  const tr=document.createElement('tr'),ok=row.status==='Stock sufficient';
+  const result=row.status==='Short'?'Short '+row.shortage:row.status;
+  for(const value of [(row.part_id||'Missing part')+(row.name&&row.name!==row.part_id?' · '+row.name:''),row.required,row.status==='Unknown stock'?'Unknown':row.other_feeder&&!row.available?'Untracked':quantity(row.available),result+(row.notes.length?' · '+row.notes.join('; '):'')]){const td=document.createElement('td');td.textContent=value;tr.append(td)}
+  tr.lastChild.className=ok?'':'warning';$('job-rows').append(tr);
+ }
+}
+async function checkJob(){
+ if(jobBusy||!connected||!state?.openpnp?.online)return;
+ jobError='';jobAttempted=true;jobBusy=true;controls();$('job-summary').textContent='Checking remaining stock…';
+ try{jobResult=await featureJson('/api/job')}catch(error){jobResult=null;jobError=error.message;$('job-rows').replaceChildren();$('job-summary').textContent=error.message}
+ finally{jobBusy=false;controls();if(jobResult)renderJobCheck()}
+}
+$('job-check').onclick=checkJob;
+function tipName(id){return (state?.openpnp?.nozzle_tips||[]).find(t=>t.id===id)?.name||id}
+function nozzleLabel(nozzle){return nozzle.head_name+' / '+nozzle.name}
+function editField(text,action,label,disabled=false){const button=document.createElement('button');button.className='field-button';button.textContent=text;button.setAttribute('aria-label',label);button.disabled=disabled;button.onclick=action;return button}
+function renderStockTooling(){
+ const op=state?.openpnp,target=$('stock-tooling'),part=(op?.parts||[]).find(p=>p.id===$('stock-part').value),pkg=(op?.packages||[]).find(p=>p.id===part?.package_id);
+ if(!op?.online){target.textContent='Tips / heads: OpenPnP offline';return}
+ if(!part){target.textContent=$('stock-part').value?'Part unavailable in OpenPnP':'Select a part to see compatible tips and heads.';return}
+ if(!pkg){target.textContent='No package assigned to this part.';return}
+ const tips=pkg.nozzle_tip_ids||[];
+ if(!tips.length){target.textContent='Compatible tips: none selected for '+pkg.id;return}
+ const matches=(op.nozzles||[]).map(n=>({nozzle:n,tips:n.nozzle_tip_ids.filter(id=>tips.includes(id))})).filter(n=>n.tips.length);
+ const labels=items=>items.map(m=>nozzleLabel(m.nozzle)+' ('+m.tips.map(tipName).join(', ')+')').join('; ');
+ target.textContent='Tips: '+tips.map(tipName).join(', ')+'\nCompatible heads: '+(labels(matches)||'None configured in OpenPnP');
+}
+function renderStockPart(){
+ const f=currentFeeder(),select=$('stock-part'),op=state?.openpnp,assignment=f?.part_assignment;
+ const matches=(op?.feeders||[]).filter(native=>Number(native.bus_id)===f?.address),native=matches.length===1?matches[0]:null;
+ const signature=JSON.stringify(op?.parts||[]),desired=assignment?.part_id??native?.part_id??'';
+ if(select.dataset.options!==signature||select.dataset.uid!==f?.uid){
+  const value=select.dataset.uid===f?.uid?select.value:desired;
+  select.replaceChildren(new Option('No part',''));
+  for(const part of op?.parts||[])select.append(new Option(partText(part),part.id));
+  if(value&&!(op?.parts||[]).some(p=>p.id===value))select.append(new Option(value+' (unavailable)',value));
+  select.value=value;select.dataset.options=signature;select.dataset.uid=f?.uid||'';
+ }
+ const text=$('part-sync-status');
+ text.className=assignment?.status==='pending'?'warning':'muted';
+ text.textContent=select.value!==desired?'Part selection not saved':assignment?.status==='pending'?'Pending sync · '+(assignment.error||'Not yet saved in OpenPnP'):!op?.online?(assignment?.status==='synced'?'Last synced · OpenPnP offline':'OpenPnP offline · stock can still be saved'):!native?(matches.length?'Multiple OpenPnP feeders use this bus ID':'Saving a selected part will add this feeder to OpenPnP, disabled for pickup teaching'):assignment&&native.part_id!==assignment.part_id?'OpenPnP assignment differs · Retry sync to apply the saved part':assignment?.status==='synced'?'Synced to OpenPnP':'Part selection will be saved to OpenPnP';
+ renderStockTooling();
+ $('retry-part-sync').hidden=!assignment||(assignment.status==='synced'&&(!native||native.part_id===assignment.part_id));
+}
+$('stock-part').onchange=renderStockPart;
+$('retry-part-sync').onclick=async()=>{const f=currentFeeder();if(f?.uid)await send('/api/part-sync',{uid:f.uid})};
+function renderUpdateQueue(){
+ const batch=state?.batch_update,items=batch?.items||[],upload=state?.update;
+ $('view-update-queue').hidden=!batch;
+ $('queue-summary').textContent=batch?.active?'Updating one feeder at a time.':batch?.error?'Finished with failures. Retry failed feeders. Feeders remain paused.':batch?'Finished. Feeders remain paused.':'Preparing update queue…';
+ $('queue-rows').replaceChildren();
+ const labels={queued:'Waiting',checking:'Checking firmware',updating:'Uploading',complete:'Verified',current:'Already current',failed:'Failed',not_updated:'Not updated'};
+ for(const item of items){
+  const row=document.createElement('tr');
+  for(const text of [item.address,(labels[item.stage]||item.stage)+(item.error?' · '+item.error:'')]){const cell=document.createElement('td');cell.textContent=text;if(item.stage==='failed')cell.className='bad';row.append(cell)}
+  const cell=document.createElement('td'),progress=document.createElement('progress');progress.max=100;progress.value=['complete','current'].includes(item.stage)?100:['updating','failed'].includes(item.stage)&&upload?.address===item.address?100*upload.sent/upload.size:0;progress.setAttribute('aria-label','Feeder '+item.address+' update progress');cell.append(progress);row.append(cell);$('queue-rows').append(row);
+ }
+}
+$('view-update-queue').onclick=()=>{$('updates-dialog').querySelector('[data-dialog-message]').textContent='';renderUpdateQueue();$('updates-dialog').showModal()};
+for(const button of document.querySelectorAll('[data-update-all]'))button.onclick=async()=>{
+ if(busy||updateActive()||!state?.available_firmware?.available||state.demo)return;
+ renderUpdateQueue();$('updates-dialog').querySelector('[data-dialog-message]').textContent='';$('updates-dialog').showModal();
+ await send('/api/update-all-bundled',{sha256:state.available_firmware.sha256});renderUpdateQueue();
+};
+let testFeeder=null,testBusy=false,testPendingAction=null,testTimer=null,testResult=null;
+function testControls(){
+ const changing=testBusy&&testBusy!=='read';
+ $('test-start').disabled=changing||!connected||updateActive()||!!testResult?.active;
+ $('test-read').disabled=changing||!connected||updateActive();
+ $('test-end').disabled=changing||!connected||updateActive()||!testResult?.active;
+}
+function renderInputTest(result){
+ testResult=result;$('test-inputs').replaceChildren();
+ for(const [label,value] of [['Peel switch contact',result.contact_closed?'Closed · LOW':'Open · HIGH'],['Peel request',result.peel_requested?'Take up':'Stop'],['Switch changes',result.switch_changes],['Feed button',result.feed_button_pressed?'Pressed':'Released'],['Menu button',result.menu_button_pressed?'Pressed':'Released'],['Index sensor',result.index_sensor_high?'HIGH':'LOW'],['Index sensor total',result.sensor_total],['Motors',result.index_running||result.peel_running?'Running':'Both stopped'],['Heartbeat',Math.floor(result.uptime_ms/1000)+' s uptime · '+new Date(result.read_at*1000).toLocaleTimeString()]]){const term=document.createElement('dt'),valueElement=document.createElement('dd');term.textContent=label;valueElement.textContent=value;$('test-inputs').append(term,valueElement)}
+ $('test-state').textContent=result.active?'Input test active · both motors inhibited':'Test inactive · normal operation';
+ $('test-state').className=result.active?'':'warning';testControls();
+}
+async function inputTest(action){
+ if(!testFeeder)return;if(testBusy){if(action!=='read')testPendingAction=action;return}
+ const target=testFeeder;clearTimeout(testTimer);testBusy=action;testControls();
+ try{
+  if(action!=='read'&&!state.maintenance){if(!await send('/api/maintenance',{enabled:true}))throw Error('Could not pause feeders')}
+  const response=await fetch('/api/test',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...target,action}),signal:AbortSignal.timeout(5000)}),result=await response.json();
+  if(!response.ok)throw Error(result.error||'Input test failed');
+  if(testFeeder===target&&$('test-dialog').open){renderInputTest(result);if(result.active)testTimer=setTimeout(()=>inputTest('read'),250)}
+  if(action!=='read')await refresh();
+ }catch(error){if(testFeeder===target){$('test-state').textContent=error.message+' · Displayed inputs are not current.';$('test-state').className='bad'}}
+ finally{testBusy=false;testControls();if(testPendingAction&&$('test-dialog').open){const next=testPendingAction;testPendingAction=null;inputTest(next)}}
+}
+function openInputTest(f){
+ if(testBusy)return;testFeeder={address:f.address,uid:f.uid};testResult=null;
+ $('test-title').textContent='Feeder '+f.address+' · Input test';$('test-inputs').replaceChildren();$('test-state').textContent='Reading feeder…';$('test-dialog').querySelector('[data-dialog-message]').textContent='';$('test-dialog').showModal();inputTest('read');
+}
+$('test-start').onclick=()=>inputTest('start');$('test-read').onclick=()=>inputTest('read');$('test-end').onclick=()=>inputTest('end');
+$('test-dialog').addEventListener('close',()=>{clearTimeout(testTimer);testPendingAction=null});
+$('search').oninput=render;
+for(const b of document.querySelectorAll('[data-maintenance]'))b.onclick=()=>send('/api/maintenance',{enabled:!state.maintenance});
+for(const name of ['polling','refresh','assign'])$(name).onsubmit=event=>{event.preventDefault();const args={};for(const [key,value] of new FormData(event.target))args[key]=['address','quantity','pulses_per_part','low','new_id'].includes(key)?Number(value):value;send('/api/'+name,args)};
+$('stock').onsubmit=async event=>{
+ event.preventDefault();const f=currentFeeder();if(!f?.uid)return;
+ const args=Object.fromEntries(new FormData(event.target));
+ for(const key of ['address','quantity','low'])args[key]=Number(args[key]);
+ args.uid=f.uid;
+ await send('/api/stock',args);
+};
+$('config-read').onclick=async()=>{const f=currentFeeder();if(!f?.online)return;if(await send('/api/refresh',{address:f.address})){configLoadedFor=null;loadHardware(currentFeeder());render()}};
+$('hardware').onsubmit=async event=>{
+ event.preventDefault();const feeder=currentFeeder(),form=event.target;
+ if(!feeder?.online||configLoadedFor!==feeder.uid)return;
+ const args={address:feeder.address,uid:feeder.uid,pitch_mm:form.elements.pitch_mm.value};
+ for(const key of ['feed_reverse','peel_reverse','switch_no'])args[key]=form.elements[key].value==='true';
+ if(await send('/api/configure',args)){loadHardware(currentFeeder());render();message.textContent='Hardware settings saved and read back.'}
+};
+$('update').onsubmit=event=>{
+ event.preventDefault();if(!state?.available_firmware?.available||state.demo||busy||updateActive())return;
+ renderUpdateQueue();$('updates-dialog').querySelector('[data-dialog-message]').textContent='';$('updates-dialog').showModal();
+ send('/api/update-bundled',{address:Number(event.target.elements.address.value),sha256:state.available_firmware.sha256});
+};
+
 async function pollStatus(){await refresh();setTimeout(pollStatus,1000)}
 pollStatus();
-</script>
-</html>
+</script></html>

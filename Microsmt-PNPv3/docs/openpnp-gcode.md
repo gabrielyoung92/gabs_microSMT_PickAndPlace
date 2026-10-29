@@ -1,8 +1,10 @@
 # OpenPnP motion and output commands
 
-Reviewed initial Pi configuration. These are the configured commands for the
-stock five-axis LPC1769 Smoothieware PnP controller. Runtime configuration lives
-in OpenPnP's machine.xml; preserved SD files are not modified.
+OpenPnP controls the five-axis LPC1769 Smoothieware PnP controller over its
+direct USB serial connection. Runtime configuration lives in OpenPnP's
+`machine.xml`. Powered feeders use their own
+[TCP driver and RS485 host](../../Bing-feeder/V485-feeder/USB_host/README.md);
+that driver has no motion axes.
 
 ## Operating profile
 

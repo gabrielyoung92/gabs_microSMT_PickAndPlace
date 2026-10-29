@@ -524,6 +524,34 @@ if(!strcmp(argv[1],"defaults")){
  uint32_t start=now;char line[100];int n=sprintf(line,"B07 IDENT 12345678");
  sprintf(line+n," %08X",Boot_Crc32(line,n));updateLine=line;Feeder_Run();
  assert(now-start<100&&strstr(response,"IDENT")&&!starts);
+}else if(!strcmp(argv[1],"inputtest")){
+ int writes=settingWrites;
+ framed("TESTREAD 12345678");assert(strstr(response,"TEST 12345678")&&mode==MODE_NORMAL);
+ framed("TEST 12345678 00000000 22222222 33333333 00000001");assert(!response[0]&&mode==MODE_NORMAL);
+ assert(Motor_Reserve(1));Motor_Start();
+ framed("TEST 12345678 11111111 22222222 33333333 00000001");assert(strstr(response,"BUSY")&&mode==MODE_NORMAL);pulse();
+ testB.levels&=~PEEL_SWITCH_PIN;
+ framed("TEST 12345678 11111111 22222222 33333333 00000001");assert(mode==MODE_TEST&&!feedReady&&!peelRunning);idle();
+ int oldStarts=starts;
+ delay_ms(UI_TIMEOUT_MS+PEEL_TIMEOUT_MS+100);KeyScan();assert(mode==MODE_TEST);idle();
+ manualRequest();command(7,1);assert(starts==oldStarts&&mode==MODE_TEST);idle();
+ press(BUTTON_PIN,20);press(MENU_BUTTON_PIN,BUTTON_HOLD_MS*6);assert(mode==MODE_TEST&&starts==oldStarts);idle();
+ testB.levels|=PEEL_SWITCH_PIN;delay_ms(PEEL_DEBOUNCE_MS+2);assert(testSwitchChanges==1);idle();
+ testB.levels&=~PEEL_SWITCH_PIN;delay_ms(PEEL_DEBOUNCE_MS+2);assert(testSwitchChanges==2);idle();
+ framed("TESTREAD 12345678");assert(strstr(response,"TEST 12345678")&&testSwitchChanges==2);
+ framed("TEST 12345678 11111111 22222222 33333333 00000001");assert(testSwitchChanges==2);idle();
+ assert(settingWrites==writes);
+ framed("TEST 12345678 11111111 22222222 33333333 00000000");assert(mode==MODE_NORMAL&&feedReady&&!peelCycle);
+ delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(!!peelRunning==FEEDER_WIDE);
+}else if(!strcmp(argv[1],"peelafter")){
+ // An 8 mm feed can finish before the peel debounce; it still takes up afterward.
+ testB.levels&=~PEEL_SWITCH_PIN;assert(Motor_Reserve(1));Motor_Start();pulse();
+ assert(feedState==FEED_IDLE&&peelCycle);
+ delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(peelRunning);
+ testB.levels|=PEEL_SWITCH_PIN;delay_ms(1);assert(!peelRunning&&!peelCycle);
+ testB.levels&=~PEEL_SWITCH_PIN;delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(!!peelRunning==FEEDER_WIDE);
+ if(!FEEDER_WIDE){assert(Motor_Reserve(1));Motor_Start();pulse();delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(peelRunning);}
+ delay_ms(PEEL_TIMEOUT_MS);assert(feedState==FEED_FAULT&&faultReason==FAULT_PEEL);idle();
 }else if(!strcmp(argv[1],"peel")||!strcmp(argv[1],"peelwrap")||!strcmp(argv[1],"peeltimeout")){
  if(!strcmp(argv[1],"peelwrap")){now=UINT32_MAX-100U;peelOffAt=now;}
  if(!FEEDER_WIDE){assert(Motor_Reserve(99));Motor_Start();}
@@ -707,7 +735,7 @@ def main():
    for module in ['app','rx']:
     exe=q/(module+str(wide));subprocess.run(['gcc','-std=c11','-Wall','-Wextra','-Wno-misleading-indentation','-Werror','-fsanitize=undefined,address','-g','-I',d,'-I',str(p/'src'),'-DFEEDER_WIDE='+str(wide),str(q/(module+'.c')),'-o',str(exe)],check=True)
     if module=='app':
-     for case in ['defaults','longjog','longjoglimit','longjogwrap','longjogstall','longjogdeadline','longjogstop','jog','remotecount','options','optionsrecords','optionscorrupt','optionsreadfail','race','startup','zero','early','display','timeout','wrap','feedback','readfail','countreadfail','blank','unassigned','unassignedremote','unassignedboot','bootblank','bootblankfail','invalidid','savefail','readbackfail','diagnostics','buttons','twobuttons','untyped','typereadfail','type','locate','heldstartup','menuboot','menutiming','menubootfail','menufault','assignheld','menubusy','assign','assignexpired','assignfail','peel','peelwrap','peeltimeout','savesuccess','slowack','framed','badframed','completion','completionearly','completionfault','completioneeprom','bootidle','bootbusy','bootreserved','bootwrong','bootcrc','bootfault','booteeprom']:subprocess.run([str(exe),case],check=True)
+     for case in ['inputtest','peelafter','defaults','longjog','longjoglimit','longjogwrap','longjogstall','longjogdeadline','longjogstop','jog','remotecount','options','optionsrecords','optionscorrupt','optionsreadfail','race','startup','zero','early','display','timeout','wrap','feedback','readfail','countreadfail','blank','unassigned','unassignedremote','unassignedboot','bootblank','bootblankfail','invalidid','savefail','readbackfail','diagnostics','buttons','twobuttons','untyped','typereadfail','type','locate','heldstartup','menuboot','menutiming','menubootfail','menufault','assignheld','menubusy','assign','assignexpired','assignfail','peel','peelwrap','peeltimeout','savesuccess','slowack','framed','badframed','completion','completionearly','completionfault','completioneeprom','bootidle','bootbusy','bootreserved','bootwrong','bootcrc','bootfault','booteeprom']:subprocess.run([str(exe),case],check=True)
     else:subprocess.run([str(exe)],check=True)
  print('All actual-source checks passed. Temporary files only; no project tests folder created.')
 

@@ -107,9 +107,10 @@ Smoothieware controller. See [controller inspection](CONTROLLER_INSPECTION.md)
 for firmware identity, SD backup hashes, live status, axis configuration and
 the boundary before motor testing.
 
-## Raspberry Pi camera and output validation
+## Cameras and outputs
 
-Both cameras now stream on the Pi and return 1920×1080 frames through OpenPnP.
+OpenPnP owns both USB cameras. Capture checks returned 1920×1080 frames from
+both cameras. The machine computer is the Debian 13 Dell OptiPlex.
 Concurrent MJPEG capture produced 150 frames per camera in five seconds.
 The bottom camera is HBVCAM `bottom`, USB `1e46:8024`, serial `HB2025070001`.
 Both cameras share that serial but have distinct product identities. Its image
