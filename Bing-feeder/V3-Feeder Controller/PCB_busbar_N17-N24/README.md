@@ -4,13 +4,13 @@
 
 [Back to collection](../README.md)
 
-The Gerber ZIP, board previews and editable KiCad files are below. Click a picture for the full-size view.
+Gerbers, editable KiCad files and previews are below.
 
 ## KiCad files
 
 [Open project](KiCad/busbar_n17_n24.kicad_pro) · [Schematic](KiCad/busbar_n17_n24.kicad_sch) · [PCB](KiCad/busbar_n17_n24.kicad_pcb)
 
-These KiCad files were rebuilt from MicroSMT’s originals. DRC still reports layout issues. Keep the whole `KiCad/` folder together; it includes the libraries in `KiCad/libraries/`.
+Rebuilt from MicroSMT source files. Keep `KiCad/` together for its local libraries. Review the DRC results before editing or ordering.
 
 [Components](docs/components.csv) · [Recovery data](docs/recovery.json) · [Validation](docs/validation.json) · [Mask/paste comparison](docs/mask-paste-comparison.json)
 
@@ -28,11 +28,11 @@ Read the [recovery notes](../../../tools/kicad/RECOVERY_NOTES.md) before layout 
 </tr>
 </table>
 
-These pictures were drawn from the Gerbers and drill files. The colours and 1.6 mm board thickness are just display settings, not confirmed manufacturing specifications.
+Gerber previews use display colours and an assumed 1.6 mm thickness; use source data for manufacturing dimensions.
 
 ## KiCad previews
 
-These views show the rebuilt KiCad project. The Gerber views above come from MicroSMT’s original files.
+KiCad reconstruction views; source Gerber views are above.
 
 <table>
 <tr>

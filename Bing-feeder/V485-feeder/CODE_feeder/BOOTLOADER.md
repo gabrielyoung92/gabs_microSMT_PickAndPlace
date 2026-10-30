@@ -16,27 +16,19 @@ explicit retry. The standalone uploader batch stops on its first failure.
 
 ## First installation
 
-For the current batch, use the [ST-Link-only commissioning tool](COMMISSIONING.md),
-which programs both images and verified EEPROM metadata/settings without RS485.
-The separate loader/RS485 procedure below remains available.
-
-
-Open **CODE_feeder** in VS Code/PlatformIO and build the matching application and loader:
+Use [ST-Link commissioning](COMMISSIONING.md) for a new or SWD-repaired board.
+That procedure installs the loader/application and verifies the EEPROM boot
+record, ID and width. Normal application updates leave the loader alone.
 
 ```sh
 pio run -e v485 -e bootloader
 ```
 
-After confirming the chip, crystal and wiring, stop the machine and:
+Application: `.pio/build/v485/firmware.bin`. Loader:
+`.pio/build/bootloader/firmware.bin`. An application-only SWD write does not
+create its EEPROM boot record.
 
-1. Install the matching loader over ST-Link/SWD, for example `pio run -e bootloader -t upload`. This programs the loader at flash base. Missing/invalid EEPROM metadata leaves it in recovery mode.
-2. Connect the direct auto-direction USB–RS485 adapter to the feeder bus and PC.
-   The optional [ESP32 controller bridge](../../V485-Feeder%20Controller/CODE_esp32C3/README.md) also supports the uploader. Close OpenPnP/serial monitors and stop other bus masters; use only one RS485 master.
-3. Upload the matching application to its existing ID using the command below. The first upload creates the boot record and starts the application. For blank EEPROM, connect only that commissioning feeder and select ID 0.
-
-The common application is `.pio/build/v485/firmware.bin`; the common loader is `.pio/build/bootloader/firmware.bin`. Width is an EEPROM setting. Installing an application with ST-Link alone does not create its EEPROM boot record. Loader replacement remains an SWD operation.
-
-## Upload from Windows
+## Direct serial update
 
 Run from this directory using Python with pyserial. PlatformIO's Python includes it; for another Python installation, install `pyserial` there.
 
@@ -71,7 +63,8 @@ PA2 menu `02` or an addressed BOOT request stops both motors, saves the update r
 
 Before erasing flash, the loader verifies an invalid/writing EEPROM marker. It checks each data packet and flash readback, then verifies the complete image before writing the valid marker **last**. After an interrupted upload, rerun the command. A reset loses transfer progress and requires restarting from the beginning; lost acknowledgements within a live session can be retried.
 
-This uses one application slot: **there is no A/B rollback** after erasure. CRC detects corruption, not malicious firmware. RS485 commands cannot write the loader region or flash option bytes; no option-byte write protection is configured.
+This uses one application slot: **there is no A/B rollback** after erasure. RS485 writes are limited to the application region; flash option bytes and
+the loader are not writable through this protocol.
 
 ## Memory layout
 
@@ -85,9 +78,6 @@ This uses one application slot: **there is no A/B rollback** after erasure. CRC 
 | Boot record | EEPROM 0x20–0x33 | Magic, width, size, image CRC and record CRC |
 
 ## Protocol reference
-
-<details>
-<summary>Packet fields</summary>
 
 All packets use `B07 <body> <CRC32>` followed by LF. The ID is exactly two decimal digits. CRC32 is IEEE/zlib over ASCII from `B` through the final body character, excluding the space before the checksum and LF. Replies use the same format; numeric fields are eight hexadecimal digits.
 
@@ -114,7 +104,23 @@ All packets use `B07 <body> <CRC32>` followed by LF. The ID is exactly two decim
 
 Application diagnostic fields use the same eight-digit hexadecimal encoding. Movement total increments on every serviced PA3 rising edge, modulo 2^32. The host first reads DIAG, then claims a zero token with a random nonzero pair. The token and total survive PC restarts while the MCU stays powered; both clear on MCU reset. No EEPROM is written for telemetry. A monitor token is correlation data, not authentication or a motion permission.
 
-Diagnostic flags: bits 0–7 saved default count; 8–15 fault (0 none, 1 index deadline, 2 peel deadline, 3 settings failure, 4 explicit STOP); 16–19 feed state (0 idle, 1 reserved, 2 running, 3 fault); 20–23 UI mode (0 normal, 1 menu, 2 remote ID, 3 local ID, 4 count, 5 type, 6 input test); bit 24 interpreted peel request; bit 25 peel output commanded running; bit 26 application ready; bit 27 assigned ID; bit 28 wider configured type; bit 29 valid configured type; bits 30–31 type index (0=8, 1=12, 2=16, 3=24; meaningful only if bit 29 is set). The shutdown used for a requested update can have feed state fault with fault code 0; it is not a recorded motor fault.
+DIAG flag layout:
+
+| Bits | Meaning |
+| --- | --- |
+| 0–7 | Saved default event count |
+| 8–15 | Fault: 0 none, 1 index timeout, 2 peel timeout, 3 settings, 4 STOP |
+| 16–19 | Feed state: 0 idle, 1 reserved, 2 running, 3 fault |
+| 20–23 | Mode: 0 normal, 1 menu, 2 remote ID, 3 local ID, 4 count, 5 type, 6 test |
+| 24 | Interpreted peel request |
+| 25 | Peel output running |
+| 26 | Application ready |
+| 27 | ID assigned |
+| 28 | Wider feeder type |
+| 29 | Valid configured type |
+| 30–31 | Width index: 0=8, 1=12, 2=16, 3=24; valid when bit 29 is set |
+
+A requested update can report feed state fault with fault code 0 during shutdown.
 
 The assignment tool probes for an occupied destination before SETID, then verifies the hardware UID at the new ID. SETID does not perform its own bus probe. Assignment consumes the local selection; it cannot be retried after success without selecting menu 01 again. ID and nonce fields use the same eight-digit hexadecimal encoding as other numeric fields.
 
@@ -122,7 +128,6 @@ Image format 3 is universal. Physical width is stored separately in EEPROM byte 
 
 The uploader confirms a lost DONE through the running application's INFO. Update retries never authorize a repeated feeder advance. Shared driver and metadata code is in [src/](src/).
 
-</details>
 
 Run the small offline check with `python tools/rs485_upload.py --self-check`. See the [firmware notes](CHANGELOG.md#verification) for verification status.
 
@@ -142,6 +147,26 @@ stock-counter semantics, including hand movement; it is not reset by testing.
 menus reply `BUSY nonce`. Accepted commands reply with the same `TEST` snapshot.
 Repeated Start preserves counters. No EEPROM writes, unsolicited events, feed
 requests, fault clear or automatic timeout/resumption. Exit re-enables normal
-operation only when fault-free; wider feeders may then take up tape. Reset exits
+operation only when fault-free; all widths may then take up tape if already armed by an ordinary feed. Reset exits
 RAM-only test mode through the usual startup. The host reads TESTREAD before
 attempting Start.
+
+### Clear runtime faults
+
+Application 0.1.3 accepts `CLEAR nonce uid0 uid1 uid2` in a standard addressed
+CRC packet. All four fields are hexadecimal words. Matching UID replies
+`CLEARED nonce`; active movement or a menu replies `BUSY nonce`; invalid saved
+settings reply `ERROR SETTINGS nonce`. Wrong UID or malformed requests do
+nothing. Clear resets E1/E2/E4 without a reboot or EEPROM writes. Both motors
+remain stopped until the next ordinary feed or restart. Test mode stays active,
+and the interrupted request still reports its original fault.
+
+### Application startup notification
+
+Application 0.1.3 replaces the text banner with one `ONLINE uid0 uid1 uid2`
+packet, using the same `Bdd ... CRC32` framing and three eight-digit hexadecimal
+UID words. It waits `ID × 12 + (uid0 & 7)` milliseconds before transmission.
+This reduces simultaneous-start collisions; it does not arbitrate a busy bus.
+No acknowledgement or retry is expected. The host schedules a normal status
+check for configured polling IDs; missed hellos fall back to polling. This is
+separate from the existing bootloader's host-requested `HELLO` command.

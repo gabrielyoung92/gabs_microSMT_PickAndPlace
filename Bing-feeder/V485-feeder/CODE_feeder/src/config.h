@@ -9,9 +9,8 @@
 
 #include "stm32f1xx_hal.h"
 
-// Unreleased development firmware; initial startup, display and RS485 updates checked on one board.
-// Independent of upstream V26/V25. See CHANGELOG.md.
-#define FIRMWARE_VERSION "0.1.2"
+// Shared application version; see CHANGELOG.md.
+#define FIRMWARE_VERSION "0.1.3"
 
 // Only the dedicated bootloader environments define this as 1.
 #ifndef FEEDER_BOOTLOADER
@@ -24,8 +23,9 @@ static inline uint8_t Feeder_TypeValid(uint32_t width) {
     return width == 8U || width == 12U || width == 16U || width == 24U;
 }
 
-// 8 mm finishes a feed-triggered peel cycle at tension, including after indexing.
-// Wider feeders may take up during idle. Menus/tests/faults inhibit both motors.
+// Every width arms switch-controlled peel take-up on its first normal feed.
+// Boot alone never runs peel; once armed, the switch also controls idle take-up.
+// Menus/tests/faults and explicit recovery/jog holds inhibit the motors.
 
 // Source wiring, using STM32 GPIO names. GPIO A/B clocks are enabled in board.c.
 // LED sinks current: writing LOW lights it, HIGH turns it off.

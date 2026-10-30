@@ -8,9 +8,8 @@ schematic, portable local libraries, a component inventory and source evidence.
   five stepper channels, digital potentiometers, endstops, interfaces, power and passives.
 - [PCB](../KiCad/motherboard.kicad_pcb): numbered pads, linked footprints, tracks, vias,
   preserved copper contours, source silkscreen and board outline.
-- [Pin audit and reservations](PIN_AUDIT.md): dedicated RX/TX reserved, three analog
-  vacuum inputs reserved for **CFSensor XGZP6847A100KPGN33** (head 1, head 2 and
-  pump/common manifold), and candidates for a direct feeder bus connection.
+- [Pin audit](PIN_AUDIT.md): MCU/connector mapping and spare GPIO/ADC candidates.
+  This machine uses a separate USB board for its planned vacuum sensors.
 - [Complete MCU inventory](mcu-pins.csv): all 100 package pins and source net endpoints.
 - [Components](components.csv): source references, values and recovered footprint IDs.
 - [Recovery model](recovery.json): source/member hashes, numbered pads, inferred holes
@@ -68,7 +67,7 @@ pads (including mounting holes) and 1,676 plated drills were matched. All four
 copper layers agree with the CAM within the 0.002 mm comparison tolerance.
 The source's 33 short slots remain oblong.
 
-The current unsuppressed DRC findings are 110 clearance, 27 copper-edge clearance,
+The recorded DRC findings are 110 clearance, 27 copper-edge clearance,
 19 silkscreen-edge clearance, 89 silkscreen-over-copper and 21 solder-mask bridges.
 Native pad-generated mask openings are an approximation: the top mask's symmetric
 difference from CAM is 1.932 mm² across a 1,509.647 mm² source area. Bottom mask
@@ -94,12 +93,12 @@ The generator overwrites generated motherboard files. Preserve manual work befor
 running it again. The original feeder/busbar generators retain their original
 project list and should not be used to regenerate or prune the motherboard library.
 
-Current sensor implementation uses two nozzle sensors on a separate ESP32-C3
-USB board; motherboard ADC reservations remain historical expansion candidates.
+The sensor plan uses two nozzle sensors on a separate ESP32-C3 USB board;
+the motherboard ADC entries are spare-pin references.
 See the [sensor plan](../../docs/vacuum-sensors.md).
 
 [PCB top](../photos/kicad-pcb-top.png) · [PCB bottom](../photos/kicad-pcb-bottom.png) · [Schematic overview](../photos/kicad-schematic-overview.png) · [All sheets](../photos/kicad-schematic-contact-sheet.png)
 
-Recovery reports and inventories are in this `docs/` folder. The original overview sheet still names their former locations.
+Recovery reports and inventories are in this `docs/` folder.
 
 Source paths in the recovery JSON are relative to the repository root.

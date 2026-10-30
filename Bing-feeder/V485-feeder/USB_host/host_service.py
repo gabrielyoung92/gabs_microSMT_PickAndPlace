@@ -39,7 +39,7 @@ BAUD = 115200
 OPENPNP_URL = 'http://127.0.0.1:5004'
 
 
-FAULTS = {0: "none", 1: "index_timeout", 2: "peel_timeout", 3: "settings_error"}
+FAULTS = {0: "none", 1: "index_timeout", 2: "peel_timeout", 3: "settings_error", 4: "stopped"}
 FEED_STATES = ("idle", "reserved", "running", "fault")
 MODES = ("normal", "menu", "assign_id", "edit_id", "edit_count", "edit_type", "test")
 log = logging.getLogger("v485")
@@ -166,12 +166,22 @@ class Stock:
             self.db.execute("UPDATE feeders SET error=? WHERE address=?", (str(error)[:240], address))
 
     def load(self, uid, label, quantity, pitch, low):
-        integer(quantity, 0, 1_000_000_000, "Loaded quantity")
+        if quantity is not None:integer(quantity, 0, 1_000_000_000, "Loaded quantity")
         integer(pitch, 1, 99, "Pulses per part")
         integer(low, 0, 1_000_000_000, "Low-stock threshold")
         if not isinstance(label, str) or len(label) > 128:
             raise ValueError("Reel label must be at most 128 characters")
         with self.lock, self.db:
+            if quantity is None:
+                row=self.db.execute('SELECT * FROM feeders WHERE uid=?',(uid,)).fetchone()
+                if row['pitch']==pitch:
+                    self.db.execute('UPDATE feeders SET label=?,low=? WHERE uid=?',(label,low,uid))
+                    return
+                # Preserve remaining stock when changing the event/part ratio.
+                quantity=None if row['loaded'] is None else max(0,row['loaded']-row['used_pulses']/row['pitch'])
+                self.db.execute('UPDATE feeders SET label=?,loaded=?,pitch=?,used_pulses=0,low=? WHERE uid=?',
+                                (label,quantity,pitch,low,uid))
+                return
             self.db.execute("UPDATE feeders SET label=?,loaded=?,pitch=?,used_pulses=0,low=?,uncertain=0 WHERE uid=?",
                             (label, quantity, pitch, low, uid))
 
@@ -210,6 +220,22 @@ class Feeders:
         self.activities = {}
         self.active_feeds = set()
         self.activity_events = deque(maxlen=128)
+        self.startup_ids = set()
+        self.bootloaders = {}
+        self.reboots = {}
+
+    def link(self, address):
+        return Link(self.port, address, on_packet=self.startup_packet)
+
+    def startup_packet(self, raw):
+        # A hello only schedules a normal check; it never marks a device online.
+        if not re.match(rb'B[0-9]{2} ONLINE ', raw):return
+        address=int(raw[1:3])
+        body=decode_packet(raw,address)
+        if body is None:return
+        try:fields(body,'ONLINE',3)
+        except UpdateError:return
+        if address in self.ids:self.startup_ids.add(address)
 
     def record_activity(self,address,stage,label,source='tcp',hold=3,error=None):
         now=time.time()
@@ -235,7 +261,7 @@ class Feeders:
         with self.bus:
             uid = uid or self.observe(address)
             try:
-                variant, size, checksum = fields(Link(self.port, address).request(
+                variant, size, checksum = fields(self.link(address).request(
                     "INFO", {"APP"}, timeout=self.reply_timeout, attempts=1), "APP", 3)
                 previous=next((r['firmware_info'] or {} for r in self.stock.rows() if r['uid']==uid),{})
                 info = dict(variant=variant, size=size, crc32=f"{checksum:08X}", read_at=time.time(), checked_at=time.time())
@@ -257,7 +283,7 @@ class Feeders:
             uid = self.read_firmware(address,uid)
             nonce = secrets.randbits(32)
             try:
-                values = fields(Link(self.port,address).request(f'CONFIG {nonce:08X}', {'CONFIG'},
+                values = fields(self.link(address).request(f'CONFIG {nonce:08X}', {'CONFIG'},
                                 timeout=self.reply_timeout,attempts=1),'CONFIG',4)
                 if values[0] != nonce or any(v not in (0,1) for v in values[1:]):
                     raise UpdateError('Invalid configuration reply')
@@ -276,25 +302,61 @@ class Feeders:
         if not self.bus.acquire(blocking=False): raise ServiceError('Bus busy; settings were not queued')
         try:
             with self.control:
-                if not self.maintenance or self.updating: raise ServiceError('Pause feeders before saving hardware settings')
+                if not self.maintenance or self.updating or (self.batch_update or {}).get('active'): raise ServiceError('Pause feeders and finish updates before saving hardware settings')
             uid = self.observe(address)
             if uid != expected_uid: raise ServiceError('Feeder identity changed; select it again')
             row = next(f for f in self.stock.rows() if f['uid']==uid)
-            if row['state'] != 'idle' or row['mode'] != 'normal' or row['fault_code']:
+            repair=row['fault_code']==3
+            if row['mode']!='normal' or (row['state']!='idle' and not repair) or (row['fault_code'] and not repair):
                 raise ServiceError('Feeder must be idle and fault-free before saving settings')
-            count = events_for_pitch(args['pitch_mm'],row['nominal_step_um'])
-            nonce=secrets.randbits(32);link=Link(self.port,address)
+            width=args.get('width',int(row['variant'].removesuffix('mm')) if row['configured'] else 0)
+            if type(width) is not int or width not in (8,12,16,24):raise ValueError('Select width 8, 12, 16 or 24 mm')
+            count = events_for_pitch(args['pitch_mm'],2000 if width==8 else 4000)
+            nonce=secrets.randbits(32);link=self.link(address)
             before=read_options(link,nonce)
             hardware_uid=tuple(int(uid[i:i+8],16) for i in (0,8,16))
             options = tuple(int(args[k]) for k in keys)
             try:
-                if options != before: save_options(link,hardware_uid,options,nonce)
+                if options != before or repair: save_options(link,hardware_uid,options,nonce)
+                if not row['configured'] or int(row['variant'].removesuffix('mm'))!=width:
+                    body='SETTYPE '+' '.join(f'{v:08X}' for v in (nonce,*hardware_uid,width))
+                    try:link.request(body,{'TYPESET'},attempts=1,expected=f'TYPESET {nonce:08X} {width:08X}')
+                    except TimeoutError:pass
+                    result=fields(link.request(f'TYPE {nonce:08X}',{'TYPE'}),'TYPE',4)
+                    if result[:2]!=(nonce,width):raise ServiceError('Saved width did not verify')
                 if count != row['default_count']: set_count(self.port,address,count,uid=hardware_uid)
+                if repair:self.clear_error(dict(address=address,uid=uid))
+                self.stock.load(uid,row['label'],None,count,row['low'])
             except (OSError,TimeoutError,UpdateError) as error:
                 raise ServiceError('Settings may be partly saved; read them before retrying: '+str(error)) from error
             finally:
                 self.read_details(address)
         finally: self.bus.release()
+
+    def clear_error(self, args):
+        address=integer(args['address'],1,99,'Address')
+        uid=args.get('uid')
+        if not isinstance(uid,str) or not re.fullmatch(r'[0-9A-F]{24}',uid):
+            raise ValueError('Select an identified feeder')
+        if not self.bus.acquire(timeout=.5):raise ServiceError('Bus busy; clear was not queued')
+        try:
+            with self.control:
+                if self.updating or (self.batch_update or {}).get('active'):
+                    raise ServiceError('Wait for the firmware update to finish')
+                self.maintenance=True
+            if self.observe(address)!=uid:raise ServiceError('Feeder identity changed; select it again')
+            nonce=secrets.randbits(32)
+            words=' '.join(uid[i:i+8] for i in range(0,24,8))
+            try:
+                reply=self.link(address).request(f'CLEAR {nonce:08X} {words}',{'CLEARED','BUSY'},
+                                                     timeout=self.reply_timeout,attempts=1)
+            except TimeoutError as error:
+                raise ServiceError('No clear confirmation. Firmware 0.1.3 is required; inspect feeder status before retrying.') from error
+            if reply.startswith('BUSY'):raise ServiceError('Feeder busy; finish its movement or menu first')
+            if fields(reply,'CLEARED',1)!=(nonce,):raise ServiceError('Stale clear confirmation')
+            self.observe(address)
+            return dict(cleared=True)
+        finally:self.bus.release()
 
     def test_inputs(self, args):
         """0.1.2 firmware inhibits both motors; reads never enable test/motion."""
@@ -314,7 +376,7 @@ class Feeders:
             if self.observe(address) != uid:
                 raise ServiceError('Feeder identity changed; select it again')
             nonce = secrets.randbits(32)
-            link = Link(self.port,address)
+            link = self.link(address)
             def read_reply(command):
                 reply=link.request(command,{'TEST','BUSY'},timeout=self.reply_timeout,attempts=1)
                 if reply.startswith('BUSY'): raise ServiceError('Feeder is busy; finish its movement or menu first')
@@ -356,7 +418,7 @@ class Feeders:
             self.maintenance = enabled
 
     def _identity(self, address, nonce):
-        link = Link(self.port, address)
+        link = self.link(address)
         reply = link.request(f"IDENT {nonce:08X}", {"IDENT"}, timeout=self.reply_timeout, attempts=1)
         values = fields(reply, "IDENT", 5)
         if values[0] != nonce:
@@ -367,7 +429,7 @@ class Feeders:
         """Caller holds bus; inventory failures never change motor state."""
         nonce = secrets.randbits(32)
         known=next((row for row in self.stock.rows() if row['address']==address),None)
-        link = Link(self.port, address)
+        link = self.link(address)
         reply = link.request(f"DIAG {nonce:08X}", {"DIAG"}, timeout=self.reply_timeout, attempts=1)
         values = fields(reply, "DIAG", 5)
         if values[0] != nonce:
@@ -386,6 +448,10 @@ class Feeders:
             if values[0] != nonce or not (values[1] | values[2]):
                 raise UpdateError("Telemetry token was not claimed")
         token = f"{values[1]:08X}{values[2]:08X}"
+        self.bootloaders.pop(address,None)
+        if known and known['uid']==uid and known['token']!=token:
+            previous=self.reboots.get(uid,{})
+            self.reboots[uid]=dict(count=previous.get('count',0)+1,at=time.time())
         delta=self.stock.observe(address, uid, token, values[3], values[4])
         reported=state_fields(values[4])
         with self.control:
@@ -408,6 +474,13 @@ class Feeders:
             # Telemetry/inventory is optional: even a damaged database must not
             # turn a sensor-confirmed DONE into an OpenPnP error.
             message = str(error)[:240]
+            # Only remembered hardware gets a recovery probe, not every empty ID.
+            if isinstance(error,TimeoutError) and any(r['address']==address for r in self.stock.rows()):
+                try:
+                    self.loader_ready(address)
+                    self.bootloaders[address]=time.monotonic()
+                    message='Bootloader: ready for firmware update'
+                except (OSError,TimeoutError,UpdateError):self.bootloaders.pop(address,None)
             with self.control:
                 changed = self.errors.get(address) != message
                 self.errors[address] = message
@@ -419,9 +492,15 @@ class Feeders:
                 log.exception("Could not record inventory error; feeding is independent")
             return None
 
+    def loader_ready(self,address):
+        reply=self.link(address).request('HELLO',{'READY'},timeout=self.reply_timeout,attempts=1)
+        if fields(reply,'READY',3)!=(3,0x08002000,APP_MAX):raise UpdateError('Unexpected bootloader reply')
+
     def _motion_reply(self, address, tokens, deadline):
         while time.monotonic() < deadline:
-            body = decode_packet(self.port.read_until(b"\n", 129), address)
+            raw = self.port.read_until(b"\n", 129)
+            self.startup_packet(raw)
+            body = decode_packet(raw, address)
             if body is None:
                 continue
             label = body.split(" ", 1)[0]
@@ -434,17 +513,22 @@ class Feeders:
                 continue
         return None
 
-    def feed(self, address, count):
+    def feed(self, address, count, manual=False, expected_uid=None):
         integer(address, 1, 99, "Feeder ID")
         integer(count, 0, 99, "Feed count")
+        source="web" if manual else "tcp"
         with self.control:
-            if self.maintenance:
+            if self.maintenance and not manual:
                 raise ServiceError("Maintenance mode: advance rejected")
         if not self.bus.acquire(timeout=1):
             raise ServiceError("Bus busy: advance rejected before transmission")
         try:
             with self.control:
-                if self.maintenance:
+                if manual:
+                    if not self.maintenance or self.updating or (self.batch_update or {}).get('active'):
+                        raise ServiceError('Pause feeder commands before a manual advance')
+                    if not expected_uid or self.observe(address)!=expected_uid:raise ServiceError('Feeder identity changed')
+                elif self.maintenance:
                     raise ServiceError("Maintenance mode: advance rejected")
             # Stock is deliberately absent from this acceptance decision.
             self.sequence = (self.sequence + 1) & 0xFFFFFFFF
@@ -456,15 +540,15 @@ class Feeders:
             try:
                 # Never retry FEED, including write/ack failures: it may have moved.
                 with self.control:self.active_feeds.add(address)
-                self.record_activity(address,'requested','Starting',hold=self.feed_timeout+2)
+                self.record_activity(address,'requested','Starting',source=source,hold=self.feed_timeout+2)
                 self.port.write(packet(address, f"FEED {text} {count:08X}"))
                 self.port.flush()
                 result = self._motion_reply(address, tokens, min(deadline, time.monotonic() + self.reply_timeout))
                 while True:
                     if result in ('ACCEPT','RUNNING'):
-                        self.record_activity(address,'advancing','Advancing',hold=self.feed_timeout+2)
+                        self.record_activity(address,'advancing','Advancing',source=source,hold=self.feed_timeout+2)
                     if result == "DONE":
-                        self.record_activity(address,'completed','Advanced',hold=3)
+                        self.record_activity(address,'completed','Advanced',source=source,hold=3)
                         return f"ok N{address} F{count}"
                     if result in {"BUSY", "FAULT", "UNKNOWN"}:
                         raise ServiceError(f"ID {address}: {result.lower()}; advance not confirmed")
@@ -476,7 +560,7 @@ class Feeders:
                     if result not in {"DONE", "BUSY", "FAULT", "UNKNOWN"}:
                         time.sleep(self.poll_interval)
             except Exception as error:
-                self.record_activity(address,'failed','Advance unconfirmed',hold=10,error=str(error)[:240])
+                self.record_activity(address,'failed','Advance unconfirmed',source=source,hold=10,error=str(error)[:240])
                 raise
             finally:
                 # Even if telemetry/SQLite fails after DONE, the confirmed feed
@@ -486,10 +570,10 @@ class Feeders:
         finally:
             self.bus.release()
 
-    def load_stock(self, address, label, quantity, pitch=None, low=50, part_spacing_mm=None, expected_uid=None):
+    def load_stock(self, address, label, quantity=None, pitch=None, low=50, part_spacing_mm=None, expected_uid=None):
         integer(address, 0, 99, "Address")
         # Validate before any serial operation or baseline changes.
-        integer(quantity, 0, 1_000_000_000, "Loaded quantity")
+        if quantity is not None:integer(quantity, 0, 1_000_000_000, "Loaded quantity")
         if part_spacing_mm is None:integer(pitch, 1, 99, "Pulses per part")
         elif pitch is not None:raise ValueError("Provide part spacing or pulses per part, not both")
         integer(low, 0, 1_000_000_000, "Low-stock threshold")
@@ -501,6 +585,13 @@ class Feeders:
             if part_spacing_mm is not None:
                 row=next(f for f in self.stock.rows() if f['uid']==uid)
                 pitch=events_for_pitch(part_spacing_mm,row['nominal_step_um'])
+                if pitch!=row['default_count']:
+                    if not self.maintenance or self.updating or (self.batch_update or {}).get('active'):
+                        raise ServiceError('Pause feeders before changing part spacing')
+                    if row['state']!='idle' or row['mode']!='normal' or row['fault_code']:
+                        raise ServiceError('Feeder must be idle and fault-free before changing spacing')
+                    set_count(self.port,address,pitch,uid=tuple(int(uid[i:i+8],16) for i in (0,8,16)))
+                    self.observe(address)
             self.stock.load(uid, label, quantity, pitch, low)
             return uid
 
@@ -538,11 +629,12 @@ class Feeders:
         integer(new_id, 1, 99, "New ID")
         with self.bus:
             with self.control:
-                if not self.maintenance:
-                    raise ServiceError("Enable maintenance before assigning an ID")
+                if not self.maintenance or self.updating or (self.batch_update or {}).get("active"):
+                    raise ServiceError("Pause feeders and finish updates before assigning an ID")
             assign(self.port, address, new_id)
             with self.control:
                 self.ids = sorted((set(self.ids) - {address}) | {new_id})
+                self.stock.save_setting('polling_ids',self.ids)
                 self.errors.pop(address, None)
             self.observe_safely(new_id)
 
@@ -564,7 +656,7 @@ class Feeders:
                     self.update_status.update(stage=stage, sent=sent, size=total)
             succeeded = False
             try:
-                upload(Link(self.port, address), image, progress=progress)
+                upload(self.link(address), image, progress=progress)
                 succeeded = True
             except Exception as error:
                 with self.control:
@@ -596,11 +688,13 @@ class Feeders:
             if self.updating or (self.batch_update or {}).get('active'):
                 raise ServiceError('An update is already running')
             targets=[dict(address=r['address'],uid=r['uid'],stage='queued',error=None)
-                     for r in self.snapshot()['feeders'] if r['known'] and r['online'] and r['address'] is not None
+                     for r in self.snapshot()['feeders'] if r['known'] and (r['online'] or address==r['address']) and r['address'] is not None
                      and (r['address'] if address is None else r['address']==address)
-                     and (address is not None or (r.get('firmware_info') or {}).get('error')
+                     and (address is not None or r.get('bootloader') or (r.get('firmware_info') or {}).get('error')
                           or (r.get('firmware_info') or {}).get('crc32')!=f'{checksum:08X}'
                           or (r.get('firmware_info') or {}).get('size')!=len(image))]
+            if not targets and address is not None:
+                targets=[dict(address=address,uid=None,stage='queued',error=None)]
             if not targets:raise ServiceError('No online feeders need this firmware')
             self.maintenance=True
             self.batch_update=dict(active=True,started=time.time(),finished=None,items=targets,error=None)
@@ -612,8 +706,16 @@ class Feeders:
                 for target in targets:
                     try:
                         with self.control:target['stage']='checking'
-                        uid=self.read_firmware(target['address'])
-                        if uid!=target['uid']:raise ServiceError('Feeder identity changed; update skipped')
+                        try:uid=self.read_firmware(target['address'])
+                        except TimeoutError:
+                            # The existing loader has no UID command. Explicit
+                            # recovery uses its addressed READY reply instead.
+                            self.loader_ready(target['address'])
+                            with self.control:target['stage']='updating'
+                            self.update(target['address'],image)
+                            with self.control:target['stage']='complete'
+                            continue
+                        if target['uid'] is not None and uid!=target['uid']:raise ServiceError('Feeder identity changed; update skipped')
                         info=next(r['firmware_info'] for r in self.stock.rows() if r['uid']==uid)
                         if not info.get('error') and info.get('crc32')==f'{checksum:08X}' and info.get('size')==len(image):
                             with self.control:target['stage']='current'
@@ -648,8 +750,11 @@ class Feeders:
         rows = status['feeders']
         for row in rows:
             row['known'] = True
+            row['bootloader']=time.monotonic()-self.bootloaders.get(row['address'],-1e9)<max(5,len(self.ids)*(.5+self.reply_timeout))
+            row['restart']=self.reboots.get(row['uid'])
             row['online'] = bool(row['address'] in status['polling_ids'] and not row['error'] and
                                  row['age_seconds'] <= status['stale_after_seconds'])
+            row['online'] |= row['bootloader']
         present = {row['address'] for row in rows}
         for address in status['polling_ids']:
             if address not in present:
@@ -663,17 +768,27 @@ class Feeders:
 
     def poll(self, stopped, interval=0.01):
         self.background_interval=interval
-        due={};details_seen={};probe_at=0
+        due={};details_seen={};details_due={};probe_at=0
         while not stopped.wait(interval):
             if not self.bus.acquire(blocking=False):continue
             try:
                 now=time.monotonic()
                 with self.control:ids=list(self.ids)
+                # No request is in flight while we hold the bus here.
+                if getattr(self.port,'in_waiting',0):
+                    self.startup_packet(self.port.read_until(b'\n',129))
+                arrivals=self.startup_ids.intersection(ids)
+                for address in arrivals:
+                    due[address]=0
+                    details_seen.pop(address,None)
                 known={r['address']:r for r in self.stock.rows()}
                 ready=[a for a in ids if due.get(a,0)<=now]
                 live=[a for a in ready if a in known and not known[a]['error']]
                 probes=[a for a in ready if a not in live]
-                if probes and now>=probe_at:
+                if arrivals:
+                    address=min(arrivals)
+                    self.startup_ids.discard(address)
+                elif probes and now>=probe_at:
                     address=min(probes,key=lambda a:(due.get(a,0),a));probe_at=now+.5
                 elif live:address=min(live,key=lambda a:(due.get(a,0),a))
                 else:continue
@@ -681,9 +796,11 @@ class Feeders:
                 due[address]=time.monotonic()+(.5 if uid else 2)
                 if uid:
                     row=next(r for r in self.stock.rows() if r['uid']==uid)
-                    if details_seen.get(address)!=(uid,row['token']):
+                    failed=any((row.get(k) or {}).get('error') for k in ('firmware_info','configuration'))
+                    if details_seen.get(address)!=(uid,row['token']) or (failed and now>=details_due.get(address,0)):
                         self.read_details(address,uid)
                         details_seen[address]=(uid,row['token'])
+                        details_due[address]=time.monotonic()+5
                 else:details_seen.pop(address,None)
             except Exception:log.exception('Background feeder telemetry failed; feed requests remain independent')
             finally:self.bus.release()
@@ -885,6 +1002,12 @@ class WebHandler(BaseHTTPRequestHandler):
                     if args.get('sha256') != metadata['sha256']:
                         raise ServiceError('Available firmware changed; refresh before updating')
                     feeders.queue_update(image,None if path.path=='/api/update-all-bundled' else integer(args['address'],0,99,'Address'))
+                elif path.path == '/api/clear-error':
+                    self.respond(200,feeders.clear_error(args));return
+                elif path.path == '/api/advance':
+                    address=integer(args['address'],1,99,'Address')
+                    result=feeders.feed(address,0,manual=True,expected_uid=args.get('uid'))
+                    self.respond(200,dict(advanced=True,result=result));return
                 elif path.path == '/api/test':
                     self.respond(200,feeders.test_inputs(args));return
                 elif path.path == "/api/maintenance":
@@ -909,7 +1032,7 @@ class WebHandler(BaseHTTPRequestHandler):
                             if self.server.demo:raise ServiceError('Demo mode cannot change OpenPnP parts')
                             if not isinstance(args['part_id'],str) or len(args['part_id'])>512:raise ValueError('Invalid part ID')
                             if not isinstance(args.get('uid'),str) or not re.fullmatch(r'[0-9A-F]{24}',args['uid']):raise ValueError('Select an identified feeder')
-                        uid=feeders.load_stock(args["address"], args.get("label", ""), args["quantity"],
+                        uid=feeders.load_stock(args["address"], args.get("label", ""), args.get("quantity"),
                                            args.get("pulses_per_part"), args.get("low", 50), args.get("part_spacing_mm"),args.get('uid'))
                         if 'part_id' in args:
                             feeders.stock.save_details(uid,'part_assignment',dict(part_id=args['part_id'],status='pending',error=None))

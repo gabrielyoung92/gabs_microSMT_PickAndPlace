@@ -1,4 +1,7 @@
-# V485 feeder firmware 0.1.2
+# V485 feeder firmware 0.1.3
+
+See [EEPROM.md](../../../EEPROM.md) for the byte layout, setting ranges and
+which reel/part values live on the computer.
 
 One STM32 application for this machine's 8/12/16/24 mm powered feeders. Width,
 ID, advance count, motor directions and switch polarity are saved per unit.
@@ -48,14 +51,31 @@ STM32CubeF1 1.8.7 and GCC 14.2.1. It uses HAL/CMSIS; CubeMX is not required.
 ## Feed and peel behaviour
 
 The index motor stops when the requested optical event count is reached.
-For an **8 mm feeder**, an ordinary feed also arms one peel take-up cycle.
-The peel motor can continue after indexing finishes until the tension switch
-stops it. Releasing tension after that cycle does not start another cycle until
-the next ordinary feed. Wider feeders allow tension-controlled idle peeling.
+All widths use the same peel control: the switch requests take-up, the peel
+motor runs, and reaching tension stops it. **At startup peel stays off until
+the first ordinary feed command or feed-button press.** It then works during
+indexing and while idle. Only the optical distance per event differs by width.
 
 The peel motor has a separate **ten-second continuous-run timeout**. Menus,
-settings writes, faults and input test mode inhibit/cancel peeling. Item jogs
-inhibit it until an ordinary feed or reset.
+settings writes, faults and input test mode inhibit peeling. Item jogs and
+Clear error hold peel stopped until the next ordinary feed. Restart returns
+to the same unarmed startup state.
+
+**Clear error** clears runtime index-timeout, peel-timeout and Stop faults
+without rebooting, moving tape or writing EEPROM. It refuses active movement
+and menus. Invalid settings remain blocked until corrected. Configure can
+repair an invalid options record and save width/count while E3 remains latched;
+Clear Error follows successful repair. Failed EEPROM writes remain blocked.
+
+The independent hardware watchdog resets a stalled application after roughly
+four seconds. Only main-loop progress refreshes it; interrupts do not. Motors
+start stopped after a reset and no interrupted feed is replayed. Saved settings
+and the bootloader are unchanged.
+
+On startup, a feeder sends one CRC-checked `ONLINE uid0 uid1 uid2` packet after
+an ID-based delay. This is best-effort notification, without acknowledgement or
+retry. The host prioritises its next poll; missed packets still use ordinary
+discovery. Regular status/heartbeat traffic remains polled.
 
 | Width | Sensor distance/event | Default events | Default advance |
 | --- | --- | --- | --- |
@@ -103,7 +123,7 @@ and local feeding stay inhibited while it reports raw switch contact,
 interpreted peel request, button states, optical input/total, switch transition
 count and uptime. Closing the popup does not end test mode. Explicit **End test**
 or a power cycle ends it; fault latches are retained. Wider feeders may resume
-idle peeling after exit.
+idle peeling after exit only if a normal feed had already armed take-up.
 
 The host reads state through addressed packets. There are no unsolicited bus
 heartbeats. Normal `DIAG` polling supplies state and movement counts; the active
@@ -166,14 +186,16 @@ about four seconds with motors stopped. It is not a dashboard button.
 
 ```sh
 python3 tools/check_feeder.py
+python3 tools/check_watchdog.py
 python3 tools/rs485_upload.py --self-check
 python3 tools/assign_id.py --self-check
 python3 tools/configure_unit.py --self-check
 ```
 
 These compile/run real C logic with simulated hardware or check packet/upload
-behaviour; native `gcc` is required for the C checks. They cover motors-off test
+behaviour; native `gcc` and `g++` are required. They cover motors-off test
 mode, peel completion, switch handling, settings, buttons, UART, completion,
 timeouts and uploader recovery. They do not prove loaded tape or pickup accuracy.
-Application 0.1.2 uploads and image CRC verification have been completed on bench
-units; physical tape/switch acceptance remains a machine-side check.
+Application 0.1.3 image CRC and startup inhibition have been verified on
+connected bench units: motors stayed stopped and fault-free beyond the peel
+timeout. Watchdog reset timing and loaded tape/switch behaviour need bench checks.

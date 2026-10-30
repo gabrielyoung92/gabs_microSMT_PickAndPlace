@@ -6,7 +6,7 @@
 
 These parts are shared by the 12, 16 and 24 mm V485 feeders. Bodies, tape covers and motor supports are in each width's folder. The trigger cover here is for 16/24 mm.
 
-Click a picture to see it full size. **More views** shows the part from above and below.
+Click a picture for full size; **More views** contains top and bottom views.
 
 ## 45T gear
 

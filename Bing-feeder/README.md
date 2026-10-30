@@ -14,7 +14,8 @@ Choose V3 or V485 below. Each has its own models, board files, firmware and asse
 | [STM32 build guide](STM32-BUILD.txt) | Universal V485 PlatformIO build and V3 source requirements |
 | [License](LICENSE) | Supplied upstream license |
 
-Latest [upstream comparison and photo check](UPSTREAM-2026-10-25.md): 25 October 2026.
+Vendor files checked on 30 October 2026: no file changes.
+[Source comparison](UPSTREAM-2026-10-25.md).
 
 ## Vendor reference photo
 
@@ -28,14 +29,11 @@ MicroSMT’s Bing feeder uses a sprocket and position sensor to advance componen
 
 Kits: [microsmt.com.cn](https://www.microsmt.com.cn) · Support: [Discord](https://discord.gg/qT7ZAAgspy) · [Google group](https://groups.google.com/g/pnpv3-bing-feeder)
 
-
 ![image](picture30.jpg)
-
 
 ### Position sensing
 An optical sensor tracks the sprocket position so the feeder can control how far the tape advances.
 ![image](picture32.jpg)
-
 
 ### Tape support
 The elastic pad underneath accommodates different tape thicknesses and helps reduce vibration and parts bouncing out.

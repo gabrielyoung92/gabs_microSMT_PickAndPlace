@@ -31,5 +31,8 @@ int main(void) {
     EEPROM_Init();
     Display_Init();
     Feeder_Init();
-    while (1) Feeder_Run();
+    while (1) {
+        Feeder_Run();
+        Board_WatchdogFeed();
+    }
 }

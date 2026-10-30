@@ -113,6 +113,7 @@ void delay_ms(uint32_t ms){
  while(ms--){now++;int old=context;context=3;Feeder_Tick();context=old;}
 }
 void delay_us(uint32_t us){(void)us;}
+void Board_WatchdogFeed(void){assert(context==0&&!mask);}
 void CH455_RefreshNum(uint16_t value){
  assert(context==0&&!renderDepth&&value<=99);renderDepth++;displayCalls++;lastNumber=value;
  if(injectRender){injectRender=0;pulse();}
@@ -176,7 +177,13 @@ int main(int argc,char** argv){
   assert(mode==MODE_NORMAL);
   framed("SETCONFIG 12345678 11111111 22222222 33333333 00000001 00000000 00000000");
   assert(strstr(response,"CONFIGSET")&&!optionsFault&&!feedReady&&feedState==FEED_FAULT);
-  assert(LoadOptions()&&motorOptions==1);idle();return 0;
+  assert(LoadOptions()&&motorOptions==1);idle();
+  framed("SETTYPE 12345678 11111111 22222222 33333333 0000000C");
+  assert(strstr(response,"TYPESET")&&currentType==12&&!feedReady);idle();
+  framed("SETCOUNT 12345678 11111111 22222222 33333333 00000002");
+  assert(strstr(response,"COUNTSET")&&currentCount==2&&!feedReady);idle();
+  framed("CLEAR 12345678 11111111 22222222 33333333");
+  assert(strstr(response,"CLEARED")&&faultReason==FAULT_NONE&&feedReady&&jogPeelHold);idle();return 0;
  }
  if(!strcmp(argv[1],"optionsrecords")){
   for(uint8_t value=0;value<=OPTIONS_MASK;value++){
@@ -193,7 +200,10 @@ int main(int argc,char** argv){
   failReadOffset=EEPROM_OPTIONS_ADDR;assert(!LoadSettings());assert(LoadSettings()&&motorOptions==0);return 0;
  }
  Feeder_Init();assert(feedReady&&feedState==FEED_IDLE&&!starts);idle();
- assert(strstr(response,"v" FIRMWARE_VERSION " " FEEDER_VARIANT));injectStartup=0;
+ char hello[100];snprintf(hello,sizeof(hello),"%s",response);
+ hello[strcspn(hello,"\\r\\n")]=0;
+ char* body=Boot_DecodePacket(hello,currentAddr);
+ assert(body&&!strcmp(body,"ONLINE 11111111 22222222 33333333"));injectStartup=0;
  
 if(!strcmp(argv[1],"defaults")){
  assert(currentCount==(FEEDER_WIDE?1:2)&&motorOptions==(FEEDER_WIDE?0:OPTION_FEED_REVERSE));
@@ -417,12 +427,13 @@ if(!strcmp(argv[1],"defaults")){
  framed("SETTYPE 12345678 11111112 22222222 33333333 00000010");assert(!response[0]&&settingWrites==writes);
  framed("SETTYPE 12345678 11111111 22222222 33333333 00000108");assert(strstr(response,"ERROR TYPE")&&settingWrites==writes);
  framed("SETTYPE 12345678 11111111 22222222 33333333 00000010x");assert(!response[0]&&settingWrites==writes);
+ assert(Motor_Reserve(1));Motor_Start();pulse();
  const int types[]={8,12,16,24};
  for(unsigned i=0;i<4;i++){
   char text[90];snprintf(text,sizeof(text),"SETTYPE 12345678 11111111 22222222 33333333 %08X",types[i]);framed(text);
   assert(strstr(response,"TYPESET")&&memory[2]==types[i]&&currentType==types[i]&&mode==MODE_NORMAL);
   LeaveMenu();testB.levels&=~PEEL_SWITCH_PIN;delay_ms(200);
-  assert(!!peelRunning==(types[i]>8));
+  assert(peelRunning);
   testB.levels|=PEEL_SWITCH_PIN;delay_ms(1);idle();
   assert(mode==MODE_NORMAL);
  }
@@ -524,6 +535,65 @@ if(!strcmp(argv[1],"defaults")){
  uint32_t start=now;char line[100];int n=sprintf(line,"B07 IDENT 12345678");
  sprintf(line+n," %08X",Boot_Crc32(line,n));updateLine=line;Feeder_Run();
  assert(now-start<100&&strstr(response,"IDENT")&&!starts);
+}else if(!strcmp(argv[1],"bootpeel")){
+ assert(jogPeelHold);int writes=settingWrites;
+ uint8_t saved[sizeof memory];memcpy(saved,memory,sizeof memory);
+ const uint8_t widths[]={8,12,16,24};
+ for(unsigned i=0;i<4;i++)for(unsigned no=0;no<2;no++){
+  currentType=widths[i];motorOptions=no?OPTION_SWITCH_NO:0;jogPeelHold=1;
+  if(no)testB.levels|=PEEL_SWITCH_PIN;else testB.levels&=~PEEL_SWITCH_PIN;
+  int oldStarts=starts;
+  delay_ms(PEEL_TIMEOUT_MS*2+100);
+  assert(feedState==FEED_IDLE&&faultReason==FAULT_NONE&&feedReady&&!peelRunning&&starts==oldStarts);idle();
+  // Read-only traffic, settings inspection and test exit must not arm peel.
+  framed("DIAG 12345678");framed("CONFIG 12345678");
+  framed("TEST 12345678 11111111 22222222 33333333 00000001");
+  framed("TEST 12345678 11111111 22222222 33333333 00000000");
+  delay_ms(PEEL_TIMEOUT_MS+100);assert(!peelRunning&&faultReason==FAULT_NONE);idle();
+  if(i&1)press(BUTTON_PIN,10);
+  else framed("FEED 12345678 00000001 00000001");
+  assert(starts==oldStarts+1&&!jogPeelHold);
+  while(feedState==FEED_RUNNING)pulse();
+  delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(peelRunning);
+  testB.levels^=PEEL_SWITCH_PIN;delay_ms(1);assert(!peelRunning);idle();
+  testB.levels^=PEEL_SWITCH_PIN;delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(peelRunning);
+  delay_ms(PEEL_TIMEOUT_MS);assert(faultReason==FAULT_PEEL&&feedState==FEED_FAULT);idle();
+  framed("CLEAR 12345678 11111111 22222222 33333333");assert(strstr(response,"CLEARED")&&jogPeelHold);
+ }
+ assert(settingWrites==writes&&!memcmp(saved,memory,sizeof memory));
+}else if(!strcmp(argv[1],"peelidle")){
+ assert(Motor_Reserve(1));Motor_Start();pulse();
+ int writes=settingWrites;uint8_t saved[sizeof memory];memcpy(saved,memory,sizeof memory);
+ const uint8_t widths[]={8,12,16,24};
+ for(unsigned i=0;i<sizeof widths;i++){
+  currentType=widths[i];testB.levels|=PEEL_SWITCH_PIN;delay_ms(1);idle();
+  testB.levels&=~PEEL_SWITCH_PIN;delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(peelRunning&&feedState==FEED_IDLE);
+  testB.levels|=PEEL_SWITCH_PIN;delay_ms(1);assert(!peelRunning);idle();
+ }
+ assert(settingWrites==writes&&!memcmp(saved,memory,sizeof memory));
+}else if(!strcmp(argv[1],"clearfault")){
+ int writes=settingWrites;uint8_t saved[sizeof memory];memcpy(saved,memory,sizeof memory);
+ for(uint8_t fault=1;fault<=4;fault++){
+  if(fault==FAULT_SETTINGS)continue;
+  Motor_Fault(fault);requestResult=REQUEST_FAULT;
+  framed("CLEAR 12345678 00000000 22222222 33333333");assert(!response[0]&&feedState==FEED_FAULT);
+  framed("CLEAR 12345678 11111111 22222222 33333333 trailing");assert(!response[0]&&feedState==FEED_FAULT);
+  framed("CLEAR 12345678 11111111 22222222 33333333");assert(strstr(response,"CLEARED 12345678")&&feedState==FEED_IDLE&&feedReady&&!faultReason);
+  testB.levels&=~PEEL_SWITCH_PIN;delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);idle();
+  assert(requestResult==REQUEST_FAULT&&!resetCalls);
+  assert(Motor_Reserve(1));framed("CLEAR 12345678 11111111 22222222 33333333");assert(strstr(response,"BUSY")&&feedState==FEED_RESERVED);
+  Motor_Start();framed("CLEAR 12345678 11111111 22222222 33333333");assert(strstr(response,"BUSY")&&feedState==FEED_RUNNING);pulse();
+  delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(peelRunning);
+  testB.levels|=PEEL_SWITCH_PIN;delay_ms(1);idle();
+ }
+ optionsFault=1;Motor_Fault(FAULT_SETTINGS);
+ framed("CLEAR 12345678 11111111 22222222 33333333");assert(strstr(response,"ERROR SETTINGS")&&feedState==FEED_FAULT&&!feedReady);
+ optionsFault=0;settingsFault=1;
+ framed("CLEAR 12345678 11111111 22222222 33333333");assert(strstr(response,"ERROR SETTINGS")&&feedState==FEED_FAULT);
+ settingsFault=0;mode=MODE_MENU;
+ framed("CLEAR 12345678 11111111 22222222 33333333");assert(strstr(response,"BUSY")&&feedState==FEED_FAULT);
+ mode=MODE_TEST;framed("CLEAR 12345678 11111111 22222222 33333333");assert(strstr(response,"CLEARED")&&mode==MODE_TEST&&!feedReady);idle();
+ assert(settingWrites==writes&&!memcmp(saved,memory,sizeof memory)&&!resetCalls);
 }else if(!strcmp(argv[1],"inputtest")){
  int writes=settingWrites;
  framed("TESTREAD 12345678");assert(strstr(response,"TEST 12345678")&&mode==MODE_NORMAL);
@@ -541,20 +611,21 @@ if(!strcmp(argv[1],"defaults")){
  framed("TESTREAD 12345678");assert(strstr(response,"TEST 12345678")&&testSwitchChanges==2);
  framed("TEST 12345678 11111111 22222222 33333333 00000001");assert(testSwitchChanges==2);idle();
  assert(settingWrites==writes);
- framed("TEST 12345678 11111111 22222222 33333333 00000000");assert(mode==MODE_NORMAL&&feedReady&&!peelCycle);
- delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(!!peelRunning==FEEDER_WIDE);
-}else if(!strcmp(argv[1],"peelafter")){
- // An 8 mm feed can finish before the peel debounce; it still takes up afterward.
- testB.levels&=~PEEL_SWITCH_PIN;assert(Motor_Reserve(1));Motor_Start();pulse();
- assert(feedState==FEED_IDLE&&peelCycle);
+ framed("TEST 12345678 11111111 22222222 33333333 00000000");assert(mode==MODE_NORMAL&&feedReady);
  delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(peelRunning);
- testB.levels|=PEEL_SWITCH_PIN;delay_ms(1);assert(!peelRunning&&!peelCycle);
- testB.levels&=~PEEL_SWITCH_PIN;delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(!!peelRunning==FEEDER_WIDE);
+}else if(!strcmp(argv[1],"peelafter")){
+ // Every width takes up while idle and after a short index move.
+ testB.levels&=~PEEL_SWITCH_PIN;assert(Motor_Reserve(1));Motor_Start();pulse();
+ assert(feedState==FEED_IDLE);
+ delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(peelRunning);
+ testB.levels|=PEEL_SWITCH_PIN;delay_ms(1);assert(!peelRunning);
+ testB.levels&=~PEEL_SWITCH_PIN;delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(peelRunning);
  if(!FEEDER_WIDE){assert(Motor_Reserve(1));Motor_Start();pulse();delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);assert(peelRunning);}
  delay_ms(PEEL_TIMEOUT_MS);assert(feedState==FEED_FAULT&&faultReason==FAULT_PEEL);idle();
 }else if(!strcmp(argv[1],"peel")||!strcmp(argv[1],"peelwrap")||!strcmp(argv[1],"peeltimeout")){
  if(!strcmp(argv[1],"peelwrap")){now=UINT32_MAX-100U;peelOffAt=now;}
  if(!FEEDER_WIDE){assert(Motor_Reserve(99));Motor_Start();}
+ else {assert(Motor_Reserve(1));Motor_Start();pulse();}
  testB.levels&=~PEEL_SWITCH_PIN;delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);
  assert(peelRunning&&!(testA.levels&MOTOR_PEEL_A_PIN));
  if(!strcmp(argv[1],"peeltimeout")){
@@ -572,7 +643,7 @@ if(!strcmp(argv[1],"defaults")){
   testB.levels|=PEEL_SWITCH_PIN;delay_ms(PEEL_RESTART_MS+1);assert(!peelRunning);
   if(!FEEDER_WIDE){while(feedState==FEED_RUNNING)pulse();}
   testB.levels&=~PEEL_SWITCH_PIN;delay_ms(PEEL_RESTART_MS+PEEL_DEBOUNCE_MS);
-  assert(!!peelRunning==FEEDER_WIDE);
+  assert(peelRunning);
   // Settings always stop idle peeling and opening the switch cannot restart it.
   press(MENU_BUTTON_PIN,3*BUTTON_HOLD_MS+50);assert(mode==MODE_ADDR&&!peelRunning);
   assert((testA.levels&MOTOR_ALL_PINS)==MOTOR_ALL_PINS);
@@ -647,6 +718,7 @@ if(!strcmp(argv[1],"defaults")){
   command(7,2);assert(!strcmp(response,"Busy\\n")&&motorCount==9&&starts==1);
   for(int n=0;n<8;n++)pulse();assert(feedState==FEED_RUNNING);pulse();assert(feedState==FEED_IDLE);idle();
  }else if(!strcmp(argv[1],"startup")){
+  assert(starts==0);
   command(7,2);assert(!strcmp(response,"OK\\n")&&feedState==FEED_RUNNING);
  }else if(!strcmp(argv[1],"zero")){
   assert(currentCount==(FEEDER_WIDE?1:2)&&memory[1]==currentCount);command(7,0);assert(motorCount==currentCount);while(feedState==FEED_RUNNING)pulse();assert(feedState==FEED_IDLE);idle();
@@ -735,7 +807,7 @@ def main():
    for module in ['app','rx']:
     exe=q/(module+str(wide));subprocess.run(['gcc','-std=c11','-Wall','-Wextra','-Wno-misleading-indentation','-Werror','-fsanitize=undefined,address','-g','-I',d,'-I',str(p/'src'),'-DFEEDER_WIDE='+str(wide),str(q/(module+'.c')),'-o',str(exe)],check=True)
     if module=='app':
-     for case in ['inputtest','peelafter','defaults','longjog','longjoglimit','longjogwrap','longjogstall','longjogdeadline','longjogstop','jog','remotecount','options','optionsrecords','optionscorrupt','optionsreadfail','race','startup','zero','early','display','timeout','wrap','feedback','readfail','countreadfail','blank','unassigned','unassignedremote','unassignedboot','bootblank','bootblankfail','invalidid','savefail','readbackfail','diagnostics','buttons','twobuttons','untyped','typereadfail','type','locate','heldstartup','menuboot','menutiming','menubootfail','menufault','assignheld','menubusy','assign','assignexpired','assignfail','peel','peelwrap','peeltimeout','savesuccess','slowack','framed','badframed','completion','completionearly','completionfault','completioneeprom','bootidle','bootbusy','bootreserved','bootwrong','bootcrc','bootfault','booteeprom']:subprocess.run([str(exe),case],check=True)
+     for case in ['bootpeel','clearfault','peelidle','inputtest','peelafter','defaults','longjog','longjoglimit','longjogwrap','longjogstall','longjogdeadline','longjogstop','jog','remotecount','options','optionsrecords','optionscorrupt','optionsreadfail','race','startup','zero','early','display','timeout','wrap','feedback','readfail','countreadfail','blank','unassigned','unassignedremote','unassignedboot','bootblank','bootblankfail','invalidid','savefail','readbackfail','diagnostics','buttons','twobuttons','untyped','typereadfail','type','locate','heldstartup','menuboot','menutiming','menubootfail','menufault','assignheld','menubusy','assign','assignexpired','assignfail','peel','peelwrap','peeltimeout','savesuccess','slowack','framed','badframed','completion','completionearly','completionfault','completioneeprom','bootidle','bootbusy','bootreserved','bootwrong','bootcrc','bootfault','booteeprom']:subprocess.run([str(exe),case],check=True)
     else:subprocess.run([str(exe)],check=True)
  print('All actual-source checks passed. Temporary files only; no project tests folder created.')
 

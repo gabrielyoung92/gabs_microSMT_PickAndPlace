@@ -153,19 +153,20 @@ that have not answered. Offline rows retain their last known details. A row's
 
 ### Configure a feeder
 
-Pause feeder commands, then set feed/peel direction, NC/NO switch polarity and
-advance spacing. Bus ID is a fixed label here; assign IDs in Settings with
-physical menu 01 selected on the feeder. Width comes from the feeder's saved
-configuration. An 8 mm feeder has 2 mm sensor steps; wider feeders have 4 mm
+Pause feeder commands, then set width, feed/peel direction, NC/NO switch
+polarity and advance spacing. Bus ID is a fixed label here; assign IDs in Settings with
+physical menu 01 selected on the feeder. Width is saved on the feeder. An 8 mm feeder has 2 mm sensor steps; wider feeders have 4 mm
 steps. Spacing must be an exact multiple of that step, up to 99 events.
 
 Saves target the known hardware UID, skip unchanged values and read settings
-back. They reject active/faulted units. A partial save reports the actual state
+back. They reject active units and motor faults; invalid options can be repaired
+while E3 is latched. A partial save reports the actual state
 rather than automatically repeating a write.
 
 ### Reel stock and parts
 
-Enter the quantity remaining now, part spacing and low-stock threshold. Movement
+Check Set quantity to enter a new remaining quantity; leave it unchecked for
+label/part edits. Set part spacing and the low-stock threshold as needed. Movement
 is counted from the optical sensor, including manual/partial advances. Stock
 belongs to the physical feeder UID and survives bus ID changes. It is an
 estimate: empty pockets, failed picks and unpowered tape movement are not
@@ -194,7 +195,7 @@ machine-readiness test, and it never starts or controls a job.
 
 ## Firmware updates
 
-The current feeder application is **0.1.2**. Build from `../CODE_feeder`:
+The current feeder application is **0.1.3**. Build from `../CODE_feeder`:
 
 ```sh
 pio run -e v485
@@ -210,7 +211,13 @@ CRC32 and size. Firmware/settings are read on discovery, reconnect, MCU reboot
 and host startup; normal heartbeat traffic uses DIAG only. Responding units are
 checked regularly; a missing-ID probe gets a slot every 0.5 seconds and rotates
 fairly across due IDs. More absent IDs increase discovery time. Polling continues
-while feeder commands are paused; units do not transmit unsolicited heartbeats.
+while feeder commands are paused; regular status remains polled.
+
+At startup, firmware 0.1.3 sends one CRC-checked `ONLINE` packet with its UID,
+replacing the text banner. A short ID-based delay staggers simultaneous starts.
+The host uses it to bring that ID's next normal status check forward. There are
+no acknowledgements or retries; collisions or a missed hello fall back to
+polling. A hello alone never marks a feeder online.
 
 Click a row's **Update**, or **Update all outdated** for connected assigned
 feeders. Both use the same server-owned queue and progress popup. Commands pause
@@ -226,20 +233,50 @@ See [firmware instructions](../CODE_feeder/README.md) for SWD and serial tools.
 
 ## Switch/input test
 
-On firmware 0.1.2, open **Test → Pause & start input test**. Wait for **Input
+On firmware 0.1.3, open **Test → Pause & start input test**. Wait for **Input
 test active · both motors inhibited**. Then operate the switch/buttons or turn
 the index sensor to see raw contact, interpreted peel request, transition count,
 optical total, motor state and uptime. The test inhibits both motors and local
 feeding. It does not change settings or stock baselines.
 
 Closing the popup leaves test mode active. **End test** or a power cycle ends
-it; existing faults remain latched. Wider feeders can resume idle peeling on
-exit. If a reply is lost, use Read inputs to confirm state. The popup reads about
+it; existing faults remain latched. All widths can resume idle peeling on
+exit only if already armed by an ordinary feed. If a reply is lost, use Read inputs to confirm state. The popup reads about
 four times per second through the host's existing bus owner.
 
-On 8 mm feeders, each ordinary feed arms peel take-up. It can continue after
-indexing ends until the tension switch stops it; the independent ten-second
-peel timeout remains. See [firmware behaviour](../CODE_feeder/README.md).
+All widths start with peel take-up off until the first normal feed or
+feed-button press. Once armed, the switch also controls idle take-up, with the
+ten-second peel timeout. **Clear error** clears motor timeouts or Stop without rebooting or
+changing settings. Peel stays inhibited until the next ordinary feed; the host
+remains paused. Settings faults need the underlying settings corrected.
+See [firmware behaviour](../CODE_feeder/README.md).
+
+## Saving and bench controls
+
+Reel **Part spacing** and hardware **Feed pitch** save the same default advance
+on the feeder, with readback. Pause feeder commands before changing spacing.
+Changing the label or selected part keeps consumption intact. Check **Set
+quantity** only when loading a reel or correcting the remaining quantity.
+
+Configure includes **Width** for commissioning and **Advance 1** for bench
+checks. Advance requires paused feeder commands and a matching hardware UID;
+OpenPnP TCP advances remain blocked until resumed. It sends one request and
+never retries uncertain motion. A recent **Restarted** note appears in Last
+seen when the existing runtime token changes; the tooltip counts restarts
+observed since the host started.
+
+A failed firmware/settings read is retried after five seconds. Successful
+metadata stays cached. New bus IDs are saved to the polling list.
+
+Remembered units waiting in the bootloader show **Bootloader** and can be
+updated again. An explicit per-ID update also probes for recovery when the
+application is offline. The installed bootloader has no UID query, so recovery
+uses the addressed READY response; ordinary application updates still verify
+UID. No bootloader rewrite is required.
+
+An invalid motor/switch record can be repaired in Configure. The firmware keeps
+motors inhibited while width, options and count are saved; Clear Error then
+releases the runtime settings fault. EEPROM write failures remain blocked.
 
 ## API and checks
 
@@ -251,6 +288,8 @@ The dashboard's API is served on the same HTTP port:
 | `GET /api/catalogue`, `GET /api/job` | OpenPnP catalogue and remaining-job stock |
 | `POST /api/maintenance`, `/api/polling` | Pause/resume and polling IDs |
 | `POST /api/refresh`, `/api/configure`, `/api/assign`, `/api/test` | Read details, save hardware settings, assign ID and input test |
+| `POST /api/advance` | One default advance while feeder commands are paused; address and UID required |
+| `POST /api/clear-error` | Clear runtime faults on the selected address/UID; requires firmware 0.1.3 |
 | `POST /api/stock`, `/api/part-sync` | Reel save and explicit part-sync retry |
 | `POST /api/openpnp` | Create/edit parts/packages and add powered feeders |
 | `POST /api/update-bundled`, `/api/update-all-bundled` | Queue the displayed bundle, pinned by SHA-256 |
@@ -265,6 +304,9 @@ From `USB_host`, hardware-free checks include:
 ```sh
 python3 check_host.py
 python3 check_polling.py
+python3 check_startup.py
+python3 check_clear_error.py
+python3 check_review_fixes.py
 python3 check_details.py
 python3 check_bulk.py
 python3 check_bundle.py

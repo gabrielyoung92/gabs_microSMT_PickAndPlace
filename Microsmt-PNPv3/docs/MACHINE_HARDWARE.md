@@ -6,10 +6,7 @@ Other delivered components remain to be identified against the actual machine.
 
 ## Top down camera
 
-The owner reports an earlier successful camera test. The USB and V4L2 queries
-below confirm enumeration and advertised capabilities; frame capture, optical
-calibration and OpenPnP operation were not tested during this inspection.
-No camera settings were changed.
+USB/V4L2 specifications and controls for the fitted top camera:
 
 | Property | Observed value |
 | --- | --- |
@@ -73,12 +70,10 @@ their automatic modes are enabled.
 | `pan_absolute` | -57600 to 57600 | 3600 | 0 |
 | `tilt_absolute` | -43200 to 43200 | 3600 | 0 |
 
-Pan/tilt entries establish exposed controls only; physical pan/tilt hardware is
-not established. No focus control was exposed. Sensor model, shutter type,
-lens, field of view, working distance and illumination remain unidentified.
+Pan/tilt controls do not confirm motorised hardware. No focus control was
+exposed. Sensor model, shutter, lens, field of view and working distance need identification.
 
-The USB device also advertises audio interfaces bound to `snd-usb-audio`.
-This does not establish that a microphone is physically fitted or functional.
+USB audio interfaces use `snd-usb-audio`; no microphone test was performed.
 
 ### Inspection evidence
 
@@ -91,21 +86,15 @@ Raw output is retained under [evidence/top-camera-2026-10-14](evidence/top-camer
 - [Metadata node udev properties](evidence/top-camera-2026-10-14/udev-video1.txt)
 - [USB topology](evidence/top-camera-2026-10-14/usb-topology.txt)
 
-Queries used `lsusb -v -d 1e45:8023`, `lsusb -t`, `udevadm info` and
-`v4l2-ctl --all --list-formats-ext --list-ctrls-menus` (image node), plus
-`v4l2-ctl --all` (metadata node). V4L2 inspection used version 1.30.1 extracted
-temporarily without installing system packages. Device access required sudo;
-the inspection account's ordinary access returned permission denied.
-USB descriptor output includes an access warning and a short processing-unit
-descriptor warning; the mode and control tables above use successful V4L2
-queries, rather than assuming every USB descriptor control is usable.
+Read the image node with `v4l2-ctl --all --list-formats-ext --list-ctrls-menus`.
+The metadata node is not a second image stream. Optical calibration is separate
+from these driver-reported modes.
 
 ## Motion controller
 
 The delivered controller responds over USB serial as a five-axis LPC1769
 Smoothieware controller. See [controller inspection](CONTROLLER_INSPECTION.md)
-for firmware identity, SD backup hashes, live status, axis configuration and
-the boundary before motor testing.
+for firmware identity, SD hashes, axis pins and measured travel.
 
 ## Cameras and outputs
 

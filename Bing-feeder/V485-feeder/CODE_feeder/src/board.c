@@ -19,7 +19,7 @@ void Board_ConfigurePin(GPIO_TypeDef* port, uint16_t pins, uint32_t mode) {
 }
 
 // Unrecoverable setup failure: stop both motor channels, light the LED and halt.
-// This also stops idle peel take-up on the wider variant.
+// The application watchdog resets the processor if execution stays here.
 void Board_ErrorHandler(void) {
     // GPIO_Config() runs before clock/UART setup, so motor outputs are driven.
     __disable_irq();
@@ -116,11 +116,30 @@ void Board_EnableFeedInterrupts(void) {
     HAL_NVIC_EnableIRQ(EXTI3_IRQn);
 }
 
+#if !FEEDER_BOOTLOADER
+void Board_WatchdogFeed(void) {
+    IWDG->KR = 0xAAAAU;
+}
+
+// Independent LSI clock: nominally 4 seconds (actual time follows LSI tolerance).
+static void Watchdog_Start(void) {
+    IWDG->KR = 0xCCCCU;
+    IWDG->KR = 0x5555U;
+    IWDG->PR = 4U;       // LSI / 64
+    IWDG->RLR = 2499U;
+    while (IWDG->SR) {}  // A stuck register update must also cause a reset.
+    Board_WatchdogFeed();
+}
+#endif
+
 // Prepare the hardware services required by every other module. Startup code
 // has already run SystemInit; apply only this board's clock configuration here.
 void Board_Init(void) {
     HAL_StatusTypeDef status = HAL_Init();
     GPIO_Config();
+#if !FEEDER_BOOTLOADER
+    Watchdog_Start();
+#endif
     if (status != HAL_OK) Board_ErrorHandler();
     SystemClock_Config();
     Delay_Init();

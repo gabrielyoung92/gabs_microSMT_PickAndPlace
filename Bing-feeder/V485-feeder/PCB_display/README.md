@@ -4,13 +4,13 @@
 
 [Back to collection](../README.md)
 
-The Gerber ZIP, board previews and editable KiCad files are below. Click a picture for the full-size view.
+Gerbers, editable KiCad files and previews are below.
 
 ## KiCad files
 
-Open the `.kicad_pro` file in **KiCad 10**. These projects were rebuilt from MicroSMT’s board files. Keep the whole `KiCad/` folder together so the included symbol and footprint libraries load.
+Open `.kicad_pro` in **KiCad 10**. Keep the whole `KiCad/` folder together; it contains the local libraries.
 
-The rebuilt schematics use generic pin symbols to show the original pad numbers and connections. Use MicroSMT’s supplied schematic for the actual pin functions. The KiCad rule checks still report issues; read the recovery notes before editing or ordering boards.
+The schematics show pad numbers and connections. Use the supplied schematic for pin functions. Review the reported ERC/DRC findings before making a board.
 
 | Project | Open in KiCad | Supporting reports |
 | --- | --- | --- |
@@ -35,11 +35,11 @@ The rebuilt schematics use generic pin symbols to show the original pad numbers 
 - [BOM_Board1_Schematic1_2026-10-09.xlsx](docs/BOM_Board1_Schematic1_2026-10-09.xlsx)
 - [SCH_Schematic1_2026-10-09.pdf](docs/SCH_Schematic1_2026-10-09.pdf)
 
-These pictures were drawn from the Gerbers and drill files. The colours and 1.6 mm board thickness are just display settings, not confirmed manufacturing specifications.
+Gerber previews use display colours and an assumed 1.6 mm thickness; use source data for manufacturing dimensions.
 
 ## KiCad previews
 
-These views show the rebuilt KiCad projects. The Gerber views above come from MicroSMT’s original files.
+KiCad reconstruction views; source Gerber views are above.
 
 ### V485 display
 

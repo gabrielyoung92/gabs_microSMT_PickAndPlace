@@ -9,9 +9,11 @@ The supplied machine and feeder designs, original firmware, PCB fabrication file
 | [Bing-feeder](Bing-feeder/README.md) | [microsmt/Bing-feeder](https://github.com/microsmt/Bing-feeder) | `4e7bf9590ed011ffd1ef305c69eb399adfa82c80` |
 | [Microsmt-PNPv3](Microsmt-PNPv3/README.md) | [microsmt/Microsmt-PNPv3](https://github.com/microsmt/Microsmt-PNPv3) | `99dd6f8608cd8dbeea67fb241e4b944d8da39b83` |
 
-These commit IDs identify the local repositories' checked-out base revisions. The collections had already been extracted, renamed and supplemented locally before this consolidation, so they are reorganised working copies rather than exact exports of those commits. No fresh upstream sync was performed for this move.
+These are the consolidation base revisions. File names and folders were
+reorganised locally; the tables do not describe exact upstream checkouts.
 
-The original repository links are the place to check for current official files, support and updates. Existing vendor introductions and support links remain in each collection's README. This collection is independent and does not imply MicroSMT endorsement.
+Use the vendor repositories for official files and support. This is an
+independent machine project, not a MicroSMT release.
 
 ## 21 October 2026 feeder update
 
@@ -19,17 +21,15 @@ The V3 and V485 feeder archives were imported on 22 October 2026 from
 [`microsmt/Bing-feeder` at `056f6109`](https://github.com/microsmt/Bing-feeder/commit/056f6109d805260af609c1af03ae064e5c2fcba4).
 Identical archives are also published in
 [`microsmt/Microsmt-PNPv3` at `c8b939c4`](https://github.com/microsmt/Microsmt-PNPv3/commit/c8b939c44d9ad02c62b70e846f31879f0561a1f8).
-The original consolidation base revisions above remain recorded; this is a selective feeder update.
-Existing electronics, firmware, local improvements and omitted older models are retained.
-New and changed models have matching STL exports and previews in the existing naming style.
+This feeder import retains the local firmware, electronics and additional models.
+STEP originals, local STL exports and previews are distinguished in the manifest.
 See the [update notes](Bing-feeder/UPSTREAM-2026-10-21.md) and
 [source manifest](Bing-feeder/upstream-2026-10-21.json).
 
 ## Local changes with ChatGPT assistance
 
-File organisation, conversions, previews, documentation and local firmware changes were prepared with **ChatGPT assistance**. The original MicroSMT work remains credited above.
+Gab prepared the local code, conversions and documentation with ChatGPT assistance:
 
-Changes made to the local collections include:
 
 - Extracting and regrouping files into clearly named feeder, controller, machine and PCB folders.
 - Adding missing matching STL exports from supplied STEP models while retaining the STEP files.
@@ -43,11 +43,13 @@ Changes made to the local collections include:
 - Reconstructing editable KiCad references for all 13 Gerber sets, with local libraries, source evidence, native connectivity/CAM checks and linked previews. These are local reconstructions of MicroSMT designs, not supplied original KiCad projects.
 - Grouping shared recovery tools in [tools/kicad/](tools/kicad/README.md) and machine setup records in [Microsmt-PNPv3/docs/](Microsmt-PNPv3/docs/README.md).
 
-Previews, conversions and generated documentation are convenience additions. A render, renamed source file or successful software check does not establish physical compatibility, a complete vendor firmware build or a tested fabrication release.
+Build, geometry and bench checks are recorded in each project guide; renders
+alone do not establish fit or electrical operation.
 
 ## KiCad reconstruction
 
-Recovered KiCad references sit beside the matching PCB Gerbers, with supporting reports in `docs/`. Recovery tools, inferred connector references and technical notes are local additions; the recovered hardware remains derived from MicroSMT’s original material. See [third-party notices](THIRD_PARTY_NOTICES.md) for KiCad library attribution.
+KiCad files sit beside their source Gerbers, with evidence in `docs/`.
+See [third-party notices](THIRD_PARTY_NOTICES.md) for the KiCad library licence.
 
 ## Licensing
 

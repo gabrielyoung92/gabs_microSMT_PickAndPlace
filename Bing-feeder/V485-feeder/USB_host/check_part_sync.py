@@ -47,7 +47,7 @@ def main():
     directory=tempfile.TemporaryDirectory();database=Path(directory.name)/'stock.sqlite3'
     # Exercise upgrading the previous metadata schema as well as persistence.
     db=sqlite3.connect(database);db.execute('CREATE TABLE device_details(uid TEXT PRIMARY KEY,firmware TEXT,configuration TEXT)');db.close()
-    stock=host.Stock(database);port=SimulatedBus();service=host.Feeders(port,stock,[1],reply_timeout=.005);service.observe(1)
+    stock=host.Stock(database);port=SimulatedBus();port.nodes[1]['default']=2;service=host.Feeders(port,stock,[1],reply_timeout=.005);service.observe(1)
     uid=stock.rows()[0]['uid'];companion=ThreadingHTTPServer(('127.0.0.1',0),Companion)
     old=host.OPENPNP_URL;host.OPENPNP_URL='http://127.0.0.1:'+str(companion.server_port)
     web=host.WebServer(0,service);threads=[threading.Thread(target=s.serve_forever,daemon=True) for s in (companion,web)]

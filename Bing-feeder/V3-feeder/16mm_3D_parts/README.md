@@ -4,7 +4,7 @@
 
 13 parts · [All photos](photos/)
 
-Click a picture to see it full size. **More views** shows the part from above and below.
+Click a picture for full size; **More views** contains top and bottom views.
 
 ## 1-position feeder holder
 

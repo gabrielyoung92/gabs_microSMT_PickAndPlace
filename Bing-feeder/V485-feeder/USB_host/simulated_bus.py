@@ -49,10 +49,10 @@ class SimulatedBus:
             if values[0] == "MONITOR" and node["token"] == (0, 0):
                 node["token"] = tuple(int(n, 16) for n in values[2:4])
             state = 3 if node["fault"] else 2 if node.get("manual_running") else 0
-            flags = node["default"] | (node["fault"] << 8) | (state << 16) | ((6 if node.get("test_active") else int(node["armed"]) * 2) << 20) | (1 << 26) | (1 << 29)
+            flags = node["default"] | (node["fault"] << 8) | (state << 16) | ((6 if node.get("test_active") else int(node["armed"]) * 2) << 20) | (1 << 26) | ((node['width'] in (8,12,16,24)) << 29)
             if address:
                 flags |= 1 << 27
-            flags |= ((8,12,16,24).index(node["width"]) << 30) | ((node["width"] != 8) << 28)
+            flags |= (((8,12,16,24).index(node['width']) if node['width'] in (8,12,16,24) else 0) << 30) | ((node["width"] != 8) << 28)
             reply("DIAG " + values[1] + " " + " ".join(f"{n:08X}" for n in (*node["token"], node["counter"], flags)))
         elif values[0] == "SETID":
             uid = tuple(int(n, 16) for n in values[2:5])
@@ -67,15 +67,29 @@ class SimulatedBus:
             reply('CONFIG '+values[1]+''.join(f' {int(v):08X}' for v in node['options']))
         elif values[0] == 'TYPE':
             reply(f"TYPE {values[1]} {node['width']:08X} {node['default']:08X} {(2000 if node['width']==8 else 4000):08X}")
-        elif values[0] in ('SETCONFIG','SETCOUNT'):
+        elif values[0] in ('SETCONFIG','SETCOUNT','SETTYPE'):
             if tuple(int(n,16) for n in values[2:5]) != node['uid']:
                 reply('ERROR UID')
             elif values[0] == 'SETCONFIG':
                 node['options'] = tuple(int(n,16) for n in values[5:8])
+                node['invalid_settings']=False
                 reply('CONFIGSET '+values[1]+''.join(f' {v:08X}' for v in node['options']))
+            elif values[0]=='SETTYPE':
+                node['width']=int(values[5],16)
+                reply(f"TYPESET {values[1]} {node['width']:08X}")
             else:
                 node['default'] = int(values[5],16)
                 reply(f"COUNTSET {values[1]} {node['default']:08X}")
+        elif values[0] == 'CLEAR':
+            if node.get('no_clear'):return len(raw)
+            if tuple(int(n,16) for n in values[2:5])!=node['uid']:return len(raw)
+            if node.get('manual_running') or node['motion'] or node['armed']:
+                reply('BUSY '+values[1])
+            elif node.get('invalid_settings'):
+                reply('ERROR SETTINGS '+values[1])
+            else:
+                node['fault']=0
+                reply('CLEARED '+values[1])
         elif values[0] in ('TESTREAD','TEST'):
             if node.get('old_firmware'):return len(raw)
             if values[0]=='TEST':
@@ -125,6 +139,10 @@ class SimulatedBus:
 
     def reset_input_buffer(self):
         self.rx.clear()
+
+    @property
+    def in_waiting(self):
+        return sum(map(len, self.rx))
 
     def read_until(self, *args):
         if self.closed:

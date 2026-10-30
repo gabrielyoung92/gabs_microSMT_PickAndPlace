@@ -33,7 +33,7 @@ static uint8_t feedButtonRaw = 1, feedButtonStable = 1, feedButtonReady;
 static uint8_t feedButtonDown, feedButtonEligible;
 static uint32_t feedButtonChangedAt, feedButtonPressedAt;
 // Peel state is owned by SysTick; main only clears it with interrupts masked.
-static volatile uint8_t peelRunning, peelCycle;
+static volatile uint8_t peelRunning;
 // Test mode latches until an explicit exit/reset; browser loss must not resume motors.
 static volatile uint32_t testSwitchChanges;
 static uint8_t testSwitchRaw, testSwitchStable;
@@ -55,7 +55,8 @@ static volatile uint32_t movementTotal;
 // in MCU RAM, but clears on MCU reset so inventory can detect a lost interval.
 static uint32_t monitorToken[2];
 static volatile uint8_t faultReason;
-static volatile uint8_t jogPeelHold, retractMove;
+// Boot/clear/jog hold: the first ordinary feed arms switch-controlled take-up.
+static volatile uint8_t jogPeelHold = 1, retractMove;
 static volatile uint32_t motorCount = 0;
 static volatile uint32_t jogItems, lastProgressAt, moveDeadlineMs;
 static volatile uint32_t feedStartedAt = 0;
@@ -154,7 +155,7 @@ static void Motor_Fault(uint8_t reason) {
     feedReady = 0;
     feedState = FEED_FAULT;
     faultReason = reason;
-    peelRunning = peelCycle = 0;
+    peelRunning = 0;
     HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_ALL_PINS, GPIO_PIN_SET);
     if (requestResult == REQUEST_RUNNING) requestResult = REQUEST_FAULT;
     displayDirty = 1;
@@ -217,15 +218,15 @@ static uint8_t SaveOptions(uint8_t value) {
 
 // Bus settings require no button. Atomically exclude every motor start while
 // EEPROM is written, including idle peeling and manual requests during ACKs.
-static uint8_t BeginRemoteSettings(uint8_t recoverOptions) {
+static uint8_t BeginRemoteSettings(void) {
     uint32_t mask = __get_PRIMASK();
     __disable_irq();
     uint8_t allowed = mode != MODE_TEST && !settingsFault && (feedState == FEED_IDLE ||
-                      (recoverOptions && optionsFault && feedState == FEED_FAULT));
+                      (faultReason == FAULT_SETTINGS && feedState == FEED_FAULT));
     if (allowed) {
         feedReady = 0;
         Board_MotorIdle();
-        peelRunning = peelClosed = peelCycle = 0;
+        peelRunning = peelClosed = 0;
         peelOffAt = HAL_GetTick();
     }
     __set_PRIMASK(mask);
@@ -264,7 +265,7 @@ static uint8_t EnterMenu(void) {
                        ((feedReady && feedState == FEED_IDLE) || feedState == FEED_FAULT);
     if (accepted) {
         mode = MODE_MENU;
-        peelRunning = peelCycle = 0;
+        peelRunning = 0;
         peelOffAt = HAL_GetTick();
         Board_MotorIdle();
         displayDirty = 1;
@@ -398,7 +399,6 @@ static uint8_t Motor_ReserveMove(uint32_t requestedCount, uint8_t jog, uint8_t r
         moveDeadlineMs = jog ? JOG_STARTUP_BUDGET_MS + count * JOG_EVENT_BUDGET_MS : FEED_TIMEOUT_MS;
         retractMove = retract;
         if (jog) {
-            peelCycle = 0;
             HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_PEEL_A_PIN | MOTOR_PEEL_B_PIN, GPIO_PIN_SET);
             peelRunning = 0;
             peelOffAt = HAL_GetTick();
@@ -422,7 +422,6 @@ static void Motor_Start(void) {
         pa3TriggerCount = 0;
         feedStartedAt = lastProgressAt = HAL_GetTick();
         feedState = FEED_RUNNING;
-        if (!jogPeelHold) peelCycle = 1;
         HAL_GPIO_WritePin(MOTOR_PORT, ((!!(motorOptions & OPTION_FEED_REVERSE)) ^ retractMove) ? MOTOR_INDEX_B_PIN : MOTOR_INDEX_A_PIN, GPIO_PIN_SET);
         HAL_GPIO_WritePin(MOTOR_PORT, ((!!(motorOptions & OPTION_FEED_REVERSE)) ^ retractMove) ? MOTOR_INDEX_A_PIN : MOTOR_INDEX_B_PIN, GPIO_PIN_RESET);
         LED_ON();
@@ -438,7 +437,6 @@ static void Motor_Stop(void) {
     __disable_irq();
     if (feedState == FEED_RUNNING) {
         HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_INDEX_A_PIN | MOTOR_INDEX_B_PIN, GPIO_PIN_SET);
-        if (!PeelRequested()) peelCycle = 0;
         if (requestResult == REQUEST_RUNNING) requestResult = REQUEST_DONE;
         LED_OFF();
         pa3TriggerCount = 0;
@@ -511,7 +509,7 @@ static void ProcessRS485(void) {
                               (feedState == FEED_IDLE || feedState == FEED_FAULT);
             if (allowed) {
                 Board_MotorIdle();
-                peelRunning = peelClosed = peelCycle = 0;
+                peelRunning = peelClosed = 0;
                 peelOffAt = HAL_GetTick();
                 if (values[4] && mode != MODE_TEST) {
                     testSwitchRaw = testSwitchStable = HAL_GPIO_ReadPin(PEEL_SWITCH_PORT, PEEL_SWITCH_PIN) == GPIO_PIN_RESET;
@@ -527,6 +525,36 @@ static void ProcessRS485(void) {
             __set_PRIMASK(mask);
             if (allowed) ReportTest(values[0]);
             else Boot_Reply(currentAddr, "BUSY", values, 1);
+            return;
+        }
+        if (!strncmp(command, "CLEAR ", 6)) {
+            const char* text = command + 6;
+            uint32_t values[4];
+            for (uint8_t i = 0; i < 4; i++) {
+                if (!Boot_ParseHex(&text, &values[i]) || (i < 3 ? *text++ != ' ' : *text != 0)) return;
+            }
+            if (values[1] != HAL_GetUIDw0() || values[2] != HAL_GetUIDw1() || values[3] != HAL_GetUIDw2()) return;
+            uint32_t mask = __get_PRIMASK();
+            __disable_irq();
+            uint8_t busy = (mode != MODE_NORMAL && mode != MODE_TEST) ||
+                           feedState == FEED_RUNNING || feedState == FEED_RESERVED || locateToggles;
+            uint8_t invalid = settingsFault || optionsFault || !Feeder_TypeValid(currentType) ||
+                              currentAddr < ADDRESS_MIN || currentAddr > VALUE_MAX;
+            if (!busy && !invalid) {
+                Board_MotorIdle();
+                peelRunning = peelClosed = 0;
+                peelOffAt = HAL_GetTick();
+                // Clearing a fault never starts a motor. The next ordinary feed
+                // releases this existing hold; retained request results stay FAULT.
+                jogPeelHold = 1;
+                faultReason = FAULT_NONE;
+                feedState = FEED_IDLE;
+                feedReady = mode == MODE_NORMAL;
+                feedButtonEligible = buttonEligible = 0;
+                displayDirty = 1;
+            }
+            __set_PRIMASK(mask);
+            Boot_Reply(currentAddr, busy ? "BUSY" : invalid ? "ERROR SETTINGS" : "CLEARED", values, 1);
             return;
         }
         if (!strncmp(command, "STOP ", 5)) {
@@ -626,7 +654,7 @@ static void ProcessRS485(void) {
             if (values[1] != HAL_GetUIDw0() || values[2] != HAL_GetUIDw1() || values[3] != HAL_GetUIDw2()) return;
             if (values[4] > 1U || values[5] > 1U || values[6] > 1U)
                 Boot_Reply(currentAddr, "ERROR CONFIG", NULL, 0);
-            else if (!BeginRemoteSettings(1))
+            else if (!BeginRemoteSettings())
                 Boot_Reply(currentAddr, "ERROR BUSY", NULL, 0);
             else {
                 uint8_t saved = SaveOptions((uint8_t)(values[4] | (values[5] << 1) | (values[6] << 2)));
@@ -649,7 +677,7 @@ static void ProcessRS485(void) {
             if (values[1] != HAL_GetUIDw0() || values[2] != HAL_GetUIDw1() || values[3] != HAL_GetUIDw2()) return;
             if (values[4] < COUNT_MIN || values[4] > VALUE_MAX)
                 Boot_Reply(currentAddr, "ERROR COUNT", NULL, 0);
-            else if (!BeginRemoteSettings(0)) Boot_Reply(currentAddr, "ERROR BUSY", NULL, 0);
+            else if (!BeginRemoteSettings()) Boot_Reply(currentAddr, "ERROR BUSY", NULL, 0);
             else {
                 uint8_t saved = SaveSetting(EEPROM_COUNT_ADDR, (uint8_t)values[4]);
                 if (saved) currentCount = (uint8_t)values[4];
@@ -671,7 +699,7 @@ static void ProcessRS485(void) {
             }
             if (values[1] != HAL_GetUIDw0() || values[2] != HAL_GetUIDw1() || values[3] != HAL_GetUIDw2()) return;
             if (!Feeder_TypeValid(values[4])) Boot_Reply(currentAddr, "ERROR TYPE", NULL, 0);
-            else if (!BeginRemoteSettings(0)) Boot_Reply(currentAddr, "ERROR BUSY", NULL, 0);
+            else if (!BeginRemoteSettings()) Boot_Reply(currentAddr, "ERROR BUSY", NULL, 0);
             else {
                 uint8_t saved = SaveType((uint8_t)values[4]);
                 if (saved) currentType = (uint8_t)values[4];
@@ -830,6 +858,7 @@ void Feeder_Init(void) {
         CH455_RefreshFault(FAULT_SETTINGS);
         LED_ON();
         delay_ms(100);
+        Board_WatchdogFeed(); // Invalid settings can wait here without rebooting.
     }
 
     delay_ms(10);
@@ -850,11 +879,12 @@ void Feeder_Init(void) {
 
     RS485_Init();
 
-    // Print address and local firmware version on power-up
+    // Best-effort startup hello. Stagger IDs; polling handles any collision/loss.
     {
-        char buf[40];
-        snprintf(buf, sizeof(buf), "Addr:%u v%s %s\n", (unsigned)currentAddr, FIRMWARE_VERSION, FEEDER_VARIANT);
-        RS485_SendString(buf);
+        uint32_t uid[] = {HAL_GetUIDw0(), HAL_GetUIDw1(), HAL_GetUIDw2()};
+        Board_WatchdogFeed();
+        delay_ms(currentAddr * 12U + (uid[0] & 7U));
+        Boot_Reply(currentAddr, "ONLINE", uid, 3);
     }
 
     Board_MotorIdle();
@@ -903,12 +933,10 @@ void Feeder_Tick(void) {
         }
     }
     uint8_t closed = PeelRequested();
-    if (!closed && feedState != FEED_RUNNING) peelCycle = 0;
     if (!closed) peelClosed = 0;
     else if (!peelClosed) { peelClosed = 1; peelClosedAt = now; }
     uint8_t permitted = feedReady && !jogPeelHold && Feeder_TypeValid(currentType) && !locateToggles && currentAddr >= ADDRESS_MIN && currentAddr <= VALUE_MAX &&
-                        mode == MODE_NORMAL && feedState != FEED_FAULT &&
-                        (currentType > 8U || feedState == FEED_RUNNING || peelCycle);
+                        mode == MODE_NORMAL && feedState != FEED_FAULT;
     if (!permitted || !closed) {
         if (peelRunning) {
             HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_PEEL_A_PIN | MOTOR_PEEL_B_PIN, GPIO_PIN_SET);

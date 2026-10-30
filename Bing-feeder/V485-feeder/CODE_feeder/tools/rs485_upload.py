@@ -111,9 +111,10 @@ class Link:
     Keep one request in flight. Callers use one attempt for BOOT/END; read-only
     requests and retry-safe BEGIN/DATA exchanges may use multiple attempts.
     """
-    def __init__(self, port, address):
+    def __init__(self, port, address, on_packet=None):
         """Bind the serial connection to its explicit destination EEPROM ID."""
         self.port, self.address = port, address
+        self.on_packet = on_packet
 
     def request(self, body, accepted, timeout=1.0, attempts=3, expected=None):
         """Send body and return an accepted reply, or raise on error/timeout.
@@ -132,7 +133,10 @@ class Link:
             while time.monotonic() < deadline:
                 # Read one byte beyond our 128-byte reply limit so an oversized
                 # line is rejected. Ignore invalid/partial packets until timeout.
-                response = decode_packet(self.port.read_until(b"\n", 129), self.address)
+                raw = self.port.read_until(b"\n", 129)
+                if self.on_packet:
+                    self.on_packet(raw)
+                response = decode_packet(raw, self.address)
                 # IDENT uses the same request/reply label; exclude exact local
                 # adapter echoes before testing labels or parsing reply fields.
                 if response is None or response == body:

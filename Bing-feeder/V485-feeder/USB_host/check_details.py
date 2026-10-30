@@ -90,12 +90,13 @@ def main():
         assert not updated['configuration'].get('error') and service.maintenance
         assert not service.updating and len(saves())==3
         service.set_maintenance(False)
-        # Stock spacing uses physical millimetres for every supported width.
+        # Stock spacing writes and verifies actual hardware advance for each width.
+        service.set_maintenance(True)
         for width,step in ((8,2),(12,4),(16,4),(24,4)):
             port.nodes[1]['width']=width
             service.load_stock(1,'Spacing test',100,part_spacing_mm=8)
             current=next(f for f in stock.rows() if f['uid']==uid)
-            assert current['pitch']==8//step
+            assert current['pitch']==current['default_count']==port.nodes[1]['default']==8//step
             port.nodes[1]['counter']+=1;service.observe(1)
             current=next(f for f in stock.rows() if f['uid']==uid)
             assert current['remaining']==100-step/8

@@ -27,17 +27,13 @@ MicroSMT describes the PNPv3 as an open-source pick-and-place kit for OpenPnP. D
 
 Kits: [microsmt.com.cn](https://www.microsmt.com.cn) · Support: [Discord](https://discord.gg/qT7ZAAgspy) · [Google group](https://groups.google.com/g/pnpv3-bing-feeder)
 
-
 The machine uses a Cartesian XY layout.
 ![image](picture1.jpg)
 
 ![image](piciture5.jpg)
 
-
-
 The main structural parts are CNC-machined aluminium alloy.
 ![image](picture3.jpg)
-
 
 ### Belt tensioner
 A toothless idler provides the belt-tension adjustment.

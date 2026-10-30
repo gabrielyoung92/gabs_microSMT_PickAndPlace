@@ -4,9 +4,9 @@
 
 22 parts · [All photos](photos/)
 
-The older 8 mm 55T gear is still here. It was left out of the 21 October 2026 download.
+Includes the supplied 55T gear variant for 8 mm assemblies.
 
-Click a picture to see it full size. **More views** shows the part from above and below.
+Click a picture for full size; **More views** contains top and bottom views.
 
 ## 1-position feeder holder
 

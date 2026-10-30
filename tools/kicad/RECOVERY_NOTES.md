@@ -1,6 +1,6 @@
 # Recovery method, evidence and limits
 
-## Authority and provenance
+## Source data
 
 The feeder schematic PNG provides component values and functional context.
 `FlyingProbeTesting.json` supplies references, pad numbers, net names, package
@@ -9,8 +9,8 @@ supplies plated drill diameters and positions. The source archives and all their
 member hashes are identified in each project's `recovery.json`; the preserved
 repository-wide manifest additionally hashes the archive files themselves.
 
-The earlier feeder, three V3 busbars and motherboard have their source components
-on the front. The additional V485 references retain front/back component sides. Repeated top/bottom probe rows for
+The feeder V2, three V3 busbars and motherboard have front-side source components.
+The V485 references retain front/back component sides. Repeated top/bottom probe rows for
 plated pads are collapsed into one physical pad. The separate via drill file
 repeats holes from the through-drill file; those holes are deduplicated by position
 and checked for conflicting diameters. The parser reports the source's G90
@@ -36,8 +36,7 @@ Meaningful names replace anonymous feeder nets via the recorded alias table.
   have explicit source pad numbers. The MCU uses a flattened STM32F103C8Tx symbol
   **conditionally**, with the source's incomplete `STM32C8T6` value retained.
 - Isolated synthetic source nets become explicit schematic no-connects, then
-  receive KiCad's generated `unconnected-(...)` names on the PCB. This is a naming
-  normalization, not an electrical connection or copper change. PA0/PA1 retain
+  receive KiCad's generated `unconnected-(...)` names on the PCB. This changes net names only. PA0/PA1 retain
   their actual single-pin named copper nets and remain visible ERC findings.
 - Original silkscreen strokes remain editable board graphics, including text
   outlines and connector outlines extending past the board edge. They are not
@@ -134,10 +133,8 @@ python tools/kicad/compare_sources.py
 python tools/kicad/render_previews.py
 ```
 
-No generated fabrication outputs are designated for ordering. Next design work
-should branch from these inspectable references, decide the feeder-bus electrical
-interface, establish actual parts/stackup/connector numbering, and resolve both
-source discrepancies and layout-rule findings before hardware manufacture.
+Before fabrication, establish the actual parts, stackup and connector numbering,
+replace edited pours and resolve source discrepancies and DRC findings.
 
 ## Four-layer motherboard extension
 
@@ -150,8 +147,7 @@ Gerber aperture macros are not reconstructed from pickled unit objects. The
 preserved by the recovered zones. Its local library is MicroSMT_Motherboard,
 so generating it does not prune the feeder/busbar library.
 
-
-## Remaining V3 and V485 boards
+## Controller and V485 board generator
 
 `tools/kicad/recover_remaining.py` reconstructs the V3 controller, V485
 controller, 480 mm busbar, three short-busbar variants, display and feeder. Their
@@ -188,4 +184,4 @@ PCB before comparing it; use a reference copy, not an unreviewed redesign.
 Run without a mode to build the named board(s), or omit names for all eight.
 Generation refuses to overwrite an existing PCB. Regenerate only in a disposable
 checkout after removing the selected generated project files; preserve manual
-CAD edits. Earlier projects are outside this generator’s project list.
+CAD edits. Use the listed generator for each project; their project lists are separate.

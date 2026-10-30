@@ -12,7 +12,7 @@
 - [V3_printed-stock.txt](V3_printed-stock.txt)
 - [magnetic-feeder-slot-notes.txt](magnetic-feeder-slot-notes.txt)
 
-The print and stock lists are older notes. Check the parts on hand before relying on their quantities.
+Check the recorded stock quantities against the parts on hand.
 
 ## Installation diagrams
 

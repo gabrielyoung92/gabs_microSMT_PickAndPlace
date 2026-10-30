@@ -10,7 +10,7 @@ The powered feeders use a separate direct USB–RS485 adapter and PC host.
 | --- | --- |
 | OpenPnP | Motion, cameras, pickup positions, nozzle setup, calibration and jobs |
 | Feeder host | RS485, local feeder TCP, dashboard, stock and application updates |
-| Feeder firmware 0.1.2 | Index/peel motors, tension switch, buttons, settings, faults and input tests |
+| Feeder firmware 0.1.3 | Index/peel motors, tension switch, buttons, settings, faults and input tests |
 
 The host exposes `127.0.0.1:5001` for OpenPnP feeder commands and HTTP port 80 for
 the dashboard. The optional OpenPnP script uses loopback port 5004 for catalogue

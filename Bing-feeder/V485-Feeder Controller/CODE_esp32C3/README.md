@@ -50,11 +50,11 @@ Send `M600 N12 F4` or `N12 F4`, followed by a newline. `N` is the feeder’s sav
 
 The command accepts upper/lower case, spaces or tabs, and LF or CRLF endings. Extra fields and malformed values are rejected.
 
-The controller sends the advance **once**, then checks its result with read-only `STATUS` requests. It returns `ok N12 F4` only when the feeder reports that the requested count was reached and the index motor was set to idle. `ACCEPT` and `RUNNING` are not success replies. The wider feeders may peel during normal idle, gated by their PA2 tension switch. The index count defines advance completion.
+The controller sends the advance **once**, then checks its result with read-only `STATUS` requests. It returns `ok N12 F4` only when the feeder reports that the requested count was reached and the index motor was set to idle. `ACCEPT` and `RUNNING` are not success replies. The wider feeders may peel during normal idle, gated by their PB6 tension switch. The index count defines advance completion.
 
 Busy, faults, a lost request record after reset, or a completion timeout return `error: ...` without `ok`. **Don’t blindly resend an advance after a missing reply:** the tape may already have moved. Status requests can be repeated safely; advances cannot. Repeated advance requests are not deduplicated.
 
-Use the addressed FEED/STATUS protocol implemented by this controller and the current universal feeder application. An acceptance-only draft cannot report completion. Each reply must match the feeder ID, controller startup session and request sequence, with a valid CRC. Bare `OK` and old or wrong-feeder replies are ignored. Reaching the sensor count still needs checking against real tape movement and part presentation.
+Use the addressed FEED/STATUS protocol implemented by this controller and the current universal feeder application. Each reply must match the feeder ID, controller startup session and request sequence, with a valid CRC. Bare `OK` and old or wrong-feeder replies are ignored. Reaching the sensor count still needs checking against real tape movement and part presentation.
 
 ### Timeouts
 
@@ -76,18 +76,18 @@ The regular **GcodeDriver** waits for the reply before returning from actuation,
 
 ## Update feeders over USB
 
-The update path is **PC USB → ESP32-C3 → RS485 → feeder**. The feeder needs the matching local bootloader installed over SWD first; stock vendor firmware cannot accept these updates. See the [feeder update guide](../../V485-feeder/CODE_feeder/BOOTLOADER.md).
+The update path is **PC USB → ESP32-C3 → RS485 → feeder**, using the installed universal bootloader. See the [feeder update guide](../../V485-feeder/CODE_feeder/BOOTLOADER.md).
 
 Close OpenPnP and serial monitors before updating. Use one RS485 master. Run these from the feeder’s `CODE_feeder` folder:
 
 ```sh
 # COM7 is the controller USB port; 7 is the feeder's unique ID.
-python tools/rs485_upload.py --port COM7 --address 7 --firmware .pio/build/v485_8mm/firmware.bin
-# Or update explicit IDs sequentially, all using the same width variant.
-python tools/rs485_upload.py --port COM7 --addresses 7,8,9 --firmware .pio/build/v485_8mm/firmware.bin
+python tools/rs485_upload.py --port COM7 --address 7 --firmware .pio/build/v485/firmware.bin
+# Or update explicit IDs sequentially, using the universal image.
+python tools/rs485_upload.py --port COM7 --addresses 7,8,9 --firmware .pio/build/v485/firmware.bin
 ```
 
-The bridge passes complete, CRC-valid `INFO`, `BOOT`, `HELLO`, `BEGIN`, `DATA`, `END`, `IDENT` and `SETID` packets and replies without changing their bytes, destination or checksum. The PC uploader handles retries, width and memory checks, flash writes and final verification; no separate bridge-mode command is needed.
+The bridge forwards CRC-valid update and settings packets without changing their bytes, destination or checksum. Supported commands include INFO/BOOT/HELLO/BEGIN/DATA/END, IDENT/SETID, TYPE/SETTYPE, LOCATE, CONFIG/SETCONFIG, SETCOUNT and STOP. The direct PC host is required for DIAG monitoring and TEST input diagnostics. The PC uploader handles retries, width and memory checks, flash writes and final verification; no separate bridge-mode command is needed.
 
 Update packets can use 127 bytes before the newline. Invalid packets are dropped, and the controller adds no console chatter to valid updates. It keeps collecting replies, including slow erase responses, without retrying them or imposing an update response deadline.
 
@@ -97,7 +97,7 @@ The uploader opens its port at 115200 baud. That host setting does not change th
 
 ## Change a feeder ID
 
-The controller also forwards locally armed ID assignments. Select PA4 menu `01` on the feeder, close OpenPnP/serial monitors, then run from the feeder's `CODE_feeder` folder:
+The controller also forwards locally armed ID assignments. Select PA2 menu `01` on the feeder, close OpenPnP/serial monitors, then run from the feeder's `CODE_feeder` folder:
 
 ```sh
 python tools/assign_id.py --port COM7 --address 7 --new-id 12

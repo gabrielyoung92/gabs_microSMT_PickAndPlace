@@ -6,7 +6,7 @@
 
 Parts from the 21 October 2026 V485 download. The gears, worm and 16/24 mm trigger cover shared by the wider feeders are in the [shared folder](../3D_parts_shared/README.md).
 
-Click a picture to see it full size. **More views** shows the part from above and below.
+Click a picture for full size; **More views** contains top and bottom views.
 
 ## 1-position feeder holder
 

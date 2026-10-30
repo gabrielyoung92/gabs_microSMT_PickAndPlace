@@ -1,16 +1,21 @@
 # V485 missing parts
 
-Checked **22 October 2026** against MicroSMT's **21 October 2026 V485 CAD archive**, covering 8, 12, 16 and 24 mm feeders. Original designs belong to MicroSMT; see [credits](CREDITS.md).
+V485 file gaps for 8/12/16/24 mm feeders. Vendor file trees were rechecked on
+**30 October 2026** with no changes. Original designs belong to MicroSMT; see [credits](CREDITS.md).
 
-All **64 source CAD entries** match their local destinations byte-for-byte, including entries consolidated into shared parts. These gaps are in the supplied archive, not files lost during extraction. See the [import manifest](Bing-feeder/upstream-2026-10-21.json) and [update notes](Bing-feeder/UPSTREAM-2026-10-21.md).
+Source-to-local mappings are in the [import manifest](Bing-feeder/upstream-2026-10-21.json)
+and [update notes](Bing-feeder/UPSTREAM-2026-10-21.md). The
+[current comparison](Bing-feeder/UPSTREAM-2026-10-25.md) covers the supplied 16 mm slot.
 
 ## Confirmed file gaps
 
 - [ ] **8 mm eight-position feeder slot STEP:** the [printable STL](Bing-feeder/V485-feeder/3D_parts_8mm/V485_3D_feeder-slot-8-position.stl) exists, but no editable STEP is supplied.
 
-## Received separately
+## Available
 
-- [x] **16 mm one-position magnetic feeder slot:** received on 22 October 2026 as `V485-16mm feeder slot(Magnetic)-1bit.STEP`. Added to the [16 mm gallery](Bing-feeder/V485-feeder/3D_parts_16mm/README.md) with the original STEP contents, a matching STL and nine previews. This file was not part of the 21 October archive.
+- [x] **16 mm one-position magnetic slot:** present in the vendor ZIP and
+  [16 mm gallery](Bing-feeder/V485-feeder/3D_parts_16mm/README.md), with matching
+  STEP, STL and nine previews.
 
 ## Needs clarification from Bing
 
@@ -28,6 +33,6 @@ These are differences between the supplied width sets, not confirmed missing req
 - Common wider-feeder gears and worm are also in that shared folder.
 - Every other supplied model has both STEP and STL locally.
 
-V3 files are a different design and are not established substitutes for missing V485 parts. File availability alone does not establish physical fit.
+V3 parts are a different design; check fit before substituting them.
 
 When new files arrive, check their intended width/design, add matching STEP/STL and gallery links, then tick the relevant item above.
