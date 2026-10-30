@@ -108,8 +108,8 @@ metadata is index1. At inspection the bottom image node was `/dev/video2`.
 
 Owner identified bottom/up-looking LED M804/M805 and top/down-looking LED
 M806/M807. Pump operation was heard, and configured N1 valve was identified;
-incorrect tubing was found. Verified nozzle suction/release and N2 valve test
-remain pending. See [current setup status](machine-setup-status.md).
+incorrect tubing was found. Suction/release and N2 valve checks are covered in
+[machine setup](machine-setup-status.md).
 
 ## Remaining hardware identification
 

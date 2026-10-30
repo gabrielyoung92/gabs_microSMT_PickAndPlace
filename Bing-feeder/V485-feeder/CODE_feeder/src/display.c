@@ -105,7 +105,7 @@ void CH455_RefreshNum(uint16_t num) {
 
 void CH455_RefreshFault(uint8_t code) {
     CH455_SetDisplay(1, DISPLAY_ERROR_SEGMENTS);
-    CH455_SetDisplay(3, code >= 1U && code <= 3U ? seg_table[code] : DISPLAY_ERROR_SEGMENTS);
+    CH455_SetDisplay(3, code >= 1U && code <= 4U ? seg_table[code] : DISPLAY_ERROR_SEGMENTS);
 }
 
 // Allow the display to settle, then repeat its setup write as the vendor does.

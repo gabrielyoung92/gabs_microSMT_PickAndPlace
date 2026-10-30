@@ -99,7 +99,9 @@ def main():
             assert current['pitch']==current['default_count']==port.nodes[1]['default']==8//step
             port.nodes[1]['counter']+=1;service.observe(1)
             current=next(f for f in stock.rows() if f['uid']==uid)
-            assert current['remaining']==100-step/8
+            assert current['remaining']==100  # Hand movement does not deduct a part.
+            port.completed(1);service.observe(1)
+            assert next(f for f in stock.rows() if f['uid']==uid)['remaining']==99
             expect_error(lambda:service.load_stock(1,'Invalid',999,part_spacing_mm=step+1))
             assert next(f for f in stock.rows() if f['uid']==uid)['label']=='Spacing test'
         port.nodes[1]['width']=8;service.observe(1)

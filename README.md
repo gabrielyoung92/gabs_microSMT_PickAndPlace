@@ -15,7 +15,7 @@ feeders through TCP `127.0.0.1:5001`.
 | Software | Source and instructions |
 | --- | --- |
 | Dashboard, feeder host and OpenPnP companion | [USB_host/](Bing-feeder/V485-feeder/USB_host/README.md) |
-| Universal feeder firmware **0.1.3**, bootloader and serial tools | [CODE_feeder/](Bing-feeder/V485-feeder/CODE_feeder/README.md) |
+| Universal feeder firmware **0.1.4**, bootloader and serial tools | [CODE_feeder/](Bing-feeder/V485-feeder/CODE_feeder/README.md) |
 | Machine configuration and calibration | [Machine notes](Microsmt-PNPv3/docs/README.md) |
 | EEPROM layout, saved settings and text/quantity limits | [EEPROM.md](EEPROM.md) |
 | Remaining work | [TODO.md](TODO.md) |

@@ -74,6 +74,7 @@ USART_TypeDef testUart;
 uint16_t pending;
 static uint32_t now,mask;
 static int context,starts,displayCalls,renderDepth,lastNumber,lastFault;
+static uint8_t segments[4];
 static int queued,address,count,injectAck,injectStartup,injectPulse,injectRender;
 static uint8_t memory[256]={7,3,FEEDER_WIDE ? 12 : 8,FEEDER_WIDE ? 243 : 247,0,255,OPTIONS_VERSION};
 static int resetCalls,failEEPROM;
@@ -120,11 +121,12 @@ void CH455_RefreshNum(uint16_t value){
  renderDepth--;
 }
 void CH455_RefreshFault(uint8_t code){lastFault=code;displayCalls+=2;}
-void CH455_SetDisplay(uint8_t digit,uint8_t segments){
- (void)digit;(void)segments;assert(context==0&&!renderDepth);displayCalls++;
+void CH455_SetDisplay(uint8_t digit,uint8_t value){
+ segments[digit]=value;assert(context==0&&!renderDepth);displayCalls++;
 }
-uint8_t EEPROM_WriteByte(uint8_t offset,uint8_t value){if(checkRemoteSave){assert(!feedReady&&!peelRunning);manualRequest();assert(feedState==FEED_IDLE);assert((testA.levels&MOTOR_ALL_PINS)==MOTOR_ALL_PINS);}settingWrites++;if(failEEPROM)return 0;memory[offset]=value;delay_ms(5);return !failReadback;}
+uint8_t EEPROM_WriteByte(uint8_t offset,uint8_t value){if(checkRemoteSave){assert(!feedReady&&!peelRunning);manualRequest();assert(feedState==FEED_IDLE);assert((testA.levels&MOTOR_ALL_PINS)==MOTOR_ALL_PINS);}if(offset<STOCK_BASE)settingWrites++;if(failEEPROM)return 0;memory[offset]=value;delay_ms(5);return !failReadback;}
 uint8_t EEPROM_ReadChecked(uint8_t offset,uint8_t* value){if(failEEPROM)return 0;if(offset==failReadOffset){failReadOffset=-1;return 0;}*value=memory[offset];return 1;}
+uint32_t Board_ResetFlags(void){return 1U<<29;}
 void RS485_Init(void){}
 void RS485_SendString(const char* text){assert(context==0);snprintf(response,sizeof(response),"%s",text);}
 uint8_t RS485_ReadLine(char* line,uint16_t size){if(updateLine){snprintf(line,size,"%s",updateLine);updateLine=NULL;return 1;}if(!queued)return 0;queued=0;snprintf(line,size,"N%d F%d",address,count);return 1;}
@@ -133,6 +135,7 @@ void NVIC_SystemReset(void){resetCalls++;assert(!feedReady&&feedState==FEED_FAUL
 void Board_EnableFeedInterrupts(void){assert(mask && !feedReady);pending=0;}
 MOTOR_IDLE
 #include "boot.c"
+#include "stock.c"
 static void command(int addr,int n){queued=1;address=addr;count=n;response[0]=0;ProcessRS485();}
 static void idle(void){
  assert((testA.levels&(MOTOR_INDEX_A_PIN|MOTOR_INDEX_B_PIN))==(MOTOR_INDEX_A_PIN|MOTOR_INDEX_B_PIN));
@@ -205,7 +208,65 @@ int main(int argc,char** argv){
  char* body=Boot_DecodePacket(hello,currentAddr);
  assert(body&&!strcmp(body,"ONLINE 11111111 22222222 33333333"));injectStartup=0;
  
-if(!strcmp(argv[1],"defaults")){
+if(!strcmp(argv[1],"benchfeatures")){
+ int writes=settingWrites;uint32_t qty,adv,seq;
+ framed("HEALTH 00000001");assert(strstr(response,"HEALTH 00000001 20000000"));
+ assert(Motor_Reserve(2));Motor_Start();pulse();delay_ms(FEED_TIMEOUT_MS);
+ assert(faultReason==FAULT_INDEX&&faultTarget==2&&faultReceived==1&&faultDuration>=FEED_TIMEOUT_MS);
+ uint32_t snapshot=faultDuration;delay_ms(100);Motor_Fault(FAULT_INDEX);assert(faultDuration==snapshot);
+ framed("FAULTINFO 00000001");assert(strstr(response,"FAULTINFO 00000001"));
+ press(BUTTON_PIN,50);assert(feedState==FEED_FAULT);idle();
+ press(BUTTON_PIN,BUTTON_HOLD_MS);assert(feedState==FEED_IDLE&&feedReady&&!faultFlags&&jogPeelHold);idle();
+ assert(settingWrites==writes);
+ // Loading has explicit entry, no ordinary feeds or local feed button, and no stock deductions.
+ Stock_Set(10);assert(Stock_Flush());
+ framed("LOAD 00000001 11111111 22222222 00000000 00000001");assert(mode==MODE_NORMAL);
+ framed("LOAD 00000001 11111111 22222222 33333333 00000001");assert(mode==MODE_LOAD&&feedReady);idle();
+ press(BUTTON_PIN,50);assert(feedState==FEED_IDLE);
+ framed("FEED 00000001 00000002 00000000");assert(strstr(response,"BUSY"));
+ framed("JOG 00000001 00000002 00000000 00000001");assert(feedState==FEED_RUNNING&&jogPeelHold);
+ while(feedState==FEED_RUNNING)pulse();Feeder_Run();Stock_Read(&qty,&adv,&seq);assert(qty==10&&!adv);
+ framed("JOG 00000001 00000003 00000001 00000001");assert(feedState==FEED_RUNNING&&retractMove);
+ while(feedState==FEED_RUNNING)pulse();Feeder_Run();Stock_Read(&qty,&adv,&seq);assert(qty==10&&!adv);
+ framed("JOG 00000001 00000004 00000000 00000001");assert(feedState==FEED_RUNNING);pulse();
+ framed("LOAD 00000001 11111111 22222222 33333333 00000000");assert(strstr(response,"BUSY")&&mode==MODE_LOAD);
+ framed("LOAD 00000001 11111111 22222222 33333333 00000003");assert(feedState==FEED_IDLE&&requestResult==REQUEST_FAULT);idle();
+ Stock_Read(&qty,&adv,&seq);assert(qty==10&&!adv);
+ // Switch-controlled peel-only; no MCU loop or browser is needed to stop it.
+ testB.levels&=~PEEL_SWITCH_PIN;delay_ms(PEEL_RESTART_MS+1);assert(!peelRunning);
+ framed("LOAD 00000001 11111111 22222222 33333333 00000002");delay_ms(PEEL_DEBOUNCE_MS+PEEL_RESTART_MS);assert(peelRunning&&loadPeel);
+ testB.levels|=PEEL_SWITCH_PIN;delay_ms(1);assert(!peelRunning&&!loadPeel&&mode==MODE_LOAD);idle();
+ testB.levels&=~PEEL_SWITCH_PIN;
+ framed("LOAD 00000001 11111111 22222222 33333333 00000002");delay_ms(PEEL_RESTART_MS+PEEL_TIMEOUT_MS+PEEL_DEBOUNCE_MS+1);
+ assert(faultReason==FAULT_PEEL&&faultDuration>=PEEL_TIMEOUT_MS&&(faultFlags&256));idle();
+ framed("LOAD 00000001 11111111 22222222 33333333 00000000");assert(mode==MODE_NORMAL);assert(!ClearFault());idle();
+ // Empty is a display indication only. Unknown quantity stays ordinary.
+ Stock_Set(0);assert(Stock_Flush());now=(now/2000)*2000+1000;RefreshDisplay();assert(segments[1]==0x70&&segments[3]==0xB8);
+ now+=1000;RefreshDisplay();assert(lastNumber==7);
+ assert(Motor_Reserve(1));Motor_Start();pulse();Stock_Read(&qty,&adv,&seq);assert(qty==0&&adv==1);
+ remaining=STOCK_UNKNOWN;now=(now/2000)*2000+1000;RefreshDisplay();assert(lastNumber==7);
+ return 0;
+}
+if(!strcmp(argv[1],"stockapi")){
+ uint32_t qty,count,seq;Stock_Read(&qty,&count,&seq);assert(qty==STOCK_UNKNOWN&&!count);
+ uint8_t before[256];memcpy(before,memory,sizeof memory);
+ framed("SETSTOCK 12345678 00000000 22222222 33333333 00000064");assert(!response[0]&&!memcmp(before,memory,sizeof memory));
+ framed("SETSTOCK 12345678 11111111 22222222 33333333 0000FFFF");assert(strstr(response,"ERROR QUANTITY")&&!memcmp(before,memory,sizeof memory));
+ framed("SETSTOCK 12345678 11111111 22222222 33333333 00000064");assert(strstr(response,"STOCK 12345678 00000064 00000000"));
+ assert(!memcmp(before,memory,STOCK_BASE));memcpy(before,memory,sizeof memory);
+ for(int i=0;i<20;i++)framed("STOCKREAD 12345678");assert(!memcmp(before,memory,sizeof memory));
+ assert(Motor_Reserve(1));Motor_Start();pulse();Feeder_Run();assert(Stock_Init());
+ Stock_Read(&qty,&count,&seq);assert(qty==99&&count==1);
+ assert(Motor_Reserve(3));Motor_Start();pulse();Motor_Fault(FAULT_INDEX);Feeder_Run();
+ Stock_Read(&qty,&count,&seq);assert(qty==99&&count==1);
+ framed("CLEAR 12345678 11111111 22222222 33333333");
+ assert(Motor_ReserveMove(3,1,1,1));Motor_Start();while(feedState==FEED_RUNNING)pulse();Feeder_Run();
+ Stock_Read(&qty,&count,&seq);assert(qty==99&&count==1);
+ press(BUTTON_PIN,10);while(feedState==FEED_RUNNING)pulse();Feeder_Run();assert(Stock_Init());
+ Stock_Read(&qty,&count,&seq);assert(qty==98&&count==2);
+ assert(Motor_Reserve(1));Motor_Start();pulse();failEEPROM=1;Feeder_Run();
+ assert(settingsFault&&faultReason==FAULT_SETTINGS&&!feedReady);idle();
+}else if(!strcmp(argv[1],"defaults")){
  assert(currentCount==(FEEDER_WIDE?1:2)&&motorOptions==(FEEDER_WIDE?0:OPTION_FEED_REVERSE));
  assert(memory[1]==currentCount&&optionsUnconfigured);
  assert(SaveType(8)&&motorOptions==OPTION_FEED_REVERSE);
@@ -807,7 +868,7 @@ def main():
    for module in ['app','rx']:
     exe=q/(module+str(wide));subprocess.run(['gcc','-std=c11','-Wall','-Wextra','-Wno-misleading-indentation','-Werror','-fsanitize=undefined,address','-g','-I',d,'-I',str(p/'src'),'-DFEEDER_WIDE='+str(wide),str(q/(module+'.c')),'-o',str(exe)],check=True)
     if module=='app':
-     for case in ['bootpeel','clearfault','peelidle','inputtest','peelafter','defaults','longjog','longjoglimit','longjogwrap','longjogstall','longjogdeadline','longjogstop','jog','remotecount','options','optionsrecords','optionscorrupt','optionsreadfail','race','startup','zero','early','display','timeout','wrap','feedback','readfail','countreadfail','blank','unassigned','unassignedremote','unassignedboot','bootblank','bootblankfail','invalidid','savefail','readbackfail','diagnostics','buttons','twobuttons','untyped','typereadfail','type','locate','heldstartup','menuboot','menutiming','menubootfail','menufault','assignheld','menubusy','assign','assignexpired','assignfail','peel','peelwrap','peeltimeout','savesuccess','slowack','framed','badframed','completion','completionearly','completionfault','completioneeprom','bootidle','bootbusy','bootreserved','bootwrong','bootcrc','bootfault','booteeprom']:subprocess.run([str(exe),case],check=True)
+     for case in ['benchfeatures','stockapi','bootpeel','clearfault','peelidle','inputtest','peelafter','defaults','longjog','longjoglimit','longjogwrap','longjogstall','longjogdeadline','longjogstop','jog','remotecount','options','optionsrecords','optionscorrupt','optionsreadfail','race','startup','zero','early','display','timeout','wrap','feedback','readfail','countreadfail','blank','unassigned','unassignedremote','unassignedboot','bootblank','bootblankfail','invalidid','savefail','readbackfail','diagnostics','buttons','twobuttons','untyped','typereadfail','type','locate','heldstartup','menuboot','menutiming','menubootfail','menufault','assignheld','menubusy','assign','assignexpired','assignfail','peel','peelwrap','peeltimeout','savesuccess','slowack','framed','badframed','completion','completionearly','completionfault','completioneeprom','bootidle','bootbusy','bootreserved','bootwrong','bootcrc','bootfault','booteeprom']:subprocess.run([str(exe),case],check=True)
     else:subprocess.run([str(exe)],check=True)
  print('All actual-source checks passed. Temporary files only; no project tests folder created.')
 

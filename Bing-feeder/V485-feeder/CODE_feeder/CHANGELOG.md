@@ -1,9 +1,23 @@
-# V485 firmware 0.1.3
+# V485 firmware 0.1.4
 
 Current application for the machine's 8/12/16/24 mm feeders. Original designs
 and firmware: [MicroSMT](https://github.com/microsmt/Bing-feeder). Local changes
 were prepared by Gab with ChatGPT assistance.
 
+- Remaining quantity and completed advances live in feeder EEPROM, using twelve
+  rotating CRC-checked records. Setting quantity resets advances; successful
+  normal feeds save once. Polling never writes. Jogs and partial feeds do not
+  deduct stock. Quantity supports 0–65,534 or Not set; advances saturate at the
+  32-bit maximum. Host stock reads the feeder instead of estimating from pulses.
+- Fault snapshots retain requested/received events, time and switch state.
+  Holding/releasing PA4 for two seconds while faulted clears runtime errors with
+  motors stopped, using the same guards as the bus clear command.
+- Explicit tape-loading mode offers single-pocket feed/retract without stock
+  deductions and peel-only take-up until tension, retaining the timeout.
+- Known zero quantity alternates Lo with the idle ID. Unknown quantity and
+  normal feeding remain unaffected. Configure exposes the existing Find command.
+- HEALTH captures available reset flags. The installed loader clears these;
+  the host reports unavailable rather than guessing. The loader stays unchanged.
 - One universal image; each unit saves its ID, width, advance count, motor
   directions and tension-switch polarity.
 - All widths start with peel take-up off until the first ordinary feed or
@@ -30,10 +44,15 @@ were prepared by Gab with ChatGPT assistance.
 
 ## Verification
 
-Universal application/loader builds and native C/protocol checks have passed.
-Application 0.1.3 image CRC and startup inhibition have been verified on the
-connected units. They remained idle and fault-free beyond the peel timeout.
-Watchdog reset timing, loaded tape and pickup accuracy require bench tests.
+Installed on 19 connected feeders on 31 October 2026. The 17,404-byte application
+has CRC32 **BD526A6A**. Every unit reported the matching image, retained width
+and advance count, readable stock and an idle, fault-free state beyond the peel
+timeout. Motor-off input test, loading entry/exit and Find were checked through
+the live host. The original bootloader remains unchanged.
+
+Universal application/loader builds and native C/protocol checks pass. Checks
+cover stock persistence/interrupted writes, counter limits, fault snapshots,
+local clear, loading/peel timeout, host/API controls and UI state.
 
 See [operating/build instructions](README.md), [update protocol](BOOTLOADER.md)
 and [dashboard](../USB_host/README.md).

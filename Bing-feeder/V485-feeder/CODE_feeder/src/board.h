@@ -12,6 +12,8 @@
 void Board_Init(void);
 // Application main-loop progress only; never refresh from an interrupt.
 void Board_WatchdogFeed(void);
+// Reset status captured by the application before clearing sticky RCC flags.
+uint32_t Board_ResetFlags(void);
 // Configure one or more pins on an already-clocked port, without internal pulls.
 void Board_ConfigurePin(GPIO_TypeDef* port, uint16_t pins, uint32_t mode);
 // Enable rising-edge feed/count inputs after application settings are valid.

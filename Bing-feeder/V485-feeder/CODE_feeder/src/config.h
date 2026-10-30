@@ -10,7 +10,7 @@
 #include "stm32f1xx_hal.h"
 
 // Shared application version; see CHANGELOG.md.
-#define FIRMWARE_VERSION "0.1.3"
+#define FIRMWARE_VERSION "0.1.4"
 
 // Only the dedicated bootloader environments define this as 1.
 #ifndef FEEDER_BOOTLOADER

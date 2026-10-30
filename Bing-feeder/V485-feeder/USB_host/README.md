@@ -19,7 +19,7 @@ Browser ── HTTP port 80 ───────────────┘
 
 OpenPnP handles motion, cameras, pickup teaching, nozzle management, trays,
 strip feeders and running jobs. The dashboard handles powered-feeder status,
-configuration, firmware and estimated reel stock. Parts/packages can be edited
+configuration, firmware and feeder-saved reel stock. Parts/packages can be edited
 through the optional OpenPnP companion; they remain OpenPnP's own records.
 
 ## Source files
@@ -150,6 +150,7 @@ work. Catalogue edits and loaded-job checks require OpenPnP and the companion.
 **All / Online / Offline** filters include remembered feeders and polling IDs
 that have not answered. Offline rows retain their last known details. A row's
 **Configure**, **Reel / stock** and **Test** buttons open compact popovers.
+Configure also contains **Load tape** and **Find feeder**.
 
 ### Configure a feeder
 
@@ -166,13 +167,14 @@ rather than automatically repeating a write.
 ### Reel stock and parts
 
 Check Set quantity to enter a new remaining quantity; leave it unchecked for
-label/part edits. Set part spacing and the low-stock threshold as needed. Movement
-is counted from the optical sensor, including manual/partial advances. Stock
-belongs to the physical feeder UID and survives bus ID changes. It is an
-estimate: empty pockets, failed picks and unpowered tape movement are not
-measured. Reverse sensor movement also consumes the estimate; correct it after
-unloading/reversing tape. MCU resets mark the count uncertain. Low or unknown
-stock never blocks a confirmed feeder advance.
+label/part edits. Quantity is 0–65,534; saving it resets completed advances.
+Set part spacing and the low-stock threshold as needed. Firmware 0.1.4 saves
+remaining quantity and completed normal feeds in EEPROM, even without the host.
+Jogs, partial feeds and hand movement do not deduct stock. Empty pockets and
+failed picks are not measured. Advances saturate at 4,294,967,295; no quantity or
+zero quantity never blocks feeding. Resets preserve saved counts. The database
+holds labels and cached readings. Older firmware readings are marked PC cache;
+quantity saves require 0.1.4. Stock read failures are shown as uncertain.
 
 Select an OpenPnP part and save. The companion assigns it to the matching bus
 ID, preserving pickup coordinates. A missing powered feeder is created disabled;
@@ -186,6 +188,27 @@ compatibility applies to every part using that package. Head/tip compatibility
 is read from OpenPnP; creation, holder allocation, changer teaching and physical
 nozzle management stay there. Footprint previews are geometry, not photographs.
 
+### Loading, fault details and Find
+
+Configure → Load tape opens the loading popup. **Pause & load tape** pauses
+OpenPnP feeder commands and enters loading mode. Feed/retract move one pocket
+without deducting stock. Peel to tension runs only peel until the switch stops
+it, with the firmware timeout still active. Stop, then End loading to leave the
+mode. Closing the popup does not end loading. Feeders remain paused afterward.
+The host refuses Resume while any known feeder is in loading or input-test mode.
+
+Configure → Find feeder flashes its display/LED with motors stopped and pauses
+feeder commands. The existing LOCATE firmware command is used.
+
+Fault rows and Configure show retained progress/time/switch details. A two-second
+hold and release of the feeder's PA4 feed button clears runtime faults locally
+without starting either motor. The next ordinary feed arms peel again.
+Known zero stock alternates Lo with the feeder ID; feeding is still permitted.
+
+Configure shows the available reset cause. The installed bootloader clears the
+processor reset flags, so the cause is unavailable through that loader. Reboots
+are still detected. No loader change is included.
+
 ### Job stock
 
 The check uses remaining enabled placements from the loaded OpenPnP job. It
@@ -195,7 +218,7 @@ machine-readiness test, and it never starts or controls a job.
 
 ## Firmware updates
 
-The current feeder application is **0.1.3**. Build from `../CODE_feeder`:
+The current feeder application is **0.1.4**. Build from `../CODE_feeder`:
 
 ```sh
 pio run -e v485
@@ -213,7 +236,7 @@ checked regularly; a missing-ID probe gets a slot every 0.5 seconds and rotates
 fairly across due IDs. More absent IDs increase discovery time. Polling continues
 while feeder commands are paused; regular status remains polled.
 
-At startup, firmware 0.1.3 sends one CRC-checked `ONLINE` packet with its UID,
+At startup, the firmware sends one CRC-checked `ONLINE` packet with its UID,
 replacing the text banner. A short ID-based delay staggers simultaneous starts.
 The host uses it to bring that ID's next normal status check forward. There are
 no acknowledgements or retries; collisions or a missed hello fall back to
@@ -233,7 +256,7 @@ See [firmware instructions](../CODE_feeder/README.md) for SWD and serial tools.
 
 ## Switch/input test
 
-On firmware 0.1.3, open **Test → Pause & start input test**. Wait for **Input
+Open **Test → Pause & start input test**. Wait for **Input
 test active · both motors inhibited**. Then operate the switch/buttons or turn
 the index sensor to see raw contact, interpreted peel request, transition count,
 optical total, motor state and uptime. The test inhibits both motors and local
@@ -288,8 +311,10 @@ The dashboard's API is served on the same HTTP port:
 | `GET /api/catalogue`, `GET /api/job` | OpenPnP catalogue and remaining-job stock |
 | `POST /api/maintenance`, `/api/polling` | Pause/resume and polling IDs |
 | `POST /api/refresh`, `/api/configure`, `/api/assign`, `/api/test` | Read details, save hardware settings, assign ID and input test |
+| `POST /api/loading` | UID-targeted start/end, one-pocket forward/reverse, peel-only and stop; automatically pauses feeders |
+| `POST /api/locate` | Flash display/LED on the selected feeder; automatically pauses feeders |
 | `POST /api/advance` | One default advance while feeder commands are paused; address and UID required |
-| `POST /api/clear-error` | Clear runtime faults on the selected address/UID; requires firmware 0.1.3 |
+| `POST /api/clear-error` | Clear runtime faults on the selected address/UID; requires firmware 0.1.4 |
 | `POST /api/stock`, `/api/part-sync` | Reel save and explicit part-sync retry |
 | `POST /api/openpnp` | Create/edit parts/packages and add powered feeders |
 | `POST /api/update-bundled`, `/api/update-all-bundled` | Queue the displayed bundle, pinned by SHA-256 |
@@ -303,6 +328,8 @@ From `USB_host`, hardware-free checks include:
 
 ```sh
 python3 check_host.py
+python3 check_bench_tools.py
+python3 check_feeder_stock.py
 python3 check_polling.py
 python3 check_startup.py
 python3 check_clear_error.py
@@ -320,5 +347,5 @@ node check_firmware_ui.js
 
 The host check also needs native `gcc`. `check_openpnp_web.py` runs with
 OpenPnP's bundled Jython/libraries in an isolated JVM. Checks use simulated
-feeders/temporary profiles; they do not operate the machine. Real tape travel,
-switch mounting, pickup and nozzle changer operation must be tested at the bench.
+feeders and temporary profiles; they do not operate the machine. Use OpenPnP
+for loaded-tape alignment, pickup teaching and nozzle changer setup.

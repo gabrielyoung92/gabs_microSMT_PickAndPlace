@@ -74,6 +74,7 @@ the loader are not writable through this protocol.
 | Application | Flash 0x08002000–0x0800FFFF / 56 KB | Vectors, identity, code and data |
 | Feeder settings | EEPROM bytes 0 / 1 / 2 / 3 | ID / default event count / width / width complement (invalid pair = unconfigured) |
 | Motor/switch options | EEPROM 0x04–0x06 | Flags / complement / A1 schema marker; see application README |
+| Stock | EEPROM 0x40–0xFF | Application 0.1.4: twelve rotating quantity/advance records; loader leaves them untouched |
 | Boot state | EEPROM 0x1F | 0xA5 valid, 0x5A requested, 0x00 writing |
 | Boot record | EEPROM 0x20–0x33 | Magic, width, size, image CRC and record CRC |
 
@@ -153,7 +154,7 @@ attempting Start.
 
 ### Clear runtime faults
 
-Application 0.1.3 accepts `CLEAR nonce uid0 uid1 uid2` in a standard addressed
+The application accepts `CLEAR nonce uid0 uid1 uid2` in a standard addressed
 CRC packet. All four fields are hexadecimal words. Matching UID replies
 `CLEARED nonce`; active movement or a menu replies `BUSY nonce`; invalid saved
 settings reply `ERROR SETTINGS nonce`. Wrong UID or malformed requests do
@@ -163,10 +164,52 @@ and the interrupted request still reports its original fault.
 
 ### Application startup notification
 
-Application 0.1.3 replaces the text banner with one `ONLINE uid0 uid1 uid2`
+The application sends one `ONLINE uid0 uid1 uid2`
 packet, using the same `Bdd ... CRC32` framing and three eight-digit hexadecimal
 UID words. It waits `ID × 12 + (uid0 & 7)` milliseconds before transmission.
 This reduces simultaneous-start collisions; it does not arbitrate a busy bus.
 No acknowledgement or retry is expected. The host schedules a normal status
 check for configured polling IDs; missed hellos fall back to polling. This is
 separate from the existing bootloader's host-requested `HELLO` command.
+
+## Saved stock commands
+
+Application 0.1.4 accepts these addressed commands. Values are eight-digit
+hexadecimal words; wrong-UID writes are ignored.
+
+| Command | Reply | Behaviour |
+| --- | --- | --- |
+| `STOCKREAD nonce` | `STOCK nonce remaining advances sequence` | Reads RAM snapshot; never writes EEPROM |
+| `SETSTOCK nonce uid0 uid1 uid2 quantity` | `STOCK nonce remaining advances sequence` | Quantity 0–65,534; saves and resets advances to zero |
+
+Remaining `0000FFFF` means Not set. Advances saturate at `FFFFFFFF`.
+SETSTOCK rejects active/reserved feeds and local menus/tests with BUSY. Invalid
+quantity reports ERROR QUANTITY; failed EEPROM access reports ERROR EEPROM/E3.
+A lost SET reply is checked by STOCKREAD, not an automatic repeat of SETSTOCK.
+
+## Bench commands in application 0.1.4
+
+| Command | Reply | Meaning |
+| --- | --- | --- |
+| `FAULTINFO nonce` | `FAULTINFO nonce flags target received duration` | Last fault snapshot; duration in milliseconds |
+| `HEALTH nonce` | `HEALTH nonce resetFlags uptime` | Captured RCC CSR reset flags and uptime in milliseconds |
+| `LOAD nonce uid0 uid1 uid2 action` | `LOAD nonce active peelRequested` | Explicit loading controls; wrong UID ignored |
+
+FAULTINFO flags: low byte = E1/E2/E3/E4 reason; bit 8 = switch contact closed;
+bit 9 = NO polarity; bit 10 = peel was running. Target/received are sensor events
+for an active index move, otherwise zero. Duration is peel time for E2, active
+index time for other movement faults, otherwise zero. Snapshot stays until clear
+or reset. No EEPROM writes are involved.
+
+HEALTH uses the STM32 RCC CSR bits: 26 reset pin, 27 power-on, 28 software,
+29 independent watchdog, 30 window watchdog, 31 low-power. Multiple flags can be
+set. The installed loader's HAL_RCC_DeInit clears them, so zero means **cause
+unavailable**, not a particular reset cause. The loader remains unchanged.
+
+LOAD actions: `0` end, `1` enter, `2` peel to tension, `3` stop. Values are
+hexadecimal words as elsewhere. Busy replies retain the nonce. Loading is mode
+`7` in DIAG; normal FEED and local button feeding are inhibited. JOG remains
+available for index feed/retract and does not change stock. Enter may stop idle
+peeling. End rejects active movement; stop first. Peel-only stops on the switch
+or the existing E2 timeout; browser loss cannot extend it. Clearing a fault
+holds peel stopped. No command automatically retries a loading movement.

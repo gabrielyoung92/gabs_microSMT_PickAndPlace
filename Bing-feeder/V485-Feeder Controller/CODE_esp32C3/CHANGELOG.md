@@ -2,7 +2,7 @@
 
 MicroSMT-derived RS485 controller using PlatformIO/Arduino. This machine uses the
 [direct PC host](../../V485-feeder/USB_host/README.md); this source supports the
-separate controller board. Hardware operation is not yet validated.
+separate controller board.
 
 - USB accepts `M600 N… F…` or `N… F…`. IDs are 1–99; F counts sensor events,
   and F0 selects the feeder's saved count.

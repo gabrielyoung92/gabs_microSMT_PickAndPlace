@@ -204,6 +204,7 @@ int main(void){
  testA.levels=testB.levels=0xffff;Feeder_Init();
  char line[256];
  while(fgets(line,sizeof(line),stdin)){
+  if(!Stock_Flush())return 2;
   line[strcspn(line,"\r\n")]=0;response[0]=0;
   updateLine=line;ProcessRS485();
   if(feedState==FEED_RUNNING)pulse();
@@ -284,12 +285,12 @@ def main():
         port.echo = True
         service = host.Feeders(port, stock, [1], reply_timeout=0.01, feed_timeout=0.3, poll_interval=0.001)
         service.load_stock(1, "Resistors", 2, 4, 1)
-        port.nodes[1]["counter"] += 1  # Manual movement counts, including fractions.
+        port.nodes[1]["counter"] += 1  # Hand movement is telemetry, not a completed part feed.
         with service.bus:
             service.observe(1)
-        assert newest(stock)["used"] == 0.25
+        assert newest(stock)["used"] == 0
         assert service.feed(1, 0) == "ok N1 F0"
-        assert newest(stock)["remaining"] == 0.75
+        assert newest(stock)["remaining"] == 1
         assert service.feed(1, 8) == "ok N1 F8"
         assert newest(stock)["remaining"] == 0
         assert service.feed(1, 4) == "ok N1 F4"  # Zero stock never gates feeding.
@@ -349,10 +350,10 @@ def main():
         port.nodes[1]["counter"] += 4
         service.observe(1)
         assert newest(stock)["used_pulses"] == previous + 4 and not newest(stock)["uncertain"]
-        # An MCU reset loses an interval: retain known usage and flag uncertainty.
+        # An MCU reset restores feeder-owned stock from its persistent record.
         port.nodes[1]["token"], port.nodes[1]["counter"] = (0, 0), 2
         service.observe(1)
-        assert newest(stock)["uncertain"] and newest(stock)["used_pulses"] == previous + 6
+        assert not newest(stock)["uncertain"] and newest(stock)["used_pulses"] == previous + 6
         assert service.feed(1, 1) == "ok N1 F1"  # Uncertain stock also never gates it.
         service.load_stock(1, "New reel", 100, 4)
         assert not newest(stock)["uncertain"] and newest(stock)["used"] == 0
@@ -376,8 +377,9 @@ def main():
         port.nodes[1]["fault"] = 0
         service.set_maintenance(True)
         expect_error(lambda: service.assign_id(0, 0))
-        port.nodes[0]["armed"] = True
+        port.nodes[0]["armed"] = False
         service.load_stock(0, "Commissioning reel", 20, 4)
+        port.nodes[0]["armed"] = True
         service.assign_id(0, 7)
         assert 7 in port.nodes and 0 not in port.nodes
         assert next(r for r in stock.rows() if r["address"] == 7)["label"] == "Commissioning reel"

@@ -34,14 +34,14 @@ from configure_unit import read_options, save_options, set_count, events_for_pit
 from bundle_firmware import BUNDLE, read_bundle
 from dashboard_tools import job_stock
 
-VERSION = "0.1.0"
+VERSION = "0.1.4"
 BAUD = 115200
 OPENPNP_URL = 'http://127.0.0.1:5004'
 
 
 FAULTS = {0: "none", 1: "index_timeout", 2: "peel_timeout", 3: "settings_error", 4: "stopped"}
 FEED_STATES = ("idle", "reserved", "running", "fault")
-MODES = ("normal", "menu", "assign_id", "edit_id", "edit_count", "edit_type", "test")
+MODES = ("normal", "menu", "assign_id", "edit_id", "edit_count", "edit_type", "test", "load")
 log = logging.getLogger("v485")
 
 
@@ -115,9 +115,11 @@ class Stock:
             label TEXT NOT NULL DEFAULT '', loaded INTEGER, pitch INTEGER NOT NULL DEFAULT 1,
             used_pulses INTEGER NOT NULL DEFAULT 0, low INTEGER NOT NULL DEFAULT 50,
             uncertain INTEGER NOT NULL DEFAULT 1)""")
-        self.db.execute("CREATE TABLE IF NOT EXISTS device_details (uid TEXT PRIMARY KEY, firmware TEXT, configuration TEXT, part_assignment TEXT)")
+        self.db.execute("CREATE TABLE IF NOT EXISTS device_details (uid TEXT PRIMARY KEY, firmware TEXT, configuration TEXT, part_assignment TEXT, stock TEXT)")
         if 'part_assignment' not in {row[1] for row in self.db.execute('PRAGMA table_info(device_details)')}:
             self.db.execute('ALTER TABLE device_details ADD COLUMN part_assignment TEXT')
+        if 'stock' not in {row[1] for row in self.db.execute('PRAGMA table_info(device_details)')}:
+            self.db.execute('ALTER TABLE device_details ADD COLUMN stock TEXT')
         self.db.execute("CREATE TABLE IF NOT EXISTS settings (key TEXT PRIMARY KEY,value TEXT NOT NULL)")
         self.db.commit()
 
@@ -130,7 +132,7 @@ class Stock:
         with self.lock,self.db:self.db.execute("INSERT INTO settings VALUES(?,?) ON CONFLICT(key) DO UPDATE SET value=excluded.value",(key,json.dumps(value)))
 
     def save_details(self, uid, field, value):
-        if field not in ('firmware', 'configuration', 'part_assignment'): raise ValueError('Unknown device metadata')
+        if field not in ('firmware', 'configuration', 'part_assignment', 'stock'): raise ValueError('Unknown device metadata')
         with self.lock, self.db:
             self.db.execute(f"INSERT INTO device_details(uid,{field}) VALUES(?,?) ON CONFLICT(uid) DO UPDATE SET {field}=excluded.{field}",
                             (uid,json.dumps(value)))
@@ -166,7 +168,7 @@ class Stock:
             self.db.execute("UPDATE feeders SET error=? WHERE address=?", (str(error)[:240], address))
 
     def load(self, uid, label, quantity, pitch, low):
-        if quantity is not None:integer(quantity, 0, 1_000_000_000, "Loaded quantity")
+        if quantity is not None:integer(quantity, 0, 65534, "Loaded quantity")
         integer(pitch, 1, 99, "Pulses per part")
         integer(low, 0, 1_000_000_000, "Low-stock threshold")
         if not isinstance(label, str) or len(label) > 128:
@@ -187,12 +189,19 @@ class Stock:
 
     def rows(self):
         with self.lock:
-            rows = [dict(row) for row in self.db.execute("SELECT feeders.*, device_details.firmware AS firmware_info, device_details.configuration, device_details.part_assignment FROM feeders LEFT JOIN device_details USING(uid) ORDER BY address IS NULL,address,uid")]
+            rows = [dict(row) for row in self.db.execute("SELECT feeders.*, device_details.firmware AS firmware_info, device_details.configuration, device_details.part_assignment, device_details.stock FROM feeders LEFT JOIN device_details USING(uid) ORDER BY address IS NULL,address,uid")]
         for row in rows:
-            for field in ('firmware_info','configuration','part_assignment'): row[field] = json.loads(row[field]) if row[field] else None
+            for field in ('firmware_info','configuration','part_assignment','stock'): row[field] = json.loads(row[field]) if row[field] else None
             row.update(state_fields(row.pop("flags")))
             row["used"] = row["used_pulses"] / row["pitch"]
             row["remaining"] = None if row["loaded"] is None else max(0, row["loaded"] - row["used"])
+            info=row.get('stock') or {}
+            row['stock_source']='feeder' if info.get('available') else 'computer'
+            row['advances']=info.get('advances')
+            if info.get('available'):
+                row['remaining']=row['loaded']=info.get('remaining')
+                row['used']=info.get('advances',0)
+                row['uncertain']=bool(info.get('error'))
             row["low_stock"] = row["remaining"] is not None and row["remaining"] <= row["low"]
             row["age_seconds"] = max(0, time.time() - row["seen"])
         return rows
@@ -223,6 +232,8 @@ class Feeders:
         self.startup_ids = set()
         self.bootloaders = {}
         self.reboots = {}
+        self.stock_caps = {}
+        self.diagnostics = {}
 
     def link(self, address):
         return Link(self.port, address, on_packet=self.startup_packet)
@@ -291,6 +302,70 @@ class Feeders:
             except (OSError,TimeoutError,UpdateError) as error:
                 config = dict(error=str(error)[:240],read_at=time.time())
             self.stock.save_details(uid,'configuration',config)
+            self.read_stock(address,uid)
+
+    def read_diagnostics(self,address,uid):
+        try:
+            nonce=secrets.randbits(32)
+            echoed,flags,uptime=fields(self.link(address).request(f'HEALTH {nonce:08X}',{'HEALTH'},timeout=self.reply_timeout,attempts=1),'HEALTH',3)
+            if echoed!=nonce:raise UpdateError('Stale health reply')
+            causes=[name for bit,name in ((29,'Watchdog'),(30,'Window watchdog'),(27,'Power-on'),(28,'Software reset'),(26,'Reset pin'),(31,'Low-power reset')) if flags&(1<<bit)]
+            reply=self.link(address).request(f'FAULTINFO {nonce:08X}',{'FAULTINFO'},timeout=self.reply_timeout,attempts=1)
+            echoed,fault,target,received,duration=fields(reply,'FAULTINFO',5)
+            if echoed!=nonce:raise UpdateError('Stale fault reply')
+            self.diagnostics[uid]=dict(reset_cause=' / '.join(causes) or 'Unavailable (bootloader clears reset flags)',reset_flags=flags,uptime_ms=uptime,
+                fault_code=fault&255,target=target,received=received,duration_ms=duration,
+                contact_closed=bool(fault&256),switch_no=bool(fault&512),peel_running=bool(fault&1024))
+        except (OSError,TimeoutError,UpdateError) as error:
+            self.diagnostics[uid]=dict(error=str(error)[:240])
+
+    def bench_action(self,args,locate=False):
+        address=integer(args['address'],1,99,'Address');uid=args.get('uid');action=args.get('action')
+        if not isinstance(uid,str) or not re.fullmatch(r'[0-9A-F]{24}',uid):raise ValueError('Select an identified feeder')
+        if not locate and action not in ('start','end','forward','reverse','peel','stop'):raise ValueError('Unknown loading action')
+        if not self.bus.acquire(timeout=.5):raise ServiceError('Bus busy; action was not queued')
+        try:
+            if self.updating or (self.batch_update or {}).get('active'):raise ServiceError('Wait for the firmware update')
+            if self.observe(address)!=uid:raise ServiceError('Feeder identity changed')
+            # Owning the bus excludes in-flight feeds; subsequent OpenPnP feeds are paused.
+            self.maintenance=True
+            row=next(f for f in self.stock.rows() if f['uid']==uid)
+            if not locate and action in ('forward','reverse'):
+                if row['mode']!='load':raise ServiceError('Start tape loading first')
+                result=self.feed(address,0,manual=True,expected_uid=uid,retract=action=='reverse')
+                return dict(loading=True,moved=action,result=result)
+            nonce=secrets.randbits(32)
+            words=' '.join(uid[i:i+8] for i in (0,8,16))
+            command=f'LOCATE {nonce:08X}' if locate else f'LOAD {nonce:08X} {words} '+f"{dict(end=0,start=1,peel=2,stop=3)[action]:08X}"
+            try:reply=self.link(address).request(command,{'LOCATING' if locate else 'LOAD','BUSY'},timeout=self.reply_timeout,attempts=1)
+            except TimeoutError as error:raise ServiceError('No action confirmation; firmware 0.1.4 is required for loading. Read status before retrying.') from error
+            if reply.startswith('BUSY'):raise ServiceError('Feeder busy; finish its movement, test or menu first')
+            values=fields(reply,'LOCATING' if locate else 'LOAD',1 if locate else 3)
+            if values[0]!=nonce:raise ServiceError('Stale action confirmation')
+            self.observe(address)
+            return dict(locating=True) if locate else dict(loading=bool(values[1]),peeling=bool(values[2]))
+        finally:self.bus.release()
+
+    def cache_stock(self,uid,reply,nonce):
+        echoed,quantity,advances,sequence=fields(reply,'STOCK',4)
+        if echoed!=nonce or quantity>65535:raise UpdateError('Invalid stock reply')
+        info=dict(available=True,remaining=None if quantity==65535 else quantity,
+                  advances=advances,sequence=sequence,read_at=time.time())
+        self.stock_caps[uid]=True
+        self.stock.save_details(uid,'stock',info)
+        return info
+
+    def read_stock(self,address,uid):
+        nonce=secrets.randbits(32)
+        try:
+            reply=self.link(address).request(f'STOCKREAD {nonce:08X}',{'STOCK'},timeout=self.reply_timeout,attempts=1)
+            return self.cache_stock(uid,reply,nonce)
+        except (OSError,TimeoutError,UpdateError) as error:
+            previous=next((r.get('stock') or {} for r in self.stock.rows() if r['uid']==uid),{})
+            info=dict(previous,available=previous.get('available',False),error=str(error)[:240])
+            self.stock_caps[uid]=info['available']
+            self.stock.save_details(uid,'stock',info)
+            return info
 
     def save_configuration(self, args):
         address = integer(args['address'],0,99,'Address')
@@ -413,8 +488,8 @@ class Feeders:
         with self.control:
             if (self.updating or (self.batch_update and self.batch_update['active'])) and not enabled:
                 raise ServiceError("Wait for the firmware upload to finish")
-            if not enabled and any(r['mode']=='test' for r in self.stock.rows()):
-                raise ServiceError('End the feeder input test before resuming feeders')
+            if not enabled and any(r['mode'] in ('test','load') for r in self.stock.rows()):
+                raise ServiceError('End feeder input tests and tape loading before resuming feeders')
             self.maintenance = enabled
 
     def _identity(self, address, nonce):
@@ -453,7 +528,11 @@ class Feeders:
             previous=self.reboots.get(uid,{})
             self.reboots[uid]=dict(count=previous.get('count',0)+1,at=time.time())
         delta=self.stock.observe(address, uid, token, values[3], values[4])
+        if self.stock_caps.get(uid) and (not known or known['token']!=token or known['counter']!=values[3]):
+            self.read_stock(address,uid)
         reported=state_fields(values[4])
+        if uid not in self.diagnostics or not known or known['token']!=token or known['fault_code']!=reported['fault_code']:
+            self.read_diagnostics(address,uid)
         with self.control:
             prior=self.activities.get(address)
         tcp_active=address in self.active_feeds or (prior and prior['source']=='tcp' and prior['stage']=='failed' and prior['expires']>time.time())
@@ -513,9 +592,10 @@ class Feeders:
                 continue
         return None
 
-    def feed(self, address, count, manual=False, expected_uid=None):
+    def feed(self, address, count, manual=False, expected_uid=None, retract=None):
         integer(address, 1, 99, "Feeder ID")
         integer(count, 0, 99, "Feed count")
+        if retract is not None and (not manual or type(retract) is not bool):raise ValueError("Invalid loading move")
         source="web" if manual else "tcp"
         with self.control:
             if self.maintenance and not manual:
@@ -541,7 +621,7 @@ class Feeders:
                 # Never retry FEED, including write/ack failures: it may have moved.
                 with self.control:self.active_feeds.add(address)
                 self.record_activity(address,'requested','Starting',source=source,hold=self.feed_timeout+2)
-                self.port.write(packet(address, f"FEED {text} {count:08X}"))
+                self.port.write(packet(address, f"FEED {text} {count:08X}" if retract is None else f"JOG {text} {int(retract):08X} 00000001"))
                 self.port.flush()
                 result = self._motion_reply(address, tokens, min(deadline, time.monotonic() + self.reply_timeout))
                 while True:
@@ -573,7 +653,7 @@ class Feeders:
     def load_stock(self, address, label, quantity=None, pitch=None, low=50, part_spacing_mm=None, expected_uid=None):
         integer(address, 0, 99, "Address")
         # Validate before any serial operation or baseline changes.
-        if quantity is not None:integer(quantity, 0, 1_000_000_000, "Loaded quantity")
+        if quantity is not None:integer(quantity, 0, 65534, "Loaded quantity")
         if part_spacing_mm is None:integer(pitch, 1, 99, "Pulses per part")
         elif pitch is not None:raise ValueError("Provide part spacing or pulses per part, not both")
         integer(low, 0, 1_000_000_000, "Low-stock threshold")
@@ -582,6 +662,11 @@ class Feeders:
         with self.bus:
             uid=self.observe(address)
             if expected_uid is not None and uid!=expected_uid:raise ServiceError('Feeder identity changed; reopen Reel / stock')
+            if quantity is not None:
+                info=self.read_stock(address,uid)
+                if not info.get('available'):
+                    raise ServiceError('Feeder-owned stock requires firmware 0.1.4; quantity was not saved')
+                if info.get('error'):raise ServiceError('Could not read feeder stock: '+info['error'])
             if part_spacing_mm is not None:
                 row=next(f for f in self.stock.rows() if f['uid']==uid)
                 pitch=events_for_pitch(part_spacing_mm,row['nominal_step_um'])
@@ -592,7 +677,19 @@ class Feeders:
                         raise ServiceError('Feeder must be idle and fault-free before changing spacing')
                     set_count(self.port,address,pitch,uid=tuple(int(uid[i:i+8],16) for i in (0,8,16)))
                     self.observe(address)
-            self.stock.load(uid, label, quantity, pitch, low)
+            if quantity is not None:
+                nonce=secrets.randbits(32)
+                words=' '.join(uid[i:i+8] for i in (0,8,16))
+                try:
+                    reply=self.link(address).request(f'SETSTOCK {nonce:08X} {words} {quantity:08X}',
+                                                    {'STOCK','BUSY'},timeout=self.reply_timeout,attempts=1)
+                    if reply.startswith('BUSY'):raise ServiceError('Feeder busy; quantity was not saved')
+                    info=self.cache_stock(uid,reply,nonce)
+                except TimeoutError:
+                    info=self.read_stock(address,uid) # Read back; never resend a set.
+                if info.get('error') or info.get('remaining')!=quantity or info.get('advances')!=0:
+                    raise ServiceError('Quantity save not confirmed; read stock before retrying')
+            self.stock.load(uid, label, None, pitch, low)
             return uid
 
     def sync_part(self, uid):
@@ -752,6 +849,7 @@ class Feeders:
             row['known'] = True
             row['bootloader']=time.monotonic()-self.bootloaders.get(row['address'],-1e9)<max(5,len(self.ids)*(.5+self.reply_timeout))
             row['restart']=self.reboots.get(row['uid'])
+            row['diagnostics']=self.diagnostics.get(row['uid'],{})
             row['online'] = bool(row['address'] in status['polling_ids'] and not row['error'] and
                                  row['age_seconds'] <= status['stale_after_seconds'])
             row['online'] |= row['bootloader']
@@ -796,7 +894,7 @@ class Feeders:
                 due[address]=time.monotonic()+(.5 if uid else 2)
                 if uid:
                     row=next(r for r in self.stock.rows() if r['uid']==uid)
-                    failed=any((row.get(k) or {}).get('error') for k in ('firmware_info','configuration'))
+                    failed=any((row.get(k) or {}).get('error') for k in ('firmware_info','configuration')) or bool((row.get('stock') or {}).get('error') and ((row.get('stock') or {}).get('available') or (row.get('firmware_info') or {}).get('version')=='0.1.4'))
                     if details_seen.get(address)!=(uid,row['token']) or (failed and now>=details_due.get(address,0)):
                         self.read_details(address,uid)
                         details_seen[address]=(uid,row['token'])
@@ -1004,6 +1102,8 @@ class WebHandler(BaseHTTPRequestHandler):
                     feeders.queue_update(image,None if path.path=='/api/update-all-bundled' else integer(args['address'],0,99,'Address'))
                 elif path.path == '/api/clear-error':
                     self.respond(200,feeders.clear_error(args));return
+                elif path.path in ('/api/loading','/api/locate'):
+                    self.respond(200,feeders.bench_action(args,locate=path.path=='/api/locate'));return
                 elif path.path == '/api/advance':
                     address=integer(args['address'],1,99,'Address')
                     result=feeders.feed(address,0,manual=True,expected_uid=args.get('uid'))

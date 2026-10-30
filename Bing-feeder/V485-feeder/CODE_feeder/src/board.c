@@ -117,6 +117,13 @@ void Board_EnableFeedInterrupts(void) {
 }
 
 #if !FEEDER_BOOTLOADER
+static uint32_t resetFlags;
+uint32_t Board_ResetFlags(void) { return resetFlags; }
+static void ResetStatus_Init(void) {
+    resetFlags = RCC->CSR & 0xFC000000U;
+    __HAL_RCC_CLEAR_RESET_FLAGS();
+}
+
 void Board_WatchdogFeed(void) {
     IWDG->KR = 0xAAAAU;
 }
@@ -135,6 +142,9 @@ static void Watchdog_Start(void) {
 // Prepare the hardware services required by every other module. Startup code
 // has already run SystemInit; apply only this board's clock configuration here.
 void Board_Init(void) {
+    #if !FEEDER_BOOTLOADER
+    ResetStatus_Init();
+    #endif
     HAL_StatusTypeDef status = HAL_Init();
     GPIO_Config();
 #if !FEEDER_BOOTLOADER

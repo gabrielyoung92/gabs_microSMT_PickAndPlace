@@ -13,3 +13,19 @@ context.state.available_firmware.available=false;assert.equal(context.needsFirmw
 assert(!html.includes('pendingUpdateAddress'));
 new vm.Script(html.match(/<script>([\s\S]*)<\/script>/)[1]);
 console.log('Firmware UI checks passed: exact build comparison, current/outdated/unknown labels, error handling, shared queue and script syntax.');
+// Bench feedback must distinguish partial feeds, a dead sensor and unavailable diagnostics.
+const benchContext={};vm.createContext(benchContext);
+vm.runInContext(html.slice(html.indexOf('function faultText('),html.indexOf('let loadingFeeder=')),benchContext);
+const fault={fault_code:1,diagnostics:{fault_code:1,target:2,received:1,duration_ms:10000,contact_closed:true,switch_no:false}};
+assert.match(benchContext.faultText(fault),/Received 1 \/ 2 sensor events.*10\.00 s.*closed.*NC/);
+fault.diagnostics.received=0;assert.match(benchContext.faultText(fault),/No sensor movement/);
+fault.fault_code=fault.diagnostics.fault_code=2;assert.match(benchContext.faultText(fault),/Peel timed out/);
+fault.diagnostics.fault_code=0;assert.equal(benchContext.faultText(fault),'');
+const nodes=Object.fromEntries(['loading-state','loading-dialog'].map(id=>[id,{open:true}]));
+const buttons=['start','end','forward','reverse','peel','stop'].map(action=>({dataset:{loading:action}}));
+Object.assign(benchContext,{state:{feeders:[{uid:'u',address:1,mode:'load',state:'idle',online:true}]},connected:true,busy:false,updateActive:()=>false,document:{querySelectorAll:()=>buttons},$:id=>nodes[id]});
+vm.runInContext("let loadingFeeder={uid:'u',address:1};"+html.slice(html.indexOf('function renderLoading('),html.indexOf('function openLoading(')),benchContext);
+benchContext.renderLoading();assert.equal(buttons[0].disabled,true);assert.equal(buttons[2].disabled,false);assert.match(nodes['loading-state'].textContent,/Loading active/);
+benchContext.state.feeders[0].peel_running=true;benchContext.renderLoading();assert.equal(buttons[2].disabled,true);assert.equal(buttons[4].disabled,true);assert.equal(buttons[5].disabled,false);
+benchContext.connected=false;benchContext.renderLoading();assert(buttons.every(b=>b.disabled));assert.match(nodes['loading-state'].textContent,/unavailable/);
+console.log('Bench UI passed: fault details, dead-sensor feedback, loading control states, stop availability and disconnected state.');

@@ -10,7 +10,7 @@ The powered feeders use a separate direct USB–RS485 adapter and PC host.
 | --- | --- |
 | OpenPnP | Motion, cameras, pickup positions, nozzle setup, calibration and jobs |
 | Feeder host | RS485, local feeder TCP, dashboard, stock and application updates |
-| Feeder firmware 0.1.3 | Index/peel motors, tension switch, buttons, settings, faults and input tests |
+| Feeder firmware 0.1.4 | Index/peel motors, tension switch, buttons, saved stock, settings, faults, loading and input tests |
 
 The host exposes `127.0.0.1:5001` for OpenPnP feeder commands and HTTP port 80 for
 the dashboard. The optional OpenPnP script uses loopback port 5004 for catalogue
@@ -18,6 +18,10 @@ edits and reading job requirements. It does not control motion or stream cameras
 See the [host installation guide](../../Bing-feeder/V485-feeder/USB_host/README.md).
 
 ## Feeder operation
+
+Host and feeder firmware 0.1.4 are installed. Nineteen connected feeders passed
+image readback, saved-setting and stock-read checks on 31 October 2026 and
+remained idle without faults. The existing bootloaders are unchanged.
 
 One universal image supports all tape widths. Application builds automatically
 produce the dashboard bundle. Use a row's Update or Update all outdated, then
@@ -40,7 +44,7 @@ machine readiness. Other feeder types stay in OpenPnP.
 - Check vacuum routing, suction and release independently on both nozzles.
 - Calibrate camera focus/scale, nozzle offsets, pickup heights and bottom vision.
 - Check clearance, endstops, stop behaviour and motion limits before placement.
-- Complete a feed/pick/place trial and compare stock estimates with actual usage.
+- Complete a feed/pick/place trial and compare saved stock counts with actual usage.
 
 The [project TODO](../../TODO.md) tracks the remaining work. Hardware descriptions
 and command mappings are in [hardware inventory](MACHINE_HARDWARE.md) and

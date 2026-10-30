@@ -60,7 +60,7 @@ def main():
         assert Companion.feeders[0]['part_id']=='P2' and stock.rows()[0]['label']=='Reel A'
         Companion.blocked=True
         code,result=post('/api/stock',dict(args,part_id='P1'));assert code==200 and result['part_assignment']['status']=='pending'
-        port.nodes[1]['counter']+=2;service.observe(1);assert stock.rows()[0]['remaining']==99
+        port.completed(1);service.observe(1);assert stock.rows()[0]['remaining']==99
         Companion.blocked=False
         code,result=post('/api/part-sync',dict(uid=uid));assert code==200 and result['part_assignment']['status']=='synced'
         assert stock.rows()[0]['remaining']==99 and stock.rows()[0]['used_pulses']==2

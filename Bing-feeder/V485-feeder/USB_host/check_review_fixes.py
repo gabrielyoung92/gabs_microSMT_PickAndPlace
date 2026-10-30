@@ -29,7 +29,7 @@ def main():
     s.set_maintenance(True)
     s.load_stock(1,'Reel',100,part_spacing_mm=8)
     assert port.nodes[1]['default']==row()['pitch']==row()['default_count']==4
-    port.nodes[1]['counter']+=40;s.observe(1)
+    port.completed(1,10);s.observe(1)
     assert row()['remaining']==90
     s.load_stock(1,'Renamed',part_spacing_mm=8)
     assert row()['remaining']==90 and row()['used_pulses']==40

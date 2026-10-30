@@ -12,6 +12,7 @@
 #include "eeprom.h"
 #include "rs485.h"
 #include "boot.h"
+#include "stock.h"
 #include <string.h>
 #include <stdio.h>
 
@@ -23,14 +24,14 @@ static volatile uint8_t currentType = 0;  // 0 means unconfigured; motors inhibi
 static volatile uint8_t  currentCount = 0;     // Current default count
 
 // PA2 hold menu: 01 remote ID, 02 update, 03 local ID, 04 default count, 05 physical width.
-enum { MODE_NORMAL, MODE_MENU, MODE_ASSIGN, MODE_ADDR, MODE_COUNT, MODE_TYPE, MODE_TEST };
+enum { MODE_NORMAL, MODE_MENU, MODE_ASSIGN, MODE_ADDR, MODE_COUNT, MODE_TYPE, MODE_TEST, MODE_LOAD };
 static volatile uint8_t mode = MODE_NORMAL;
 static uint8_t menuItem = 1, editValue, uiBlink;
 static uint32_t uiLastAction;
 static uint8_t buttonRaw = 1, buttonStable = 1, buttonReady, buttonDown, buttonEligible;
 static uint32_t buttonChangedAt, buttonPressedAt;
 static uint8_t feedButtonRaw = 1, feedButtonStable = 1, feedButtonReady;
-static uint8_t feedButtonDown, feedButtonEligible;
+static uint8_t feedButtonDown, feedButtonEligible, feedButtonClearsFault;
 static uint32_t feedButtonChangedAt, feedButtonPressedAt;
 // Peel state is owned by SysTick; main only clears it with interrupts masked.
 static volatile uint8_t peelRunning;
@@ -55,6 +56,10 @@ static volatile uint32_t movementTotal;
 // in MCU RAM, but clears on MCU reset so inventory can detect a lost interval.
 static uint32_t monitorToken[2];
 static volatile uint8_t faultReason;
+// Last fault snapshot in RAM; cleared only by Clear Error/reset.
+static volatile uint32_t faultFlags, faultTarget, faultReceived, faultDuration;
+static volatile uint8_t loadPeel;
+static uint8_t emptyShown;
 // Boot/clear/jog hold: the first ordinary feed arms switch-controlled take-up.
 static volatile uint8_t jogPeelHold = 1, retractMove;
 static volatile uint32_t motorCount = 0;
@@ -91,6 +96,11 @@ static void RefreshDisplay(void) {
     uint8_t value = (state == FEED_RESERVED || state == FEED_RUNNING)
                     ? (shown > 99U ? 99U : (uint8_t)shown) : mode == MODE_MENU ? menuItem : mode == MODE_ASSIGN ? 1U :
                       (mode == MODE_ADDR || mode == MODE_COUNT || mode == MODE_TYPE) ? editValue : currentAddr;
+    uint32_t quantity, completed, sequence;
+    Stock_Read(&quantity, &completed, &sequence);
+    uint8_t empty = quantity == 0 && mode == MODE_NORMAL && state == FEED_IDLE &&
+                    currentAddr >= ADDRESS_MIN && Feeder_TypeValid(currentType) && !locateToggles &&
+                    ((HAL_GetTick() / 1000U) & 1U);
     uint8_t blank = (mode == MODE_ASSIGN || mode == MODE_ADDR || mode == MODE_COUNT || mode == MODE_TYPE ||
                      (mode == MODE_NORMAL && (currentAddr < ADDRESS_MIN || !Feeder_TypeValid(currentType)))) && uiBlink;
     if (locateToggles && mode == MODE_NORMAL && state == FEED_IDLE) blank = locateBlank;
@@ -100,6 +110,9 @@ static void RefreshDisplay(void) {
     if (state == FEED_FAULT && mode != MODE_MENU) {
         CH455_RefreshFault(faultReason);
         LED_ON();
+    } else if (empty) {
+        CH455_SetDisplay(1, 0x70U); // L
+        CH455_SetDisplay(3, 0xB8U); // o
     } else if (blank) {
         CH455_SetDisplay(1, 0);
         CH455_SetDisplay(3, 0);
@@ -152,6 +165,15 @@ static void UpdateLocate(void) {
 static void Motor_Fault(uint8_t reason) {
     uint32_t mask = __get_PRIMASK();
     __disable_irq();
+    if (reason && !faultReason) {
+        faultFlags = reason | ((uint32_t)(HAL_GPIO_ReadPin(PEEL_SWITCH_PORT, PEEL_SWITCH_PIN) == GPIO_PIN_RESET) << 8) |
+                     ((uint32_t)(!!(motorOptions & OPTION_SWITCH_NO)) << 9) | ((uint32_t)peelRunning << 10);
+        faultTarget = feedState == FEED_RUNNING ? motorCount : 0;
+        faultReceived = feedState == FEED_RUNNING ? pa3TriggerCount : 0;
+        faultDuration = reason == FAULT_PEEL ? HAL_GetTick() - peelStartedAt :
+                        feedState == FEED_RUNNING ? HAL_GetTick() - feedStartedAt : 0;
+    }
+    loadPeel = 0;
     feedReady = 0;
     feedState = FEED_FAULT;
     faultReason = reason;
@@ -160,6 +182,23 @@ static void Motor_Fault(uint8_t reason) {
     if (requestResult == REQUEST_RUNNING) requestResult = REQUEST_FAULT;
     displayDirty = 1;
     __set_PRIMASK(mask);
+}
+
+static uint8_t ClearFault(void) {
+    uint32_t mask = __get_PRIMASK(); __disable_irq();
+    uint8_t result = ((mode != MODE_NORMAL && mode != MODE_TEST && mode != MODE_LOAD) ||
+                      feedState == FEED_RUNNING || feedState == FEED_RESERVED || locateToggles) ? 1U :
+                     (settingsFault || optionsFault || !Feeder_TypeValid(currentType) ||
+                      currentAddr < ADDRESS_MIN || currentAddr > VALUE_MAX) ? 2U : 0U;
+    if (!result) {
+        Board_MotorIdle(); loadPeel = peelRunning = peelClosed = 0;
+        peelOffAt = HAL_GetTick(); jogPeelHold = 1;
+        faultReason = FAULT_NONE; faultFlags = faultTarget = faultReceived = faultDuration = 0;
+        feedState = FEED_IDLE; feedReady = mode != MODE_TEST;
+        feedButtonEligible = buttonEligible = 0; displayDirty = 1;
+    }
+    __set_PRIMASK(mask);
+    return result;
 }
 
 static uint8_t SaveSetting(uint8_t offset, uint8_t value) {
@@ -343,7 +382,7 @@ static void MenuKeyScan(void) {
         }
     }
     // Never time out a hold and reinterpret its release as a normal feed.
-    if (mode != MODE_NORMAL && mode != MODE_MENU && mode != MODE_TEST && !buttonDown &&
+    if (mode != MODE_NORMAL && mode != MODE_MENU && mode != MODE_TEST && mode != MODE_LOAD && !buttonDown &&
         (uint32_t)(now - uiLastAction) >= UI_TIMEOUT_MS) LeaveMenu();
     uint8_t blink = ((uint32_t)(now - uiLastAction) / UI_BLINK_MS) & 1U;
     if (blink != uiBlink) {
@@ -366,13 +405,17 @@ static void KeyScan(void) {
     if (!raw && feedButtonReady) {
         feedButtonDown = 1;
         feedButtonPressedAt = now;
-        feedButtonEligible = !settingsFault && feedReady && feedState == FEED_IDLE &&
+        feedButtonClearsFault = feedState == FEED_FAULT;
+        feedButtonEligible = !settingsFault && ((feedReady && feedState == FEED_IDLE) || feedButtonClearsFault) &&
                              mode == MODE_NORMAL && !buttonDown;
     } else if (raw) {
         feedButtonReady = 1;
-        if (feedButtonDown && feedButtonEligible && !manualTriggerMute &&
-            (uint32_t)(now - feedButtonPressedAt) < BUTTON_HOLD_MS) {
-            if (Motor_Reserve(0)) { Motor_Start(); manualTriggerMute = MANUAL_TRIGGER_MUTE_MS; }
+        if (feedButtonDown && feedButtonEligible && !manualTriggerMute) {
+            uint32_t held = now - feedButtonPressedAt;
+            if (feedButtonClearsFault && held >= BUTTON_HOLD_MS && feedState == FEED_FAULT) ClearFault();
+            else if (!feedButtonClearsFault && held < BUTTON_HOLD_MS && Motor_Reserve(0)) {
+                Motor_Start(); manualTriggerMute = MANUAL_TRIGGER_MUTE_MS;
+            }
         }
         feedButtonDown = 0;
         feedButtonEligible = 0;
@@ -391,7 +434,7 @@ static uint8_t Motor_ReserveMove(uint32_t requestedCount, uint8_t jog, uint8_t r
     __disable_irq();
     uint32_t count = requestedCount ? requestedCount : currentCount;
     uint8_t accepted = feedReady && Feeder_TypeValid(currentType) && !locateToggles && currentAddr >= ADDRESS_MIN && currentAddr <= VALUE_MAX &&
-                       mode == MODE_NORMAL && feedState == FEED_IDLE &&
+                       (mode == MODE_NORMAL || (jog && mode == MODE_LOAD)) && feedState == FEED_IDLE && !loadPeel &&
                        count >= COUNT_MIN && count <= (jog ? JOG_MAX_EVENTS : VALUE_MAX);
     if (accepted) {
         jogPeelHold = jog;
@@ -437,6 +480,7 @@ static void Motor_Stop(void) {
     __disable_irq();
     if (feedState == FEED_RUNNING) {
         HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_INDEX_A_PIN | MOTOR_INDEX_B_PIN, GPIO_PIN_SET);
+        if (!jogPeelHold) Stock_Advance();
         if (requestResult == REQUEST_RUNNING) requestResult = REQUEST_DONE;
         LED_OFF();
         pa3TriggerCount = 0;
@@ -489,6 +533,70 @@ static void ProcessRS485(void) {
     if (line[0] == 'B') {
         char* command = Boot_DecodePacket(line, currentAddr);
         if (command == NULL) return;
+        if (!strncmp(command, "HEALTH ", 7) || !strncmp(command, "FAULTINFO ", 10)) {
+            uint8_t health = command[0] == 'H';
+            const char* text = command + (health ? 7 : 10); uint32_t nonce;
+            if (!Boot_ParseHex(&text, &nonce) || *text) return;
+            uint32_t mask = __get_PRIMASK(); __disable_irq();
+            uint32_t values[] = {nonce, faultFlags, faultTarget, faultReceived, faultDuration};
+            if (health) { values[1] = Board_ResetFlags(); values[2] = HAL_GetTick(); }
+            __set_PRIMASK(mask);
+            Boot_Reply(currentAddr, health ? "HEALTH" : "FAULTINFO", values, health ? 3 : 5);
+            return;
+        }
+        if (!strncmp(command, "LOAD ", 5)) {
+            const char* text = command + 5; uint32_t values[5];
+            for (uint8_t i = 0; i < 5; i++)
+                if (!Boot_ParseHex(&text, &values[i]) || (i < 4 ? *text++ != ' ' : *text)) return;
+            if (values[1] != HAL_GetUIDw0() || values[2] != HAL_GetUIDw1() || values[3] != HAL_GetUIDw2() || values[4] > 3U) return;
+            uint32_t mask = __get_PRIMASK(); __disable_irq();
+            uint8_t allowed = (mode == MODE_NORMAL || mode == MODE_LOAD) && !settingsFault && !optionsFault &&
+                              Feeder_TypeValid(currentType) && currentAddr >= ADDRESS_MIN && currentAddr <= VALUE_MAX && !locateToggles &&
+                              ((feedState == FEED_IDLE && (!peelRunning || values[4] == 1U)) || (mode == MODE_LOAD && (values[4] == 3U || (values[4] == 0U && feedState == FEED_FAULT))));
+            // Other actions require an explicitly entered loading mode.
+            if (values[4] >= 2U && mode != MODE_LOAD) allowed = 0;
+            if (allowed) {
+                Board_MotorIdle(); loadPeel = peelRunning = peelClosed = 0;
+                peelOffAt = HAL_GetTick(); jogPeelHold = 1;
+                if (values[4] == 3U && feedState != FEED_FAULT) {
+                    if (requestResult == REQUEST_RUNNING) requestResult = REQUEST_FAULT;
+                    feedState = FEED_IDLE;
+                }
+                mode = values[4] == 0U ? MODE_NORMAL : MODE_LOAD;
+                if (values[4] == 2U && feedState == FEED_IDLE && PeelRequested()) loadPeel = 1;
+                feedButtonEligible = buttonEligible = 0;
+                displayDirty = 1;
+            }
+            uint32_t reply[] = {values[0], mode == MODE_LOAD, loadPeel};
+            __set_PRIMASK(mask);
+            Boot_Reply(currentAddr, allowed ? "LOAD" : "BUSY", reply, allowed ? 3 : 1);
+            return;
+        }
+        if (!strncmp(command, "STOCKREAD ", 10) || !strncmp(command, "SETSTOCK ", 9)) {
+            uint8_t setting = command[0] == 'S' && command[1] == 'E';
+            const char* text = command + (setting ? 9 : 10);
+            uint32_t values[5]; uint8_t count = setting ? 5 : 1;
+            for (uint8_t i = 0; i < count; i++)
+                if (!Boot_ParseHex(&text, &values[i]) || (i + 1 < count ? *text++ != ' ' : *text != 0)) return;
+            if (setting) {
+                if (values[1] != HAL_GetUIDw0() || values[2] != HAL_GetUIDw1() || values[3] != HAL_GetUIDw2()) return;
+                if (values[4] > STOCK_MAX) { Boot_Reply(currentAddr, "ERROR QUANTITY", NULL, 0); return; }
+                if (settingsFault || feedState == FEED_RUNNING || feedState == FEED_RESERVED || mode != MODE_NORMAL) {
+                    Boot_Reply(currentAddr, "BUSY", values, 1); return;
+                }
+                Stock_Set((uint16_t)values[4]); displayDirty = 1;
+            }
+            if (settingsFault || (setting && !Stock_Flush())) {
+                settingsFault = 1; Motor_Fault(FAULT_SETTINGS);
+                Boot_Reply(currentAddr, "ERROR EEPROM", NULL, 0); return;
+            }
+            uint32_t reply[4] = {values[0], 0, 0, 0};
+            uint32_t mask = __get_PRIMASK(); __disable_irq();
+            Stock_Read(&reply[1], &reply[2], &reply[3]);
+            __set_PRIMASK(mask);
+            Boot_Reply(currentAddr, "STOCK", reply, 4);
+            return;
+        }
         if (!strncmp(command, "TESTREAD ", 9)) {
             const char* text = command + 9;
             uint32_t nonce;
@@ -534,27 +642,8 @@ static void ProcessRS485(void) {
                 if (!Boot_ParseHex(&text, &values[i]) || (i < 3 ? *text++ != ' ' : *text != 0)) return;
             }
             if (values[1] != HAL_GetUIDw0() || values[2] != HAL_GetUIDw1() || values[3] != HAL_GetUIDw2()) return;
-            uint32_t mask = __get_PRIMASK();
-            __disable_irq();
-            uint8_t busy = (mode != MODE_NORMAL && mode != MODE_TEST) ||
-                           feedState == FEED_RUNNING || feedState == FEED_RESERVED || locateToggles;
-            uint8_t invalid = settingsFault || optionsFault || !Feeder_TypeValid(currentType) ||
-                              currentAddr < ADDRESS_MIN || currentAddr > VALUE_MAX;
-            if (!busy && !invalid) {
-                Board_MotorIdle();
-                peelRunning = peelClosed = 0;
-                peelOffAt = HAL_GetTick();
-                // Clearing a fault never starts a motor. The next ordinary feed
-                // releases this existing hold; retained request results stay FAULT.
-                jogPeelHold = 1;
-                faultReason = FAULT_NONE;
-                feedState = FEED_IDLE;
-                feedReady = mode == MODE_NORMAL;
-                feedButtonEligible = buttonEligible = 0;
-                displayDirty = 1;
-            }
-            __set_PRIMASK(mask);
-            Boot_Reply(currentAddr, busy ? "BUSY" : invalid ? "ERROR SETTINGS" : "CLEARED", values, 1);
+            uint8_t result = ClearFault();
+            Boot_Reply(currentAddr, result == 1U ? "BUSY" : result == 2U ? "ERROR SETTINGS" : "CLEARED", values, 1);
             return;
         }
         if (!strncmp(command, "STOP ", 5)) {
@@ -854,7 +943,7 @@ void Feeder_Init(void) {
     buttonReady = buttonStable;
     feedButtonRaw = feedButtonStable = HAL_GPIO_ReadPin(BUTTON_PORT, BUTTON_PIN) != GPIO_PIN_RESET;
     feedButtonReady = feedButtonStable;
-    while (!LoadSettings()) {
+    while (!LoadSettings() || !Stock_Init()) {
         CH455_RefreshFault(FAULT_SETTINGS);
         LED_ON();
         delay_ms(100);
@@ -904,10 +993,15 @@ void Feeder_Init(void) {
 // Process one queued command per pass and repaint only when state changes.
 // Button feedback is nonblocking; SysTick independently enforces the deadline.
 void Feeder_Run(void) {
+    if (!settingsFault && !Stock_Flush()) { settingsFault = 1; Motor_Fault(FAULT_SETTINGS); }
     KeyScan();
     ProcessRS485();
     UpdateFeedback();
     UpdateLocate();
+    uint32_t quantity, completed, sequence;
+    Stock_Read(&quantity, &completed, &sequence);
+    uint8_t showEmpty = quantity == 0 && ((HAL_GetTick() / 1000U) & 1U);
+    if (showEmpty != emptyShown) { emptyShown = showEmpty; displayDirty = 1; }
     if (displayDirty) RefreshDisplay();
     if (feedState == FEED_FAULT) LED_ON();
     delay_ms(5);
@@ -935,8 +1029,9 @@ void Feeder_Tick(void) {
     uint8_t closed = PeelRequested();
     if (!closed) peelClosed = 0;
     else if (!peelClosed) { peelClosed = 1; peelClosedAt = now; }
-    uint8_t permitted = feedReady && !jogPeelHold && Feeder_TypeValid(currentType) && !locateToggles && currentAddr >= ADDRESS_MIN && currentAddr <= VALUE_MAX &&
-                        mode == MODE_NORMAL && feedState != FEED_FAULT;
+    if (mode == MODE_LOAD && loadPeel && !closed) loadPeel = 0;
+    uint8_t permitted = feedReady && ((!jogPeelHold && mode == MODE_NORMAL) || (mode == MODE_LOAD && loadPeel)) && Feeder_TypeValid(currentType) && !locateToggles && currentAddr >= ADDRESS_MIN && currentAddr <= VALUE_MAX &&
+                        feedState != FEED_FAULT;
     if (!permitted || !closed) {
         if (peelRunning) {
             HAL_GPIO_WritePin(MOTOR_PORT, MOTOR_PEEL_A_PIN | MOTOR_PEEL_B_PIN, GPIO_PIN_SET);

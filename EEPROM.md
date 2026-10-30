@@ -2,13 +2,11 @@
 
 The feeder has a **24C02 EEPROM: 2 kilobits, or 256 bytes**, addressed from
 `0x00` to `0xFF`. It is separate from the STM32 program flash and keeps its
-contents when power is removed. The current firmware uses **28 bytes**;
-**228 bytes are unused**.
+contents when power is removed. Firmware 0.1.4 allocates **220 bytes**; **36 bytes are unused**.
 
-**There are no text fields or reel quantities in feeder EEPROM.** You cannot
-currently store a part number or name there: the supported text capacity is
-**zero characters**. The dashboard stores reel information on the computer and
-assigns the selected part in OpenPnP.
+**Remaining quantity and completed advances are saved in the feeder.** Part
+numbers and names stay on the computer: EEPROM text capacity is **zero
+characters**. The dashboard assigns the selected part in OpenPnP.
 
 ## What the feeder saves
 
@@ -27,7 +25,8 @@ encoding or terminating character.
 | `0x07–0x1E` | 24 | Unused | No current field or text allocation. |
 | `0x1F` | 1 | Bootloader state | `0xA5` = valid application, `0x5A` = update requested, `0x00` = writing. |
 | `0x20–0x33` | 20 | Application record | Five 32-bit unsigned integers, detailed below. |
-| `0x34–0xFF` | 204 | Unused | No current field or text allocation. |
+| `0x34–0x3F` | 12 | Unused | No current allocation. |
+| `0x40–0xFF` | 192 | Stock | Twelve rotating 16-byte records, detailed below. |
 
 Motor/switch options at `0x04`:
 
@@ -64,14 +63,50 @@ the application image; the firmware binary itself lives in STM32 flash.
 The physical feeder width is the setting at `0x02`, not the image variant.
 The bootloader updates its state and application record during firmware uploads.
 
-## Reel text, parts and quantity on the computer
+## Quantity and advances in the feeder
+
+| Field | Type | Range and behaviour |
+| --- | --- | --- |
+| Parts remaining | Unsigned 16-bit | `0–65,534`; `65,535` means **Not set** |
+| Completed advances | Unsigned 32-bit | `0–4,294,967,295`; stays at the maximum instead of wrapping |
+
+Setting quantity resets completed advances to zero. Each successful ordinary
+feed, including the local button, deducts one part if a quantity is set and
+increments advances. Zero quantity does not block feeding. Without a quantity,
+advances still count. Partial/stalled feeds, item jogs/retracts and hand movement
+do not deduct stock. Empty pockets and failed picks cannot be measured.
+
+The feeder saves after each completed feed or quantity change. It works without
+the host running and survives resets, host database loss and application updates.
+The host reads these values; polling does not write EEPROM. Label/part edits do
+not reset the counters. Blank stock records start at **Not set**, zero advances;
+computer quantities are not automatically copied into the feeder.
+Known zero stock alternates Lo with the idle ID, without blocking feeding.
+Loading-mode feed/retract moves do not change these saved stock values.
+
+Writes rotate through twelve slots to spread wear. Each slot contains:
+
+| Offset within slot | Bytes | Field |
+| --- | ---: | --- |
+| `+0` | 4 | Sequence, unsigned 32-bit |
+| `+4` | 4 | Completed advances, unsigned 32-bit |
+| `+8` | 2 | Remaining quantity, unsigned 16-bit |
+| `+10` | 2 | Marker `0x5354` |
+| `+12` | 4 | CRC32 of the first 12 bytes |
+
+Numbers are little-endian. CRC is written last. Boot selects the newest valid
+record; an interrupted write leaves the previous record available. The internal
+sequence wraps independently of the advances counter. Power loss before a
+completed feed is saved can lose that latest count. A failed write reports E3.
+
+## Reel text and part information on the computer
 
 These are the current dashboard limits, **not EEPROM allocations**:
 
 | Field | Limit | Stored in |
 | --- | --- | --- |
 | Reel label | 128 characters | Host stock SQLite database |
-| Loaded quantity | Integer `0–1,000,000,000` | Host stock database |
+| Remaining quantity | Integer `0–65,534`, or Not set | Feeder EEPROM; host caches the reading |
 | Low-stock warning threshold | Integer `0–1,000,000,000` | Host stock database |
 | New part ID | 128 characters, non-empty | OpenPnP configuration |
 | Part name | 256 characters | OpenPnP configuration |
@@ -83,8 +118,8 @@ UID. Saving a part also updates the matching powered feeder in OpenPnP.
 The UID is 12 bytes provided by the STM32, not a field in the external EEPROM.
 Reel label/part edits preserve consumption unless **Set quantity** is checked.
 Saving part spacing also saves and verifies the feeder default advance count.
-Remaining stock is estimated from the loaded quantity and observed movement;
-it is not written into the feeder for every advance.
+Remaining stock comes from the feeder record described above. The database
+keeps reel labels, warning thresholds and cached feeder readings.
 
 Text limits count characters rather than reserving that many EEPROM bytes.
 Use ordinary letters, digits and punctuation; Unicode symbols can count
@@ -96,22 +131,23 @@ to this web interface, not every possible OpenPnP editor or import format.
 - Normal application updates preserve valid bus ID, width, default count and
   motor/switch settings. They replace program flash and update boot metadata.
 - Clear error does not write EEPROM or reboot. Watchdog resets do not erase
-  saved settings. Boot token, fault state, input-test state and movement counter
-  are runtime data, not EEPROM fields.
+  saved settings or stock. Boot token, fault state, input-test state and optical
+  movement total are runtime data, separate from saved completed advances.
+  Fault snapshots, reset flags and loading mode also live only in RAM.
 - Blank ID becomes `0`. An invalid count is replaced with the default: **2**
   for a valid 8 mm width, otherwise **1**. Width requires a valid checked pair.
 - Completely blank motor options use reversed feed / normal peel / NC for
   8 mm, and normal feed / normal peel / NC for wider units. A partial or invalid
   options record blocks operation until corrected.
 - The driver checks write acknowledgements, waits 5 ms and verifies each byte
-  by reading it back. Telemetry and normal advances do not write EEPROM.
+  by reading it back. Polling does not write EEPROM; completed feeds save stock.
 
-Unused space is available for a future firmware change; it does not currently
-make part text or quantity portable with the feeder. No EEPROM layout change
-is included in firmware 0.1.3.
+Firmware 0.1.4 adds stock at `0x40`; existing settings and bootloader fields keep
+the same layout. Part text remains on the computer.
 
 Source: [field definitions](Bing-feeder/V485-feeder/CODE_feeder/src/config.h),
 [settings handling](Bing-feeder/V485-feeder/CODE_feeder/src/feeder.c),
+[stock records](Bing-feeder/V485-feeder/CODE_feeder/src/stock.c),
 [EEPROM driver](Bing-feeder/V485-feeder/CODE_feeder/src/eeprom.c),
 [boot record](Bing-feeder/V485-feeder/CODE_feeder/src/boot.h),
 [host stock](Bing-feeder/V485-feeder/USB_host/host_service.py) and
