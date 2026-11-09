@@ -1,0 +1,34 @@
+drawing,plate,hole_type,x_mm,y_mm
+1.DWG,Standard work-bed plate,3.5 mm clearance,10,10
+1.DWG,Standard work-bed plate,3.5 mm clearance,62.5,10
+1.DWG,Standard work-bed plate,3.5 mm clearance,115,10
+1.DWG,Standard work-bed plate,3.5 mm clearance,10,245
+1.DWG,Standard work-bed plate,3.5 mm clearance,62.5,245
+1.DWG,Standard work-bed plate,3.5 mm clearance,115,245
+1.DWG,Standard work-bed plate,M3 tapped,10,49.5
+1.DWG,Standard work-bed plate,M3 tapped,31.25,49.5
+1.DWG,Standard work-bed plate,M3 tapped,93.75,49.5
+1.DWG,Standard work-bed plate,M3 tapped,115,49.5
+1.DWG,Standard work-bed plate,M3 tapped,31.25,80
+1.DWG,Standard work-bed plate,M3 tapped,93.75,80
+1.DWG,Standard work-bed plate,M3 tapped,31.25,175
+1.DWG,Standard work-bed plate,M3 tapped,93.75,175
+1.DWG,Standard work-bed plate,M3 tapped,10,205.5
+1.DWG,Standard work-bed plate,M3 tapped,31.25,205.5
+1.DWG,Standard work-bed plate,M3 tapped,93.75,205.5
+1.DWG,Standard work-bed plate,M3 tapped,115,205.5
+2.DWG,Camera work-bed plate,3.5 mm clearance,70,10
+2.DWG,Camera work-bed plate,3.5 mm clearance,115,10
+2.DWG,Camera work-bed plate,3.5 mm clearance,10,245
+2.DWG,Camera work-bed plate,3.5 mm clearance,62.5,245
+2.DWG,Camera work-bed plate,3.5 mm clearance,115,245
+2.DWG,Camera work-bed plate,M3 tapped,93.75,49.5
+2.DWG,Camera work-bed plate,M3 tapped,115,49.5
+2.DWG,Camera work-bed plate,M3 tapped,31.25,80
+2.DWG,Camera work-bed plate,M3 tapped,93.75,80
+2.DWG,Camera work-bed plate,M3 tapped,31.25,175
+2.DWG,Camera work-bed plate,M3 tapped,93.75,175
+2.DWG,Camera work-bed plate,M3 tapped,10,205.5
+2.DWG,Camera work-bed plate,M3 tapped,31.25,205.5
+2.DWG,Camera work-bed plate,M3 tapped,93.75,205.5
+2.DWG,Camera work-bed plate,M3 tapped,115,205.5

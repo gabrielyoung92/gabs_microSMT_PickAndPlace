@@ -34,6 +34,7 @@ Gab prepared the local code, conversions and documentation with ChatGPT assistan
 - Extracting and regrouping files into clearly named feeder, controller, machine and PCB folders.
 - Adding missing matching STL exports from supplied STEP models while retaining the STEP files.
 - Adding JPG previews: the original model preview plus eight isometric views, and top/bottom/isometric PCB views derived from Gerbers.
+- Converting MicroSMT's two work-bed plate DWGs to a linked PDF with hole-centre tables, while retaining the unchanged CAD originals.
 - Grouping images in `photos/` directories and adding linked README galleries and navigation.
 - Renaming Arduino text sources to `.ino`, grouping sketches correctly, and placing STM32 C variants in separate source folders with build notes. Renaming did not change the firmware source contents.
 - Porting the ESP32-C3 controller to PlatformIO C++ with `main.cpp` and `config.h`, including sensor-completion M600 acknowledgements and USB-to-RS485 forwarding for the local addressed feeder updater. See its [changelog](Bing-feeder/V485-Feeder%20Controller/CODE_esp32C3/CHANGELOG.md).

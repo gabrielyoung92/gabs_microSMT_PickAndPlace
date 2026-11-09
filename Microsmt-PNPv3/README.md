@@ -7,6 +7,7 @@ Start here for the PNPv3 machine parts, nozzle racks, strip feeders and motherbo
 | Browse | Contents |
 | --- | --- |
 | [Machine parts gallery](PNP-V3_3D_parts_2026-02-04/README.md) | 25 parts with STEP/STL links and nine previews per part |
+| [Work-bed plates](Work_bed_plates/README.md) | Standard and camera plate DWGs, dimensioned PDF and hole coordinates |
 | [CP45 nozzle rack gallery](CP45_nozzle_rack/README.md) | Left/right rack parts and clamps |
 | [Strip feeder gallery](Strip_feeders/README.md) | Different tape widths and sizes |
 | [Motherboard](PCB_motherboard/README.md) | Gerber ZIP, schematic and top/bottom/isometric previews |
